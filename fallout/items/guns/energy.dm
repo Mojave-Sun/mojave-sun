@@ -1,23 +1,13 @@
 	//Fallout
 
-/obj/item/gun/energy/laser/lasergatling
-	name = "H&K L30 Gatling laser"
-	desc = "Designed specifically for military use, these were in the prototype stage at the beginning of the Great War. Multiple barrels allowed longer firing before overheating."
-	icon = 'fallout/icons/objects/obj/guns/energy.dmi'
-	icon_state = "lasergatling"
-	burst_size = 8
-	fire_delay = 0
-	spread = 12
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)
-	cell_type = /obj/item/stock_parts/cell/ammo/ecp
-	w_class = WEIGHT_CLASS_HUGE
-
 /obj/item/gun/energy/laser/aer9
 	name = "AER9 Laser Rifle"
 	desc = "A sturdy and advanced military grade pre-war service laser rifle"
 	icon = 'fallout/icons/objects/obj/guns/energy.dmi'
 	icon_state = "laser"
 	item_state = "laser-rifle9"
+	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	w_class = WEIGHT_CLASS_HUGE
@@ -28,6 +18,8 @@
 	icon = 'fallout/icons/objects/obj/guns/energy.dmi'
 	icon_state = "AEP7"
 	item_state = "laser-pistol"
+	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 0
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol)
@@ -38,6 +30,8 @@
 	desc = "A modified AER9 equipped with a refraction kit that spreads its bolts."
 	icon = 'fallout/icons/objects/obj/guns/energy.dmi'
 	item_state = "laser-rifle9"
+	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	w_class = WEIGHT_CLASS_HUGE
@@ -47,6 +41,8 @@
 	icon = 'fallout/icons/objects/obj/guns/energy.dmi'
 	item_state = "plasma"
 	icon_state = "plasma"
+	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
 	desc = "A top of line miniaturized plasma caster built by REPCONN in the wake of the Z43-521P failure. It is supperior to all previous rifles to enter service in the USCC."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
@@ -57,6 +53,8 @@
 	icon = 'fallout/icons/objects/obj/guns/energy.dmi'
 	item_state = "multiplas"
 	icon_state = "multiplas"
+	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
 	desc = "A modified A3-20 plasma caster built by REPCONN equipped with a multicasting kit that creates multiple weaker clots."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/scatter)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
@@ -66,11 +64,12 @@
 	icon = 'fallout/icons/objects/obj/guns/energy.dmi'
 	item_state = "plasma-pistol"
 	icon_state = "plasma-pistol"
+	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
 	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires heavy low penetration plasma clots."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol)
 	w_class = WEIGHT_CLASS_NORMAL
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
-
 
 //projectiles
 /obj/projectile/beam/laser/lasgun
