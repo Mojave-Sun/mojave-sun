@@ -33,6 +33,9 @@
 /turf/open/floor/plating/ground/MakeDry()
 	return
 
+/turf/open/floor/plating/ground/ex_act(severity, target)
+	return
+
 //Some desert
 /turf/open/floor/plating/ground/desert
 	name = "\proper desert"
@@ -117,18 +120,99 @@
 
 #define SHROOM_SPAWN	1
 
+/turf/open/floor/plating/ground/snow
+	name = "snow"
+	desc = "Fresh powder."
+	baseturfs = /turf/open/floor/plating/ground/snow
+	icon_state = "snow"
+	icon = 'icons/turf/snow.dmi'
+	slowdown = 1
+	var/obj/structure/flora/turfPlant = null
+	var/digResult = /obj/item/stack/sheet/mineral/snow
+	var/dug = FALSE
+
+/turf/open/floor/plating/ground/snow/Initialize()
+	. = ..()
+	icon_state = "snow[rand(1,12)]"
+	//If no fences, machines (soil patches are machines), etc. try to plant grass
+	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
+		plantGrass()
+
+/turf/open/floor/plating/ground/snow/attackby(obj/item/W, mob/user, params)
+	. = ..()
+	if(!.)
+		if(!digResult)
+			return
+		if(W.tool_behaviour == TOOL_SHOVEL || W.tool_behaviour == TOOL_MINING)
+			if(dug)
+				to_chat(user, "<span class='notice'>Looks like someone has dug here already.</span>")
+				return TRUE
+
+			if(!isturf(user.loc))
+				return
+
+			to_chat(user, "<span class='notice'>You start digging...</span>")
+
+			if(W.use_tool(src, user, 40, volume=50))
+				to_chat(user, "<span class='notice'>You dig a hole.</span>")
+				getDug()
+				SSblackbox.record_feedback("tally", "pick_used_mining", 1, W.type)
+				return TRUE
+		else if(istype(W, /obj/item/storage/bag/ore))
+			for(var/obj/item/stack/ore/O in src)
+				SEND_SIGNAL(W, COMSIG_PARENT_ATTACKBY, O)
+
+/turf/open/floor/plating/ground/snow/proc/getDug()
+	new digResult(src, 5)
+	icon_state = "[icon_state]_dug"
+	dug = TRUE
+
+//Pass PlantForce for admin stuff I guess?
+/turf/open/floor/plating/ground/snow/proc/plantGrass(Plantforce = FALSE)
+	var/Weight = 0
+	var/randPlant = null
+
+	//spontaneously spawn grass
+	if(Plantforce || prob(GRASS_SPONTANEOUS))
+		randPlant = pickweight(LUSH_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
+		turfPlant = new randPlant(src)
+		. = TRUE //in case we ever need this to return if we spawned
+		return .
+
+	//loop through neighbouring desert turfs, if they have grass, then increase weight
+	for(var/turf/open/floor/plating/ground/snow/T in RANGE_TURFS(2, src))
+		if(T.turfPlant)
+			Weight += GRASS_WEIGHT
+
+	//use weight to try to spawn grass
+	if(prob(Weight))
+
+		//If surrounded on 5+ sides, pick from lush
+		if(Weight == (5 * GRASS_WEIGHT))
+			randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
+		else
+			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
+		turfPlant = new randPlant(src)
+		. = TRUE
+
+//Make sure we delete the plant if we ever change turfs
+/turf/open/floor/plating/ground/snow/ChangeTurf(path, new_baseturf, flags)
+	if(turfPlant)
+		qdel(turfPlant)
+	. =  ..()
+
 /turf/open/floor/plating/ground/mountain
 	name = "mountain"
 	desc = "Damp cave flooring."
 	baseturfs = /turf/open/floor/plating/ground/mountain
-	icon = 'fallout/icons/turf/f13floors2.dmi'
-	icon_state = "mountain0"
+	icon = 'fallout/icons/turf/mining.dmi'
+	icon_state = "rockfloor1"
 	var/obj/structure/flora/turfPlant = null
 	slowdown = 1
 
 /turf/open/floor/plating/ground/mountain/Initialize()
 	. = ..()
-	icon_state = "mountain[rand(0,10)]"
+	icon_state = "rockfloor[rand(1,2)]"
 	//If no fences, machines, etc. try to plant mushrooms
 	if(!(\
 			(locate(/obj/structure) in src) || \
@@ -145,5 +229,22 @@
 	name = "\proper road"
 	desc = "A stretch of road."
 	baseturfs = /turf/open/floor/plating/ground/desert
-	icon = 'fallout/icons/turf/f13road.dmi'
+	icon = 'fallout/icons/turf/asphalt.dmi'
+	icon_state = "innermiddle"
+
+/turf/open/floor/plating/ground/road/snow
+	baseturfs = /turf/open/floor/plating/ground/snow
+	icon = 'fallout/icons/turf/asphalt_snow.dmi'
+	icon_state = "innermiddle"
+
+/turf/open/floor/plating/ground/sidewalk
+	name = "\proper sidewalk"
+	desc = "A stretch of sidewalk."
+	baseturfs = /turf/open/floor/plating/ground/desert
+	icon = 'fallout/icons/turf/sidewalk.dmi'
+	icon_state = "outermiddle"
+
+/turf/open/floor/plating/ground/sidewalk/snow
+	baseturfs = /turf/open/floor/plating/ground/snow
+	icon = 'fallout/icons/turf/sidewalk_snow.dmi'
 	icon_state = "outermiddle"
