@@ -1,7 +1,7 @@
 //FALLOUT
 /area/f13
 	name = "wasteland"
-	icon = 'fallout/icons/turf/f13areas.dmi'
+	icon = 'fallout/icons/turf/areas.dmi'
 	icon_state = "desert"
 	requires_power = FALSE
 	poweralm = FALSE
