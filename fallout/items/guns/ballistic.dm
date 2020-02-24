@@ -324,7 +324,7 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 /obj/item/gun/ballistic/automatic/fallout/m72
 	name = "M72 Gauss Rifle"
 	desc = "The M72 rifle is of German design. It uses an electromagnetic field to propel rounds at tremendous speed... and pierce almost any obstacle. Its range, accuracy and stopping power is almost unparalleled."
-	icon = 'fallout/icons/objects/obj/guns/projectile.dmi'
+	icon = 'fallout/icons/objects/guns/projectile.dmi'
 	item_state = "shotgun"
 	slot_flags = ITEM_SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/m2mm
@@ -355,19 +355,19 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 //Magazines
 
 /obj/item/ammo_box/magazine/internal/boltaction/rangemaster
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	max_ammo = 10
 	multiload = 1
 
 /obj/item/ammo_box/magazine/internal/shot/improvised10mm
 	name = "improvised shotgun internal magazine"
 	ammo_type = /obj/item/ammo_casing/fallout/c10mm
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	max_ammo = 1
 
 /obj/item/ammo_box/magazine/r20
 	name = "r20 Magazine (5.56mm)"
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "r20"
 	ammo_type = /obj/item/ammo_casing/fallout/a556
 	caliber = "a556"
@@ -376,7 +376,7 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 
 /obj/item/ammo_box/magazine/m10mm_auto
 	name = "Advanced SMG Magazine (10mm)"
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "smg10mm"
 	ammo_type = /obj/item/ammo_casing/fallout/c10mm
 	caliber = "10mm"
@@ -385,7 +385,7 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 
 /obj/item/ammo_box/magazine/m10mm_adv
 	name = "Advanced 10mm Pistol Magazine (10mm)"
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "10mmadv"
 	ammo_type = /obj/item/ammo_casing/fallout/c10mm
 	caliber = "10mm"
@@ -394,7 +394,7 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 
 /obj/item/ammo_box/magazine/m9mm
 	name = "9mm Pistol Magazine (9mm)"
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "9mmp"
 	ammo_type = /obj/item/ammo_casing/fallout/c9mm
 	caliber = "9mm"
@@ -403,7 +403,7 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 
 /obj/item/ammo_box/magazine/greasegun
 	name = "9mm SMG Magazine (9mm)"
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "grease"
 	ammo_type = /obj/item/ammo_casing/fallout/c9mm
 	caliber = "9mm"
@@ -413,7 +413,7 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 /obj/item/ammo_box/magazine/d12g
 	name = "shotgun magazine (12g slugs)"
 	desc = "A 12g drum magazine."
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "riotmag"
 	ammo_type = /obj/item/ammo_casing/shotgun
 	caliber = "shotgun"
@@ -422,7 +422,7 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 
 /obj/item/ammo_box/magazine/m2mm
 	name = "2mm electromagnetic magazine"
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "2mm"
 	ammo_type = /obj/item/ammo_casing/fallout/c2mm
 	caliber = "2mm"
@@ -432,35 +432,35 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	name = "44 magnum cylinder"
 	ammo_type = /obj/item/ammo_casing/fallout/m44
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "44"
 	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev6250
 	name = "6250 10mm cylinder"
 	ammo_type = /obj/item/ammo_casing/fallout/c10mm
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "10mm"
 	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	name = "4570 cylinder"
 	ammo_type = /obj/item/ammo_casing/fallout/c4570
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "4570"
 	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/cylinder/revneedler
 	name = "needler internal mag"
 	ammo_type = /obj/item/ammo_casing/fallout/caseless/needle
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "needle"
 	max_ammo = 5
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	name = "detective revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/fallout/c38
-	icon = 'fallout/icons/objects/obj/ammo.dmi'
+	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "38"
 	max_ammo = 6
 
