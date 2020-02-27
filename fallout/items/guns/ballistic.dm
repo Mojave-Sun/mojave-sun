@@ -265,6 +265,22 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 	zoomable = FALSE
 	weapon_weight = WEAPON_HEAVY
 
+/obj/item/gun/ballistic/automatic/fallout/marksman/servicerifle/varmint
+	name = "Varmint Rifle"
+	desc = "A low powered 5.56, easy to use rifle."
+	icon_state = "varmint"
+	item_state = "varmintrifle"
+	mag_type = /obj/item/ammo_box/magazine/r10
+
+/obj/item/gun/ballistic/automatic/fallout/marksman/servicerifle/varmint/ratslayer
+	name = "ratslayer"
+	desc = "A modified Varmint Rifle with better stopping power, a scope, and suppressor. Oh, don't forget the sick paint job."
+	item_state = "ratslayer"
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
+
 /obj/item/gun/ballistic/automatic/fallout/minigun
 	name = "M134 Minigun"
 	desc = "The M134 is a 7.62×51mm, six-barrel rotary machine gun with a rate of fire between 2,000 and 6,000 rounds per minute."
@@ -372,6 +388,15 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 	ammo_type = /obj/item/ammo_casing/fallout/a556
 	caliber = "a556"
 	max_ammo = 20
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/r10
+	name = "r10 Magazine (5.56mm)"
+	icon = 'fallout/icons/objects/ammo.dmi'
+	icon_state = "r10"
+	ammo_type = /obj/item/ammo_casing/fallout/a556
+	caliber = "a556"
+	max_ammo = 10
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/m10mm_auto
