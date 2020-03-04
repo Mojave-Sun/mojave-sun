@@ -431,7 +431,7 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 /obj/item/ammo_box/magazine/internal/boltaction/rangemaster
 	icon = 'fallout/icons/objects/ammo.dmi'
 	max_ammo = 10
-	multiload = 0
+	multiload = 1
 
 /obj/item/ammo_box/magazine/internal/shot/improvised10mm
 	name = "improvised shotgun internal magazine"
