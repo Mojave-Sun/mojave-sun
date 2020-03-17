@@ -42,6 +42,8 @@
 	var/dual_wield_spread = 24			//additional spread when dual wielding
 	var/spread = 0						//Spread induced by the gun itself.
 	var/randomspread = 1				//Set to 0 for shotguns. This is used for weapons that don't fire all their bullets at once.
+	var/extra_damage = 0				//Number to add to individual bullets.
+	var/extra_penetration = 0			//Number to add to armor penetration of individual bullets.
 
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
@@ -281,7 +283,7 @@
 		else //Smart spread
 			sprd = round((((rand_spr/burst_size) * iteration) - (0.5 + (rand_spr * 0.25))) * (randomized_gun_spread + randomized_bonus_spread))
 		before_firing(target,user)
-		if(!chambered.fire_casing(target, user, params, ,suppressed, zone_override, sprd, src))
+		if(!chambered.fire_casing(target, user, params, ,suppressed, zone_override, sprd, src, extra_damage, extra_penetration))
 			shoot_with_empty_chamber(user)
 			firing_burst = FALSE
 			return FALSE
@@ -330,7 +332,7 @@
 					return
 			sprd = round((rand() - 0.5) * DUALWIELD_PENALTY_EXTRA_MULTIPLIER * (randomized_gun_spread + randomized_bonus_spread))
 			before_firing(target,user)
-			if(!chambered.fire_casing(target, user, params, , suppressed, zone_override, sprd, src))
+			if(!chambered.fire_casing(target, user, params, , suppressed, zone_override, sprd, src, extra_damage, extra_penetration))
 				shoot_with_empty_chamber(user)
 				return
 			else
