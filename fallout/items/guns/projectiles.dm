@@ -66,3 +66,4 @@
 /obj/projectile/bullet/fallout/a50MG
 	damage = 0
 	armour_penetration = 0
+	

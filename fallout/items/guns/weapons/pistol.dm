@@ -92,3 +92,4 @@
 	caliber = "9mm"
 	max_ammo = 10
 	multiple_sprites = 2
+	

@@ -132,3 +132,4 @@
 	ammo_type = /obj/item/ammo_casing/fallout/a357
 	caliber = "357"
 	max_ammo = 7
+	

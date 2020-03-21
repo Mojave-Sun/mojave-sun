@@ -82,3 +82,4 @@
 	desc = "A set of pristine clothes from before the great war."
 	icon_state = "detectivealt"
 	item_state = "sl_suit"
+	

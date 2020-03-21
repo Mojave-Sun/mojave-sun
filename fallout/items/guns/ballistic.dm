@@ -132,3 +132,4 @@
 	caliber = "2mm"
 	max_ammo = 20
 	multiple_sprites = 2 */
+	

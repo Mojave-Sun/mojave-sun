@@ -101,3 +101,4 @@
 	caliber = "a50MG"
 	icon_state = "50mg2"
 	projectile_type = /obj/projectile/bullet/fallout/a50MG
+	
