@@ -4,6 +4,7 @@
 	unset_machine()
 	GLOB.player_list -= src
 	logout_time = world.time
+	remove_from_player_list()
 
 	..()
 
