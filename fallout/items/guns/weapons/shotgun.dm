@@ -12,7 +12,7 @@
 	desc = "A sturdy hunting rifle, chambered in 308. and in use before the war."
 	icon_state = "308"
 	item_state = "rifle"
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/fallout
 	fire_sound = 'fallout/sound/f13weapons/hunting_rifle.ogg'
 	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_HEAVY
@@ -103,17 +103,22 @@
 	icon_state = "rangemaster"
 	item_state = "fnfal"
 	fire_delay = 3
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/rangemaster
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/fallout/rangemaster
 	fire_sound = 'fallout/sound/f13weapons/hunting_rifle.ogg'
 	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_HEAVY
 	extra_damage = 40
 
 //Magazines
-/obj/item/ammo_box/magazine/internal/boltaction/rangemaster
+/obj/item/ammo_box/magazine/internal/boltaction/fallout
+	max_ammo = 5
+	multiload = 1
+	caliber = "a308"
+
+/obj/item/ammo_box/magazine/internal/boltaction/fallout/rangemaster
 	icon = 'fallout/icons/objects/ammo.dmi'
 	max_ammo = 10
-	multiload = 1
+	caliber = "a762"
 
 /obj/item/ammo_box/magazine/internal/shot/tube4570
 	name = "4570 internal tube magazine"

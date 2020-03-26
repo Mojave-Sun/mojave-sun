@@ -29,6 +29,7 @@
 	can_suppress = FALSE
 	fire_delay = 3
 	extra_damage = 30
+	extra_penetration = 5
 
 /obj/item/gun/ballistic/automatic/fallout/pistol/deagle
 	name = "desert eagle"
