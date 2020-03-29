@@ -16,3 +16,4 @@
 	desc = "An advanced reloading bench for crafting specialized and complex ammo."
 	machine_tool_behaviour = list(TOOL_RELBENCH, TOOL_ADVRELBENCH)
 	
+	
