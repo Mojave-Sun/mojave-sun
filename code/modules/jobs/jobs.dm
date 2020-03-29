@@ -41,10 +41,12 @@ GLOBAL_LIST_INIT(civilian_positions, list(
 	"Cook",
 	"Janitor",
 	"Curator",
+	"Psychologist",
 	"Lawyer",
 	"Chaplain",
 	"Clown",
 	"Mime",
+	"Prisoner",
 	"Assistant"))
 
 

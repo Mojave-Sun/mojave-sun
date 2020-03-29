@@ -10,7 +10,6 @@ datum/job/f13/wasteland/wastelander
 	display_order = JOB_DISPLAY_ORDER_WASTELANDER
 
 /datum/outfit/job/wastelander
-	..()
 	name = "Wastelander"
 	jobtype = /datum/job/f13/wasteland/wastelander
 
