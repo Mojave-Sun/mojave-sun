@@ -57,7 +57,8 @@
 	desc = "The wasteland is calling you..."
 	icon = 'fallout/icons/splashscreen.dmi'
 	icon_state = ""
-	layer = FLY_LAYER
+	layer = SPLASHSCREEN_LAYER
+	plane = SPLASHSCREEN_PLANE
 	bullet_bounce_sound = null
 
 /turf/closed/indestructible/splashscreen/New()

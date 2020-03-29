@@ -58,6 +58,7 @@
 			wear_mask_update(I, toggle_off = 0)
 		if(ITEM_SLOT_HEAD)
 			head = I
+			SEND_SIGNAL(src, COMSIG_CARBON_EQUIP_HAT, I)
 			head_update(I)
 		if(ITEM_SLOT_NECK)
 			wear_neck = I
@@ -73,10 +74,6 @@
 			update_inv_hands()
 		if(ITEM_SLOT_BACKPACK)
 			if(!back || !SEND_SIGNAL(back, COMSIG_TRY_STORAGE_INSERT, I, src, TRUE))
-				not_handled = TRUE
-		if(ITEM_SLOT_LHANDSTORE)
-			var/obj/item/held_left = get_held_items_for_side(LEFT_HANDS)
-			if(!held_left || !SEND_SIGNAL(held_left, COMSIG_TRY_STORAGE_INSERT, I, src, TRUE))
 				not_handled = TRUE
 		else
 			not_handled = TRUE
@@ -96,6 +93,7 @@
 
 	if(I == head)
 		head = null
+		SEND_SIGNAL(src, COMSIG_CARBON_UNEQUIP_HAT, I, force, newloc, no_move, invdrop, silent)
 		if(!QDELETED(src))
 			head_update(I)
 	else if(I == back)

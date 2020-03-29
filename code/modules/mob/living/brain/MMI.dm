@@ -60,11 +60,11 @@
 		newbrain.brainmob = null
 		brainmob.forceMove(src)
 		brainmob.container = src
-		var/fubar_brain = newbrain.brain_death && newbrain.suicided && brainmob.suiciding //brain is damaged beyond repair or from a suicider
+		var/fubar_brain = newbrain.suicided || brainmob.suiciding //brain is from a suicider
 		if(!fubar_brain && !(newbrain.organ_flags & ORGAN_FAILING)) // the brain organ hasn't been beaten to death, nor was from a suicider.
 			brainmob.set_stat(CONSCIOUS) //we manually revive the brain mob
-			GLOB.dead_mob_list -= brainmob
-			GLOB.alive_mob_list += brainmob
+			brainmob.remove_from_dead_mob_list()
+			brainmob.add_to_alive_mob_list()
 		else if(!fubar_brain && newbrain.organ_flags & ORGAN_FAILING) // the brain is damaged, but not from a suicider
 			to_chat(user, "<span class='warning'>[src]'s indicator light turns yellow and its brain integrity alarm beeps softly. Perhaps you should check [newbrain] for damage.</span>")
 			playsound(src, "sound/machines/synth_no.ogg", 5, TRUE)
@@ -108,8 +108,8 @@
 	brainmob.set_stat(DEAD)
 	brainmob.emp_damage = 0
 	brainmob.reset_perspective() //so the brainmob follows the brain organ instead of the mmi. And to update our vision
-	GLOB.alive_mob_list -= brainmob //Get outta here
-	GLOB.dead_mob_list |= brainmob
+	brainmob.remove_from_alive_mob_list() //Get outta here
+	brainmob.add_to_dead_mob_list()
 	brain.brainmob = brainmob //Set the brain to use the brainmob
 	log_game("[key_name(user)] has ejected the brain of [key_name(brainmob)] from an MMI at [AREACOORD(src)]")
 	brainmob = null //Set mmi brainmob var to null
@@ -240,7 +240,7 @@
 		if(user)
 			to_chat(user, "<span class='warning'>\The [src] indicates that their mind has no will to live!</span>")
 		return FALSE
-	if(B.stat == DEAD || brain?.brain_death)
+	if(B.stat == DEAD)
 		if(user)
 			to_chat(user, "<span class='warning'>\The [src] indicates that the brain is dead!</span>")
 		return FALSE

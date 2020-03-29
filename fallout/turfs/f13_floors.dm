@@ -1,5 +1,5 @@
 /turf/open/floor/wood/f13
-	icon = 'fallout/icons/turf/floors.dmi'
+	icon = 'fallout/icons/turf/floors_1.dmi'
 	icon_state = "housewood1"
 
 /turf/open/floor/wood/f13/Initialize()
@@ -93,7 +93,7 @@
 
 /turf/open/floor/plasteel/f13/vault_floor
 	name = "vault floor"
-	icon = 'fallout/icons/turf/f13floors2.dmi'
+	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "vault_floor"
 	planetary_atmos = FALSE // They're _inside_ a vault.
 
@@ -352,7 +352,7 @@
 
 
 /turf/open/floor/circuit/f13_blue
-	icon = 'fallout/icons/turf/f13floors2.dmi'
+	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "bcircuit2"
 	icon_normal = "bcircuit2"
 
@@ -361,7 +361,7 @@
 	on = FALSE
 
 /turf/open/floor/circuit/f13_green
-	icon = 'fallout/icons/turf/f13floors2.dmi'
+	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "gcircuit2"
 	icon_normal = "gcircuit2"
 	light_color = LIGHT_COLOR_GREEN
@@ -372,7 +372,7 @@
 	on = FALSE
 
 /turf/open/floor/circuit/f13_red
-	icon = 'fallout/icons/turf/f13floors2.dmi'
+	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "rcircuit1"
 	icon_normal = "rcircuit1"
 	light_color = LIGHT_COLOR_FLARE
@@ -383,7 +383,7 @@
 	on = FALSE
 
 /turf/open/f13/inside
-	icon = 'fallout/icons/turf/f13floorsmisc.dmi'
+	icon = 'fallout/icons/turf/floors_1.dmi'
 	icon_state = "housewood1"
 
 /turf/open/f13/inside/wood
@@ -391,5 +391,5 @@
 	desc = "Rotting wooden flooring."
 
 /turf/open/floor/plasteel/f13
-	icon = 'fallout/icons/turf/f13floors2.dmi'
+	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "floor"

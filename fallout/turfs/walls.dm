@@ -1,33 +1,65 @@
-/turf/closed/wall/r_wall/f13vault
+/turf/closed/wall/r_wall/f13
+	name = "base class wall"
+	desc = "AHHH FUCK A BASE CLASS WALL"
+
+/turf/closed/wall/r_wall/f13/vault
 	name = "vault wall"
 	desc = "A huge chunk of metal used to separate rooms."
-	icon = 'fallout/icons/turf/walls/f13vault_reinforced_wall.dmi'
+	icon = 'fallout/icons/turf/walls/vault.dmi'
+	icon_state = "vault0"
 
-/turf/closed/wall/r_wall/f13vaultrusted
-	name = "rusty vault wall"
-	desc = "A rusty chunk of metal used to separate rooms."
-	icon = 'fallout/icons/turf/walls/f13vault_rusted_wall.dmi'
+/turf/closed/wall/r_wall/f13/vault/reinforced
+	name = "vault wall"
+	desc = "A huge chunk of metal used to separate rooms."
+	icon = 'fallout/icons/turf/walls/vault_reinforced.dmi'
+	icon_state = "vaultrwall0"
 
-/turf/closed/wall/r_wall/f13composite
+/turf/closed/wall/r_wall/f13/vault/old
+	name = "vault wall"
+	desc = "A huge chunk of metal used to separate rooms."
+	icon = 'fallout/icons/turf/walls/old_vault.dmi'
+	icon_state = "1-i"
+
+/turf/closed/wall/r_wall/f13/vault/old/rusted
+	name = "vault wall"
+	desc = "A huge chunk of metal used to separate rooms."
+	icon = 'fallout/icons/turf/walls/old_vault_rusted.dmi'
+	icon_state = "1-i"
+
+/turf/closed/wall/r_wall/f13/composite
 	name = "composite wall"
 	desc = "A huge chunk of metal used to separate rooms."
-	icon = 'fallout/icons/turf/walls/f13composite.dmi'
+	icon = 'fallout/icons/turf/walls/composite.dmi'
 	icon_state = "ruins0"
 
-/turf/closed/wall/r_wall/f13superstore
+/turf/closed/wall/r_wall/f13/superstore
 	name = "store wall"
 	desc = "A huge chunk of metal used to separate rooms."
-	icon = 'fallout/icons/turf/walls/f13superstore.dmi'
+	icon = 'fallout/icons/turf/walls/superstore.dmi'
+	icon_state = "supermart0"
 
-/turf/closed/wall/f13wood
+/turf/closed/wall/r_wall/f13
+	name = "store wall"
+	desc = "A huge chunk of metal used to separate rooms."
+	icon = 'fallout/icons/turf/walls/store.dmi'
+	icon_state = "store0"
+
+/turf/closed/wall/f13/wood
 	name = "wood wall"
 	desc = "A rotting hunk of wood."
-	icon = 'fallout/icons/turf/walls/f13wood_wall.dmi'
+	icon = 'fallout/icons/turf/walls/wood.dmi'
+	icon_state = "wood0"
+
+/turf/closed/wall/f13/wood/painted
+	name = "wood wall"
+	desc = "A rotting hunk of wood."
+	icon = 'fallout/icons/turf/walls/wood_painted.dmi'
+	icon_state = "wood0"
 
 /turf/closed/indestructible/f13/matrix //The Chosen One from Arroyo!
 	name = "matrix"
 	desc = "<font color='#6eaa2c'>You suddenly realize the truth - there is no spoon.<br>Digital simulation ends here.</font> If you click and drag your character and release it on this wall, it will allow you to removed from the simulation."
-	icon = 'fallout/icons/turf/walls/f13misc.dmi'
+	icon = 'fallout/icons/turf/walls/matrix.dmi'
 	icon_state = "matrix"
 
 /turf/closed/indestructible/f13/matrix/MouseDrop_T(atom/dropping, mob/user)
