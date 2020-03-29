@@ -20,4 +20,3 @@
 	desc = "A .45 Long Colt bullet casing."
 	caliber = "4570"
 	projectile_type = /obj/projectile/bullet/fallout/c4570SP*/
-	

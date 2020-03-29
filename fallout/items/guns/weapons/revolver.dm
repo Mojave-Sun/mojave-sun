@@ -162,4 +162,3 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "38"
 	max_ammo = 6
-	

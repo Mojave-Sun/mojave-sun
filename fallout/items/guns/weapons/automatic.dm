@@ -186,4 +186,3 @@
 /obj/item/ammo_box/magazine/uzim9mm/update_icon()
 	..()
 	icon_state = "uzi9mm-[round(ammo_count(),4)]"
-	
