@@ -171,8 +171,6 @@
 	else
 		return 0
 
-	return 1
-
 /obj/structure/fence/fencedoorside
 	name = "metal fence door"
 	desc = "It opens and closes."
