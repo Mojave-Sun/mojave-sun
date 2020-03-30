@@ -3,8 +3,8 @@
 	desc = "A makeshift machete made of a lawn mower blade."
 	icon = 'fallout/icons/objects/items_and_weapons.dmi'
 	icon_state = "imp_machete"
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = 'fallout/icons/mob/inhands/weapons/melee_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/weapons/melee_righthand.dmi'
 	item_state = "salvagedmachete"
 	slot_flags = ITEM_SLOT_BELT
 
@@ -12,8 +12,6 @@
 	name = "machete gladius"
 	desc = "A forged steel machete, the blade has been laborously sharpened and the weight has been evenly distributed for maximum killing power. An image of a bull is burned into the wooden handle."
 	icon_state = "machete"
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	item_state = "machete"
 	slot_flags = ITEM_SLOT_BELT
 	force = 35
@@ -67,8 +65,8 @@
 /obj/item/throwing_star/spear
 	name = "throwing spear"
 	desc = "An heavy hefty ancient weapon used to this day, due to its ease of lodging itself into its victim's body parts."
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	lefthand_file = 'fallout/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/items_righthand.dmi'
 	icon = 'fallout/icons/objects/items_and_weapons.dmi'
 	icon_state = "throw_spear"
 	item_state = "tribalspear"
@@ -82,8 +80,8 @@
 /obj/item/throwing_star/throwingknife
 	name = "throwing knife"
 	desc = "A knife, weighted and designed to be thrown. Looks pretty sharp."
-	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
+	lefthand_file = 'fallout/icons/mob/inhands/equipment/kitchen_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/equipment/kitchen_righthand.dmi'
 	icon = 'fallout/icons/objects/items_and_weapons.dmi'
 	icon_state = "throwing"
 	item_state = "knife"
