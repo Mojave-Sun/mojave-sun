@@ -136,6 +136,14 @@
 					for(var/datum/reagent/A in RC.reagents.reagent_list)
 						.["other"][A.type] += A.volume
 			.["other"][I.type] += 1
+	for(var/obj/machinery/I in get_environment(a))
+		if(I.flags_1 & HOLOGRAM_1)
+			continue
+		else if(I.machine_tool_behaviour)
+			.["tool_behaviour"] += I.machine_tool_behaviour
+			.["other"][I.type] += 1
+		else
+			.["other"][I.type] += 1
 
 /datum/component/personal_crafting/proc/check_tools(atom/a, datum/crafting_recipe/R, list/contents)
 	if(!R.tools.len)
