@@ -5,3 +5,4 @@
 	breakouttime = 35//easy to apply, easy to break out of
 	gender = NEUTER
 	slot_flags = ITEM_SLOT_BELT
+	
