@@ -1,7 +1,7 @@
-
 /obj/item/claymore/machete
 	name = "machete"
 	desc = "A makeshift machete made of a lawn mower blade."
+	icon = 'fallout/icons/objects/items_and_weapons.dmi'
 	icon_state = "imp_machete"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
@@ -69,6 +69,7 @@
 	desc = "An heavy hefty ancient weapon used to this day, due to its ease of lodging itself into its victim's body parts."
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+	icon = 'fallout/icons/objects/items_and_weapons.dmi'
 	icon_state = "throw_spear"
 	item_state = "tribalspear"
 	force = 20
@@ -83,7 +84,7 @@
 	desc = "A knife, weighted and designed to be thrown. Looks pretty sharp."
 	lefthand_file = 'icons/mob/inhands/equipment/kitchen_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/kitchen_righthand.dmi'
-	icon = 'icons/fallout/objects/melee.dmi'
+	icon = 'fallout/icons/objects/items_and_weapons.dmi'
 	icon_state = "throwing"
 	item_state = "knife"
 	force = 20
