@@ -5,33 +5,29 @@
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/melee,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/scalpel,/obj/item/surgical_drapes,/obj/item/cautery,/obj/item/hemostat,/obj/item/retractor,/obj/item/storage/pill_bottle/dice,/obj/item/dice)
 	body_parts_covered = CHEST|ARMS|LEGS|GROIN
 	
-/obj/item/clothing/suit/fallout/lvest
+/obj/item/clothing/suit/fallout/vest
 	name = "leather vest"
 	desc = "A vest made of tanned leather."
 	icon_state = "tanleather"
 	item_state = "det_suit"
 	armor = list(melee = 15, bullet = 10, laser = 5, energy = 5, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 
-/obj/item/clothing/suit/fallout/puffer
+/obj/item/clothing/suit/fallout/vest/puffer
 	name = "puffer vest"
 	desc = "A thick vest with a rubbery water-resistant shell."
 	icon_state = "puffervest"
-	item_state = "det_suit"
-	armor = list(melee = 15, bullet = 10, laser = 5, energy = 5, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	
-/obj/item/clothing/suit/fallout/cowboyvest
+/obj/item/clothing/suit/fallout/vest/cowboy
 	name = "cowboy vest"
 	desc = "A brown vest, typically worn by wannabe cowboys and prospectors."
 	icon_state = "cowboybvest"
 	item_state = "lb_suit"
-	armor = list(melee = 15, bullet = 10, laser = 5, energy = 5, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	
-/obj/item/clothing/suit/fallout/gvest
+/obj/item/clothing/suit/fallout/vest/grey
 	name = "grey vest"
 	desc = "A grey, fancy looking vest."
 	icon_state = "cowboygvest"
 	item_state = "gy_suit"
-	armor = list(melee = 15, bullet = 10, laser = 5, energy = 5, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
 	
 /obj/item/clothing/suit/fallout/ljacket
 	name = "leather jacket"
@@ -47,13 +43,11 @@
 	icon_state = "mfp_raider"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
 	
-/obj/item/clothing/suit/fallout/veteran
+/obj/item/clothing/suit/fallout/ljacket/veteran
 	name = "merc veteran coat"
 	desc = "A blue leather coat adorned with war medals. Commonly used by mercenaries."
 	icon_state = "veteran"
 	item_state = "suit-command"
-	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
-	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 	
 /obj/item/clothing/suit/fallout/duster
 	name = "duster"
