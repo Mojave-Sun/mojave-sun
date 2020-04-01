@@ -41,7 +41,7 @@
 	name = "reinforced leather jacket"
 	desc = "A leather jacket reinforced with a thick shoulder pad."
 	icon_state = "mfp_raider"
-	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
+	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 10, acid = 0)
 	
 /obj/item/clothing/suit/fallout/ljacket/veteran
 	name = "merc veteran coat"
@@ -61,7 +61,7 @@
 	name = "sheriff duster"
 	desc = "A long brown leather overcoat. Reinforced and typically worn by wasteland lawmen."
 	icon_state = "sheriff"
-	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
+	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 10, acid = 0)
 	
 /obj/item/clothing/suit/fallout/trench
 	name = "thick trenchcoat"
@@ -77,16 +77,25 @@
 	icon_state = "jensencoat"
 	item_state = "jensencoat"
 	
-/obj/item/clothing/suit/fallout/ljacket/wanderer
-	name = "wanderer jacket"
-	desc = "A jacket made from tanned leather."
-	icon_state = "wanderer"
-	item_state = "owl"
-	
 /obj/item/clothing/suit/fallout/ljacket/biker
 	name = "biker jacket"
 	desc = "A leather jacket most suited for biker gangs."
 	icon_state = "biker_jacket"
+	
+/obj/item/clothing/suit/fallout/ljacket/bomber
+	name = "bomber jacket"
+	desc = "A fur-lined bomber jacket. Warm and stylish."
+	icon_state = "bomberjacket"
+	
+/obj/item/clothing/suit/fallout/ljacket/military
+	name = "military jacket"
+	desc = "An old school military jacket."
+	icon_state = "militaryjacket"
+	
+/obj/item/clothing/suit/fallout/ljacket/letterman
+	name = "letterman jacket"
+	desc = "A high school letterman jacket. For showing off your achievements in the post apocalypse."
+	icon_state = "letterman"
 	
 /obj/item/clothing/suit/toggle/labcoat/fallout
 	name = "doctor's coat"
@@ -96,10 +105,39 @@
 	item_state = "labcoat"
 	armor = list(melee = 10, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 15, rad = 15, fire = 15, acid = 15)
 	body_parts_covered = CHEST|ARMS|LEGS|GROIN
-	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/scalpel,/obj/item/surgical_drapes,/obj/item/cautery,/obj/item/hemostat,/obj/item/retractor,/obj/item/storage/pill_bottle/dice,/obj/item/dice
+	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/scalpel,/obj/item/surgical_drapes,/obj/item/cautery,/obj/item/hemostat,/obj/item/retractor,/obj/item/storage/pill_bottle/dice,/obj/item/dice)
 	
 /obj/item/clothing/suit/fallout/trench/battle
 	name = "battle trenchcoat"
 	desc = "A trenchcoat with extra padding and lined with fur for extra style. Perfect for a mix of battle ready and charming."
 	icon_state = "maxson_battlecoat"
-	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
+	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 10, acid = 0)
+	
+/obj/item/clothing/suit/toggle/labcoat/fallout/wintercoat
+	name = "blue winter coat"
+	desc = "A blue, warm winter coat. Perfect for a ski trip."
+	icon_state = "coatwinterblue"
+	item_state = "coatwinterblue"
+	armor = list(melee = 15, bullet = 10, laser = 5, energy = 5, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	
+/obj/item/clothing/suit/toggle/labcoat/fallout/wintercoat/grey
+	name = "grey winter coat"
+	desc = "A grey, warm winter coat. For those who prefer less brightness in their life."
+	icon_state = "coatwinter"
+	item_state = "coatwinter"
+	
+	
+/obj/item/clothing/suit/fallout/toggle/labcoat/fallout/wanderer
+	name = "wanderer jacket"
+	desc = "A jacket made from tanned leather. Can zip open and closed."
+	icon_state = "wanderer"
+	item_state = "owl"
+	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
+
+/obj/item/clothing/suit/fallout/duster/ghost
+	name = "ghostly duster"
+	desc = "A tattered and old, but still decently protective duster with a crude peace sign on the back. Reminds you of ghosts echoing in the past."
+	icon_state = "ghostechoe"
+	item_state = "ghostechoe"
+	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 10, acid = 0)
