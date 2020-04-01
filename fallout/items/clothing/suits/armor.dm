@@ -17,7 +17,7 @@
 	desc = "A suit of leather armor, worn by wastelanders everywhere."
 	icon_state = "leatherarmor"
 	item_state = "leatherarmor"
-	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 10, acid = 0)
+	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 	flags_inv = HIDEJUMPSUIT
 	
 /obj/item/clothing/suit/armor/fallout/blastmaster
@@ -25,7 +25,7 @@
 	desc = "Crude raider armor most notable for utilizing a tire as the shoulder pad. Perhaps not the most effective, but it gets the job done."
 	icon_state = "blastmaster"
 	item_state = "blastmaster"
-	armor = list(melee = 30, bullet = 25, laser = 5, energy = 5, bomb = 25, bio = 0, rad = 0, fire = 20, acid = 0)
+	armor = list(melee = 30, bullet = 25, laser = 5, energy = 5, bomb = 25, bio = 10, rad = 10, fire = 20, acid = 10)
 	flags_inv = HIDEJUMPSUIT
 	
 /obj/item/clothing/suit/armor/fallout/yankee
@@ -33,35 +33,35 @@
 	desc = "A set of raider armor made from old football gear. Not too good at stopping bullets but great at stopping knives."
 	icon_state = "yankee"
 	item_state = "yankee"
-	armor = list("melee" = 40, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0)
+	armor = list("melee" = 40, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 	
 /obj/item/clothing/suit/armor/fallout/sadist
 	name = "sadist raider armor"
 	desc = "Minimalist raider leather armor. Only for the truly sadistic."
 	icon_state = "sadist"
 	item_state = "sadist"
-	armor = list(melee = 35, bullet = 25, laser = 5, energy = 5, bomb = 20, bio = 0, rad = 0, fire = 10, acid = 0)
+	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 	
 /obj/item/clothing/suit/armor/fallout/badlands
 	name = "badlands raider armor"
 	desc = "Raider armor for the badlands, complete with a fancy bandolier and light kevlar padding. Overall protection does leave something to be desired, however."
 	icon_state = "badlands"
 	item_state = "badlands"
-	armor = list(melee = 20, bullet = 35, laser = 5, energy = 5, bomb = 20, bio = 0, rad = 0, fire = 10, acid = 0)
+	armor = list(melee = 20, bullet = 35, laser = 5, energy = 5, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 	
 /obj/item/clothing/suit/armor/fallout/painspike
 	name = "painspike raider armor"
 	desc = "Extra spiked and reinforced raider armor. Good for up close fighters and those looking to intimidate."
 	icon_state = "painspike"
 	item_state = "painspike"
-	armor = list("melee" = 40, "bullet" = 20, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 15, "acid" = 0)
+	armor = list("melee" = 40, "bullet" = 20, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 15, "acid" = 10)
 	
 /obj/item/clothing/suit/armor/fallout/metal
 	name = "metal armor"
 	desc = "Sturdy and heavy metal armor, slows you down but offers solid protection. A full suit of metal armor is, however, very conductive."
 	icon_state = "bmetalarmor"
 	item_state = "bmetalarmor"
-	armor = list("melee" = 50, "bullet" = 40, "laser" = 0, "energy" = 0, "bomb" = 30, "bio" = 20, "rad" = 20, "fire" = 80, "acid" = 0)
+	armor = list("melee" = 55, "bullet" = 40, "laser" = 0, "energy" = 0, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 80, "acid" = 20)
 	slowdown = 0.5
 	
 /obj/item/clothing/suit/armor/fallout/vest
@@ -71,14 +71,14 @@
 	item_state = "armoralt"
 	blood_overlay_type = "armor"
 	dog_fashion = /datum/dog_fashion/back
-	armor = list(melee = 15, bullet = 40, laser = 10, energy = 10, bomb = 25, bio = 0, rad = 0, fire = 25, acid = 0)
+	armor = list(melee = 20, bullet = 40, laser = 10, energy = 10, bomb = 30, bio = 10, rad = 10, fire = 30, acid = 10)
 	
 /obj/item/clothing/suit/armor/fallout/vest/military
 	name = "military vest"
 	desc = "A bulletproof military vest that is excellent at stopping almost any bullets, but does not provide great all around protection."
 	icon_state = "bulletproof"
 	item_state = "armor"
-	armor = list(melee = 30, bullet = 60, laser = 20, energy = 20, bomb = 50, bio = 20, rad = 20, fire = 50, acid = 20)
+	armor = list(melee = 30, bullet = 50, laser = 15, energy = 15, bomb = 40, bio = 20, rad = 20, fire = 40, acid = 20)
 	
 /obj/item/clothing/suit/armor/fallout/vest/detective
 	name = "detective vest"
@@ -92,7 +92,7 @@
 	icon_state = "tesla_armor"
 	item_state = "tesla_armor"
 	blood_overlay_type = "armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 50, "energy" = 50, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 45, "energy" = 45, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 	
 /obj/item/clothing/suit/armor/fallout/leatherarmor/reinforced
 	name = "reinforced leather armor"
