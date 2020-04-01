@@ -19,6 +19,15 @@
 	fire_delay = 2
 	extra_damage = 20
 	extra_penetration = 5
+	
+/obj/item/gun/ballistic/automatic/fallout/pistol/pipe_pistol
+	name = "pipe pistol"
+	desc = "A crude and makeshift pistol chambered in .38, works in a pinch."
+	icon_state = "ninemil"
+	mag_type = /obj/item/ammo_box/magazine/pipe38
+	w_class = WEIGHT_CLASS_NORMAL
+	fire_delay = 5
+	extra_damage = 20
 
 /obj/item/gun/ballistic/automatic/fallout/pistol/m1911
 	name = "\improper M1911"
@@ -91,5 +100,14 @@
 	icon_state = "9mmp"
 	ammo_type = /obj/item/ammo_casing/fallout/c9mm
 	caliber = "9mm"
-	max_ammo = 10
+	max_ammo = 13
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/pipe38
+	name = "Pipe magazine (.38)"
+	icon = 'fallout/icons/objects/ammo.dmi'
+	icon_state = "9mmp"
+	ammo_type = /obj/item/ammo_casing/fallout/c38
+	caliber = "38"
+	max_ammo = 12
 	multiple_sprites = 2
