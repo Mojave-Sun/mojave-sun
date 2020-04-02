@@ -129,7 +129,7 @@
 	icon_state = "brotherhood_armor"
 	item_state = "brotherhood_armor"
 	
-/obj/item/clothing/suit/armor/fallout/riot
+/obj/item/clothing/suit/armor/fallout/eliteriot
 	name = "elite riot gear"
 	desc = "A highly specialized and advanced suit of armor oringinally in use by elite riot control units before the war."
 	icon_state = "elite_riot"
@@ -227,3 +227,4 @@
 	icon_state = "recon"
 	item_state = "recon"
 	armor = list("melee" = 40, "bullet" = 35, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
+	body_parts_covered = CHEST|ARMS|LEGS|GROIN|HEAD

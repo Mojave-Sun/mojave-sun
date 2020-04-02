@@ -140,3 +140,10 @@
 	icon_state = "ghostechoe"
 	item_state = "ghostechoe"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
+
+/obj/item/clothing/suit/fallout/trench/hubologist
+	name = "Hubologist robes"
+	desc = "Long, dark, and imposing robes worn by Hubologists."
+	icon_state = "hubologist"
+	item_state = "hubologist"
+	body_parts_covered = CHEST|ARMS|LEGS|GROIN|HEAD
