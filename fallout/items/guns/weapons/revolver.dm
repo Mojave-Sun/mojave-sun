@@ -38,17 +38,6 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/improvised10mm
 	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_HEAVY
-	
-/obj/item/gun/ballistic/revolver/fallout/pipe_rev
-	name = "pipe revolver"
-	desc = "Crudely fashioned makeshift revolver chambered for .45 caliber rounds."
-	item_state = "model29"
-	icon_state = "m29"
-	fire_sound = 'fallout/sound/f13weapons/44mag.ogg'
-	w_class = WEIGHT_CLASS_NORMAL
-	mag_type = /obj/item/ammo_box/magazine/internal/rev45
-	extra_damage = 30
-	fire_delay = 6
 
 /obj/item/gun/ballistic/revolver/fallout/m29
 	name = "\improper S&W Model 29"
@@ -125,17 +114,6 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 	zoom_amt = 10
 	zoom_out_amt = 13
 	w_class = WEIGHT_CLASS_NORMAL
-	
-/obj/item/gun/ballistic/revolver/fallout/38rev
-	name = ".38 revolver"
-	desc = "A compact .38 revolver. One of the best holdout pistols."
-	item_state = "model29"
-	icon_state = "m29"
-	fire_sound = 'fallout/sound/f13weapons/44mag.ogg'
-	w_class = WEIGHT_CLASS_NORMAL
-	mag_type = /obj/item/ammo_box/magazine/internal/rev38
-	extra_damage = 25
-	fire_delay = 4
 
 //Magazines
 /obj/item/ammo_box/magazine/internal/shot/improvised10mm
@@ -183,11 +161,4 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 	ammo_type = /obj/item/ammo_casing/fallout/c38
 	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "38"
-	max_ammo = 6
-
-/obj/item/ammo_box/magazine/internal/cylinder/rev45
-	name = "pipe revolver cylinder"
-	ammo_type = "/obj/item/ammo_casing/fallout/c45"
-	icon = 'fallout/icons/objects/ammo.dmi'
-	caliber = "45"
 	max_ammo = 6

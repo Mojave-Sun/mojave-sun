@@ -2,6 +2,7 @@
 	name = "generic fallout suit"
 	desc = "You shouldn't be seeing this. It do be lookin' kinda clean doe."
 	icon = 'fallout/icons/objects/clothing/suits.dmi'
+	mob_overlay_icon = 'fallout/icons/mob/clothing/suit.dmi'
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/melee,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/scalpel,/obj/item/surgical_drapes,/obj/item/cautery,/obj/item/hemostat,/obj/item/retractor,/obj/item/storage/pill_bottle/dice,/obj/item/dice)
 	body_parts_covered = CHEST|ARMS|LEGS|GROIN
 	
@@ -34,7 +35,7 @@
 	desc = "A typical leather jacket."
 	icon_state = "mfp"
 	item_state = "hostrench"
-	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad 5, fire = 5, acid = 5)
+	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 	
 /obj/item/clothing/suit/fallout/ljacket/reinforced
@@ -66,8 +67,8 @@
 /obj/item/clothing/suit/fallout/trench
 	name = "thick trenchcoat"
 	desc = "A heavy tan trenchcoat."
-	icon_state = "autumn"
-	item_state = "autumn"
+	icon_state = "tantrench"
+	item_state = "tantrench"
 	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 	
@@ -97,6 +98,12 @@
 	desc = "A high school letterman jacket. For showing off your achievements in the post apocalypse."
 	icon_state = "letterman"
 	
+/obj/item/clothing/suit/fallout/ljacket/wanderer
+	name = "wanderer jacket"
+	desc = "A jacket made from tanned leather."
+	icon_state = "wanderer"
+	item_state = "owl"
+	
 /obj/item/clothing/suit/toggle/labcoat/fallout
 	name = "doctor's coat"
 	desc = "The medical coat of a typical wasteland doctor."
@@ -110,7 +117,8 @@
 /obj/item/clothing/suit/fallout/trench/battle
 	name = "battle trenchcoat"
 	desc = "A trenchcoat with extra padding and lined with fur for extra style. Perfect for a mix of battle ready and charming."
-	icon_state = "maxson_battlecoat"
+	icon_state = "battlecoat"
+	item_state = "battlecoat"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 	
 /obj/item/clothing/suit/toggle/labcoat/fallout/wintercoat
@@ -125,14 +133,6 @@
 	desc = "A grey, warm winter coat. For those who prefer less brightness in their life."
 	icon_state = "coatwinter"
 	item_state = "coatwinter"
-	
-/obj/item/clothing/suit/fallout/toggle/labcoat/fallout/wanderer
-	name = "wanderer jacket"
-	desc = "A jacket made from tanned leather. Can zip open and closed."
-	icon_state = "wanderer"
-	item_state = "owl"
-	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
-	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
 /obj/item/clothing/suit/fallout/duster/ghost
 	name = "ghostly duster"

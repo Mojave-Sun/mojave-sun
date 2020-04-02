@@ -2,7 +2,8 @@
 	name = "generic fallout armor"
 	desc = "You shouldn't be seeing this."
 	icon = 'fallout/icons/objects/clothing/suits.dmi'
-	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/weapon,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
+	mob_overlay_icon = 'fallout/icons/mob/clothing/suit.dmi'
+	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 	body_parts_covered = CHEST|ARMS|LEGS|GROIN
 	
 /obj/item/clothing/suit/armor/fallout/kit
@@ -168,7 +169,6 @@
 	desc = "Standard armor for Legion recruits, cobbled together with various sports equipment and additional reinforcements as needed."
 	icon_state = "legrecruit"
 	item_state = "legarmor"
-	allowed = list(/obj/item/gun, /obj/item/claymore, /obj/item/throwing_star/spear, /obj/item/restraints/legcuffs/bola, /obj/item/twohanded)
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 5, "rad" = 5, "fire" = 15, "acid" = 5)
 	
 /obj/item/clothing/suit/armor/fallout/legion/prime
