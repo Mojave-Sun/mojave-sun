@@ -1,6 +1,5 @@
 datum/job/f13/wasteland/raider
 	title = "Raider"
-	//flag = F13RAIDER
 	total_positions = -1
 	spawn_positions = -1
 	supervisors = "muh anarchy"

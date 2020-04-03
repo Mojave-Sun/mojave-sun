@@ -10,8 +10,8 @@
 /obj/effect/landmark/start/f13/raider
 	name = "Raider"
 
-/obj/effect/landmark/start/f13/overseer
-	name = "Vault Overseer"
+/obj/effect/landmark/start/f13/mayor
+	name = "Mayor"
 
-/obj/effect/landmark/start/f13/dweller
-	name = "Vault Dweller"
+/obj/effect/landmark/start/f13/settler
+	name = "Settler"
