@@ -57,6 +57,13 @@
 	item_state = "painspike"
 	armor = list("melee" = 40, "bullet" = 20, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 15, "acid" = 10)
 	
+/obj/item/clothing/suit/armor/fallout/vaultvan
+	name = "Vault-tec van armor"
+	desc = "Makeshift armor scrounged together from, as one may expect, the old remains of a Vault-tec van. Being made almost entirely of metal does make it susceptible to laser and energy weapons, however."
+	icon_state = "vaultvanarmor"
+	item_state = "vaultvanarmor"
+	armor = list("melee" = 50, "bullet" = 35, "laser" = 5, "energy" = 5, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 10)
+	
 /obj/item/clothing/suit/armor/fallout/metal
 	name = "metal armor"
 	desc = "Sturdy and heavy metal armor, slows you down but offers solid protection. A full suit of metal armor is, however, very conductive."
@@ -97,9 +104,9 @@
 	
 /obj/item/clothing/suit/armor/fallout/leatherarmor/reinforced
 	name = "reinforced leather armor"
-	desc = "A suit of leather armor reinforced with extra padding, tougher leather, and metal."
-	icon_state = "leatherarmor"
-	item_state = "leatherarmor"
+	desc = "A suit of leather armor reinforced with extra padding, tougher leather, and heavier metal."
+	icon_state = "reinforcedleather"
+	item_state = "reinforcedleather"
 	armor = list(melee = 50, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 25, acid = 10)
 	
 /obj/item/clothing/suit/armor/fallout/combat

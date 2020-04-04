@@ -93,7 +93,7 @@
 	
 /obj/item/clothing/head/helmet/fallout/cowboy/mayor
 	name = "mayor's hat"
-	desc = "A fancy hat with minimal padding, typically worn by mayors and other corrupt politicians."
+	desc = "A fancy hat, typically worn by mayors and other corrupt politicians."
 	icon_state = "gambler"
 	item_state = "gambler"
 	
@@ -104,12 +104,31 @@
 	item_state = "cowboylarge"
 	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
 	
-/obj/item/clothing/head/helmet/fallout/cowboy/sheriff
-	name = "sheriff's hat"
-	desc = "An extra padded and rather protective cowboy hat normally worn by wasteland lawmen."
-	icon_state = "sheriffhat"
-	item_state = "sheriffhat"
+/obj/item/clothing/head/helmet/fallout/cowboy/padded/ushanka
+	name = "ushanka hat"
+	desc = "An ushanka hat with additional protective padding. Can protect your head from the cold and from taking some real damage!"
+	icon_state = "ushanka"
+	item_state = "ushanka"
+	
+/obj/item/clothing/head/helmet/fallout/cowboy/reinf
+	name = "reinforced cowboy hat"
+	desc = "A black cowboy hat reinforced with even more leather padding and a bit of metal, for good measure."
+	icon_state = "reinfcowboy"
+	item_state = "reinfcowboy"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
+	
+/obj/item/clothing/head/helmet/fallout/cowboy/reinf/deputy
+	name = "Mammoth deputy hat"
+	desc = "An old park ranger hat repurposed and padded by the town of Mammoth to be used by their lawmen."
+	icon_state = "deputy"
+	item_state = "deputy"
+	
+/obj/item/clothing/head/helmet/fallout/cowboy/sheriff
+	name = "Mammoth sheriff's hat"
+	desc = "An old park ranger hat heavily reinforced and belonging to the sheriff of the town of Mammoth."
+	icon_state = "sheriff"
+	item_state = "sheriff"
+	armor = list(melee = 50, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 25, acid = 10)
 	
 /obj/item/clothing/head/helmet/fallout/cowboy/padded/black
 	name = "padded black cowboy hat"
@@ -125,7 +144,13 @@
 	
 /obj/item/clothing/head/helmet/fallout/cowboy/padded/detective
 	name = "detective's hat"
-	desc = "A wide brimmed hat normally worn by detective's. Padded for extra protection."
+	desc = "A wide brimmed hat normally worn by detectives. Padded for extra protection."
+	icon_state = "detective"
+	item_state = "detective"
+	
+/obj/item/clothing/head/helmet/fallout/cowboy/padded/detective/grey
+	name = "grey detective's hat"
+	desc = "A wide brimmed hat normally worn by detectives. This one is grey, but otherwise no different."
 	icon_state = "detectivealt"
 	item_state = "detectivealt"
 	
