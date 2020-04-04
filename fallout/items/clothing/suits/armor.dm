@@ -8,18 +8,32 @@
 	
 /obj/item/clothing/suit/armor/fallout/kit
 	name = "armor kit"
-	desc = "Armor parts and pieces worn over clothing. Good protection in a pinch."
+	desc = "Various armor parts and pieces worn over clothing. Good at stopping knives and bullets, but not much else."
 	icon_state = "armorkit"
 	item_state = "armorkit"
-	armor = list(melee = 25, bullet = 25, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	armor = list(melee = 30, bullet = 30, laser = 0, energy = 0, bomb = 15, bio = 5, rad = 5, fire = 5, acid = 5)
+	
+/obj/item/clothing/suit/armor/fallout/kit/light
+	name = "light armor kit"
+	desc = "Some padded cloth, leather, and metal fastened over clothing.  Decent protection in a pinch."
+	icon_state = "lightarmorkit"
+	item_state = "lightarmorkit"
+	armor = list(melee = 15, bullet = 15, laser = 0, energy = 0, bomb = 5, bio = 0, rad = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/suit/armor/fallout/leatherarmor
 	name = "leather armor"
-	desc = "A suit of leather armor, worn by wastelanders everywhere."
+	desc = "A standard suit of leather armor, worn by wastelanders everywhere."
 	icon_state = "leatherarmor"
 	item_state = "leatherarmor"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 	flags_inv = HIDEJUMPSUIT
+	
+/obj/item/clothing/suit/armor/fallout/leatherarmor/light
+	name = "lightweight leather armor"
+	desc = "A light suit of leather armor, stripped of almost all of it's metal pieces, reducing it's overall protective value."
+	icon_state = "lightleather"
+	item_state = "lightleather"
+	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
 	
 /obj/item/clothing/suit/armor/fallout/blastmaster
 	name = "blastmaster raider armor"
@@ -42,6 +56,12 @@
 	icon_state = "sadist"
 	item_state = "sadist"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
+	
+/obj/item/clothing/suit/armor/fallout/sadist/tribal
+	name = "tribal raider armor"
+	desc = "Raider armor made mostly of padded cloth and leather, with an added tire for emergencies."
+	icon_state = "tribalraider"
+	item_state = "tribalraider"
 	
 /obj/item/clothing/suit/armor/fallout/badlands
 	name = "badlands raider armor"
