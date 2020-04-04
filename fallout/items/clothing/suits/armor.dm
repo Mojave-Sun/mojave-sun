@@ -15,7 +15,7 @@
 	
 /obj/item/clothing/suit/armor/fallout/kit/light
 	name = "light armor kit"
-	desc = "Some padded cloth, leather, and metal fastened over clothing.  Decent protection in a pinch."
+	desc = "Some padded cloth, leather, and metal fastened over clothing.  Limited protection, but could save your life."
 	icon_state = "lightarmorkit"
 	item_state = "lightarmorkit"
 	armor = list(melee = 15, bullet = 15, laser = 0, energy = 0, bomb = 5, bio = 0, rad = 0, fire = 0, acid = 0)
@@ -99,7 +99,7 @@
 	item_state = "armoralt"
 	blood_overlay_type = "armor"
 	dog_fashion = /datum/dog_fashion/back
-	armor = list(melee = 20, bullet = 40, laser = 10, energy = 10, bomb = 30, bio = 10, rad = 10, fire = 30, acid = 10)
+	armor = list(melee = 20, bullet = 40, laser = 10, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 20, acid = 5)
 	
 /obj/item/clothing/suit/armor/fallout/vest/military
 	name = "military vest"
