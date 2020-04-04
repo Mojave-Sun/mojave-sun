@@ -8,18 +8,32 @@
 	
 /obj/item/clothing/suit/armor/fallout/kit
 	name = "armor kit"
-	desc = "Armor parts and pieces worn over clothing. Good protection in a pinch."
+	desc = "Various armor parts and pieces worn over clothing. Good at stopping knives and bullets, but not much else."
 	icon_state = "armorkit"
 	item_state = "armorkit"
-	armor = list(melee = 25, bullet = 25, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
+	armor = list(melee = 30, bullet = 30, laser = 0, energy = 0, bomb = 15, bio = 5, rad = 5, fire = 5, acid = 5)
+	
+/obj/item/clothing/suit/armor/fallout/kit/light
+	name = "light armor kit"
+	desc = "Some padded cloth, leather, and metal fastened over clothing.  Limited protection, but could save your life."
+	icon_state = "lightarmorkit"
+	item_state = "lightarmorkit"
+	armor = list(melee = 15, bullet = 15, laser = 0, energy = 0, bomb = 5, bio = 0, rad = 0, fire = 0, acid = 0)
 
 /obj/item/clothing/suit/armor/fallout/leatherarmor
 	name = "leather armor"
-	desc = "A suit of leather armor, worn by wastelanders everywhere."
+	desc = "A standard suit of leather armor, worn by wastelanders everywhere."
 	icon_state = "leatherarmor"
 	item_state = "leatherarmor"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 	flags_inv = HIDEJUMPSUIT
+	
+/obj/item/clothing/suit/armor/fallout/leatherarmor/light
+	name = "lightweight leather armor"
+	desc = "A light suit of leather armor, stripped of almost all of it's metal pieces, reducing it's overall protective value."
+	icon_state = "lightleather"
+	item_state = "lightleather"
+	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
 	
 /obj/item/clothing/suit/armor/fallout/blastmaster
 	name = "blastmaster raider armor"
@@ -43,6 +57,12 @@
 	item_state = "sadist"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 	
+/obj/item/clothing/suit/armor/fallout/sadist/tribal
+	name = "tribal raider armor"
+	desc = "Raider armor made mostly of padded cloth and leather, with an added tire for emergencies."
+	icon_state = "tribalraider"
+	item_state = "tribalraider"
+	
 /obj/item/clothing/suit/armor/fallout/badlands
 	name = "badlands raider armor"
 	desc = "Raider armor for the badlands, complete with a fancy bandolier and light kevlar padding. Overall protection does leave something to be desired, however."
@@ -56,6 +76,13 @@
 	icon_state = "painspike"
 	item_state = "painspike"
 	armor = list("melee" = 40, "bullet" = 20, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 15, "acid" = 10)
+	
+/obj/item/clothing/suit/armor/fallout/vaultvan
+	name = "Vault-tec van armor"
+	desc = "Makeshift armor scrounged together from, as one may expect, the old remains of a Vault-tec van. Being made almost entirely of metal does make it susceptible to laser and energy weapons, however."
+	icon_state = "vaultvanarmor"
+	item_state = "vaultvanarmor"
+	armor = list("melee" = 50, "bullet" = 35, "laser" = 5, "energy" = 5, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 10)
 	
 /obj/item/clothing/suit/armor/fallout/metal
 	name = "metal armor"
@@ -72,7 +99,7 @@
 	item_state = "armoralt"
 	blood_overlay_type = "armor"
 	dog_fashion = /datum/dog_fashion/back
-	armor = list(melee = 20, bullet = 40, laser = 10, energy = 10, bomb = 30, bio = 10, rad = 10, fire = 30, acid = 10)
+	armor = list(melee = 20, bullet = 40, laser = 10, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 20, acid = 5)
 	
 /obj/item/clothing/suit/armor/fallout/vest/military
 	name = "military vest"
@@ -97,9 +124,9 @@
 	
 /obj/item/clothing/suit/armor/fallout/leatherarmor/reinforced
 	name = "reinforced leather armor"
-	desc = "A suit of leather armor reinforced with extra padding, tougher leather, and metal."
-	icon_state = "leatherarmor"
-	item_state = "leatherarmor"
+	desc = "A suit of leather armor reinforced with extra padding, tougher leather, and heavier metal."
+	icon_state = "reinforcedleather"
+	item_state = "reinforcedleather"
 	armor = list(melee = 50, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 25, acid = 10)
 	
 /obj/item/clothing/suit/armor/fallout/combat
