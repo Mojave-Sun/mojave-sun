@@ -10,7 +10,7 @@
 	desc = "A standard hockey mask. Old sports gear is common protective gear in the wastes."
 	icon_state = "hockey_mask"
 	item_state = "hockey_mask"
-	armor = list(melee = 30, bullet = 10, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
+	armor = list("melee" = 40, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	
 /obj/item/clothing/head/helmet/fallout/wastehound
@@ -68,7 +68,7 @@
 	desc = "A construction hard hat heavily reinforced with metal for maximized protection."
 	icon_state = "durathread"
 	item_state = "durathread"
-	armor = list("melee" = 40, "bullet" = 25, "laser" = 5, "energy" = 5, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 10)
+	armor = list("melee" = 50, "bullet" = 35, "laser" = 5, "energy" = 5, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 10)
 	flags_cover = NONE
 	
 /obj/item/clothing/head/helmet/fallout/cowboy
@@ -162,24 +162,16 @@
 
 /obj/item/clothing/head/helmet/fallout/cowboy/reinf/motorcycle
 	name = "motorcycle helmet"
-	desc = "A typical motorcycle helmet. Decent protection if you don't have much better."
+	desc = "A typical motorcycle helmet. Decent protection overall."
 	icon_state = "motorcycle"
 	item_state = "motorcycle"
-	
-/obj/item/clothing/head/helmet/fallout/lscarf
-	name = "leather scarf"
-	desc = "A leather scarf that wraps all the way around the head. Offers some minor protection and anonymity."
-	icon_state = "headscarf"
-	item_state = "headscarf"
-	armor = list(melee = 15, bullet = 10, laser = 5, energy = 5, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	
 /obj/item/clothing/head/helmet/fallout/eyebot
 	name = "eyebot helmet"
 	desc = "A helmet made from the remains of an eyebot. Solid protection, even if it looks silly."
 	icon_state = "eyebot"
 	item_state = "eyebot"
-	armor = list("melee" = 45, "bullet" = 25, "laser" = 5, "energy" = 5, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 25, "acid" = 10)
+	armor = list("melee" = 50, "bullet" = 35, "laser" = 5, "energy" = 5, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 10)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	
 /obj/item/clothing/head/helmet/fallout/metal
@@ -234,7 +226,7 @@
 	desc = "A combat helmet protected mostly against laser and energy weapons with a black recolor and some fancy additions."
 	icon_state = "enclave_helmet"
 	item_state = "enclave_helmet"
-	armor = list("melee" = 50, "bullet" = 40, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	

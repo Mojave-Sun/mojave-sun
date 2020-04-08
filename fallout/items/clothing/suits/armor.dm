@@ -112,13 +112,14 @@
 	name = "military vest"
 	desc = "A bulletproof military vest that is excellent at stopping almost any bullets, but does not provide great all around protection."
 	icon_state = "bulletproof"
-	item_state = "armor"
+	item_state = "bulletproof"
 	armor = list(melee = 30, bullet = 50, laser = 15, energy = 15, bomb = 40, bio = 20, rad = 20, fire = 40, acid = 20)
 	
 /obj/item/clothing/suit/armor/fallout/vest/detective
 	name = "detective vest"
 	desc = "A bulletproof vest specifically meant for pre-war police detectives."
 	icon_state = "detective-armor"
+	item_state = "detective-armor"
 	dog_fashion = null
 	
 /obj/item/clothing/suit/armor/fallout/tesla
@@ -163,7 +164,7 @@
 	desc = "A specialized set of combat armor, painted black and modified for resistance against laser and energy weapons. Though this comes at the cost of some protection against other attacks."
 	icon_state = "enclave_armor"
 	item_state = "enclave_armor"
-	armor = list("melee" = 50, "bullet" = 40, "laser" = 40, "energy" = 40, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 	
 /obj/item/clothing/suit/armor/fallout/combat/black/brotherhood
 	name = "brotherhood combat armor"
