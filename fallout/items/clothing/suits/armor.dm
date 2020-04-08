@@ -92,6 +92,13 @@
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 0, "energy" = 0, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 80, "acid" = 20)
 	slowdown = 0.5
 	
+/obj/item/clothing/suit/armor/fallout/metal/light
+	name = "lightweight metal armor"
+	desc = "Metal armor with primarily just the chestplate, making it much lighter while only sacrificing some protective qualities.."
+	icon_state = "lightmetal"
+	item_state = "lightmetal"
+	armor = list("melee" = 50, "bullet" = 35, "laser" = 5, "energy" = 5, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 10)
+	
 /obj/item/clothing/suit/armor/fallout/vest
 	name = "police vest"
 	desc = "A bulletproof police vest meant primarily for stopping small caliber guns."
@@ -136,12 +143,20 @@
 	item_state = "combat_armor"
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 15, "energy" = 15, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 40, "acid" = 20)
 	
-/obj/item/clothing/suit/armor/fallout/combat/reinforced
-	name = "reinforced combat armor"
-	desc = "An advanced and heavy duty model of combat armor. Excellent overall protection."
+/obj/item/clothing/suit/armor/fallout/combat/advanced
+	name = "advanced combat armor"
+	desc = "An advanced and more protective model of combat armor. Excellent overall protection."
 	icon_state = "combat_armor_mk2"
 	item_state = "combat_armor_mk2"
 	armor = list("melee" = 55, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+	
+/obj/item/clothing/suit/armor/fallout/combat/reinforced
+	name = "reinforced combat armor"
+	desc = "Standard combat armor reinforced with lots of metal plating. The added weight from the plating slows the user down, but the protection is well worth it."
+	icon_state = "reinfcombat"
+	item_state = "reinfcombat"
+	armor = list("melee" = 60, "bullet" = 50, "laser" = 10, "energy" = 10, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 80, "acid" = 25)
+	slowdown = 0.5
 	
 /obj/item/clothing/suit/armor/fallout/combat/black
 	name = "black combat armor"
@@ -254,4 +269,3 @@
 	icon_state = "recon"
 	item_state = "recon"
 	armor = list("melee" = 40, "bullet" = 35, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
-	body_parts_covered = CHEST|ARMS|LEGS|GROIN|HEAD

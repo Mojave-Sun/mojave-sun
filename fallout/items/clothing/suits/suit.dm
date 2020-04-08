@@ -136,8 +136,22 @@
 /obj/item/clothing/suit/fallout/trench/black
 	name = "black trenchcoat"
 	desc = "An imposing black trenchcoat."
-	icon_state = "jensencoat"
-	item_state = "jensencoat"
+	icon_state = "blacktrench"
+	item_state = "blacktrench"
+	
+/obj/item/clothing/suit/fallout/trench/black/reinf
+	name = "reinforced black trenchcoat"
+	desc = "A black trenchcoat with some minor additional armorings for added protection."
+	icon_state = "reinforcedblacktrench"
+	item_state = "reinforcedblacktrench"
+	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
+	
+/obj/item/clothing/suit/fallout/trench/black/armored
+	name = "armored black trenchcoat"
+	desc = "An intimidating black trenchcoat with a lot of armor, padding, and a spiked pauldron for making sure that fear is instilled."
+	icon_state = "armoredblacktrench"
+	item_state = "armoredblacktrench"
+	armor = list(melee = 50, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 25, acid = 10)
 	
 /obj/item/clothing/suit/fallout/ljacket/biker
 	name = "biker jacket"
@@ -164,8 +178,9 @@
 	name = "doctor's coat"
 	desc = "The medical coat of a typical wasteland doctor."
 	icon = 'fallout/icons/objects/clothing/suits.dmi'
+	mob_overlay_icon = 'fallout/icons/mob/clothing/suit.dmi'
 	icon_state = "followers"
-	item_state = "labcoat"
+	item_state = "followers"
 	armor = list(melee = 10, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 15, rad = 15, fire = 15, acid = 15)
 	body_parts_covered = CHEST|ARMS|LEGS|GROIN
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/scalpel,/obj/item/surgical_drapes,/obj/item/cautery,/obj/item/hemostat,/obj/item/retractor,/obj/item/storage/pill_bottle/dice,/obj/item/dice)

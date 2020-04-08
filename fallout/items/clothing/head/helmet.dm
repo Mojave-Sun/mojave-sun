@@ -136,9 +136,9 @@
 	icon_state = "blackcowboylarge"
 	item_state = "blackcowboylarge"
 	
-/obj/item/clothing/head/helmet/fallout/cowboy/military
+/obj/item/clothing/head/helmet/fallout/cowboy/padded/military
 	name = "military hat"
-	desc = "A military hat. A little bit of padding offers some minimal protection."
+	desc = "A military hat. A little bit of extra padding offers some minor protection."
 	icon_state = "general"
 	item_state = "general"
 	
@@ -160,13 +160,13 @@
 	icon_state = "retropolice"
 	item_state = "retropolice"
 
-/obj/item/clothing/head/helmet/fallout/cowboy/padded/motorcycle
+/obj/item/clothing/head/helmet/fallout/cowboy/reinf/motorcycle
 	name = "motorcycle helmet"
 	desc = "A typical motorcycle helmet. Decent protection if you don't have much better."
 	icon_state = "motorcycle"
 	item_state = "motorcycle"
 	
-/obj/item/clothing/head/helmet/fallout/scarf
+/obj/item/clothing/head/helmet/fallout/lscarf
 	name = "leather scarf"
 	desc = "A leather scarf that wraps all the way around the head. Offers some minor protection and anonymity."
 	icon_state = "headscarf"
@@ -199,6 +199,13 @@
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 45, "energy" = 45, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	
+/obj/item/clothing/head/helmet/fallout/military
+	name = "military helmet"
+	desc = "A bulletproof helmet used by certain pre-war military forces."
+	icon_state = "bulletproof"
+	item_state = "bulletproof"
+	armor = list(melee = 30, bullet = 50, laser = 15, energy = 15, bomb = 40, bio = 20, rad = 20, fire = 40, acid = 20)
+	
 /obj/item/clothing/head/helmet/fallout/combat
 	name = "combat helmet"
 	desc = "A standard pre-war combat helmet. Good overall protection."
@@ -207,12 +214,20 @@
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 15, "energy" = 15, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 40, "acid" = 20)
 	flags_cover = NONE
 	
-/obj/item/clothing/head/helmet/fallout/combat/reinforced
-	name = "reinforced combat helmet"
-	desc = "A more advanced combat helmet, reinforced for additional protection."
+/obj/item/clothing/head/helmet/fallout/combat/advanced
+	name = "advanced combat helmet"
+	desc = "A more advanced combat helmet, added protection and some gadgets."
 	icon_state = "combat_helmet_mk2"
 	item_state = "combat_helmet_mk2"
 	armor = list("melee" = 55, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+	
+/obj/item/clothing/head/helmet/fallout/combat/reinforced
+	name = "reinforced combat helmet"
+	desc = "A combat helmet reinforced with lots of metal plating. Added weight slows the user down a bit, but the extra protection makes it worth it."
+	icon_state = "reinfcombat"
+	item_state = "reinfcombat"
+	armor = list("melee" = 60, "bullet" = 50, "laser" = 10, "energy" = 10, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 80, "acid" = 25)
+	slowdown = 0.25
 	
 /obj/item/clothing/head/helmet/fallout/combat/black
 	name = "black combat helmet"
@@ -250,6 +265,10 @@
 	desc = "An NCR helmet with added goggles and additional protective padding."
 	icon_state = "ncr_goggles_helmet_w"
 	item_state = "ncr_goggles_helmet_w"
+	can_toggle = 1
+	toggle_message = "You pull the goggles down on"
+	alt_toggle_message = "You push the goggles up on"
+	actions_types = list(/datum/action/item_action/toggle)
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 	
 /obj/item/clothing/head/helmet/fallout/ncr/beret
@@ -258,3 +277,10 @@
 	icon_state = "ncr_officer_beret_w"
 	item_state = "ncr_officer_beret_w"
 	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
+
+/obj/item/clothing/head/helmet/fallout/recon
+	name = "brotherhood recon helmet"
+	desc = "A light but armored helmet normally worn by Brotherhood Initiates with their standard issue armor."
+	icon_state = "recon"
+	item_state = "recon"
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
