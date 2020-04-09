@@ -25,6 +25,9 @@ GLOBAL_LIST_INIT(LIGHTING_CORNER_DIAGONAL, list(NORTHEAST, SOUTHEAST, SOUTHWEST,
 	var/cache_b  = LIGHTING_SOFT_THRESHOLD
 	var/cache_mx = 0
 
+	var/list/globAffect = list() /* list of tiles affecting this corner */
+	var/sunFalloff = 0 /* smallest distance to sunlight turf, for sunlight falloff */
+
 /datum/lighting_corner/New(turf/new_turf, diagonal)
 	. = ..()
 	masters = list()
@@ -141,3 +144,10 @@ GLOBAL_LIST_INIT(LIGHTING_CORNER_DIAGONAL, list(NORTHEAST, SOUTHEAST, SOUTHWEST,
 	stack_trace("Ok, Look, /tg/, I need you to find whatever fucker decided to call qdel on a fucking lighting corner, then tell him very nicely and politely that he is 100% retarded and needs his head checked. Thanks. Send them my regards by the way.")
 
 	return ..()
+
+/* get stronkest sunFalloff */
+/datum/lighting_corner/proc/getSunFalloff()
+	sunFalloff = 0
+	var/atom/movable/sunlight_object/S
+	for(S in globAffect)
+		sunFalloff = sunFalloff < globAffect[S] ? globAffect[S] : sunFalloff
