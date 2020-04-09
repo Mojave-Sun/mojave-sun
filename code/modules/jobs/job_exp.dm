@@ -49,7 +49,7 @@ GLOBAL_PROTECT(exp_to_update)
 /client/proc/calc_exp_type(exptype)
 	var/list/explist = prefs.exp.Copy()
 	var/amount = 0
-	var/list/typelist = GLOB.exp_jobsmap[exptype]
+	var/list/typelist = GLOB.f13_exp_jobsmap[exptype]
 	if(!typelist)
 		return -1
 	for(var/job in typelist["titles"])

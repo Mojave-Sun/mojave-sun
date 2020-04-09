@@ -117,6 +117,16 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
+	
+/obj/item/gun/ballistic/automatic/fallout/marksman/servicerifle/varmint/pipe
+	name = "Pipe Rifle"
+	desc = "A makeshift rifle held together with duct tape and rusty bolts. Fires .38 rounds."
+	icon_state = "varmint"
+	item_state = "varmintrifle"
+	fire_delay = 6
+	extra_damage = 25
+	extra_penetration = 5
+	mag_type = /obj/item/ammo_box/magazine/pipe38
 
 /obj/item/gun/ballistic/automatic/fallout/greasegun
 	name = "9mm submachine gun"
