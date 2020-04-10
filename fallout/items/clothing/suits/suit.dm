@@ -37,6 +37,12 @@
 	icon_state = "letterman"
 	item_state = "letterman"
 	
+/obj/item/clothing/suit/fallout/vest/denim
+	name = "denim vest"
+	desc = "A comfortable vest made of denim. Might not save your life, but atleast it will save your style."
+	icon_state = "denim"
+	item_state = "denim"
+	
 /obj/item/clothing/suit/fallout/ljacket
 	name = "leather jacket"
 	desc = "A typical leather jacket."
@@ -130,12 +136,18 @@
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 	
 /obj/item/clothing/suit/fallout/trench
-	name = "thick trenchcoat"
+	name = "tan trenchcoat"
 	desc = "A heavy tan trenchcoat."
 	icon_state = "tantrench"
 	item_state = "tantrench"
 	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
+	
+/obj/item/clothing/suit/fallout/trench/brown
+	name = "brown overcoat"
+	desc = "A slightly dirty brown overcoat."
+	icon_state = "brownover"
+	item_state = "brownover"
 	
 /obj/item/clothing/suit/fallout/trench/black
 	name = "black trenchcoat"
@@ -156,8 +168,14 @@
 	item_state = "armoredblacktrench"
 	armor = list(melee = 50, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 25, acid = 10)
 	
-/obj/item/clothing/suit/fallout/trench/black/detective
+/obj/item/clothing/suit/fallout/trench/detective
 	name = "detective's trenchcoat"
+	desc = "A trenchcoat normally worn by pre-war detectives."
+	icon_state = "detective"
+	item_state = "detective"
+	
+/obj/item/clothing/suit/fallout/trench/detective/dark
+	name = "dark detective's trenchcoat"
 	desc = "A dark trenchcoat normally worn by pre-war detectives."
 	icon_state = "jensencoat"
 	item_state = "jensencoat"
