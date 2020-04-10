@@ -154,3 +154,21 @@
 	desc = "A set of rags worn by those who can't seem to find better, or like things loose."
 	icon_state = "rag"
 	item_state = "tribalrag"
+
+/obj/item/clothing/under/fallout/wasteland/canaan
+	name = "Canaanite outfit"
+	desc = "A fancy shirt and pants worn by Canaanite missionaries."
+	icon_state = "canaan"
+	item_state = "canaan"
+	
+/obj/item/clothing/under/fallout/wasteland/mammoth
+	name = "Mammoth outfit"
+	desc = "A woven shirt and pants given to residents of the town of Mammoth."
+	icon_state = "mammoth"
+	item_state = "mammoth"
+	
+/obj/item/clothing/under/fallout/wasteland/hubologist
+	name = "Hubologist outfit"
+	desc = "Light robes typically worn under a Hubologist's heavier main robes."
+	icon_state = "hubologist"
+	item_state = "hubologist"
