@@ -244,4 +244,3 @@
 	desc = "Long, dark, and imposing robes worn by Hubologists."
 	icon_state = "hubologist"
 	item_state = "hubologist"
-	body_parts_covered = CHEST|ARMS|LEGS|GROIN|HEAD

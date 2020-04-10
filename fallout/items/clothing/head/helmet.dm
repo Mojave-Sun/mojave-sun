@@ -97,6 +97,12 @@
 	icon_state = "gambler"
 	item_state = "gambler"
 	
+/obj/item/clothing/head/helmet/fallout/cowboy/canaan
+	name = "Canaanite's hat"
+	desc = "A wide brimmed hat typically worn by Canaanite missionaries."
+	icon_state = "canaan"
+	item_state = "canaan"
+	
 /obj/item/clothing/head/helmet/fallout/cowboy/padded
 	name = "padded cowboy hat"
 	desc = "A larger cowboy hat with additional padding for more protection."
@@ -109,6 +115,13 @@
 	desc = "An ushanka hat with additional protective padding. Can protect your head from the cold and from taking some real damage!"
 	icon_state = "ushanka"
 	item_state = "ushanka"
+	
+/obj/item/clothing/head/helmet/fallout/cowboy/padded/hubologist
+	name = "Hubologist hood"
+	desc = "A mysterious hood worn by Hubologists."
+	icon_state = "hubologist"
+	item_state = "hubologist"
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	
 /obj/item/clothing/head/helmet/fallout/cowboy/reinf
 	name = "reinforced cowboy hat"
