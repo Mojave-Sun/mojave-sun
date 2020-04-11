@@ -64,6 +64,11 @@
 	///Levels unlocked at roundstart in physiology
 	var/list/roundstart_experience
 
+	//Additional f13 specific info for jobs
+	var/description = ""
+	var/forbid = ""
+	var/enforce = ""
+
 //Only override this proc
 //H is usually a human unless an /equip override transformed it
 /datum/job/proc/after_spawn(mob/living/H, mob/M, latejoin = FALSE)
