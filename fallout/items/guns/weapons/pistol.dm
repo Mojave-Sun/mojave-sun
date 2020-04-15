@@ -44,11 +44,11 @@
 	name = "desert eagle"
 	desc = "A robust .50 AE handgun."
 	icon_state = "deagle"
-	force = 14
 	mag_type = /obj/item/ammo_box/magazine/m50
 	can_suppress = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
 	extra_damage = 50
+	extra_penetration = 5
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/update_icon()
 	..()
