@@ -1,5 +1,5 @@
 /obj/projectile/bullet/fallout
-	speed = 0.3 //Vanilla tg is 0.8
+	speed = 0.7 //Vanilla tg is 0.8
 
 /obj/projectile/bullet/fallout/needle
 	name = "needle"
