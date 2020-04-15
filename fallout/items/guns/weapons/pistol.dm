@@ -1,5 +1,5 @@
 //Guns
-/obj/item/gun/ballistic/automatic/fallout/pistol/n99
+/obj/item/gun/ballistic/automatic/pistol/fallout/n99
 	name = "N99 pistol"
 	desc = "A pre-war large-framed, gas-operated advanced 10mm pistol."
 	icon_state = "n99"
@@ -10,7 +10,7 @@
 	extra_damage = 20
 	extra_penetration = 10
 
-/obj/item/gun/ballistic/automatic/fallout/pistol/ninemil
+/obj/item/gun/ballistic/automatic/pistol/fallout/ninemil
 	name = "9mm pistol"
 	desc = "A mass produced pre-war Browning Hi-power 9mm pistol."
 	icon_state = "ninemil"
@@ -20,7 +20,7 @@
 	extra_damage = 20
 	extra_penetration = 5
 	
-/obj/item/gun/ballistic/automatic/fallout/pistol/pipe_pistol
+/obj/item/gun/ballistic/automatic/pistol/fallout/pipe_pistol
 	name = "pipe pistol"
 	desc = "A crude and makeshift pistol chambered in .38, works in a pinch."
 	icon_state = "ninemil"
@@ -29,7 +29,7 @@
 	fire_delay = 5
 	extra_damage = 20
 
-/obj/item/gun/ballistic/automatic/fallout/pistol/m1911
+/obj/item/gun/ballistic/automatic/pistol/fallout/m1911
 	name = "\improper M1911"
 	desc = "A classic .45 handgun with a small magazine capacity."
 	icon_state = "m1911"
@@ -40,15 +40,15 @@
 	extra_damage = 30
 	extra_penetration = 5
 
-/obj/item/gun/ballistic/automatic/fallout/pistol/deagle
+/obj/item/gun/ballistic/automatic/pistol/fallout/deagle
 	name = "desert eagle"
 	desc = "A robust .50 AE handgun."
 	icon_state = "deagle"
-	force = 14
 	mag_type = /obj/item/ammo_box/magazine/m50
 	can_suppress = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
 	extra_damage = 50
+	extra_penetration = 5
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/update_icon()
 	..()

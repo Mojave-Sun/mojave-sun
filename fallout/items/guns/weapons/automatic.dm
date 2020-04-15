@@ -33,7 +33,7 @@
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 	fire_sound = 'sound/weapons/gun/smg/shot.ogg'
-	burst_size = 3
+	burst_size = 2
 	fire_delay = 3
 	extra_damage = 20
 	extra_penetration = 10
@@ -85,6 +85,7 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	weapon_weight = WEAPON_HEAVY
+	automatic = null
 
 /obj/item/gun/ballistic/automatic/fallout/marksman/servicerifle
 	name = "R81 service rifle"
@@ -113,6 +114,8 @@
 	desc = "A modified Varmint Rifle with better stopping power, a scope, and suppressor. Oh, don't forget the sick paint job."
 	item_state = "ratslayer"
 	extra_damage = 35
+	extra_penetration = 10
+	suppressed = 1
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
