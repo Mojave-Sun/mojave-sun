@@ -48,6 +48,16 @@
 	icon = 'fallout/icons/objects/guns/projectile.dmi'
 	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
+	
+//Bolt-actions
+/obj/item/gun/ballistic/rifle/fallout
+	name = "generic fallout gun"
+	desc = "complain when seeing this"
+	icon = 'fallout/icons/objects/guns/projectile.dmi'
+	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
+	internal_magazine = FALSE
+	tac_reloads = TRUE
 
 /*
 /obj/item/gun/ballistic/automatic/fallout/minigun

@@ -1,14 +1,4 @@
 //Guns
-/obj/item/gun/ballistic/automatic/fallout/mini_uzi
-	name = "\improper Type U3 Uzi"
-	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
-	icon_state = "mini-uzi"
-	mag_type = /obj/item/ammo_box/magazine/uzim9mm
-	burst_size = 2
-	extra_damage = 20
-	extra_penetration = 5
-	force = 15
-
 /obj/item/gun/ballistic/automatic/fallout/tommygun
 	name = "\improper Thompson SMG"
 	desc = "Based on the classic 'Chicago Typewriter'."
@@ -33,7 +23,7 @@
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/m10mm_auto
 	fire_sound = 'sound/weapons/gun/smg/shot.ogg'
-	burst_size = 2
+	burst_size = 3
 	fire_delay = 3
 	extra_damage = 20
 	extra_penetration = 10
@@ -100,37 +90,6 @@
 	zoomable = FALSE
 	weapon_weight = WEAPON_HEAVY
 
-/obj/item/gun/ballistic/automatic/fallout/marksman/servicerifle/varmint
-	name = "Varmint Rifle"
-	desc = "A low powered 5.56, easy to use rifle."
-	icon_state = "varmint"
-	item_state = "varmintrifle"
-	fire_delay = 8
-	extra_damage = 30
-	mag_type = /obj/item/ammo_box/magazine/r10
-
-/obj/item/gun/ballistic/automatic/fallout/marksman/servicerifle/varmint/ratslayer
-	name = "ratslayer"
-	desc = "A modified Varmint Rifle with better stopping power, a scope, and suppressor. Oh, don't forget the sick paint job."
-	item_state = "ratslayer"
-	extra_damage = 35
-	extra_penetration = 10
-	suppressed = 1
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
-	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
-	
-/obj/item/gun/ballistic/automatic/fallout/marksman/servicerifle/varmint/pipe
-	name = "Pipe Rifle"
-	desc = "A makeshift rifle held together with duct tape and rusty bolts. Fires .38 rounds."
-	icon_state = "varmint"
-	item_state = "varmintrifle"
-	fire_delay = 6
-	extra_damage = 25
-	extra_penetration = 5
-	mag_type = /obj/item/ammo_box/magazine/pipe38
-
 /obj/item/gun/ballistic/automatic/fallout/greasegun
 	name = "9mm submachine gun"
 	desc = "A mass-produced 9mm sub machine gun. Slow fire rate means less waste of ammo and controllable bursts."
@@ -153,15 +112,6 @@
 	ammo_type = /obj/item/ammo_casing/fallout/a556
 	caliber = "a556"
 	max_ammo = 20
-	multiple_sprites = 2
-
-/obj/item/ammo_box/magazine/r10
-	name = "r10 Magazine (5.56mm)"
-	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "r10"
-	ammo_type = /obj/item/ammo_casing/fallout/a556
-	caliber = "a556"
-	max_ammo = 10
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/m10mm_auto
@@ -188,14 +138,3 @@
 	ammo_type = /obj/item/ammo_casing/fallout/c45
 	caliber = ".45"
 	max_ammo = 50
-
-/obj/item/ammo_box/magazine/uzim9mm
-	name = "uzi magazine (9mm)"
-	icon_state = "uzi9mm-32"
-	ammo_type = /obj/item/ammo_casing/fallout/c9mm
-	caliber = "9mm"
-	max_ammo = 32
-
-/obj/item/ammo_box/magazine/uzim9mm/update_icon()
-	..()
-	icon_state = "uzi9mm-[round(ammo_count(),4)]"
