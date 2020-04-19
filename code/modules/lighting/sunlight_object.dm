@@ -37,12 +37,13 @@ Sunlight System
 	name = ""
 	mouse_opacity = 0
 	anchored = 1
-	icon          		=  LIGHTING_ICON
+	blend_mode		 = BLEND_ADD
+	icon             = LIGHTING_ICON
+	icon_state       = "transparent"
 	plane 				=  SUNLIGHTING_PLANE
 	layer 				=  SUNLIGHTING_LAYER
 	invisibility 		=  INVISIBILITY_LIGHTING
 	color 				=  SUNLIGHTING_BASE_MATRIX
-	blend_mode    		=  BLEND_ADD
 
 	/* misc vars */
 	var/turf/list/neighbourTurfs = list()

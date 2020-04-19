@@ -2,7 +2,7 @@
 	name          = ""
 
 	anchored      = TRUE
-
+	blend_mode		 = BLEND_ADD
 	icon             = LIGHTING_ICON
 	icon_state       = "transparent"
 	color            = null //we manually set color in init instead

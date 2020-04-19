@@ -487,9 +487,9 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 
 			send2tgs("Server", "[cheesy_message] (No admins online)")
 	QDEL_LIST_ASSOC_VAL(char_render_holders)
-	if(movingmob != null)
-		movingmob.client_mobs_in_contents -= mob
-		UNSETEMPTY(movingmob.client_mobs_in_contents)
+	// if(movingmob != null)
+	// 	movingmob.client_mobs_in_contents -= mob
+	// 	UNSETEMPTY(movingmob.client_mobs_in_contents)
 	Master.UpdateTickRate()
 	. = ..() //Even though we're going to be hard deleted there are still some things that want to know the destroy is happening
 	return QDEL_HINT_HARDDEL_NOW
@@ -847,7 +847,7 @@ GLOBAL_LIST_EMPTY(external_rsc_urls)
 		'html/browser/playeroptions.css',
 		)
 	spawn (10) //removing this spawn causes all clients to not get verbs.
-		
+
 		//load info on what assets the client has
 		src << browse('code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
 

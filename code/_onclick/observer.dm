@@ -14,7 +14,7 @@
 	// Otherwise jump
 	else if(A.loc)
 		forceMove(get_turf(A))
-		update_parallax_contents()
+		// update_parallax_contents()
 
 /mob/dead/observer/ClickOn(atom/A, params)
 	if(check_click_intercept(params,A))
