@@ -33,7 +33,7 @@
 	
 /obj/item/gun/ballistic/rifle/fallout/varmint/ratslayer
 	name = "ratslayer"
-	desc = "A uniquely modified varmint rifle with improved rifling, a scope, and supressor attached."
+	desc = "A uniquely modified varmint rifle with greatly improved rifling, a scope, and supressor attached."
 	icon_state = "ratslayer"
 	item_state = "varmintrifle"
 	extra_damage = 35
@@ -42,16 +42,6 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	suppressed = 1
-	
-/obj/item/gun/ballistic/rifle/fallout/hunting/twentytwo
-	name = ".22 hunting rifle"
-	desc = "A bolt action hunting rifle chambered in the cheap and relatively weak .22 round."
-	icon_state = "22hunting"
-	item_state = "rifle"
-	mag_type = /obj/item/ammo_box/magazine/rifle22
-	fire_sound = 'fallout/sound/f13weapons/hunting_rifle.ogg'
-	extra_damage = 20
-	extra_penetration = 5
 	
 /obj/item/gun/ballistic/rifle/fallout/hunting/scoped/amr
 	name = "anti-material rifle"
@@ -79,15 +69,6 @@
 	ammo_type = /obj/item/ammo_casing/fallout/a308
 	caliber = "a308"
 	max_ammo = 5
-	multiple_sprites = 2
-	
-/obj/item/ammo_box/magazine/rifle22
-	name = "10 round magazine (.22)"
-	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "r10"
-	ammo_type = /obj/item/ammo_casing/fallout/c22
-	caliber = "c22"
-	max_ammo = 10
 	multiple_sprites = 2
 	
 /obj/item/ammo_box/magazine/amr

@@ -1,5 +1,5 @@
 //Guns
-obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
+/obj/item/gun/ballistic/revolver/fallout/caravan
 	name = "caravan shotgun"
 	desc = "An common over under double barreled shotgun."
 	icon_state = "caravan_shotgun"
@@ -10,7 +10,7 @@ obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
 	w_class = WEIGHT_CLASS_HUGE
 	weapon_weight = WEAPON_HEAVY
 
-/obj/item/gun/ballistic/revolver/fallout/single_shotgun
+/obj/item/gun/ballistic/revolver/fallout/single
 	name = "single shotgun"
 	desc = "A dirt cheap single shot shotgun."
 	icon_state = "single_shotgun"

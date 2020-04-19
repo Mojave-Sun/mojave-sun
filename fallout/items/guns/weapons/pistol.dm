@@ -20,11 +20,11 @@
 	extra_damage = 20
 	extra_penetration = 5
 	
-/obj/item/gun/ballistic/automatic/pistol/fallout/pipe_pistol
-	name = "pipe pistol"
+/obj/item/gun/ballistic/automatic/pistol/fallout/handmadepistol
+	name = "handmade pistol"
 	desc = "A crude and makeshift pistol chambered in .38, works in a pinch."
 	icon_state = "ninemil"
-	mag_type = /obj/item/ammo_box/magazine/pipe38
+	mag_type = /obj/item/ammo_box/magazine/h38
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
 	extra_damage = 20
@@ -50,15 +50,6 @@
 	extra_damage = 50
 	extra_penetration = 5
 
-/obj/item/gun/ballistic/automatic/pistol/deagle/update_icon()
-	..()
-	if(magazine)
-		cut_overlays()
-		add_overlay("deagle_magazine")
-	else
-		cut_overlays()
-	icon_state = "[initial(icon_state)][chambered ? "" : "-e"]"
-
 //Magazines
 /obj/item/ammo_box/magazine/m45
 	name = "handgun magazine (.45)"
@@ -67,13 +58,6 @@
 	caliber = ".45"
 	max_ammo = 8
 
-/obj/item/ammo_box/magazine/m45/update_icon()
-	..()
-	if (ammo_count() >= 8)
-		icon_state = "45-8"
-	else
-		icon_state = "45-[ammo_count()]"
-
 /obj/item/ammo_box/magazine/m50
 	name = "handgun magazine (.50ae)"
 	icon_state = "50ae"
@@ -81,9 +65,6 @@
 	caliber = ".50"
 	max_ammo = 7
 	multiple_sprites = 1
-
-/obj/item/ammo_box/magazine/m50/empty
-	stored_ammo = 0
 
 /obj/item/ammo_box/magazine/m10mm_adv
 	name = "Advanced 10mm Pistol Magazine (10mm)"
@@ -103,8 +84,8 @@
 	max_ammo = 13
 	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/pipe38
-	name = "Pipe magazine (.38)"
+/obj/item/ammo_box/magazine/h38
+	name = "handmade magazine (.38)"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "9mmp"
 	ammo_type = /obj/item/ammo_casing/fallout/c38
