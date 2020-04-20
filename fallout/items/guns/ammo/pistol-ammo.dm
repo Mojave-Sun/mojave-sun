@@ -106,24 +106,24 @@
 	desc = "A high velocity 10mm bullet casing."
 	projectile_type = /obj/projectile/bullet/fallout/c10mm/hv
 
-//.50 AE
-/obj/item/ammo_casing/fallout/a50AE
-	name = ".50AE bullet casing"
-	desc = "A .50AE bullet casing."
-	caliber = ".50"
-	projectile_type = /obj/projectile/bullet/fallout/a50AE
+//12.7mm
+/obj/item/ammo_casing/fallout/m12mm
+	name = "12.7mm bullet casing"
+	desc = "A 12.7mm bullet casing."
+	caliber = "12.7mm"
+	projectile_type = /obj/projectile/bullet/fallout/m12mm
 
-/obj/item/ammo_casing/fallout/a50AE/ap
-	name = "AP .50AE bullet casing"
-	desc = "An armor piercing .50AE bullet casing."
-	projectile_type = /obj/projectile/bullet/fallout/a50AE/ap
+/obj/item/ammo_casing/fallout/m12mm/ap
+	name = "AP 12.7mm bullet casing"
+	desc = "An armor piercing 12.7mm bullet casing."
+	projectile_type = /obj/projectile/bullet/fallout/m12mm/ap
 
-/obj/item/ammo_casing/fallout/a50AE/fmj
-	name = "FMJ .50AE bullet casing"
-	desc = "A full metal jacket .50AE bullet casing."
-	projectile_type = /obj/projectile/bullet/fallout/a50AE/fmj
+/obj/item/ammo_casing/fallout/m12mm/fmj
+	name = "FMJ 12.7mm bullet casing"
+	desc = "A full metal jacket 12.7mm bullet casing."
+	projectile_type = /obj/projectile/bullet/fallout/m12mm/fmj
 
-/obj/item/ammo_casing/fallout/a50AE/hv
-	name = "HV .50AE bullet casing"
-	desc = "A high velocity .50AE bullet casing."
-	projectile_type = /obj/projectile/bullet/fallout/a50AE/hv
+/obj/item/ammo_casing/fallout/m12mm/hv
+	name = "HV 12.7mm bullet casing"
+	desc = "A high velocity 12.7mm bullet casing."
+	projectile_type = /obj/projectile/bullet/fallout/m12mm/hv

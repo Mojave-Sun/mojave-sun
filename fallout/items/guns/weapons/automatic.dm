@@ -63,6 +63,20 @@
 	extra_penetration = 5
 	spread = 10
 
+/obj/item/gun/ballistic/automatic/fallout/smg9mm
+	name = "9mm submachine gun"
+	desc = "A fast firing, old school 9mm submachine gun. Doesn't pack a lot of punch per bullet, but that doesn't matter when you're spitting them out so fast."
+	icon_state = "smg9mm"
+	item_state = "smg9mm"
+	mag_type = /obj/item/ammo_box/magazine/smgm9mm
+	fire_sound = 'fallout/sound/f13weapons/greasegun.ogg'
+	can_suppress = FALSE
+	burst_size = 3
+	fire_delay = 3
+	extra_damage = 10
+	force = 15
+	spread = 10
+
 /obj/item/gun/ballistic/automatic/fallout/assaultrifle
 	name = "assault rifle"
 	desc = "A general purpose, standard automatic assault rifle chambered in 5.56. Commonly used by pre-war US military forces."
@@ -183,20 +197,6 @@
 	extra_damage = 45
 	extra_penetration = 10
 	mag_type = /obj/item/ammo_box/magazine/r308
-
-/obj/item/gun/ballistic/automatic/fallout/smg9mm
-	name = "9mm submachine gun"
-	desc = "A fast firing, old school 9mm submachine gun. Doesn't pack a lot of punch per bullet, but that doesn't matter when you're spitting them out so fast."
-	icon_state = "smg9mm"
-	item_state = "smg9mm"
-	mag_type = /obj/item/ammo_box/magazine/smgm9mm
-	fire_sound = 'fallout/sound/f13weapons/greasegun.ogg'
-	can_suppress = FALSE
-	burst_size = 3
-	fire_delay = 3
-	extra_damage = 10
-	force = 15
-	spread = 10
 
 //Magazines
 /obj/item/ammo_box/magazine/r20
