@@ -66,16 +66,16 @@
 /obj/projectile/bullet/fallout/c10mm/hv
 	speed = 0.5
 
-//.50 AE
-/obj/projectile/bullet/fallout/a50AE
+//12.7mm
+/obj/projectile/bullet/fallout/m12mm
 	damage = 0
 	armour_penetration = 0
 
-/obj/projectile/bullet/fallout/a50AE/ap
+/obj/projectile/bullet/fallout/m12mm/ap
 	armour_penetration = 10
 
-/obj/projectile/bullet/fallout/a50AE/fmj
+/obj/projectile/bullet/fallout/m12mm/fmj
 	damage = 5
 
-/obj/projectile/bullet/fallout/a50AE/hv
+/obj/projectile/bullet/fallout/m12mm/hv
 	speed = 0.5
