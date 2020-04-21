@@ -12,7 +12,7 @@ SUBSYSTEM_DEF(job)
 	var/list/prioritized_jobs = list()
 	var/list/latejoin_trackers = list()	//Don't read this list, use GetLateJoinTurfs() instead
 
-	var/overflow_role = "Assistant"
+	var/overflow_role = "Wastelander"
 
 	var/list/level_order = list(JP_HIGH,JP_MEDIUM,JP_LOW)
 
@@ -40,7 +40,7 @@ SUBSYSTEM_DEF(job)
 		overflow_role = new_overflow_role
 		JobDebug("Overflow role set to : [new_overflow_role]")
 
-/datum/controller/subsystem/job/proc/SetupOccupations(faction = "Station")
+/datum/controller/subsystem/job/proc/SetupOccupations(faction = "Wasteland")
 	occupations = list()
 	var/list/all_jobs = subtypesof(/datum/job)
 	if(!all_jobs.len)
@@ -115,7 +115,7 @@ SUBSYSTEM_DEF(job)
 		if(flag && (!(flag in player.client.prefs.be_special)))
 			JobDebug("FOC flag failed, Player: [player], Flag: [flag], ")
 			continue
-		if(player.mind && job.title in player.mind.restricted_roles)
+		if(player.mind && (job.title in player.mind.restricted_roles))
 			JobDebug("FOC incompatible with antagonist role, Player: [player]")
 			continue
 		if(player.client.prefs.job_preferences[job.title] == level)
@@ -151,7 +151,7 @@ SUBSYSTEM_DEF(job)
 			JobDebug("GRJ player not enough xp, Player: [player]")
 			continue
 
-		if(player.mind && job.title in player.mind.restricted_roles)
+		if(player.mind && (job.title in player.mind.restricted_roles))
 			JobDebug("GRJ incompatible with antagonist role, Player: [player], Job: [job.title]")
 			continue
 
@@ -331,7 +331,7 @@ SUBSYSTEM_DEF(job)
 					JobDebug("DO player not enough xp, Player: [player], Job:[job.title]")
 					continue
 
-				if(player.mind && job.title in player.mind.restricted_roles)
+				if(player.mind && (job.title in player.mind.restricted_roles))
 					JobDebug("DO incompatible with antagonist role, Player: [player], Job:[job.title]")
 					continue
 
@@ -421,22 +421,24 @@ SUBSYSTEM_DEF(job)
 	//If we joined at roundstart we should be positioned at our workstation
 	if(!joined_late)
 		var/obj/S = null
-		for(var/obj/effect/landmark/start/sloc in GLOB.start_landmarks_list)
-			if(sloc.name != rank)
-				S = sloc //so we can revert to spawning them on top of eachother if something goes wrong
-				continue
-			if(locate(/mob/living) in sloc.loc)
-				continue
-			S = sloc
-			sloc.used = TRUE
-			break
 		if(length(GLOB.jobspawn_overrides[rank]))
 			S = pick(GLOB.jobspawn_overrides[rank])
+		else
+			for(var/_sloc in GLOB.start_landmarks_list)
+				var/obj/effect/landmark/start/sloc = _sloc
+				if(sloc.name != rank)
+					continue
+				S = sloc
+				if(locate(/mob/living) in sloc.loc) //so we can revert to spawning them on top of eachother if something goes wrong
+					continue
+				sloc.used = TRUE
+				break
 		if(S)
 			S.JoinPlayerHere(living_mob, FALSE)
 		if(!S) //if there isn't a spawnpoint send them to latejoin, if there's no latejoin go yell at your mapper
 			log_world("Couldn't find a round start spawn point for [rank]")
-			SendToLateJoin(living_mob)
+			if(!SendToLateJoin(living_mob))
+				living_mob.move_to_error_room()
 
 
 	if(living_mob.mind)
@@ -461,6 +463,9 @@ SUBSYSTEM_DEF(job)
 				handle_auto_deadmin_roles(M.client, rank)
 
 		to_chat(M, "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
+		to_chat(M, "<FONT color='blue'><B>[job.description]</b>")
+		to_chat(M, "<FONT color='red'><b>[job.forbid]</b>")
+		to_chat(M, "<FONT color='green'><b>[job.enforce]</b>")
 		job.radio_help_message(M)
 		if(job.req_admin_notify)
 			to_chat(M, "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>")
@@ -612,12 +617,12 @@ SUBSYSTEM_DEF(job)
 	if(M.mind && M.mind.assigned_role && length(GLOB.jobspawn_overrides[M.mind.assigned_role])) //We're doing something special today.
 		destination = pick(GLOB.jobspawn_overrides[M.mind.assigned_role])
 		destination.JoinPlayerHere(M, FALSE)
-		return
+		return TRUE
 
 	if(latejoin_trackers.len)
 		destination = pick(latejoin_trackers)
 		destination.JoinPlayerHere(M, buckle)
-		return
+		return TRUE
 
 	//bad mojo
 	var/area/shuttle/arrival/A = GLOB.areas_by_type[/area/shuttle/arrival]
@@ -626,7 +631,7 @@ SUBSYSTEM_DEF(job)
 		var/obj/structure/chair/C = locate() in A
 		if(C)
 			C.JoinPlayerHere(M, buckle)
-			return
+			return TRUE
 
 		//last hurrah
 		var/list/avail = list()
@@ -636,7 +641,7 @@ SUBSYSTEM_DEF(job)
 		if(avail.len)
 			destination = pick(avail)
 			destination.JoinPlayerHere(M, FALSE)
-			return
+			return TRUE
 
 	//pick an open spot on arrivals and dump em
 	var/list/arrivals_turfs = shuffle(get_area_turfs(/area/shuttle/arrival))
@@ -644,10 +649,11 @@ SUBSYSTEM_DEF(job)
 		for(var/turf/T in arrivals_turfs)
 			if(!is_blocked_turf(T, TRUE))
 				T.JoinPlayerHere(M, FALSE)
-				return
+				return TRUE
 		//last chance, pick ANY spot on arrivals and dump em
 		destination = arrivals_turfs[1]
 		destination.JoinPlayerHere(M, FALSE)
+		return TRUE
 	else
 		var/msg = "Unable to send mob [M] to late join!"
 		message_admins(msg)

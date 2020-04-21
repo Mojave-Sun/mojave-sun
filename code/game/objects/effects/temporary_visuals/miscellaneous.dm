@@ -137,9 +137,6 @@
 /obj/effect/temp_visual/dir_setting/curse/hand
 	icon_state = "cursehand"
 
-/obj/effect/temp_visual/dir_setting/curse/hand/Initialize(mapload, set_dir, handedness)
-	. = ..()
-	update_icon()
 
 /obj/effect/temp_visual/bsa_splash
 	name = "\improper Bluespace energy wave"
@@ -157,9 +154,6 @@
 			icon_state = "beam_splash_w"
 		if(EAST)
 			icon_state = "beam_splash_e"
-
-/obj/projectile/curse_hand/update_icon()
-	icon_state = "[icon_state][handedness]"
 
 /obj/effect/temp_visual/wizard
 	name = "water"
@@ -467,6 +461,7 @@
 	icon_state = ""
 	layer = ABOVE_ALL_MOB_LAYER
 	anchored = TRUE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	var/status = 0
 	var/delay = 0
 
@@ -481,7 +476,7 @@
 	else
 		update_icon()
 
-/obj/effect/constructing_effect/update_icon()
+/obj/effect/constructing_effect/update_icon_state()
 	icon_state = "rcd"
 	if (delay < 10)
 		icon_state += "_shortest"

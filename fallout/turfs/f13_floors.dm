@@ -1,100 +1,5 @@
-#define GRASS_SPONTANEOUS 		2
-#define GRASS_WEIGHT 			4
-#define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_feracactus = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5, /obj/structure/flora/tree/joshua = 3, /obj/structure/flora/tree/cactus = 2, /obj/structure/flora/tree/wasteland = 2)
-#define DESOLATE_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland = 1)
-
-GLOBAL_LIST(archdrop_desert_sand)
-
-// don't use this for anything, /f13/ is essentially just the new /unsimulated/ but for planets and should probably be phased out entirely everywhere
-/turf/open/floor/plating/f13
-	gender = PLURAL
-	baseturfs = /turf/open/floor/plating/f13
-	attachment_holes = FALSE
-	planetary_atmos = TRUE
-	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
-
-/* so we can't break this */
-/turf/open/floor/plating/f13/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
-	return
-
-/turf/open/floor/plating/f13/burn_tile()
-	return
-
-/turf/open/floor/plating/f13/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
-	return
-
-/turf/open/floor/plating/f13/MakeDry()
-	return
-
-/turf/open/floor/plating/f13/outside
-	name = "What the fuck mappers? why is this here"
-	desc = "If found, scream at the github repo about this"
-	icon_state = "wasteland1"
-	icon = 'fallout/icons/turf/ground.dmi'
-/* TODO: day night system and make it particularly less killing the server's cpu
-	turf_light_range = 3
-	turf_light_power = 0.75
-*/
-
-/turf/open/floor/plating/f13/outside/desert
-	name = "\proper desert"
-	desc = "A stretch of desert."
-	icon = 'fallout/icons/turf/f13desert.dmi'
-	icon_state = "wasteland1"
-	var/obj/structure/flora/turfPlant = null
-	slowdown = 2
-
-/turf/open/floor/plating/f13/outside/desert/Initialize()
-	. = ..()
-	if(!length(GLOB.archdrop_desert_sand))
-		GLOB.archdrop_desert_sand = list(/obj/item/stack/ore/glass = list(ARCH_PROB = 100, ARCH_MAXDROP = 5)) //sand
-	AddComponent(/datum/component/archaeology, GLOB.archdrop_desert_sand)
-	icon_state = "wasteland[rand(1,31)]"
-	//If no fences, machines (soil patches are machines), etc. try to plant grass
-	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
-		plantGrass()
-
-/turf/open/floor/plating/f13/outside/desert/proc/plantGrass(Plantforce = FALSE)
-	var/weight = 0
-	var/randplant = null
-
-	//spontaneously spawn grass
-	if(Plantforce || prob(GRASS_SPONTANEOUS))
-		randplant = pickweight(LUSH_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
-		turfPlant = new randplant(src)
-		. = TRUE //in case we ever need this to return if we spawned
-		return .
-
-	//loop through neighbouring desert turfs, if they have grass, then increase weight
-	for(var/turf/open/floor/plating/f13/outside/desert/T in RANGE_TURFS(3, src))
-		if(T.turfPlant)
-			weight += GRASS_WEIGHT
-
-	//use weight to try to spawn grass
-	if(prob(weight))
-
-		//If surrounded on 5+ sides, pick from lush
-		if(weight == (5 * GRASS_WEIGHT))
-			randplant = pickweight(LUSH_PLANT_SPAWN_LIST)
-		else
-			randplant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
-		turfPlant = new randplant(src)
-		. = TRUE
-
-//Make sure we delete the plant if we ever change turfs
-/turf/open/floor/plating/f13/outside/desert/ChangeTurf(path, new_baseturf, flags)
-	if(turfPlant)
-		qdel(turfPlant)
-	. =  ..()
-
-/turf/open/floor/plating/f13/outside/road
-	name = "\proper road"
-	desc = "A stretch of road."
-	icon = 'fallout/icons/turf/f13road.dmi'
-	icon_state = "outermiddle"
-
 /turf/open/floor/wood/f13
-	icon = 'fallout/icons/turf/floors.dmi'
+	icon = 'fallout/icons/turf/floors_1.dmi'
 	icon_state = "housewood1"
 
 /turf/open/floor/wood/f13/Initialize()
@@ -186,33 +91,9 @@ GLOBAL_LIST(archdrop_desert_sand)
 /turf/open/floor/wood/f13/stage_br
 	icon_state = "housewood_stage_bottom_right"
 
-#define SHROOM_SPAWN	1
-
-/turf/open/floor/plating/f13/inside/mountain
-	name = "mountain"
-	desc = "Damp cave flooring."
-	icon = 'fallout/icons/turf/f13floors2.dmi'
-	icon_state = "mountain0"
-	var/obj/structure/flora/turfPlant = null
-
-/turf/open/floor/plating/f13/inside/mountain/Initialize()
-	. = ..()
-	icon_state = "mountain[rand(0,10)]"
-	//If no fences, machines, etc. try to plant mushrooms
-	if(!(\
-			(locate(/obj/structure) in src) || \
-			(locate(/obj/machinery) in src) ))
-		plantShrooms()
-
-/turf/open/floor/plating/f13/inside/mountain/proc/plantShrooms()
-	if(prob(SHROOM_SPAWN))
-		turfPlant = new /obj/structure/flora/wasteplant/wild_fungus(src)
-		. = TRUE //in case we ever need this to return if we spawned
-		return.
-
 /turf/open/floor/plasteel/f13/vault_floor
 	name = "vault floor"
-	icon = 'fallout/icons/turf/f13floors2.dmi'
+	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "vault_floor"
 	planetary_atmos = FALSE // They're _inside_ a vault.
 
@@ -471,7 +352,7 @@ GLOBAL_LIST(archdrop_desert_sand)
 
 
 /turf/open/floor/circuit/f13_blue
-	icon = 'fallout/icons/turf/f13floors2.dmi'
+	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "bcircuit2"
 	icon_normal = "bcircuit2"
 
@@ -480,7 +361,7 @@ GLOBAL_LIST(archdrop_desert_sand)
 	on = FALSE
 
 /turf/open/floor/circuit/f13_green
-	icon = 'fallout/icons/turf/f13floors2.dmi'
+	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "gcircuit2"
 	icon_normal = "gcircuit2"
 	light_color = LIGHT_COLOR_GREEN
@@ -491,7 +372,7 @@ GLOBAL_LIST(archdrop_desert_sand)
 	on = FALSE
 
 /turf/open/floor/circuit/f13_red
-	icon = 'fallout/icons/turf/f13floors2.dmi'
+	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "rcircuit1"
 	icon_normal = "rcircuit1"
 	light_color = LIGHT_COLOR_FLARE
@@ -502,7 +383,7 @@ GLOBAL_LIST(archdrop_desert_sand)
 	on = FALSE
 
 /turf/open/f13/inside
-	icon = 'fallout/icons/turf/f13floorsmisc.dmi'
+	icon = 'fallout/icons/turf/floors_1.dmi'
 	icon_state = "housewood1"
 
 /turf/open/f13/inside/wood
@@ -510,5 +391,5 @@ GLOBAL_LIST(archdrop_desert_sand)
 	desc = "Rotting wooden flooring."
 
 /turf/open/floor/plasteel/f13
-	icon = 'fallout/icons/turf/f13floors2.dmi'
+	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "floor"

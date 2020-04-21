@@ -1,17 +1,21 @@
-/obj/item/ammo_casing/proc/fire_casing(atom/target, mob/living/user, params, distro, quiet, zone_override, spread, atom/fired_from)
+/obj/item/ammo_casing/proc/fire_casing(atom/target, mob/living/user, params, distro, quiet, zone_override, spread, atom/fired_from, extra_damage, extra_penetration)
 	distro += variance
-	for (var/i = max(1, pellets), i > 0, i--)
-		var/targloc = get_turf(target)
-		ready_proj(target, user, quiet, zone_override, fired_from)
+	var/targloc = get_turf(target)
+	ready_proj(target, user, quiet, zone_override, fired_from, extra_damage, extra_penetration)
+	if(pellets == 1)
 		if(distro) //We have to spread a pixel-precision bullet. throw_proj was called before so angles should exist by now...
 			if(randomspread)
 				spread = round((rand() - 0.5) * distro)
 			else //Smart spread
-				spread = round((i / pellets - 0.5) * distro)
+				spread = round(1 - 0.5) * distro
 		if(!throw_proj(target, targloc, user, params, spread))
-			return 0
-		if(i > 1)
-			newshot()
+			return FALSE
+	else
+		if(isnull(BB))
+			return FALSE
+		AddComponent(/datum/component/pellet_cloud, projectile_type, pellets)
+		SEND_SIGNAL(src, COMSIG_PELLET_CLOUD_INIT, target, user, fired_from, randomspread, spread, zone_override, params, distro)
+
 	if(click_cooldown_override)
 		user.changeNext_move(click_cooldown_override)
 	else
@@ -20,7 +24,7 @@
 	update_icon()
 	return TRUE
 
-/obj/item/ammo_casing/proc/ready_proj(atom/target, mob/living/user, quiet, zone_override = "", atom/fired_from)
+/obj/item/ammo_casing/proc/ready_proj(atom/target, mob/living/user, quiet, zone_override = "", atom/fired_from, extra_damage = 0, extra_penetration = 0)
 	if (!BB)
 		return
 	BB.original = target
@@ -31,6 +35,8 @@
 	else
 		BB.def_zone = user.zone_selected
 	BB.suppressed = quiet
+	BB.damage += extra_damage
+	BB.armour_penetration += extra_penetration
 
 	if(reagents && BB.reagents)
 		reagents.trans_to(BB, reagents.total_volume, transfered_by = user) //For chemical darts/bullets

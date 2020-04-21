@@ -40,7 +40,7 @@ GLOBAL_PROTECT(exp_to_update)
 	return exp_type
 
 /proc/job_is_xp_locked(jobtitle)
-	if(!CONFIG_GET(flag/use_exp_restrictions_heads) && jobtitle in (GLOB.command_positions | list("AI")))
+	if(!CONFIG_GET(flag/use_exp_restrictions_heads) && (jobtitle in (GLOB.command_positions | list("AI"))))
 		return FALSE
 	if(!CONFIG_GET(flag/use_exp_restrictions_other) && !(jobtitle in (GLOB.command_positions | list("AI"))))
 		return FALSE
@@ -49,7 +49,7 @@ GLOBAL_PROTECT(exp_to_update)
 /client/proc/calc_exp_type(exptype)
 	var/list/explist = prefs.exp.Copy()
 	var/amount = 0
-	var/list/typelist = GLOB.exp_jobsmap[exptype]
+	var/list/typelist = GLOB.f13_exp_jobsmap[exptype]
 	if(!typelist)
 		return -1
 	for(var/job in typelist["titles"])
@@ -124,7 +124,7 @@ GLOBAL_PROTECT(exp_to_update)
 
 /client/proc/get_exp_living(pure_numeric = FALSE)
 	if(!prefs.exp)
-		return "No data"
+		return pure_numeric ? 0 : "No data"
 	var/exp_living = text2num(prefs.exp[EXP_TYPE_LIVING])
 	return pure_numeric ? exp_living : get_exp_format(exp_living)
 

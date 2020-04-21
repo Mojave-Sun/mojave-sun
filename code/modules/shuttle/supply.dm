@@ -11,7 +11,6 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		/obj/machinery/teleport/station,
 		/obj/machinery/teleport/hub,
 		/obj/machinery/quantumpad,
-		/obj/machinery/clonepod,
 		/obj/effect/mob_spawn,
 		/obj/effect/hierophant,
 		/obj/structure/receiving_pad,
@@ -29,7 +28,9 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		/obj/machinery/launchpad,
 		/obj/machinery/disposal,
 		/obj/structure/disposalpipe,
-		/obj/item/hilbertshotel
+		/obj/item/hilbertshotel,
+		/obj/machinery/camera,
+		/obj/item/gps
 	)))
 
 /obj/docking_port/mobile/supply

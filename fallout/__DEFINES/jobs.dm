@@ -1,0 +1,84 @@
+
+#define WASTELAND		(1<<0)
+
+#define WASTELANDER		(1<<0)
+#define CANAANITE		(1<<1)
+#define HUBOLOGIST		(1<<2)
+
+#define TOWN			(1<<1)
+
+#define SETTLER			(1<<0)
+#define SHOPKEEP		(1<<1)
+#define FARMER			(1<<2)
+#define BARTENDER		(1<<3)
+#define DOCTOR			(1<<4)
+#define DEPUTY			(1<<5)
+#define SHERIFF			(1<<6)
+#define MAYOR			(1<<7)
+
+#define TRIBE			(1<<2)
+
+#define TRIBAL			(1<<0)
+#define WARRIOR			(1<<1)
+#define BERSERKER		(1<<2)
+#define SHAMAN			(1<<3)
+#define CHIEFTAIN		(1<<4)
+
+#define NCR				(1<<3)
+
+#define TROOPER			(1<<0)
+#define CORPORAL		(1<<1)
+#define SERGEANT		(1<<2)
+#define LIEUTENANT		(1<<3)
+
+#define BOS				(1<<4)
+
+#define INITIATE		(1<<0)
+#define KNIGHT			(1<<1)
+#define PALADIN			(1<<2)
+#define HEAD_PALADIN	(1<<3)
+#define SCRIBE			(1<<4)
+#define HEAD_SCRIBE		(1<<5)
+
+#define EIGHTIES		(1<<5)
+
+#define RAIDER			(1<<0)
+#define ENFORCER		(1<<1)
+#define BOSS			(1<<2)
+
+#define JOB_DISPLAY_ORDER_WASTELANDER 1
+#define JOB_DISPLAY_ORDER_CANAANITE 2
+#define JOB_DISPLAY_ORDER_HUBOLOGIST 3
+#define JOB_DISPLAY_ORDER_SETTLER 4
+#define JOB_DISPLAY_ORDER_SHOPKEEP 5
+#define JOB_DISPLAY_ORDER_FARMER 6
+#define JOB_DISPLAY_ORDER_BARTENDER 7
+#define JOB_DISPLAY_ORDER_DOCTOR 8
+#define JOB_DISPLAY_ORDER_DEPUTY 9
+#define JOB_DISPLAY_ORDER_SHERIFF 10
+#define JOB_DISPLAY_ORDER_MAYOR 11
+#define JOB_DISPLAY_ORDER_TRIBAL 12
+#define JOB_DISPLAY_ORDER_WARRIOR 13
+#define JOB_DISPLAY_ORDER_BERSERKER 14
+#define JOB_DISPLAY_ORDER_SHAMAN 15
+#define JOB_DISPLAY_ORDER_CHIEFTAIN 16
+#define JOB_DISPLAY_ORDER_TROOPER 17
+#define JOB_DISPLAY_ORDER_CORPORAL 18
+#define JOB_DISPLAY_ORDER_SERGEANT 19
+#define JOB_DISPLAY_ORDER_LIEUTENANT 20
+#define JOB_DISPLAY_ORDER_INITIATE 21
+#define JOB_DISPLAY_ORDER_KNIGHT 22
+#define JOB_DISPLAY_ORDER_PALADIN 23
+#define JOB_DISPLAY_ORDER_HEAD_PALADIN 24
+#define JOB_DISPLAY_ORDER_SCRIBE 25
+#define JOB_DISPLAY_ORDER_HEAD_SCRIBE 26
+#define JOB_DISPLAY_ORDER_RAIDER 27
+#define JOB_DISPLAY_ORDER_ENFORCER 28
+#define JOB_DISPLAY_ORDER_BOSS 29
+
+#define EXP_TYPE_WASTELAND "Wasteland"
+#define EXP_TYPE_TOWN "Town"
+#define EXP_TYPE_TRIBE "Tribe"
+#define EXP_TYPE_NCR "NCR"
+#define EXP_TYPE_BOS "BOS"
+#define EXP_TYPE_EIGHTIES "80s"
