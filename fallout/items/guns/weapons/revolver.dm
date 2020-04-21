@@ -1,164 +1,264 @@
 //Guns
-obj/item/gun/ballistic/revolver/fallout/caravan_shotgun
+/obj/item/gun/ballistic/revolver/fallout/caravan
 	name = "caravan shotgun"
-	desc = "An common over under double barreled shotgun."
-	icon_state = "caravan_shotgun"
+	desc = "A well worn but reliable double barrel shotgun."
+	icon_state = "caravan"
 	item_state = "dshotgun1"
-	force = 25
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/dual
+	force = 20
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/caravan
 	fire_sound = 'fallout/sound/f13weapons/caravan_shotgun.ogg'
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
-/obj/item/gun/ballistic/revolver/fallout/single_shotgun
+/obj/item/gun/ballistic/revolver/fallout/single
 	name = "single shotgun"
-	desc = "A dirt cheap single shot shotgun."
-	icon_state = "single_shotgun"
+	desc = "A very cheap and very common shotgun with only a single round, better make it count."
+	icon_state = "singleshot"
 	item_state = "singleshot"
 	force = 15
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/improvised
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/single
 	fire_sound = 'fallout/sound/f13weapons/caravan_shotgun.ogg'
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
-/obj/item/gun/ballistic/revolver/fallout/zipgun
-	name = "zipgun"
-	desc = "A crudely made single shot 10mm pistol."
-	icon_state = "zipgun"
-	item_state = "gun"
-	fire_sound = 'sound/weapons/gun/pistol/shot.ogg'
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/improvised10mm
+/obj/item/gun/ballistic/revolver/fallout/single/handmade
+	name = "handmade shotgun"
+	desc = "A single shotgun fashioned by hand, about as powerful as it's cleaner brother. But maybe not as reliable."
+	icon_state = "hshot"
 
-/obj/item/gun/ballistic/revolver/fallout/pipe_rifle
-	name = "pipe rifle"
-	desc = "A crudely made single shot 10mm rifle."
-	icon_state = "pipe_rifle"
-	item_state = "improvshotgun"
-	fire_sound = 'sound/weapons/gun/rifle/shot.ogg'
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/improvised10mm
-	w_class = WEIGHT_CLASS_HUGE
-	weapon_weight = WEAPON_HEAVY
-
-/obj/item/gun/ballistic/revolver/fallout/m29
-	name = "\improper S&W Model 29"
-	desc = "Being that this is the most powerful handgun in the world, and can blow your head clean-off, you've got to ask yourself one question. Do I feel lucky? Well, do ya punk? "
-	item_state = "model29"
-	icon_state = "m29"
+/obj/item/gun/ballistic/revolver/fallout/rev44
+	name = ".44 Magnum revolver"
+	desc = "A double action revolver chambered for .44 Magnum rounds. Decently fast and damaging at the same time."
+	icon_state = "44magnum"
+	item_state = "m29"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	fire_sound = 'fallout/sound/f13weapons/44mag.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 3
-	extra_damage = 30
+	fire_delay = 4
+	extra_damage = 35
 	extra_penetration = 10
 
-/obj/item/gun/ballistic/revolver/fallout/m29/alt
-	item_state = "44magnum"
-	icon_state = "mysterious_m29"
-	w_class = WEIGHT_CLASS_NORMAL
+/obj/item/gun/ballistic/revolver/fallout/rev44/mysterious
+	name = "Mysterious Magnum"
+	desc = "A unique .44 Magnum with a silver finish for style, and a higher rate of fire and damage for killing. Something sure is mysterious about this gun though."
+	icon_state = "mysterious"
+	item_state = "m29"
+	fire_delay = 3
+	extra_damage = 40
 
-/obj/item/gun/ballistic/revolver/fallout/m29/scoped
-	name = "\improper Scoped S&W Model 29"
-	icon_state = "scoped_m29"
-	desc = "Being that this is the most powerful handgun in the world, and can blow your head clean-off, you've got to ask yourself one question. Do I feel lucky? Well, do ya punk? Now with a scope!"
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
-	fire_delay = 4
-	w_class = WEIGHT_CLASS_NORMAL
+/obj/item/gun/ballistic/revolver/fallout/rev44/rifle
+	name = ".44 revolver rifle"
+	desc = "A slow firing revolver rifle chambered for .44 Magnum rounds."
+	icon_state = "revrifle"
+	item_state = "singleshot"
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	fire_delay = 6
+	extra_damage = 45
+	extra_penetration = 10
 
-/obj/item/gun/ballistic/revolver/colt357
-	name = "\improper .357 Magnum revolver"
-	desc = "A relatively primitive .357 magnum revolver."
+/obj/item/gun/ballistic/revolver/fallout/rev357
+	name = ".357 Magnum revolver"
+	desc = "A classic .357 Magnum revolver, doesn't fire very fast but packs a decent punch."
+	icon_state = "rev357"
 	item_state = "colt357"
-	icon_state = "colt357"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
 	extra_damage = 30
+	extra_penetration = 10
 
-/obj/item/gun/ballistic/revolver/fallout/needler
-	name = "needler pistol"
-	desc = "You suspect this Bringham needler pistol was once used in scientific field studies. It uses small hard-plastic hypodermic darts as ammo. "
-	icon_state = "needler"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revneedler
-	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
-	w_class = WEIGHT_CLASS_SMALL
+/obj/item/gun/ballistic/revolver/fallout/rev357/lucky
+	name = "Lucky"
+	desc = "A unique .357 Magnum with fancy engravings and a nice finish, fires faster and hits harder than it's lamer brother too."
+	icon_state = "lucky"
+	item_state = "colt357"
+	fire_delay = 3
+	extra_damage = 35
 
-/obj/item/gun/ballistic/revolver/fallout/colt6250
-	name = "colt 6250"
-	desc = "The Colt 6520 10mm autoloading pistol is a highly durable and efficient weapon developed by Colt Firearms prior to the Great War.It proved to be resistant to the desert-like conditions of the post-nuclear wasteland and is a fine example of workmanship and quality construction."
-	icon_state = "colt6250"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev6250
+/obj/item/gun/ballistic/revolver/fallout/rev357/heavy
+	name = "heavy .357 revolver"
+	desc = "A modern, heavy duty .357 revolver that fires even slower than older verisons, but with much more damage."
+	icon_state = "heavy357"
+	item_state = "colt357"
+	fire_delay = 6
+	extra_damage = 40
+	extra_penetration = 15
+
+/obj/item/gun/ballistic/revolver/fallout/rev10mm
+	name = "10mm revolver"
+	desc = "A bulky revolver chambered for 10mm rounds with a five round capacity."
+	icon_state = "rev10mm"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev10mm
 	fire_sound = 'fallout/sound/f13weapons/10mm_fire_02.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	fire_delay = 4
+	extra_damage = 25
+	extra_penetration = 10
+
+/obj/item/gun/ballistic/revolver/fallout/huntingrev
+	name = "hunting revolver"
+	desc = "A double action revolver chambered for heavy .45-70 rounds and only carrying five at a time. Make every shot count."
+	icon_state = "huntingrev"
+	item_state = "sequoia"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
+	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	fire_delay = 5
+	extra_damage = 45
+
+/obj/item/gun/ballistic/revolver/fallout/huntingrev/sequoia
+	name = "Sequoia"
+	desc = "A unique and modified .45-70 revolver that hits quite a bit harder."
+	icon_state = "sequoia"
+	item_state = "sequoia"
+	extra_damage = 50
+	extra_penetration = 5
+
+/obj/item/gun/ballistic/revolver/fallout/rev38
+	name = ".38 revolver"
+	desc = "A lightweight .38 revolver that can be easily stored and hidden, great in tight situations."
+	icon_state = "38rev"
+	item_state = "sequoia"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
+	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
+	w_class = WEIGHT_CLASS_SMALL
+	fire_delay = 4
+	extra_damage = 25
+
+/obj/item/gun/ballistic/revolver/fallout/rev556
+	name = "5.56 revolver"
+	desc = "A modern and fast firing revolver firing 5.56 rifle rounds."
+	icon_state = "556rev"
+	item_state = "sequoia"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
+	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 3
 	extra_damage = 30
 	extra_penetration = 10
 
-/obj/item/gun/ballistic/revolver/fallout/sequoia
-	name = "Ranger Sequoia"
-	desc = "This large, double-action revolver is a rare, scopeless variant of the hunting revolver. It is used exclusively by the New California Republic Rangers. This revolver features a dark finish with intricate engravings etched all around the weapon. Engraved along the barrel are the words 'For Honorable Service,' and 'Against All Tyrants.' The hand grip bears the symbol of the NCR Rangers, a bear, and a brass plate attached to the bottom that reads '20 Years.' "
-	icon_state = "sequoia"
+/obj/item/gun/ballistic/revolver/fallout/hrev
+	name = "handmade revolver"
+	desc = "A crude revolver fashioned by hand and, for some reason, chambered for .45 caliber rounds."
+	icon_state = "hrev"
 	item_state = "sequoia"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
 	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 4
-	extra_damage = 45
-
-/obj/item/gun/ballistic/revolver/fallout/sequoia/scoped
-	name = "Magnum Research BFR"
-	desc = "A scoped double action revolver chambered in 45-70."
-	icon_state = "hunting_revolver"
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
-	w_class = WEIGHT_CLASS_NORMAL
+	fire_delay = 5
+	extra_damage = 30
 
 //Magazines
-/obj/item/ammo_box/magazine/internal/shot/improvised10mm
-	name = "improvised shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/fallout/c10mm
-	icon = 'fallout/icons/objects/ammo.dmi'
+/obj/item/ammo_box/magazine/internal/shot/caravan
+	name = "caravan shotgun internal tube"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	max_ammo = 2
+
+/obj/item/ammo_box/magazine/internal/shot/single
+	name = "single shotgun internal tube"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	max_ammo = 1
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev44
-	name = "44 magnum cylinder"
+	name = ".44 magnum cylinder"
 	ammo_type = /obj/item/ammo_casing/fallout/m44
 	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "44"
 	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev357
-	name = "357 magnum cylinder"
+	name = ".357 magnum cylinder"
 	ammo_type = /obj/item/ammo_casing/fallout/a357
 	caliber = "357"
 	max_ammo = 6
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev6250
-	name = "6250 10mm cylinder"
+/obj/item/ammo_box/magazine/internal/cylinder/rev10mm
+	name = "10mm revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/fallout/c10mm
 	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "10mm"
-	max_ammo = 6
+	max_ammo = 5
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev4570
-	name = "4570 cylinder"
+	name = ".45-70 cylinder"
 	ammo_type = /obj/item/ammo_casing/fallout/c4570
 	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "4570"
-	max_ammo = 6
-
-/obj/item/ammo_box/magazine/internal/cylinder/revneedler
-	name = "needler internal mag"
-	ammo_type = /obj/item/ammo_casing/fallout/needle
-	icon = 'fallout/icons/objects/ammo.dmi'
-	caliber = "needle"
 	max_ammo = 5
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev38
-	name = "detective revolver cylinder"
+	name = ".38 revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/fallout/c38
 	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "38"
 	max_ammo = 6
+
+/obj/item/ammo_box/magazine/internal/cylinder/rev556
+	name = "5.56 revolver cylinder"
+	icon = 'fallout/icons/objects/ammo.dmi'
+	ammo_type = /obj/item/ammo_casing/fallout/a556
+	caliber = "a556"
+	max_ammo = 5
+
+/obj/item/ammo_box/magazine/internal/cylinder/rev45
+	name = "handmade revolver cylinder"
+	icon_state = "45"
+	ammo_type = /obj/item/ammo_casing/fallout/c45
+	caliber = ".45"
+	max_ammo = 6
+
+//Loaders
+/obj/item/ammo_box/rev4570
+	name = ".45-70 speed loader"
+	icon = 'fallout/icons/objects/ammo.dmi'
+	icon_state = "10mmadv"
+	ammo_type = /obj/item/ammo_casing/fallout/c4570
+	caliber = "4570"
+	max_ammo = 5
+	multiple_sprites = 2
+
+/obj/item/ammo_box/rev44
+	name = ".44 Magnum speed loader"
+	icon = 'fallout/icons/objects/ammo.dmi'
+	icon_state = "10mmadv"
+	ammo_type = /obj/item/ammo_casing/fallout/m44
+	caliber = "44"
+	max_ammo = 6
+	multiple_sprites = 2
+
+/obj/item/ammo_box/rev357
+	name = ".357 Magnum speed loader"
+	icon = 'fallout/icons/objects/ammo.dmi'
+	icon_state = "10mmadv"
+	ammo_type = /obj/item/ammo_casing/fallout/a357
+	caliber = "357"
+	max_ammo = 6
+	multiple_sprites = 2
+
+/obj/item/ammo_box/rev38
+	name = ".38 Magnum speed loader"
+	icon = 'fallout/icons/objects/ammo.dmi'
+	icon_state = "10mmadv"
+	ammo_type = /obj/item/ammo_casing/fallout/c38
+	caliber = "38"
+	max_ammo = 6
+	multiple_sprites = 2
+
+/obj/item/ammo_box/rev556
+	name = "5.56 speed loader"
+	icon = 'fallout/icons/objects/ammo.dmi'
+	icon_state = "10mmadv"
+	ammo_type = /obj/item/ammo_casing/fallout/a556
+	caliber = "a556"
+	max_ammo = 5
+	multiple_sprites = 2
+
+/obj/item/ammo_box/rev45
+	name = ".45 speed loader"
+	icon = 'fallout/icons/objects/ammo.dmi'
+	icon_state = "10mmadv"
+	ammo_type = /obj/item/ammo_casing/fallout/c45
+	caliber = ".45"
+	max_ammo = 6
+	multiple_sprites = 2
