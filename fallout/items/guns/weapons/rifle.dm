@@ -6,7 +6,7 @@
 	item_state = "rifle"
 	mag_type = /obj/item/ammo_box/magazine/r308
 	fire_sound = 'fallout/sound/f13weapons/hunting_rifle.ogg'
-	w_class = WEIGHT_CLASS_HUGE
+	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	extra_damage = 40
 	extra_penetration = 15
@@ -26,6 +26,8 @@
 	desc = "A light hunting rifle chambered for 5.56 rounds."
 	icon_state = "varmint"
 	item_state = "varmintrifle"
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
 	fire_delay = 5
 	extra_damage = 30
 	extra_penetration = 5
