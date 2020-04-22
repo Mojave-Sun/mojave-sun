@@ -21,3 +21,4 @@ datum/job/f13/ncr/trooper
 	suit = /obj/item/clothing/suit/armor/fallout/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/fallout/marksman/service
 	
+	
