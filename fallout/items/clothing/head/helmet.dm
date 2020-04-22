@@ -20,6 +20,8 @@
 	item_state = "wastehound"
 	armor = list(melee = 20, bullet = 35, laser = 5, energy = 5, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/blastmaster
 	name = "blastmaster raider helmet"
@@ -28,6 +30,8 @@
 	item_state = "blastmaster"
 	armor = list(melee = 30, bullet = 25, laser = 5, energy = 5, bomb = 25, bio = 10, rad = 10, fire = 20, acid = 10)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/psychotic
 	name = "pyscho-tic raider helmet"
@@ -36,6 +40,8 @@
 	item_state = "psychotic"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/arclight
 	name = "arclight raider helmet"
@@ -52,6 +58,8 @@
 	item_state = "yankee"
 	armor = list("melee" = 40, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/riot/fallout
 	name = "riot helmet"
@@ -62,6 +70,8 @@
 	icon = 'fallout/icons/objects/clothing/hats.dmi'
 	mob_overlay_icon = 'fallout/icons/mob/clothing/head.dmi'
 	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 35, bio = 10, rad = 10, fire = 30, acid = 10)
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/reinfhard
 	name = "reinforced hard hat"
@@ -70,6 +80,8 @@
 	item_state = "durathread"
 	armor = list("melee" = 50, "bullet" = 35, "laser" = 5, "energy" = 5, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 10)
 	flags_cover = NONE
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/cowboy
 	name = "cowboy hat"
@@ -84,6 +96,8 @@
 	desc = "A fedora with an attached hood and minimal padding, common headwear among wastelanders everywhere."
 	icon_state = "stormchaser"
 	item_state = "stormchaser"
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/cowboy/black
 	name = "black cowboy hat"
@@ -115,6 +129,8 @@
 	desc = "An ushanka hat with additional protective padding. Can protect your head from the cold and from taking some real damage!"
 	icon_state = "ushanka"
 	item_state = "ushanka"
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/cowboy/padded/hubologist
 	name = "Hubologist hood"
@@ -122,6 +138,8 @@
 	icon_state = "hubologist"
 	item_state = "hubologist"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/cowboy/reinf
 	name = "reinforced cowboy hat"
@@ -178,6 +196,8 @@
 	desc = "A typical motorcycle helmet. Decent protection overall."
 	icon_state = "motorcycle"
 	item_state = "motorcycle"
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/eyebot
 	name = "eyebot helmet"
@@ -186,6 +206,8 @@
 	item_state = "eyebot"
 	armor = list("melee" = 50, "bullet" = 35, "laser" = 5, "energy" = 5, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 10)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/metal
 	name = "metal helmet"
@@ -195,6 +217,8 @@
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 0, "energy" = 0, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 80, "acid" = 20)
 	slowdown = 0.25
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/tesla
 	name = "tesla helmet"
@@ -203,6 +227,8 @@
 	item_state = "tesla_helmet"
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 45, "energy" = 45, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/military
 	name = "military helmet"
@@ -210,6 +236,8 @@
 	icon_state = "bulletproof"
 	item_state = "bulletproof"
 	armor = list(melee = 30, bullet = 50, laser = 15, energy = 15, bomb = 40, bio = 20, rad = 20, fire = 40, acid = 20)
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/combat
 	name = "combat helmet"
@@ -218,6 +246,8 @@
 	item_state = "combat_helmet"
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 15, "energy" = 15, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 40, "acid" = 20)
 	flags_cover = NONE
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/combat/advanced
 	name = "advanced combat helmet"
@@ -256,6 +286,8 @@
 	item_state = "elite_riot"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	
 /obj/item/clothing/head/helmet/fallout/ncr
 	name = "NCR infantry helmet"
@@ -289,3 +321,5 @@
 	icon_state = "recon"
 	item_state = "recon"
 	armor = list("melee" = 40, "bullet" = 35, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""

@@ -9,7 +9,7 @@ datum/job/f13/bos/initiate
 
 	outfit = /datum/outfit/job/f13/bos/initiate
 
-	display_order = JOB_DISPLAY_ORDER_INITIATE
+	display_order = JOB_DISPLAY_ORDER_F13_INITIATE
 
 /datum/outfit/job/f13/bos/initiate
 	name = "Initiate"

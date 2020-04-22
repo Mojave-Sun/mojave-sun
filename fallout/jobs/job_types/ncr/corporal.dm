@@ -9,7 +9,7 @@ datum/job/f13/ncr/corporal
 
 	outfit = /datum/outfit/job/f13/ncr/corporal
 
-	display_order = JOB_DISPLAY_ORDER_CORPORAL
+	display_order = JOB_DISPLAY_ORDER_F13_CORPORAL
 
 /datum/outfit/job/f13/ncr/corporal
 	name = "Corporal"

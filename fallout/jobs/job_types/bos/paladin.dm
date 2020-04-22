@@ -9,7 +9,7 @@ datum/job/f13/bos/paladin
 
 	outfit = /datum/outfit/job/f13/bos/paladin
 
-	display_order = JOB_DISPLAY_ORDER_PALADIN
+	display_order = JOB_DISPLAY_ORDER_F13_PALADIN
 
 /datum/outfit/job/f13/bos/paladin
 	name = "Paladin"

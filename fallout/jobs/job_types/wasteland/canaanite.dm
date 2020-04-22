@@ -9,7 +9,7 @@ datum/job/f13/wasteland/canaanite
 
 	outfit = /datum/outfit/job/f13/wasteland/canaanite
 
-	display_order = JOB_DISPLAY_ORDER_CANAANITE
+	display_order = JOB_DISPLAY_ORDER_F13_CANAANITE
 
 /datum/outfit/job/f13/wasteland/canaanite
 	name = "New Canaanite"
