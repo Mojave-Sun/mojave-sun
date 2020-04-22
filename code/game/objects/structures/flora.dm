@@ -11,6 +11,7 @@
 	pixel_x = -16
 	layer = FLY_LAYER
 	var/log_amount = 10
+	opacity = 1
 
 /obj/structure/flora/tree/attackby(obj/item/W, mob/user, params)
 	if(log_amount && (!(flags_1 & NODECONSTRUCT_1)))

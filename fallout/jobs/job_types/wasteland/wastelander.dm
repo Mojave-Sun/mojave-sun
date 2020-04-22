@@ -9,7 +9,7 @@ datum/job/f13/wasteland/wastelander
 
 	outfit = /datum/outfit/job/f13/wasteland/wastelander
 
-	display_order = JOB_DISPLAY_ORDER_WASTELANDER
+	display_order = JOB_DISPLAY_ORDER_F13_WASTELANDER
 
 /datum/outfit/job/f13/wasteland/wastelander
 	name = "Wastelander"
