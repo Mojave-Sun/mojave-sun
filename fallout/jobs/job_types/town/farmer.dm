@@ -9,7 +9,7 @@ datum/job/f13/town/farmer
 
 	outfit = /datum/outfit/job/f13/town/farmer
 
-	display_order = JOB_DISPLAY_ORDER_FARMER
+	display_order = JOB_DISPLAY_ORDER_F13_FARMER
 
 /datum/outfit/job/f13/town/farmer
 	name = "Farmer"
