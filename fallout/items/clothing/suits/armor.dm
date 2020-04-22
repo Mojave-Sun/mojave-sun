@@ -11,7 +11,7 @@
 	desc = "Various armor parts and pieces worn over clothing. Good at stopping knives and bullets, but not much else."
 	icon_state = "armorkit"
 	item_state = "armorkit"
-	armor = list(melee = 30, bullet = 30, laser = 0, energy = 0, bomb = 15, bio = 5, rad = 5, fire = 5, acid = 5, stamina = 50)
+	armor = list(melee = 30, bullet = 30, laser = 0, energy = 0, bomb = 15, bio = 5, rad = 5, fire = 5, acid = 5)
 
 /obj/item/clothing/suit/armor/fallout/kit/light
 	name = "light armor kit"
