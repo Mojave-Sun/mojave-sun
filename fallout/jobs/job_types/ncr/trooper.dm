@@ -17,3 +17,7 @@ datum/job/f13/ncr/trooper
 
 /datum/outfit/job/f13/ncr/trooper/pre_equip(mob/living/carbon/human/H)
 	..()
+	uniform = /obj/item/clothing/under/fallout/ncr/fatigues/winter
+	suit = /obj/item/clothing/suit/armor/fallout/ncr
+	suit_store = /obj/item/gun/ballistic/automatic/fallout/marksman/service
+	
