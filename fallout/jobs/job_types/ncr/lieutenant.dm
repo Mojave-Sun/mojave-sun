@@ -1,5 +1,5 @@
 datum/job/f13/ncr/lieutenant
-	title = "Lieutenant"
+	title = "NCR Lieutenant"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = ""
