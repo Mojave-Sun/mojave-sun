@@ -9,7 +9,7 @@ datum/job/f13/eighties/raider
 
 	outfit = /datum/outfit/job/f13/eighties/raider
 
-	display_order = JOB_DISPLAY_ORDER_RAIDER
+	display_order = JOB_DISPLAY_ORDER_F13_RAIDER
 
 /datum/outfit/job/f13/eighties/raider
 	name = "Raider"

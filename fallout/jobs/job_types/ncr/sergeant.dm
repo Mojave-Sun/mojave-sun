@@ -1,15 +1,15 @@
 datum/job/f13/ncr/sergeant
-	title = "Sergeant"
+	title = "NCR Sergeant"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = ""
-	description = ""
+	supervisors = "The Lieutenant"
+	description = "Balance working for a living and yelling at people for calling you sir between leading your corporals and troopers."
 	forbid = ""
 	enforce = ""
 
 	outfit = /datum/outfit/job/f13/ncr/sergeant
 
-	display_order = JOB_DISPLAY_ORDER_SERGEANT
+	display_order = JOB_DISPLAY_ORDER_F13_SERGEANT
 
 /datum/outfit/job/f13/ncr/sergeant
 	name = "Sergeant"

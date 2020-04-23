@@ -1,5 +1,5 @@
 datum/job/f13/ncr/lieutenant
-	title = "Lieutenant"
+	title = "NCR Lieutenant"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = ""
@@ -9,7 +9,7 @@ datum/job/f13/ncr/lieutenant
 
 	outfit = /datum/outfit/job/f13/ncr/lieutenant
 
-	display_order = JOB_DISPLAY_ORDER_LIEUTENANT
+	display_order = JOB_DISPLAY_ORDER_F13_LIEUTENANT
 
 /datum/outfit/job/f13/ncr/lieutenant
 	name = "Lieutenant"

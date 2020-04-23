@@ -9,7 +9,7 @@ datum/job/f13/tribe/chieftain
 
 	outfit = /datum/outfit/job/f13/tribe/chieftain
 
-	display_order = JOB_DISPLAY_ORDER_CHIEFTAIN
+	display_order = JOB_DISPLAY_ORDER_F13_CHIEFTAIN
 
 /datum/outfit/job/f13/tribe/chieftain
 	name = "Chieftain"
