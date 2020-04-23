@@ -1,10 +1,10 @@
 datum/job/f13/ncr/corporal
-	title = "Corporal"
+	title = "NCR Corporal"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = ""
-	description = ""
-	forbid = ""
+	supervisors = "Sergeant, and Lieutenant"
+	description = "Keep troopers in line, obey orders and relay changes in situations to keep command up to date."
+	forbid = "The NCR forbids: Recreational drugs(barring med-x), drinking or gambling on duty, disobeying lawful orders. CO determines who is off-duty."
 	enforce = ""
 
 	outfit = /datum/outfit/job/f13/ncr/corporal

@@ -2,8 +2,8 @@ datum/job/f13/wasteland/hubologist
 	title = "Hubologist"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = ""
-	description = ""
+	supervisors = "The Hub and the Star Father"
+	description = "Recruit new members, and preforms alignments to rid people of those pesky neurodynes (for a fee of course)."
 	forbid = ""
 	enforce = ""
 

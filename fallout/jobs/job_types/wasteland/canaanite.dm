@@ -2,8 +2,8 @@ datum/job/f13/wasteland/canaanite
 	title = "New Canaanite"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = ""
-	description = ""
+	supervisors = "God and John Moses Browning"
+	description = "Spread the word of God to these heathenous lands. We can't expect God to do all the work, after all."
 	forbid = ""
 	enforce = ""
 
