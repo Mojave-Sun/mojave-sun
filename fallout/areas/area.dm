@@ -10,7 +10,6 @@
 	outdoors = TRUE
 	has_gravity = STANDARD_GRAVITY
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
-	lightswitch = FALSE //no. just no
 	ambientsounds = list('fallout/sound/f13ambience/wasteland.ogg', 'fallout/sound/f13ambience/sewer.ogg')
 	flags_1 = NONE //>desert >>has destroyed robo dirt on it
 
@@ -44,7 +43,6 @@
 	power_environ = FALSE
 	power_equip = FALSE
 	outdoors = TRUE
-	lightswitch = FALSE //no. just no
 	flags_1 = NONE //>desert >>has destroyed robo dirt on it
 
 /area/f13/sunny_dale
