@@ -9,21 +9,15 @@
 
 /obj/item/clothing/under/fallout/ncr/fatigues/winter
 	name = "NCR winter fatigues"
-	desc = "A uniform bearing the marks of the New California Republic."
+	desc = "A winter uniform bearing the marks of the New California Republic."
 	icon_state = "ncr_uniform_w"
 	item_state = "ncr_uniform_w"
 
-/obj/item/clothing/under/fallout/ncr/fatigues/shirt
-	name = "NCR fatigues"
-	desc = "A uniform with no jacket bearing the marks of the New California Republic."
-	icon_state = "scoutclothes"
-	item_state = "ncr_uniform_w"
-
-/obj/item/clothing/under/fallout/ncr/fatigues/shirt/winter
-	name = "NCR winter fatigues"
-	desc = "A uniform with no jacket bearing the marks of the New California Republic."
-	icon_state = "scoutclothes_w"
-	item_state = "ncr_uniform_w"
+/obj/item/clothing/under/fallout/ncr/fatigues/officer
+	name = "NCR officer fatigues"
+	desc = "An NCR uniform normally worn by NCR officers, intended for winter operations."
+	icon_state = "ncr_o_w"
+	item_state = "ncr_o_w"
 
 /obj/item/clothing/under/fallout/ncr/ncrcf
 	name = "NCRCF uniform"
