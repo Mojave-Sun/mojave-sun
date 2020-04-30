@@ -10,7 +10,7 @@
 	weapon_weight = WEAPON_HEAVY
 	extra_damage = 40
 	extra_penetration = 15
-	fire_delay = 5
+	fire_delay = 6
 	
 /obj/item/gun/ballistic/rifle/fallout/hunting/scoped
 	name = "scoped hunting rifle"
@@ -28,7 +28,7 @@
 	item_state = "varmintrifle"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 5
+	fire_delay = 6
 	extra_damage = 30
 	extra_penetration = 5
 	mag_type = /obj/item/ammo_box/magazine/r10
@@ -51,7 +51,7 @@
 	icon_state = "amr"
 	mag_type = /obj/item/ammo_box/magazine/amr
 	fire_sound = 'fallout/sound/f13weapons/hunting_rifle.ogg'
-	fire_delay = 6
+	fire_delay = 8
 	extra_damage = 60
 	
 //Magazines

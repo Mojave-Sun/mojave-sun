@@ -34,7 +34,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	fire_sound = 'fallout/sound/f13weapons/44mag.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 4
+	fire_delay = 5
 	extra_damage = 35
 	extra_penetration = 10
 
@@ -43,7 +43,7 @@
 	desc = "A unique .44 Magnum with a silver finish for style, and a higher rate of fire and damage for killing. Something sure is mysterious about this gun though."
 	icon_state = "mysterious"
 	item_state = "m29"
-	fire_delay = 3
+	fire_delay = 4
 	extra_damage = 40
 
 /obj/item/gun/ballistic/revolver/fallout/rev44/rifle
@@ -64,7 +64,7 @@
 	item_state = "colt357"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 5
+	fire_delay = 6
 	extra_damage = 30
 	extra_penetration = 10
 
@@ -73,12 +73,12 @@
 	desc = "A unique .357 Magnum with fancy engravings and a nice finish, fires faster and hits harder than it's lamer brother too."
 	icon_state = "lucky"
 	item_state = "colt357"
-	fire_delay = 3
+	fire_delay = 4
 	extra_damage = 35
 
 /obj/item/gun/ballistic/revolver/fallout/rev357/heavy
 	name = "heavy .357 revolver"
-	desc = "A modern, heavy duty .357 revolver that fires even slower than older verisons, but with much more damage."
+	desc = "A modern, heavy duty .357 revolver with much more damage."
 	icon_state = "heavy357"
 	item_state = "colt357"
 	fire_delay = 6
@@ -92,7 +92,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev10mm
 	fire_sound = 'fallout/sound/f13weapons/10mm_fire_02.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 4
+	fire_delay = 5
 	extra_damage = 25
 	extra_penetration = 10
 
@@ -104,7 +104,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 5
+	fire_delay = 6
 	extra_damage = 45
 
 /obj/item/gun/ballistic/revolver/fallout/huntingrev/sequoia
@@ -123,7 +123,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
 	w_class = WEIGHT_CLASS_SMALL
-	fire_delay = 4
+	fire_delay = 5
 	extra_damage = 25
 
 /obj/item/gun/ballistic/revolver/fallout/rev556
@@ -134,7 +134,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
 	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 3
+	fire_delay = 4
 	extra_damage = 30
 	extra_penetration = 10
 
@@ -146,7 +146,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
 	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 5
+	fire_delay = 6
 	extra_damage = 30
 
 //Magazines
