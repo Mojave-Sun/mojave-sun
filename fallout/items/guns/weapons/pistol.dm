@@ -6,7 +6,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m10mm
 	fire_sound = 'fallout/sound/f13weapons/10mm_fire_02.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 3
+	fire_delay = 4
 	extra_damage = 20
 	extra_penetration = 10
 
@@ -32,7 +32,7 @@
 	icon_state = "420pistol"
 	extra_damage = 35
 	extra_penetration = 15
-	fire_delay = 4
+	fire_delay = 5
 
 /obj/item/gun/ballistic/automatic/pistol/fallout/m9mm
 	name = "9mm pistol"
@@ -40,7 +40,7 @@
 	icon_state = "9mm"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 3
+	fire_delay = 4
 	extra_damage = 20
 	extra_penetration = 5
 
@@ -48,7 +48,7 @@
 	name = "Maria"
 	desc = "A custom and improved model of the 9mm pistol with improved rate of fire, damage, and style. Does look a bit like an 18-karat run of bad luck though."
 	icon_state = "maria"
-	fire_delay = 2
+	fire_delay = 3	
 	extra_damage = 25
 	extra_penetration = 10
 
@@ -58,7 +58,7 @@
 	icon_state = "m12mm"
 	mag_type = /obj/item/ammo_box/magazine/m12mm
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 3
+	fire_delay = 4
 	extra_damage = 35
 	extra_penetration = 15
 
@@ -67,7 +67,7 @@
 	desc = "A unique and modified version of the 12.7mm pistol with a higher fire rate, improved damage, and a suppressor attached."
 	icon_state = "devil"
 	suppressed = 1
-	fire_delay = 2
+	fire_delay = 3
 	extra_damage = 35
 	extra_penetration = 20
 	
@@ -87,7 +87,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m45
 	can_suppress = FALSE
-	fire_delay = 3
+	fire_delay = 4
 	extra_damage = 30
 	extra_penetration = 5
 
@@ -100,7 +100,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	extra_damage = 45
 	extra_penetration = 5
-	fire_delay = 4
+	fire_delay = 5
 
 /obj/item/gun/ballistic/automatic/pistol/fallout/pistol22
 	name = ".22 pistol"
@@ -111,7 +111,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
 	extra_damage = 15
-	fire_delay = 3
+	fire_delay = 4
 
 
 //Magazines

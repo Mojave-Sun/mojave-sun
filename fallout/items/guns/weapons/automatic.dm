@@ -130,7 +130,7 @@
 	mag_type = /obj/item/ammo_box/magazine/r20
 	fire_sound = 'fallout/sound/f13weapons/marksman_rifle.ogg'
 	can_suppress = FALSE
-	fire_delay = 5
+	fire_delay = 6
 	burst_size = 1
 	extra_damage = 35
 	extra_penetration = 10
@@ -153,7 +153,7 @@
 	icon_state = "service"
 	item_state = "servicerifle"
 	fire_sound = 'fallout/sound/f13weapons/varmint_rifle.ogg'
-	fire_delay = 3
+	fire_delay = 4
 	extra_damage = 25
 	extra_penetration = 5
 	zoomable = FALSE
@@ -163,7 +163,7 @@
 	desc = "A unique, heavy duty service rifle. Fires slower but packs a much heavier punch. Has definitely seen it's fair share of battle."
 	icon_state = "survivalist"
 	item_state = "servicerifle"
-	fire_delay = 4
+	fire_delay = 5
 	extra_damage = 35
 	extra_penetration = 10
 	
@@ -193,7 +193,7 @@
 	name = "sniper rifle"
 	desc = "A semi-automatic, high powered .308 sniper rifle. Perfect weapon for a determined assassin."
 	icon_state = "sniper"
-	fire_delay = 5
+	fire_delay = 6
 	extra_damage = 45
 	extra_penetration = 10
 	mag_type = /obj/item/ammo_box/magazine/r308

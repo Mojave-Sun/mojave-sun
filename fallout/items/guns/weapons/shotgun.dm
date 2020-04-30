@@ -19,7 +19,7 @@
 	weapon_weight = WEAPON_HEAVY
 	force = 30
 
-/obj/item/gun/ballistic/shotgun/automatic/fallout/trail
+/obj/item/gun/ballistic/shotgun/fallout/trail
 	name = "trail carbine"
 	desc = "A lever action repeater chambered for .44 Magnum. An overall improved design allows it to fire just a bit faster than other repeaters with a higher capacity to boot."
 	icon_state = "trail"
@@ -31,7 +31,7 @@
 	extra_damage = 40
 	extra_penetration = 10
 
-/obj/item/gun/ballistic/shotgun/automatic/fallout/cowboy
+/obj/item/gun/ballistic/shotgun/fallout/cowboy
 	name = "cowboy repeater"
 	desc = "A classic lever action repeater chambered for .357."
 	icon_state = "cowboy"
@@ -39,11 +39,11 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube357
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 6
+	fire_delay = 5
 	extra_damage = 35
 	extra_penetration = 10
 
-/obj/item/gun/ballistic/shotgun/automatic/fallout/brush
+/obj/item/gun/ballistic/shotgun/fallout/brush
 	name = "brush gun"
 	desc = "A lever action repeater chambered for the deadly .45-70 cartridge. Can't carry a lot of rounds and doesn't fire very fast, but with so much damage does that really matter?"
 	icon_state = "brush"
@@ -51,7 +51,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube4570
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 6
+	fire_delay = 5
 	extra_damage = 55
 	extra_penetration = 10
 
@@ -63,7 +63,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/battler
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 4
+	fire_delay = 5
 	extra_damage = 40
 	extra_penetration = 15
 

@@ -92,6 +92,7 @@
 
 /obj/item/clothing/shoes/fallout/military/ncr/winter
 	name = "NCR Winter Boots"
+	desc = "A pair of NCR boots intended for winter operations."
 	icon_state = "ncr_boots_w"
 	item_state = "ncr_boots_w"
 
@@ -104,6 +105,7 @@
 
 /obj/item/clothing/shoes/fallout/military/ncr_officer/winter
 	name = "NCR Officer Winter Boots"
+	desc = "A pair boots issued to NCR officers for winter operations."
 	icon_state = "ncr_officer_boots_w"
 	item_state = "ncr_officer_boots_w"
 
