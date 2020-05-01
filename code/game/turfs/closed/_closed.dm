@@ -69,7 +69,7 @@
 	*/
 
 	..()
-	icon_state = "title[rand(1,13)]"
+	icon_state = "title_loading"
 
 /turf/closed/indestructible/splashscreen/vv_edit_var(var_name, var_value)
 	. = ..()
