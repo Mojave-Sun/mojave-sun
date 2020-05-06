@@ -77,6 +77,21 @@
 	force = 15
 	spread = 10
 
+/obj/item/gun/ballistic/automatic/fallout/smg12mm
+	name = "12.7mm submachine gun"
+	desc = "A heavy duty submachine gun chambered in 12.7mm, can't hold a lot of rounds, but they sure do pack a punch."
+	icon_state = "smg12mm"
+	item_state = "smg9mm"
+	mag_type = /obj/item/ammo_box/magazine/smg12mm
+	fire_sound = 'fallout/sound/f13weapons/greasegun.ogg'
+	can_suppress = FALSE
+	burst_size = 3
+	fire_delay = 3
+	extra_damage = 10
+	extra_penetration = 15
+	force = 15
+	spread = 8
+
 /obj/item/gun/ballistic/automatic/fallout/assaultrifle
 	name = "assault rifle"
 	desc = "A general purpose, standard automatic assault rifle chambered in 5.56. Commonly used by pre-war US military forces."
@@ -86,7 +101,7 @@
 	mag_type = /obj/item/ammo_box/magazine/r20
 	fire_sound = 'fallout/sound/f13weapons/assaultrifle_fire.ogg'
 	burst_size = 3
-	fire_delay = 4
+	fire_delay = 3
 	extra_damage = 15
 	extra_penetration = 10
 	w_class = WEIGHT_CLASS_BULKY
@@ -265,4 +280,12 @@
 	ammo_type = /obj/item/ammo_casing/fallout/c38
 	caliber = "38"
 	max_ammo = 36
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/smg12mm
+	name = "21 round magazine (12.7mm)"
+	icon_state = "drum45"
+	ammo_type = /obj/item/ammo_casing/fallout/m12mm
+	caliber = "12.7mm"
+	max_ammo = 21
 	multiple_sprites = 2
