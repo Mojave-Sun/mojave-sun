@@ -169,13 +169,13 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev357
 	name = ".357 magnum cylinder"
-	ammo_type = /obj/item/ammo_casing/fallout/a357
+	ammo_type = /obj/item/ammo_casing/fallout/a357/junk
 	caliber = "357"
 	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev10mm
 	name = "10mm revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/fallout/c10mm
+	ammo_type = /obj/item/ammo_casing/fallout/c10mm/junk
 	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "10mm"
 	max_ammo = 5
@@ -189,7 +189,7 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	name = ".38 revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/fallout/c38
+	ammo_type = /obj/item/ammo_casing/fallout/c38/junk
 	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "38"
 	max_ammo = 6
@@ -204,7 +204,7 @@
 /obj/item/ammo_box/magazine/internal/cylinder/rev45
 	name = "handmade revolver cylinder"
 	icon_state = "45"
-	ammo_type = /obj/item/ammo_casing/fallout/c45
+	ammo_type = /obj/item/ammo_casing/fallout/c45/junk
 	caliber = ".45"
 	max_ammo = 6
 
@@ -231,7 +231,7 @@
 	name = ".357 Magnum speed loader"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "10mmadv"
-	ammo_type = /obj/item/ammo_casing/fallout/a357
+	ammo_type = /obj/item/ammo_casing/fallout/a357/junk
 	caliber = "357"
 	max_ammo = 6
 	multiple_sprites = 2
@@ -240,7 +240,7 @@
 	name = ".38 Magnum speed loader"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "10mmadv"
-	ammo_type = /obj/item/ammo_casing/fallout/c38
+	ammo_type = /obj/item/ammo_casing/fallout/c38/junk
 	caliber = "38"
 	max_ammo = 6
 	multiple_sprites = 2
@@ -258,7 +258,16 @@
 	name = ".45 speed loader"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "10mmadv"
-	ammo_type = /obj/item/ammo_casing/fallout/c45
+	ammo_type = /obj/item/ammo_casing/fallout/c45/junk
 	caliber = ".45"
 	max_ammo = 6
+	multiple_sprites = 2
+
+/obj/item/ammo_box/rev10mm
+	name = "10mm speed loader"
+	icon = 'fallout/icons/objects/ammo.dmi'
+	icon_state = "10mmadv"
+	ammo_type = /obj/item/ammo_casing/fallout/c10mm/junk
+	caliber = "10mm"
+	max_ammo = 5
 	multiple_sprites = 2

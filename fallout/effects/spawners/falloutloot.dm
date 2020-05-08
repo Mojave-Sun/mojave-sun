@@ -285,3 +285,68 @@
 			/obj/effect/spawner/lootdrop/fallout/armor/tier3 = 60,
 			/obj/effect/spawner/lootdrop/fallout/armor/tier4 = 30,
 			)
+
+/obj/effect/spawner/lootdrop/fallout/gun
+	name = "DO NOT USE ME - Fallout gun spawners"
+
+/obj/effect/spawner/lootdrop/fallout/gun/tier1
+	lootcount = 3
+	var/loot1 = list(
+				/obj/item/gun/ballistic/automatic/pistol/fallout/handmadepistol,
+				/obj/item/ammo_box/magazine/h38,
+				/obj/item/ammo_box/magazine/h38
+				)
+	var/loot2 = list(
+				/obj/item/gun/ballistic/automatic/pistol/fallout/m9mm,
+				/obj/item/ammo_box/magazine/m9mm,
+				/obj/item/ammo_box/magazine/m9mm
+				)
+	var/loot3 = list(
+				/obj/item/gun/ballistic/automatic/pistol/fallout/m10mm/chinese,
+				/obj/item/ammo_box/cpistol,
+				/obj/item/ammo_box/cpistol
+				)
+	var/loot4 = list(
+				/obj/item/gun/ballistic/automatic/pistol/fallout/m10mm,
+				/obj/item/ammo_box/magazine/m10mm,
+				/obj/item/ammo_box/magazine/m10mm
+				)
+	var/loot5 = list(
+				/obj/item/gun/ballistic/automatic/pistol/fallout/pistol22,
+				/obj/item/ammo_box/magazine/m22,
+				""
+				)
+	var/loot6 = list(
+				/obj/item/gun/ballistic/automatic/fallout/marksman/service/handmade38,
+				/obj/item/ammo_box/magazine/h38,
+				/obj/item/ammo_box/magazine/h38
+				)
+	var/loot7 = list(
+				/obj/item/gun/ballistic/automatic/fallout/marksman/service/police22,
+				/obj/item/ammo_box/magazine/r22,
+				/obj/item/ammo_box/magazine/r22
+				)
+	var/loot8 = list(
+				/obj/item/gun/ballistic/revolver/fallout/hrev,
+				/obj/item/ammo_box/rev45,
+				/obj/item/ammo_box/rev45
+				)
+	var/loot9 = list(
+				/obj/item/gun/ballistic/revolver/fallout/rev38,
+				/obj/item/ammo_box/rev38,
+				/obj/item/ammo_box/rev38
+				)
+	var/loot10 = list(
+				/obj/item/gun/ballistic/revolver/fallout/rev10mm,
+				/obj/item/ammo_box/rev10mm,
+				/obj/item/ammo_box/rev10mm
+				)
+	var/loot11 = list(
+				/obj/item/gun/ballistic/rifle/fallout/varmint,
+				/obj/item/ammo_box/magazine/r10,
+				/obj/item/ammo_box/magazine/r10
+				)
+
+/obj/effect/spawner/lootdrop/fallout/gun/tier1/Initialize()
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11)
+	. = ..()

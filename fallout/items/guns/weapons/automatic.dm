@@ -269,7 +269,7 @@
 /obj/item/ammo_box/magazine/r22
 	name = "10 round magazine (.22)"
 	icon_state = "r20"
-	ammo_type = /obj/item/ammo_casing/fallout/c22
+	ammo_type = /obj/item/ammo_casing/fallout/c22/junk
 	caliber = ".22"
 	max_ammo = 10
 	multiple_sprites = 2
@@ -277,7 +277,7 @@
 /obj/item/ammo_box/magazine/smgm38
 	name = "36 round magazine (.38)"
 	icon_state = "drum45"
-	ammo_type = /obj/item/ammo_casing/fallout/c38
+	ammo_type = /obj/item/ammo_casing/fallout/c38/junk
 	caliber = "38"
 	max_ammo = 36
 	multiple_sprites = 2
