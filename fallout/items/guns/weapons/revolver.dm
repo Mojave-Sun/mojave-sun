@@ -231,7 +231,7 @@
 	name = ".357 Magnum speed loader"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "10mmadv"
-	ammo_type = /obj/item/ammo_casing/fallout/a357/junk
+	ammo_type = /obj/item/ammo_casing/fallout/a357
 	caliber = "357"
 	max_ammo = 6
 	multiple_sprites = 2
