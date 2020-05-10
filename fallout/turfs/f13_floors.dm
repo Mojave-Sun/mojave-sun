@@ -393,3 +393,9 @@
 /turf/open/floor/plasteel/f13
 	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "floor"
+
+/turf/open/floor/plating/roof
+	icon = 'fallout/icons/turf/floors_1.dmi'
+	icon_state = "roof"
+	name = "roof"
+	desc = "Some metal roofing."
