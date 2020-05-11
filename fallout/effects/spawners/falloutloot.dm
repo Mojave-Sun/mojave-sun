@@ -464,3 +464,70 @@
 /obj/effect/spawner/lootdrop/fallout/gun/tier3/Initialize()
 	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12)
 	. = ..()
+
+/obj/effect/spawner/lootdrop/fallout/gun/tier4
+	lootcount = 3
+	var/loot1 = list(
+				/obj/item/gun/ballistic/rifle/fallout/hunting/scoped/amr,
+				/obj/item/ammo_box/magazine/amr,
+				/obj/item/ammo_box/magazine/amr
+				)
+	var/loot2 = list(
+				/obj/item/gun/ballistic/automatic/pistol/fallout/deagle,
+				/obj/item/ammo_box/magazine/deagle,
+				/obj/item/ammo_box/magazine/deagle
+				)
+	var/loot3 = list(
+				/obj/item/gun/ballistic/automatic/pistol/fallout/m12mm,
+				/obj/item/ammo_box/magazine/m12mm,
+				/obj/item/ammo_box/magazine/m12mm
+				)
+	var/loot4 = list(
+				/obj/item/gun/ballistic/automatic/fallout/assaultrifle/chinese,
+				/obj/item/ammo_box/magazine/ar762,
+				""
+				)
+	var/loot5 = list(
+				/obj/item/gun/ballistic/automatic/fallout/assaultrifle/infiltrator,
+				/obj/item/ammo_box/magazine/r20,
+				""
+				)
+	var/loot6 = list(
+				/obj/item/gun/ballistic/automatic/fallout/assaultrifle,
+				/obj/item/ammo_box/magazine/r20,
+				""
+				)
+	var/loot7 = list(
+				/obj/item/gun/ballistic/automatic/fallout/smg12mm,
+				/obj/item/ammo_box/magazine/smg12mm,
+				""
+				)
+	var/loot8 = list(
+				/obj/item/gun/ballistic/automatic/fallout/smg22,
+				"",
+				""
+				)
+	var/loot9 = list(
+				/obj/item/gun/ballistic/automatic/fallout/smg45,
+				"",
+				""
+				)
+	var/loot10 = list(
+				/obj/item/gun/ballistic/automatic/fallout/marksman/sniper,
+				/obj/item/ammo_box/magazine/r308,
+				/obj/item/ammo_box/magazine/r308
+				)
+	var/loot11 = list(
+				/obj/item/gun/ballistic/shotgun/automatic/fallout/battle,
+				/obj/item/ammo_box/battler,
+				/obj/item/ammo_box/battler
+				)
+	var/loot12 = list(
+				/obj/item/gun/ballistic/shotgun/fallout/brush,
+				/obj/item/ammo_box/tube4570,
+				/obj/item/ammo_box/tube4570
+				)
+
+/obj/effect/spawner/lootdrop/fallout/gun/tier4/Initialize()
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12)
+	. = ..()
