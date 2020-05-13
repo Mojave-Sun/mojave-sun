@@ -290,6 +290,7 @@
 	name = "DO NOT USE ME - Fallout gun spawners"
 
 /obj/effect/spawner/lootdrop/fallout/gun/tier1
+	name = "tier 1 gun spawner"
 	lootcount = 3
 	var/loot1 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/handmadepistol,
@@ -352,6 +353,7 @@
 	. = ..()
 
 /obj/effect/spawner/lootdrop/fallout/gun/tier2
+	name = "tier 2 gun spawner"
 	lootcount = 3
 	var/loot1 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/m10mm/military,
@@ -399,6 +401,7 @@
 	. = ..()
 
 /obj/effect/spawner/lootdrop/fallout/gun/tier3
+	name = "tier 3 gun spawner"
 	lootcount = 3
 	var/loot1 = list(
 				/obj/item/gun/ballistic/revolver/fallout/rev44,
@@ -466,6 +469,7 @@
 	. = ..()
 
 /obj/effect/spawner/lootdrop/fallout/gun/tier4
+	name = "tier 4 gun spawner"
 	lootcount = 3
 	var/loot1 = list(
 				/obj/item/gun/ballistic/rifle/fallout/hunting/scoped/amr,
@@ -531,3 +535,75 @@
 /obj/effect/spawner/lootdrop/fallout/gun/tier4/Initialize()
 	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12)
 	. = ..()
+
+/obj/effect/spawner/lootdrop/fallout/gun/unique
+	name = "unique gun spawner"
+	lootcount = 3
+	var/loot1 = list(
+				/obj/item/gun/ballistic/automatic/pistol/fallout/m9mm/maria,
+				/obj/item/ammo_box/magazine/m9mm,
+				/obj/item/ammo_box/magazine/m9mm
+				)
+	var/loot2 = list(
+				/obj/item/gun/ballistic/rifle/fallout/varmint/ratslayer,
+				/obj/item/ammo_box/magazine/r10,
+				/obj/item/ammo_box/magazine/r10
+				)
+	var/loot3 = list(
+				/obj/item/gun/ballistic/automatic/pistol/fallout/m12mm/devil,
+				/obj/item/ammo_box/magazine/m12mm,
+				/obj/item/ammo_box/magazine/m12mm
+				)
+	var/loot4 = list(
+				/obj/item/gun/ballistic/revolver/fallout/huntingrev/sequoia,
+				/obj/item/ammo_box/rev4570,
+				/obj/item/ammo_box/rev4570
+				)
+	var/loot5 = list(
+				/obj/item/gun/ballistic/revolver/fallout/rev357/lucky,
+				/obj/item/ammo_box/rev357,
+				/obj/item/ammo_box/rev357
+				)
+	var/loot6 = list(
+				/obj/item/gun/ballistic/revolver/fallout/rev44/mysterious,
+				/obj/item/ammo_box/rev44,
+				/obj/item/ammo_box/rev44
+				)
+	var/loot7 = list(
+				/obj/item/gun/ballistic/automatic/fallout/marksman/service/survival,
+				/obj/item/ammo_box/magazine/r20,
+				""
+				)
+	var/loot8 = list(
+				/obj/item/gun/ballistic/automatic/fallout/marksman/american,
+				/obj/item/ammo_box/magazine/r20,
+				""
+				)
+	var/loot9 = list(
+				/obj/item/gun/ballistic/automatic/pistol/fallout/m10mm/chinese/v420,
+				/obj/item/ammo_box/cpistol,
+				/obj/item/ammo_box/cpistol
+				)
+
+/obj/effect/spawner/lootdrop/fallout/gun/unique/Initialize()
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9)
+	. = ..()
+
+/obj/effect/spawner/lootdrop/fallout/gun/lowrandom
+	name = "low tier random gun spawner"
+	lootcount = 1 
+	
+	loot = list(
+			/obj/effect/spawner/lootdrop/fallout/gun/tier1 = 70,
+			/obj/effect/spawner/lootdrop/fallout/gun/tier2 = 30,
+			)
+			
+/obj/effect/spawner/lootdrop/fallout/gun/highrandom
+	name = "high tier random gun spawner"
+	lootcount = 1
+	
+	loot = list(
+			/obj/effect/spawner/lootdrop/fallout/gun/tier2 = 10,
+			/obj/effect/spawner/lootdrop/fallout/gun/tier3 = 60,
+			/obj/effect/spawner/lootdrop/fallout/gun/tier4 = 30,
+			)

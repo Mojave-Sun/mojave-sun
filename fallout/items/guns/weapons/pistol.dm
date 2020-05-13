@@ -31,7 +31,7 @@
 	desc = "A prototype Chinese pistol with a slower fire rate but much higher damage, also sporting some much better looks."
 	icon_state = "420pistol"
 	extra_damage = 35
-	extra_penetration = 15
+	extra_penetration = 10
 	fire_delay = 5
 
 /obj/item/gun/ballistic/automatic/pistol/fallout/m9mm
