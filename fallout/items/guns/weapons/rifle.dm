@@ -59,7 +59,7 @@
 	name = "10 round magazine (5.56mm)"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "r10"
-	ammo_type = /obj/item/ammo_casing/fallout/a556
+	ammo_type = /obj/item/ammo_casing/fallout/a556/junk
 	caliber = "a556"
 	max_ammo = 10
 	multiple_sprites = 2

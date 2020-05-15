@@ -21,7 +21,7 @@
 
 /obj/item/gun/ballistic/shotgun/fallout/trail
 	name = "trail carbine"
-	desc = "A lever action repeater chambered for .44 Magnum. An overall improved design allows it to fire just a bit faster than other repeaters with a higher capacity to boot."
+	desc = "A lever action repeater chambered for .44 Magnum with a solid capacity."
 	icon_state = "trail"
 	item_state = "trail"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube44
