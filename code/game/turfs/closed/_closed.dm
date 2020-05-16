@@ -69,7 +69,13 @@
 	*/
 
 	..()
-	icon_state = "title[rand(1,13)]"
+	icon_state = "transition"
+	addtimer(CALLBACK(src, .proc/swap_splashscreen, 'fallout/icons/title_roll.dmi', ""), 5 SECONDS)
+	addtimer(CALLBACK(src, .proc/swap_splashscreen, 'fallout/icons/splashscreen.dmi', "title_loading"), 40 SECONDS)
+
+/turf/closed/indestructible/splashscreen/proc/swap_splashscreen(new_icon, new_icon_state)
+	icon = new_icon
+	icon_state = new_icon_state
 
 /turf/closed/indestructible/splashscreen/vv_edit_var(var_name, var_value)
 	. = ..()

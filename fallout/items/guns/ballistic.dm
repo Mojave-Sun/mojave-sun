@@ -3,7 +3,7 @@
 /obj/item/gun/ballistic/fallout
 	name = "generic fallout gun"
 	desc = "complain when seeing this"
-	icon = 'fallout/icons/objects/guns/projectile.dmi'
+	icon = 'fallout/icons/objects/guns/ballistics.dmi'
 	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
 
@@ -11,7 +11,15 @@
 /obj/item/gun/ballistic/shotgun/fallout
 	name = "generic fallout gun"
 	desc = "complain when seeing this"
-	icon = 'fallout/icons/objects/guns/projectile.dmi'
+	icon = 'fallout/icons/objects/guns/ballistics.dmi'
+	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
+	
+//Automatic shotguns
+/obj/item/gun/ballistic/shotgun/automatic/fallout
+	name = "generic fallout gun"
+	desc = "complain when seeing this"
+	icon = 'fallout/icons/objects/guns/ballistics.dmi'
 	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
 
@@ -19,7 +27,7 @@
 /obj/item/gun/ballistic/revolver/fallout
 	name = "generic fallout gun"
 	desc = "complain when seeing this"
-	icon = 'fallout/icons/objects/guns/projectile.dmi'
+	icon = 'fallout/icons/objects/guns/ballistics.dmi'
 	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
 
@@ -27,11 +35,29 @@
 /obj/item/gun/ballistic/automatic/fallout
 	name = "generic fallout gun"
 	desc = "complain when seeing this"
-	icon = 'fallout/icons/objects/guns/projectile.dmi'
+	icon = 'fallout/icons/objects/guns/ballistics.dmi'
 	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
 	automatic = 2 //2 decisecond delay
 	force = 20
+	
+//Pistols
+/obj/item/gun/ballistic/automatic/pistol/fallout
+	name = "generic fallout gun"
+	desc = "complain when seeing this"
+	icon = 'fallout/icons/objects/guns/ballistics.dmi'
+	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
+	
+//Bolt-actions
+/obj/item/gun/ballistic/rifle/fallout
+	name = "generic fallout gun"
+	desc = "complain when seeing this"
+	icon = 'fallout/icons/objects/guns/ballistics.dmi'
+	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
+	internal_magazine = FALSE
+	tac_reloads = TRUE
 
 /*
 /obj/item/gun/ballistic/automatic/fallout/minigun

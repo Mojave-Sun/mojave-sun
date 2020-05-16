@@ -14,13 +14,13 @@ $include antag_rep.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-SERVERNAME Bad Deathclaw
+SERVERNAME Mojave Sun
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 # SERVERSQLNAME tgstation
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Desert Wasteland
+STATIONNAME Post-Apocalyptic Wasteland
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 #HUB
@@ -115,6 +115,9 @@ LOG_PRAYER
 ## log lawchanges
 LOG_LAW
 
+## log economy actions
+LOG_ECON
+
 ## log crew manifest to seperate file
 LOG_MANIFEST
 
@@ -140,8 +143,11 @@ LOG_VIRUS
 ## log cloning actions
 LOG_CLONING
 
-# log shuttle actions
+## log shuttle actions
 LOG_SHUTTLE
+
+## Enable the demo subsystem
+# DEMOS_ENABLED
 
 ##Log camera pictures - Must have picture logging enabled
 PICTURE_LOGGING_CAMERA

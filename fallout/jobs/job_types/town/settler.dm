@@ -1,16 +1,19 @@
 datum/job/f13/town/settler
 	title = "Settler"
-	total_positions = -1
-	spawn_positions = -1
-	supervisors = "mayor"
+	total_positions = 10
+	spawn_positions = 10
+	supervisors = ""
+	description = ""
+	forbid = ""
+	enforce = ""
 
-	outfit = /datum/outfit/job/settler
+	outfit = /datum/outfit/job/f13/town/settler
 
-	display_order = JOB_DISPLAY_ORDER_SETTLER
+	display_order = JOB_DISPLAY_ORDER_F13_SETTLER
 
-/datum/outfit/job/dweller
+/datum/outfit/job/f13/town/settler
 	name = "Settler"
 	jobtype = /datum/job/f13/town/settler
 
-/datum/outfit/job/settler/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/f13/town/settler/pre_equip(mob/living/carbon/human/H)
 	..()
