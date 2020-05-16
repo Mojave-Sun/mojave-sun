@@ -39,7 +39,7 @@ Sunlight System
 	anchored = 1
 	blend_mode		 = BLEND_ADD
 	icon             = LIGHTING_ICON
-	icon_state       = "transparent"
+	// icon_state       = "transparent"
 	plane 				=  SUNLIGHTING_PLANE
 	layer 				=  SUNLIGHTING_LAYER
 	invisibility 		=  INVISIBILITY_LIGHTING
@@ -52,11 +52,13 @@ Sunlight System
 	var/turf/source_turf
 	var/datum/lighting_corner/list/affectingCorners = list()
 
+
 /atom/movable/sunlight_object/Destroy()
 	return QDEL_HINT_LETMELIVE
 	. = ..()
 
 /atom/movable/sunlight_object/Initialize()
+	source_turf = loc
 
 /atom/movable/sunlight_object/proc/GetState()
 	var/oldState = state
@@ -82,6 +84,9 @@ Sunlight System
 /atom/movable/sunlight_object/proc/GetRoof()
 
 /atom/movable/sunlight_object/proc/HasRoof()
+	if(!istype(src.source_turf, /turf/open/floor/plating/ground))
+		return TRUE
+
 
 
 /atom/movable/sunlight_object/proc/DisableSunlight()

@@ -1,8 +1,8 @@
 
-// /client
+/client
 // 	var/list/parallax_layers
 // 	var/list/parallax_layers_cached
-// 	var/atom/movable/movingmob
+	var/atom/movable/movingmob
 // 	var/turf/previous_turf
 // 	var/dont_animate_parallax //world.time of when we can state animate()ing parallax again
 // 	var/last_parallax_shift //world.time of last update

@@ -66,12 +66,12 @@
 		filters += GAUSSIAN_BLUR(clamp(mymob.eye_blurry*0.1,0.6,3))
 
 
-///Contains all lighting objects
-/obj/screen/plane_master/lighting
-	name = "lighting plane master"
-	plane = LIGHTING_PLANE
-// 	blend_mode = BLEND_MULTIPLY
-	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+// ///Contains all lighting objects
+// /obj/screen/plane_master/lighting
+// 	name = "lighting plane master"
+// 	plane = LIGHTING_PLANE
+// // 	blend_mode = BLEND_MULTIPLY
+// 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 // /obj/screen/plane_master/lighting/Initialize()
 // 	. = ..()

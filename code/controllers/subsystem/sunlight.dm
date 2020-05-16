@@ -53,7 +53,7 @@ SUBSYSTEM_DEF(sunlight)
 
 	// var/screenColour = COLOR_ASSEMBLY_BEIGE //rando spin
 
-	var/list/obj/screen/plane_master/sunlight/sunlighting_planes = list()
+	var/list/obj/screen/plane_master/lighting/sunlighting_planes = list()
 
 	/* thanks ruskis */
 	var/datum/time_of_day/current_step_datum
@@ -195,7 +195,7 @@ datum/controller/subsystem/sunlight/proc/fullPlonk()
 	current_color = BlendRGB(current_step_datum.color, next_step_datum.color, blend_amount)
 
 	/* for each thing, update the colour */
-	for (var/obj/screen/plane_master/sunlight/SP in sunlighting_planes)
+	for (var/obj/screen/plane_master/lighting/SP in sunlighting_planes)
 		SP.color = current_color
 
 
