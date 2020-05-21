@@ -34,7 +34,7 @@ GLOBAL_VAR_INIT(GLOBAL_LIGHT_RANGE, 5)
 GLOBAL_LIST_EMPTY(SUNLIGHT_QUEUE_WORK)   /* turfs to be stateChecked */
 GLOBAL_LIST_EMPTY(SUNLIGHT_QUEUE_UPDATE) /* turfs to have their colours updated via corners (filter out the unroofed dudes) */
 GLOBAL_LIST_EMPTY(SUNLIGHT_QUEUE_CORNER) /* turfs to have their colour/lights/etc updated */
-GLOBAL_LIST_EMPTY(sunlight_objectS)
+GLOBAL_LIST_EMPTY(sunlight_objects)
 
 
 // /var/total_sunlight_objects = 0
@@ -78,7 +78,7 @@ datum/controller/subsystem/sunlight/proc/fullPlonk()
 	var/msg = "b4 wq [GLOB.SUNLIGHT_QUEUE_WORK.len]"
 	to_chat(world, "<span class='boldannounce'>[msg]</span>")
 	log_world(msg)
-	GLOB.SUNLIGHT_QUEUE_WORK = GLOB.sunlight_objectS
+	GLOB.SUNLIGHT_QUEUE_WORK = GLOB.sunlight_objects
 	msg = "af wq [GLOB.SUNLIGHT_QUEUE_WORK.len]"
 	to_chat(world, "<span class='boldannounce'>[msg]</span>")
 	log_world(msg)
@@ -154,10 +154,11 @@ datum/controller/subsystem/sunlight/proc/fullPlonk()
 
 	if(!init_tick_checks)
 		MC_SPLIT_TICK
+
 	for (i in 1 to GLOB.SUNLIGHT_QUEUE_UPDATE.len)
 		var/atom/movable/sunlight_object/U = GLOB.SUNLIGHT_QUEUE_UPDATE[i]
 
-		U.UpdateColour()
+		U.ProcessState()
 		if(init_tick_checks)
 			CHECK_TICK
 		else if (MC_TICK_CHECK)
@@ -184,6 +185,7 @@ datum/controller/subsystem/sunlight/proc/fullPlonk()
 			CHECK_TICK
 		else if (MC_TICK_CHECK)
 			break
+
 	if (i)
 		GLOB.SUNLIGHT_QUEUE_CORNER.Cut(1, i+1)
 		i = 0

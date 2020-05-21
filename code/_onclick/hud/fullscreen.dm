@@ -152,21 +152,21 @@
 	blend_mode = BLEND_OVERLAY
 	show_when_dead = TRUE
 
-//Provides darkness to the back of the lighting plane
-/obj/screen/fullscreen/lighting_backdrop/lit
-	invisibility = INVISIBILITY_LIGHTING
-	layer = BACKGROUND_LAYER+21
-	color = "#000"
-	show_when_dead = TRUE
+// //Provides darkness to the back of the lighting plane
+// /obj/screen/fullscreen/lighting_backdrop/lit
+// 	invisibility = INVISIBILITY_LIGHTING
+// 	layer = BACKGROUND_LAYER+21
+// 	color = "#000"
+// 	show_when_dead = TRUE
 
-//Provides whiteness in case you don't see lights so everything is still visible
-/obj/screen/fullscreen/lighting_backdrop/unlit
-	layer = BACKGROUND_LAYER+20
-	show_when_dead = TRUE
+// //Provides whiteness in case you don't see lights so everything is still visible
+// /obj/screen/fullscreen/lighting_backdrop/unlit
+// 	layer = BACKGROUND_LAYER+20
+// 	show_when_dead = TRUE
 
-/obj/screen/fullscreen/see_through_darkness
-	icon_state = "nightvision"
-	plane = LIGHTING_PLANE
-	layer = LIGHTING_LAYER
-	blend_mode = BLEND_ADD
-	show_when_dead = TRUE
+// /obj/screen/fullscreen/see_through_darkness
+// 	icon_state = "nightvision"
+// 	plane = LIGHTING_PLANE
+// 	layer = LIGHTING_LAYER
+// 	blend_mode = BLEND_ADD
+// 	show_when_dead = TRUE

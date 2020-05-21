@@ -17,53 +17,56 @@
 /obj/screen/plane_master/proc/backdrop(mob/mymob)
 
 ///Things rendered on "openspace"; holes in multi-z
-/obj/screen/plane_master/openspace
-	name = "open space plane master"
-	plane = OPENSPACE_BACKDROP_PLANE
-	appearance_flags = PLANE_MASTER
-	blend_mode = BLEND_MULTIPLY
-	alpha = 255
+// /obj/screen/plane_master/openspace
+// 	name = "open space plane master"
+// 	plane = OPENSPACE_BACKDROP_PLANE
+// 	appearance_flags = PLANE_MASTER
+// 	blend_mode = BLEND_MULTIPLY
+// 	alpha = 255
 
-/obj/screen/plane_master/openspace/backdrop(mob/mymob)
-	filters = list()
-	filters += filter(type = "drop_shadow", color = "#04080FAA", size = -10)
-	filters += filter(type = "drop_shadow", color = "#04080FAA", size = -15)
-	filters += filter(type = "drop_shadow", color = "#04080FAA", size = -20)
+// /obj/screen/plane_master/openspace/backdrop(mob/mymob)
+// 	filters = list()
+// 	filters += filter(type = "drop_shadow", color = "#04080FAA", size = -10)
+// 	filters += filter(type = "drop_shadow", color = "#04080FAA", size = -15)
+// 	filters += filter(type = "drop_shadow", color = "#04080FAA", size = -20)
 
-/obj/screen/plane_master/proc/outline(_size, _color)
-	filters += filter(type = "outline", size = _size, color = _color)
+// /obj/screen/plane_master/proc/outline(_size, _color)
+// 	filters += filter(type = "outline", size = _size, color = _color)
 
-/obj/screen/plane_master/proc/shadow(_size, _border, _offset = 0, _x = 0, _y = 0, _color = "#04080FAA")
-	filters += filter(type = "drop_shadow", x = _x, y = _y, color = _color, size = _size, offset = _offset)
+// /obj/screen/plane_master/proc/shadow(_size, _border, _offset = 0, _x = 0, _y = 0, _color = "#04080FAA")
+// 	filters += filter(type = "drop_shadow", x = _x, y = _y, color = _color, size = _size, offset = _offset)
 
-/obj/screen/plane_master/proc/clear_filters()
-	filters = list()
+// /obj/screen/plane_master/proc/clear_filters()
+// 	filters = list()
 
 ///Contains just the floor
 /obj/screen/plane_master/floor
 	name = "floor plane master"
 	plane = FLOOR_PLANE
 	appearance_flags = PLANE_MASTER
-	blend_mode = BLEND_OVERLAY
+	color = list(null,null,null,"#0000","#000f")
+	blend_mode = BLEND_MULTIPLY
 
-/obj/screen/plane_master/floor/backdrop(mob/mymob)
-	filters = list()
-	if(istype(mymob) && mymob.eye_blurry)
-		filters += GAUSSIAN_BLUR(clamp(mymob.eye_blurry*0.1,0.6,3))
+
+// /obj/screen/plane_master/floor/backdrop(mob/mymob)
+// 	filters = list()
+// 	if(istype(mymob) && mymob.eye_blurry)
+// 		filters += GAUSSIAN_BLUR(clamp(mymob.eye_blurry*0.1,0.6,3))
 
 ///Contains most things in the game world
 /obj/screen/plane_master/game_world
 	name = "game world plane master"
 	plane = GAME_PLANE
 	appearance_flags = PLANE_MASTER //should use client color
-	blend_mode = BLEND_OVERLAY
+	color = list(null,null,null,"#0000","#000f")
+	blend_mode = BLEND_MULTIPLY
 
-/obj/screen/plane_master/game_world/backdrop(mob/mymob)
-	filters = list()
-	if(istype(mymob) && mymob.client && mymob.client.prefs && mymob.client.prefs.ambientocclusion)
-		filters += AMBIENT_OCCLUSION
-	if(istype(mymob) && mymob.eye_blurry)
-		filters += GAUSSIAN_BLUR(clamp(mymob.eye_blurry*0.1,0.6,3))
+// /obj/screen/plane_master/game_world/backdrop(mob/mymob)
+// 	filters = list()
+// 	if(istype(mymob) && mymob.client && mymob.client.prefs && mymob.client.prefs.ambientocclusion)
+// 		filters += AMBIENT_OCCLUSION
+// 	if(istype(mymob) && mymob.eye_blurry)
+// 		filters += GAUSSIAN_BLUR(clamp(mymob.eye_blurry*0.1,0.6,3))
 
 
 // ///Contains all lighting objects

@@ -55,14 +55,14 @@ Sunlight System
 
 /atom/movable/sunlight_object/Destroy()
 	return QDEL_HINT_LETMELIVE
-	. = ..()
 
 /atom/movable/sunlight_object/Initialize()
 	source_turf = loc
+	GLOB.sunlight_objects += src
+	neighbourTurfs = GetNeighbours()
 
 /atom/movable/sunlight_object/proc/GetState()
 	var/oldState = state
-
 	if(!src.HasRoof())
 		state = SUNLIGHT_OUTDOOR
 		for(var/turf/CT in neighbourTurfs)
@@ -72,21 +72,18 @@ Sunlight System
 	else /* roofed, so turn off the lights*/
 		state = SUNLIGHT_INDOOR
 
-
-
 	if(oldState != state)
 		DisableSunlight()
 
 
 
 /atom/movable/sunlight_object/proc/GetNeighbours()
+	return RANGE_TURFS(1, src)
 
 /atom/movable/sunlight_object/proc/GetRoof()
 
 /atom/movable/sunlight_object/proc/HasRoof()
-	if(!istype(src.source_turf, /turf/open/floor/plating/ground))
-		return TRUE
-
+	return(!istype(src.source_turf, /turf/open/floor/plating/ground))
 
 
 /atom/movable/sunlight_object/proc/DisableSunlight()
@@ -94,7 +91,7 @@ Sunlight System
 /atom/movable/sunlight_object/proc/ProcessState()
 	switch(state)
 		if(SUNLIGHT_INDOOR)
-			color = 0 //get the dark thing
+			color = SUNLIGHTING_DARK_MATRIX //get the dark thing
 			luminosity = 0
 		if(SUNLIGHT_OUTDOOR)
 			color = SSsunlight.color //transparent
