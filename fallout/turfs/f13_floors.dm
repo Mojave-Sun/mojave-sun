@@ -1,78 +1,74 @@
+////Wood floors, carpeted wood floors, broken wood floors, and broken carpeted wood floors.
+
 /turf/open/floor/wood/f13
 	icon = 'fallout/icons/turf/floors_1.dmi'
 	icon_state = "housewood1"
+	desc = "Wooden flooring."
 
 /turf/open/floor/wood/f13/Initialize()
 	. = ..()
 	if(icon_state == "housewood1")
-		icon_state = "housewood[rand(1,3)]"
+		icon_state = "housewood[rand(1,3)]" //This automatically gives wooden floors a nice varied pattern.
+
+/turf/open/floor/wood/f13/broken
+	icon_state = "housebase"
+	desc = "Rotting wooden flooring."
+
+/turf/open/floor/wood/f13/broken/slightlybroken1
+	icon_state = "housewood1-broken"
+
+/turf/open/floor/wood/f13/broken/slightlybroken2
+	icon_state = "housewood2-broken"
+
+/turf/open/floor/wood/f13/broken/left
+	icon_state = "housewood3-broken1"
+
+/turf/open/floor/wood/f13/broken/right
+	icon_state = "housewood3-broken2"
 
 /turf/open/floor/wood/f13/carpet
 	icon_state = "carpet"
+	footstep = FOOTSTEP_CARPET
+	barefootstep = FOOTSTEP_CARPET_BAREFOOT
+	clawfootstep = FOOTSTEP_CARPET_BAREFOOT
+	desc = "Carpeted wooden flooring."
 
-/turf/open/floor/wood/f13/old
-	name = "wood planks"
-	desc = "Rotting wooden flooring."
+/turf/open/floor/wood/f13/carpet/broken
+	desc = "Rotting carpeted wooden flooring."
+	icon_state = "damaged1"
 
-/turf/open/floor/wood/f13/old/ruinedcornerendbr
-	name = "wood planks"
-	desc = "Rotting wooden flooring, with a mix of dirt."
-	icon_state = "housewastelandcornerbr"
+/turf/open/floor/wood/f13/carpet/broken/alt
+	icon_state = "damaged"
 
-/turf/open/floor/wood/f13/old/ruinedcornerendbl
-	name = "wood planks"
-	desc = "Rotting wooden flooring, with a mix of dirt."
-	icon_state = "housewastelandcornerbl"
+/turf/open/floor/wood/f13/carpet/broken/left1
+	icon_state = "torncarpet1"
 
-/turf/open/floor/wood/f13/old/ruinedcornerendtr
-	name = "wood planks"
-	desc = "Rotting wooden flooring, with a mix of dirt."
-	icon_state = "housewastelandcornertr"
+/turf/open/floor/wood/f13/carpet/broken/left2
+	icon_state = "torncarpet2"
 
-/turf/open/floor/wood/f13/old/ruinedcornerendtl
-	name = "wood planks"
-	desc = "Rotting wooden flooring, with a mix of dirt."
-	icon_state = "housewastelandcornertl"
+/turf/open/floor/wood/f13/carpet/broken/left3
+	icon_state = "torncarpet3"
 
-/turf/open/floor/wood/f13/old/ruinedcornerbr
-	name = "wood planks"
-	desc = "Rotting wooden flooring, with a mix of dirt."
-	icon_state = "housewastelandmorecornerbr"
+/turf/open/floor/wood/f13/carpet/broken/left4
+	icon_state = "torncarpet4"
 
-/turf/open/floor/wood/f13/old/ruinedcornerbl
-	name = "wood planks"
-	desc = "Rotting wooden flooring, with a mix of dirt."
-	icon_state = "housewastelandmorecornerbl"
+/turf/open/floor/wood/f13/carpet/broken/left5
+	icon_state = "torncarpet15"
 
-/turf/open/floor/wood/f13/old/ruinedcornertr
-	name = "wood planks"
-	desc = "Rotting wooden flooring, with a mix of dirt."
-	icon_state = "housewastelandmorecornertr"
+/turf/open/floor/wood/f13/carpet/broken/right1
+	icon_state = "torncarpet7"
 
-/turf/open/floor/wood/f13/old/ruinedcornertl
-	name = "wood planks"
-	desc = "Rotting wooden flooring, with a mix of dirt."
-	icon_state = "housewastelandmorecornertl"
+/turf/open/floor/wood/f13/carpet/broken/right2
+	icon_state = "torncarpet9"
 
-/turf/open/floor/wood/f13/old/ruinedstraightsouth
-	name = "wood planks"
-	desc = "Rotting wooden flooring, with a mix of dirt."
-	icon_state = "housewastelandsouth"
+/turf/open/floor/wood/f13/carpet/broken/right3
+	icon_state = "torncarpet10"
 
-/turf/open/floor/wood/f13/old/ruinedstraightnorth
-	name = "wood planks"
-	desc = "Rotting wooden flooring, with a mix of dirt."
-	icon_state = "housewastelandnorth"
+/turf/open/floor/wood/f13/carpet/broken/right4
+	icon_state = "torncarpet11"
 
-/turf/open/floor/wood/f13/old/ruinedstraighteast
-	name = "wood planks"
-	desc = "Rotting wooden flooring, with a mix of dirt."
-	icon_state = "housewastelandeast"
-
-/turf/open/floor/wood/f13/old/ruinedstraightwest
-	name = "wood planks"
-	desc = "Rotting wooden flooring, with a mix of dirt."
-	icon_state = "housewastelandwest"
+/turf/open/floor/wood/f13/carpet/broken/right5
+	icon_state = "torncarpet12"
 
 /turf/open/floor/wood/f13/stage_tl
 	icon_state = "housewood_stage_top_left"
@@ -90,6 +86,8 @@
 	icon_state = "housewood_stage_right"
 /turf/open/floor/wood/f13/stage_br
 	icon_state = "housewood_stage_bottom_right"
+
+//Plasteel (generic) floor tiles.
 
 /turf/open/floor/plasteel/f13/vault_floor
 	name = "vault floor"
@@ -382,20 +380,6 @@
 	icon_state = "rcircuitoff1"
 	on = FALSE
 
-/turf/open/f13/inside
-	icon = 'fallout/icons/turf/floors_1.dmi'
-	icon_state = "housewood1"
-
-/turf/open/f13/inside/wood
-	name = "wood planks"
-	desc = "Rotting wooden flooring."
-
 /turf/open/floor/plasteel/f13
 	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "floor"
-
-/turf/open/floor/plating/roof
-	icon = 'fallout/icons/turf/floors_1.dmi'
-	icon_state = "roof"
-	name = "roof"
-	desc = "Some metal roofing."

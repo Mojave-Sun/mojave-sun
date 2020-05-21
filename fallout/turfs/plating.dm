@@ -248,3 +248,9 @@
 	baseturfs = /turf/open/floor/plating/ground/snow
 	icon = 'fallout/icons/turf/sidewalk_snow.dmi'
 	icon_state = "outermiddle"
+
+/turf/open/floor/plating/roof
+	icon = 'fallout/icons/turf/floors_1.dmi'
+	icon_state = "roof"
+	name = "roof"
+	desc = "Some metal roofing."
