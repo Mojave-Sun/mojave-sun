@@ -2,15 +2,16 @@
 /area/f13
 	name = "wasteland"
 	icon = 'fallout/icons/turf/areas.dmi'
-	icon_state = "desert"
-	requires_power = FALSE
+	icon_state = "wasteland"
+	requires_power = TRUE
 	poweralm = FALSE
 	power_environ = FALSE
 	power_equip = FALSE
+	power_light = FALSE
 	outdoors = TRUE
 	has_gravity = STANDARD_GRAVITY
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
-	ambientsounds = list('fallout/sound/f13ambience/wasteland.ogg', 'fallout/sound/f13ambience/sewer.ogg')
+	ambientsounds = list('fallout/sound/f13ambience/wasteland.ogg')
 	flags_1 = NONE //>desert >>has destroyed robo dirt on it
 
 /area/f13/admeme
@@ -48,7 +49,12 @@
 /area/f13/sunny_dale
 	name = "Sunny Dale"
 	icon_state = "sunny_dale"
-	requires_power = TRUE
+	requires_power = FALSE
+	poweralm = TRUE
+	power_environ = TRUE
+	power_equip = TRUE
+	power_light = TRUE
+	ambientsounds = list('fallout/sound/f13ambience/building.ogg')
 
 /area/f13/ncr_main
 	name = "NCR Mainbase"
