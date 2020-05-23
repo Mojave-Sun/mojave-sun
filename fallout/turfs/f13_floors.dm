@@ -737,34 +737,3 @@
 
 /turf/open/floor/plasteel/f13/misc/medical
 	icon_state = "medical"
-
-/turf/open/floor/circuit/f13_blue
-	icon = 'fallout/icons/turf/floors_2.dmi'
-	icon_state = "bcircuit2"
-	icon_normal = "bcircuit2"
-
-/turf/open/floor/circuit/f13_blue/off
-	icon_state = "bcircuitoff2"
-	on = FALSE
-
-/turf/open/floor/circuit/f13_green
-	icon = 'fallout/icons/turf/floors_2.dmi'
-	icon_state = "gcircuit2"
-	icon_normal = "gcircuit2"
-	light_color = LIGHT_COLOR_GREEN
-	floor_tile = /obj/item/stack/tile/circuit/green
-
-/turf/open/floor/circuit/f13_green/off
-	icon_state = "gcircuitoff2"
-	on = FALSE
-
-/turf/open/floor/circuit/f13_red
-	icon = 'fallout/icons/turf/floors_2.dmi'
-	icon_state = "rcircuit1"
-	icon_normal = "rcircuit1"
-	light_color = LIGHT_COLOR_FLARE
-	floor_tile = /obj/item/stack/tile/circuit/red
-
-/turf/open/floor/circuit/f13_red/off
-	icon_state = "rcircuitoff1"
-	on = FALSE
