@@ -732,8 +732,5 @@
 /turf/open/floor/plasteel/f13/teal/white/whitetealchess/whitetealchess2/rusty
 	icon_state = "whitetealchess2rusty"
 
-/turf/open/floor/plasteel/f13/misc/plaque
-	icon_state = "plaque"
-
 /turf/open/floor/plasteel/f13/misc/medical
 	icon_state = "medical"
