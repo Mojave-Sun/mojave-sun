@@ -228,26 +228,22 @@
 /turf/open/floor/plating/ground/road
 	name = "\proper road"
 	desc = "A stretch of road."
-	baseturfs = /turf/open/floor/plating/ground/desert
-	icon = 'fallout/icons/turf/asphalt.dmi'
-	icon_state = "innermiddle"
+	icon = 'fallout/icons/turf/roadsidewalk.dmi'
+	icon_state = "road"
 
-/turf/open/floor/plating/ground/road/snow
-	baseturfs = /turf/open/floor/plating/ground/snow
-	icon = 'fallout/icons/turf/asphalt_snow.dmi'
-	icon_state = "innermiddle"
+/turf/open/floor/plating/ground/road/curb
+	icon_state = "curb"
 
-/turf/open/floor/plating/ground/sidewalk
-	name = "\proper sidewalk"
-	desc = "A stretch of sidewalk."
-	baseturfs = /turf/open/floor/plating/ground/desert
-	icon = 'fallout/icons/turf/sidewalk.dmi'
-	icon_state = "outermiddle"
+/turf/open/floor/plating/ground/road/curb/corner
+	icon_state = "curbcorner"
 
-/turf/open/floor/plating/ground/sidewalk/snow
-	baseturfs = /turf/open/floor/plating/ground/snow
-	icon = 'fallout/icons/turf/sidewalk_snow.dmi'
-	icon_state = "outermiddle"
+/turf/open/floor/plating/ground/road/sidewalk
+	name = "sidewalk"
+	desc = "Paved tiles specifically designed for walking upon."
+	icon_state = "sidewalk"
+
+/turf/open/floor/plating/ground/road/sidewalk/edge
+	icon_state = "sidewalkedge"
 
 /turf/open/floor/plating/roof
 	icon = 'fallout/icons/turf/floors_1.dmi'
