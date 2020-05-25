@@ -146,8 +146,8 @@ GLOBAL_LIST_INIT(LIGHTING_CORNER_DIAGONAL, list(NORTHEAST, SOUTHEAST, SOUTHWEST,
 	return ..()
 
 /* get stronkest sunFalloff */
-/datum/lighting_corner/proc/getSunFalloff()
-	sunFalloff = 0
-	var/atom/movable/sunlight_object/S
-	for(S in globAffect)
-		sunFalloff = sunFalloff < globAffect[S] ? globAffect[S] : sunFalloff
+// /datum/lighting_corner/proc/getSunFalloff()
+// 	sunFalloff = 0
+// 	var/atom/movable/sunlight_object/S
+// 	for(S in globAffect)
+// 		sunFalloff = sunFalloff < globAffect[S] ? globAffect[S] : sunFalloff

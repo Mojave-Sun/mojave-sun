@@ -152,21 +152,43 @@
 	blend_mode = BLEND_OVERLAY
 	show_when_dead = TRUE
 
-// //Provides darkness to the back of the lighting plane
-// /obj/screen/fullscreen/lighting_backdrop/lit
-// 	invisibility = INVISIBILITY_LIGHTING
-// 	layer = BACKGROUND_LAYER+21
-// 	color = "#000"
-// 	show_when_dead = TRUE
+//Provides darkness to the back of the lighting plane
+/obj/screen/fullscreen/lighting_backdrop/lit
+	invisibility = INVISIBILITY_LIGHTING
+	layer = BACKGROUND_LAYER+21
+	color = "#000"
+	show_when_dead = TRUE
 
-// //Provides whiteness in case you don't see lights so everything is still visible
-// /obj/screen/fullscreen/lighting_backdrop/unlit
-// 	layer = BACKGROUND_LAYER+20
-// 	show_when_dead = TRUE
+//Provides whiteness in case you don't see lights so everything is still visible
+/obj/screen/fullscreen/lighting_backdrop/unlit
+	layer = BACKGROUND_LAYER+20
+	show_when_dead = TRUE
 
-// /obj/screen/fullscreen/see_through_darkness
-// 	icon_state = "nightvision"
+/obj/screen/fullscreen/see_through_darkness
+	icon_state = "nightvision"
+	plane = LIGHTING_PLANE
+	layer = LIGHTING_LAYER
+	blend_mode = BLEND_ADD
+	show_when_dead = TRUE
+
+
+/* our sunny version - I will need to figure out a less shit way of copying this */
+// /obj/screen/fullscreen/lighting_backdrop/Sunlight
+// 	icon = 'icons/mob/screen_gen.dmi'
+// 	icon_state = "flash"
+// 	transform = matrix(200, 0, 0, 0, 200, 0)
 // 	plane = LIGHTING_PLANE
 // 	layer = LIGHTING_LAYER
-// 	blend_mode = BLEND_ADD
+// 	blend_mode = BLEND_OVERLAY
 // 	show_when_dead = TRUE
+
+
+// /obj/screen/fullscreen/lighting_backdrop/Sunlight/Initialize()
+// 	. = ..()
+// 	color = SSsunlight.current_color
+// 	SSsunlight.sunlighting_planes |= src
+// 	filters += filter(type="alpha", render_source=SUNLIGHTING_RENDER_TARGET, flags=MASK_SWAP)
+
+// /obj/screen/fullscreen/lighting_backdrop/Sunlight/Destroy()
+// 	. = ..()
+// 	SSsunlight.sunlighting_planes -= src

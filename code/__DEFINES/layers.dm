@@ -10,29 +10,13 @@
 
 
 #define OPENSPACE_LAYER 17 //Openspace layer over all
-#define OPENSPACE_PLANE -8 //Openspace plane below all turfs
-#define OPENSPACE_BACKDROP_PLANE -7 //Black square just over openspace plane to guaranteed cover all in openspace turf
-
-#define LIGHTING_PLANE -6
-#define LIGHTING_LAYER -6
-#define LIGHTING_RENDER_TARGET "LIGHT_PLANE"
-
-#define SUNLIGHTING_PLANE -5
-#define SUNLIGHTING_LAYER -5
-/* idk what this render_target shit is, so im not doing it. Why is is LIGHT_PLANE and not LIGHTING_PLANE? like wtf */
-
-#define ABOVE_LIGHTING_PLANE -4
-#define ABOVE_LIGHTING_LAYER -4
-#define ABOVE_LIGHTING_RENDER_TARGET "ABOVE_LIGHTING_PLANE"
-
-#define BYOND_LIGHTING_PLANE -3
-#define BYOND_LIGHTING_LAYER -3
-#define BYOND_LIGHTING_RENDER_TARGET "BYOND_LIGHTING_PLANE"
+#define OPENSPACE_PLANE -4 //Openspace plane below all turfs
+#define OPENSPACE_BACKDROP_PLANE -3 //Black square just over openspace plane to guaranteed cover all in openspace turf
 
 
-#define FLOOR_PLANE 0
+#define FLOOR_PLANE -2
 #define FLOOR_PLANE_RENDER_TARGET "FLOOR_PLANE"
-#define GAME_PLANE 0
+#define GAME_PLANE -1
 #define GAME_PLANE_RENDER_TARGET "GAME_PLANE"
 #define BLACKNESS_PLANE 0 //To keep from conflicts with SEE_BLACKNESS internals
 #define BLACKNESS_PLANE_RENDER_TARGET "BLACKNESS_PLANE"
@@ -119,7 +103,22 @@
 #define EMISSIVE_UNBLOCKABLE_LAYER 14
 #define EMISSIVE_UNBLOCKABLE_RENDER_TARGET "*EMISSIVE_UNBLOCKABLE_PLANE"
 
+#define SUNLIGHTING_PLANE 15
+#define SUNLIGHTING_LAYER 15
+#define SUNLIGHTING_RENDER_TARGET "*SUNLIGHT_PLANE"
 
+#define LIGHTING_PLANE 16
+#define LIGHTING_LAYER 16
+#define LIGHTING_RENDER_TARGET "LIGHT_PLANE"
+
+#define ABOVE_LIGHTING_PLANE 17
+#define ABOVE_LIGHTING_LAYER 17
+#define ABOVE_LIGHTING_RENDER_TARGET "ABOVE_LIGHTING_PLANE"
+
+
+#define BYOND_LIGHTING_PLANE 18
+#define BYOND_LIGHTING_LAYER 18
+#define BYOND_LIGHTING_RENDER_TARGET "BYOND_LIGHTING_PLANE"
 
 #define CAMERA_STATIC_PLANE 19
 #define CAMERA_STATIC_LAYER 19

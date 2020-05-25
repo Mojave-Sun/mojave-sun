@@ -24,32 +24,23 @@
 #define LIGHTING_BASE_MATRIX \
 	list                     \
 	(                        \
-		0, 0, 0, 0, 		 \
-		0, 0, 0, 0, 		 \
-		0, 0, 0, 0, 		 \
-		0, 0, 0, 0, 		 \
+		1, 1, 1, 0, \
+		1, 1, 1, 0, \
+		1, 1, 1, 0, \
+		1, 1, 1, 0, \
 		0, 0, 0, 1           \
 	)                        \
 
-#define SUNLIGHTING_BASE_MATRIX \
-	list                     	\
-		(						\
-			01, 01, 01, 01,	 	\
-			01, 01, 01, 01,	 	\
-			01, 01, 01, 01,	 	\
-			01, 01, 01, 01,		\
-			00, 00, 00, 00		\
-		)                  		\
+#define SUNLIGHT_DARK_MATRIX \
+	list                     \
+	(                        \
+		0, 0, 0, 0, \
+		0, 0, 0, 0, \
+		0, 0, 0, 0, \
+		0, 0, 0, 0, \
+		0, 0, 0, 1           \
+	)                        \
 
-#define SUNLIGHTING_DARK_MATRIX \
-	list                     	\
-		(						\
-			00, 00, 00, 00,	 	\
-			00, 00, 00, 00,	 	\
-			00, 00, 00, 00,	 	\
-			00, 00, 00, 00,		\
-			00, 00, 00, 00		\
-		)                  		\
 
 
 //Some defines to generalise colours used in lighting.
@@ -140,4 +131,4 @@
 
 #define SUNLIGHT_INDOOR   0
 #define SUNLIGHT_OUTDOOR  1
-#define SUNLIGHT_BORDER    2
+#define SUNLIGHT_BORDER   2

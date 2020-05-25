@@ -120,7 +120,7 @@ All ShuttleMove procs go here
 	if(rotation)
 		shuttleRotate(rotation)
 
-	// update_parallax_contents()
+	update_parallax_contents()
 
 	return TRUE
 
