@@ -22,6 +22,8 @@
 	icon = 'fallout/icons/objects/guns/ballistics.dmi'
 	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
+	inhand_x_dimension = 32
+	inhand_y_dimension = 32
 
 //Revolvers
 /obj/item/gun/ballistic/revolver/fallout

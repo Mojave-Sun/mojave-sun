@@ -95,6 +95,7 @@
 	name = "desert eagle"
 	desc = "A hard hitting, heavy handgun uniquely chambered for .44 magnum rounds."
 	icon_state = "deagle"
+	item_state = "deagle"
 	mag_type = /obj/item/ammo_box/magazine/deagle
 	can_suppress = FALSE
 	w_class = WEIGHT_CLASS_NORMAL

@@ -13,7 +13,7 @@
 	name = "hunting shotgun"
 	desc = "A pre-war pump action shotgun with an extended tube capable of holding eight shells and a bulky stock that excels in melee combat."
 	icon_state = "huntingshot"
-	item_state = "trail"
+	item_state = "huntingshot"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/huntingshot
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY

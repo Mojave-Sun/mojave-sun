@@ -166,7 +166,7 @@
 	name = "service rifle"
 	desc = "A 5.56 semi-automatic rifle manufactured by and for the NCR."
 	icon_state = "service"
-	item_state = "servicerifle"
+	item_state = "service"
 	fire_sound = 'fallout/sound/f13weapons/varmint_rifle.ogg'
 	fire_delay = 4
 	extra_damage = 25
