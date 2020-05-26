@@ -3,11 +3,12 @@
 	name = "lever action shotgun"
 	desc = "A trusty lever action shotgun with a tube supporting a maximum of five shells and a reinforced grip for bashing in heads."
 	icon_state = "levershot"
-	item_state = "trail"
+	item_state = "levershot"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lever
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	force = 25
+	fire_delay = 5
 
 /obj/item/gun/ballistic/shotgun/fallout/huntingshot
 	name = "hunting shotgun"
@@ -18,6 +19,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	force = 30
+	fire_delay = 5
 
 /obj/item/gun/ballistic/shotgun/fallout/trail
 	name = "trail carbine"
@@ -59,7 +61,7 @@
 	name = "battle rifle"
 	desc = "A very old but very reliable semi-automatic, clip fed rifle from long before the war. Chambered for .308."
 	icon_state = "battler"
-	item_state = "brush"
+	item_state = "battler"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/battler
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -71,7 +73,7 @@
 	name = "SKS"
 	desc = "An old European semi-automatic rifle chambered for 7.62 rounds and normally fed from 10 round stripper clips."
 	icon_state = "sks"
-	item_state = "brush"
+	item_state = "sks"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/sks
 	extra_damage = 30
 	extra_penetration = 10
@@ -81,7 +83,7 @@
 	name = "Scoped SKS"
 	desc = "An SKS with a scope attached and some improved rifling for better penetration."
 	icon_state = "scoped_sks"
-	item_state = "brush"
+	item_state = "scoped_sks"
 	extra_penetration = 15
 	zoomable = TRUE
 	zoom_amt = 10
