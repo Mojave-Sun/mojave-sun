@@ -10,7 +10,7 @@
 	outdoors = TRUE
 	has_gravity = STANDARD_GRAVITY
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
-	ambientsounds = list('fallout/sound/f13ambience/general/wasteland.ogg', 'fallout/sound/f13ambience/general/sewer.ogg')
+	ambientsounds = list('fallout/sound/f13ambience/wasteland.ogg', 'fallout/sound/f13ambience/sewer.ogg')
 	flags_1 = NONE //>desert >>has destroyed robo dirt on it
 
 /area/f13/admeme
