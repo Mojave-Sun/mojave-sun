@@ -84,7 +84,7 @@
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 
 /obj/item/clothing/shoes/fallout/military/ncr
-	name = "NCR Boots"
+	name = "NCR boots"
 	desc = "A pair of standard issue NCR brown boots, with a puttee."
 	icon_state = "ncr_boots"
 	item_state = "ncr"
@@ -96,14 +96,14 @@
 	item_state = "ncr_boots_w"
 
 /obj/item/clothing/shoes/fallout/military/ncr_officer
-	name = "NCR ffficer boots"
+	name = "NCR officer boots"
 	desc = "A pair of brown leather boots, issued to NCR Officers."
 	icon_state = "ncr_officer_boots"
 	item_state = "ncr_officer_boots"
 
 /obj/item/clothing/shoes/fallout/military/ncr_officer/winter
-	name = "NCR Officer Winter Boots"
-	desc = "A pair boots issued to NCR officers for winter operations."
+	name = "NCR officer winter Boots"
+	desc = "A pair of boots issued to NCR officers for winter operations."
 	icon_state = "ncr_officer_boots_w"
 	item_state = "ncr_officer_boots_w"
 

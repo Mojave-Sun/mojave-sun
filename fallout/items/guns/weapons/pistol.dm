@@ -3,6 +3,7 @@
 	name = "police 10mm pistol"
 	desc = "A pre-war 10mm pistol normally seen in the hands of law enforcement."
 	icon_state = "police10mm"
+	item_state = "police10mm"
 	mag_type = /obj/item/ammo_box/magazine/m10mm
 	fire_sound = 'fallout/sound/f13weapons/10mm_fire_02.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
@@ -14,12 +15,14 @@
 	name = "military 10mm pistol"
 	desc = "A bulkier, more advanced 10mm pistol typically used as a pre-war side arm by the US military."
 	icon_state = "mil10mm"
+	item_state = "mil10mm"
 	extra_damage = 25
 
 /obj/item/gun/ballistic/automatic/pistol/fallout/m10mm/chinese
 	name = "Chinese pistol"
 	desc = "A mass produced pre-war Chinese pistol chambered for 10mm rounds."
 	icon_state = "cpistol"
+	item_state = "cpistol"
 	mag_type = /obj/item/ammo_box/magazine/internal/cpistol
 	fire_sound = 'fallout/sound/f13weapons/10mm_fire_02.ogg'
 	extra_damage = 25
@@ -30,6 +33,7 @@
 	name = "v420 Chinese pistol"
 	desc = "A prototype Chinese pistol with a slower fire rate but much higher damage, also sporting some much better looks."
 	icon_state = "420pistol"
+	item_state = "420pistol"
 	extra_damage = 35
 	extra_penetration = 10
 	fire_delay = 5
@@ -38,6 +42,7 @@
 	name = "9mm pistol"
 	desc = "A very common and easy to handle 9mm pistol."
 	icon_state = "9mm"
+	item_state = "9mm"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
@@ -48,6 +53,7 @@
 	name = "Maria"
 	desc = "A custom and improved model of the 9mm pistol with improved rate of fire, damage, and style. Does look a bit like an 18-karat run of bad luck though."
 	icon_state = "maria"
+	item_state = "maria"
 	fire_delay = 3	
 	extra_damage = 25
 	extra_penetration = 10
@@ -56,6 +62,7 @@
 	name = "12.7mm pistol"
 	desc = "A pre-war, heavy duty European pistol chambered in 12.7mm. Might not look like it, but it can do some real damage."
 	icon_state = "m12mm"
+	item_state = "m12mm"
 	mag_type = /obj/item/ammo_box/magazine/m12mm
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
@@ -66,6 +73,7 @@
 	name = "Li'l Devil"
 	desc = "A unique and modified version of the 12.7mm pistol with a higher fire rate, improved damage, and a suppressor attached."
 	icon_state = "devil"
+	item_state = "devil"
 	suppressed = 1
 	fire_delay = 3
 	extra_damage = 35
@@ -84,6 +92,7 @@
 	name = ".45 pistol"
 	desc = "A classic handgun chambered in .45 caliber. What's not to love?"
 	icon_state = "45pistol"
+	item_state = "45pistol"
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m45
 	can_suppress = FALSE
@@ -107,6 +116,7 @@
 	name = ".22 pistol"
 	desc = "An extremely weak but also extremely easy to conceal .22 pistol. This one has an integrated suppressor."
 	icon_state = "22pistol"
+	item_state = "22pistol"
 	mag_type = /obj/item/ammo_box/magazine/m22
 	suppressed = 1
 	w_class = WEIGHT_CLASS_SMALL
