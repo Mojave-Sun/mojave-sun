@@ -75,8 +75,18 @@
 
 /obj/screen/plane_master/lighting/Initialize()
 	. = ..()
-	filters += filter(type="alpha", render_source=EMISSIVE_RENDER_TARGET)
+	filters += filter(type="alpha", render_source=EMISSIVE_RENDER_TARGET, flags=MASK_INVERSE)
 	filters += filter(type="alpha", render_source=EMISSIVE_UNBLOCKABLE_RENDER_TARGET, flags=MASK_INVERSE)
+	// filters += filter(type="alpha", render_source=SUNLIGHTING_RENDER_TARGET, flags=MASK_INVERSE)
+
+//Contains all sunlight objects
+/obj/screen/plane_master/Sunlight
+	name = "lighting plane master"
+	plane = SUNLIGHTING_PLANE
+	blend_mode = BLEND_MULTIPLY
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	render_target = SUNLIGHTING_RENDER_TARGET
+
 
 /**
   * Things placed on this mask the lighting plane. Doesn't render directly.
@@ -132,7 +142,7 @@
 /obj/screen/plane_master/lighting/backdrop(mob/mymob)
 	mymob.overlay_fullscreen("lighting_backdrop_lit", /obj/screen/fullscreen/lighting_backdrop/lit)
 	mymob.overlay_fullscreen("lighting_backdrop_unlit", /obj/screen/fullscreen/lighting_backdrop/unlit)
-	// mymob.overlay_fullscreen("sunlight_backdrop", /obj/screen/fullscreen/lighting_backdrop/Sunlight)
+	mymob.overlay_fullscreen("sunlight_backdrop", /obj/screen/fullscreen/lighting_backdrop/Sunlight)
 
 /obj/screen/plane_master/camera_static
 	name = "camera static plane master"

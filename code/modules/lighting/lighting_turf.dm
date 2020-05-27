@@ -17,6 +17,13 @@
 		L = thing
 		L.vis_update()
 
+		/* update sunlight */
+	var/datum/lighting_corner/C
+	var/atom/movable/sunlight_object/S
+	for(C in corners)
+		for(S in C.globAffect)
+			GLOB.SUNLIGHT_QUEUE_WORK |= S
+
 /turf/proc/lighting_clear_overlay()
 	if (lighting_object)
 		qdel(lighting_object, TRUE)
@@ -35,7 +42,7 @@
 		qdel(lighting_object,force=TRUE) //Shitty fix for lighting objects persisting after death
 
 	var/area/A = loc
-	if (!IS_DYNAMIC_LIGHTING(A) && !light_sources)
+	if (!IS_DYNAMIC_LIGHTING(A) /*&& !light_sources */)
 		return
 
 	if (!lighting_corners_initialised)
@@ -111,7 +118,7 @@
 				lighting_clear_overlay()
 
 /turf/proc/get_corners()
-	if (!IS_DYNAMIC_LIGHTING(src) && !light_sources)
+	if (!IS_DYNAMIC_LIGHTING(src) /*&& !light_sources*/)
 		return null
 	if (!lighting_corners_initialised)
 		generate_missing_corners()
@@ -121,7 +128,7 @@
 	return corners
 
 /turf/proc/generate_missing_corners()
-	if (!IS_DYNAMIC_LIGHTING(src) && !light_sources)
+	if (!IS_DYNAMIC_LIGHTING(src) /*&& !light_sources*/ )
 		return
 	lighting_corners_initialised = TRUE
 	if (!corners)
