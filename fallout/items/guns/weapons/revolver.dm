@@ -32,7 +32,7 @@
 	icon_state = "44magnum"
 	item_state = "44magnum"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
-	fire_sound = 'fallout/sound/f13weapons/44mag.ogg'
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/44/44mag1.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
 	extra_damage = 35
