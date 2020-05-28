@@ -6,7 +6,7 @@
 	item_state = "caravan"
 	force = 20
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/caravan
-	fire_sound = 'fallout/sound/f13weapons/caravan_shotgun.ogg'
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/caravan/caravan.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -17,7 +17,7 @@
 	item_state = "singleshot"
 	force = 15
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/single
-	fire_sound = 'fallout/sound/f13weapons/caravan_shotgun.ogg'
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/caravan/caravan2.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -51,6 +51,7 @@
 	desc = "A slow firing revolver rifle chambered for .44 Magnum rounds."
 	icon_state = "revrifle"
 	item_state = "revrifle"
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/44/44mag5.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
@@ -62,6 +63,7 @@
 	desc = "A classic .357 Magnum revolver, doesn't fire very fast but packs a decent punch."
 	icon_state = "rev357"
 	item_state = "rev357"
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/357/357fire3.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 6
@@ -81,6 +83,7 @@
 	desc = "A modern, heavy duty .357 revolver with much more damage."
 	icon_state = "heavy357"
 	item_state = "heavy357"
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/357/357fire2.ogg'
 	fire_delay = 6
 	extra_damage = 40
 	extra_penetration = 15
@@ -91,7 +94,7 @@
 	icon_state = "rev10mm"
 	item_state = "rev10mm"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev10mm
-	fire_sound = 'fallout/sound/f13weapons/10mm_fire_02.ogg'
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/10mm/10mmfire2.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
 	extra_damage = 25
@@ -103,7 +106,7 @@
 	icon_state = "huntingrev"
 	item_state = "huntingrev"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
-	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/huntingrev/huntingrev5.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 6
 	extra_damage = 45
