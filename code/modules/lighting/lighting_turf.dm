@@ -22,7 +22,7 @@
 	var/atom/movable/sunlight_object/S
 	for(C in corners)
 		for(S in C.globAffect)
-			GLOB.SUNLIGHT_QUEUE_WORK |= S
+			GLOB.SUNLIGHT_QUEUE_WORK += S
 
 /turf/proc/lighting_clear_overlay()
 	if (lighting_object)
