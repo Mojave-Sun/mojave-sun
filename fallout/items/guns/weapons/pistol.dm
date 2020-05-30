@@ -24,7 +24,7 @@
 	icon_state = "cpistol"
 	item_state = "cpistol"
 	mag_type = /obj/item/ammo_box/magazine/internal/cpistol
-	fire_sound = 'fallout/sound/f13weapons/10mm_fire_02.ogg'
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/chinese/chinese1.ogg'
 	extra_damage = 25
 	extra_penetration = 0
 	internal_magazine = TRUE
@@ -44,6 +44,7 @@
 	icon_state = "9mm"
 	item_state = "9mm"
 	mag_type = /obj/item/ammo_box/magazine/m9mm
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/9mm/9mm2.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
 	extra_damage = 20
@@ -64,6 +65,7 @@
 	icon_state = "m12mm"
 	item_state = "m12mm"
 	mag_type = /obj/item/ammo_box/magazine/m12mm
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/12mm/m12mm1.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
 	extra_damage = 35
@@ -75,6 +77,7 @@
 	icon_state = "devil"
 	item_state = "devil"
 	suppressed = 1
+	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
 	fire_delay = 3
 	extra_damage = 35
 	extra_penetration = 20
@@ -95,6 +98,7 @@
 	item_state = "45pistol"
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/m45
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/45/45auto1.ogg'
 	can_suppress = FALSE
 	fire_delay = 4
 	extra_damage = 30
@@ -106,6 +110,7 @@
 	icon_state = "deagle"
 	item_state = "deagle"
 	mag_type = /obj/item/ammo_box/magazine/deagle
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/44/44mag1.ogg'
 	can_suppress = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
 	extra_damage = 45

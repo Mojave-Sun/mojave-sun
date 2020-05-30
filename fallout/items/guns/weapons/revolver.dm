@@ -32,7 +32,7 @@
 	icon_state = "44magnum"
 	item_state = "44magnum"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
-	fire_sound = 'fallout/sound/f13weapons/gunsounds/44/44mag1.ogg'
+	fire_sound = 'fallout/sound/f13weapons/44mag.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
 	extra_damage = 35
@@ -51,7 +51,6 @@
 	desc = "A slow firing revolver rifle chambered for .44 Magnum rounds."
 	icon_state = "revrifle"
 	item_state = "revrifle"
-	fire_sound = 'fallout/sound/f13weapons/gunsounds/44/44mag5.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
@@ -83,7 +82,7 @@
 	desc = "A modern, heavy duty .357 revolver with much more damage."
 	icon_state = "heavy357"
 	item_state = "heavy357"
-	fire_sound = 'fallout/sound/f13weapons/gunsounds/357/357fire2.ogg'
+	fire_sound = 'fallout/sound/f13weapons/magnum_fire.ogg'
 	fire_delay = 6
 	extra_damage = 40
 	extra_penetration = 15
@@ -125,7 +124,7 @@
 	icon_state = "38rev"
 	item_state = "38rev"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
-	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
+	fire_sound = 'fallout/sound/f13weapons/policepistol.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	fire_delay = 5
 	extra_damage = 25
@@ -136,7 +135,7 @@
 	icon_state = "556rev"
 	item_state = "556rev"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
-	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
+	fire_sound = 'fallout/sound/f13weapons/that_gun.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
 	extra_damage = 30

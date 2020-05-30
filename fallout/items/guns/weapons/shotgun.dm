@@ -5,6 +5,7 @@
 	icon_state = "levershot"
 	item_state = "levershot"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lever
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/levershot/levershot2.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	force = 25
@@ -16,6 +17,7 @@
 	icon_state = "huntingshot"
 	item_state = "huntingshot"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/huntingshot
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/huntingshot/huntingshot2.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	force = 30
@@ -29,6 +31,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube44
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	fire_sound = 'fallout/sound/f13weapons/trailfire.ogg'
 	fire_delay = 5
 	extra_damage = 40
 	extra_penetration = 10
@@ -41,6 +44,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube357
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/repeater/repeater1.ogg'
 	fire_delay = 5
 	extra_damage = 35
 	extra_penetration = 10
@@ -53,6 +57,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube4570
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	fire_sound = 'fallout/sound/f13weapons/brushfire.ogg'
 	fire_delay = 5
 	extra_damage = 55
 	extra_penetration = 10
@@ -65,6 +70,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/battler
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	fire_sound = 'fallout/sound/f13weapons/battlerifle.ogg'
 	fire_delay = 5
 	extra_damage = 40
 	extra_penetration = 15
@@ -75,6 +81,7 @@
 	icon_state = "sks"
 	item_state = "sks"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/sks
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/sks/sks1.ogg'
 	extra_damage = 30
 	extra_penetration = 10
 

@@ -29,6 +29,7 @@
 	item_state = "varmint"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	fire_sound = 'fallout/sound/f13weapons/varmint_rifle.ogg'
 	fire_delay = 6
 	extra_damage = 30
 	extra_penetration = 5
@@ -41,6 +42,7 @@
 	item_state = "ratslayer"
 	extra_damage = 35
 	extra_penetration = 10
+	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
@@ -52,7 +54,7 @@
 	icon_state = "amr"
 	item_state = "amr"
 	mag_type = /obj/item/ammo_box/magazine/amr
-	fire_sound = 'fallout/sound/f13weapons/hunting_rifle.ogg'
+	fire_sound = 'fallout/sound/f13weapons/amrfire.ogg'
 	fire_delay = 8
 	extra_damage = 60
 	
