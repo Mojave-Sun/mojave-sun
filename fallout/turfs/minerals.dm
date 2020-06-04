@@ -1,6 +1,6 @@
 /turf/closed/mineral/random/f13
-	icon = 'fallout/icons/turf/mining.dmi'
-	icon_state = "rock_lowchance"
+	icon = 'fallout/icons/turf/walls/3_4th_walls/mineral.dmi'
+	icon_state = "mineral"
 	baseturfs = /turf/open/floor/plating/ground/mountain
 	environment_type = "waste"
 	mineralSpawnChanceList = list(/obj/item/stack/ore/uranium = 5, /obj/item/stack/ore/diamond = 1, /obj/item/stack/ore/gold = 10,
