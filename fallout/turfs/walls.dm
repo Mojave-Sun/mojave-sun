@@ -47,7 +47,7 @@
 /turf/closed/wall/f13/wood
 	name = "wood wall"
 	desc = "A rotting hunk of wood."
-	icon = 'fallout/icons/turf/walls/wood_wall.dmi'
+	icon = 'fallout/icons/turf/walls/wood.dmi'
 	icon_state = "wood0"
 
 /turf/closed/wall/f13/wood/painted
