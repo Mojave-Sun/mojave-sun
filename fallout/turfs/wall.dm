@@ -47,3 +47,15 @@
 	desc = ""
 	icon = 'fallout/icons/turf/walls/reinforced_metal.dmi'
 	icon_state = "reinforced_metal0"
+
+/turf/closed/wall/r_wall/f13/metal/rust
+	name = "rusted reinforced metal wall"
+	desc = ""
+	icon = 'fallout/icons/turf/walls/reinforced_rust.dmi'
+	icon_state = "reinforced_rust0"
+
+/turf/closed/wall/r_wall/f13/bunker
+	name = "bunker wall"
+	desc = ""
+	icon = 'fallout/icons/turf/walls/bunker.dmi'
+	icon_state = "bunker0"
