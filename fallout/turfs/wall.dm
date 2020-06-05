@@ -66,6 +66,7 @@
 	desc = ""
 	icon = 'fallout/icons/turf/walls/reinforced_metal.dmi'
 	icon_state = "reinforced_metal0"
+	icon_type_smooth = "reinforced_metal"
 	canSmoothWith = list(/obj/structure/table/low_wall/metal, /turf/closed/wall/f13/metal,
 	/obj/structure/table/low_wall/metal/rust, /turf/closed/wall/f13/metal/rust,
 	/obj/structure/table/low_wall/reinforced/bunker, /turf/closed/wall/r_wall/f13/bunker,
