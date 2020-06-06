@@ -3,10 +3,10 @@
 	name = "caravan shotgun"
 	desc = "A well worn but reliable double barrel shotgun."
 	icon_state = "caravan"
-	item_state = "dshotgun1"
+	item_state = "caravan"
 	force = 20
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/caravan
-	fire_sound = 'fallout/sound/f13weapons/caravan_shotgun.ogg'
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/caravan/caravan.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -17,7 +17,7 @@
 	item_state = "singleshot"
 	force = 15
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/single
-	fire_sound = 'fallout/sound/f13weapons/caravan_shotgun.ogg'
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/caravan/caravan2.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
@@ -30,7 +30,7 @@
 	name = ".44 Magnum revolver"
 	desc = "A double action revolver chambered for .44 Magnum rounds. Decently fast and damaging at the same time."
 	icon_state = "44magnum"
-	item_state = "m29"
+	item_state = "44magnum"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	fire_sound = 'fallout/sound/f13weapons/44mag.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
@@ -42,7 +42,7 @@
 	name = "Mysterious Magnum"
 	desc = "A unique .44 Magnum with a silver finish for style, and a higher rate of fire and damage for killing. Something sure is mysterious about this gun though."
 	icon_state = "mysterious"
-	item_state = "m29"
+	item_state = "mysterious"
 	fire_delay = 4
 	extra_damage = 40
 
@@ -50,7 +50,7 @@
 	name = ".44 revolver rifle"
 	desc = "A slow firing revolver rifle chambered for .44 Magnum rounds."
 	icon_state = "revrifle"
-	item_state = "singleshot"
+	item_state = "revrifle"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
@@ -61,7 +61,8 @@
 	name = ".357 Magnum revolver"
 	desc = "A classic .357 Magnum revolver, doesn't fire very fast but packs a decent punch."
 	icon_state = "rev357"
-	item_state = "colt357"
+	item_state = "rev357"
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/357/357fire3.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 6
@@ -72,7 +73,7 @@
 	name = "Lucky"
 	desc = "A unique .357 Magnum with fancy engravings and a nice finish, fires faster and hits harder than it's lamer brother too."
 	icon_state = "lucky"
-	item_state = "colt357"
+	item_state = "lucky"
 	fire_delay = 4
 	extra_damage = 35
 
@@ -80,7 +81,8 @@
 	name = "heavy .357 revolver"
 	desc = "A modern, heavy duty .357 revolver with much more damage."
 	icon_state = "heavy357"
-	item_state = "colt357"
+	item_state = "heavy357"
+	fire_sound = 'fallout/sound/f13weapons/magnum_fire.ogg'
 	fire_delay = 6
 	extra_damage = 40
 	extra_penetration = 15
@@ -89,8 +91,9 @@
 	name = "10mm revolver"
 	desc = "A bulky revolver chambered for 10mm rounds with a five round capacity."
 	icon_state = "rev10mm"
+	item_state = "rev10mm"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev10mm
-	fire_sound = 'fallout/sound/f13weapons/10mm_fire_02.ogg'
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/10mm/10mmfire2.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
 	extra_damage = 25
@@ -100,9 +103,9 @@
 	name = "hunting revolver"
 	desc = "A double action revolver chambered for heavy .45-70 rounds and only carrying five at a time. Make every shot count."
 	icon_state = "huntingrev"
-	item_state = "sequoia"
+	item_state = "huntingrev"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
-	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
+	fire_sound = 'fallout/sound/f13weapons/gunsounds/huntingrev/huntingrev5.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 6
 	extra_damage = 45
@@ -119,9 +122,9 @@
 	name = ".38 revolver"
 	desc = "A lightweight .38 revolver that can be easily stored and hidden, great in tight situations."
 	icon_state = "38rev"
-	item_state = "sequoia"
+	item_state = "38rev"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
-	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
+	fire_sound = 'fallout/sound/f13weapons/policepistol.ogg'
 	w_class = WEIGHT_CLASS_SMALL
 	fire_delay = 5
 	extra_damage = 25
@@ -130,9 +133,9 @@
 	name = "5.56 revolver"
 	desc = "A modern and fast firing revolver firing 5.56 rifle rounds."
 	icon_state = "556rev"
-	item_state = "sequoia"
+	item_state = "556rev"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
-	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
+	fire_sound = 'fallout/sound/f13weapons/that_gun.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
 	extra_damage = 30

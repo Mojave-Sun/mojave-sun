@@ -14,7 +14,7 @@
 	item_state = "ncr_uniform_w"
 
 /obj/item/clothing/under/fallout/ncr/fatigues/officer
-	name = "NCR officer fatigues"
+	name = "NCR winter officer fatigues"
 	desc = "An NCR uniform normally worn by NCR officers, intended for winter operations."
 	icon_state = "ncr_o_w"
 	item_state = "ncr_o_w"
