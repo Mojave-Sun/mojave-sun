@@ -63,6 +63,18 @@
 	internal_magazine = FALSE
 	tac_reloads = TRUE
 
+//Loaders/Ammo boxes
+/obj/item/ammo_box/fallout
+	name = "generic fallout ammo box"
+	desc = "complain when seeing this"
+	icon = 'fallout/icons/objects/ammo.dmi'
+
+//Magazines
+/obj/item/ammo_box/magazine/fallout
+	name = "generic fallout magazine"
+	desc = "complain when seeing this"
+	icon = 'fallout/icons/objects/ammo.dmi'
+
 /*
 /obj/item/gun/ballistic/automatic/fallout/minigun
 	name = "M134 Minigun"

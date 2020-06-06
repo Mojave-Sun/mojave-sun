@@ -299,22 +299,22 @@
 				)
 	var/loot2 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/m9mm,
-				/obj/item/ammo_box/magazine/m9mm,
-				/obj/item/ammo_box/magazine/m9mm
+				/obj/item/ammo_box/magazine/fallout/m9mm,
+				/obj/item/ammo_box/magazine/fallout/m9mm
 				)
 	var/loot3 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/m10mm/chinese,
-				/obj/item/ammo_box/cpistol,
-				/obj/item/ammo_box/cpistol
+				/obj/item/ammo_box/fallout/cpistol,
+				/obj/item/ammo_box/fallout/cpistol
 				)
 	var/loot4 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/m10mm,
-				/obj/item/ammo_box/magazine/m10mm,
-				/obj/item/ammo_box/magazine/m10mm
+				/obj/item/ammo_box/magazine/fallout/m10mm,
+				/obj/item/ammo_box/magazine/fallout/m10mm
 				)
 	var/loot5 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/pistol22,
-				/obj/item/ammo_box/magazine/m22,
+				/obj/item/ammo_box/magazine/fallout/m22,
 				""
 				)
 	var/loot6 = list(
@@ -357,13 +357,13 @@
 	lootcount = 3
 	var/loot1 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/m10mm/military,
-				/obj/item/ammo_box/magazine/m10mm,
-				/obj/item/ammo_box/magazine/m10mm
+				/obj/item/ammo_box/magazine/fallout/m10mm,
+				/obj/item/ammo_box/magazine/fallout/m10mm
 				)
 	var/loot2 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/pistol45,
-				/obj/item/ammo_box/magazine/m45,
-				/obj/item/ammo_box/magazine/m45
+				/obj/item/ammo_box/magazine/fallout/m45,
+				/obj/item/ammo_box/magazine/fallout/m45
 				)
 	var/loot3 = list(
 				/obj/item/gun/ballistic/automatic/fallout/marksman/service,
@@ -478,13 +478,13 @@
 				)
 	var/loot2 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/deagle,
-				/obj/item/ammo_box/magazine/deagle,
-				/obj/item/ammo_box/magazine/deagle
+				/obj/item/ammo_box/magazine/fallout/deagle,
+				/obj/item/ammo_box/magazine/fallout/deagle
 				)
 	var/loot3 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/m12mm,
-				/obj/item/ammo_box/magazine/m12mm,
-				/obj/item/ammo_box/magazine/m12mm
+				/obj/item/ammo_box/magazine/fallout/m12mm,
+				/obj/item/ammo_box/magazine/fallout/m12mm
 				)
 	var/loot4 = list(
 				/obj/item/gun/ballistic/automatic/fallout/assaultrifle/chinese,
@@ -541,8 +541,8 @@
 	lootcount = 3
 	var/loot1 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/m9mm/maria,
-				/obj/item/ammo_box/magazine/m9mm,
-				/obj/item/ammo_box/magazine/m9mm
+				/obj/item/ammo_box/magazine/fallout/m9mm,
+				/obj/item/ammo_box/magazine/fallout/m9mm
 				)
 	var/loot2 = list(
 				/obj/item/gun/ballistic/rifle/fallout/varmint/ratslayer,
@@ -551,8 +551,8 @@
 				)
 	var/loot3 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/m12mm/devil,
-				/obj/item/ammo_box/magazine/m12mm,
-				/obj/item/ammo_box/magazine/m12mm
+				/obj/item/ammo_box/magazine/fallout/m12mm,
+				/obj/item/ammo_box/magazine/fallout/m12mm
 				)
 	var/loot4 = list(
 				/obj/item/gun/ballistic/revolver/fallout/huntingrev/sequoia,
@@ -581,8 +581,8 @@
 				)
 	var/loot9 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/m10mm/chinese/v420,
-				/obj/item/ammo_box/cpistol,
-				/obj/item/ammo_box/cpistol
+				/obj/item/ammo_box/fallout/cpistol,
+				/obj/item/ammo_box/fallout/cpistol
 				)
 
 /obj/effect/spawner/lootdrop/fallout/gun/unique/Initialize()
