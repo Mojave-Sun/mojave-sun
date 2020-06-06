@@ -87,6 +87,17 @@
 	extra_damage = 40
 	extra_penetration = 15
 
+/obj/item/gun/ballistic/revolver/fallout/rev357/police
+	name = "police pistol"
+	desc = "A lightweight .357 revolver that can be easily stored and hidden, commonly used by pre-war police forces."
+	icon_state = "policerev"
+	item_state = "policerev"
+	fire_sound = 'fallout/sound/f13weapons/policepistol.ogg'
+	w_class = WEIGHT_CLASS_SMALL
+	fire_delay = 5
+	extra_damage = 25
+	extra_penetration = 10
+
 /obj/item/gun/ballistic/revolver/fallout/rev10mm
 	name = "10mm revolver"
 	desc = "A bulky revolver chambered for 10mm rounds with a five round capacity."
@@ -117,17 +128,6 @@
 	item_state = "sequoia"
 	extra_damage = 50
 	extra_penetration = 5
-
-/obj/item/gun/ballistic/revolver/fallout/rev38
-	name = ".38 revolver"
-	desc = "A lightweight .38 revolver that can be easily stored and hidden, great in tight situations."
-	icon_state = "38rev"
-	item_state = "38rev"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
-	fire_sound = 'fallout/sound/f13weapons/policepistol.ogg'
-	w_class = WEIGHT_CLASS_SMALL
-	fire_delay = 5
-	extra_damage = 25
 
 /obj/item/gun/ballistic/revolver/fallout/rev556
 	name = "5.56 revolver"
@@ -172,7 +172,7 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev357
 	name = ".357 magnum cylinder"
-	ammo_type = /obj/item/ammo_casing/fallout/a357/junk
+	ammo_type = /obj/item/ammo_casing/fallout/a357
 	caliber = "357"
 	max_ammo = 6
 
@@ -190,13 +190,6 @@
 	caliber = "4570"
 	max_ammo = 5
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev38
-	name = ".38 revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/fallout/c38/junk
-	icon = 'fallout/icons/objects/ammo.dmi'
-	caliber = "38"
-	max_ammo = 6
-
 /obj/item/ammo_box/magazine/internal/cylinder/rev556
 	name = "5.56 revolver cylinder"
 	icon = 'fallout/icons/objects/ammo.dmi'
@@ -212,50 +205,37 @@
 	max_ammo = 6
 
 //Loaders
-/obj/item/ammo_box/rev4570
+/obj/item/ammo_box/fallout/rev4570
 	name = ".45-70 speed loader"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "10mmadv"
+	icon_state = "rev4570"
 	ammo_type = /obj/item/ammo_casing/fallout/c4570
 	caliber = "4570"
 	max_ammo = 5
-	multiple_sprites = 2
 
-/obj/item/ammo_box/rev44
+/obj/item/ammo_box/fallout/rev44
 	name = ".44 Magnum speed loader"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "10mmadv"
+	icon_state = "rev44"
 	ammo_type = /obj/item/ammo_casing/fallout/m44
 	caliber = "44"
 	max_ammo = 6
-	multiple_sprites = 2
 
-/obj/item/ammo_box/rev357
+/obj/item/ammo_box/fallout/rev357
 	name = ".357 Magnum speed loader"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "10mmadv"
+	icon_state = "rev357"
 	ammo_type = /obj/item/ammo_casing/fallout/a357
 	caliber = "357"
 	max_ammo = 6
-	multiple_sprites = 2
 
-/obj/item/ammo_box/rev38
-	name = ".38 Magnum speed loader"
-	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "10mmadv"
-	ammo_type = /obj/item/ammo_casing/fallout/c38/junk
-	caliber = "38"
-	max_ammo = 6
-	multiple_sprites = 2
-
-/obj/item/ammo_box/rev556
+/obj/item/ammo_box/fallout/rev556
 	name = "5.56 speed loader"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "10mmadv"
+	icon_state = "rev556"
 	ammo_type = /obj/item/ammo_casing/fallout/a556
 	caliber = "a556"
 	max_ammo = 5
-	multiple_sprites = 2
 
 /obj/item/ammo_box/rev45
 	name = ".45 speed loader"
@@ -264,13 +244,11 @@
 	ammo_type = /obj/item/ammo_casing/fallout/c45/junk
 	caliber = ".45"
 	max_ammo = 6
-	multiple_sprites = 2
 
-/obj/item/ammo_box/rev10mm
+/obj/item/ammo_box/fallout/rev10mm
 	name = "10mm speed loader"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "10mmadv"
+	icon_state = "rev10mm"
 	ammo_type = /obj/item/ammo_casing/fallout/c10mm/junk
 	caliber = "10mm"
 	max_ammo = 5
-	multiple_sprites = 2

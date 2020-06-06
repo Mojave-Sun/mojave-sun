@@ -144,7 +144,7 @@
 	ammo_type = /obj/item/ammo_casing/fallout/m44
 	caliber = "44"
 	max_ammo = 8
-	multiple_sprites = 1
+	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/fallout/m10mm
 	name = "10mm pistol magazine"
@@ -162,7 +162,6 @@
 	ammo_type = /obj/item/ammo_casing/fallout/c9mm/junk
 	caliber = "9mm"
 	max_ammo = 13
-	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/h38
 	name = "handmade magazine (.38)"
@@ -180,7 +179,6 @@
 	ammo_type = /obj/item/ammo_casing/fallout/c22/junk
 	caliber = ".22"
 	max_ammo = 16
-	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/fallout/m12mm
 	name = "12.7mm pistol magazine"
@@ -189,7 +187,6 @@
 	ammo_type = /obj/item/ammo_casing/fallout/m12mm
 	caliber = "12.7mm"
 	max_ammo = 7
-	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/internal/cpistol
 	name = "Chinese pistol internal magazine"
@@ -206,4 +203,3 @@
 	ammo_type = /obj/item/ammo_casing/fallout/c10mm/junk
 	caliber = "10mm"
 	max_ammo = 10
-	multiple_sprites = 2

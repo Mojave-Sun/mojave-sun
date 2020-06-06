@@ -216,7 +216,7 @@
 	fire_delay = 6
 	extra_damage = 45
 	extra_penetration = 10
-	mag_type = /obj/item/ammo_box/magazine/r308
+	mag_type = /obj/item/ammo_box/magazine/fallout/r308
 
 //Magazines
 /obj/item/ammo_box/magazine/r20

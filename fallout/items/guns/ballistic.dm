@@ -68,12 +68,14 @@
 	name = "generic fallout ammo box"
 	desc = "complain when seeing this"
 	icon = 'fallout/icons/objects/ammo.dmi'
+	multiple_sprites = AMMO_BOX_PER_BULLET
 
 //Magazines
 /obj/item/ammo_box/magazine/fallout
 	name = "generic fallout magazine"
 	desc = "complain when seeing this"
 	icon = 'fallout/icons/objects/ammo.dmi'
+	multiple_sprites = AMMO_BOX_PER_BULLET
 
 /*
 /obj/item/gun/ballistic/automatic/fallout/minigun
