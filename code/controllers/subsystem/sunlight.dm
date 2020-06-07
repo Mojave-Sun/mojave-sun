@@ -173,7 +173,8 @@ datum/controller/subsystem/sunlight/proc/fullPlonk()
 	/* this runs uber slow when we do a unique |= add in the sunlight calc loop, so do it here */
 	// GLOB.SUNLIGHT_QUEUE_CORNER = uniqueList(GLOB.SUNLIGHT_QUEUE_CORNER)
 	for (i in 1 to GLOB.SUNLIGHT_QUEUE_CORNER.len)
-		var/atom/movable/sunlight_object/U = GLOB.SUNLIGHT_QUEUE_CORNER[i].sunlight_object
+		var/turf/T = GLOB.SUNLIGHT_QUEUE_CORNER[i]
+		var/atom/movable/sunlight_object/U = T.sunlight_object
 
 		if(!U || U.state != SUNLIGHT_INDOOR)
 			continue
