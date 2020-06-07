@@ -98,19 +98,18 @@
 	extra_damage = 25
 	extra_penetration = 10
 
-
 /obj/item/gun/ballistic/revolver/fallout/rev357/handmade
 	name = "handmade revolver"
 	desc = "A revolver made from scratch that fires .357 magnum rounds at a slow rate of fire and without as much penetration."
-	icon_state = "rev357"
-	item_state = "rev357"
+	icon_state = "hrev"
+	item_state = "hrev"
 	extra_penetration = 0
 
 /obj/item/gun/ballistic/revolver/fallout/rev357/handmade/rifle
 	name = "handmade revolver rifle"
-	desc = "A handmade rifle with a revolver cylinder that fires .357 magnum rounds. Not too slow and with decent damage."
-	icon_state = "revrifle"
-	item_state = "revrifle"
+	desc = "A handmade rifle with a revolver cylinder that fires .357 magnum rounds. Not too slow, decent damage, and with a handmade sight attached."
+	icon_state = "hrifle"
+	item_state = "hrifle"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 5

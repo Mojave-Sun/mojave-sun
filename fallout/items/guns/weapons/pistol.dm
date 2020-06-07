@@ -62,8 +62,8 @@
 /obj/item/gun/ballistic/automatic/pistol/fallout/m9mm/handmade
 	name = "handmade pistol"
 	desc = "A crudely made pistol chambered for 9mm rounds. Fires more slowly than it's manufactured brother."
-	icon_state = "9mm"
-	item_state = "9mm"
+	icon_state = "hpistol"
+	item_state = "hpistol"
 	fire_delay = 5
 
 /obj/item/gun/ballistic/automatic/pistol/fallout/m12mm

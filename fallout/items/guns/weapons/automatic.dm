@@ -64,8 +64,8 @@
 /obj/item/gun/ballistic/automatic/fallout/smg9mm/handmade
 	name = "handmade submachine gun"
 	desc = "A submachine gun made from scratch that fires from a standard 9mm SMG magazine. It's poor design makes it rather hard to control."
-	icon_state = "smg38"
-	item_state = "tommygun"
+	icon_state = "hsmg"
+	item_state = "hsmg"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	spread = 14
