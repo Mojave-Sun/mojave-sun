@@ -7,22 +7,22 @@
 /datum/time_of_day/day
 	name = "Day"
 	color = "#FFFFFF"
-	duration = 90
+	duration = 9000
 
 /datum/time_of_day/morning
 	name = "Morning"
 	color = "#808599"
-	duration = 40
+	duration = 4500
 
 /datum/time_of_day/evening
 	name = "Evening"
 	color = "#FFA891"
-	duration = 40
+	duration = 4500
 
 /datum/time_of_day/night
 	name = "Night"
 	color = "#050d29"
-	duration = 90
+	duration = 9000
 
 #define STEP_MORNING 0
 #define STEP_DAY 1
@@ -47,11 +47,10 @@ GLOBAL_LIST_EMPTY(sunlight_objects)
 
 SUBSYSTEM_DEF(sunlight)
 	name = "sunlight"
-	wait = 1
+	wait = LIGHTING_INTERVAL
 	flags = SS_TICKER
 	init_order = INIT_ORDER_SUNLIGHT
 
-	// var/screenColour = COLOR_ASSEMBLY_BEIGE //rando spin
 
 	var/list/obj/screen/fullscreen/lighting_backdrop/Sunlight/sunlighting_planes = list()
 
