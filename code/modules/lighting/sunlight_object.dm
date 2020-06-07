@@ -52,8 +52,7 @@ Sunlight System
 	var/state 					 = SUNLIGHT_OUTDOOR
 	var/turf/roofTurf
 	var/turf/source_turf
-	// var/list/datum/lighting_corner/affectingCorners
-	var/list/turf/affectingTurfs
+	var/list/datum/lighting_corner/affectingCorners
 
 
 /atom/movable/sunlight_object/Destroy(var/force)
@@ -112,11 +111,10 @@ Sunlight System
 	return roofType
 
 /atom/movable/sunlight_object/proc/DisableSunlight()
-	for(var/turf/T in affectingTurfs)
-		LAZYREMOVE(T.globAffect, src)
-		for(var/datum/lighting_corner/C in T.get_corners())
-			C.getSunFalloff()
-			GLOB.SUNLIGHT_QUEUE_CORNER += C.masters
+	for(var/datum/lighting_corner/C in affectingCorners)
+		LAZYREMOVE(C.globAffect, src)
+		C.getSunFalloff()
+		GLOB.SUNLIGHT_QUEUE_CORNER += C.masters
 
 /atom/movable/sunlight_object/proc/ProcessState()
 	switch(state)
@@ -174,43 +172,42 @@ Sunlight System
 					fa, fa, fa,  00 ,
 					00, 00, 00,  01 )
 
-
+#define hardSun 0.5 /* our hyperboloidy modifyer funky times -  */
 /* calculate the indoor corners we are affecting */
-#define SUN_FALLOFF(C, T) (1 - CLAMP01(sqrt((C.x - T.x) ** 2 + (C.y - T.y) ** 2) / max(1, GLOB.GLOBAL_LIGHT_RANGE)))
+#define SUN_FALLOFF(C, T) (1 - CLAMP01(sqrt((C.x - T.x) ** 2 + (C.y - T.y) ** 2 - hardSun) / max(1, GLOB.GLOBAL_LIGHT_RANGE)))
+
+
 /atom/movable/sunlight_object/proc/CalcSunlightSpread(debug = FALSE)
 
-	// var/list/datum/lighting_corner/corners = list()
 	var/list/turf/turfs                    = list()
-	var/thing
 	var/datum/lighting_corner/C
 	var/turf/T
 	var/list/tempMasterList = list() /* to mimimize double ups */
+	var/list/corners  = list() /* corners we are currently affecting */
 
 	for(T in view(CEILING(GLOB.GLOBAL_LIGHT_RANGE, 1), source_turf))
+		for(C in T.get_corners())
+			corners |= C
+			/* temp master? */
 		turfs += T
 
 	/* fix up the lists */
 	/* add ourselves and our distance to the corner */
-	LAZYINITLIST(affectingTurfs)
-	var/list/L = turfs - affectingTurfs
-	affectingTurfs += L
-	for (thing in L)
-		T = thing
-		LAZYSET(T.globAffect, src, SUN_FALLOFF(T,source_turf))
-		/* check if we need to update child corners */
-		for(C in T.get_corners())
-			if(T.globAffect[src] > C.sunFalloff) /* if are closer than current dist, update the corner */
-				C.sunFalloff = T.globAffect[src]
-				tempMasterList |= C.masters
+	LAZYINITLIST(affectingCorners)
+	var/list/L = corners - affectingCorners
+	affectingCorners += L
+	for (C in L)
+		LAZYSET(C.globAffect, src, SUN_FALLOFF(C,source_turf))
+		if(C.globAffect[src] > C.sunFalloff) /* if are closer than current dist, update the corner */
+			C.sunFalloff = C.globAffect[src]
+			tempMasterList |= C.masters
 
-	L = affectingTurfs - turfs // Now-gone corners, remove us from the affecting.
-	affectingTurfs -= L
-	for (thing in L)
-		T = thing
-		LAZYREMOVE(T.globAffect, src)
-		for(C in T.get_corners())
-			C.getSunFalloff()
-			tempMasterList |= C.masters /* update the dudes we just removed  */
+	L = affectingCorners - corners // Now-gone corners, remove us from the affecting.
+	affectingCorners -= L
+	for (C in L)
+		LAZYREMOVE(C.globAffect, src)
+		C.getSunFalloff()
+		tempMasterList |= C.masters /* update the dudes we just removed  */
 
 	GLOB.SUNLIGHT_QUEUE_CORNER += tempMasterList /* update the boys */
 
@@ -222,7 +219,6 @@ Sunlight System
 
 /* turf fuckery */
 /turf/var/tmp/atom/movable/sunlight_object/sunlight_object /* a turf's sunlight overlay */
-/turf/var/list/globAffect = list() /* list of sunlight objects affecting this turfs */
 /turf/var/turf/roofType /* our roof turf - may be a path for top z level, or a ref to the turf above*/
 
 /* moved this out of reconsider lights so we can call it in multiz refresh  */
@@ -237,11 +233,15 @@ Sunlight System
 	/* update sunlight */
 	if(sunlight_object)
 		GLOB.SUNLIGHT_QUEUE_WORK += sunlight_object
+
+	var/datum/lighting_corner/C
 	var/atom/movable/sunlight_object/S
-	for(S in globAffect)
-		GLOB.SUNLIGHT_QUEUE_WORK += S
+	for(C in corners)
+		for(S in C.globAffect)
+			GLOB.SUNLIGHT_QUEUE_WORK += S
 
 /* corner fuckery */
+/datum/lighting_corner/var/list/globAffect = list() /* list of sunlight objects affecting this corner */
 /datum/lighting_corner/var/sunFalloff = 0 /* smallest distance to sunlight turf, for sunlight falloff */
 /* loop through our masters and find our strongest sunlight value */
 /datum/lighting_corner/proc/getSunFalloff()
@@ -249,8 +249,8 @@ Sunlight System
 
 	for(var/turf/T in masters)
 		var/atom/movable/sunlight_object/S
-		for(S in T.globAffect)
-			sunFalloff = sunFalloff < T.globAffect[S] ? T.globAffect[S] : sunFalloff
+		for(S in globAffect)
+			sunFalloff = sunFalloff < globAffect[S] ? globAffect[S] : sunFalloff
 
 
 
@@ -293,3 +293,4 @@ Sunlight System
 
 
 #undef SUN_FALLOFF
+#undef hardSun
