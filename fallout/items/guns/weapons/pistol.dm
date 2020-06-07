@@ -59,6 +59,13 @@
 	extra_damage = 25
 	extra_penetration = 10
 
+/obj/item/gun/ballistic/automatic/pistol/fallout/m9mm/handmade
+	name = "handmade pistol"
+	desc = "A crudely made pistol chambered for 9mm rounds. Fires more slowly than it's manufactured brother."
+	icon_state = "9mm"
+	item_state = "9mm"
+	fire_delay = 5
+
 /obj/item/gun/ballistic/automatic/pistol/fallout/m12mm
 	name = "12.7mm pistol"
 	desc = "A pre-war, heavy duty European pistol chambered in 12.7mm. Might not look like it, but it can do some real damage."
@@ -81,15 +88,6 @@
 	fire_delay = 3
 	extra_damage = 35
 	extra_penetration = 20
-	
-/obj/item/gun/ballistic/automatic/pistol/fallout/handmadepistol
-	name = "handmade pistol"
-	desc = "A crude and makeshift pistol chambered in .38, works in a pinch."
-	icon_state = "hpistol"
-	mag_type = /obj/item/ammo_box/magazine/h38
-	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 5
-	extra_damage = 20
 
 /obj/item/gun/ballistic/automatic/pistol/fallout/pistol45
 	name = ".45 pistol"
@@ -134,7 +132,7 @@
 /obj/item/ammo_box/magazine/fallout/m45
 	name = ".45 pistol magazine"
 	icon_state = "45"
-	ammo_type = /obj/item/ammo_casing/fallout/c45/junk
+	ammo_type = /obj/item/ammo_casing/fallout/c45
 	caliber = ".45"
 	max_ammo = 7
 
@@ -150,7 +148,7 @@
 	name = "10mm pistol magazine"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "10mm"
-	ammo_type = /obj/item/ammo_casing/fallout/c10mm/junk
+	ammo_type = /obj/item/ammo_casing/fallout/c10mm
 	caliber = "10mm"
 	max_ammo = 12
 	multiple_sprites = 2
@@ -159,24 +157,15 @@
 	name = "9mm Pistol Magazine"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "9mm"
-	ammo_type = /obj/item/ammo_casing/fallout/c9mm/junk
+	ammo_type = /obj/item/ammo_casing/fallout/c9mm
 	caliber = "9mm"
 	max_ammo = 13
-
-/obj/item/ammo_box/magazine/h38
-	name = "handmade magazine (.38)"
-	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "9mmp"
-	ammo_type = /obj/item/ammo_casing/fallout/c38/junk
-	caliber = "38"
-	max_ammo = 12
-	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/fallout/m22
 	name = ".22 pistol magazine"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "22"
-	ammo_type = /obj/item/ammo_casing/fallout/c22/junk
+	ammo_type = /obj/item/ammo_casing/fallout/c22
 	caliber = ".22"
 	max_ammo = 16
 
@@ -190,7 +179,7 @@
 
 /obj/item/ammo_box/magazine/internal/cpistol
 	name = "Chinese pistol internal magazine"
-	ammo_type = /obj/item/ammo_casing/fallout/c10mm/junk
+	ammo_type = /obj/item/ammo_casing/fallout/c10mm
 	caliber = "10mm"
 	max_ammo = 10
 	multiple_sprites = 2
@@ -200,6 +189,6 @@
 	name = "Chinese pistol stripper clip (10mm)"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "cpistol"
-	ammo_type = /obj/item/ammo_casing/fallout/c10mm/junk
+	ammo_type = /obj/item/ammo_casing/fallout/c10mm
 	caliber = "10mm"
 	max_ammo = 10

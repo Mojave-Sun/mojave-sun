@@ -98,6 +98,25 @@
 	extra_damage = 25
 	extra_penetration = 10
 
+
+/obj/item/gun/ballistic/revolver/fallout/rev357/handmade
+	name = "handmade revolver"
+	desc = "A revolver made from scratch that fires .357 magnum rounds at a slow rate of fire and without as much penetration."
+	icon_state = "rev357"
+	item_state = "rev357"
+	extra_penetration = 0
+
+/obj/item/gun/ballistic/revolver/fallout/rev357/handmade/rifle
+	name = "handmade revolver rifle"
+	desc = "A handmade rifle with a revolver cylinder that fires .357 magnum rounds. Not too slow and with decent damage."
+	icon_state = "revrifle"
+	item_state = "revrifle"
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	fire_delay = 5
+	extra_damage = 25
+	extra_penetration = 10
+
 /obj/item/gun/ballistic/revolver/fallout/rev10mm
 	name = "10mm revolver"
 	desc = "A bulky revolver chambered for 10mm rounds with a five round capacity."
@@ -141,17 +160,6 @@
 	extra_damage = 30
 	extra_penetration = 10
 
-/obj/item/gun/ballistic/revolver/fallout/hrev
-	name = "handmade revolver"
-	desc = "A crude revolver fashioned by hand and, for some reason, chambered for .45 caliber rounds."
-	icon_state = "hrev"
-	item_state = "sequoia"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
-	fire_sound = 'fallout/sound/f13weapons/sequoia.ogg'
-	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 6
-	extra_damage = 30
-
 //Magazines
 /obj/item/ammo_box/magazine/internal/shot/caravan
 	name = "caravan shotgun internal tube"
@@ -178,7 +186,7 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev10mm
 	name = "10mm revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/fallout/c10mm/junk
+	ammo_type = /obj/item/ammo_casing/fallout/c10mm
 	icon = 'fallout/icons/objects/ammo.dmi'
 	caliber = "10mm"
 	max_ammo = 5
@@ -196,13 +204,6 @@
 	ammo_type = /obj/item/ammo_casing/fallout/a556
 	caliber = "a556"
 	max_ammo = 5
-
-/obj/item/ammo_box/magazine/internal/cylinder/rev45
-	name = "handmade revolver cylinder"
-	icon_state = "45"
-	ammo_type = /obj/item/ammo_casing/fallout/c45/junk
-	caliber = ".45"
-	max_ammo = 6
 
 //Loaders
 /obj/item/ammo_box/fallout/rev4570
@@ -237,18 +238,10 @@
 	caliber = "a556"
 	max_ammo = 5
 
-/obj/item/ammo_box/rev45
-	name = ".45 speed loader"
-	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "10mmadv"
-	ammo_type = /obj/item/ammo_casing/fallout/c45/junk
-	caliber = ".45"
-	max_ammo = 6
-
 /obj/item/ammo_box/fallout/rev10mm
 	name = "10mm speed loader"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "rev10mm"
-	ammo_type = /obj/item/ammo_casing/fallout/c10mm/junk
+	ammo_type = /obj/item/ammo_casing/fallout/c10mm
 	caliber = "10mm"
 	max_ammo = 5

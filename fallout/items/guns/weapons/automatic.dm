@@ -7,7 +7,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	slot_flags = 0
-	mag_type = /obj/item/ammo_box/magazine/smgm45
+	mag_type = /obj/item/ammo_box/magazine/fallout/smgm45
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/45/45auto3.ogg'
 	can_suppress = FALSE
 	fire_delay = 3
@@ -25,28 +25,12 @@
 	weapon_weight = WEAPON_HEAVY
 	suppressed = 1
 	slot_flags = 0
-	mag_type = /obj/item/ammo_box/magazine/smgm22
+	mag_type = /obj/item/ammo_box/magazine/fallout/smgm22
 	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
 	fire_delay = 3
 	burst_size = 3
 	extra_damage = 10
 	spread = 10
-	
-/obj/item/gun/ballistic/automatic/fallout/smg38
-	name = "handmade submachine gun"
-	desc = "A submachine gun made from scratch, supports a 36 round .38 drum magazine. It's poor design makes it incredibly hard to control."
-	icon_state = "smg38"
-	item_state = "tommygun"
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
-	can_suppress = FALSE
-	slot_flags = 0
-	mag_type = /obj/item/ammo_box/magazine/smgm38
-	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
-	fire_delay = 3
-	burst_size = 3
-	extra_damage = 10
-	spread = 14
 
 /obj/item/gun/ballistic/automatic/fallout/smg10mm
 	name = "10mm submachine gun"
@@ -55,7 +39,7 @@
 	item_state = "smg10mm"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = 0
-	mag_type = /obj/item/ammo_box/magazine/smgm10mm
+	mag_type = /obj/item/ammo_box/magazine/fallout/smgm10mm
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/10mmsmg/10mmsmg1.ogg'
 	burst_size = 3
 	fire_delay = 3
@@ -68,7 +52,7 @@
 	desc = "A fast firing, old school 9mm submachine gun. Doesn't pack a lot of punch per bullet, but that doesn't matter when you're spitting them out so fast."
 	icon_state = "smg9mm"
 	item_state = "smg9mm"
-	mag_type = /obj/item/ammo_box/magazine/smgm9mm
+	mag_type = /obj/item/ammo_box/magazine/fallout/smgm9mm
 	fire_sound = 'fallout/sound/f13weapons/greasegun.ogg'
 	can_suppress = FALSE
 	burst_size = 3
@@ -77,12 +61,21 @@
 	force = 15
 	spread = 10
 
+/obj/item/gun/ballistic/automatic/fallout/smg9mm/handmade
+	name = "handmade submachine gun"
+	desc = "A submachine gun made from scratch that fires from a standard 9mm SMG magazine. It's poor design makes it rather hard to control."
+	icon_state = "smg38"
+	item_state = "tommygun"
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	spread = 14
+
 /obj/item/gun/ballistic/automatic/fallout/smg12mm
 	name = "12.7mm submachine gun"
 	desc = "A heavy duty submachine gun chambered in 12.7mm, can't hold a lot of rounds, but they sure do pack a punch."
 	icon_state = "smg12mm"
 	item_state = "smg12mm"
-	mag_type = /obj/item/ammo_box/magazine/smg12mm
+	mag_type = /obj/item/ammo_box/magazine/fallout/smg12mm
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/12mm/m12mm2.ogg'
 	can_suppress = FALSE
 	burst_size = 3
@@ -98,7 +91,7 @@
 	icon_state = "assaultrifle"
 	item_state = "assaultrifle"
 	slot_flags = 0
-	mag_type = /obj/item/ammo_box/magazine/r20
+	mag_type = /obj/item/ammo_box/magazine/fallout/r20
 	fire_sound = 'fallout/sound/f13weapons/arfire.ogg'
 	burst_size = 3
 	fire_delay = 3
@@ -127,7 +120,7 @@
 	desc = "A Chinese made assault rifle chambered in the heavier 7.62 round, packs a bigger punch in exchange for reduced accuracy."
 	icon_state = "chinesear"
 	item_state = "chinesear"
-	mag_type = /obj/item/ammo_box/magazine/ar762
+	mag_type = /obj/item/ammo_box/magazine/fallout/ar762
 	fire_sound = 'fallout/sound/f13weapons/chinesearfire.ogg'
 	extra_penetration = 15
 	spread = 8
@@ -145,7 +138,7 @@
 	icon_state = "marksman"
 	item_state = "marksman"
 	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/r20
+	mag_type = /obj/item/ammo_box/magazine/fallout/r20
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/marksman/marksman2.ogg'
 	can_suppress = FALSE
 	fire_delay = 6
@@ -190,22 +183,11 @@
 	desc = "A semi-automatic .22 caliber rifle mostly used by pre-war police forces."
 	icon_state = "rugerpolice"
 	item_state = "rugerpolice"
-	mag_type = /obj/item/ammo_box/magazine/r22
+	mag_type = /obj/item/ammo_box/magazine/fallout/r22
 	fire_sound = 'fallout/sound/f13weapons/varmint_rifle.ogg'
 	fire_delay = 4
 	extra_damage = 20
 	extra_penetration = 0
-	
-/obj/item/gun/ballistic/automatic/fallout/marksman/service/handmade38
-	name = "handmade rifle"
-	desc = "A crudely fashioned handmade rifle chambered for .38 rounds."
-	icon_state = "hrifle"
-	item_state = "servicerifle"
-	mag_type = /obj/item/ammo_box/magazine/h38
-	fire_sound = 'fallout/sound/f13weapons/varmint_rifle.ogg'
-	fire_delay = 6
-	extra_damage = 25
-	extra_penetration = 5
 	
 /obj/item/gun/ballistic/automatic/fallout/marksman/sniper
 	name = "sniper rifle"
@@ -219,16 +201,16 @@
 	mag_type = /obj/item/ammo_box/magazine/fallout/r308
 
 //Magazines
-/obj/item/ammo_box/magazine/r20
+/obj/item/ammo_box/magazine/fallout/r20
 	name = "r20 Magazine (5.56mm)"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "r20"
+	icon_state = "556r20"
 	ammo_type = /obj/item/ammo_casing/fallout/a556
 	caliber = "a556"
 	max_ammo = 20
 	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/smgm10mm
+/obj/item/ammo_box/magazine/fallout/smgm10mm
 	name = "10mm SMG magazine"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "smg10mm"
@@ -237,60 +219,51 @@
 	max_ammo = 24
 	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/smgm9mm
+/obj/item/ammo_box/magazine/fallout/smgm9mm
 	name = "9mm SMG Magazine"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "grease"
+	icon_state = "smg9mm"
 	ammo_type = /obj/item/ammo_casing/fallout/c9mm
 	caliber = "9mm"
 	max_ammo = 30
 	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/smgm45
+/obj/item/ammo_box/magazine/fallout/smgm45
 	name = "50 round drum magazine (.45)"
-	icon_state = "drum45"
+	icon_state = "smg45"
 	ammo_type = /obj/item/ammo_casing/fallout/c45
 	caliber = ".45"
 	max_ammo = 50
 	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/ar762
+/obj/item/ammo_box/magazine/fallout/ar762
 	name = "24 round magazine (7.62mm)"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "r20"
+	icon_state = "ar762"
 	ammo_type = /obj/item/ammo_casing/fallout/a762
 	caliber = "a762"
 	max_ammo = 24
 	multiple_sprites = 2
 	
-/obj/item/ammo_box/magazine/smgm22
+/obj/item/ammo_box/magazine/fallout/smgm22
 	name = "60 round magazine (.22)"
-	icon_state = "drum45"
+	icon_state = "smg22"
 	ammo_type = /obj/item/ammo_casing/fallout/c22
 	caliber = ".22"
 	max_ammo = 60
 	multiple_sprites = 2
 	
-/obj/item/ammo_box/magazine/r22
-	name = "10 round magazine (.22)"
-	icon_state = "r20"
-	ammo_type = /obj/item/ammo_casing/fallout/c22/junk
+/obj/item/ammo_box/magazine/fallout/r22
+	name = "15 round magazine (.22)"
+	icon_state = "r22"
+	ammo_type = /obj/item/ammo_casing/fallout/c22
 	caliber = ".22"
-	max_ammo = 10
-	multiple_sprites = 2
-	
-/obj/item/ammo_box/magazine/smgm38
-	name = "36 round magazine (.38)"
-	icon_state = "drum45"
-	ammo_type = /obj/item/ammo_casing/fallout/c38/junk
-	caliber = "38"
-	max_ammo = 36
+	max_ammo = 15
 	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/smg12mm
+/obj/item/ammo_box/magazine/fallout/smg12mm
 	name = "21 round magazine (12.7mm)"
-	icon_state = "drum45"
+	icon_state = "smg12mm"
 	ammo_type = /obj/item/ammo_casing/fallout/m12mm
 	caliber = "12.7mm"
 	max_ammo = 21
-	multiple_sprites = 2

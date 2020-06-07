@@ -293,9 +293,9 @@
 	name = "tier 1 gun spawner"
 	lootcount = 3
 	var/loot1 = list(
-				/obj/item/gun/ballistic/automatic/pistol/fallout/handmadepistol,
-				/obj/item/ammo_box/magazine/h38,
-				/obj/item/ammo_box/magazine/h38
+				/obj/item/gun/ballistic/automatic/pistol/fallout/m9mm/handmade,
+				/obj/item/ammo_box/magazine/fallout/m9mm,
+				/obj/item/ammo_box/magazine/fallout/m9mm
 				)
 	var/loot2 = list(
 				/obj/item/gun/ballistic/automatic/pistol/fallout/m9mm,
@@ -318,19 +318,19 @@
 				""
 				)
 	var/loot6 = list(
-				/obj/item/gun/ballistic/automatic/fallout/marksman/service/handmade38,
-				/obj/item/ammo_box/magazine/h38,
-				/obj/item/ammo_box/magazine/h38
+				/obj/item/gun/ballistic/revolver/fallout/rev357/handmade/rifle,
+				/obj/item/ammo_box/fallout/rev357,
+				/obj/item/ammo_box/fallout/rev357
 				)
 	var/loot7 = list(
 				/obj/item/gun/ballistic/automatic/fallout/marksman/service/police22,
-				/obj/item/ammo_box/magazine/r22,
-				/obj/item/ammo_box/magazine/r22
+				/obj/item/ammo_box/magazine/fallout/r22,
+				/obj/item/ammo_box/magazine/fallout/r22
 				)
 	var/loot8 = list(
-				/obj/item/gun/ballistic/revolver/fallout/hrev,
-				/obj/item/ammo_box/rev45,
-				/obj/item/ammo_box/rev45
+				/obj/item/gun/ballistic/revolver/fallout/rev357/handmade,
+				/obj/item/ammo_box/fallout/rev357,
+				/obj/item/ammo_box/fallout/rev357
 				)
 	var/loot9 = list(
 				/obj/item/gun/ballistic/revolver/fallout/rev10mm,
@@ -362,12 +362,12 @@
 				)
 	var/loot3 = list(
 				/obj/item/gun/ballistic/automatic/fallout/marksman/service,
-				/obj/item/ammo_box/magazine/r20,
+				/obj/item/ammo_box/magazine/fallout/r20,
 				""
 				)
 	var/loot4 = list(
-				/obj/item/gun/ballistic/automatic/fallout/smg38,
-				/obj/item/ammo_box/magazine/smgm38,
+				/obj/item/gun/ballistic/automatic/fallout/smg9mm/handmade,
+				/obj/item/ammo_box/magazine/fallout/smgm9mm,
 				""
 				)
 	var/loot5 = list(
@@ -445,22 +445,22 @@
 				)
 	var/loot9 = list(
 				/obj/item/gun/ballistic/automatic/fallout/smg10mm,
-				/obj/item/ammo_box/magazine/smgm10mm,
+				/obj/item/ammo_box/magazine/fallout/smgm10mm,
 				""
 				)
 	var/loot10 = list(
 				/obj/item/gun/ballistic/automatic/fallout/smg9mm,
-				/obj/item/ammo_box/magazine/smgm9mm,
+				/obj/item/ammo_box/magazine/fallout/smgm9mm,
 				""
 				)
 	var/loot11 = list(
 				/obj/item/gun/ballistic/automatic/fallout/assaultrifle/chinese/handmade,
-				/obj/item/ammo_box/magazine/ar762,
+				/obj/item/ammo_box/magazine/fallout/ar762,
 				""
 				)
 	var/loot12 = list(
 				/obj/item/gun/ballistic/automatic/fallout/marksman,
-				/obj/item/ammo_box/magazine/r20,
+				/obj/item/ammo_box/magazine/fallout/r20,
 				""
 				)
 
@@ -488,22 +488,22 @@
 				)
 	var/loot4 = list(
 				/obj/item/gun/ballistic/automatic/fallout/assaultrifle/chinese,
-				/obj/item/ammo_box/magazine/ar762,
+				/obj/item/ammo_box/magazine/fallout/ar762,
 				""
 				)
 	var/loot5 = list(
 				/obj/item/gun/ballistic/automatic/fallout/assaultrifle/infiltrator,
-				/obj/item/ammo_box/magazine/r20,
+				/obj/item/ammo_box/magazine/fallout/r20,
 				""
 				)
 	var/loot6 = list(
 				/obj/item/gun/ballistic/automatic/fallout/assaultrifle,
-				/obj/item/ammo_box/magazine/r20,
+				/obj/item/ammo_box/magazine/fallout/r20,
 				""
 				)
 	var/loot7 = list(
 				/obj/item/gun/ballistic/automatic/fallout/smg12mm,
-				/obj/item/ammo_box/magazine/smg12mm,
+				/obj/item/ammo_box/magazine/fallout/smg12mm,
 				""
 				)
 	var/loot8 = list(
@@ -571,12 +571,12 @@
 				)
 	var/loot7 = list(
 				/obj/item/gun/ballistic/automatic/fallout/marksman/service/survival,
-				/obj/item/ammo_box/magazine/r20,
+				/obj/item/ammo_box/magazine/fallout/r20,
 				""
 				)
 	var/loot8 = list(
 				/obj/item/gun/ballistic/automatic/fallout/marksman/american,
-				/obj/item/ammo_box/magazine/r20,
+				/obj/item/ammo_box/magazine/fallout/r20,
 				""
 				)
 	var/loot9 = list(
