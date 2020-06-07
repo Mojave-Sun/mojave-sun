@@ -142,7 +142,7 @@ datum/controller/subsystem/sunlight/proc/fullPlonk()
 		var/atom/movable/sunlight_object/W = GLOB.SUNLIGHT_QUEUE_WORK[i]
 
 		W.GetState()
-		GLOB.SUNLIGHT_QUEUE_UPDATE |= W
+		GLOB.SUNLIGHT_QUEUE_UPDATE += W
 
 		if(init_tick_checks)
 			CHECK_TICK

@@ -68,8 +68,7 @@ Sunlight System
 
 /atom/movable/sunlight_object/Initialize(mapload)
 	. = ..()
-	source_turf = src.loc
-	// source_turf.vis_contents += src
+	source_turf = loc
 	if (source_turf.sunlight_object)
 		qdel(source_turf.sunlight_object, force = TRUE)
 	source_turf.sunlight_object = src
@@ -78,10 +77,10 @@ Sunlight System
 
 /atom/movable/sunlight_object/proc/GetState()
 	var/oldState = state
-	if(!src.HasRoof())
+	if(!(source_turf.has_opaque_atom || HasRoof() ))
 		state = SUNLIGHT_OUTDOOR
 		for(var/turf/CT in neighbourTurfs)
-			if(CT.sunlight_object && CT.sunlight_object.HasRoof()) /* update our unroofed, unlighty friends */
+			if(CT.has_opaque_atom  || (CT.sunlight_object && CT.sunlight_object.HasRoof())) /* update our unroofed, unlighty friends */
 				state = SUNLIGHT_BORDER
 				break
 	else /* roofed, so turn off the lights*/
@@ -95,22 +94,22 @@ Sunlight System
 /atom/movable/sunlight_object/proc/GetNeighbours()
 	return RANGE_TURFS(1, source_turf)
 
-/* yoinked from look up - should make a getCeiling proc or some such to combine */
+
 /atom/movable/sunlight_object/proc/HasRoof()
-	if(source_turf.GetCeilingTurf())
+	/* if we are a wall or have a ceiling, we are under a roof and considered indoors */
+	if(istype(source_turf, /turf/closed) ||  source_turf.GetCeilingTurf())
 		return TRUE
 	return FALSE
 
 /* run up the Z column until we hit a non openspace turf, or the top of the map */
 /turf/proc/GetCeilingTurf()
-	var/turf/ceiling = get_step_multiz(src, UP)
-	if(!ceiling) //We are at the highest z-level.
-		return null
-		//todo: handle roofed turfs at top Z level - likely will have a an effect or something that adds hasRoof()
-	else if(!isopenspace(ceiling)) //There is no openspace turf above us.
-		return ceiling
-	return ceiling.GetCeilingTurf()
-
+	if (roofType)
+		roofType = roofType /* already calculated */
+	else
+		var/turf/ceiling = get_step_multiz(src, UP)
+		if(ceiling)
+			roofType = !isopenspace(ceiling) ? ceiling : ceiling.GetCeilingTurf()
+	return roofType
 
 /atom/movable/sunlight_object/proc/DisableSunlight()
 	for(var/turf/T in affectingTurfs)
@@ -164,7 +163,7 @@ Sunlight System
 
 	//anything that passes the first case is very likely to pass the second, and addition is a little faster in this case
 	if((fr & fg & fb & fa) && (fr + fg + fb + fa == 4)) /* this will likely never happen */
-		color = null
+		color = SSsunlight.color
 	else if(!luminosity)
 		color = SUNLIGHT_DARK_MATRIX
 	else
@@ -177,21 +176,17 @@ Sunlight System
 
 
 /* calculate the indoor corners we are affecting */
-#define SUN_FALLOFF(C, T) (1 - CLAMP01(sqrt((C.x - T.x) ** 2 + (C.y - T.y) ** 2 + LIGHTING_HEIGHT) / max(1, GLOB.GLOBAL_LIGHT_RANGE)))
-/atom/movable/sunlight_object/proc/CalcSunlightSpread()
+#define SUN_FALLOFF(C, T) (1 - CLAMP01(sqrt((C.x - T.x) ** 2 + (C.y - T.y) ** 2) / max(1, GLOB.GLOBAL_LIGHT_RANGE)))
+/atom/movable/sunlight_object/proc/CalcSunlightSpread(debug = FALSE)
 
 	// var/list/datum/lighting_corner/corners = list()
 	var/list/turf/turfs                    = list()
-	var/list/datum/lighting_corner/corners  = list() /* corners we are now affecting */
 	var/thing
 	var/datum/lighting_corner/C
 	var/turf/T
 	var/list/tempMasterList = list() /* to mimimize double ups */
 
 	for(T in view(CEILING(GLOB.GLOBAL_LIGHT_RANGE, 1), source_turf))
-		for (thing in T.get_corners(source_turf))
-			C = thing
-			corners[C] = 0
 		turfs += T
 
 	/* fix up the lists */
@@ -217,15 +212,34 @@ Sunlight System
 			C.getSunFalloff()
 			tempMasterList |= C.masters /* update the dudes we just removed  */
 
-
 	GLOB.SUNLIGHT_QUEUE_CORNER += tempMasterList /* update the boys */
 
 /* Related object changes */
 /* I moved this here to consolidate sunlight changes as much as possible, so its easily disabled */
 
+/* area fuckery */
+/area/var/turf/roofType
+
 /* turf fuckery */
 /turf/var/tmp/atom/movable/sunlight_object/sunlight_object /* a turf's sunlight overlay */
 /turf/var/list/globAffect = list() /* list of sunlight objects affecting this turfs */
+/turf/var/turf/roofType /* our roof turf - may be a path for top z level, or a ref to the turf above*/
+
+/* moved this out of reconsider lights so we can call it in multiz refresh  */
+/turf/proc/reconsider_sunlight()
+	if(!SSlighting.initialized)
+		return
+
+	/* remove roof refs (not path for psuedo roof) so we can recalculate it */
+	if(roofType && !ispath(roofType))
+		roofType = null
+
+	/* update sunlight */
+	if(sunlight_object)
+		GLOB.SUNLIGHT_QUEUE_WORK += sunlight_object
+	var/atom/movable/sunlight_object/S
+	for(S in globAffect)
+		GLOB.SUNLIGHT_QUEUE_WORK += S
 
 /* corner fuckery */
 /datum/lighting_corner/var/sunFalloff = 0 /* smallest distance to sunlight turf, for sunlight falloff */
@@ -241,9 +255,27 @@ Sunlight System
 
 
 
+/* Effect Fuckery */
+/* these bits are to set the roof on a top-z level, as there is no turf above to act as a roof */
+/obj/effect/mapping_helpers/sunlight/roofSetter
+	icon_state = "roof"
+	var/turf/roofType
+	mountain
+		roofType = /turf/closed/indestructible/rock
+		icon_state = "roof_rock"
+	wood
+		roofType = /turf/open/floor/wood/f13
+		icon_state = "roof_wood"
 
 
-
+/obj/effect/mapping_helpers/sunlight/roofSetter/Initialize(mapload)
+	. = ..()
+	if(!mapload)
+		log_mapping("[src] spawned outside of mapload!")
+		return
+	if(isturf(loc) && !get_step_multiz(loc, UP))
+		var/turf/T = loc
+		T.roofType = roofType
 
 
 
