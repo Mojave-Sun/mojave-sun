@@ -11,7 +11,7 @@
 	outdoors = TRUE
 	has_gravity = STANDARD_GRAVITY
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
-	ambientsounds = list('fallout/sound/f13ambience/wasteland.ogg')
+	ambientsounds = list('fallout/sound/f13ambience/general/wasteland.ogg')
 	flags_1 = NONE //>desert >>has destroyed robo dirt on it
 
 /area/f13/admeme
@@ -54,7 +54,7 @@
 	power_environ = TRUE
 	power_equip = TRUE
 	power_light = TRUE
-	ambientsounds = list('fallout/sound/f13ambience/building.ogg')
+	ambientsounds = list('fallout/sound/f13ambience/general/building.ogg')
 
 /area/f13/ncr_main
 	name = "NCR Mainbase"
