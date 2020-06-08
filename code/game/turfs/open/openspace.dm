@@ -53,7 +53,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 /turf/open/openspace/update_multiz(prune_on_fail = FALSE, init = FALSE)
 	. = ..()
 	var/turf/T = below()
-	if(!T)
+	if(!T) /* if we end up with an openspace turf on the bottom Z level. revert to plating */
 		vis_contents.len = 0
 		if(prune_on_fail)
 			ChangeTurf(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
@@ -62,15 +62,17 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 		vis_contents += T
 	return TRUE
 
-/turf/open/openspace/multiz_turf_del(turf/T, dir)
-	if(dir != DOWN)
-		return
-	update_multiz()
+/* we are running update_multiZ anyway  */
 
-/turf/open/openspace/multiz_turf_new(turf/T, dir)
-	if(dir != DOWN)
-		return
-	update_multiz()
+// /turf/open/openspace/multiz_turf_del(turf/T, dir)
+// 	if(dir != DOWN)
+// 		return
+// 	update_multiz()
+
+// /turf/open/openspace/multiz_turf_new(turf/T, dir)
+// 	if(dir != DOWN)
+// 		return
+// 	update_multiz()
 
 /turf/open/openspace/zAirIn()
 	return TRUE

@@ -31,6 +31,17 @@
 		0, 0, 0, 1           \
 	)                        \
 
+#define SUNLIGHT_DARK_MATRIX \
+	list                     \
+	(                        \
+		0, 0, 0, 0, \
+		0, 0, 0, 0, \
+		0, 0, 0, 0, \
+		0, 0, 0, 0, \
+		0, 0, 0, 1           \
+	)                        \
+
+
 
 //Some defines to generalise colours used in lighting.
 //Important note on colors. Colors can end up significantly different from the basic html picture, especially when saturated
@@ -117,3 +128,7 @@
 #define EMISSIVE_BLOCK_GENERIC 1
 /// Uses a dedicated render_target object to copy the entire appearance in real time to the blocking layer. For things that can change in appearance a lot from the base state, like humans.
 #define EMISSIVE_BLOCK_UNIQUE 2
+
+#define SUNLIGHT_INDOOR   0
+#define SUNLIGHT_OUTDOOR  1
+#define SUNLIGHT_BORDER   2
