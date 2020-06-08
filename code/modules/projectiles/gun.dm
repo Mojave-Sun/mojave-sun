@@ -16,7 +16,7 @@
 	throw_speed = 3
 	throw_range = 5
 	force = 5
-	item_flags = NEEDS_PERMIT
+	item_flags = SLOWS_WHILE_IN_HAND
 	attack_verb = list("struck", "hit", "bashed")
 
 	var/fire_sound = 'sound/weapons/gun/pistol/shot.ogg'
@@ -84,6 +84,7 @@
 	if(gun_light)
 		alight = new(src)
 	build_zooming()
+	src.slowdown = (w_class / 5)
 
 /obj/item/gun/Destroy()
 	if(isobj(pin)) //Can still be the initial path, then we skip
@@ -173,6 +174,10 @@
 				user.visible_message("<span class='danger'>[user] fires [src]!</span>", \
 								"<span class='danger'>You fire [src]!</span>", \
 								"<span class='hear'>You hear a gunshot!</span>", COMBAT_MESSAGE_RANGE)
+
+/obj/item/gun/dropped(mob/user)
+	. = ..()
+	src.slowdown = initial(slowdown)
 
 /obj/item/gun/emp_act(severity)
 	. = ..()
