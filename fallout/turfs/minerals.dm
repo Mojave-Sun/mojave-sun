@@ -37,7 +37,7 @@
 	/obj/structure/table/low_wall/adobe, /turf/closed/wall/f13/adobe,
 	/obj/structure/table/low_wall/scrap, /turf/closed/wall/f13/scrap,
 	/obj/structure/table/low_wall/wood, /turf/closed/wall/f13/wood,
-	/turf/closed/mineral/random/f13)
+	/turf/closed/mineral/random/f13, /turf/closed/indestructible/rock/f13)
 
 /turf/closed/mineral/random/f13/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	underlay_appearance.icon = 'fallout/icons/turf/mining.dmi'
