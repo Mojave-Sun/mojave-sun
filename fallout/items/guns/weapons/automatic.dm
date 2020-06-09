@@ -12,9 +12,9 @@
 	can_suppress = FALSE
 	fire_delay = 3
 	burst_size = 3
-	extra_damage = 10
+	extra_damage = 15
 	extra_penetration = 5
-	spread = 10
+	spread = 12
 	
 /obj/item/gun/ballistic/automatic/fallout/smg22
 	name = ".22 submachine gun"
@@ -29,8 +29,8 @@
 	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
 	fire_delay = 3
 	burst_size = 3
-	extra_damage = 10
-	spread = 10
+	extra_damage = 15
+	spread = 12
 
 /obj/item/gun/ballistic/automatic/fallout/smg10mm
 	name = "10mm submachine gun"
@@ -43,9 +43,9 @@
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/10mmsmg/10mmsmg1.ogg'
 	burst_size = 3
 	fire_delay = 3
-	extra_damage = 10
+	extra_damage = 15
 	extra_penetration = 5
-	spread = 10
+	spread = 12
 
 /obj/item/gun/ballistic/automatic/fallout/smg9mm
 	name = "9mm submachine gun"
@@ -57,9 +57,9 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 3
-	extra_damage = 10
+	extra_damage = 15
 	force = 15
-	spread = 10
+	spread = 12
 
 /obj/item/gun/ballistic/automatic/fallout/smg9mm/handmade
 	name = "handmade submachine gun"
@@ -68,7 +68,7 @@
 	item_state = "hsmg"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	spread = 14
+	spread = 16
 
 /obj/item/gun/ballistic/automatic/fallout/smg12mm
 	name = "12.7mm submachine gun"
@@ -80,10 +80,10 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 3
-	extra_damage = 10
+	extra_damage = 15
 	extra_penetration = 15
 	force = 15
-	spread = 8
+	spread = 10
 
 /obj/item/gun/ballistic/automatic/fallout/assaultrifle
 	name = "assault rifle"
@@ -95,11 +95,11 @@
 	fire_sound = 'fallout/sound/f13weapons/arfire.ogg'
 	burst_size = 3
 	fire_delay = 3
-	extra_damage = 15
-	extra_penetration = 10
+	extra_damage = 20
+	extra_penetration = 5
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	spread = 6
+	spread = 8
 
 /obj/item/gun/ballistic/automatic/fallout/assaultrifle/infiltrator
 	name = "Infiltrator"
@@ -107,13 +107,13 @@
 	icon_state = "infiltrator"
 	item_state = "infiltrator"
 	suppressed = 1
-	extra_damage = 15
-	extra_penetration = 5
+	extra_damage = 20
+	extra_penetration = 0
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
 	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
-	spread = 5
+	spread = 6
 	
 /obj/item/gun/ballistic/automatic/fallout/assaultrifle/chinese
 	name = "Chinese assault rifle"
@@ -122,15 +122,15 @@
 	item_state = "chinesear"
 	mag_type = /obj/item/ammo_box/magazine/fallout/ar762
 	fire_sound = 'fallout/sound/f13weapons/chinesearfire.ogg'
-	extra_penetration = 15
-	spread = 8
+	extra_penetration = 10
+	spread = 10
 	
 /obj/item/gun/ballistic/automatic/fallout/assaultrifle/chinese/handmade
 	name = "handmade assault rifle"
 	desc = "A decent quality handmade assault rifle chambered in 7.62."
 	icon_state = "handmadear"
 	item_state = "handmadear"
-	extra_penetration = 5
+	extra_penetration = 0
 
 /obj/item/gun/ballistic/automatic/fallout/marksman
 	name = "marksman carbine"
@@ -202,7 +202,7 @@
 
 //Magazines
 /obj/item/ammo_box/magazine/fallout/r20
-	name = "r20 Magazine (5.56mm)"
+	name = "20 round magazine (5.56mm)"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "556r20"
 	ammo_type = /obj/item/ammo_casing/fallout/a556
@@ -211,7 +211,7 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/fallout/smgm10mm
-	name = "10mm SMG magazine"
+	name = "24 round magazine (10mm)"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "smg10mm"
 	ammo_type = /obj/item/ammo_casing/fallout/c10mm
@@ -220,7 +220,7 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/fallout/smgm9mm
-	name = "9mm SMG Magazine"
+	name = "30 round magazine (9mm)"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "smg9mm"
 	ammo_type = /obj/item/ammo_casing/fallout/c9mm

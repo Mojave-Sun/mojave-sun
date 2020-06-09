@@ -607,3 +607,70 @@
 			/obj/effect/spawner/lootdrop/fallout/gun/tier3 = 60,
 			/obj/effect/spawner/lootdrop/fallout/gun/tier4 = 30,
 			)
+
+/obj/effect/spawner/lootdrop/fallout/ammo
+	name = "DO NOT USE ME - Fallout ammo spawners"
+	lootcount = 3
+	lootdoubles = TRUE
+
+/obj/effect/spawner/lootdrop/fallout/ammo/tier1
+	name = "tier 1 ammo spawner"
+
+	loot = list(
+			/obj/item/ammo_box/magazine/fallout/r10,
+			/obj/item/ammo_box/magazine/fallout/m22,
+			/obj/item/ammo_box/magazine/fallout/m9mm,
+			/obj/item/ammo_box/fallout/rev10mm,
+			/obj/item/ammo_box/magazine/fallout/m10mm,
+			/obj/item/ammo_box/fallout/cpistol,
+			/obj/item/ammo_box/fallout/rev357,
+			/obj/item/ammo_box/magazine/fallout/r22
+			)
+
+/obj/effect/spawner/lootdrop/fallout/ammo/tier2
+	name = "tier 2 ammo spawner"
+
+	loot = list(
+			/obj/item/ammo_box/magazine/fallout/m10mm,
+			/obj/item/ammo_box/fallout/rev357,
+			/obj/item/ammo_box/fallout/tube357,
+			/obj/item/ammo_box/magazine/fallout/m45,
+			/obj/item/ammo_box/magazine/fallout/r20,
+			/obj/item/ammo_box/magazine/fallout/r308,
+			/obj/item/ammo_box/magazine/fallout/smgm9mm,
+			/obj/item/ammo_box/fallout/sks
+			)
+
+/obj/effect/spawner/lootdrop/fallout/ammo/tier3
+	name = "tier 3 ammo spawner"
+
+	loot = list(
+			/obj/item/ammo_box/fallout/rev44,
+			/obj/item/ammo_box/fallout/rev357,
+			/obj/item/ammo_box/fallout/rev4570,
+			/obj/item/ammo_box/fallout/rev556,
+			/obj/item/ammo_box/magazine/fallout/r20,
+			/obj/item/ammo_box/magazine/fallout/r308,
+			/obj/item/ammo_box/magazine/fallout/smgm9mm,
+			/obj/item/ammo_box/fallout/sks,
+			/obj/item/ammo_box/fallout/tube44,
+			/obj/item/ammo_box/magazine/fallout/smgm10mm,
+			/obj/item/ammo_box/magazine/fallout/ar762
+			)
+
+/obj/effect/spawner/lootdrop/fallout/ammo/tier4
+	name = "tier 4 ammo spawner"
+
+	loot = list(
+			/obj/item/ammo_box/magazine/fallout/smgm45,
+			/obj/item/ammo_box/magazine/fallout/amr,
+			/obj/item/ammo_box/fallout/tube4570,
+			/obj/item/ammo_box/magazine/fallout/smgm22,
+			/obj/item/ammo_box/magazine/fallout/r20,
+			/obj/item/ammo_box/magazine/fallout/r308,
+			/obj/item/ammo_box/magazine/fallout/smg12mm,
+			/obj/item/ammo_box/fallout/battler,
+			/obj/item/ammo_box/magazine/fallout/deagle,
+			/obj/item/ammo_box/magazine/fallout/m12mm,
+			/obj/item/ammo_box/magazine/fallout/ar762
+			)
