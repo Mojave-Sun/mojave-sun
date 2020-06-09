@@ -13,7 +13,7 @@
 	damage = 5
 
 /obj/projectile/bullet/fallout/a762/hv
-	speed = 0.5
+	speed = 0.4
 
 //.308
 /obj/projectile/bullet/fallout/a308
@@ -30,7 +30,7 @@
 	damage = 5
 
 /obj/projectile/bullet/fallout/a308/hv
-	speed = 0.5
+	speed = 0.4
 
 //5.56
 /obj/projectile/bullet/fallout/a556
@@ -47,7 +47,7 @@
 	damage = 5
 
 /obj/projectile/bullet/fallout/a556/hv
-	speed = 0.5
+	speed = 0.4
 
 //50 BMG
 /obj/projectile/bullet/fallout/a50MG
@@ -61,4 +61,4 @@
 	damage = 5
 
 /obj/projectile/bullet/fallout/a50MG/hv
-	speed = 0.5
+	speed = 0.4

@@ -130,14 +130,14 @@
 
 //Magazines
 /obj/item/ammo_box/magazine/fallout/m45
-	name = ".45 pistol magazine"
+	name = "7 round magazine (.45)"
 	icon_state = "45"
 	ammo_type = /obj/item/ammo_casing/fallout/c45
 	caliber = ".45"
 	max_ammo = 7
 
 /obj/item/ammo_box/magazine/fallout/deagle
-	name = "desert eagle magazine (.44)"
+	name = "8 round magazine (.44)"
 	icon_state = "deagle"
 	ammo_type = /obj/item/ammo_casing/fallout/m44
 	caliber = "44"
@@ -145,7 +145,7 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/fallout/m10mm
-	name = "10mm pistol magazine"
+	name = "12 round magazine (10mm)"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "10mm"
 	ammo_type = /obj/item/ammo_casing/fallout/c10mm
@@ -154,7 +154,7 @@
 	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/fallout/m9mm
-	name = "9mm Pistol Magazine"
+	name = "13 round magazine (9mm)"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "9mm"
 	ammo_type = /obj/item/ammo_casing/fallout/c9mm
@@ -162,7 +162,7 @@
 	max_ammo = 13
 
 /obj/item/ammo_box/magazine/fallout/m22
-	name = ".22 pistol magazine"
+	name = "16 round magazine (.22)"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "22"
 	ammo_type = /obj/item/ammo_casing/fallout/c22
@@ -170,7 +170,7 @@
 	max_ammo = 16
 
 /obj/item/ammo_box/magazine/fallout/m12mm
-	name = "12.7mm pistol magazine"
+	name = "7 round magazine (12.7mm)"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "m12mm"
 	ammo_type = /obj/item/ammo_casing/fallout/m12mm

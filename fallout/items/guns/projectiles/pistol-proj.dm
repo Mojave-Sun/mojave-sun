@@ -13,7 +13,7 @@
 	damage = 5
 
 /obj/projectile/bullet/fallout/c45/hv
-	speed = 0.5
+	speed = 0.4
 
 //.22
 /obj/projectile/bullet/fallout/c22
@@ -30,7 +30,7 @@
 	damage = 5
 
 /obj/projectile/bullet/fallout/c22/hv
-	speed = 0.5
+	speed = 0.4
 
 //9mm
 /obj/projectile/bullet/fallout/c9mm
@@ -47,7 +47,7 @@
 	damage = 5
 
 /obj/projectile/bullet/fallout/c9mm/hv
-	speed = 0.5
+	speed = 0.4
 
 //10mm
 /obj/projectile/bullet/fallout/c10mm
@@ -64,7 +64,7 @@
 	damage = 5
 
 /obj/projectile/bullet/fallout/c10mm/hv
-	speed = 0.5
+	speed = 0.4
 
 //12.7mm
 /obj/projectile/bullet/fallout/m12mm
@@ -78,4 +78,4 @@
 	damage = 5
 
 /obj/projectile/bullet/fallout/m12mm/hv
-	speed = 0.5
+	speed = 0.4

@@ -78,7 +78,7 @@
 	multiple_sprites = 2
 	
 /obj/item/ammo_box/magazine/fallout/amr
-	name = "AMR magazine (.50)"
+	name = "6 round magazine (.50)"
 	icon = 'fallout/icons/objects/ammo.dmi'
 	icon_state = "50cal"
 	ammo_type = /obj/item/ammo_casing/fallout/a50MG
