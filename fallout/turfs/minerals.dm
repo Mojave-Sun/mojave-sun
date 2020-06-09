@@ -24,10 +24,10 @@
 /turf/closed/indestructible/rock/f13
 	name = "dense rock"
 	desc = "An extremely densely-packed rock, most mining tools or explosives would never get through this."
-	icon = 'fallout/icons/turf/walls/mineral.dmi'
-	icon_state = "mineral0"
+	icon = 'fallout/icons/turf/walls/indestructible_rock.dmi'
+	icon_state = "indestructible0"
 	smooth = SMOOTH_TRUE|SMOOTH_OLD
-	icon_type_smooth = "mineral"
+	icon_type_smooth = "indestructible"
 	canSmoothWith = list(/obj/structure/table/low_wall/metal, /turf/closed/wall/f13/metal,
 	/obj/structure/table/low_wall/metal/rust, /turf/closed/wall/f13/metal/rust,
 	/obj/structure/table/low_wall/reinforced/bunker, /turf/closed/wall/r_wall/f13/bunker,
@@ -37,7 +37,7 @@
 	/obj/structure/table/low_wall/adobe, /turf/closed/wall/f13/adobe,
 	/obj/structure/table/low_wall/scrap, /turf/closed/wall/f13/scrap,
 	/obj/structure/table/low_wall/wood, /turf/closed/wall/f13/wood,
-	/turf/closed/mineral/random/f13)
+	/turf/closed/mineral/random/f13, /turf/closed/indestructible/rock/f13)
 
 /turf/closed/mineral/random/f13/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	underlay_appearance.icon = 'fallout/icons/turf/mining.dmi'

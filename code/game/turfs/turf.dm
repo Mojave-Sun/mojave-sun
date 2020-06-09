@@ -81,6 +81,9 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	if(T)
 		T.multiz_turf_new(src, DOWN)
 		SEND_SIGNAL(T, COMSIG_TURF_MULTIZ_NEW, src, DOWN)
+	else if(mapload && A.roofType) /* if no turf above, apply roofing on mapload */
+		roofType = A.roofType
+
 	T = SSmapping.get_turf_below(src)
 	if(T)
 		T.multiz_turf_new(src, UP)
@@ -137,8 +140,18 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	user.Move_Pulled(src)
 
 /turf/proc/multiz_turf_del(turf/T, dir)
+	update_multiz()
 
 /turf/proc/multiz_turf_new(turf/T, dir)
+	update_multiz()
+
+/turf/update_multiz(prune_on_fail = FALSE)
+	. = ..()
+	/* update sunlight for turfs below us */
+	var/turf/T = below()
+	if(T)
+		T.update_multiz(prune_on_fail)
+	reconsider_sunlight()
 
 //zPassIn doesn't necessarily pass an atom!
 //direction is direction of travel of air
@@ -279,6 +292,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	if (AM.opacity)
 		has_opaque_atom = TRUE // Make sure to do this before reconsider_lights(), incase we're on instant updates. Guaranteed to be on in this case.
 		reconsider_lights()
+		reconsider_sunlight()
 
 /turf/open/Entered(atom/movable/AM)
 	..()

@@ -170,3 +170,25 @@
 	layer = LIGHTING_LAYER
 	blend_mode = BLEND_ADD
 	show_when_dead = TRUE
+
+
+/* our sunny version - I will need to figure out a less shit way of copying this */
+/obj/screen/fullscreen/lighting_backdrop/Sunlight
+	icon = 'icons/mob/screen_gen.dmi'
+	icon_state = "flash"
+	screen_loc = "CENTER"
+	transform = null
+	plane = LIGHTING_PLANE
+	layer = LIGHTING_LAYER
+	blend_mode = BLEND_ADD
+	show_when_dead = TRUE
+
+
+/obj/screen/fullscreen/lighting_backdrop/Sunlight/Initialize()
+	. = ..()
+	filters += filter(type="layer", render_source=SUNLIGHTING_RENDER_TARGET /*, flags=MASK_INVERSE*/ )
+	SSsunlight.sunlighting_planes |= src
+
+/obj/screen/fullscreen/lighting_backdrop/Sunlight/Destroy()
+	. = ..()
+	SSsunlight.sunlighting_planes -= src

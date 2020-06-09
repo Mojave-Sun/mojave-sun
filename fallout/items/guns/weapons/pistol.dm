@@ -4,7 +4,7 @@
 	desc = "A pre-war 10mm pistol normally seen in the hands of law enforcement."
 	icon_state = "police10mm"
 	item_state = "police10mm"
-	mag_type = /obj/item/ammo_box/magazine/m10mm
+	mag_type = /obj/item/ammo_box/magazine/fallout/m10mm
 	fire_sound = 'fallout/sound/f13weapons/10mm_fire_02.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
@@ -43,7 +43,7 @@
 	desc = "A very common and easy to handle 9mm pistol."
 	icon_state = "9mm"
 	item_state = "9mm"
-	mag_type = /obj/item/ammo_box/magazine/m9mm
+	mag_type = /obj/item/ammo_box/magazine/fallout/m9mm
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/9mm/9mm2.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
@@ -59,12 +59,19 @@
 	extra_damage = 25
 	extra_penetration = 10
 
+/obj/item/gun/ballistic/automatic/pistol/fallout/m9mm/handmade
+	name = "handmade pistol"
+	desc = "A crudely made pistol chambered for 9mm rounds. Fires more slowly than it's manufactured brother."
+	icon_state = "hpistol"
+	item_state = "hpistol"
+	fire_delay = 5
+
 /obj/item/gun/ballistic/automatic/pistol/fallout/m12mm
 	name = "12.7mm pistol"
 	desc = "A pre-war, heavy duty European pistol chambered in 12.7mm. Might not look like it, but it can do some real damage."
 	icon_state = "m12mm"
 	item_state = "m12mm"
-	mag_type = /obj/item/ammo_box/magazine/m12mm
+	mag_type = /obj/item/ammo_box/magazine/fallout/m12mm
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/12mm/m12mm1.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
@@ -81,15 +88,6 @@
 	fire_delay = 3
 	extra_damage = 35
 	extra_penetration = 20
-	
-/obj/item/gun/ballistic/automatic/pistol/fallout/handmadepistol
-	name = "handmade pistol"
-	desc = "A crude and makeshift pistol chambered in .38, works in a pinch."
-	icon_state = "hpistol"
-	mag_type = /obj/item/ammo_box/magazine/h38
-	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 5
-	extra_damage = 20
 
 /obj/item/gun/ballistic/automatic/pistol/fallout/pistol45
 	name = ".45 pistol"
@@ -97,7 +95,7 @@
 	icon_state = "45pistol"
 	item_state = "45pistol"
 	w_class = WEIGHT_CLASS_NORMAL
-	mag_type = /obj/item/ammo_box/magazine/m45
+	mag_type = /obj/item/ammo_box/magazine/fallout/m45
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/45/45auto1.ogg'
 	can_suppress = FALSE
 	fire_delay = 4
@@ -109,7 +107,7 @@
 	desc = "A hard hitting, heavy handgun uniquely chambered for .44 magnum rounds."
 	icon_state = "deagle"
 	item_state = "deagle"
-	mag_type = /obj/item/ammo_box/magazine/deagle
+	mag_type = /obj/item/ammo_box/magazine/fallout/deagle
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/44/44mag1.ogg'
 	can_suppress = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
@@ -122,7 +120,7 @@
 	desc = "An extremely weak but also extremely easy to conceal .22 pistol. This one has an integrated suppressor."
 	icon_state = "22pistol"
 	item_state = "22pistol"
-	mag_type = /obj/item/ammo_box/magazine/m22
+	mag_type = /obj/item/ammo_box/magazine/fallout/m22
 	suppressed = 1
 	w_class = WEIGHT_CLASS_SMALL
 	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
@@ -131,79 +129,66 @@
 
 
 //Magazines
-/obj/item/ammo_box/magazine/m45
+/obj/item/ammo_box/magazine/fallout/m45
 	name = ".45 pistol magazine"
 	icon_state = "45"
-	ammo_type = /obj/item/ammo_casing/fallout/c45/junk
+	ammo_type = /obj/item/ammo_casing/fallout/c45
 	caliber = ".45"
 	max_ammo = 7
 
-/obj/item/ammo_box/magazine/deagle
+/obj/item/ammo_box/magazine/fallout/deagle
 	name = "desert eagle magazine (.44)"
-	icon_state = "50ae"
+	icon_state = "deagle"
 	ammo_type = /obj/item/ammo_casing/fallout/m44
 	caliber = "44"
 	max_ammo = 8
-	multiple_sprites = 1
+	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/m10mm
+/obj/item/ammo_box/magazine/fallout/m10mm
 	name = "10mm pistol magazine"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "10mmadv"
-	ammo_type = /obj/item/ammo_casing/fallout/c10mm/junk
+	icon_state = "10mm"
+	ammo_type = /obj/item/ammo_casing/fallout/c10mm
 	caliber = "10mm"
 	max_ammo = 12
 	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/m9mm
+/obj/item/ammo_box/magazine/fallout/m9mm
 	name = "9mm Pistol Magazine"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "9mmp"
-	ammo_type = /obj/item/ammo_casing/fallout/c9mm/junk
+	icon_state = "9mm"
+	ammo_type = /obj/item/ammo_casing/fallout/c9mm
 	caliber = "9mm"
 	max_ammo = 13
-	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/h38
-	name = "handmade magazine (.38)"
-	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "9mmp"
-	ammo_type = /obj/item/ammo_casing/fallout/c38/junk
-	caliber = "38"
-	max_ammo = 12
-	multiple_sprites = 2
-
-/obj/item/ammo_box/magazine/m22
+/obj/item/ammo_box/magazine/fallout/m22
 	name = ".22 pistol magazine"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "9mmp"
-	ammo_type = /obj/item/ammo_casing/fallout/c22/junk
+	icon_state = "22"
+	ammo_type = /obj/item/ammo_casing/fallout/c22
 	caliber = ".22"
 	max_ammo = 16
-	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/m12mm
+/obj/item/ammo_box/magazine/fallout/m12mm
 	name = "12.7mm pistol magazine"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "9mmp"
+	icon_state = "m12mm"
 	ammo_type = /obj/item/ammo_casing/fallout/m12mm
 	caliber = "12.7mm"
 	max_ammo = 7
-	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/internal/cpistol
 	name = "Chinese pistol internal magazine"
-	ammo_type = /obj/item/ammo_casing/fallout/c10mm/junk
+	ammo_type = /obj/item/ammo_casing/fallout/c10mm
 	caliber = "10mm"
 	max_ammo = 10
 	multiple_sprites = 2
 
 //Loaders
-/obj/item/ammo_box/cpistol
+/obj/item/ammo_box/fallout/cpistol
 	name = "Chinese pistol stripper clip (10mm)"
 	icon = 'fallout/icons/objects/ammo.dmi'
-	icon_state = "10mmadv"
-	ammo_type = /obj/item/ammo_casing/fallout/c10mm/junk
+	icon_state = "cpistol"
+	ammo_type = /obj/item/ammo_casing/fallout/c10mm
 	caliber = "10mm"
 	max_ammo = 10
-	multiple_sprites = 2
