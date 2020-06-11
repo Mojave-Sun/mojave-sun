@@ -25,33 +25,6 @@
 	desc = "A high velocity .44 Magnum bullet casing."
 	projectile_type = /obj/projectile/bullet/fallout/m44/hv
 
-//.38
-/obj/item/ammo_casing/fallout/c38
-	name = ".38 bullet casing"
-	desc = "A .38 bullet casing."
-	caliber = "38"
-	projectile_type = /obj/projectile/bullet/fallout/c38
-
-/obj/item/ammo_casing/fallout/c38/junk
-	name = "junk .38 bullet casing"
-	desc = "A makeshift .38 bullet casing."
-	projectile_type = /obj/projectile/bullet/fallout/c38/junk
-
-/obj/item/ammo_casing/fallout/c38/ap
-	name = "AP .38 bullet casing"
-	desc = "An armor piercing .38 bullet casing."
-	projectile_type = /obj/projectile/bullet/fallout/c38/ap
-
-/obj/item/ammo_casing/fallout/c38/fmj
-	name = "FMJ .38 bullet casing"
-	desc = "A full metal jacket .38 bullet casing."
-	projectile_type = /obj/projectile/bullet/fallout/c38/fmj
-
-/obj/item/ammo_casing/fallout/c38/hv
-	name = "HV .38 bullet casing"
-	desc = "A high velocity .38 bullet casing."
-	projectile_type = /obj/projectile/bullet/fallout/c38/hv
-
 //45-70
 /obj/item/ammo_casing/fallout/c4570
 	name = ".45-70 bullet casing"

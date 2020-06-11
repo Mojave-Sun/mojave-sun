@@ -19,6 +19,7 @@
 	requires_power = FALSE
 
 /area/f13/underground
+	roofType = /turf/open/floor/plating/ground/mountain
 
 /area/f13/underground/bos
 	name = "BoS"
@@ -80,6 +81,7 @@
 	name = "Klamat"
 	icon_state = "klamat"
 	requires_power = TRUE
+	roofType = /turf/open/floor/plating/ground/mountain
 
 /area/f13/klamat/mine
 	name = "Klamat mine"
@@ -161,3 +163,4 @@
 	name = "Cave"
 	icon_state = "cave"
 	outdoors = TRUE
+

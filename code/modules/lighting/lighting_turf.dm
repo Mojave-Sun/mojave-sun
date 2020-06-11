@@ -35,7 +35,7 @@
 		qdel(lighting_object,force=TRUE) //Shitty fix for lighting objects persisting after death
 
 	var/area/A = loc
-	if (!IS_DYNAMIC_LIGHTING(A) && !light_sources)
+	if (!IS_DYNAMIC_LIGHTING(A) /*&& !light_sources */)
 		return
 
 	if (!lighting_corners_initialised)
@@ -58,19 +58,27 @@
 
 // Used to get a scaled lumcount.
 /turf/proc/get_lumcount(minlum = 0, maxlum = 1)
-	if (!lighting_object)
+	if (!lighting_object && !sunlight_object)
 		return 1
 
 	var/totallums = 0
 	var/thing
 	var/datum/lighting_corner/L
+	var/totalSunFalloff
 	for (thing in corners)
 		if(!thing)
 			continue
 		L = thing
 		totallums += L.lum_r + L.lum_b + L.lum_g
+		totalSunFalloff += L.sunFalloff
 
-	totallums /= 12 // 4 corners, each with 3 channels, get the average.
+	totallums /= 12 // 4 corners, each with 3 channels, get the average
+
+	/* if we are outside, full sunlight */
+	if(sunlight_object && sunlight_object.state) /* SUNLIGHT_INDOOR is 0 */
+		totalSunFalloff = 4
+	/* sunlight / 4 corners */
+	totallums += totalSunFalloff / 4
 
 	totallums = (totallums - minlum) / (maxlum - minlum)
 
@@ -111,7 +119,7 @@
 				lighting_clear_overlay()
 
 /turf/proc/get_corners()
-	if (!IS_DYNAMIC_LIGHTING(src) && !light_sources)
+	if (!IS_DYNAMIC_LIGHTING(src) /*&& !light_sources*/)
 		return null
 	if (!lighting_corners_initialised)
 		generate_missing_corners()
@@ -121,7 +129,7 @@
 	return corners
 
 /turf/proc/generate_missing_corners()
-	if (!IS_DYNAMIC_LIGHTING(src) && !light_sources)
+	if (!IS_DYNAMIC_LIGHTING(src) /*&& !light_sources*/ )
 		return
 	lighting_corners_initialised = TRUE
 	if (!corners)
