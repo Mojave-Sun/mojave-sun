@@ -113,7 +113,7 @@
 	desc = "An easy to fit wood floor tile."
 	icon_state = "tile-wood"
 	item_state = "tile-wood"
-	turf_type = /turf/open/floor/wood
+	turf_type = /turf/open/floor/wood/f13
 	resistance_flags = FLAMMABLE
 
 //Basalt
