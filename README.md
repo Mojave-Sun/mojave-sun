@@ -15,8 +15,6 @@
 
 This is the codebase for the Fallout themed fork of SpaceStation 13 using modern /tg/station.
 
-Space Station 13 is a paranoia-laden round-based roleplaying game set against the backdrop of a nonsensical, metal death trap masquerading as a space station, with charming spritework designed to represent the sci-fi setting and its dangerous undertones. Have fun, and survive!
-
 ## DOWNLOADING
 [Downloading](.github/DOWNLOADING.md)
 
