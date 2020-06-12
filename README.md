@@ -27,7 +27,7 @@ Space Station 13 is a paranoia-laden round-based roleplaying game set against th
 ## Requirements for contributors
 [Guidelines for Contributors](.github/CONTRIBUTING.md)
 
-[/tg/station HACKMD account](https://hackmd.io/@tgstation) - Design documentation here
+[HACKMD account]() - Design documentation here
 
 [Documenting your code](.github/AUTODOC_GUIDE.md)
 
