@@ -13,7 +13,7 @@
 * **Mojave Sun Discord:** Soon
 * **Coderbus Discord:** https://discord.gg/Vh8TJp9
 
-This is the codebase for the Fallout themed fork of SpaceStation 13 using modern /tg/station.
+This is the codebase for the Fallout-themed SpaceStation 13 server using modern /tg/station.
 
 ## DOWNLOADING
 [Downloading](.github/DOWNLOADING.md)
