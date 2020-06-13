@@ -3,7 +3,7 @@
 	name = ".45 submachine gun"
 	desc = "A classic .45 submachine gun that takes an expansive 50 round drum magazine."
 	icon_state = "smg45"
-	item_state = "smg45"
+	inhand_icon_state = "smg45"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	slot_flags = 0
@@ -20,7 +20,7 @@
 	name = ".22 submachine gun"
 	desc = "A suppressed .22 submachine gun that feeds from a large pan magazine placed on top of the gun. An interesting weapon for interesting people."
 	icon_state = "smg22"
-	item_state = "smg22"
+	inhand_icon_state = "smg22"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	suppressed = 1
@@ -36,7 +36,7 @@
 	name = "10mm submachine gun"
 	desc = "A light, one handed 10mm submachine gun. Decent power in a small package."
 	icon_state = "smg10mm"
-	item_state = "smg10mm"
+	inhand_icon_state = "smg10mm"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/fallout/smgm10mm
@@ -51,7 +51,7 @@
 	name = "9mm submachine gun"
 	desc = "A fast firing, old school 9mm submachine gun. Doesn't pack a lot of punch per bullet, but that doesn't matter when you're spitting them out so fast."
 	icon_state = "smg9mm"
-	item_state = "smg9mm"
+	inhand_icon_state = "smg9mm"
 	mag_type = /obj/item/ammo_box/magazine/fallout/smgm9mm
 	fire_sound = 'fallout/sound/f13weapons/greasegun.ogg'
 	can_suppress = FALSE
@@ -65,7 +65,7 @@
 	name = "handmade submachine gun"
 	desc = "A submachine gun made from scratch that fires from a standard 9mm SMG magazine. It's poor design makes it rather hard to control."
 	icon_state = "hsmg"
-	item_state = "hsmg"
+	inhand_icon_state = "hsmg"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	spread = 16
@@ -74,7 +74,7 @@
 	name = "12.7mm submachine gun"
 	desc = "A heavy duty submachine gun chambered in 12.7mm, can't hold a lot of rounds, but they sure do pack a punch."
 	icon_state = "smg12mm"
-	item_state = "smg12mm"
+	inhand_icon_state = "smg12mm"
 	mag_type = /obj/item/ammo_box/magazine/fallout/smg12mm
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/12mm/m12mm2.ogg'
 	can_suppress = FALSE
@@ -89,7 +89,7 @@
 	name = "assault rifle"
 	desc = "A general purpose, standard automatic assault rifle chambered in 5.56. Commonly used by pre-war US military forces."
 	icon_state = "assaultrifle"
-	item_state = "assaultrifle"
+	inhand_icon_state = "assaultrifle"
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/fallout/r20
 	fire_sound = 'fallout/sound/f13weapons/arfire.ogg'
@@ -105,7 +105,7 @@
 	name = "Infiltrator"
 	desc = "A heavily modified and customized assault rifle with a scope and suppressor as it's most notable additions. Sacrifices a little bit of damage for a little more control."
 	icon_state = "infiltrator"
-	item_state = "infiltrator"
+	inhand_icon_state = "infiltrator"
 	suppressed = 1
 	extra_damage = 20
 	extra_penetration = 0
@@ -119,7 +119,7 @@
 	name = "Chinese assault rifle"
 	desc = "A Chinese made assault rifle chambered in the heavier 7.62 round, packs a bigger punch in exchange for reduced accuracy."
 	icon_state = "chinesear"
-	item_state = "chinesear"
+	inhand_icon_state = "chinesear"
 	mag_type = /obj/item/ammo_box/magazine/fallout/ar762
 	fire_sound = 'fallout/sound/f13weapons/chinesearfire.ogg'
 	extra_penetration = 10
@@ -129,14 +129,14 @@
 	name = "handmade assault rifle"
 	desc = "A decent quality handmade assault rifle chambered in 7.62."
 	icon_state = "handmadear"
-	item_state = "handmadear"
+	inhand_icon_state = "handmadear"
 	extra_penetration = 0
 
 /obj/item/gun/ballistic/automatic/fallout/marksman
 	name = "marksman carbine"
 	desc = "A 5.56 carbine with a scope attached to help in long range combat. Packs a good punch for 5.56 rounds, but at the cost of a slower rate of fire."
 	icon_state = "marksman"
-	item_state = "marksman"
+	inhand_icon_state = "marksman"
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/fallout/r20
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/marksman/marksman2.ogg'
@@ -155,14 +155,14 @@
 	name = "All-American"
 	desc = "A unique and customized marksman carbine. Improved rifling and similar modifications allow for higher damage and an improved paint job allows for higher patriotism."
 	icon_state = "allamerican"
-	item_state = "allamerican"
+	inhand_icon_state = "allamerican"
 	extra_damage = 40
 
 /obj/item/gun/ballistic/automatic/fallout/marksman/service
 	name = "service rifle"
 	desc = "A 5.56 semi-automatic rifle manufactured by and for the NCR."
 	icon_state = "service"
-	item_state = "service"
+	inhand_icon_state = "service"
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/service/service3.ogg'
 	fire_delay = 4
 	extra_damage = 25
@@ -173,7 +173,7 @@
 	name = "Survivalist rifle"
 	desc = "A unique, heavy duty service rifle. Fires slower but packs a much heavier punch. Has definitely seen it's fair share of battle."
 	icon_state = "survivalist"
-	item_state = "survivalist"
+	inhand_icon_state = "survivalist"
 	fire_delay = 5
 	extra_damage = 35
 	extra_penetration = 10
@@ -182,7 +182,7 @@
 	name = ".22 police rifle"
 	desc = "A semi-automatic .22 caliber rifle mostly used by pre-war police forces."
 	icon_state = "rugerpolice"
-	item_state = "rugerpolice"
+	inhand_icon_state = "rugerpolice"
 	mag_type = /obj/item/ammo_box/magazine/fallout/r22
 	fire_sound = 'fallout/sound/f13weapons/varmint_rifle.ogg'
 	fire_delay = 4
@@ -193,7 +193,7 @@
 	name = "sniper rifle"
 	desc = "A semi-automatic, high powered .308 sniper rifle. Perfect weapon for a determined assassin."
 	icon_state = "sniper"
-	item_state = "sniper"
+	inhand_icon_state = "sniper"
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/sniper/sniper2.ogg'
 	fire_delay = 6
 	extra_damage = 45

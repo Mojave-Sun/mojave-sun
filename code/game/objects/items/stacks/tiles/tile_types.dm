@@ -112,7 +112,7 @@
 	singular_name = "wood floor tile"
 	desc = "An easy to fit wood floor tile."
 	icon_state = "tile-wood"
-	item_state = "tile-wood"
+	inhand_icon_state = "tile-wood"
 	turf_type = /turf/open/floor/wood/f13
 	resistance_flags = FLAMMABLE
 

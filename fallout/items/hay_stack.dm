@@ -11,7 +11,7 @@ GLOBAL_LIST_INIT(hay_recipes, list ( \
 	singular_name = "hay stalk"
 	icon = 'fallout/icons/objects/items.dmi'
 	icon_state = "sheet-hay_3" //Holy someone made this sprite so tiny and having to pixel hunt for, i'll just leave it at the big sprite
-	item_state = "sheet-hay_3"
+	inhand_icon_state = "sheet-hay_3"
 	force = 1
 	throwforce = 1
 	throw_speed = 1
