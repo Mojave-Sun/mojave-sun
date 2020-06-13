@@ -504,6 +504,15 @@
 	category = list("initial", "Medical", "Tool Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SCIENCE
 
+/datum/design/bonesetter
+	name = "Bonesetter"
+	id = "bonesetter"
+	build_type = AUTOLATHE | PROTOLATHE
+	materials = list(/datum/material/iron = 1000)
+	build_path = /obj/item/bonesetter
+	category = list("initial", "Medical", "Tool Designs")
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SCIENCE
+
 /datum/design/surgicaldrill
 	name = "Surgical Drill"
 	id = "surgicaldrill"
@@ -613,6 +622,14 @@
 	build_type = AUTOLATHE
 	materials = list(/datum/material/iron = 500, /datum/material/glass = 50)
 	build_path = /obj/item/assembly/igniter
+	category = list("initial", "Misc")
+
+/datum/design/condenser
+	name = "Condenser"
+	id = "condenser"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron=250, /datum/material/glass=300)
+	build_path = /obj/item/assembly/igniter/condenser
 	category = list("initial", "Misc")
 
 /datum/design/signaler
@@ -1075,14 +1092,6 @@
 	build_path = /obj/item/toy/balloon
 	category = list("hacked", "Misc")
 
-/datum/design/toy_meteor
-	name = "Plastic Toy Meteor"
-	id = "toy_meteor"
-	build_type = AUTOLATHE
-	materials = list(/datum/material/plastic = 1000)
-	build_path = /obj/item/toy/minimeteor
-	category = list("hacked", "Misc")
-
 /datum/design/toy_armblade
 	name = "Plastic Armblade"
 	id = "toy_armblade"
@@ -1130,3 +1139,12 @@
 	materials = list(/datum/material/plastic = 500)
 	build_path = /obj/item/stack/sticky_tape
 	category = list("initial", "Misc")
+
+/datum/design/sticky_tape/surgical
+	name = "Surgical Tape"
+	id = "surgical_tape"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/plastic = 500)
+	build_path = /obj/item/stack/sticky_tape/surgical
+	category = list("initial", "Medical")
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL

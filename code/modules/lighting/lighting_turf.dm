@@ -118,16 +118,6 @@
 			else
 				lighting_clear_overlay()
 
-/turf/proc/get_corners()
-	if (!IS_DYNAMIC_LIGHTING(src) /*&& !light_sources*/)
-		return null
-	if (!lighting_corners_initialised)
-		generate_missing_corners()
-	if (has_opaque_atom)
-		return null // Since this proc gets used in a for loop, null won't be looped though.
-
-	return corners
-
 /turf/proc/generate_missing_corners()
 	if (!IS_DYNAMIC_LIGHTING(src) /*&& !light_sources*/ )
 		return
@@ -140,5 +130,3 @@
 			continue
 
 		corners[i] = new/datum/lighting_corner(src, GLOB.LIGHTING_CORNER_DIAGONAL[i])
-
-
