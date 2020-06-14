@@ -1,6 +1,6 @@
 ## Mojave Sun codebase
 
-[![Build Status](https://travis-ci.com/RobustTeam/tg-ashcloud.svg?branch=master)](https://travis-ci.com/github/Mojave-Sun/mojave-sun)
+[![Build Status](https://travis-ci.com/Mojave-Sun/mojave-sun.svg?branch=master)](https://travis-ci.com/github/Mojave-Sun/mojave-sun)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/Mojave-Sun/mojave-sun.svg)](http://isitmaintained.com/project/Mojave-Sun/mojave-sun "Percentage of issues still open")
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/Mojave-Sun/mojave-sun.svg)](http://isitmaintained.com/project/Mojave-Sun/mojave-sun "Average time to resolve an issue")
 
