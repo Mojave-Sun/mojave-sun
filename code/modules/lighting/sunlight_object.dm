@@ -107,7 +107,7 @@ Sunlight System
 	else
 		var/turf/ceiling = get_step_multiz(src, UP)
 		if(ceiling)
-			roofType = !isopenspace(ceiling) ? ceiling : ceiling.GetCeilingTurf()
+			roofType = !istransparentturf(ceiling) ? ceiling : ceiling.GetCeilingTurf()
 	return roofType
 
 /atom/movable/sunlight_object/proc/DisableSunlight()
@@ -186,7 +186,7 @@ Sunlight System
 	var/list/corners  = list() /* corners we are currently affecting */
 
 	for(T in view(CEILING(GLOB.GLOBAL_LIGHT_RANGE, 1), source_turf))
-		for(C in T.get_corners())
+		for(C in T.generate_missing_corners())
 			corners |= C
 			/* temp master? */
 		turfs += T

@@ -11,7 +11,7 @@
 	name = "AER9 Laser Rifle"
 	desc = "A sturdy and advanced military grade pre-war service laser rifle"
 	icon_state = "laser"
-	item_state = "laser-rifle9"
+	inhand_icon_state = "laser-rifle9"
 	ammo_type = list(/obj/item/ammo_casing/energy/fallout/laser/lasgun)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	w_class = WEIGHT_CLASS_HUGE
@@ -21,7 +21,7 @@
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
 	icon = 'fallout/icons/objects/guns/energy.dmi'
 	icon_state = "AEP7"
-	item_state = "laser-pistol"
+	inhand_icon_state = "laser-pistol"
 	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
@@ -33,7 +33,7 @@
 	name = "Tri-beam Laser Rifle"
 	desc = "A modified AER9 equipped with a refraction kit that spreads its bolts."
 	icon = 'fallout/icons/objects/guns/energy.dmi'
-	item_state = "laser-rifle9"
+	inhand_icon_state = "laser-rifle9"
 	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
 	ammo_type = list(/obj/item/ammo_casing/energy/fallout/laser/scatter)
@@ -43,7 +43,7 @@
 /obj/item/gun/energy/fallout/laser/plasma
 	name ="A3-20 Plasma Rifle"
 	icon = 'fallout/icons/objects/guns/energy.dmi'
-	item_state = "plasma"
+	inhand_icon_state = "plasma"
 	icon_state = "plasma"
 	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
@@ -55,7 +55,7 @@
 /obj/item/gun/energy/fallout/laser/plasma/scatter
 	name = "A3e-20b Multiplas Rifle"
 	icon = 'fallout/icons/objects/guns/energy.dmi'
-	item_state = "multiplas"
+	inhand_icon_state = "multiplas"
 	icon_state = "multiplas"
 	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'
@@ -66,7 +66,7 @@
 /obj/item/gun/energy/fallout/laser/plasma/pistol
 	name ="MPL-A Plasma Pistol"
 	icon = 'fallout/icons/objects/guns/energy.dmi'
-	item_state = "plasma-pistol"
+	inhand_icon_state = "plasma-pistol"
 	icon_state = "plasma-pistol"
 	lefthand_file = 'fallout/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/weapons/guns_righthand.dmi'

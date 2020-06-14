@@ -3,7 +3,7 @@
 	name = "lever action shotgun"
 	desc = "A trusty lever action shotgun with a tube supporting a maximum of five shells and a reinforced grip for bashing in heads."
 	icon_state = "levershot"
-	item_state = "levershot"
+	inhand_icon_state = "levershot"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lever
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/levershot/levershot2.ogg'
 	w_class = WEIGHT_CLASS_BULKY
@@ -15,7 +15,7 @@
 	name = "hunting shotgun"
 	desc = "A pre-war pump action shotgun with an extended tube capable of holding eight shells and a bulky stock that excels in melee combat."
 	icon_state = "huntingshot"
-	item_state = "huntingshot"
+	inhand_icon_state = "huntingshot"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/huntingshot
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/huntingshot/huntingshot2.ogg'
 	w_class = WEIGHT_CLASS_BULKY
@@ -27,7 +27,7 @@
 	name = "trail carbine"
 	desc = "A lever action repeater chambered for .44 Magnum with a solid capacity."
 	icon_state = "trail"
-	item_state = "trail"
+	inhand_icon_state = "trail"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube44
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -40,7 +40,7 @@
 	name = "cowboy repeater"
 	desc = "A classic lever action repeater chambered for .357."
 	icon_state = "cowboy"
-	item_state = "cowboy"
+	inhand_icon_state = "cowboy"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube357
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -53,7 +53,7 @@
 	name = "brush gun"
 	desc = "A lever action repeater chambered for the deadly .45-70 cartridge. Can't carry a lot of rounds and doesn't fire very fast, but with so much damage does that really matter?"
 	icon_state = "brush"
-	item_state = "brush"
+	inhand_icon_state = "brush"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube4570
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -66,7 +66,7 @@
 	name = "battle rifle"
 	desc = "A very old but very reliable semi-automatic, clip fed rifle from long before the war. Chambered for .308."
 	icon_state = "battler"
-	item_state = "battler"
+	inhand_icon_state = "battler"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/battler
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -79,7 +79,7 @@
 	name = "SKS"
 	desc = "An old European semi-automatic rifle chambered for 7.62 rounds and normally fed from 10 round stripper clips."
 	icon_state = "sks"
-	item_state = "sks"
+	inhand_icon_state = "sks"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/sks
 	fire_sound = 'fallout/sound/f13weapons/gunsounds/sks/sks1.ogg'
 	extra_damage = 30
@@ -90,7 +90,7 @@
 	name = "Scoped SKS"
 	desc = "An SKS with a scope attached and some improved rifling for better penetration."
 	icon_state = "scoped_sks"
-	item_state = "scoped_sks"
+	inhand_icon_state = "scoped_sks"
 	extra_penetration = 15
 	zoomable = TRUE
 	zoom_amt = 10

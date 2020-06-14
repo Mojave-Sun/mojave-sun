@@ -2,7 +2,7 @@
 	icon = 'fallout/icons/objects/hamradio.dmi'
 	name = "clip-on walkie talkie"
 	icon_state = "handradio"
-	item_state = "handradio_"
+	inhand_icon_state = "handradio_"
 	desc = "A basic handheld radio that communicates over a relatively long range, and is proven to be 254% better than yelling loudly."
 	dog_fashion = /datum/dog_fashion/back
 
