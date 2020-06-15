@@ -54,7 +54,6 @@ Sunlight System
 	var/turf/source_turf
 	var/list/datum/lighting_corner/affectingCorners
 
-
 /atom/movable/sunlight_object/Destroy(var/force)
 	if (force)
 		var/turf/badTurf = get_turf(source_turf)
@@ -186,7 +185,11 @@ Sunlight System
 	var/list/corners  = list() /* corners we are currently affecting */
 
 	for(T in view(CEILING(GLOB.GLOBAL_LIGHT_RANGE, 1), source_turf))
-		for(C in T.generate_missing_corners())
+		if(T.has_opaque_atom) /* get_corners used to do opacity checks for arse */
+			continue
+		if (!T.lighting_corners_initialised)
+			T.generate_missing_corners()
+		for(C in T.corners)
 			corners |= C
 			/* temp master? */
 		turfs += T
