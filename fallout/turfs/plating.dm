@@ -124,8 +124,9 @@
 	name = "snow"
 	desc = "Fresh powder."
 	baseturfs = /turf/open/floor/plating/ground/snow
-	icon_state = "snow"
-	icon = 'icons/turf/snow.dmi'
+	icon_state = "weeds"
+	icon = 'icons/obj/smooth_structures/alien/weeds1.dmi'
+	smooth = SMOOTH_TRUE
 	slowdown = 1
 	var/obj/structure/flora/turfPlant = null
 	var/digResult = /obj/item/stack/sheet/mineral/snow
@@ -133,10 +134,11 @@
 
 /turf/open/floor/plating/ground/snow/Initialize()
 	. = ..()
+	/*
 	icon_state = "snow[rand(1,12)]"
 	//If no fences, machines (soil patches are machines), etc. try to plant grass
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
-		plantGrass()
+		plantGrass()*/
 
 /turf/open/floor/plating/ground/snow/attackby(obj/item/W, mob/user, params)
 	. = ..()
