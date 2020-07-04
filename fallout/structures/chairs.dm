@@ -71,3 +71,4 @@
     name = "ergonomic chair"
     desc = "Even in a nuclear wasteland, one should never neglect their back."
     icon_state = "ergo_chair"
+    
