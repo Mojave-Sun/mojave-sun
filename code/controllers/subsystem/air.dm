@@ -37,7 +37,11 @@ SUBSYSTEM_DEF(air)
 
 	var/map_loading = TRUE
 	var/list/queued_for_activation
+#ifdef HALT_ATMOS
+	can_fire = FALSE
+#endif
 
+#ifndef HALT_ATMOS
 /datum/controller/subsystem/air/stat_entry(msg)
 	msg += "C:{"
 	msg += "AT:[round(cost_turfs,1)]|"
@@ -57,8 +61,9 @@ SUBSYSTEM_DEF(air)
 	msg += "AS:[active_super_conductivity.len]|"
 	msg += "AT/MS:[round((cost ? active_turfs.len/cost : 0),0.1)]"
 	..(msg)
+#endif
 
-
+#ifndef HALT_ATMOS
 /datum/controller/subsystem/air/Initialize(timeofday)
 	map_loading = FALSE
 	setup_allturfs()
@@ -66,6 +71,7 @@ SUBSYSTEM_DEF(air)
 	setup_pipenets()
 	gas_reactions = init_gas_reactions()
 	return ..()
+#endif
 
 
 /datum/controller/subsystem/air/fire(resumed = 0)
