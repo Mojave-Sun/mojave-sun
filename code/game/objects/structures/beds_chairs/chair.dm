@@ -156,6 +156,7 @@
 	buildstackamount = 2
 	item_chair = null
 	var/mutable_appearance/armrest
+	var/armrest_icon = "comfychair_armrest"
 
 /obj/structure/chair/comfy/Initialize()
 	armrest = GetArmrest()
@@ -163,7 +164,7 @@
 	return ..()
 
 /obj/structure/chair/comfy/proc/GetArmrest()
-	return mutable_appearance('icons/obj/chairs.dmi', "comfychair_armrest")
+	return mutable_appearance(icon, armrest_icon)
 
 /obj/structure/chair/comfy/Destroy()
 	QDEL_NULL(armrest)
