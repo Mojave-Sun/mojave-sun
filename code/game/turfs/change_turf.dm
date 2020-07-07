@@ -81,6 +81,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	var/old_dynamic_lighting = dynamic_lighting
 	var/old_affecting_lights = affecting_lights
 	var/old_lighting_object = lighting_object
+	var/old_sunlight_object = sunlight_object
 	var/old_corners = corners
 
 	var/old_exl = explosion_level
@@ -132,6 +133,9 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 
 		for(var/turf/open/space/S in RANGE_TURFS(1, src)) //RANGE_TURFS is in code\__HELPERS\game.dm
 			S.update_starlight()
+
+	if(SSsunlight.initialized)
+		sunlight_object = old_sunlight_object
 
 	update_multiz()
 
