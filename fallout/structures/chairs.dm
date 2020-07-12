@@ -29,11 +29,6 @@
     desc = "An antique wooden chair with a large, plush red cushion"
     icon_state = "wood_chair_padded"
 
-/obj/structure/chair/f13/captain
-    name = "captain's chair"
-    desc = "Show everyone who is in charge."
-    icon_state = "captain_chair"
-
 /obj/structure/chair/comfy/f13
     name = "base class Fallout comfy chair"
     desc = "Scream at the coders if you see this."
@@ -52,6 +47,24 @@
     icon_state = "retro_chair"
     armrest_icon = "retro_chair_armrest"
 
+/obj/structure/chair/comfy/f13/captain
+    name = "captain's chair"
+    desc = "Show everyone who is in charge."
+    icon_state = "captain_chair"
+    armrest_icon = "captain_chair_armrest"
+
+/obj/structure/chair/comfy/f13/ergo
+    name = "ergonomic chair"
+    desc = "Even in a nuclear wasteland, one should never neglect their back."
+    icon_state = "ergo_chair"
+    armrest_icon = "ergo_chair_armrest"
+    anchored = FALSE
+
+/obj/structure/chair/comfy/f13/ergo/Moved()
+	. = ..()
+	if(has_gravity())
+		playsound(src, 'sound/effects/roll.ogg', 100, TRUE)
+
 /obj/structure/chair/office/f13
     name = "base class Fallout office chair"
     desc = "Scream at the coders if you see this."
@@ -62,12 +75,10 @@
     desc = "Still spins."
     icon_state = "office_chair"
 
+/obj/structure/chair/office/f13/standard/blue
+    icon_state = "office_chair_blue"
+
 /obj/structure/chair/office/f13/standard/broken
     name = "office chair"
     desc = "Doesn't spin."
     icon_state = "office_chair_broken"
-
-/obj/structure/chair/office/f13/ergo
-    name = "ergonomic chair"
-    desc = "Even in a nuclear wasteland, one should never neglect their back."
-    icon_state = "ergo_chair"
