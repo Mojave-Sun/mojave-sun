@@ -46,7 +46,7 @@ GLOBAL_LIST_EMPTY(sunlight_objects)
 
 
 SUBSYSTEM_DEF(sunlight)
-	name = "sunlight"
+	name = "Sunlight"
 	wait = LIGHTING_INTERVAL
 	flags = SS_TICKER
 	init_order = INIT_ORDER_SUNLIGHT
