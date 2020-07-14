@@ -225,6 +225,14 @@
 		. = TRUE //in case we ever need this to return if we spawned
 		return .
 
+/turf/open/floor/plating/ground/dirt
+	name = "dirt"
+	desc = "Upon closer examination, it's still dirt."
+	baseturfs = /turf/open/floor/plating/ground/dirt
+	icon = 'icons/turf/floors.dmi'
+	icon_state = "dirt"
+	slowdown = 1
+
 /turf/open/floor/plating/ground/road
 	name = "\proper road"
 	desc = "A stretch of road."
