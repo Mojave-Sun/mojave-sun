@@ -1,8 +1,6 @@
 <!-- HEY LISTEN!!! -->
 
-<!-- WHEN MAKING A NEW PR TO THIS GIT, BE ABSOLUTELY SURE THE BASE REPO YOU'RE COMMITING TO ISN'T tgstation/tgstation IT SHOULD BE RobustTeam/tg-ashcloud -->
-
-<!-- In edition changelogs won't be ultilized due to the way pulling from upstream tg will heavily filter out the old ones; instead change the changelog on the discord if we ever make one -->
+<!-- Changelogs will not be used for now.  We will likely require changelogs when we launch. -->
 
 <!-- Write **BELOW** The Headers and **ABOVE** The comments else it may not be viewable. -->
 <!-- You can view Contributing.MD for a detailed description of the pull request process. -->
