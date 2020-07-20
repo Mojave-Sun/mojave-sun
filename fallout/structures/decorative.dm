@@ -8,29 +8,18 @@
 
 /obj/structure/dresser/f13
 	name = "dresser"
-	desc = "A nicely-crafted wooden dresser. It's filled with lots of undies."
+	desc = "A nicely-crafted steel dresser. It's filled with lots of undies."
 	icon = 'fallout/icons/structure/circular_cabinets.dmi'
-	var/dresser_type = "none"
-/obj/structure/dresser/f13/attackby(obj/item/I, mob/user, params)
-	if(I.tool_behaviour == TOOL_WRENCH)
-		to_chat(user, "<span class='notice'>You begin to [anchored ? "unwrench" : "wrench"] [src].</span>")
-		if(I.use_tool(src, user, 20, volume=50))
-			to_chat(user, "<span class='notice'>You successfully [anchored ? "unwrench" : "wrench"] [src].</span>")
-			setAnchored(!anchored)
-	else
-		return ..()
+	var/dresser_type = "pristine_circabinet_orange"
 
-/obj/structure/dresser/f13/deconstruct(disassembled = TRUE)
-	new /obj/item/stack/sheet/mineral/wood(drop_location(), 10)
-	qdel(src)
-
-/obj/structure/dresser/f13/attack_hand(mob/user, dresser_type)
-	icon_state = "[icon_state]-open"
+/obj/structure/dresser/f13/attack_hand(mob/user)
+	icon_state = "[dresser_type]-open"
 	update_icon()
 	. = ..()
 	if(.)
 		return
 	if(!Adjacent(user))//no tele-grooming
+		icon_state = "[dresser_type]"
 		return
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
@@ -59,7 +48,6 @@
 				var/new_socks = input(user, "Select your socks", "Changing") as null|anything in GLOB.socks_list
 				if(new_socks)
 					H.socks= new_socks
-
 		icon_state = "[dresser_type]"
 		update_icon()
 		add_fingerprint(H)
