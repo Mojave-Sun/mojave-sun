@@ -19,7 +19,7 @@
 	if(.)
 		return
 	if(!Adjacent(user))//no tele-grooming
-
+	icon_state = "[dresser_type]"
 		return
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
