@@ -5,5 +5,24 @@
 	"shuttles": {
 	    "cargo": "cargo_delta"
     },
-	"traits": [{"Up" : 1, "Linkage" : "Cross", "Baseturf" : "/turf/open/floor/plating/ground/mountain"}, {"Up" : 1, "Down" : -1, "Baseturf" : "/turf/open/transparent/openspace", "Linkage" : "Cross"}, {"Down" : -1, "Baseturf" : "/turf/open/transparent/openspace", "Linkage" : "Cross"}]
-	}
+	"traits": [
+        {
+            "Up" : 1, 
+            "Linkage" : "Cross",
+            "Gravity" : true
+        }, 
+        {
+            "Up" : 1, 
+            "Down" : -1, 
+            "Baseturf" : "/turf/open/transparent/openspace", 
+            "Linkage" : "Cross",
+            "Gravity" : true
+        }, 
+        {
+            "Down" : -1,
+            "Baseturf" : "/turf/open/transparent/openspace", 
+            "Linkage" : "Cross",
+            "Gravity" : true
+        }
+    ]
+}
