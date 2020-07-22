@@ -13,7 +13,7 @@
 
 /turf/closed/mineral/random/f13/Initialize()
 	. = ..()
-	underlays += mutable_appearance('fallout/icons/turf/mining.dmi', "rockfloor1", TURF_LAYER, FLOOR_PLANE)
+	underlays += mutable_appearance('fallout/icons/turf/mining.dmi', "rockfloor1", TURF_LAYER)
 	pixel_x = 4
 	pixel_y = 4
 
@@ -28,4 +28,4 @@
 
 /turf/closed/indestructible/rock/f13/Initialize()
 	. = ..()
-	underlays += mutable_appearance('fallout/icons/turf/mining.dmi', "rockfloor1", TURF_LAYER, FLOOR_PLANE)
+	underlays += mutable_appearance('fallout/icons/turf/mining.dmi', "rockfloor1", TURF_LAYER)
