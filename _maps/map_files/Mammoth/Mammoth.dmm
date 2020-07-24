@@ -199,7 +199,9 @@
 /area/f13/underground/mountain)
 "ach" = (
 /obj/structure/table,
-/obj/item/pen,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/plasteel/f13/blue/_dirty,
 /area/f13/sunny_dale)
 "acj" = (
@@ -220,15 +222,13 @@
 /turf/open/floor/plating/ground/mountain,
 /area/f13/underground/mountain)
 "acq" = (
-/obj/structure/chair/office{
-	dir = 1
-	},
+/obj/structure/table,
+/obj/item/pen,
 /turf/open/floor/plasteel/f13/blue/_dirty,
 /area/f13/sunny_dale)
 "acu" = (
-/obj/structure/table,
-/obj/machinery/light/small{
-	dir = 4
+/obj/structure/chair/office{
+	dir = 1
 	},
 /turf/open/floor/plasteel/f13/blue/_dirty,
 /area/f13/sunny_dale)
@@ -260,9 +260,14 @@
 /area/f13/sunny_dale)
 "adu" = (
 /obj/structure/closet/cardboard,
+/obj/effect/spawner/lootdrop/costume,
 /turf/open/floor/plasteel/f13/blue/_dirty,
 /area/f13/sunny_dale)
 "adw" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plasteel/f13/blue/_dirty,
+/area/f13/sunny_dale)
+"adz" = (
 /obj/structure/closet,
 /obj/item/clothing/under/rank/prisoner,
 /obj/item/clothing/shoes/sneakers/orange,
@@ -272,16 +277,11 @@
 	},
 /turf/open/floor/plasteel/f13/blue/_dirty,
 /area/f13/sunny_dale)
-"adz" = (
+"adD" = (
 /obj/structure/closet,
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/plasteel/f13/blue/_dirty,
-/area/f13/sunny_dale)
-"adD" = (
-/obj/structure/closet/cardboard,
-/obj/effect/spawner/lootdrop/costume,
 /turf/open/floor/plasteel/f13/blue/_dirty,
 /area/f13/sunny_dale)
 "adF" = (
@@ -51578,15 +51578,15 @@ aae
 aae
 aae
 aae
+ahd
+ahd
+ahd
+ahd
+ahd
+ahd
+ahd
+ahd
 aae
-ahd
-ahd
-ahd
-ahd
-ahd
-ahd
-ahd
-ahd
 aae
 aae
 aae
@@ -51840,7 +51840,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 kCd
 wAi
@@ -51849,6 +51848,7 @@ ahd
 kCd
 kCd
 ahd
+aae
 aae
 aae
 aae
@@ -52102,7 +52102,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 abY
 mqZ
@@ -52111,6 +52110,7 @@ xIX
 kCd
 kCd
 ahd
+aae
 aae
 aae
 aae
@@ -52364,7 +52364,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 kCd
 dKP
@@ -52373,6 +52372,7 @@ ahd
 kCd
 kCd
 ahd
+aae
 aae
 aae
 aae
@@ -52626,7 +52626,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 vQO
 vQO
@@ -52635,6 +52634,7 @@ ahd
 fLC
 npZ
 ahd
+aae
 aae
 aae
 aae
@@ -52888,7 +52888,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 acd
 kCd
@@ -52897,6 +52896,7 @@ ahd
 kCd
 kCd
 ahd
+aae
 aae
 aae
 aae
@@ -53150,15 +53150,15 @@ aae
 aae
 aae
 aae
-aae
 ahd
 mqZ
-acq
+acu
 kCd
 xIX
 kCd
 kCd
 ahd
+aae
 aae
 aae
 aae
@@ -53412,15 +53412,15 @@ aae
 aae
 aae
 aae
-aae
 ahd
+acq
 ach
-acu
 mqZ
 ahd
 kCd
 kCd
 ahd
+aae
 aae
 aae
 aae
@@ -53671,18 +53671,18 @@ aae
 aae
 aae
 aae
+ahd
+ahd
+ahd
+ahd
+ahd
+ahd
+ahd
+ahd
+kCd
+kCd
+ahd
 aae
-ahd
-ahd
-ahd
-ahd
-ahd
-ahd
-ahd
-ahd
-kCd
-kCd
-ahd
 aae
 aae
 aae
@@ -53933,7 +53933,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 abK
 kCd
@@ -53945,6 +53944,7 @@ ahd
 kCd
 kCd
 ahd
+aae
 aae
 aae
 aae
@@ -54195,7 +54195,6 @@ aae
 aae
 aae
 aae
-aae
 abJ
 kCd
 kCd
@@ -54212,6 +54211,7 @@ ahd
 ahd
 ahd
 ahd
+aae
 aae
 aae
 aae
@@ -54457,7 +54457,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 abP
 qDX
@@ -54470,10 +54469,11 @@ fLC
 npZ
 ahd
 acU
-adw
+adz
 acU
 acU
 ahd
+aae
 aae
 aae
 aae
@@ -54719,7 +54719,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 ahd
 ahd
@@ -54736,6 +54735,7 @@ kCd
 kCd
 kCd
 ahd
+aae
 aae
 aae
 aae
@@ -54981,7 +54981,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 abK
 kCd
@@ -54998,6 +54997,7 @@ kCd
 kCd
 adF
 ahd
+aae
 aae
 aae
 aae
@@ -55243,7 +55243,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 kCd
 kCd
@@ -55260,6 +55259,7 @@ kCd
 nyJ
 adH
 ahd
+aae
 aae
 aae
 aae
@@ -55505,7 +55505,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 abP
 qDX
@@ -55522,6 +55521,7 @@ kCd
 kCd
 adU
 ahd
+aae
 aae
 aae
 aae
@@ -55767,7 +55767,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 ahd
 ahd
@@ -55784,6 +55783,7 @@ kCd
 kCd
 kCd
 ahd
+aae
 aae
 aae
 aae
@@ -56029,7 +56029,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 abK
 kCd
@@ -56042,10 +56041,11 @@ fLC
 kCd
 ahd
 xNp
-adz
+adD
 xNp
 xNp
 ahd
+aae
 aae
 aae
 aae
@@ -56291,7 +56291,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 kCd
 kCd
@@ -56308,6 +56307,7 @@ ahd
 ahd
 ahd
 ahd
+aae
 aae
 aae
 aae
@@ -56553,7 +56553,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 abP
 qDX
@@ -56567,9 +56566,10 @@ kCd
 ahd
 kCd
 kCd
-adu
+adw
 adY
 ahd
+aae
 aae
 aae
 aae
@@ -56815,7 +56815,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 ahd
 ahd
@@ -56832,6 +56831,7 @@ kCd
 kCd
 aeb
 ahd
+aae
 aae
 aae
 aae
@@ -57084,16 +57084,16 @@ aae
 aae
 aae
 aae
-aae
 ahd
 kCd
 kCd
 ahd
+adw
 adu
-adD
 kCd
 aei
 ahd
+aae
 aae
 aae
 aae
@@ -57346,7 +57346,6 @@ aae
 aae
 aae
 aae
-aae
 ahd
 fLC
 npZ
@@ -57356,6 +57355,7 @@ ahd
 ahd
 ahd
 ahd
+aae
 aae
 aae
 aae
@@ -57608,11 +57608,11 @@ aae
 aae
 aae
 aae
+ahd
+acA
+acA
+ahd
 aae
-ahd
-acA
-acA
-ahd
 aae
 aae
 aae
@@ -57870,11 +57870,11 @@ aae
 aae
 aae
 aae
+ahd
+acA
+acA
+ahd
 aae
-ahd
-acA
-acA
-ahd
 aae
 aae
 aae
@@ -58132,11 +58132,11 @@ aae
 aae
 aae
 aae
+ahd
+acA
+acA
+ahd
 aae
-ahd
-acA
-acA
-ahd
 aae
 aae
 aae
@@ -58394,11 +58394,11 @@ aae
 aae
 aae
 aae
+ahd
+ahd
+ahd
+ahd
 aae
-ahd
-ahd
-ahd
-ahd
 aae
 aae
 aae
