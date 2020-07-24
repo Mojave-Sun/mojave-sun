@@ -33,7 +33,7 @@
 	desc = "A crate designed for the rigours of vault life. This one's got the Vault-Tec logo, in case you forgot who made it. Looks like it didn't handle life outside too well."
 	icon = "vaultbig"
 
-/obj/structure/closet/crate/fallout/vault_tec/big
+/obj/structure/closet/crate/fallout/vault_tec/big/pristine
 	name = "big Vault-Tec crate"
 	desc = "A crate designed for the rigours of vault life. This one's got the Vault-Tec logo, in case you forgot who made it."
 	icon = "vaultbigclean"
