@@ -9,7 +9,7 @@ GLOBAL_LIST_INIT(hay_recipes, list ( \
 	name = "hay"
 	desc = "A bundle of hay. Food for livestock, and useful for weaving. Hail the Wickerman."
 	singular_name = "hay stalk"
-	icon = 'fallout/icons/objects/items.dmi'
+	icon = 'fallout/icons/objects/stack_objects.dmi'
 	icon_state = "sheet-hay_3" //Holy someone made this sprite so tiny and having to pixel hunt for, i'll just leave it at the big sprite
 	inhand_icon_state = "sheet-hay_3"
 	force = 1
