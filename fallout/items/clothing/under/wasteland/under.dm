@@ -160,15 +160,21 @@
 	desc = "A fancy shirt and pants worn by Canaanite missionaries."
 	icon_state = "canaan"
 	inhand_icon_state = "canaan"
-	
+
 /obj/item/clothing/under/fallout/wasteland/mammoth
 	name = "Mammoth outfit"
 	desc = "A woven shirt and pants given to residents of the town of Mammoth."
 	icon_state = "mammoth"
 	inhand_icon_state = "mammoth"
-	
+
 /obj/item/clothing/under/fallout/wasteland/hubologist
 	name = "Hubologist outfit"
 	desc = "Light robes typically worn under a Hubologist's heavier main robes."
 	icon_state = "hubologist"
 	inhand_icon_state = "hubologist"
+
+/obj/item/clothing/under/fallout/wasteland/heeledsuit
+	name = "well-heeled gambler suit"
+	desc = "Hey, theres the high-roller!"
+	icon_state = "heeledsuit"
+	inhand_icon_state = "det_suit"
