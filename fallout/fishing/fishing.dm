@@ -41,8 +41,8 @@
 			getFished()
 
 /turf/open/floor/plating/ice/hole/proc/getFished()
-var/SpawnFish = pickweight(fish)(src, 5)
-new spawnFish(src)
+	var/spawnFish = pickweight(fish)
+	new spawnFish(src)
 	fished = TRUE
 
 /turf/open/floor/plating/ice/hole/proc/can_fish(mob/user)
