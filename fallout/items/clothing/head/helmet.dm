@@ -117,7 +117,7 @@
 	icon_state = "canaan"
 	inhand_icon_state = "canaan"
 
-/obj/item/clothing/head/helmet/fallout/heeledhat
+/obj/item/clothing/head/helmet/fallout/cowboy/heeledhat
 	name = "well-heeled gambler hat"
 	desc = "A snappy fedora for snarky cardsharks."
 	icon_state = "heeledhat"
