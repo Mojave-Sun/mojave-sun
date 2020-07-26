@@ -177,4 +177,4 @@
 	name = "well-heeled gambler suit"
 	desc = "Hey, theres the high-roller!"
 	icon_state = "heeledsuit"
-	inhand_icon_state = "det_suit"
+	inhand_icon_state = "tan_suit"

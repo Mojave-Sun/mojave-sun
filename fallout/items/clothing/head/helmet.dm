@@ -117,6 +117,12 @@
 	icon_state = "canaan"
 	inhand_icon_state = "canaan"
 
+/obj/item/clothing/head/helmet/fallout/heeledhat
+	name = "well-heeled gambler hat"
+	desc = "A snappy fedora for snarky cardsharks."
+	icon_state = "heeledhat"
+	inhand_icon_state = "det_hat"
+
 /obj/item/clothing/head/helmet/fallout/cowboy/padded
 	name = "padded cowboy hat"
 	desc = "A larger cowboy hat with additional padding for more protection."
@@ -324,8 +330,3 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
-/obj/item/clothing/head/helmet/fallout/heeledhat
-	name = "well-heeled gambler hat"
-	desc = "A snappy fedora for snarky cardsharks."
-	icon_state = "heeledhat"
-	inhand_icon_state = "det_hat"

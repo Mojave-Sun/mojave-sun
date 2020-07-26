@@ -245,8 +245,8 @@
 	icon_state = "hubologist"
 	inhand_icon_state = "hubologist"
 
-/obj/item/clothing/suit/fallout/trench/dapperovercoat
+/obj/item/clothing/suit/fallout/trench/dapper
 	name = "dapper overcoat"
 	desc = "A fleeced overcoat for the pre-war bourgeois."
-	icon_state = "dapperovercoat"
+	icon_state = "dapper"
 	inhand_icon_state = "coatwinter"
