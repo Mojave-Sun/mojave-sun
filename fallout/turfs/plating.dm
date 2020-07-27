@@ -258,3 +258,92 @@
 	icon_state = "roof"
 	name = "roof"
 	desc = "Some metal roofing."
+
+/turf/open/floor/plating/fallout/ice
+	name = "ice sheet"
+	desc = "A sheet of solid ice. Looks slippery. Tread Carefully."
+	icon = 'fallout/icons/turf/ice.dmi'
+	icon_state = "ice"
+	baseturfs = /turf/open/floor/plating/fallout/ice
+	slowdown = 1
+	attachment_holes = FALSE
+	bullet_sizzle = TRUE
+	footstep = FOOTSTEP_FLOOR
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	var/static/mutable_appearance/crack = mutable_appearance('fallout/icons/turf/ice.dmi', "crack")
+	var/static/mutable_appearance/holehole = mutable_appearance('fallout/icons/turf/ice.dmi', "hole_overlay")
+	var/cracked = FALSE
+	var/hole = FALSE
+
+/turf/open/floor/plating/fallout/ice/attackby(obj/item/W, mob/user, params)
+	. = ..()
+	if(W.tool_behaviour == TOOL_SHOVEL || W.tool_behaviour == TOOL_MINING)
+		if(hole)
+			to_chat(user, "<span class='notice'>The ice is completely dug through.</span>")
+			return TRUE
+
+		if(!isturf(user.loc))
+			return
+
+		to_chat(user, "<span class='notice'>You start picking at the ice...</span>")
+
+		playsound(get_turf(src), 'fallout/sound/f13effects/icebreak.ogg', 100, FALSE, FALSE)
+
+		if(W.use_tool(src, user, 100, volume=0))
+			if(!cracked)
+				add_overlay(crack)
+				to_chat(user, "<span class='notice'>You crack the ice, loosening it.</span>")
+				cracked = TRUE
+			else
+				if(cracked)
+					cut_overlay(crack)
+					add_overlay(holehole)
+					density = TRUE
+					to_chat(user, "<span class='notice'>You crack the ice, making a hole to the waters below.</span>")
+					hole = TRUE
+					return
+
+/turf/open/floor/plating/fallout/ice/Initialize()
+	. = ..()
+	MakeSlippery(TURF_WET_PERMAFROST, INFINITY, 0, INFINITY, TRUE)
+
+/turf/open/floor/plating/fallout/ice/innercorner
+	icon_state = "inner_corner"
+
+/turf/open/floor/plating/fallout/ice/innercurve
+	icon_state = "inner_curve_large"
+
+/turf/open/floor/plating/fallout/ice/corner
+	icon_state = "corner"
+
+/turf/open/floor/plating/fallout/ice/edge
+	icon_state = "edge"
+
+/turf/open/floor/plating/fallout/ice/smallcorner
+	icon_state = "cornerpiece"
+
+/turf/open/floor/plating/fallout/ice/end
+	icon_state = "end"
+
+/turf/open/floor/plating/fallout/ice/thin
+	icon_state = "thin"
+
+/turf/open/floor/plating/fallout/ice/shrinkage
+	icon_state = "shrinkage"
+
+/turf/open/floor/plating/fallout/ice/shore
+	icon_state = "shore"
+
+/turf/open/floor/plating/fallout/ice/single
+	icon_state = "junction0"
+
+/turf/open/floor/plating/fallout/ice/tunnel
+	icon_state = "tunnel"
+
+/obj/structure/fluff/icechunk
+	name = "ice chunk"
+	desc = "A segment of broken ice."
+	icon = 'fallout/icons/turf/ice.dmi'
+	icon_state = "chunk"
