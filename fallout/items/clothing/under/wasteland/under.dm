@@ -156,19 +156,19 @@
 	inhand_icon_state = "tribalrag"
 
 /obj/item/clothing/under/fallout/wasteland/canaan
-	name = "Canaanite outfit"
+	name = "canaanite outfit"
 	desc = "A fancy shirt and pants worn by Canaanite missionaries."
 	icon_state = "canaan"
 	inhand_icon_state = "canaan"
 
 /obj/item/clothing/under/fallout/wasteland/mammoth
-	name = "Mammoth outfit"
+	name = "mammoth outfit"
 	desc = "A woven shirt and pants given to residents of the town of Mammoth."
 	icon_state = "mammoth"
 	inhand_icon_state = "mammoth"
 
 /obj/item/clothing/under/fallout/wasteland/hubologist
-	name = "Hubologist outfit"
+	name = "hubologist outfit"
 	desc = "Light robes typically worn under a Hubologist's heavier main robes."
 	icon_state = "hubologist"
 	inhand_icon_state = "hubologist"
@@ -178,3 +178,21 @@
 	desc = "Hey, theres the high-roller!"
 	icon_state = "heeledsuit"
 	inhand_icon_state = "tan_suit"
+
+/obj/item/clothing/under/fallout/wasteland/plaid_r
+	name = "red plaid shirt"
+	desc = "A rugged plaid shirt."
+	icon_state = "plaid_r"
+	inhand_icon_state = "plaid_r"
+
+/obj/item/clothing/under/fallout/wasteland/plaid_g
+	name = "green plaid shirt"
+	desc = "A rugged plaid shirt."
+	icon_state = "plaid_g"
+	inhand_icon_state = "plaid_g"
+
+/obj/item/clothing/under/fallout/wasteland/plaid_b
+	name = "blue plaid shirt"
+	desc = "A rugged plaid shirt."
+	icon_state = "plaid_b"
+	inhand_icon_state = "plaid_b"
