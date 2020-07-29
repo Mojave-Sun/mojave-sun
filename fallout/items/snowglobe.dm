@@ -6,7 +6,6 @@
 
 /obj/item/snowglobe/mammoth
 	name = "\improper Snow Globe - Mammoth Lakes"
-	desc = "You found a Limited Edition Mojave Sun Snowglobe! These rare, pre-war artifacts are widely considered to be useless baubles, but rumor has it some collectors will pay dearly for them."
 	icon_state = "mammoth"
 
 //dog city snowglobe when?
