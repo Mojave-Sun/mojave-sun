@@ -9,25 +9,25 @@
     name = "base class Fallout bedframe"
     desc = "Scream at the coders if you see this."
 
-/obj/structure/bed/f13/bedframe/metal_bed
-    name = "bed frame"
-    desc = "A bed frame without mattress. Without mattress you will feel cold metal behind of your back."
-    icon_state = "metalbed"
+/obj/structure/bed/f13/bedframe/wire
+    name = "wireframe bed"
+    desc = "A bed with a wire backing."
+    icon_state = "wire_bed"
 
-/obj/structure/bed/f13/bedframe/grill_bed
-    name = "bed frame"
-    desc = "A bed frame without mattress. Metal grill is not that comfortable to your back."
-    icon_state = "grillbed"
+/obj/structure/bed/f13/bedframe/metal
+    name = "metal bed"
+    desc = "A slatted metal bed."
+    icon_state = "metal_bed"
 
-/obj/structure/bed/f13/bedframe/back_bed
-    name = "bed frame"
-    desc = "A bed frame without mattress. It would be pretty uncomfortable to sleep at."
-    icon_state = "backbed"
+/obj/structure/bed/f13/bedframe/cot
+    name = "cot"
+    desc = "A cot. Still usable without a mattress."
+    icon_state = "cot"
 
-/obj/structure/bed/f13/bedframe/wooden_bed
-    name = "bed frame"
-    desc = "A bed frame without mattress. Wooden plank behind your back won't help you sleeping well."
-    icon_state = "woodenbed"
+/obj/structure/bed/f13/bedframe/wood
+    name = "wood bed"
+    desc = "A panel bed made from rotting wood."
+    icon_state = "wood_bed"
 
 //mattress//
 
@@ -35,35 +35,35 @@
     name = "base class Fallout mattress"
     desc = "Scream at the coders if you see this."
 
-/obj/structure/bed/f13/mattress/dirty_mattress
+/obj/structure/bed/f13/mattress/dirty
     name = "mattress"
-    desc = "A Mattress. You can only imagine when this was cleaned last time."
-    icon_state = "dirtymattress"
+    desc = "Less of a mattress and more of a lump."
+    icon_state = "dirty_mattress"
 
-/obj/structure/bed/f13/mattress/old_mattress
+/obj/structure/bed/f13/mattress/old
     name = "mattress"
-    desc = "A Mattress. You can never tell what are these stains on this."
-    icon_state = "oldmattress"
+    desc = "Mildly stained and better than most."
+    icon_state = "old_mattress"
 
-/obj/structure/bed/f13/mattress/stained_mattress
+/obj/structure/bed/f13/mattress/stained
     name = "mattress"
-    desc = "A Mattress. It is better than sleeping on the floor."
-    icon_state = "stainedmattress"
+    desc = "No idea what these stains are."
+    icon_state = "stained_mattress"
 
-/obj/structure/bed/f13/mattress/yellowed_mattress
+/obj/structure/bed/f13/mattress/yellowed
     name = "mattress"
-    desc = "A Mattress. Wasn't this supposed to be white?"
-    icon_state = "yellowedmattress"
+    desc = "This was white when someone bought it."
+    icon_state = "yellowed_mattress"
 
-/obj/structure/bed/f13/mattress/filthy_mattress
+/obj/structure/bed/f13/mattress/filthy
     name = "mattress"
-    desc = "A Mattress. Can't describe of its smell."
-    icon_state = "filthymattress"
+    desc = "Is that mold?"
+    icon_state = "filthy_mattress"
 
-/obj/structure/bed/f13/mattress/stale_mattress
+/obj/structure/bed/f13/mattress/stale
     name = "mattress"
-    desc = "A Mattress. At least you don't have to sleep on the floor."
-    icon_state = "stalemattress"
+    desc = "Relatively clean."
+    icon_state = "stale_mattress"
 
 //sleeping bag//
 
@@ -71,12 +71,12 @@
     name = "base class Fallout sleeping bag"
     desc = "Scream at the coders if you see this."
 
-/obj/structure/bed/f13/sleepingbag/sleepingbag_red
-    name = "red sleeping Bag"
-    desc = "A red sleeping bag. Don't have to worry about blood stain."
+/obj/structure/bed/f13/sleepingbag/red
+    name = "sleeping bag"
+    desc = "A red sleeping bag. Don't have to worry about bloodstains."
     icon_state = "sleepingbag_red"
 
-/obj/structure/bed/f13/sleepingbag/sleepingbag_green
-    name = "green sleeping Bag"
-    desc = "A green sleeping bag. Handy to carry it around wandering."
+/obj/structure/bed/f13/sleepingbag/green
+    name = "sleeping bag"
+    desc = "A green sleeping bag. Useful."
     icon_state = "sleepingbag_green"
