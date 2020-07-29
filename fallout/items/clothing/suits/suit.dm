@@ -120,6 +120,12 @@
 	icon_state = "veteran"
 	inhand_icon_state = "veteran"
 
+/obj/item/clothing/suit/fallout/ljacket/moleskin
+	name = "moleskin jacket"
+	desc = "A durable moleskin jacket."
+	icon_state = "moleskin"
+	inhand_icon_state = "det_suit"
+
 /obj/item/clothing/suit/fallout/duster
 	name = "duster"
 	desc = "A long brown leather overcoat."
@@ -240,7 +246,7 @@
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/suit/fallout/trench/hubologist
-	name = "Hubologist robes"
+	name = "hubologist robes"
 	desc = "Long, dark, and imposing robes worn by Hubologists."
 	icon_state = "hubologist"
 	inhand_icon_state = "hubologist"
