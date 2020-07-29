@@ -238,20 +238,30 @@
 	desc = "A stretch of road."
 	icon = 'fallout/icons/turf/roadsidewalk.dmi'
 	icon_state = "road"
+	var/dir_variation = TRUE
+
+/turf/open/floor/plating/ground/road/Initialize()
+	. = ..()
+	if(dir_variation)
+		dir = pick(GLOB.cardinals)
 
 /turf/open/floor/plating/ground/road/curb
 	icon_state = "curb"
+	dir_variation = FALSE
 
 /turf/open/floor/plating/ground/road/curb/corner
 	icon_state = "curbcorner"
+	dir_variation = FALSE
 
 /turf/open/floor/plating/ground/road/sidewalk
 	name = "sidewalk"
 	desc = "Paved tiles specifically designed for walking upon."
 	icon_state = "sidewalk"
+	dir_variation = FALSE
 
 /turf/open/floor/plating/ground/road/sidewalk/edge
 	icon_state = "sidewalkedge"
+	dir_variation = FALSE
 
 /turf/open/floor/plating/roof
 	icon = 'fallout/icons/turf/floors_1.dmi'
