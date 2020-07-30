@@ -7,3 +7,10 @@
 	name = "metal table"
 	desc = "A square piece of metal standing on four metal legs. It can not move."
 	canSmoothWith = list(/obj/structure/table/f13/metal)
+
+/obj/structure/table/f13/round
+    name = "round table"
+    desc = "A table, masterfully designed with high-tech to become... round"
+    icon = "round"
+    canSmoothWith = null
+    smoothing_flags = NONE
