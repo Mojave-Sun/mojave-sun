@@ -119,20 +119,19 @@
 	if(!isliving(user) || user.incapacitated())
 		return //No ghosts or incapacitated folk allowed to do this.
 	var/mob/living/departing_mob = dropping
-	if(alert("Are you sure you want to depart the area for good? Your character will be removed from the current round.", "Departing the Wasteland", "Confirm", "Cancel") != "Confirm")
+	if(alert("Are you sure you want to depart the area for good? Your character will be removed from the current round, if you're playing an important job please adminhelp (F1 button) first to let admins know, or if no admins are available try to promote somebody else in your faction to your job and hand them your gear.", "Departing the Wasteland", "Confirm", "Cancel") != "Confirm")
 		return
-	if(departing_mob.incapacitated() || !isliving(departing_mob) || QDELETED(departing_mob) || get_dist(src, dropping) > 2)
+	if(QDELETED(departing_mob) || departing_mob.incapacitated() || !isliving(departing_mob) || get_dist(src, dropping) > 2)
 		return //Things have changed since the alert happened.
 	var/dat = "[key_name(user)] has despawned themselves, job [departing_mob.job], at [AREACOORD(src)]. Contents despawned along:"
-	if(!length(departing_mob.contents))
-		dat += " none."
-	else
-		var/atom/movable/content = departing_mob.contents[1]
-		dat += " [content.name]"
-		for(var/i in 2 to length(departing_mob.contents))
-			content = departing_mob.contents[i]
-			dat += ", [content.name]"
-		dat += "."
+	var/list/stuff = list()
+	for(var/thing in departing_mob.GetAllContents())
+		if(ismob(thing))
+			var/mob/M = thing
+			stuff += M.real_name
+		else if(isobj(thing))
+			stuff += "[thing]"
+	dat = "[dat] [stuff.Join(", ")]."
 	message_admins(dat)
 	log_admin(dat)
 	departing_mob.visible_message("<span class='notice'>[departing_mob] crosses the border and departs the wasteland.</span>")
