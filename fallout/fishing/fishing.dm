@@ -12,15 +12,15 @@
 	barefootstep = FOOTSTEP_SAND
 	clawfootstep = FOOTSTEP_SAND
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
-	var/list/fish = list(/obj/item/reagent_containers/food/snacks/meat/slab/fish/sockeye = 1,
-		/obj/item/reagent_containers/food/snacks/meat/slab/fish/smallmouth = 2,
-		/obj/item/reagent_containers/food/snacks/meat/slab/fish/largemouth = 3,
-		/obj/item/reagent_containers/food/snacks/meat/slab/fish/lamprey = 4,
-		/obj/item/reagent_containers/food/snacks/meat/slab/fish/pink = 5,
-		/obj/item/reagent_containers/food/snacks/meat/slab/fish/chum = 6,
-		/obj/item/reagent_containers/food/snacks/meat/slab/fish/sturgeon = 7,
-		/obj/item/reagent_containers/food/snacks/meat/slab/fish/asian = 8,
-		/obj/item/reagent_containers/food/snacks/meat/slab/fish/blinky = 9)
+	var/list/fish = list(/obj/item/reagent_containers/food/snacks/meat/slab/fish/sockeye,
+		/obj/item/reagent_containers/food/snacks/meat/slab/fish/smallmouth,
+		/obj/item/reagent_containers/food/snacks/meat/slab/fish/largemouth,
+		/obj/item/reagent_containers/food/snacks/meat/slab/fish/lamprey,
+		/obj/item/reagent_containers/food/snacks/meat/slab/fish/pink,
+		/obj/item/reagent_containers/food/snacks/meat/slab/fish/chum,
+		/obj/item/reagent_containers/food/snacks/meat/slab/fish/sturgeon,
+		/obj/item/reagent_containers/food/snacks/meat/slab/fish/asian,
+		/obj/item/reagent_containers/food/snacks/meat/slab/fish/blinky)
 	var/fished = FALSE
 
 /turf/open/floor/plating/ice/hole/attackby(obj/item/W, mob/user, params)
@@ -35,6 +35,7 @@
 
 			to_chat(user, "<span class='notice'>You start fishing...</span>")
 
+			if(do_after(user, var/fish_speed))
 			if(!can_fish(user))
 				return TRUE
 			to_chat(user, "<span class='notice'>You reel in your catch.</span>")
@@ -65,6 +66,7 @@
 	icon_state = "basic"
 	lefthand_file = 'fallout/icons/mob/inhands/equipment/fishingrods_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/equipment/fishingrods_righthand.dmi'
+	var/fish_speed = 60 SECONDS
 
 /obj/item/fishing_rod/telescopic
 	name = "fishing rod"
@@ -72,6 +74,7 @@
 	icon_state = "telescopic"
 	lefthand_file = 'fallout/icons/mob/inhands/equipment/fishingrods_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/equipment/fishingrods_righthand.dmi'
+	var/fish_speed = 40 SECONDS
 
 /obj/item/fishing_rod/advanced
 	name = "advanced rod"
@@ -79,3 +82,4 @@
 	icon_state = "advanced"
 	lefthand_file = 'fallout/icons/mob/inhands/equipment/fishingrods_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/equipment/fishingrods_righthand.dmi'
+	var/fish_speed = 20 SECONDS
