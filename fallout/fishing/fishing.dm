@@ -27,6 +27,23 @@
 	. = ..()
 	if(!.)
 		if(istype(W, /obj/item/fishing_rod))
+			var/obj/item/fishing_rod/the_rod = W
+			if(!can_fish(user))
+				return TRUE
+
+			if(!isturf(user.loc))
+				return
+
+			to_chat(user, "<span class='notice'>You start fishing...</span>")
+
+			if(do_after(user, the_rod.fish_speed))
+			if(!can_fish(user))
+				return TRUE
+			to_chat(user, "<span class='notice'>You reel in your catch.</span>")
+			getFished()
+	. = ..()
+	if(!.)
+		if(istype(W, /obj/item/fishing_rod))
 			if(!can_fish(user))
 				return TRUE
 
