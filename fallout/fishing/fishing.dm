@@ -36,23 +36,7 @@
 
 			to_chat(user, "<span class='notice'>You start fishing...</span>")
 
-			if(do_after(user, the_rod.fish_speed))
-			if(!can_fish(user))
-				return TRUE
-			to_chat(user, "<span class='notice'>You reel in your catch.</span>")
-			getFished()
-	. = ..()
-	if(!.)
-		if(istype(W, /obj/item/fishing_rod))
-			if(!can_fish(user))
-				return TRUE
-
-			if(!isturf(user.loc))
-				return
-
-			to_chat(user, "<span class='notice'>You start fishing...</span>")
-
-			if(do_after(user, var/fish_speed))
+			if(do_after(user, /obj/item/fishing_rod.fish_speed))
 			if(!can_fish(user))
 				return TRUE
 			to_chat(user, "<span class='notice'>You reel in your catch.</span>")
@@ -75,7 +59,7 @@
 	name = "fishing rod"
 	desc = "You shouldn't be seeing this. LOOK AWAY."
 	icon = 'fallout/icons/objects/fishing_rods.dmi'
-
+	var/fish_speed = 600 SECONDS
 
 /obj/item/fishing_rod/basic
 	name = "makeshift rod"
@@ -83,7 +67,7 @@
 	icon_state = "basic"
 	lefthand_file = 'fallout/icons/mob/inhands/equipment/fishingrods_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/equipment/fishingrods_righthand.dmi'
-	var/fish_speed = 60 SECONDS
+	fish_speed = 60 SECONDS
 
 /obj/item/fishing_rod/telescopic
 	name = "fishing rod"
@@ -91,7 +75,7 @@
 	icon_state = "telescopic"
 	lefthand_file = 'fallout/icons/mob/inhands/equipment/fishingrods_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/equipment/fishingrods_righthand.dmi'
-	var/fish_speed = 40 SECONDS
+	fish_speed = 40 SECONDS
 
 /obj/item/fishing_rod/advanced
 	name = "advanced rod"
@@ -99,4 +83,4 @@
 	icon_state = "advanced"
 	lefthand_file = 'fallout/icons/mob/inhands/equipment/fishingrods_lefthand.dmi'
 	righthand_file = 'fallout/icons/mob/inhands/equipment/fishingrods_righthand.dmi'
-	var/fish_speed = 20 SECONDS
+	fish_speed = 20 SECONDS
