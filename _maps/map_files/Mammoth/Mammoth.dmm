@@ -3503,8 +3503,13 @@
 /turf/open/floor/plasteel/f13/_dirty,
 /area/f13/underground/bos)
 "aVh" = (
-/obj/structure/sign/poster/contraband/random,
-/turf/closed/wall/f13/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/door{
+	id = "ncrgarageshutter";
+	name = "Garage Door Control";
+	pixel_y = 26
+	},
+/turf/open/floor/plasteel/f13/_rusty,
 /area/f13/ncr_main)
 "aVk" = (
 /obj/structure/stairs/east,
@@ -4767,8 +4772,8 @@
 /turf/open/floor/plasteel/f13/dark,
 /area/f13/klamat)
 "cHk" = (
-/obj/structure/sign/departments/cargo,
-/turf/closed/wall/f13/scrap,
+/obj/machinery/door/unpowered/wooddoor,
+/turf/open/floor/plasteel/f13/_rusty,
 /area/f13/ncr_main)
 "cJA" = (
 /obj/structure/weightmachine/stacklifter,
@@ -12385,10 +12390,6 @@
 /obj/structure/rack,
 /turf/open/floor/plasteel/vaporwave,
 /area/f13/sunny_dale)
-"rIZ" = (
-/obj/machinery/button/door,
-/turf/closed/wall/f13/scrap,
-/area/f13/ncr_main)
 "rJd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/cardboard,
@@ -14150,10 +14151,6 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/floor/plasteel/white,
 /area/f13/sunny_dale)
-"vrK" = (
-/obj/structure/sign/departments/cargo,
-/turf/closed/wall/f13/wood,
-/area/f13/ncr_main)
 "vrR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -15411,7 +15408,9 @@
 /turf/open/floor/plasteel/f13/misc/cafeteria,
 /area/f13/sunny_dale)
 "xXD" = (
-/obj/machinery/door/poddoor/shutters,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "ncrgarageshutter"
+	},
 /turf/open/floor/plating/ground/road,
 /area/f13/ncr_main)
 "xXN" = (
@@ -95427,7 +95426,7 @@ aiz
 aiz
 rNZ
 aiz
-aVh
+aZg
 gMc
 aQd
 gMc
@@ -95453,11 +95452,11 @@ kBa
 aZg
 aZg
 aZg
-vrK
+aZg
 kXk
 vjB
 kXk
-vrK
+aZg
 aZg
 aZg
 aZg
@@ -97022,7 +97021,7 @@ bHW
 mlG
 mlG
 mlG
-cHk
+tpN
 yeW
 aUL
 yeW
@@ -98332,8 +98331,8 @@ bHW
 mlG
 mlG
 mlG
-rIZ
-yeW
+tpN
+aVh
 jVF
 aUL
 aUL
@@ -98595,7 +98594,7 @@ mlG
 aiz
 aiz
 tpN
-tpN
+cHk
 tpN
 tpN
 tpN
