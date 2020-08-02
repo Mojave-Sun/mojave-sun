@@ -268,14 +268,29 @@
 	slowdown = 1
 	attachment_holes = FALSE
 	bullet_sizzle = TRUE
-	footstep = FOOTSTEP_FLOOR
-	barefootstep = FOOTSTEP_HARD_BAREFOOT
-	clawfootstep = FOOTSTEP_HARD_CLAW
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+	planetary_atmos = TRUE
+	footstep = FOOTSTEP_SAND
+	barefootstep = FOOTSTEP_SAND
+	clawfootstep = FOOTSTEP_SAND
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	tiled_dirt = FALSE
 	var/static/mutable_appearance/crack = mutable_appearance('fallout/icons/turf/ice.dmi', "crack")
 	var/static/mutable_appearance/holehole = mutable_appearance('fallout/icons/turf/ice.dmi', "hole_overlay")
 	var/cracked = FALSE
 	var/hole = FALSE
+
+/turf/open/floor/plating/fallout/ice/attackby(obj/item/stack/tile/T, mob/user, params)
+	return
+
+/turf/open/floor/plating/fallout/ice/break_tile()
+	return //unbreakable
+
+/turf/open/floor/plating/fallout/ice/burn_tile()
+	return //unburnable
+
+/turf/open/floor/plating/fallout/ice/ex_act(severity, target)
+	return
 
 /turf/open/floor/plating/fallout/ice/attackby(obj/item/W, mob/user, params)
 	. = ..()
