@@ -86,7 +86,7 @@
 			lube_flags = SLIDE | GALOSHES_DONT_HELP
 		if(TURF_WET_PERMAFROST)
 			intensity = 120
-			lube_flags = SLIDE_ICE | GALOSHES_DONT_HELP
+			lube_flags = SLIDE_ICE | GALOSHES_DONT_HELP | NO_SLIP_WHEN_WALKING
 		if(TURF_WET_SUPERLUBE)
 			intensity = 120
 			lube_flags = SLIDE | GALOSHES_DONT_HELP | SLIP_WHEN_CRAWLING
