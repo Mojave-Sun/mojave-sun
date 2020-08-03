@@ -57,5 +57,4 @@
 /obj/structure/closet/crate/fallout/cash_register/prewar
 	name = "pristine cash register"
 	desc = "A beautiful example of a cash register, seemingly untouched by the war. Shame the same can't be said about the currency inside."
-	icon_state = "pristine_register"
-
+	icon_state = "register_clean"
