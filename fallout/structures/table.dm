@@ -11,6 +11,5 @@
 /obj/structure/table/f13/round
     name = "round table"
     desc = "A table, masterfully designed with high-tech to become... round"
-    icon = "round"
+    icon_state = "round"
     canSmoothWith = null
-    smoothing_flags = NONE
