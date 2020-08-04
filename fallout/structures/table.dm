@@ -11,5 +11,7 @@
 /obj/structure/table/f13/round
 	name = "round table"
 	desc = "A table, masterfully designed with high-tech to become... round"
+	icon_state = "roundtable"
 	icon = 'fallout/icons/objects/structures.dmi'
-	canSmoothWith = null
+	smooth = SMOOTH_FALSE
+	canSmoothWith = list()
