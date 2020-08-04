@@ -39,3 +39,13 @@
 /obj/structure/dresser/f13/orange/pristine
 	icon_state = "pristine_circabinet_orange"
 	dresser_type = "pristine_circabinet_orange"
+
+/obj/structure/filingcabinet/f13
+	name = "wasteland filing cabinet"
+	desc = "Perfect for filing your radioactive dust."
+	icon = 'fallout/icons/structure/miscellaneous.dmi'
+
+/obj/structure/filingcabinet/f13/mail
+	name = "postbox"
+	desc = "Last pickup, October 22nd, 2077."
+	icon_state = "mailbox"
