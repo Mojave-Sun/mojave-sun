@@ -112,7 +112,7 @@
 	inhand_icon_state = "gambler"
 
 /obj/item/clothing/head/helmet/fallout/cowboy/canaan
-	name = "Canaanite's hat"
+	name = "canaanite's hat"
 	desc = "A wide brimmed hat typically worn by Canaanite missionaries."
 	icon_state = "canaan"
 	inhand_icon_state = "canaan"
@@ -139,7 +139,7 @@
 	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/fallout/cowboy/padded/hubologist
-	name = "Hubologist hood"
+	name = "hubologist hood"
 	desc = "A mysterious hood worn by Hubologists."
 	icon_state = "hubologist"
 	inhand_icon_state = "hubologist"
@@ -155,13 +155,13 @@
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/head/helmet/fallout/cowboy/reinf/deputy
-	name = "Mammoth deputy hat"
+	name = "mammoth deputy hat"
 	desc = "An old park ranger hat repurposed and padded by the town of Mammoth to be used by their lawmen."
 	icon_state = "deputy"
 	inhand_icon_state = "deputy"
 
 /obj/item/clothing/head/helmet/fallout/cowboy/sheriff
-	name = "Mammoth sheriff's hat"
+	name = "mammoth sheriff's hat"
 	desc = "An old park ranger hat heavily reinforced and belonging to the sheriff of the town of Mammoth."
 	icon_state = "sheriff"
 	inhand_icon_state = "sheriff"
