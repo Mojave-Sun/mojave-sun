@@ -1,7 +1,7 @@
 #define GRASS_SPONTANEOUS 		2
-#define GRASS_WEIGHT 			4
-#define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_feracactus = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5, /obj/structure/flora/tree/joshua = 3, /obj/structure/flora/tree/cactus = 2, /obj/structure/flora/tree/wasteland = 2)
-#define DESOLATE_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland = 1)
+#define GRASS_WEIGHT 			2
+#define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/tree/fallout/tallpine = 7, /obj/structure/flora/tree/fallout/deadsnow = 5, /obj/structure/flora/tree/fallout/pine = 5, /obj/structure/flora/fallout/shrub = 5, /obj/structure/flora/bush = 5)
+#define DESOLATE_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland/snow = 10, /obj/structure/flora/bush = 1)
 
 //A plating that can't be destroyed but can have stuff like floor tiles slapped on for construction
 
@@ -130,13 +130,14 @@
 	var/obj/structure/flora/turfPlant = null
 	var/digResult = /obj/item/stack/sheet/mineral/snow
 	var/dug = FALSE
+	var/area/curr_area = null
 
 /turf/open/floor/plating/ground/snow/Initialize()
-	. = ..()
-	icon_state = "snow[rand(1,12)]"
-	//If no fences, machines (soil patches are machines), etc. try to plant grass
-	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
-		plantGrass()
+    . = ..()
+    icon_state = "snow[rand(1,12)]"
+    curr_area = get_area(src)
+    if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src) || (locate(/obj/structure/flora) in src)))
+        plant_grass()
 
 /turf/open/floor/plating/ground/snow/attackby(obj/item/W, mob/user, params)
 	. = ..()
@@ -167,35 +168,55 @@
 	icon_state = "[icon_state]_dug"
 	dug = TRUE
 
-//Pass PlantForce for admin stuff I guess?
-/turf/open/floor/plating/ground/snow/proc/plantGrass(Plantforce = FALSE)
+/turf/open/floor/plating/ground/snow/proc/plant_grass(Plantforce = FALSE)
 	var/Weight = 0
 	var/randPlant = null
 
-	//spontaneously spawn grass
 	if(Plantforce || prob(GRASS_SPONTANEOUS))
-		randPlant = pickweight(LUSH_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
+		randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
 		turfPlant = new randPlant(src)
-		. = TRUE //in case we ever need this to return if we spawned
+		. = TRUE
 		return .
 
-	//loop through neighbouring desert turfs, if they have grass, then increase weight
 	for(var/turf/open/floor/plating/ground/snow/T in RANGE_TURFS(2, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 
-	//use weight to try to spawn grass
-	if(prob(Weight))
-
-		//If surrounded on 5+ sides, pick from lush
-		if(Weight == (5 * GRASS_WEIGHT))
-			randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
+		if(istype(curr_area, /area/f13/snow/deepforest))
+			if(prob(50))
+				randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
+			else
+				if(prob(20))
+					randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
+				turfPlant = new randPlant(src)
+				. = TRUE
+				return .
+		if(istype(curr_area, /area/f13/snow/forest))
+			if(prob(15))
+				randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
+			else
+				if(prob(10))
+					randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
+				turfPlant = new randPlant(src)
+				. = TRUE
+				return .
+		if(istype(curr_area, /area/f13/snow/lightforest))
+			if(prob(5))
+				randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
+			else
+				if(prob(10))
+					randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
+			turfPlant = new randPlant(src)
+			. = TRUE
+			return .
 		else
-			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
-		turfPlant = new randPlant(src)
-		. = TRUE
+			if(prob(Weight))
+				if(Weight == (20 * GRASS_WEIGHT))
+					randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
+				turfPlant = new randPlant(src)
+				. = TRUE
+				return .
 
-//Make sure we delete the plant if we ever change turfs
 /turf/open/floor/plating/ground/snow/ChangeTurf(path, new_baseturf, flags)
 	if(turfPlant)
 		qdel(turfPlant)
@@ -221,7 +242,7 @@
 
 /turf/open/floor/plating/ground/mountain/proc/plantShrooms()
 	if(prob(SHROOM_SPAWN))
-		turfPlant = new /obj/structure/flora/wasteplant/wild_fungus(src)
+		//turfPlant = new /obj/structure/flora/wasteplant/wild_fungus(src)
 		. = TRUE //in case we ever need this to return if we spawned
 		return .
 
@@ -238,30 +259,20 @@
 	desc = "A stretch of road."
 	icon = 'fallout/icons/turf/roadsidewalk.dmi'
 	icon_state = "road"
-	var/dir_variation = TRUE
-
-/turf/open/floor/plating/ground/road/Initialize()
-	. = ..()
-	if(dir_variation)
-		dir = pick(GLOB.cardinals)
 
 /turf/open/floor/plating/ground/road/curb
 	icon_state = "curb"
-	dir_variation = FALSE
 
 /turf/open/floor/plating/ground/road/curb/corner
 	icon_state = "curbcorner"
-	dir_variation = FALSE
 
 /turf/open/floor/plating/ground/road/sidewalk
 	name = "sidewalk"
 	desc = "Paved tiles specifically designed for walking upon."
 	icon_state = "sidewalk"
-	dir_variation = FALSE
 
 /turf/open/floor/plating/ground/road/sidewalk/edge
 	icon_state = "sidewalkedge"
-	dir_variation = FALSE
 
 /turf/open/floor/plating/roof
 	icon = 'fallout/icons/turf/floors_1.dmi'
