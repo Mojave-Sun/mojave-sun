@@ -1,6 +1,7 @@
+//UNCRAFTABLE (MUST BE SCAVENGED)
 /datum/reagent/drug/buffout
 	name = "Buffout"
-	description = "A highly potent anabolic steroid popular before the war with athletes."
+	description = "A highly potent anabolic steroid popular before the war with athletes. Causes liver and heart damage."
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 30
 
@@ -22,6 +23,25 @@
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 30
 
+/datum/reagent/drug/smooch
+	name = "Smooch"
+	description = "A novel smokable from Northern Nevada. Causes mellowness and ecstacy. Prolonged use causes extreme brain damage."
+	color = "#60A584" // rgb: 96, 165, 132
+	overdose_threshold = 30
+
+/datum/reagent/drug/steady
+	name = "Steady"
+	description = "A military grade relaxant. Reduces weapon sway and increases effective accuracy, but carries a severe risk of addiction."
+	color = "#60A584" // rgb: 96, 165, 132
+	overdose_threshold = 30
+
+/datum/reagent/drug/x_cell
+	name = "X-Cell"
+	description = "A general purpose performance enhancer. Gives a general boost to all SPECIAL stats, but with a high risk of addiction."
+	color = "#60A584" // rgb: 96, 165, 132
+	overdose_threshold = 30
+
+//CRAFTABLE DRUGS
 /datum/reagent/drug/hydra
 	name = "Hydra"
 	description = "A curative agent that anaesthetises and restores crippled limbs. Causes heart damage."
@@ -58,18 +78,6 @@
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 30
 
-/datum/reagent/drug/smooch
-	name = "Smooch"
-	description = "A novel smokable from Northern Nevada. Causes mellowness and ecstacy. Prolonged use causes extreme brain damage."
-	color = "#60A584" // rgb: 96, 165, 132
-	overdose_threshold = 30
-
-/datum/reagent/drug/steady
-	name = "Steady"
-	description = "A military grade relaxant. Reduces weapon sway and increases effective accuracy, but carries a severe risk of addiction."
-	color = "#60A584" // rgb: 96, 165, 132
-	overdose_threshold = 30
-
 /datum/reagent/drug/turbo
 	name = "Turbo"
 	description = "Jet mixed with cazador poison and hairspray. Results in extremely strong Jet effects."
@@ -82,12 +90,6 @@
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 30
 
-/datum/reagent/drug/x_cell
-	name = "X-Cell"
-	description = "A general purpose performance enhancer. Gives a general boost to all SPECIAL stats, but with a high risk of addiction."
-	color = "#60A584" // rgb: 96, 165, 132
-	overdose_threshold = 30
-
 /datum/reagent/drug/mutie
 	name = "Mutie"
 	description = "A potent mutagenic serum that enhances combat effectiveness via mutations."
@@ -97,6 +99,12 @@
 /datum/reagent/drug/weapon_binding_ritual
 	name = "Weapon Binding Ritual"
 	description = "TAKE DRUGS. KILL A BEAR."
+	color = "#60A584" // rgb: 96, 165, 132
+	overdose_threshold = 30
+
+/datum/reagent/drug/overdrive
+	name = "Overdrive"
+	description = "A modified version of Psycho, designed to produce a stronger effect."
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 30
 

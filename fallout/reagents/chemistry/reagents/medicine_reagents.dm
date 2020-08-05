@@ -1,6 +1,6 @@
 /datum/reagent/medicine/stimpak_fluid
-	name = "stimpak fluid"
-	description = "stimpak"
+	name = "Stimpak Fluid"
+	description = "A shot of stimpak makes the pain go away."
 	reagent_state = LIQUID
 	color = "#FF0000"
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
@@ -21,6 +21,14 @@
 	M.adjustFireLoss(8.0*REM, FALSE, FALSE, BODYPART_ORGANIC)
 	..()
 	. = 1
+
+/datum/reagent/medicine/super_stimpack_fluid
+	name = "Super Stimpak Fluid"
+	description = "A more potent stimpak fluid for severe trauma. Causes weakness and muscle spasms, making it unsuitable for combat."
+	reagent_state = LIQUID
+	color = "#FF0000"
+	metabolization_rate = 2.5 * REAGENTS_METABOLISM
+	overdose_threshold = 30
 
 /datum/reagent/medicine/healing_powder
 	name = "Healing Powder"

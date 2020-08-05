@@ -141,6 +141,17 @@
 	glass_name = "glass of Mountain Honey"
 	glass_desc = "Looks like a glass of angry bees, and probably doesn't taste much better."
 
+/datum/reagent/consumable/ethanol/roentgen_rum
+	name = "Roentgen Rum"
+	description = "A fortified rum made with special ingredients. Probably not safe for human consumption."
+	taste_description = "a criticality incident"
+	boozepwr = 100
+	quality = DRINK_NICE
+	color = "#5D0F0C"
+	glass_icon_state = "whiskeycolaglass"
+	glass_name = "glass of Roentgum Rum"
+	glass_desc = "Probably not safe for human consumption... not that that's stopped anyone before."
+
 //Mixed Drinks
 
 /datum/reagent/consumable/ethanol/rum_nuka

@@ -9,7 +9,7 @@
 
 /datum/reagent/toxin/radscorpion_venom
 	name = "Radscorpion Venom"
-	description = "A powerful venom carried by Radscorpions. Causes heart damage and muscle lethargy."
+	description = "A powerful venom carried by Radscorpions. Causes heart damage and muscle spasms."
 	color = "#792300" // rgb: 121, 35, 0
 	toxpwr = 2.5
 	taste_description = "stinging pain"
