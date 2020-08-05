@@ -1131,13 +1131,11 @@
 /turf/open/floor/plasteel/f13/dark,
 /area/f13/klamat)
 "aql" = (
-/obj/structure/table/wood,
-/obj/machinery/computer/slot_machine,
+/obj/structure/table/wood/poker,
 /turf/open/floor/carpet,
 /area/f13/klamat)
 "aqE" = (
-/obj/machinery/computer/slot_machine,
-/obj/structure/table/wood,
+/obj/machinery/jukebox,
 /turf/open/floor/carpet,
 /area/f13/klamat)
 "aqJ" = (
@@ -1335,9 +1333,8 @@
 /turf/open/floor/wood/f13/broken,
 /area/f13/underground/mountain)
 "avx" = (
-/obj/structure/table/wood/poker,
-/obj/item/storage/pill_bottle/dice,
-/turf/open/floor/carpet,
+/obj/machinery/door/unpowered/wooddoor,
+/turf/open/floor/plating/ground/road,
 /area/f13/klamat)
 "avC" = (
 /obj/structure/chair/stool/bar,
@@ -1463,12 +1460,13 @@
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "awG" = (
-/obj/structure/table/wood/poker,
+/obj/structure/table/wood,
+/obj/machinery/computer/slot_machine,
 /turf/open/floor/carpet,
 /area/f13/klamat)
 "awH" = (
-/obj/structure/table/wood/poker,
-/obj/effect/holodeck_effect/cards,
+/obj/machinery/computer/slot_machine,
+/obj/structure/table/wood,
 /turf/open/floor/carpet,
 /area/f13/klamat)
 "awI" = (
@@ -1865,7 +1863,8 @@
 /turf/open/floor/carpet,
 /area/f13/klamat)
 "aED" = (
-/obj/machinery/jukebox,
+/obj/structure/table/wood/poker,
+/obj/effect/holodeck_effect/cards,
 /turf/open/floor/carpet,
 /area/f13/klamat)
 "aEQ" = (
@@ -2847,6 +2846,12 @@
 /obj/structure/flora/ausbushes/fernybush,
 /turf/open/floor/plating/ground/dirt,
 /area/f13/underground/mountain)
+"aPe" = (
+/obj/structure/chair/comfy/f13/retro{
+	dir = 1
+	},
+/turf/open/floor/carpet,
+/area/f13/klamat)
 "aPh" = (
 /turf/open/floor/plasteel/f13/red/side/dirty{
 	dir = 5
@@ -5057,6 +5062,12 @@
 	pixel_x = -32
 	},
 /turf/open/floor/plasteel/f13/dark,
+/area/f13/klamat)
+"ddu" = (
+/obj/structure/chair/comfy/f13/retro{
+	dir = 4
+	},
+/turf/open/floor/carpet,
 /area/f13/klamat)
 "ddZ" = (
 /obj/effect/decal/cleanable/glass,
@@ -7605,6 +7616,12 @@
 	dir = 4
 	},
 /area/f13/sunny_dale)
+"icn" = (
+/obj/structure/chair/comfy/f13/retro{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/f13/klamat)
 "ico" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/f13/stage_l,
@@ -10209,6 +10226,12 @@
 	},
 /turf/open/floor/plasteel/f13/blue/white/whitebluechess/rusty,
 /area/f13/sunny_dale)
+"mYW" = (
+/obj/structure/chair/f13/metal{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/f13/klamat)
 "nan" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -10682,6 +10705,10 @@
 	dir = 1
 	},
 /area/f13/sunny_dale)
+"nUJ" = (
+/obj/structure/chair/f13/wood,
+/turf/open/floor/wood/f13,
+/area/f13/klamat)
 "nVQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/extinguisher_cabinet{
@@ -12290,10 +12317,6 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
-"qXa" = (
-/obj/structure/chair/f13/wood,
-/turf/open/floor/wood/f13,
-/area/f13/klamat)
 "qXy" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /obj/effect/decal/cleanable/dirt,
@@ -15621,6 +15644,10 @@
 /obj/machinery/door/unpowered/wooddoor,
 /turf/open/floor/plasteel/f13/blue/_dirty,
 /area/f13/sunny_dale)
+"xJM" = (
+/obj/machinery/door/unpowered/wooddoor,
+/turf/open/space/basic,
+/area/f13/klamat)
 "xKl" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
@@ -114780,11 +114807,11 @@ alP
 nEF
 xfb
 xfb
-qXa
+nUJ
 xfb
-qXa
+nUJ
 xfb
-qXa
+nUJ
 xfb
 aYW
 aZx
@@ -115042,11 +115069,11 @@ alP
 nEF
 xfb
 xfb
-qXa
+nUJ
 xfb
-qXa
+nUJ
 xfb
-qXa
+nUJ
 xfb
 aYZ
 aZC
@@ -115304,11 +115331,11 @@ alP
 aVB
 xfb
 xfb
-qXa
+nUJ
 xfb
-qXa
+nUJ
 xfb
-qXa
+nUJ
 xfb
 aYZ
 aZC
@@ -115566,11 +115593,11 @@ alP
 nEF
 xfb
 xfb
-qXa
+nUJ
 xfb
-qXa
+nUJ
 xfb
-qXa
+nUJ
 xfb
 aYZ
 aZC
@@ -115828,11 +115855,11 @@ alP
 nEF
 xfb
 xfb
-qXa
+nUJ
 xfb
-qXa
+nUJ
 xfb
-qXa
+nUJ
 xfb
 aYW
 aZH
@@ -122615,12 +122642,12 @@ aVB
 alP
 alP
 aVB
-aaF
-aaF
 awG
+avC
 aaF
-aaF
-aaF
+avC
+awG
+aVB
 aVB
 aIq
 aVI
@@ -122876,13 +122903,13 @@ aiB
 aVB
 alP
 alP
-aLM
-aaF
-avx
+aVB
 awH
 avC
 aaF
-aEs
+avC
+awG
+aVB
 aVB
 aIs
 aVI
@@ -123139,12 +123166,12 @@ aVB
 alP
 alP
 aVB
-aaF
-avC
+awH
 avC
 aaF
 avC
 awG
+aVB
 aVB
 aTT
 aVI
@@ -123401,12 +123428,12 @@ aVB
 alP
 alP
 aVB
-aaF
-aaF
-aaF
+awH
+avC
 aaF
 avC
-avC
+awH
+aVB
 aVB
 aIu
 aVI
@@ -123663,7 +123690,7 @@ aVB
 alP
 alP
 aVB
-aaF
+aVB
 aaF
 aaF
 aaF
@@ -123924,11 +123951,11 @@ anv
 aVB
 alP
 alP
-aVB
-aVB
+avx
 aaF
 aaF
-aVB
+aaF
+aaF
 aVB
 aEv
 aEv
@@ -124187,9 +124214,9 @@ aVB
 alP
 alP
 aVB
-aaF
-aaF
-aaF
+avC
+aql
+avC
 aaF
 aVB
 aaF
@@ -124449,9 +124476,9 @@ aVB
 alP
 alP
 aVB
-aql
 avC
-aaF
+aEs
+avC
 aaF
 aLM
 aaF
@@ -124711,9 +124738,9 @@ aVB
 alP
 alP
 aVB
-aqE
 avC
-aaF
+aql
+avC
 aaF
 aLM
 aaF
@@ -124974,18 +125001,18 @@ alP
 alP
 aVB
 aqE
-avC
+aaF
 aaF
 aaF
 aVB
 aaF
 aaF
+qDW
 aaF
 aaF
-aaF
-avC
-avC
-avC
+ddu
+ddu
+ddu
 aaF
 aaF
 aaF
@@ -125235,21 +125262,21 @@ aVB
 alP
 alP
 aVB
-aqE
+aaF
 avC
 aaF
 aaF
+aTR
+qDW
+aaF
+aSC
 aVB
-aaF
-aaF
-aaF
-aVB
 aVB
 ttl
 ttl
 ttl
 ttl
-aaF
+aPe
 aaF
 aaF
 aSC
@@ -125498,20 +125525,20 @@ alP
 alP
 aVB
 aaF
+aql
+avC
 aaF
+aTR
+aSC
 aaF
-aaF
-aVB
-aED
-aaF
-aaF
+yeT
 aVB
 aKO
 aaF
 aaF
 aaF
 ttl
-aaF
+aPe
 aaF
 aaF
 aaF
@@ -125759,11 +125786,11 @@ aVB
 alP
 alP
 aVB
-aql
+aaF
+aED
 avC
 aaF
-aaF
-aVB
+aTR
 aaF
 aaF
 aaF
@@ -125773,7 +125800,7 @@ aaF
 aNi
 aaF
 ttl
-aaF
+aPe
 aaF
 aaF
 aaF
@@ -126022,20 +126049,20 @@ alP
 alP
 aVB
 aql
+aql
 avC
-aaF
 aaF
 aVB
 aaF
 aaF
-aaF
+qDW
 aVB
 kFZ
 aaF
 aaF
 aaF
 aPJ
-aaF
+aPe
 aaF
 aaF
 aaF
@@ -126283,21 +126310,21 @@ aVB
 alP
 alP
 aVB
-aql
+avC
 avC
 aaF
 aaF
-aLM
+xJM
 aaF
 aaF
-aaF
+aSC
 aVB
 aVB
 ttl
 ttl
 aNH
 ttl
-aaF
+aPe
 aaF
 aaF
 aaF
@@ -126545,19 +126572,19 @@ aVB
 alP
 alP
 aVB
-aqE
+aaF
 avC
 aaF
 aaF
 aLM
 aaF
 aaF
+mYW
 aaF
 aaF
-aaF
-avC
-avC
-avC
+icn
+icn
+icn
 aaF
 aaF
 aaF
@@ -127077,7 +127104,7 @@ aVB
 aEV
 aEV
 aVB
-aaF
+qDW
 aaF
 aaF
 aaF
@@ -127339,8 +127366,8 @@ aVB
 aVB
 aVB
 aVB
-aql
-avC
+aSC
+aSC
 aaF
 aaF
 qDW
@@ -127601,8 +127628,8 @@ aVB
 aFB
 aFB
 aVB
-aql
-avC
+aSC
+aSC
 aaF
 aaF
 aSC
@@ -127863,8 +127890,8 @@ aLM
 aaF
 aaF
 aVB
-aql
-avC
+jMv
+jMv
 aaF
 aaF
 aaF
