@@ -54,6 +54,14 @@
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 
+/datum/reagent/medicine/radshield
+	name = "Radshield"
+	description = "A post-war recreation of Rad-X, made from scavenged materials. Causes light headaches and dehydration."
+	reagent_state = SOLID
+	color = "#70483C"
+	metabolization_rate = 2.5 * REAGENTS_METABOLISM
+	overdose_threshold = 30
+
 /datum/reagent/medicine/radaway
 	name = "RadAway"
 	description = "Purges radiation, but causes vomiting and headaches."
@@ -89,6 +97,14 @@
 /datum/reagent/medicine/bitter_drink
 	name = "Bitter Drink"
 	description = "A cocktail of herbal remedies and drugs, carried commonly by tribals expecting trouble."
+	reagent_state = LIQUID
+	color = "#70483C"
+	metabolization_rate = 2.5 * REAGENTS_METABOLISM
+	overdose_threshold = 30
+
+/datum/reagent/medicine/antiseptic
+	name = "Antiseptic"
+	description = "A general purpose antiseptic, ideal for disinfecting wounds and equipment."
 	reagent_state = LIQUID
 	color = "#70483C"
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM

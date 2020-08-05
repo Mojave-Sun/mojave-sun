@@ -27,3 +27,19 @@
 	color = "#792300" // rgb: 121, 35, 0
 	toxpwr = 2.5
 	taste_description = "bitterness"
+
+/datum/reagent/toxin/acid/f13
+	name = "Acid"
+	description = "A noxious mix of scavenged acids."
+	color = "#00FF32"
+	toxpwr = 1
+	acidpwr = 10 //the amount of protection removed from the armour
+	taste_description = "acid"
+	self_consuming = TRUE
+
+/datum/reagent/toxin/turpentine
+	name = "Turpentine"
+	description = "A strong organic solvent. Do not drink."
+	color = "#00FF32"
+	toxpwr = 1
+	taste_description = "turpentine"
