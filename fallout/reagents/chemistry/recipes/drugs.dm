@@ -6,7 +6,7 @@
 /datum/chemical_reaction/jet
 	results = list(/datum/reagent/drug/jet = 3)
 	required_reagents = list(/datum/reagent/ammonia = 2, /datum/reagent/fuel/oil = 1)
-	mix_message = "The mixture turns a deep brown and begins to give off fumes."
+	mix_message = "The mixture turns a deep brown and begins to give off brown fumes."
 	required_temp = 400
 
 /datum/chemical_reaction/rocket
@@ -21,14 +21,14 @@
 /datum/chemical_reaction/psycho
 	results = list(/datum/reagent/drug/psycho = 5)
 	required_reagents = list(/datum/reagent/medicine/morphine = 2, /datum/reagent/drug/jet = 2, /datum/reagent/toxin/acid/f13 = 1)
-	mix_message = "The mixture turns bright crimson and bubbles furiously."
+	mix_message = "The mixture turns a dark crimson and bubbles furiously."
 	required_temp = 500
 
 /datum/chemical_reaction/rebound
 	results = list(/datum/reagent/drug/rebound = 2)
 	required_reagents = list(/datum/reagent/drug/jet = 1, /datum/reagent/medicine/epinephrine = 1)
 
-/datum/reagent/drug/turbo
+/datum/chemical_reaction/turbo
 	results = list(/datum/reagent/drug/turbo = 5)
 	required_reagents = list(/datum/reagent/toxin/cazador_venom = 1, /datum/reagent/drug/jet = 2, /datum/reagent/toxin/turpentine = 2)
 	required_temp = 500
