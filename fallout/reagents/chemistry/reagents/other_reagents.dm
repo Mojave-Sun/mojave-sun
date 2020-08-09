@@ -22,3 +22,18 @@
 	name = "Lead"
 	description = "A dull, dense metal that's useful for radioactive shielding."
 	color = "#808080" // rgb: 128, 128, 128
+
+/datum/reagent/adhesive
+	name = "Adhesive"
+	description = "General adhesives from a variety of sources. Useful for crafting."
+	color = "#D3D3D3"
+
+/datum/reagent/nuclear_material
+	name = "Nuclear Material"
+	description = "A general mix of radioactive fuels and materials."
+	color = "#66FF00"
+
+/datum/reagent/flux
+	name = "Flux"
+	description = "A useful material produced by irradiated plants."
+	color = "#66FF00"
