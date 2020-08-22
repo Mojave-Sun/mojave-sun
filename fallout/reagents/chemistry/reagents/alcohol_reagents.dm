@@ -55,7 +55,7 @@
 
 /datum/reagent/consumable/ethanol/high_volt_hefe
 	name = "High Voltage Hefe"
-	description = "A pale, crisp beer complemented beautifully with battery acid."
+	description = "A pale, crisp beer complemented beautifully with fusion cell juice."
 	taste_description = "beer"
 	boozepwr = 30
 	quality = DRINK_NICE
@@ -428,3 +428,25 @@
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "Gorgon Hound"
 	glass_desc = "Fills you with the courage you need to walk the streets of the Dog City."
+
+/datum/reagent/consumable/ethanol/nuka_radler //nuka-lemon and high-voltage hefe
+	name = "Nuka-Radler"
+	description = "A combination of Nuka-Lemon and beer. Really cools you down on a hot day."
+	taste_description = "bitter lemonade"
+	boozepwr = 10
+	quality = DRINK_VERYGOOD
+	color = "#fff44f"
+	glass_icon_state = "whiskeycolaglass"
+	glass_name = "Nuka-Radler"
+	glass_desc = "Also known as a Nuka-Shandy, if you're so inclined."
+
+/datum/reagent/consumable/ethanol/coolant_pump //nuka-cola and rad-ant lager
+	name = "Coolant Pump"
+	description = "Nuka-Cola and beer. Bitter yet refreshing."
+	taste_description = "bitter lemonade"
+	boozepwr = 10
+	quality = DRINK_VERYGOOD
+	color = "#fff44f"
+	glass_icon_state = "whiskeycolaglass"
+	glass_name = "Coolant Pump"
+	glass_desc = "It's dark, it's bitter, and it's refreshing."

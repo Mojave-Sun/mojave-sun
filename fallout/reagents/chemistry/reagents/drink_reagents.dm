@@ -58,6 +58,16 @@
 	glass_name = "glass of Nuka-Cranberry"
 	glass_desc = "A homebrew that manages to combine Nuka-Cola and Cranberry in perfect harmony."
 
+/datum/reagent/consumable/nuka_lemon
+	name = "Nuka-Lemon"
+	description = "All the zip of Nuka-Cola, with all the refreshing zing of lemon."
+	color = "#fff44f"
+	quality = DRINK_VERYGOOD
+	taste_description = "lemonade"
+	glass_icon_state = "nuka_colaglass"
+	glass_name = "glass of Nuka-Lemon"
+	glass_desc = "A refreshing glass of Nuka-Lemon."
+
 /datum/reagent/consumable/nuka_quantum
 	name = "Nuka-Cola Quantum"
 	description = "Glowy yet oh so good."
