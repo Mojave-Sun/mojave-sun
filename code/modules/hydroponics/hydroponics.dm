@@ -354,7 +354,7 @@
 	if(dead)
 		plant_overlay.icon_state = myseed.icon_dead
 	else if(harvest)
-		if(!myseed.icon_harvest)
+		if(myseed.harvest_icon == 1)
 			plant_overlay.icon_state = "[myseed.icon_grow][myseed.growthstages]"
 			harvest_overlay.icon_state = myseed.icon_product
 			harvest_overlay.color = myseed.growing_color

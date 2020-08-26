@@ -1,7 +1,8 @@
 #define GRASS_SPONTANEOUS 		2
 #define GRASS_WEIGHT 			2
-#define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/tree/fallout/tallpine = 7, /obj/structure/flora/tree/fallout/deadsnow = 5, /obj/structure/flora/tree/fallout/pine = 5, /obj/structure/flora/fallout/shrub = 5, /obj/structure/flora/bush = 5)
+#define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/fallout/tree/tallpine = 7, /obj/structure/flora/fallout/tree/deadsnow = 5, /obj/structure/flora/fallout/tree/pine = 5, /obj/structure/flora/fallout/shrub = 5, /obj/structure/flora/bush = 5, /obj/structure/flora/fallout/forage = 1, /obj/structure/flora/fallout/forage/blackberry = 1, /obj/structure/flora/fallout/forage/mutfruit = 1, /obj/structure/flora/fallout/forage/ashrose = 1, /obj/structure/flora/fallout/forage/wildcarrot = 1, /obj/structure/flora/fallout/forage/aster = 1)
 #define DESOLATE_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland/snow = 10, /obj/structure/flora/bush = 1)
+#define MUSHROOM_SPAWN_LIST list(/obj/structure/flora/fallout/forage/mushroom = 5, /obj/structure/flora/fallout/forage/mushroom/glowing = 1)
 
 //A plating that can't be destroyed but can have stuff like floor tiles slapped on for construction
 
@@ -192,7 +193,7 @@
 				. = TRUE
 				return .
 		if(istype(curr_area, /area/f13/snow/forest))
-			if(prob(15))
+			if(prob(20))
 				randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
 			else
 				if(prob(10))
@@ -242,7 +243,7 @@
 
 /turf/open/floor/plating/ground/mountain/proc/plantShrooms()
 	if(prob(SHROOM_SPAWN))
-		//turfPlant = new /obj/structure/flora/wasteplant/wild_fungus(src)
+		turfPlant = pickweight(MUSHROOM_SPAWN_LIST)
 		. = TRUE //in case we ever need this to return if we spawned
 		return .
 

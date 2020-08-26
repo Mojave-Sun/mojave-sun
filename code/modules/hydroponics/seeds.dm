@@ -18,7 +18,7 @@
 	/// Checks if whole object needs to be custom coloured (wheat, etc)
 	var/wholeiconcolor = FALSE
 	/// Checks product colour sprite is seperate
-	var/harvest_icon = FALSE
+	var/harvest_icon = 0
 	///the file that stores the sprites of the growing plant from this seed.
 	var/growing_icon = 'icons/obj/hydroponics/growing.dmi'
 	///the growing color of the plant

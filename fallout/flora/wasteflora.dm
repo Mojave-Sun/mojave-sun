@@ -1,5 +1,5 @@
 #define IS_SHARP_AXE	3
-
+#define STATIC_NUTRIENT_CAPACITY_FALLOUT 50
 
 /////////////////////////////////////////////////////////////
 //////////// MOJAVE SUN BOTANY TWEAKS DIRECTORY /////////////
@@ -17,50 +17,8 @@
 /obj/item/reagent_containers/food/snacks/grown/fallout
 	icon = 'fallout/icons/hydroponics/harvest.dmi'
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/proc/seedify(obj/item/O, t_max, mob/living/user)
-	var/t_amount = 0
-	var/list/seeds = list()
-	if(t_max == -1)
-		t_max = rand(0, 1)
-
-	var/seedloc = O.loc
-
-	if(istype(O, /obj/item/reagent_containers/food/snacks/grown/))
-		var/obj/item/reagent_containers/food/snacks/grown/F = O
-		if(F.seed)
-			if(user && !user.temporarilyRemoveItemFromInventory(O)) //couldn't drop the item
-				return
-			while(t_amount < t_max)
-				var/obj/item/seeds/t_prod = F.seed.Copy()
-				seeds.Add(t_prod)
-				t_prod.forceMove(seedloc)
-				t_amount++
-			qdel(O)
-			return seeds
-
-	else if(istype(O, /obj/item/grown))
-		var/obj/item/grown/F = O
-		if(F.seed)
-			if(user && !user.temporarilyRemoveItemFromInventory(O))
-				return
-			while(t_amount < t_max)
-				var/obj/item/seeds/t_prod = F.seed.Copy()
-				t_prod.forceMove(seedloc)
-				t_amount++
-			qdel(O)
-		return 1
-
-	return 0
-
-/obj/item/reagent_containers/food/snacks/grown/fallout/attackby(obj/item/O, mob/user, params)
-	if(O.sharpness == IS_BLUNT)
-		to_chat(user, "<span class='notice'>You begin to attempt to crush the seeds from the produce.</span>")
-		if(do_after(user, 1000/O.force, target = src))
-			if(seedify(O,-1, src, user))
-				return
-
-
 //food size change, less gimmicky jumbofoods
+
 /obj/item/reagent_containers/food/snacks/grown/fallout/Initialize(mapload, obj/item/seeds/new_seed)
 	. = ..()
 	if(!tastes)
@@ -83,7 +41,14 @@
 		for(var/datum/plant_gene/trait/T in seed.genes)
 			T.on_new(src, loc)
 		seed.prepare_result(src)
-		transform *= TRANSFORM_USING_VARIABLE(seed.potency, 150) + 0.5 //Makes the resulting produce's sprite larger or smaller based on potency!
+		var/matrix/M = matrix()
+		if(seed.potency >= 80)
+			M.Scale(1, 1)
+			transform = M
+			return
+		else
+			M.Scale(seed.potency/80, seed.potency/80)
+			transform = M
 		add_juice()
 
 /////////////////////////////////////////////////////////////
@@ -146,13 +111,13 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = IS_SHARP
 
-/obj/item/secateurs/shears/attack_self(mob/user)
+/obj/item/secateurs/shears/fallout/attack_self(mob/user)
 	var/obj/item/geneshears/shears/gene = new /obj/item/geneshears/shears(drop_location())
 	to_chat(user, "<span class='notice'>You hold the shears aggresively, ready to remove stems.</span>")
 	qdel(src)
 	user.put_in_active_hand(gene)
 
-/obj/item/geneshears/shears/attack_self(mob/user)
+/obj/item/geneshears/fallout/shears/attack_self(mob/user)
 	var/obj/item/secateurs/shears/sec = new /obj/item/secateurs/shears(drop_location())
 	to_chat(user, "<span class='notice'>You hold the shears delicately, ready to remove grafts.</span>")
 	qdel(src)
@@ -272,7 +237,7 @@
 	icon_state = "seedextractor"
 	density = TRUE
 	anchored = TRUE
-daesack
+
 /obj/structure/rustic_extractor/proc/seedify(obj/item/O, t_max, obj/structure/rustic_extractor/extractor, mob/living/user)
 	var/t_amount = 0
 	var/list/seeds = list()
@@ -378,7 +343,7 @@ daesack
 	canSmoothWith = list(/obj/machinery/hydroponics/fallout/soil)
 	pixel_z = 0
 	nutridrain = 0.3
-	maxnutri = 50
+	maxnutri = 20
 	gender = PLURAL
 	circuit = null
 	density = FALSE
@@ -461,8 +426,8 @@ daesack
 /obj/machinery/hydroponics/fallout/soil/Initialize()
 	//ALRIGHT YOU DEGENERATES. YOU HAD REAGENT HOLDERS FOR AT LEAST 4 YEARS AND NONE OF YOU MADE HYDROPONICS TRAYS HOLD NUTRIENT CHEMS INSTEAD OF USING "Points".
 	//SO HERE LIES THE "nutrilevel" VAR. IT'S DEAD AND I PUT IT OUT OF IT'S MISERY. USE "reagents" INSTEAD. ~ArcaneMusic, accept no substitutes.
-	create_reagents(100)
-	reagents.add_reagent(/datum/reagent/plantnutriment/eznutriment, 10) //Half filled nutrient trays for dirt trays to have more to grow with in prison/lavaland.
+	create_reagents(50)
+	reagents.add_reagent(/datum/reagent/plantnutriment/fallout/fertilizer, 50) //Half filled nutrient trays for dirt trays to have more to grow with in prison/lavaland.
 	. = ..()
 
 /obj/machinery/hydroponics/fallout/soil/update_icon_hoses()
@@ -480,7 +445,7 @@ daesack
 
 //forest and snow areas
 
-//#define SNOW_PLANT_DENSE_SPAWN_LIST list(/obj/structure/flora/grass/wasteland/snow = 10, /obj/structure/flora/tree/fallout/tallpine = 7, /obj/structure/flora/tree/fallout/deadsnow = 5, /obj/structure/flora/tree/fallout/pine = 5)
+//#define SNOW_PLANT_DENSE_SPAWN_LIST list(/obj/structure/flora/grass/wasteland/snow = 10, /obj/structure/flora/fallout/tree/tallpine = 7, /obj/structure/flora/fallout/tree/deadsnow = 5, /obj/structure/flora/fallout/tree/pine = 5)
 
 /area/f13/snow
 	name = "Snow"

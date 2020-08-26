@@ -10,7 +10,7 @@
 	species = "cactus2"
 	growing_color =  "#a6b115"
 	plantname = "Barrel Cactus"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/barrelcactus
 	mutatelist = list(/obj/item/seeds/fallout/pricklypear)
@@ -41,7 +41,7 @@
 	species = "bush"
 	growing_color =  "#59496d"
 	plantname = "Mutfruit Sapling"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/squash)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/mutfruit
 	mutatelist = list(/obj/item/seeds/fallout/cmutfruit)
@@ -71,13 +71,13 @@
 	species = "vines"
 	growing_color =  "#da9249"
 	plantname = "Crunchy Mutfruits"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/cmutfruit
 	mutatelist = list()
 	lifespan = 80
 	endurance = 60
 	yield = 3
-	growthstages = 4
+	growthstages = 3
 	production = 1
 	maturation = 6
 	//reagents_add =
@@ -100,7 +100,7 @@
 	species = "tree"
 	growing_color =  "#9b3434"
 	plantname = "Apple Shrub"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/apple
 	mutatelist = list(/obj/item/seeds/fallout/cmutfruit)
 	lifespan = 100
@@ -129,7 +129,7 @@
 	species = "cactus"
 	growing_color =  "#8a0483"
 	plantname = "Prickly Pear Cactus"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest,/datum/plant_gene/trait/stinging) //could be a bad idea idk
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/pricklypear
 	mutatelist = list(/obj/item/seeds/fallout/barrelcactus)
@@ -176,7 +176,7 @@
 	species = "bush"
 	growing_color =  "#695d19"
 	plantname = "Punga Bush"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/squash)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/pungafruit
 	lifespan = 80
@@ -205,7 +205,7 @@
 	species = "bush"
 	growing_color =  "#55ff06"
 	plantname = "Geigerpunga Bush"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/squash)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/geigpungafruit
 	lifespan = 100
@@ -263,9 +263,9 @@
 	species = "vines"
 	growing_color =  "#2f2525ff"
 	plantname = "Tarberry Bush"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/
+	product = /obj/item/reagent_containers/food/snacks/grown/fallout/tarberry
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	mutatelist = list(/obj/item/seeds/fallout/blackberry)
 	lifespan = 30
@@ -294,7 +294,7 @@
 	species = "bush"
 	growing_color =  "#351b3d"
 	plantname = "Blackberry Bush"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/blackberry
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
@@ -325,14 +325,14 @@
 	species = "bush2"
 	growing_color =  "#00ff2a"
 	plantname = "Radberry Shrub"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/radberry
 	lifespan = 10
 	endurance = 20
 	instability = 100
 	yield = 3
-	growthstages = 4
+	growthstages = 3
 	production = 1
 	maturation = 6
 	//reagents_add =
@@ -387,14 +387,14 @@
 	species = "bush2"
 	growing_color =  "#703e2e"
 	plantname = "Tato Plant"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/tato
 	mutatelist = list(/obj/item/seeds/fallout/tomato, /obj/item/seeds/fallout/potato)
 	lifespan = 40
 	endurance = 80
 	yield = 2
-	growthstages = 4
+	growthstages = 3
 	production = 2
 	maturation = 4
 	//reagents_add =
@@ -446,7 +446,7 @@
 	species = "bush"
 	growing_color =  "#a7200e"
 	plantname = "Tomato Plant"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash, /datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/tomato
 	mutatelist = list(/obj/item/seeds/fallout/tato, /datum/plant_gene/trait/repeated_harvest)
@@ -477,7 +477,7 @@
 	species = "bush"
 	growing_color =  "#233b29"
 	plantname = "Jalepeno Plant"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/jalepeno
 	mutatelist = list(/obj/item/seeds/fallout/radpepper)
@@ -508,7 +508,7 @@
 	species = "bush"
 	growing_color =  "#fffb02"
 	plantname = "Radpepper Bush"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash, /datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/radpepper
 	mutatelist = list(/obj/item/seeds/fallout/jalepeno)
@@ -703,7 +703,7 @@
 	species = "vines"
 	growing_color =  "#334632"
 	plantname = "Cabbage Plant"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/cabbage
 	maturation = 10
 	production = 1
@@ -732,13 +732,13 @@
 	species = "tree"
 	growing_color =  "#7b7c68"
 	plantname = "Pinyon Pine"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/pinyon
 	lifespan = 60
 	endurance = 20
 	yield = 2
-	growthstages = 2
+	growthstages = 5
 	production = 5
 	maturation = 5
 	//reagents_add =
@@ -763,7 +763,7 @@
 	species = "bush"
 	growing_color =  "#525011"
 	plantname = "Mesquite Plant"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/mesquite
 	lifespan = 80
@@ -794,7 +794,7 @@
 	species = "vines"
 	growing_color =  "#cadca3"
 	plantname = "Buffalo Vines"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash)
 	product = (/obj/item/reagent_containers/food/snacks/grown/fallout/)
 	lifespan = 60
@@ -854,7 +854,7 @@
 	species = "flower2"
 	growing_color =  "#612a20"
 	plantname = "Ash Roses"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/ashrose
 	lifespan = 25
@@ -885,7 +885,7 @@
 	species = "flower2"
 	growing_color =  "#18f2fa"
 	plantname = "Rad Roses"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/radrose
 	lifespan = 25
@@ -916,7 +916,7 @@
 	species = "flower"
 	growing_color =  "#7c2292"
 	plantname = "Soot Flowers"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/soot
 	lifespan = 25
@@ -947,7 +947,7 @@
 	species = "flower"
 	growing_color =  "#229235"
 	plantname = "Toxic Soot Flowers"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/toxicsoot
 	lifespan = 25
@@ -966,7 +966,7 @@
 	desc = "An extremely poisonous soot flower."
 	bitesize_mod = 1
 	foodtype = GROSS | TOXIC
-	icon_state = "toxicsoot"
+	icon_state = "toxsoot"
 	filling_color = "#34773f"
 	tastes = list("bitterness"= 10)
 
@@ -978,7 +978,7 @@
 	species = "flower2"
 	growing_color =  "#dddddd"
 	plantname = "Datura Flowers"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/datura
 	lifespan = 25
@@ -1009,7 +1009,7 @@
 	species = "flower2"
 	growing_color =  "#e8bf28"
 	plantname = "Radtura Flowers"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/radtura
 	lifespan = 25
@@ -1098,14 +1098,14 @@
 	species = "flower"
 	growing_color =  "#3f4c72"
 	plantname = "Aster Flowers"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/aster
 	lifespan = 25
 	endurance = 10
 	maturation = 6
 	production = 3
-	yield = 5
+	yield = 7
 	instability = 25
 	growthstages = 3
 	//reagents_add =
@@ -1114,7 +1114,7 @@
 /obj/item/reagent_containers/food/snacks/grown/fallout/aster
 	seed = /obj/item/seeds/fallout/aster
 	name = "aster flower"
-	desc = "Some tasty aster flower seeds."
+	desc = "Some tasty aster flowers."
 	bitesize_mod = 1
 	icon_state = "aster"
 	filling_color = "#1e2b2c"
@@ -1128,7 +1128,7 @@
 	species = "flower2"
 	growing_color =  "#232b44"
 	plantname = "Ash Blossoms"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/ashblossom
 	lifespan = 25
@@ -1158,7 +1158,7 @@
 	species = "vines"
 	growing_color =  "#a64e5a"
 	plantname = "Thistles"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest,/datum/plant_gene/trait/stinging)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/thistle
 	lifespan = 25
@@ -1206,7 +1206,7 @@
 	species = "cactus2"
 	growing_color =  "#37524e"
 	plantname = "Agave"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/agave
 	lifespan = 25
@@ -1236,7 +1236,7 @@
 	species = "flower"
 	growing_color =  "#88561c"
 	plantname = "Broc Flowers"
-	harvest_icon = TRUE
+	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/brocflower
 	lifespan = 25
@@ -1277,7 +1277,7 @@
 	maturation = 8
 	production = 3
 	yield = 6
-	growthstages = 2
+	growthstages = 4
 	//reagents_add =
 
 
@@ -1299,26 +1299,31 @@
 	growing_color =  "#98b752"
 	wholeiconcolor = TRUE
 	plantname = "Glowfungus Mushrooms"
-	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
+	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/glow/falloutgreen)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/cavefungus
 	lifespan = 50
 	endurance = 10
 	maturation = 8
 	production = 3
 	yield = 6
-	growthstages = 2
+	growthstages = 4
 	//reagents_add =
 
 
 /obj/item/reagent_containers/food/snacks/grown/fallout/glowfungus
 	seed = /obj/item/seeds/fallout/glowfungus
 	name = "glow fungus"
-	desc = "An radioactive mushroom, with multiple potent toxin healing and radioactive properties."
+	desc = "A radioactive mushroom, with multiple potent toxin healing and radioactive properties."
 	bitesize_mod = 1
 	icon_state = "glowfungus"
 	foodtype = TOXIC
 	filling_color = "#357944"
 	tastes = list("mushroom"= 5, "warmth"= 5)
+
+/datum/plant_gene/trait/glow/falloutgreen
+	//oh no, now i'm radioactive
+	name = "Radioactive Bioluminescence"
+	glow_color = "#3eff3e"
 
 //////////////////////// BLIGHT /////////////////////////////
 
@@ -1334,7 +1339,7 @@
 	maturation = 8
 	production = 3
 	yield = 6
-	growthstages = 2
+	growthstages = 4
 	//reagents_add =
 
 
@@ -1362,7 +1367,7 @@
 	maturation = 8
 	production = 3
 	yield = 6
-	growthstages = 2
+	growthstages = 4
 	//reagents_add =
 
 
@@ -1392,7 +1397,7 @@
 	maturation = 8
 	production = 3
 	yield = 6
-	growthstages = 2
+	growthstages = 4
 	//reagents_add =
 
 
@@ -1422,7 +1427,7 @@
 	maturation = 8
 	production = 3
 	yield = 6
-	growthstages = 2
+	growthstages = 4
 	//reagents_add =
 
 
@@ -1452,7 +1457,7 @@
 	maturation = 8
 	production = 3
 	yield = 6
-	growthstages = 2
+	growthstages = 4
 	//reagents_add =
 
 
@@ -1481,7 +1486,7 @@
 	maturation = 8
 	production = 3
 	yield = 6
-	growthstages = 2
+	growthstages = 4
 	//reagents_add =
 
 
