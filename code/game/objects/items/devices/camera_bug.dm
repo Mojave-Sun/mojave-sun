@@ -62,15 +62,15 @@
 /obj/item/camera_bug/check_eye(mob/user)
 	if ( loc != user || user.incapacitated() || user.is_blind() || !current )
 		user.unset_machine()
-		return 0
+		return FALSE
 	var/turf/T_user = get_turf(user.loc)
 	var/turf/T_current = get_turf(current)
 	if(T_user.z != T_current.z || !current.can_use())
 		to_chat(user, "<span class='danger'>[src] has lost the signal.</span>")
 		current = null
 		user.unset_machine()
-		return 0
-	return 1
+		return FALSE
+	return TRUE
 /obj/item/camera_bug/on_unset_machine(mob/user)
 	user.reset_perspective(null)
 
@@ -298,7 +298,7 @@
 				break
 	src.updateSelfDialog()
 
-/obj/item/camera_bug/proc/same_z_level(var/obj/machinery/camera/C)
+/obj/item/camera_bug/proc/same_z_level(obj/machinery/camera/C)
 	var/turf/T_cam = get_turf(C)
 	var/turf/T_bug = get_turf(loc)
 	if(!T_bug || T_cam.z != T_bug.z)

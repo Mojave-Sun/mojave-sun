@@ -1,18 +1,19 @@
+#define DOOR_CLOSE_WAIT 60 ///Default wait until doors autoclose
 /obj/machinery/door
 	name = "door"
 	desc = "It opens and closes."
 	icon = 'icons/obj/doors/Doorint.dmi'
 	icon_state = "door1"
-	opacity = 1
+	opacity = TRUE
 	density = TRUE
 	move_resist = MOVE_FORCE_VERY_STRONG
 	layer = OPEN_DOOR_LAYER
 	power_channel = AREA_USAGE_ENVIRON
 	max_integrity = 350
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 20, "energy" = 20, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 80, "acid" = 70)
+	armor = list(MELEE = 30, BULLET = 30, LASER = 20, ENERGY = 20, BOMB = 10, BIO = 100, RAD = 100, FIRE = 80, ACID = 70)
 	CanAtmosPass = ATMOS_PASS_DENSITY
 	flags_1 = PREVENT_CLICK_UNDER_1
-	ricochet_chance_mod = 0.8
+	receive_ricochet_chance_mod = 0.8
 	damage_deflection = 10
 
 	interaction_flags_atom = INTERACT_ATOM_UI_INTERACT
@@ -301,7 +302,7 @@
 	air_update_turf(1)
 	update_freelook_sight()
 	if(autoclose)
-		addtimer(CALLBACK(src, .proc/close), autoclose)
+		autoclose_in(DOOR_CLOSE_WAIT)
 	return 1
 
 /obj/machinery/door/proc/close()
@@ -313,7 +314,7 @@
 		for(var/atom/movable/M in get_turf(src))
 			if(M.density && M != src) //something is blocking the door
 				if(autoclose)
-					autoclose_in(60)
+					autoclose_in(DOOR_CLOSE_WAIT)
 				return
 
 	operating = TRUE
@@ -350,7 +351,8 @@
 		L.visible_message("<span class='warning'>[src] closes on [L], crushing [L.p_them()]!</span>", "<span class='userdanger'>[src] closes on you and crushes you!</span>")
 		if(iscarbon(L))
 			var/mob/living/carbon/C = L
-			for(var/datum/wound/W in C.all_wounds)
+			for(var/i in C.all_wounds) // should probably replace with signal
+				var/datum/wound/W = i
 				W.crush(DOOR_CRUSH_DAMAGE)
 		if(isalien(L))  //For xenos
 			L.adjustBruteLoss(DOOR_CRUSH_DAMAGE * 1.5) //Xenos go into crit after aproximately the same amount of crushes as humans.
@@ -424,4 +426,6 @@
 /obj/machinery/door/power_change()
 	. = ..()
 	if(. && !(machine_stat & NOPOWER))
-		autoclose_in(rand(0.5 SECONDS, 3 SECONDS))
+		autoclose_in(DOOR_CLOSE_WAIT)
+
+#undef DOOR_CLOSE_WAIT

@@ -42,14 +42,14 @@ SUBSYSTEM_DEF(discord)
 	var/list/reverify_cache = list()
 	var/notify_file = file("data/notify.json")
 	/// Is TGS enabled (If not we won't fire because otherwise this is useless)
-	var/enabled = 0
+	var/enabled = FALSE
 
 /datum/controller/subsystem/discord/Initialize(start_timeofday)
 	// Check for if we are using TGS, otherwise return and disables firing
 	if(world.TgsAvailable())
-		enabled = 1 // Allows other procs to use this (Account linking, etc)
+		enabled = TRUE // Allows other procs to use this (Account linking, etc)
 	else
-		can_fire = 0 // We dont want excess firing
+		can_fire = FALSE // We dont want excess firing
 		return ..() // Cancel
 
 	try
@@ -58,6 +58,7 @@ SUBSYSTEM_DEF(discord)
 		pass() // The list can just stay as its default (blank). Pass() exists because it needs a catch
 	var/notifymsg = jointext(people_to_notify, ", ")
 	if(notifymsg)
+		notifymsg += ", a new round is starting!"
 		send2chat(trim(notifymsg), CONFIG_GET(string/chat_new_game_notifications)) // Sends the message to the discord, using same config option as the roundstart notification
 	fdel(notify_file) // Deletes the file
 	return ..()
@@ -84,7 +85,7 @@ SUBSYSTEM_DEF(discord)
 /datum/controller/subsystem/discord/proc/lookup_id(lookup_ckey)
 	//We cast the discord ID to varchar to prevent BYOND mangling
 	//it into it's scientific notation
-	var/datum/DBQuery/query_get_discord_id = SSdbcore.NewQuery(
+	var/datum/db_query/query_get_discord_id = SSdbcore.NewQuery(
 		"SELECT CAST(discord_id AS CHAR(25)) FROM [format_table_name("player")] WHERE ckey = :ckey",
 		list("ckey" = lookup_ckey)
 	)
@@ -97,7 +98,7 @@ SUBSYSTEM_DEF(discord)
 
 // Returns ckey from ID
 /datum/controller/subsystem/discord/proc/lookup_ckey(lookup_id)
-	var/datum/DBQuery/query_get_discord_ckey = SSdbcore.NewQuery(
+	var/datum/db_query/query_get_discord_ckey = SSdbcore.NewQuery(
 		"SELECT ckey FROM [format_table_name("player")] WHERE discord_id = :discord_id",
 		list("discord_id" = lookup_id)
 	)
@@ -110,7 +111,7 @@ SUBSYSTEM_DEF(discord)
 
 // Finalises link
 /datum/controller/subsystem/discord/proc/link_account(ckey)
-	var/datum/DBQuery/link_account = SSdbcore.NewQuery(
+	var/datum/db_query/link_account = SSdbcore.NewQuery(
 		"UPDATE [format_table_name("player")] SET discord_id = :discord_id WHERE ckey = :ckey",
 		list("discord_id" = account_link_cache[ckey], "ckey" = ckey)
 	)
@@ -120,7 +121,7 @@ SUBSYSTEM_DEF(discord)
 
 // Unlink account (Admin verb used)
 /datum/controller/subsystem/discord/proc/unlink_account(ckey)
-	var/datum/DBQuery/unlink_account = SSdbcore.NewQuery(
+	var/datum/db_query/unlink_account = SSdbcore.NewQuery(
 		"UPDATE [format_table_name("player")] SET discord_id = NULL WHERE ckey = :ckey",
 		list("ckey" = ckey)
 	)
@@ -137,7 +138,7 @@ SUBSYSTEM_DEF(discord)
 	if(!CONFIG_GET(flag/enable_discord_autorole))
 		return
 
-	var/url = "https://discordapp.com/api/guilds/[CONFIG_GET(string/discord_guildid)]/members/[id]/roles/[CONFIG_GET(string/discord_roleid)]"
+	var/url = "https://discord.com/api/guilds/[CONFIG_GET(string/discord_guildid)]/members/[id]/roles/[CONFIG_GET(string/discord_roleid)]"
 
 	// Make the request
 	var/datum/http_request/req = new()
@@ -147,38 +148,3 @@ SUBSYSTEM_DEF(discord)
 	var/datum/http_response/res = req.into_response()
 
 	WRITE_LOG(GLOB.discord_api_log, "PUT [url] returned [res.status_code] [res.body]")
-
-/**
-  * Sends a message to TGS chat channels.
-  *
-  * message - The message to send.
-  * channel_tag - Required. If "", the message with be sent to all connected (Game-type for TGS3) channels. Otherwise, it will be sent to TGS4 channels with that tag.
-  */
-/proc/send2chat(message, channel_tag)
-	if(channel_tag == null || !world.TgsAvailable())
-		return
-
-	var/datum/tgs_version/version = world.TgsVersion()
-	if(channel_tag == "" || version.suite == 3)
-		world.TgsTargetedChatBroadcast(message, FALSE)
-		return
-
-	var/list/channels_to_use = list()
-	for(var/I in world.TgsChatChannelInfo())
-		var/datum/tgs_chat_channel/channel = I
-		if(channel.tag == channel_tag)
-			channels_to_use += channel
-
-	if(channels_to_use.len)
-		world.TgsChatBroadcast(message, channels_to_use)
-
-/**
-  * Sends a message to TGS admin chat channels.
-  *
-  * category - The category of the mssage.
-  * message - The message to send.
-  */
-/proc/send2adminchat(category, message)
-	category = replacetext(replacetext(category, "\proper", ""), "\improper", "")
-	message = replacetext(replacetext(message, "\proper", ""), "\improper", "")
-	world.TgsTargetedChatBroadcast("[category] | [message]", TRUE)

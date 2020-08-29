@@ -2,13 +2,14 @@
 	name = "belt"
 	desc = "Can hold various things."
 	icon = 'icons/obj/clothing/belts.dmi'
-	icon_state = "utilitybelt"
+	icon_state = "utility"
 	inhand_icon_state = "utility"
 	worn_icon_state = "utility"
 	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/belt_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT
-	attack_verb = list("whipped", "lashed", "disciplined")
+	attack_verb_continuous = list("whips", "lashes", "disciplines")
+	attack_verb_simple = list("whip", "lash", "discipline")
 	max_integrity = 300
 	equip_sound = 'sound/items/equip/toolbelt_equip.ogg'
 	var/content_overlays = FALSE //If this is true, the belt will gain overlays based on what it's holding
@@ -66,7 +67,9 @@
 		/obj/item/construction/rcd,
 		/obj/item/pipe_dispenser,
 		/obj/item/inducer,
-		/obj/item/plunger
+		/obj/item/plunger,
+		/obj/item/airlock_painter,
+		/obj/item/pipe_painter
 		))
 
 /obj/item/storage/belt/utility/chief
@@ -195,7 +198,7 @@
 	new /obj/item/reagent_containers/syringe(src)
 	new /obj/item/stack/medical/bone_gel(src)
 	new /obj/item/stack/sticky_tape/surgical(src)
-	new /obj/item/reagent_containers/glass/bottle/calomel(src)
+	new /obj/item/reagent_containers/glass/bottle/formaldehyde(src)
 	update_icon()
 
 /obj/item/storage/belt/security
@@ -367,6 +370,13 @@
 		/obj/item/clothing/mask/luchador
 		))
 
+/obj/item/storage/belt/cummerbund
+	name = "cummerbund"
+	desc = "A pleated sash that pairs well with a suit jacket."
+	icon_state = "cummerbund"
+	inhand_icon_state = "cummerbund"
+	worn_icon_state = "cummerbund"
+
 /obj/item/storage/belt/military
 	name = "chest rig"
 	desc = "A set of tactical webbing worn by Syndicate boarding parties."
@@ -433,6 +443,7 @@
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "belt"
 	inhand_icon_state = "security"
+	worn_icon_state = "security"
 
 /obj/item/storage/belt/military/abductor/full/PopulateContents()
 	new /obj/item/screwdriver/abductor(src)
@@ -730,5 +741,6 @@
 		/obj/item/graft,
 		/obj/item/secateurs,
 		/obj/item/geneshears,
-		/obj/item/shovel/spade
+		/obj/item/shovel/spade,
+		/obj/item/gun/energy/floragun
 		))

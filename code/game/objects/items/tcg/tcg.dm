@@ -4,10 +4,13 @@ GLOBAL_LIST_EMPTY(cached_rarity_table)
 //Global list of all cards by series, with cards cached by rarity to make those lookups faster
 GLOBAL_LIST_EMPTY(cached_cards)
 
+#define DEFAULT_TCG_DMI_ICON 'icons/runtime/tcg/default.dmi'
+#define DEFAULT_TCG_DMI "icons/runtime/tcg/default.dmi"
+
 /obj/item/tcgcard
 	name = "Coder"
 	desc = "Wow, a mint condition coder card! Better tell the Github all about this!"
-	icon = 'icons/obj/tcg.dmi'
+	icon = DEFAULT_TCG_DMI_ICON
 	icon_state = "runtime"
 	w_class = WEIGHT_CLASS_TINY
 	 //Unique ID, for use in lookups and storage, used to index the global datum list where the rest of the card's info is stored
@@ -19,7 +22,9 @@ GLOBAL_LIST_EMPTY(cached_cards)
 
 /obj/item/tcgcard/Initialize(mapload, datum_series, datum_id)
 	. = ..()
-	transform = matrix(0.3,0,0,0,0.3,0)
+	zoom_out()
+	RegisterSignal(src, COMISG_STORAGE_ENTERED, .proc/zoom_in)
+	RegisterSignal(src, CONSIG_STORAGE_EXITED, .proc/zoom_out)
 	//If they are passed as null let's replace them with the vars on the card. this also means we can allow for map loaded ccards
 	if(!datum_series)
 		datum_series = series
@@ -54,16 +59,22 @@ GLOBAL_LIST_EMPTY(cached_cards)
 
 /obj/item/tcgcard/equipped(mob/user, slot, initial)
 	. = ..()
-	transform = matrix()
+	zoom_in()
 
 /obj/item/tcgcard/dropped(mob/user, silent)
 	. = ..()
+	zoom_out()
+
+/obj/item/tcgcard/proc/zoom_in()
+	transform = matrix()
+
+/obj/item/tcgcard/proc/zoom_out()
 	transform = matrix(0.3,0,0,0,0.3,0)
 
 /obj/item/cardpack
 	name = "Trading Card Pack: Coder"
 	desc = "Contains six complete fuckups by the coders. Report this on github please!"
-	icon = 'icons/obj/tcg.dmi'
+	icon = DEFAULT_TCG_DMI_ICON
 	icon_state = "cardback_nt"
 	w_class = WEIGHT_CLASS_TINY
 	///The card series to look in
@@ -92,7 +103,7 @@ GLOBAL_LIST_EMPTY(cached_cards)
 /obj/item/cardpack/series_one
 	name = "Trading Card Pack: Series 1"
 	desc = "Contains six cards of varying rarity from the 2560 Core Set. Collect them all!"
-	icon = 'icons/obj/tcg.dmi'
+	icon = DEFAULT_TCG_DMI_ICON
 	icon_state = "cardpack_series1"
 	series = "coreset2020"
 	contains_coin = 10
@@ -100,7 +111,7 @@ GLOBAL_LIST_EMPTY(cached_cards)
 /obj/item/cardpack/resin
 	name = "Trading Card Pack: Resin Frontier Booster Pack"
 	desc = "Contains six cards of varying rarity from the Resin Frontier set. Collect them all!"
-	icon = 'icons/obj/tcg_xenos.dmi'
+	icon = 'icons/runtime/tcg/xenos.dmi'
 	icon_state = "cardpack_resin"
 	series = "resinfront"
 	contains_coin = 0
@@ -113,7 +124,9 @@ GLOBAL_LIST_EMPTY(cached_cards)
 
 /obj/item/cardpack/Initialize()
 	. = ..()
-	transform = matrix(0.4,0,0,0,0.4,0)
+	zoom_out()
+	RegisterSignal(src, COMISG_STORAGE_ENTERED, .proc/zoom_in)
+	RegisterSignal(src, CONSIG_STORAGE_EXITED, .proc/zoom_out)
 	//Pass by refrance moment
 	//This lets us only have one rarity table per pack, badmins beware
 	if(GLOB.cached_rarity_table[type])
@@ -127,10 +140,16 @@ GLOBAL_LIST_EMPTY(cached_cards)
 
 /obj/item/cardpack/equipped(mob/user, slot, initial)
 	. = ..()
-	transform = matrix()
+	zoom_in()
 
 /obj/item/cardpack/dropped(mob/user, silent)
 	. = ..()
+	zoom_out()
+
+/obj/item/cardpack/proc/zoom_in()
+	transform = matrix()
+
+/obj/item/cardpack/proc/zoom_out()
 	transform = matrix(0.4,0,0,0,0.4,0)
 
 /obj/item/cardpack/attack_self(mob/user)
@@ -150,7 +169,7 @@ GLOBAL_LIST_EMPTY(cached_cards)
 /obj/item/coin/thunderdome
 	name = "Thunderdome Flipper"
 	desc = "A Thunderdome TCG flipper, for deciding who gets to go first. Also conveniently acts as a counter, for various purposes."
-	icon = 'icons/obj/tcg.dmi'
+	icon = DEFAULT_TCG_DMI_ICON
 	icon_state = "coin_nanotrasen"
 	custom_materials = list(/datum/material/plastic = 400)
 	material_flags = NONE
@@ -171,7 +190,7 @@ GLOBAL_LIST_EMPTY(cached_cards)
 /obj/item/storage/card_binder
 	name = "card binder"
 	desc = "The perfect way to keep your collection of cards safe and valuable."
-	icon = 'icons/obj/tcg.dmi'
+	icon = DEFAULT_TCG_DMI_ICON
 	icon_state = "binder"
 	inhand_icon_state = "album"
 	lefthand_file = 'icons/mob/inhands/misc/books_lefthand.dmi'
@@ -230,7 +249,7 @@ GLOBAL_LIST_EMPTY(cached_cards)
 	var/desc = "Wow, a mint condition coder card! Better tell the Github all about this!"
 	///This handles any extra rules for the card, i.e. extra attributes, special effects, etc. If you've played any other card game, you know how this works.
 	var/rules = "There are no rules here. There is no escape. No Recall or Intervention can work in this place."
-	var/icon = "icons/obj/tcg.dmi"
+	var/icon = DEFAULT_TCG_DMI
 	var/icon_state = "template"
 	///What it costs to summon this card to the battlefield.
 	var/summoncost = -1
@@ -312,7 +331,7 @@ GLOBAL_LIST_EMPTY(cached_cards)
 			var/toAdd = "The card [target.id] in [series] has the following default variables:"
 			var/shouldAdd = FALSE
 			for(var/a in (target.vars ^ thing.vars))
-				if(a == "icon" && target.vars[a] == "icons/obj/tcg.dmi")
+				if(a == "icon" && target.vars[a] == DEFAULT_TCG_DMI)
 					continue
 				if(target.vars[a] == initial(target.vars[a]))
 					shouldAdd = TRUE
@@ -370,3 +389,6 @@ GLOBAL_LIST_EMPTY(cached_cards)
 		GLOB.cached_cards[c.series][c.rarity] += c.id
 		//Let's actually store the datum here
 		GLOB.cached_cards[c.series]["ALL"][c.id] = c
+
+#undef DEFAULT_TCG_DMI_ICON
+#undef DEFAULT_TCG_DMI

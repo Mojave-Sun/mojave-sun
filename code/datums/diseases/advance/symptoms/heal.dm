@@ -269,10 +269,11 @@
 		return power
 	if(M.IsSleeping())
 		return power * 0.25 //Voluntary unconsciousness yields lower healing.
-	if(M.stat == UNCONSCIOUS)
-		return power * 0.9
-	if(M.stat == SOFT_CRIT)
-		return power * 0.5
+	switch(M.stat)
+		if(UNCONSCIOUS, HARD_CRIT)
+			return power * 0.9
+		if(SOFT_CRIT)
+			return power * 0.5
 	if(M.getBruteLoss() + M.getFireLoss() >= 70 && !active_coma)
 		to_chat(M, "<span class='warning'>You feel yourself slip into a regenerative coma...</span>")
 		active_coma = TRUE
@@ -284,7 +285,7 @@
 	addtimer(CALLBACK(src, .proc/uncoma, M), 300)
 
 /datum/symptom/heal/coma/proc/uncoma(mob/living/M)
-	if(!active_coma)
+	if(QDELETED(M) || !active_coma)
 		return
 	active_coma = FALSE
 	M.cure_fakedeath("regenerative_coma")

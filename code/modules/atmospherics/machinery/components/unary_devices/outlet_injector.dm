@@ -23,9 +23,6 @@
 
 	pipe_state = "injector"
 
-	ui_x = 310
-	ui_y = 115
-
 /obj/machinery/atmospherics/components/unary/outlet_injector/CtrlClick(mob/user)
 	if(can_interact(user))
 		on = !on
@@ -50,7 +47,7 @@
 		// everything is already shifted so don't shift the cap
 		add_overlay(getpipeimage(icon, "inje_cap", initialize_directions))
 
-	if(!nodes[1] || !on || !is_operational())
+	if(!nodes[1] || !on || !is_operational)
 		icon_state = "inje_off"
 	else
 		icon_state = "inje_on"
@@ -60,7 +57,7 @@
 
 	injecting = 0
 
-	if(!on || !is_operational())
+	if(!on || !is_operational)
 		return
 
 	var/datum/gas_mixture/air_contents = airs[1]
@@ -77,7 +74,7 @@
 
 /obj/machinery/atmospherics/components/unary/outlet_injector/proc/inject()
 
-	if(on || injecting || !is_operational())
+	if(on || injecting || !is_operational)
 		return
 
 	var/datum/gas_mixture/air_contents = airs[1]
@@ -144,11 +141,10 @@
 		update_icon()
 
 
-/obj/machinery/atmospherics/components/unary/outlet_injector/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
-																		datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+/obj/machinery/atmospherics/components/unary/outlet_injector/ui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, ui_key, "AtmosPump", name, ui_x, ui_y, master_ui, state)
+		ui = new(user, src, "AtmosPump", name)
 		ui.open()
 
 /obj/machinery/atmospherics/components/unary/outlet_injector/ui_data()
@@ -183,7 +179,7 @@
 
 /obj/machinery/atmospherics/components/unary/outlet_injector/can_unwrench(mob/user)
 	. = ..()
-	if(. && on && is_operational())
+	if(. && on && is_operational)
 		to_chat(user, "<span class='warning'>You cannot unwrench [src], turn it off first!</span>")
 		return FALSE
 

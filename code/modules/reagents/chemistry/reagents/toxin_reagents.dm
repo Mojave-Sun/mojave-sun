@@ -38,12 +38,12 @@
 	taste_description = "slime"
 	taste_mult = 0.9
 
-/datum/reagent/toxin/mutagen/reaction_mob(mob/living/carbon/M, method=TOUCH, reac_volume)
+/datum/reagent/toxin/mutagen/expose_mob(mob/living/carbon/M, methods=TOUCH, reac_volume)
 	if(!..())
 		return
-	if(!M.has_dna() || (HAS_TRAIT(M, TRAIT_RADIMMUNE) || HAS_TRAIT(M, TRAIT_BADDNA)))
+	if(!M.has_dna() || HAS_TRAIT(M, TRAIT_GENELESS) || HAS_TRAIT(M, TRAIT_BADDNA))
 		return  //No robots, AIs, aliens, Ians or other mobs should be affected by this.
-	if((method==VAPOR && prob(min(33, reac_volume))) || method==INGEST || method==PATCH || method==INJECT)
+	if(((methods & VAPOR) && prob(min(33, reac_volume))) || (methods & (INGEST|PATCH|INJECT)))
 		M.randmuti()
 		if(prob(98))
 			M.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
@@ -88,25 +88,42 @@
 		A.atmos_spawn_air("plasma=[volume];TEMP=[holder.chem_temp]")
 		holder.del_reagent(type)
 
-/datum/reagent/toxin/plasma/reaction_obj(obj/O, reac_volume)
+/datum/reagent/toxin/plasma/expose_obj(obj/O, reac_volume)
 	if((!O) || (!reac_volume))
 		return 0
 	var/temp = holder ? holder.chem_temp : T20C
 	if(temp >= LIQUID_PLASMA_BP)
 		O.atmos_spawn_air("plasma=[reac_volume];TEMP=[temp]")
 
-/datum/reagent/toxin/plasma/reaction_turf(turf/open/T, reac_volume)
+/datum/reagent/toxin/plasma/expose_turf(turf/open/T, reac_volume)
 	if(!istype(T))
 		return
 	var/temp = holder ? holder.chem_temp : T20C
 	if(temp >= LIQUID_PLASMA_BP)
 		T.atmos_spawn_air("plasma=[reac_volume];TEMP=[temp]")
 
-/datum/reagent/toxin/plasma/reaction_mob(mob/living/M, method=TOUCH, reac_volume)//Splashing people with plasma is stronger than fuel!
-	if(method == TOUCH || method == VAPOR)
+/datum/reagent/toxin/plasma/expose_mob(mob/living/M, methods=TOUCH, reac_volume)//Splashing people with plasma is stronger than fuel!
+	if(methods & (TOUCH|VAPOR))
 		M.adjust_fire_stacks(reac_volume / 5)
 		return
 	..()
+
+/datum/reagent/toxin/hot_ice
+	name = "Hot Ice Slush"
+	description = "Frozen plasma, worth its weight in gold, to the right people"
+	reagent_state = SOLID
+	color = "#724cb8" // rgb: 114, 76, 184
+	taste_description = "thick and smokey"
+	specific_heat = SPECIFIC_HEAT_PLASMA
+	toxpwr = 3
+	material = /datum/material/hot_ice
+
+/datum/reagent/toxin/hot_ice/on_mob_life(mob/living/carbon/M)
+	if(holder.has_reagent(/datum/reagent/medicine/epinephrine))
+		holder.remove_reagent(/datum/reagent/medicine/epinephrine, 2*REM)
+	M.adjustPlasma(20)
+	M.adjust_bodytemperature(-7 * TEMPERATURE_DAMAGE_COEFFICIENT, M.get_body_temp_normal())
+	return ..()
 
 /datum/reagent/toxin/lexorin
 	name = "Lexorin"
@@ -191,9 +208,9 @@
 	L.cure_fakedeath(type)
 	..()
 
-/datum/reagent/toxin/zombiepowder/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
+/datum/reagent/toxin/zombiepowder/expose_mob(mob/living/L, methods=TOUCH, reac_volume)
 	L.adjustOxyLoss(0.5*REM, 0)
-	if(method == INGEST)
+	if(methods & INGEST)
 		var/datum/reagent/toxin/zombiepowder/Z = L.reagents.has_reagent(/datum/reagent/toxin/zombiepowder)
 		if(istype(Z))
 			Z.fakedeath_active = TRUE
@@ -204,7 +221,7 @@
 		return TRUE
 	switch(current_cycle)
 		if(1 to 5)
-			M.confused += 1
+			M.add_confusion(1)
 			M.drowsyness += 1
 			M.slurring += 3
 		if(5 to 8)
@@ -260,7 +277,7 @@
 		mytray.adjustToxic(round(chems.get_reagent_amount(type) * 6))
 		mytray.adjustWeeds(-rand(4,8))
 
-/datum/reagent/toxin/plantbgone/reaction_obj(obj/O, reac_volume)
+/datum/reagent/toxin/plantbgone/expose_obj(obj/O, reac_volume)
 	if(istype(O, /obj/structure/alien/weeds))
 		var/obj/structure/alien/weeds/alien_weeds = O
 		alien_weeds.take_damage(rand(15,35), BRUTE, 0) // Kills alien weeds pretty fast
@@ -270,13 +287,11 @@
 		var/obj/structure/spacevine/SV = O
 		SV.on_chem_effect(src)
 
-/datum/reagent/toxin/plantbgone/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
-	if(method == VAPOR)
-		if(iscarbon(M))
-			var/mob/living/carbon/C = M
-			if(!C.wear_mask) // If not wearing a mask
-				var/damage = min(round(0.4*reac_volume, 0.1),10)
-				C.adjustToxLoss(damage)
+/datum/reagent/toxin/plantbgone/expose_mob(mob/living/M, methods=TOUCH, reac_volume)
+	if((methods & VAPOR) && iscarbon(M))
+		var/mob/living/carbon/exposed_carbon = M
+		if(!exposed_carbon.wear_mask)
+			exposed_carbon.adjustToxLoss(min(round(0.4 * reac_volume, 0.1), 10))
 
 /datum/reagent/toxin/plantbgone/weedkiller
 	name = "Weed Killer"
@@ -305,7 +320,7 @@
 		mytray.adjustToxic(round(chems.get_reagent_amount(type) * 1))
 		mytray.adjustPests(-rand(1,2))
 
-/datum/reagent/toxin/pestkiller/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
+/datum/reagent/toxin/pestkiller/expose_mob(mob/living/M, methods=TOUCH, reac_volume)
 	..()
 	if(M.mob_biotypes & MOB_BUG)
 		var/damage = min(round(0.4*reac_volume, 0.1),10)
@@ -361,7 +376,7 @@
 /datum/reagent/toxin/chloralhydrate/on_mob_life(mob/living/carbon/M)
 	switch(current_cycle)
 		if(1 to 10)
-			M.confused += 2
+			M.add_confusion(2)
 			M.drowsyness += 2
 		if(10 to 50)
 			M.Sleeping(40, 0)
@@ -566,8 +581,8 @@
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
 	toxpwr = 0
 
-/datum/reagent/toxin/itching_powder/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
-	if(method == TOUCH || method == VAPOR)
+/datum/reagent/toxin/itching_powder/expose_mob(mob/living/M, methods=TOUCH, reac_volume)
+	if(methods & (TOUCH|VAPOR))
 		M.reagents?.add_reagent(/datum/reagent/toxin/itching_powder, reac_volume)
 
 /datum/reagent/toxin/itching_powder/on_mob_life(mob/living/carbon/M)
@@ -824,25 +839,25 @@
 		mytray.adjustToxic(round(chems.get_reagent_amount(type) * 1.5))
 		mytray.adjustWeeds(-rand(1,2))
 
-/datum/reagent/toxin/acid/reaction_mob(mob/living/carbon/C, method=TOUCH, reac_volume)
+/datum/reagent/toxin/acid/expose_mob(mob/living/carbon/C, methods=TOUCH, reac_volume)
 	if(!istype(C))
 		return
 	reac_volume = round(reac_volume,0.1)
-	if(method == INGEST)
+	if(methods & INGEST)
 		C.adjustBruteLoss(min(6*toxpwr, reac_volume * toxpwr))
 		return
-	if(method == INJECT)
+	if(methods & INJECT)
 		C.adjustBruteLoss(1.5 * min(6*toxpwr, reac_volume * toxpwr))
 		return
 	C.acid_act(acidpwr, reac_volume)
 
-/datum/reagent/toxin/acid/reaction_obj(obj/O, reac_volume)
+/datum/reagent/toxin/acid/expose_obj(obj/O, reac_volume)
 	if(ismob(O.loc)) //handled in human acid_act()
 		return
 	reac_volume = round(reac_volume,0.1)
 	O.acid_act(acidpwr, reac_volume)
 
-/datum/reagent/toxin/acid/reaction_turf(turf/T, reac_volume)
+/datum/reagent/toxin/acid/expose_turf(turf/T, reac_volume)
 	if (!istype(T))
 		return
 	reac_volume = round(reac_volume,0.1)
@@ -872,7 +887,7 @@
 	name = "Nitric acid"
 	description = "Nitric acid is an extremely corrosive chemical substance that violently reacts with living organic tissue."
 	color = "#5050FF"
-	toxpwr = 2
+	toxpwr = 3
 	acidpwr = 5.0
 
 /datum/reagent/toxin/acid/nitracid/on_mob_life(mob/living/carbon/M)
@@ -932,7 +947,7 @@
 			if(1)
 				M.say(pick("oof.", "ouch.", "my bones.", "oof ouch.", "oof ouch my bones."), forced = /datum/reagent/toxin/bonehurtingjuice)
 			if(2)
-				M.emote("me", 1, pick("oofs silently.", "looks like their bones hurt.", "grimaces, as though their bones hurt."))
+				M.manual_emote(pick("oofs silently.", "looks like their bones hurt.", "grimaces, as though their bones hurt."))
 			if(3)
 				to_chat(M, "<span class='warning'>Your bones hurt!</span>")
 	return ..()
@@ -945,7 +960,7 @@
 			playsound(M, get_sfx("desecration"), 50, TRUE, -1)
 			M.visible_message("<span class='warning'>[M]'s bones hurt too much!!</span>", "<span class='danger'>Your bones hurt too much!!</span>")
 			M.say("OOF!!", forced = /datum/reagent/toxin/bonehurtingjuice)
-			bp.receive_damage(0, 0, 200)
+			bp.receive_damage(20, 0, 200, wound_bonus = rand(30, 130))
 		else //SUCH A LUST FOR REVENGE!!!
 			to_chat(M, "<span class='warning'>A phantom limb hurts!</span>")
 			M.say("Why are we still here, just to suffer?", forced = /datum/reagent/toxin/bonehurtingjuice)
@@ -962,7 +977,7 @@
 
 /datum/reagent/toxin/bungotoxin/on_mob_life(mob/living/carbon/M)
 	M.adjustOrganLoss(ORGAN_SLOT_HEART, 3)
-	M.confused = M.dizziness //add a tertiary effect here if this is isn't an effective poison.
+	M.set_confusion(M.dizziness) //add a tertiary effect here if this is isn't an effective poison.
 	if(current_cycle >= 12 && prob(8))
 		var/tox_message = pick("You feel your heart spasm in your chest.", "You feel faint.","You feel you need to catch your breath.","You feel a prickle of pain in your chest.")
 		to_chat(M, "<span class='notice'>[tox_message]</span>")
@@ -983,5 +998,5 @@
 	M.adjustOrganLoss(ORGAN_SLOT_BRAIN,1)
 	if(prob(1))
 		to_chat(M, "<span class='notice'>Ah, what was that? You thought you heard something...</span>")
-		M.confused += 5
+		M.add_confusion(5)
 	return ..()
