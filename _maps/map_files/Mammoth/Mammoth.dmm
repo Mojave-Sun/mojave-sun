@@ -4318,9 +4318,7 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/sunny_dale)
 "bvF" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	dir = 4
-	},
+/obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/blood/footprints{
 	dir = 1
 	},
@@ -5213,6 +5211,10 @@
 "deB" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/bottle/vodka,
+/obj/item/candle{
+	pixel_x = 9;
+	pixel_y = 1
+	},
 /turf/open/floor/plasteel/f13/white/rusty,
 /area/f13/sunny_dale)
 "deG" = (
@@ -5787,6 +5789,11 @@
 	dir = 8
 	},
 /area/f13/sunny_dale)
+"ehG" = (
+/obj/structure/table/low_wall/brick,
+/obj/structure/barricade/wooden/crude/snow,
+/turf/open/floor/plasteel/f13/white/dirty,
+/area/f13/sunny_dale)
 "ehM" = (
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/crude,
@@ -5801,12 +5808,11 @@
 /turf/open/floor/plasteel/f13/white/full/dirty,
 /area/f13/sunny_dale)
 "ejj" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = 11
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 10
 	},
-/obj/structure/mirror{
-	pixel_x = 27
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 1
 	},
 /turf/open/floor/plastic,
 /area/f13/sunny_dale)
@@ -5826,11 +5832,11 @@
 /turf/open/floor/holofloor/carpet,
 /area/f13/ncr_main)
 "ena" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	dir = 6
+/obj/structure/chair/f13/metal{
+	dir = 4
 	},
-/obj/effect/decal/cleanable/blood/footprints,
-/turf/open/floor/wood/f13,
+/obj/item/instrument/accordion,
+/turf/open/floor/wood/f13/stage_b,
 /area/f13/sunny_dale)
 "enH" = (
 /obj/machinery/vending/engineering,
@@ -6496,8 +6502,8 @@
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "fmm" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	dir = 10
+/obj/item/flashlight/lantern{
+	pixel_x = -9
 	},
 /turf/open/floor/plastic,
 /area/f13/sunny_dale)
@@ -7226,10 +7232,7 @@
 /turf/open/floor/wood/f13/carpet,
 /area/f13/sunny_dale)
 "gFI" = (
-/obj/structure/chair/f13/metal{
-	dir = 8
-	},
-/obj/item/instrument/banjo,
+/obj/structure/bed/f13/sleepingbag/red,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "gGu" = (
@@ -7523,6 +7526,18 @@
 /obj/structure/rack,
 /turf/open/floor/plasteel/f13/blue/white/whitebluechess/whitebluechess2/rusty,
 /area/f13/sunny_dale)
+"hkD" = (
+/obj/structure/table/wood,
+/obj/item/throwing_star/throwingknife{
+	pixel_x = 3
+	},
+/obj/item/throwing_star/throwingknife{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/item/hatchet/wooden,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "hlj" = (
 /obj/structure/curtain,
 /obj/structure/window/reinforced/tinted,
@@ -7793,11 +7808,11 @@
 /turf/open/floor/plasteel/f13/misc,
 /area/f13/sunny_dale)
 "hDK" = (
-/obj/structure/chair/f13/metal{
-	dir = 8
+/obj/effect/decal/cleanable/crayon{
+	icon_state = "=";
+	pixel_y = 11
 	},
-/obj/item/instrument/accordion,
-/turf/open/floor/wood/f13/stage_b,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "hEC" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7904,7 +7919,23 @@
 /turf/open/floor/wood/f13/broken/right,
 /area/f13/sunny_dale)
 "hQD" = (
-/obj/machinery/vending/cigarette,
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/door/window/southleft{
+	name = "stall door";
+	opacity = 1
+	},
+/obj/effect/decal/cleanable/crayon{
+	icon_state = "matt";
+	pixel_y = 32
+	},
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/vomit/old,
+/obj/item/candle{
+	pixel_x = -9;
+	pixel_y = 7
+	},
 /turf/open/floor/plastic,
 /area/f13/sunny_dale)
 "hSb" = (
@@ -7937,14 +7968,12 @@
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "hVC" = (
-/obj/effect/mob_spawn/human/corpse/assistant,
-/obj/effect/decal/cleanable/blood/gibs/old,
-/obj/structure/mirror{
-	name = "pretend this is a dartboard";
-	pixel_x = -26
+/obj/structure/closet/crate/trashcart,
+/obj/item/toy/plush/lizardplushie{
+	name = "Rules-The-Tunnels"
 	},
-/turf/open/floor/wood/f13,
-/area/f13/sunny_dale)
+/turf/open/floor/plating/ground/road/sidewalk,
+/area/f13)
 "hVJ" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -7978,8 +8007,9 @@
 /turf/open/floor/plasteel/f13/_dirty,
 /area/f13/sunny_dale)
 "hWS" = (
-/obj/structure/table/wood/poker,
-/obj/item/storage/fancy/cigarettes/cigpack_robust,
+/obj/structure/chair/comfy/brown{
+	dir = 8
+	},
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "hYB" = (
@@ -8203,6 +8233,11 @@
 /obj/effect/decal/cleanable/blood/gibs/up,
 /turf/open/floor/plating/asteroid,
 /area/f13)
+"ivw" = (
+/obj/structure/table/low_wall/brick,
+/obj/item/shard,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "ivD" = (
 /obj/machinery/deepfryer{
 	name = "pretend this is a stove"
@@ -9163,6 +9198,9 @@
 /area/f13)
 "kgZ" = (
 /obj/structure/table,
+/obj/item/flashlight/lantern{
+	pixel_x = 8
+	},
 /turf/open/floor/plasteel/f13/white/rusty,
 /area/f13/sunny_dale)
 "khC" = (
@@ -9792,11 +9830,14 @@
 /turf/open/floor/plasteel/f13/misc/cafeteria,
 /area/f13/klamat)
 "lhP" = (
-/obj/effect/decal/cleanable/blood/tracks,
 /obj/item/sign{
 	name = "pretend this is a chalkboard";
 	pixel_x = -32
 	},
+/obj/structure/chair/f13/metal{
+	dir = 4
+	},
+/obj/item/instrument/banjo,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "liU" = (
@@ -10435,6 +10476,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/white/full/rusty,
 /area/f13/sunny_dale)
+"moh" = (
+/obj/structure/railing/corner{
+	dir = 8
+	},
+/obj/structure/sign/departments/medbay/alt{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/ground/road/sidewalk,
+/area/f13/sunny_dale)
 "moO" = (
 /obj/structure/table/wood,
 /obj/effect/mapping_helpers/sunlight/roofSetter,
@@ -10443,6 +10493,12 @@
 "mqZ" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/f13/blue/_dirty,
+/area/f13/sunny_dale)
+"mrg" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 10
+	},
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "mrr" = (
 /obj/item/shard,
@@ -10795,13 +10851,9 @@
 /turf/open/floor/wood/f13/carpet/broken/left2,
 /area/f13)
 "mYE" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	dir = 4
+/obj/structure/chair/sofa/right{
+	dir = 1
 	},
-/obj/effect/decal/cleanable/blood/footprints{
-	dir = 8
-	},
-/obj/machinery/door/unpowered/wooddoor,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "mYJ" = (
@@ -10862,10 +10914,7 @@
 /turf/open/transparent/openspace,
 /area/f13/klamat)
 "neK" = (
-/obj/structure/urinal{
-	dir = 4;
-	pixel_x = -33
-	},
+/obj/machinery/vending/cigarette,
 /turf/open/floor/plastic,
 /area/f13/sunny_dale)
 "nfk" = (
@@ -11314,17 +11363,11 @@
 	dir = 4;
 	pixel_x = 3
 	},
-/obj/machinery/door/window/southleft{
-	name = "stall door";
-	opacity = 1
+/obj/structure/mirror{
+	pixel_y = 31
 	},
-/obj/structure/toilet{
-	pixel_y = 13
-	},
-/obj/effect/decal/cleanable/vomit/old,
-/obj/effect/decal/cleanable/crayon{
-	icon_state = "matt";
-	pixel_y = 32
+/obj/structure/sink{
+	pixel_y = 24
 	},
 /turf/open/floor/plastic,
 /area/f13/sunny_dale)
@@ -11571,6 +11614,9 @@
 /turf/open/floor/wood/f13,
 /area/f13/ncr_main)
 "ooS" = (
+/obj/effect/decal/cleanable/blood/splatter{
+	pixel_y = -6
+	},
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plasteel/stairs/medium,
 /area/f13)
@@ -11773,6 +11819,12 @@
 	},
 /turf/open/floor/plasteel/f13/blue/white/whitebluechess/rusty,
 /area/f13/sunny_dale)
+"oGI" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 4
+	},
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "oIw" = (
 /turf/open/floor/wood/f13/stage_tr,
 /area/f13)
@@ -11862,8 +11914,12 @@
 /turf/open/floor/plasteel/f13/_rusty,
 /area/f13/sunny_dale)
 "oPX" = (
-/obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/bottle/whiskey,
+/obj/effect/mob_spawn/human/corpse/assistant,
+/obj/effect/decal/cleanable/blood/gibs/old,
+/obj/structure/mirror{
+	name = "pretend this is a dartboard";
+	pixel_y = 27
+	},
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "oQL" = (
@@ -12310,6 +12366,11 @@
 /obj/structure/table/wood,
 /obj/item/pen/fountain,
 /obj/effect/mapping_helpers/sunlight/roofSetter,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
+"pBT" = (
+/obj/structure/table/wood,
+/obj/item/candle,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "pCN" = (
@@ -12931,6 +12992,11 @@
 /obj/structure/table,
 /turf/open/floor/wood/f13,
 /area/f13/ncr_main)
+"qId" = (
+/obj/structure/bed/f13/bedframe/cot,
+/obj/structure/bed/f13/sleepingbag/red,
+/turf/open/floor/plasteel/f13/white/rusty,
+/area/f13/sunny_dale)
 "qKs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/filingcabinet,
@@ -13480,9 +13546,7 @@
 /turf/open/floor/plasteel/f13/white/dirty,
 /area/f13/sunny_dale)
 "rGU" = (
-/obj/structure/table/wood/poker,
-/obj/item/kitchen/knife/combat/survival,
-/turf/open/floor/wood/f13,
+/turf/open/floor/wood/f13/stage_br,
 /area/f13/sunny_dale)
 "rHD" = (
 /obj/structure/safe,
@@ -13544,6 +13608,11 @@
 /turf/open/floor/plasteel/f13/red/side/dirty{
 	dir = 9
 	},
+/area/f13/sunny_dale)
+"rMD" = (
+/obj/structure/table/wood,
+/obj/item/reagent_containers/food/drinks/beer,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "rMX" = (
 /obj/structure/table/low_wall/brick,
@@ -13614,9 +13683,9 @@
 /turf/open/floor/plasteel/f13/misc/cafeteria,
 /area/f13/klamat)
 "rSR" = (
-/obj/structure/chair/f13/metal,
-/obj/item/instrument/guitar,
-/turf/open/floor/wood/f13/stage_l,
+/obj/structure/table/wood,
+/obj/item/storage/fancy/cigarettes/cigpack_robust,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "rTb" = (
 /obj/structure/table/low_wall/wood,
@@ -14231,9 +14300,7 @@
 /turf/open/floor/plastic,
 /area/f13/sunny_dale)
 "sZG" = (
-/obj/structure/fermenting_barrel{
-	name = "pretend this is a fire barrel"
-	},
+/obj/structure/bonfire,
 /turf/open/floor/plating/ground/road/sidewalk,
 /area/f13)
 "sZR" = (
@@ -14873,11 +14940,9 @@
 /turf/open/floor/wood/f13/stage_br,
 /area/f13/sunny_dale)
 "uaP" = (
-/obj/effect/decal/cleanable/crayon{
-	icon_state = "thinline";
-	pixel_x = -13
-	},
-/turf/open/floor/wood/f13,
+/obj/structure/chair/f13/metal,
+/obj/item/instrument/harmonica,
+/turf/open/floor/wood/f13/stage_r,
 /area/f13/sunny_dale)
 "uck" = (
 /obj/structure/chair/f13/metal{
@@ -14975,7 +15040,9 @@
 /turf/open/floor/carpet/black,
 /area/f13/klamat)
 "umV" = (
-/obj/structure/chair/f13/wood/padded,
+/obj/structure/chair/sofa/left{
+	dir = 1
+	},
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "uoc" = (
@@ -15489,7 +15556,9 @@
 /area/f13/sunny_dale)
 "vwC" = (
 /obj/structure/table,
-/obj/item/kitchen/knife/butcher,
+/obj/item/flashlight/lantern{
+	pixel_x = -9
+	},
 /turf/open/floor/plasteel/f13/white/dirty,
 /area/f13/sunny_dale)
 "vwY" = (
@@ -15518,8 +15587,13 @@
 /turf/open/floor/plasteel/vaporwave,
 /area/f13/sunny_dale)
 "vzJ" = (
-/obj/structure/chair/f13/metal,
-/obj/item/instrument/harmonica,
+/obj/item/sign{
+	name = "pretend this is a chalkboard";
+	pixel_y = 32
+	},
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 9
+	},
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "vzK" = (
@@ -15535,6 +15609,9 @@
 /area/f13/sunny_dale)
 "vBQ" = (
 /obj/structure/table,
+/obj/item/kitchen/knife/butcher{
+	pixel_y = 7
+	},
 /obj/item/reagent_containers/food/snacks/meat/slab/bear,
 /turf/open/floor/plasteel/f13/white/rusty,
 /area/f13/sunny_dale)
@@ -15998,7 +16075,9 @@
 /turf/open/floor/wood/f13/carpet/broken/right5,
 /area/f13/sunny_dale)
 "wyc" = (
-/turf/open/floor/wood/f13/stage_bl,
+/obj/structure/table/wood,
+/obj/item/kitchen/knife/combat/survival,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "wyx" = (
 /obj/structure/closet/cardboard,
@@ -16069,7 +16148,8 @@
 /turf/open/floor/wood/f13/carpet,
 /area/f13/sunny_dale)
 "wDI" = (
-/obj/effect/decal/cleanable/blood/splatter,
+/obj/structure/chair/f13/metal,
+/obj/item/instrument/guitar,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "wDT" = (
@@ -16109,6 +16189,15 @@
 /obj/structure/closet/secure_closet/chemical,
 /turf/open/floor/plating/asteroid,
 /area/f13)
+"wIg" = (
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 4
+	},
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "wJl" = (
 /turf/open/floor/plasteel/f13/white/full/dirty,
 /area/f13/sunny_dale)
@@ -16221,14 +16310,7 @@
 	},
 /area/f13/sunny_dale)
 "wUY" = (
-/obj/item/throwing_star/throwingknife{
-	pixel_x = 3
-	},
-/obj/item/throwing_star/throwingknife{
-	pixel_x = -4;
-	pixel_y = 5
-	},
-/obj/item/hatchet/wooden,
+/obj/item/flashlight/lantern,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "wVT" = (
@@ -16412,6 +16494,11 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
+"xih" = (
+/obj/structure/table/low_wall/brick,
+/obj/structure/window/fulltile/f13/glass,
+/turf/open/floor/plasteel/f13/white/dirty,
+/area/f13/sunny_dale)
 "xir" = (
 /obj/structure/chair/sofa{
 	dir = 1
@@ -16442,10 +16529,14 @@
 /turf/open/floor/plasteel/f13/misc/rarewhite,
 /area/f13/klamat)
 "xmy" = (
-/obj/structure/sign/departments/medbay/alt{
-	pixel_x = -32
+/obj/machinery/door/unpowered/wooddoor,
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 4
 	},
-/turf/open/floor/wood/f13,
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 8
+	},
+/turf/open/floor/plastic,
 /area/f13/sunny_dale)
 "xmI" = (
 /obj/structure/rack,
@@ -16508,7 +16599,7 @@
 /area/f13/sunny_dale)
 "xtO" = (
 /obj/structure/table/wood,
-/obj/item/gun/ballistic/shotgun/doublebarrel/improvised/sawn,
+/obj/structure/reagent_dispensers/beerkeg,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "xtX" = (
@@ -16865,6 +16956,12 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/sunny_dale)
+"xYt" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 6
+	},
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "xYB" = (
 /obj/structure/sink{
 	dir = 8;
@@ -16900,6 +16997,10 @@
 /area/f13/sunny_dale)
 "yai" = (
 /turf/closed/wall/f13/brick,
+/area/f13/sunny_dale)
+"yal" = (
+/obj/structure/bonfire,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "ybw" = (
 /obj/structure/sink{
@@ -108841,7 +108942,7 @@ bHW
 mlG
 mlG
 beD
-aIH
+hVC
 mlG
 mlG
 mlG
@@ -109636,8 +109737,8 @@ wiX
 vkw
 vkw
 kdi
-yai
-mlG
+ehG
+sdb
 nKv
 ikP
 ikP
@@ -109898,7 +109999,7 @@ raD
 vkw
 vkw
 deB
-yai
+xih
 mlG
 nKv
 ikP
@@ -110157,7 +110258,7 @@ ejj
 yai
 kgZ
 cir
-raD
+qId
 raD
 tIO
 yai
@@ -110414,8 +110515,8 @@ mlG
 yai
 yai
 yai
-mYE
 yai
+xmy
 yai
 yai
 yai
@@ -110674,10 +110775,10 @@ ikP
 bHW
 mlG
 yai
-hVC
+aWA
 lhP
 ena
-aNT
+wIg
 lOy
 yai
 ijQ
@@ -110938,14 +111039,14 @@ mlG
 pRr
 wDI
 aNT
-aNT
-aNT
-rlk
+jlF
+oGI
+rMD
 yai
-rlk
+aWA
 bOW
 aNT
-rlk
+pBT
 pRr
 mlG
 nKv
@@ -111199,16 +111300,16 @@ bHW
 mlG
 pRr
 uaP
-umV
+ind
 rGU
-aNT
+oGI
 rTG
 yai
 qpG
 vGP
 aNT
 hUV
-ppA
+ivw
 giu
 nKv
 ikP
@@ -111461,9 +111562,9 @@ bHW
 mlG
 yai
 wUY
-umV
-hWS
-sfF
+aNT
+aNT
+oGI
 aNT
 yai
 fQW
@@ -111725,13 +111826,13 @@ avU
 aNT
 aNT
 aNT
+jTI
+mrg
 aNT
 aNT
 aNT
-aNT
-aNT
-aNT
-aNT
+yal
+sfF
 yai
 rPH
 nKv
@@ -111985,10 +112086,10 @@ bHW
 mlG
 yai
 mgU
-aNT
-aNT
-aNT
-aNT
+nar
+mYE
+lOy
+oGI
 aNT
 aNT
 aNT
@@ -112246,11 +112347,11 @@ ikP
 bHW
 mlG
 yai
-aNT
-aNT
-aNT
-aNT
-aNT
+gFI
+nar
+umV
+aWA
+oGI
 aNT
 aYl
 aNT
@@ -112509,12 +112610,12 @@ bHW
 mlG
 yai
 rSR
-aet
+hWS
 wyc
+hUV
+oGI
 aNT
-aNT
-aNT
-rlk
+pBT
 rlk
 rlk
 fBb
@@ -112771,10 +112872,10 @@ bHW
 mlG
 yai
 vzJ
-aNT
-jlF
-aNT
-aNT
+hVd
+hVd
+hVd
+xYt
 aNT
 aNT
 aNT
@@ -113033,12 +113134,12 @@ bHW
 mlG
 yai
 oPX
-gFI
+aNT
 hDK
-umV
-rlk
+tCA
+hkD
 sfF
-rlk
+aWA
 xtO
 etl
 anV
@@ -116442,11 +116543,11 @@ idg
 dcz
 dcz
 aNT
-xmy
+aNT
 aNT
 lWv
 yai
-oTI
+moh
 iXk
 sdb
 fIz
@@ -184829,7 +184930,7 @@ igj
 igj
 igj
 igj
-igj
+aab
 igj
 igj
 aab
@@ -185090,8 +185191,8 @@ igj
 igj
 igj
 igj
-igj
-igj
+aab
+aab
 igj
 igj
 aab
