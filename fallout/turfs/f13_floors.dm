@@ -89,10 +89,34 @@
 
 //Plasteel (generic) floor tiles.
 
+/obj/item/stack/tile/plasteel/f13
+	turf_type = /turf/open/floor/plasteel/f13
+
+/// Some proc that you can use to set the tile type.
+/obj/item/stack/tile/plasteel/f13/attack_self(mob/user)
+	// Don't call parent proc (..()) because it opens a popup telling you the stack size.
+
+	// Some code here that does something to pick something.
+	turf_type = pick(typesof(/turf/open/floor/plasteel/f13))
+
+/// Override icon update because the tile has set a very specific turf and we want to use its icon_state and not the old "ghost" one.
+/turf/open/floor/plasteel/f13/update_icon()
+	. = ..()
+	if(!broken && !burnt)
+		icon_state = initial(icon_state)
+
+/// Override tile spawning to create a floor tile that spawns a this turf subtype.
+/turf/open/floor/plasteel/f13/spawn_tile()
+	var/tile = new floor_tile(src)
+	var/obj/item/stack/tile/new_tile = tile
+
+	if(istype(new_tile))
+		new_tile.turf_type = type
 
 /turf/open/floor/plasteel/f13
 	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "floor"
+	floor_tile = /obj/item/stack/tile/plasteel/f13
 
 /turf/open/floor/plasteel/f13/_dirty
 	icon = 'fallout/icons/turf/floors_2.dmi'
