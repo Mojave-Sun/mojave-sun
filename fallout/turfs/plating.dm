@@ -3,7 +3,6 @@
 #define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/fallout/tree/tallpine = 7, /obj/structure/flora/fallout/tree/deadsnow = 5, /obj/structure/flora/fallout/tree/pine = 5, /obj/structure/flora/fallout/shrub = 5, /obj/structure/flora/bush = 5, /obj/structure/flora/fallout/forage = 1, /obj/structure/flora/fallout/forage/blackberry = 1, /obj/structure/flora/fallout/forage/mutfruit = 1, /obj/structure/flora/fallout/forage/ashrose = 1, /obj/structure/flora/fallout/forage/wildcarrot = 1, /obj/structure/flora/fallout/forage/aster = 1)
 #define DESOLATE_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland/snow = 10, /obj/structure/flora/bush = 1)
 #define MUSHROOM_SPAWN_LIST list(/obj/structure/flora/fallout/forage/mushroom = 5, /obj/structure/flora/fallout/forage/mushroom/glowing = 1)
-
 //A plating that can't be destroyed but can have stuff like floor tiles slapped on for construction
 
 /turf/open/floor/plating/ground
