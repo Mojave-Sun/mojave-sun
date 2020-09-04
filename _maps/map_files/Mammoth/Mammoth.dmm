@@ -386,10 +386,7 @@
 /turf/open/floor/plating/ground/mountain,
 /area/f13/underground/mountain)
 "afg" = (
-/obj/structure/chair/f13/wood{
-	dir = 4
-	},
-/turf/open/floor/wood/f13,
+/turf/open/floor/wood/f13/broken/slightlybroken2,
 /area/f13/sunny_dale)
 "afh" = (
 /obj/structure/rack,
@@ -398,7 +395,7 @@
 /area/f13/underground/bos)
 "afk" = (
 /obj/structure/chair/f13/wood{
-	dir = 8
+	dir = 4
 	},
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
@@ -716,7 +713,9 @@
 /turf/open/floor/plating,
 /area/f13/klamat)
 "ajy" = (
-/obj/structure/chair/f13/metal/broken,
+/obj/structure/chair/f13/wood{
+	dir = 8
+	},
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "ajS" = (
@@ -1207,7 +1206,7 @@
 /turf/open/floor/carpet,
 /area/f13/klamat)
 "asg" = (
-/turf/open/floor/wood/f13/stage_bl,
+/turf/open/floor/wood/f13/broken/slightlybroken1,
 /area/f13/sunny_dale)
 "asp" = (
 /obj/machinery/light/small/built{
@@ -1298,11 +1297,7 @@
 /turf/open/floor/wood/f13,
 /area/f13/klamat)
 "auI" = (
-/obj/item/kirbyplants/dead{
-	desc = "It's a dead plant. You can't tell what it used to be.";
-	name = "Dead Plant";
-	pixel_y = 11
-	},
+/obj/structure/chair/f13/metal/broken,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "auS" = (
@@ -1675,8 +1670,8 @@
 /turf/open/floor/plasteel/f13/_rusty,
 /area/f13/underground/bos)
 "aAq" = (
-/obj/machinery/door/unpowered/wooddoor,
-/turf/open/floor/plasteel/f13/teal,
+/obj/structure/table/wood,
+/turf/open/floor/wood/f13/broken/slightlybroken2,
 /area/f13/sunny_dale)
 "aAr" = (
 /turf/closed/wall/r_wall/f13/metal,
@@ -2287,8 +2282,8 @@
 /turf/open/floor/plating/ground/dirt,
 /area/f13/klamat)
 "aKD" = (
-/obj/structure/closet,
-/turf/open/floor/plasteel/f13/teal,
+/obj/structure/barricade/wooden,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "aKE" = (
 /obj/machinery/door/unpowered/wooddoor,
@@ -2480,8 +2475,9 @@
 /turf/open/floor/plasteel/f13/misc/cafeteria,
 /area/f13/klamat)
 "aMa" = (
-/obj/machinery/door/unpowered/wooddoor,
-/turf/open/floor/plasteel/f13/misc/cafeteria,
+/obj/structure/table/wood,
+/obj/structure/barricade/wooden,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "aMc" = (
 /obj/structure/railing{
@@ -3278,8 +3274,7 @@
 /turf/open/floor/plating/ground/dirt,
 /area/f13/underground/mountain)
 "aSw" = (
-/obj/machinery/deepfryer,
-/turf/open/floor/plasteel/f13/misc/cafeteria,
+/turf/open/floor/wood/f13/stage_bl,
 /area/f13/sunny_dale)
 "aSy" = (
 /obj/structure/closet/crate/wooden,
@@ -3778,7 +3773,7 @@
 /turf/open/floor/plasteel/f13/misc/bar,
 /area/f13/klamat)
 "aXC" = (
-/obj/structure/stairs/south,
+/obj/structure/barricade/sandbags,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "aXE" = (
@@ -4131,8 +4126,12 @@
 /turf/open/floor/wood/f13/stage_b,
 /area/f13/sunny_dale)
 "bfc" = (
-/obj/structure/table,
-/turf/open/floor/plasteel/f13/teal,
+/obj/item/kirbyplants/dead{
+	desc = "It's a dead plant. You can't tell what it used to be.";
+	name = "Dead Plant";
+	pixel_y = 11
+	},
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "biO" = (
 /obj/structure/railing{
@@ -4176,25 +4175,14 @@
 /turf/open/floor/plasteel/f13/dark/rusty,
 /area/f13/underground/mountain)
 "bmw" = (
-/obj/structure/table,
-/obj/item/kitchen/rollingpin,
-/turf/open/floor/plasteel/f13/teal,
+/turf/open/floor/wood/f13/broken/left,
 /area/f13/sunny_dale)
 "bns" = (
-/obj/structure/table,
-/obj/item/kitchen/spoon/plastic,
-/obj/item/kitchen/knife/plastic,
-/obj/item/kitchen/fork/plastic,
+/obj/machinery/door/unpowered/wooddoor,
 /turf/open/floor/plasteel/f13/teal,
 /area/f13/sunny_dale)
 "bny" = (
-/obj/structure/table,
-/obj/item/kitchen/spoon/plastic,
-/obj/item/kitchen/spoon/plastic,
-/obj/item/kitchen/knife/plastic,
-/obj/item/kitchen/knife/plastic,
-/obj/item/kitchen/fork/plastic,
-/obj/item/kitchen/fork/plastic,
+/obj/structure/closet,
 /turf/open/floor/plasteel/f13/teal,
 /area/f13/sunny_dale)
 "bnN" = (
@@ -4287,8 +4275,8 @@
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "bvw" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
-/turf/open/floor/plasteel/f13/teal,
+/obj/machinery/door/unpowered/wooddoor,
+/turf/open/floor/plasteel/f13/misc/cafeteria,
 /area/f13/sunny_dale)
 "bvF" = (
 /obj/effect/decal/cleanable/blood/tracks,
@@ -4378,7 +4366,8 @@
 /turf/open/floor/carpet/orange,
 /area/f13/sunny_dale)
 "bCj" = (
-/turf/open/water,
+/obj/machinery/deepfryer,
+/turf/open/floor/plasteel/f13/misc/cafeteria,
 /area/f13/sunny_dale)
 "bCA" = (
 /obj/machinery/door/unpowered/wooddoor,
@@ -4404,12 +4393,8 @@
 /turf/open/floor/wood/f13/carpet/broken/alt,
 /area/f13/sunny_dale)
 "bGj" = (
-/obj/structure/table,
-/obj/machinery/microwave{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/turf/open/floor/plasteel/f13/teal,
+/obj/structure/stairs/south,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "bHW" = (
 /turf/open/floor/plating/ground/road/curb{
@@ -4436,11 +4421,8 @@
 /turf/open/floor/wood/f13/broken/slightlybroken2,
 /area/f13/sunny_dale)
 "bJT" = (
-/obj/structure/sink/kitchen{
-	dir = 4;
-	pixel_x = -15
-	},
-/turf/open/floor/plasteel/f13/teal,
+/obj/structure/table,
+/turf/open/floor/wood/f13/broken/slightlybroken1,
 /area/f13/sunny_dale)
 "bKd" = (
 /obj/structure/chair/f13/metal{
@@ -4677,11 +4659,8 @@
 /turf/open/floor/plating/ground/snow,
 /area/f13/sunny_dale)
 "cfS" = (
-/obj/structure/sink/kitchen{
-	dir = 8;
-	pixel_x = 15
-	},
-/turf/open/floor/plasteel/f13/teal,
+/obj/structure/table,
+/turf/open/floor/wood/f13/broken/slightlybroken2,
 /area/f13/sunny_dale)
 "chS" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
@@ -4714,8 +4693,8 @@
 /area/f13/sunny_dale)
 "cjY" = (
 /obj/structure/table,
-/obj/item/kitchen/knife,
-/turf/open/floor/plasteel/f13/teal,
+/obj/structure/closet/crate/fallout/cash_register,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "ckj" = (
 /obj/structure/railing{
@@ -4740,12 +4719,8 @@
 /turf/open/floor/plasteel/f13/green/_dirty,
 /area/f13/sunny_dale)
 "cpC" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/open/floor/plasteel/stairs{
-	dir = 1
-	},
+/obj/structure/table,
+/turf/open/floor/wood/f13/broken,
 /area/f13/sunny_dale)
 "cpG" = (
 /obj/effect/decal/cleanable/oil/streak,
@@ -4776,18 +4751,14 @@
 /turf/open/floor/wood,
 /area/f13/ncr_main)
 "csR" = (
-/obj/structure/stairs/north,
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/open/floor/wood/f13,
+/obj/structure/table,
+/turf/open/floor/plasteel/f13/teal,
 /area/f13/sunny_dale)
 "ctv" = (
-/obj/structure/fence/corner{
-	dir = 10
-	},
-/turf/open/floor/plating/ground/road/sidewalk,
-/area/f13)
+/obj/structure/table,
+/obj/item/kitchen/rollingpin,
+/turf/open/floor/plasteel/f13/teal,
+/area/f13/sunny_dale)
 "ctD" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /obj/machinery/light/small/broken,
@@ -4817,9 +4788,12 @@
 	},
 /area/f13/sunny_dale)
 "cwA" = (
-/obj/structure/fence/door,
-/turf/open/floor/plating/ground/road/sidewalk,
-/area/f13)
+/obj/structure/table,
+/obj/item/kitchen/spoon/plastic,
+/obj/item/kitchen/knife/plastic,
+/obj/item/kitchen/fork/plastic,
+/turf/open/floor/plasteel/f13/teal,
+/area/f13/sunny_dale)
 "cxW" = (
 /obj/structure/rack,
 /turf/open/floor/plasteel/f13/green/white/whitegreenchess,
@@ -4842,10 +4816,14 @@
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "cBT" = (
-/obj/structure/railing/corner{
-	dir = 4
-	},
-/turf/open/floor/wood/f13,
+/obj/structure/table,
+/obj/item/kitchen/spoon/plastic,
+/obj/item/kitchen/spoon/plastic,
+/obj/item/kitchen/knife/plastic,
+/obj/item/kitchen/knife/plastic,
+/obj/item/kitchen/fork/plastic,
+/obj/item/kitchen/fork/plastic,
+/turf/open/floor/plasteel/f13/teal,
 /area/f13/sunny_dale)
 "cDv" = (
 /obj/structure/closet/secure_closet/freezer/cream_pie,
@@ -4886,12 +4864,8 @@
 /turf/open/floor/plating/ground/snow,
 /area/f13)
 "cEj" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/open/floor/plasteel/stairs{
-	dir = 8
-	},
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/open/floor/plasteel/f13/teal,
 /area/f13/sunny_dale)
 "cEI" = (
 /obj/machinery/door/unpowered/wooddoor,
@@ -5008,10 +4982,8 @@
 /turf/open/floor/wood/f13,
 /area/f13/klamat)
 "cQC" = (
-/obj/structure/railing/corner{
-	dir = 1
-	},
-/turf/open/floor/wood/f13,
+/obj/structure/barricade/wooden,
+/turf/open/floor/plasteel/f13/teal,
 /area/f13/sunny_dale)
 "cQG" = (
 /obj/structure/bed/f13/bedframe/metal,
@@ -5024,10 +4996,8 @@
 /turf/open/floor/plasteel/f13/dark,
 /area/f13/klamat)
 "cRg" = (
-/obj/structure/table/low_wall/brick,
-/obj/effect/decal/cleanable/glass,
-/obj/item/shard,
-/turf/open/floor/wood/f13,
+/obj/structure/janitorialcart,
+/turf/open/floor/plating,
 /area/f13/sunny_dale)
 "cSd" = (
 /obj/structure/rack,
@@ -5067,8 +5037,9 @@
 /turf/open/floor/plasteel/f13/_rusty,
 /area/f13/underground/bos)
 "cTM" = (
-/obj/structure/table/f13/metal,
-/turf/open/floor/wood/f13,
+/obj/structure/rack,
+/obj/item/storage/belt/janitor,
+/turf/open/floor/plating,
 /area/f13/sunny_dale)
 "cUi" = (
 /obj/structure/rack,
@@ -5213,11 +5184,10 @@
 /turf/open/floor/plasteel/f13/blue/white/whitebluechess/whitebluechess2/dirty,
 /area/f13/sunny_dale)
 "dhH" = (
-/obj/structure/f13/tv{
-	pixel_y = 12
-	},
-/obj/structure/table/f13/metal,
-/turf/open/floor/wood/f13,
+/obj/item/mop,
+/obj/structure/mopbucket,
+/obj/item/soap,
+/turf/open/floor/plating,
 /area/f13/sunny_dale)
 "dhV" = (
 /obj/machinery/light/small{
@@ -5261,14 +5231,13 @@
 /turf/open/floor/holofloor/carpet,
 /area/f13/ncr_main)
 "dlf" = (
-/obj/structure/bed/f13/bedframe/cot,
-/obj/structure/bed/f13/sleepingbag/red,
-/turf/open/floor/wood/f13,
+/obj/structure/mopbucket,
+/obj/item/mop,
+/turf/open/floor/plating,
 /area/f13/sunny_dale)
 "dlJ" = (
-/obj/structure/bed/f13/bedframe/cot,
-/obj/structure/bed/f13/sleepingbag/green,
-/turf/open/floor/wood/f13,
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/plating,
 /area/f13/sunny_dale)
 "dlU" = (
 /obj/structure/rack,
@@ -5347,8 +5316,7 @@
 /turf/open/floor/plasteel/f13/green/_dirty,
 /area/f13)
 "dti" = (
-/obj/structure/table/f13/round,
-/turf/open/floor/wood/f13,
+/turf/open/water,
 /area/f13/sunny_dale)
 "dtJ" = (
 /obj/structure/table/wood,
@@ -5512,10 +5480,8 @@
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "dSx" = (
-/obj/structure/chair/comfy/f13/armchair{
-	dir = 1
-	},
-/turf/open/floor/wood/f13,
+/obj/item/toy/figure/janitor,
+/turf/open/floor/plating,
 /area/f13/sunny_dale)
 "dSM" = (
 /obj/structure/table,
@@ -5616,10 +5582,8 @@
 /turf/open/floor/wood/f13/broken/slightlybroken1,
 /area/f13/sunny_dale)
 "dZN" = (
-/obj/structure/chair/f13/wood{
-	dir = 1
-	},
-/turf/open/floor/wood/f13,
+/obj/machinery/door/unpowered/wooddoor,
+/turf/open/floor/plating,
 /area/f13/sunny_dale)
 "eaG" = (
 /obj/machinery/iv_drip,
@@ -5682,10 +5646,12 @@
 /turf/open/floor/carpet/black,
 /area/f13/klamat)
 "eem" = (
-/obj/structure/chair/comfy/f13/armchair{
-	dir = 8
+/obj/structure/table,
+/obj/machinery/microwave{
+	pixel_x = -3;
+	pixel_y = 5
 	},
-/turf/open/floor/wood/f13,
+/turf/open/floor/plasteel/f13/teal,
 /area/f13/sunny_dale)
 "ees" = (
 /obj/structure/fence/fencedoor,
@@ -5696,15 +5662,18 @@
 /turf/open/floor/plating/ground/snow,
 /area/f13)
 "efY" = (
-/obj/structure/chair/comfy/f13/armchair,
-/turf/open/floor/wood/f13,
+/obj/structure/sink/kitchen{
+	dir = 4;
+	pixel_x = -15
+	},
+/turf/open/floor/plasteel/f13/teal,
 /area/f13/sunny_dale)
 "ega" = (
-/obj/structure/sink{
+/obj/structure/sink/kitchen{
 	dir = 8;
-	pixel_x = 11
+	pixel_x = 15
 	},
-/turf/open/floor/plastic,
+/turf/open/floor/plasteel/f13/teal,
 /area/f13/sunny_dale)
 "egs" = (
 /obj/effect/decal/cleanable/glass,
@@ -5822,11 +5791,9 @@
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "eqy" = (
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = -12
-	},
-/turf/open/floor/plastic,
+/obj/structure/table,
+/obj/item/kitchen/knife,
+/turf/open/floor/plasteel/f13/teal,
 /area/f13/sunny_dale)
 "eqY" = (
 /obj/structure/closet/cabinet,
@@ -5881,9 +5848,12 @@
 /turf/open/floor/wood/f13,
 /area/f13/ncr_main)
 "etX" = (
-/obj/structure/bed/f13/bedframe/metal,
-/obj/structure/bed/f13/mattress/filthy,
-/turf/open/floor/wood/f13,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/plasteel/stairs{
+	dir = 1
+	},
 /area/f13/sunny_dale)
 "euj" = (
 /obj/effect/decal/cleanable/glass,
@@ -5963,10 +5933,11 @@
 /turf/open/floor/plasteel/f13/green/_rusty,
 /area/f13)
 "eBE" = (
-/obj/structure/toilet{
+/obj/structure/stairs/north,
+/obj/structure/railing{
 	dir = 8
 	},
-/turf/open/floor/plastic,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "eCw" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6021,10 +5992,11 @@
 /turf/closed/wall/f13/metal/rust,
 /area/f13/underground/mountain)
 "eEW" = (
-/obj/structure/bed/f13/bedframe/metal,
-/obj/structure/bed/f13/mattress/dirty,
-/turf/open/floor/wood/f13,
-/area/f13/sunny_dale)
+/obj/structure/fence/corner{
+	dir = 10
+	},
+/turf/open/floor/plating/ground/road/sidewalk,
+/area/f13)
 "eGf" = (
 /obj/structure/table/glass,
 /obj/effect/mapping_helpers/sunlight/roofSetter,
@@ -6085,16 +6057,14 @@
 	},
 /area/f13/sunny_dale)
 "eMI" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/open/transparent/openspace,
-/area/f13/sunny_dale)
+/obj/structure/fence/door,
+/turf/open/floor/plating/ground/road/sidewalk,
+/area/f13)
 "eMT" = (
-/obj/structure/railing{
-	dir = 8
+/obj/structure/railing/corner{
+	dir = 4
 	},
-/turf/open/transparent/openspace,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "eNl" = (
 /obj/structure/railing{
@@ -6139,9 +6109,11 @@
 /area/f13/sunny_dale)
 "ePb" = (
 /obj/structure/railing{
-	dir = 4
+	dir = 1
 	},
-/turf/open/transparent/openspace,
+/turf/open/floor/plasteel/stairs{
+	dir = 8
+	},
 /area/f13/sunny_dale)
 "ePo" = (
 /obj/structure/table/wood,
@@ -6194,8 +6166,8 @@
 /turf/open/floor/plastic,
 /area/f13/sunny_dale)
 "eRF" = (
-/obj/structure/railing{
-	dir = 4
+/obj/structure/railing/corner{
+	dir = 1
 	},
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
@@ -6292,9 +6264,9 @@
 /turf/open/floor/plasteel/f13/green/_dirty,
 /area/f13)
 "faQ" = (
-/obj/structure/railing{
-	dir = 6
-	},
+/obj/structure/table/low_wall/brick,
+/obj/effect/decal/cleanable/glass,
+/obj/item/shard,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "fba" = (
@@ -6385,6 +6357,10 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/transparent/openspace,
 /area/f13/klamat)
+"fiO" = (
+/obj/structure/table/f13/metal,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "fjF" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
@@ -6477,6 +6453,13 @@
 "fqv" = (
 /turf/open/floor/plasteel/stairs/medium,
 /area/f13)
+"fqI" = (
+/obj/structure/f13/tv{
+	pixel_y = 12
+	},
+/obj/structure/table/f13/metal,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "fqK" = (
 /obj/structure/bed/f13/bedframe/wood,
 /obj/structure/bed/f13/mattress/filthy,
@@ -6550,6 +6533,11 @@
 /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
+"fCz" = (
+/obj/structure/bed/f13/bedframe/cot,
+/obj/structure/bed/f13/sleepingbag/red,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "fCL" = (
 /obj/structure/toilet,
 /turf/open/floor/plasteel/f13/_dirty,
@@ -6563,6 +6551,11 @@
 "fDi" = (
 /obj/structure/rack,
 /turf/open/floor/plasteel/f13/_dirty,
+/area/f13/sunny_dale)
+"fDz" = (
+/obj/structure/bed/f13/bedframe/cot,
+/obj/structure/bed/f13/sleepingbag/green,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "fDT" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6686,6 +6679,10 @@
 /obj/structure/rack,
 /turf/open/floor/plasteel/f13/red/_dirty,
 /area/f13/sunny_dale)
+"fNd" = (
+/obj/structure/table/f13/round,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "fNq" = (
 /obj/structure/disposalpipe/trunk/multiz{
 	dir = 8
@@ -6758,6 +6755,18 @@
 "fTy" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /obj/structure/bed/f13/bedframe/wire,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
+"fTz" = (
+/obj/structure/chair/comfy/f13/armchair{
+	dir = 1
+	},
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
+"fTC" = (
+/obj/structure/chair/comfy/f13/armchair{
+	dir = 8
+	},
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "fTO" = (
@@ -6881,6 +6890,14 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/floor/plasteel/f13/misc/rarewhite,
 /area/f13/klamat)
+"ggk" = (
+/obj/structure/dresser/f13/orange,
+/turf/open/floor/wood/f13/carpet,
+/area/f13/sunny_dale)
+"ggn" = (
+/obj/structure/chair/comfy/f13/armchair,
+/turf/open/floor/wood/f13/carpet,
+/area/f13/sunny_dale)
 "ggw" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -7059,6 +7076,13 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/closed/wall/f13/metal/rust,
 /area/f13/klamat)
+"gCn" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = 11
+	},
+/turf/open/floor/plastic,
+/area/f13/sunny_dale)
 "gEn" = (
 /obj/structure/table/low_wall/brick,
 /obj/effect/decal/cleanable/dirt,
@@ -7093,6 +7117,13 @@
 "gFI" = (
 /obj/structure/bed/f13/sleepingbag/red,
 /turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
+"gGu" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/open/floor/plastic,
 /area/f13/sunny_dale)
 "gIB" = (
 /turf/open/floor/plasteel/f13/red/_rusty,
@@ -7259,6 +7290,11 @@
 	},
 /turf/open/floor/plastic,
 /area/f13/sunny_dale)
+"hbw" = (
+/obj/structure/bed/f13/bedframe/cot,
+/obj/structure/bed/f13/sleepingbag/red,
+/turf/open/floor/wood/f13/carpet,
+/area/f13/sunny_dale)
 "hbz" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/floor/wood/f13/carpet/broken/right1,
@@ -7322,6 +7358,11 @@
 /turf/open/floor/plasteel/f13/blue/side/dirty{
 	dir = 1
 	},
+/area/f13/sunny_dale)
+"hft" = (
+/obj/structure/bed/f13/bedframe/metal,
+/obj/structure/bed/f13/mattress/filthy,
+/turf/open/floor/wood/f13/carpet,
 /area/f13/sunny_dale)
 "hgM" = (
 /obj/machinery/light/small{
@@ -7533,6 +7574,12 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
+"hwN" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/turf/open/floor/plastic,
+/area/f13/sunny_dale)
 "hwQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/curtain,
@@ -7590,6 +7637,10 @@
 /turf/open/floor/plasteel/f13/yellow/white/side/dirty{
 	dir = 6
 	},
+/area/f13/sunny_dale)
+"hBy" = (
+/obj/structure/dresser/f13/torquise,
+/turf/open/floor/wood/f13/carpet,
 /area/f13/sunny_dale)
 "hCv" = (
 /obj/structure/rack,
@@ -7650,6 +7701,11 @@
 /obj/machinery/light/small,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
+"hHu" = (
+/obj/structure/bed/f13/bedframe/cot,
+/obj/structure/bed/f13/sleepingbag/green,
+/turf/open/floor/wood/f13/carpet,
+/area/f13/sunny_dale)
 "hIc" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/closed/wall/f13/brick,
@@ -7696,6 +7752,11 @@
 	dir = 8
 	},
 /turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
+"hMS" = (
+/obj/structure/bed/f13/bedframe/metal,
+/obj/structure/bed/f13/mattress/dirty,
+/turf/open/floor/wood/f13/carpet,
 /area/f13/sunny_dale)
 "hOc" = (
 /obj/structure/fence/fencenormal{
@@ -7881,6 +7942,11 @@
 	dir = 4
 	},
 /area/f13/sunny_dale)
+"ieK" = (
+/obj/machinery/door/unpowered/wooddoor,
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "ifE" = (
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plasteel/f13/_rusty,
@@ -7988,6 +8054,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/f13/carpet,
 /area/f13/sunny_dale)
+"irK" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/transparent/openspace,
+/area/f13/sunny_dale)
 "isT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/built,
@@ -7998,6 +8070,11 @@
 /obj/item/storage/fancy/cigarettes/cigars/havana,
 /obj/item/lighter,
 /turf/open/floor/carpet,
+/area/f13/sunny_dale)
+"ity" = (
+/obj/structure/bed/f13/bedframe/metal,
+/obj/structure/bed/f13/mattress/yellowed,
+/turf/open/floor/wood/f13/carpet/broken,
 /area/f13/sunny_dale)
 "itB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8010,6 +8087,12 @@
 /turf/open/floor/plasteel/white/side{
 	dir = 4
 	},
+/area/f13/sunny_dale)
+"itZ" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/transparent/openspace,
 /area/f13/sunny_dale)
 "iue" = (
 /obj/effect/decal/cleanable/blood/gibs/up,
@@ -8037,6 +8120,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/brick,
 /area/f13)
+"iyn" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/transparent/openspace,
+/area/f13/sunny_dale)
 "iAv" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -8170,6 +8259,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/f13/broken/right,
 /area/f13/sunny_dale)
+"iMa" = (
+/turf/open/floor/wood/f13/carpet/broken,
+/area/f13/sunny_dale)
 "iMQ" = (
 /obj/structure/rack,
 /turf/open/floor/plasteel/vaporwave,
@@ -8255,6 +8347,10 @@
 	},
 /turf/open/floor/plating,
 /area/f13/sunny_dale)
+"iSd" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/wood/f13/carpet,
+/area/f13/sunny_dale)
 "iSj" = (
 /obj/structure/rack,
 /turf/open/floor/plasteel/f13/blue/side/dirty,
@@ -8292,6 +8388,12 @@
 	pixel_y = 5
 	},
 /turf/open/floor/plasteel/f13/teal/_full/dirty,
+/area/f13/sunny_dale)
+"iTT" = (
+/turf/open/floor/wood/f13/carpet/broken/left1,
+/area/f13/sunny_dale)
+"iUa" = (
+/turf/open/floor/wood/f13/carpet/broken/left2,
 /area/f13/sunny_dale)
 "iUz" = (
 /obj/effect/decal/cleanable/blood/old,
@@ -8340,6 +8442,11 @@
 /obj/structure/table/wood,
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
+"jaB" = (
+/obj/structure/bed/f13/bedframe/cot,
+/obj/structure/bed/f13/sleepingbag/green,
+/turf/open/floor/plastic,
 /area/f13/sunny_dale)
 "jaH" = (
 /obj/machinery/hydroponics/constructable,
@@ -8553,6 +8660,11 @@
 	dir = 8
 	},
 /area/f13/sunny_dale)
+"jBr" = (
+/obj/structure/bed/f13/bedframe/metal,
+/obj/structure/bed/f13/mattress/yellowed,
+/turf/open/floor/wood/f13/carpet,
+/area/f13/sunny_dale)
 "jBt" = (
 /obj/structure/table,
 /obj/machinery/microwave{
@@ -8565,6 +8677,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plastic,
+/area/f13/sunny_dale)
+"jBw" = (
+/turf/open/floor/wood/f13/carpet/broken/right3,
 /area/f13/sunny_dale)
 "jBP" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter,
@@ -8592,6 +8707,11 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
+"jEs" = (
+/obj/structure/bed/f13/bedframe/cot,
+/obj/structure/bed/f13/mattress/old,
+/turf/open/floor/wood/f13/carpet,
 /area/f13/sunny_dale)
 "jEC" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
@@ -8893,6 +9013,10 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/floor/plasteel/f13,
 /area/f13/underground/bos)
+"kdM" = (
+/obj/structure/table/wood,
+/turf/open/floor/wood/f13/carpet/broken,
+/area/f13/sunny_dale)
 "kel" = (
 /obj/structure/railing{
 	dir = 4
@@ -8958,6 +9082,10 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/floor/plasteel/f13,
 /area/f13/underground/bos)
+"knk" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/wood/f13/carpet/broken,
+/area/f13/sunny_dale)
 "knW" = (
 /obj/structure/bedsheetbin,
 /obj/structure/table,
@@ -9145,6 +9273,11 @@
 /obj/item/trash/candy,
 /turf/open/floor/plasteel/f13/blue/_dirty,
 /area/f13/sunny_dale)
+"kDx" = (
+/obj/structure/bed/f13/bedframe/cot,
+/obj/structure/bed/f13/sleepingbag/red,
+/turf/open/floor/wood/f13/broken,
+/area/f13/sunny_dale)
 "kDM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9255,6 +9388,10 @@
 /obj/structure/stairs/east,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
+"kNU" = (
+/obj/structure/table/wood,
+/turf/open/floor/wood/f13/carpet/broken/left4,
+/area/f13/sunny_dale)
 "kOr" = (
 /obj/structure/bed,
 /obj/item/bedsheet/hos,
@@ -9262,6 +9399,10 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/floor/wood,
 /area/f13/ncr_main)
+"kOs" = (
+/obj/structure/table/wood,
+/turf/open/floor/wood/f13/broken,
+/area/f13/sunny_dale)
 "kOX" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
 /turf/open/floor/plasteel/f13/dark/full/rusty,
@@ -9296,6 +9437,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/f13/carpet/broken/right4,
 /area/f13/sunny_dale)
+"kSc" = (
+/obj/structure/bed/f13/bedframe/metal,
+/obj/structure/bed/f13/mattress/old,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "kSq" = (
 /obj/machinery/door/unpowered/wooddoor,
 /obj/effect/decal/cleanable/dirt,
@@ -9316,6 +9462,11 @@
 /area/f13/sunny_dale)
 "kTq" = (
 /turf/open/floor/plasteel/f13/blue/_full/dirty,
+/area/f13/sunny_dale)
+"kTZ" = (
+/obj/structure/bed/f13/bedframe/metal,
+/obj/structure/bed/f13/mattress/stained,
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "kUr" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9370,6 +9521,11 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/transparent/openspace,
 /area/f13/klamat)
+"kZq" = (
+/obj/structure/bed/f13/bedframe/metal,
+/obj/structure/bed/f13/mattress/stale,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "kZF" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter,
 /turf/open/floor/plating,
@@ -9435,6 +9591,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
+"ldL" = (
+/obj/structure/bed/f13/bedframe/metal,
+/obj/structure/bed/f13/mattress/stale,
+/turf/open/floor/wood/f13/carpet,
+/area/f13/sunny_dale)
 "ldR" = (
 /turf/open/floor/plating/ground/road/curb{
 	dir = 4
@@ -9488,6 +9649,12 @@
 	},
 /turf/open/floor/plasteel/f13/_dirty,
 /area/f13/sunny_dale)
+"ljo" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "ljw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/sunlight/roofSetter,
@@ -9524,6 +9691,12 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plastic,
+/area/f13/sunny_dale)
+"llW" = (
+/obj/structure/railing{
+	dir = 6
+	},
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "lmm" = (
 /obj/structure/bed/f13/bedframe/cot,
@@ -126112,25 +126285,25 @@ mlG
 mlG
 pRr
 aNT
-afg
-afg
-afg
-afg
+afk
+afk
+afk
+afk
 aNT
 aNT
 aNT
 aNT
-afg
-afg
-afg
-afg
+afk
+afk
+afk
+afk
 aNT
 yai
-bfc
+csR
 baZ
-bvw
-bvw
-bvw
+cEj
+cEj
+cEj
 baZ
 baZ
 yai
@@ -126378,23 +126551,23 @@ rlk
 rlk
 rlk
 rlk
+asg
 aNT
 aNT
-aNT
-aNT
+asg
 rlk
-rlk
+aAq
 rlk
 rlk
 aNT
 yai
-bmw
+ctv
 baZ
 baZ
 baZ
 baZ
 baZ
-bvw
+cEj
 yai
 mlG
 mlG
@@ -126637,11 +126810,11 @@ mlG
 pRr
 aNT
 rlk
-rlk
+aAq
 rlk
 rlk
 aNT
-aNT
+aKD
 aNT
 aNT
 rlk
@@ -126650,13 +126823,13 @@ rlk
 rlk
 aNT
 yai
-bmw
+ctv
 baZ
-bfc
-bGj
-bGj
+csR
+eem
+eem
 baZ
-bvw
+cEj
 yai
 mlG
 mlG
@@ -126898,27 +127071,27 @@ mlG
 mlG
 pRr
 aNT
-afk
-afk
-afk
-afk
+ajy
+ajy
+ajy
+ajy
 aNT
 aNT
 aNT
 aNT
-afk
-afk
-afk
-afk
+ajy
+ajy
+ajy
+ajy
 aNT
 yai
-bns
+cwA
 baZ
-bfc
-bfc
-cjY
+csR
+csR
+eqy
 baZ
-bvw
+cEj
 yai
 mlG
 mlG
@@ -127174,13 +127347,13 @@ yai
 yai
 yai
 yai
-bny
+cBT
 baZ
 baZ
-bJT
+efY
 baZ
 baZ
-bvw
+cEj
 yai
 mlG
 mlG
@@ -127428,7 +127601,7 @@ aNT
 aNT
 lOy
 aNT
-aNT
+afg
 seO
 jUw
 jUw
@@ -127436,13 +127609,13 @@ jUw
 jhx
 jhx
 yai
-bvw
+cEj
 baZ
 baZ
-cfS
+ega
 baZ
 baZ
-bvw
+cEj
 yai
 mlG
 mlG
@@ -127698,13 +127871,13 @@ jUw
 jUw
 jUw
 yai
-bvw
+cEj
 baZ
-bfc
-bfc
-bfc
+csR
+csR
+csR
 baZ
-bfc
+csR
 yai
 mlG
 mlG
@@ -127947,26 +128120,26 @@ yai
 yai
 aNT
 aNT
-aNT
+aKD
 aNT
 rlk
-rlk
-aNT
+aMa
+aKD
 aNT
 seO
 jUw
 jUw
-aSw
+bCj
 seO
 jUw
 yai
-bvw
+cEj
 baZ
-bfc
-bGj
-bGj
+csR
+eem
+eem
 baZ
-bfc
+csR
 yai
 mlG
 mlG
@@ -128209,7 +128382,7 @@ yai
 aeK
 aNT
 rlk
-rlk
+aMa
 aNT
 hUV
 aNT
@@ -128221,14 +128394,14 @@ jUw
 xXx
 seO
 jUw
-aMa
+bvw
 baZ
 baZ
 baZ
 baZ
 baZ
 baZ
-bfc
+csR
 yai
 mlG
 mlG
@@ -128485,12 +128658,12 @@ seO
 jUw
 yai
 baZ
+cQC
+cQC
 baZ
 baZ
 baZ
-baZ
-baZ
-bfc
+csR
 yai
 mlG
 mlG
@@ -128734,7 +128907,7 @@ aNT
 aNT
 hUV
 aNT
-aNT
+asg
 aNT
 rlk
 rlk
@@ -128752,7 +128925,7 @@ baZ
 baZ
 baZ
 baZ
-bfc
+csR
 yai
 mlG
 mlG
@@ -129002,7 +129175,7 @@ rlk
 rlk
 aNT
 yai
-aMa
+bvw
 yai
 yai
 yai
@@ -129012,7 +129185,7 @@ yai
 yai
 yai
 yai
-aAq
+bns
 yai
 yai
 yai
@@ -129266,13 +129439,13 @@ aNT
 aNT
 aNT
 aNT
-aXC
-aXC
-aXC
-aXC
+bGj
+bGj
+bGj
+bGj
 yai
-aNT
-aNT
+cRg
+dSx
 yai
 aNT
 aNT
@@ -129519,23 +129692,23 @@ yai
 yai
 aNT
 aeK
-rlk
-rlk
+aMa
+aMa
+aKD
 aNT
 aNT
 aNT
+aKD
 aNT
 aNT
-aNT
-aNT
-aXC
-aXC
-aXC
-aXC
+bGj
+bGj
+bGj
+bGj
 yai
-aNT
-aNT
-avU
+cTM
+vDT
+dZN
 aNT
 aNT
 aNT
@@ -129787,23 +129960,23 @@ aNT
 aNT
 aNT
 aNT
+aKD
 aNT
 aNT
-aNT
-aXC
-aXC
-aXC
-aXC
+bGj
+bGj
+bGj
+bGj
+yai
+vDT
+vDT
 yai
 aNT
-aNT
-yai
-aNT
-aNT
+afg
 yai
 yai
 rTg
-ctv
+eEW
 mlG
 mlG
 fpd
@@ -130051,14 +130224,14 @@ aNT
 aNT
 aNT
 aNT
-aNT
+aXC
 yai
 yai
 yai
 yai
 yai
-aNT
-aNT
+dhH
+dlJ
 yai
 aNT
 aNT
@@ -130308,26 +130481,26 @@ mlG
 mlG
 yai
 yai
-auI
+bfc
+aXC
+aXC
+aXC
 aNT
 aNT
-aNT
-aNT
-aNT
-dRZ
-dRZ
-dRZ
-dRZ
+bJT
+cpC
+cpC
+cfS
 yai
 yai
 yai
 yai
 aNT
-aNT
+aKD
 yai
 mlG
 mlG
-cwA
+eMI
 mlG
 mlG
 fpd
@@ -130575,17 +130748,17 @@ aNT
 aNT
 aNT
 aNT
-aNT
-dRZ
-aNT
-aNT
-aNT
+aKD
+cfS
+fGn
+syM
+asg
 pFB
 yai
 aNT
 aNT
-aNT
-aNT
+asg
+aKD
 yai
 mlG
 mlG
@@ -130834,18 +131007,18 @@ mlG
 yai
 rlk
 aNT
+asg
 aNT
 aNT
 aNT
-aNT
-dRZ
-aNT
+cjY
+syM
 aNT
 aNT
 pFB
 yai
 aNT
-aNT
+aKD
 aNT
 aNT
 yai
@@ -131094,11 +131267,11 @@ mlG
 mlG
 mlG
 yai
-auI
+bfc
 aNT
 aNT
 aNT
-aNT
+afg
 aNT
 dRZ
 aNT
@@ -131107,7 +131280,7 @@ aNT
 pFB
 yai
 aNT
-aNT
+aKD
 yai
 yai
 yai
@@ -131358,8 +131531,8 @@ mlG
 avU
 aNT
 aNT
-aNT
-aNT
+bmw
+asg
 aNT
 aNT
 dRZ
@@ -131373,9 +131546,9 @@ aNT
 avU
 aNT
 aNT
-cpC
-cpC
-cBT
+etX
+etX
+eMT
 yai
 mlG
 fpd
@@ -131619,9 +131792,9 @@ mlG
 mlG
 avU
 aNT
-aNT
-aNT
-aNT
+afg
+syM
+asg
 aNT
 aNT
 dRZ
@@ -131637,7 +131810,7 @@ aNT
 aNT
 aNT
 aNT
-cEj
+ePb
 yai
 mlG
 fpd
@@ -131880,7 +132053,7 @@ mlG
 mlG
 mlG
 yai
-auI
+bfc
 aNT
 aNT
 aNT
@@ -131889,17 +132062,17 @@ aNT
 dRZ
 aNT
 aNT
-aNT
-aNT
-yai
-aNT
+afg
 aNT
 yai
+aKD
+aNT
 yai
 yai
-csR
-csR
-cQC
+yai
+eBE
+eBE
+eRF
 yai
 mlG
 fpd
@@ -132146,7 +132319,7 @@ rlk
 aNT
 aNT
 aNT
-aNT
+afg
 aNT
 dRZ
 aNT
@@ -132154,7 +132327,7 @@ aNT
 aNT
 pFB
 yai
-aNT
+aKD
 aNT
 yai
 yai
@@ -132406,20 +132579,20 @@ mlG
 yai
 rlk
 aNT
+aXC
+aKD
+aKD
 aNT
+cjY
 aNT
-aNT
-aNT
-dRZ
-aNT
-aNT
+asg
 aNT
 pFB
 yai
 aNT
 aNT
 aNT
-aNT
+afg
 yai
 mlG
 mlG
@@ -132666,7 +132839,7 @@ mlG
 mlG
 yai
 yai
-auI
+bfc
 aNT
 aNT
 aNT
@@ -132679,9 +132852,9 @@ aNT
 pFB
 yai
 aNT
+asg
 aNT
-aNT
-aNT
+aKD
 yai
 mlG
 mlG
@@ -132927,8 +133100,8 @@ yai
 pRr
 pRr
 yai
-aNT
-aNT
+aXC
+aXC
 aNT
 rlk
 sfF
@@ -132940,10 +133113,10 @@ dRZ
 dRZ
 yai
 yai
-avU
+dZN
 yai
 aNT
-aNT
+aKD
 yai
 mlG
 mlG
@@ -133201,11 +133374,11 @@ yai
 yai
 yai
 yai
-aNT
-aNT
+dlf
+vDT
 yai
 aNT
-aNT
+aKD
 yai
 mlG
 mlG
@@ -133448,7 +133621,7 @@ mlG
 yai
 yai
 aNT
-aNT
+asg
 aNT
 aNT
 aNT
@@ -133456,17 +133629,17 @@ rlk
 aNT
 aNT
 aNT
+aKD
 aNT
-aNT
-aXC
-aXC
-aXC
-aXC
+bGj
+bGj
+bGj
+bGj
 yai
-aNT
-aNT
+dlJ
+vDT
 yai
-aNT
+afg
 aNT
 yai
 mlG
@@ -133711,22 +133884,22 @@ yai
 aeL
 aet
 aet
-asg
+aSw
 aNT
-aNT
+aKD
 rlk
 sfF
 aNT
+asg
+aKD
 aNT
-aNT
-aNT
-aXC
-aXC
-aXC
-aXC
+bGj
+bGj
+bGj
+bGj
 yai
-aNT
-aNT
+dlJ
+vDT
 yai
 aNT
 aNT
@@ -133975,20 +134148,20 @@ aNT
 aNT
 jlF
 aNT
-aNT
+aKD
 aNT
 aNT
 aNT
 rlk
 aNT
 aNT
-aXC
-aXC
-aXC
-aXC
+bGj
+bGj
+bGj
+bGj
 yai
-aNT
-aNT
+dlJ
+vDT
 yai
 aNT
 aNT
@@ -134234,7 +134407,7 @@ mlG
 yai
 aNT
 aNT
-ajy
+auI
 jlF
 aNT
 aNT
@@ -134243,16 +134416,16 @@ aNT
 aNT
 rlk
 sfF
-aNT
+aKD
 yai
 yai
 yai
 yai
 yai
 yai
+dZN
 yai
-yai
-aAq
+bns
 yai
 yai
 yai
@@ -134495,7 +134668,7 @@ ikP
 sdb
 yai
 aNT
-aNT
+afg
 aNT
 jlF
 aNT
@@ -134505,7 +134678,7 @@ sfF
 aNT
 aNT
 aNT
-aNT
+aKD
 yai
 baZ
 baZ
@@ -134515,7 +134688,7 @@ baZ
 baZ
 baZ
 baZ
-baZ
+cQC
 baZ
 baZ
 yai
@@ -134761,23 +134934,23 @@ ind
 ind
 rGU
 aNT
-aNT
+afg
 rlk
 sfF
 aNT
 aNT
 aNT
 aNT
-aAq
+bns
 baZ
 baZ
-aAq
-baZ
-baZ
-baZ
+bns
 baZ
 baZ
 baZ
+baZ
+baZ
+cQC
 baZ
 baZ
 yai
@@ -135023,8 +135196,8 @@ aNT
 aNT
 aNT
 aNT
-aNT
-aNT
+aXC
+aXC
 aNT
 rlk
 sfF
@@ -135035,11 +135208,11 @@ baZ
 baZ
 yai
 baZ
-bCj
-bCj
-bCj
-bCj
-bCj
+dti
+dti
+dti
+dti
+dti
 baZ
 baZ
 yai
@@ -135290,18 +135463,18 @@ aNT
 aNT
 rlk
 aNT
-aNT
+afg
 aNT
 yai
 baZ
-aKD
+bny
 yai
 baZ
-bCj
-bCj
-bCj
-bCj
-bCj
+dti
+dti
+dti
+dti
+dti
 baZ
 baZ
 yai
@@ -135556,14 +135729,14 @@ aNT
 aNT
 yai
 baZ
-aKD
+bny
 yai
 baZ
-bCj
-bCj
-bCj
-bCj
-bCj
+dti
+dti
+dti
+dti
+dti
 baZ
 baZ
 yai
@@ -135813,7 +135986,7 @@ yai
 yai
 yai
 yai
-aAq
+bns
 yai
 yai
 yai
@@ -135821,11 +135994,11 @@ baZ
 baZ
 yai
 baZ
-bCj
-bCj
-bCj
-bCj
-bCj
+dti
+dti
+dti
+dti
+dti
 baZ
 baZ
 yai
@@ -136080,14 +136253,14 @@ baZ
 baZ
 baZ
 baZ
-aKD
+bny
 yai
 baZ
-bCj
-bCj
-bCj
-bCj
-bCj
+dti
+dti
+dti
+dti
+dti
 baZ
 baZ
 yai
@@ -136337,19 +136510,19 @@ aiz
 aiz
 yai
 baZ
-aKD
-aKD
-aKD
-aKD
+bny
+bny
+bny
+bny
 baZ
-aKD
+bny
 yai
 baZ
-bCj
-bCj
-bCj
-bCj
-bCj
+dti
+dti
+dti
+dti
+dti
 baZ
 baZ
 yai
@@ -136607,11 +136780,11 @@ baZ
 baZ
 yai
 baZ
-bCj
-bCj
-bCj
-bCj
-bCj
+dti
+dti
+dti
+dti
+dti
 baZ
 baZ
 yai
@@ -136861,19 +137034,19 @@ aiz
 aiz
 yai
 baZ
-aKD
-aKD
-aKD
-aKD
+bny
+bny
+bny
+bny
 baZ
-aKD
+bny
 yai
 baZ
-bCj
-bCj
-bCj
-bCj
-bCj
+dti
+dti
+dti
+dti
+dti
 baZ
 baZ
 yai
@@ -137128,7 +137301,7 @@ baZ
 baZ
 baZ
 baZ
-aKD
+bny
 yai
 baZ
 baZ
@@ -199479,21 +199652,21 @@ oRS
 oRS
 oRS
 yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+hwo
+hwo
+gUr
+gUr
+sRd
+sRd
+sRd
+fGn
+fGn
+fGn
+fGn
+fGn
+sRd
+sRd
+sRd
 yai
 aab
 aab
@@ -199741,21 +199914,21 @@ oRS
 oRS
 oRS
 yai
-aNT
-aNT
-aNT
-aNT
+gUr
+hbw
+iMa
+gUr
 yai
-aNT
-aNT
+sRd
+jaB
 yai
-aNT
-aNT
-aNT
-aNT
+jBw
+jBw
+uKh
+kDx
 yai
-aNT
-aNT
+sRd
+sRd
 yai
 aab
 aab
@@ -200003,18 +200176,18 @@ oRS
 oRS
 oRS
 yai
-aNT
-aNT
-aNT
-aNT
+gUr
+gUr
+iSd
+gUr
 yai
 yai
 yai
 yai
-aNT
-aNT
-aNT
-aNT
+jEs
+iMa
+gUr
+bDU
 yai
 yai
 yai
@@ -200265,21 +200438,21 @@ oRS
 oRS
 oRS
 yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+ity
+gUr
+iSd
+gUr
+gUr
+gUr
+gUr
 yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+kdM
+gUr
+iSd
+gUr
+gUr
+iUa
+kNU
 yai
 aab
 aab
@@ -200527,21 +200700,21 @@ oRS
 oRS
 oRS
 yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+gUr
+gUr
+gUr
+iTT
+iUa
+pjA
+cOR
 yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+hwo
+gUr
+knk
+hbw
+pjA
+fGn
+kOs
 yai
 aab
 aab
@@ -200790,19 +200963,19 @@ yai
 yai
 yai
 yai
-aNT
+avU
+yai
+yai
+fGn
+fGn
 yai
 yai
 yai
+avU
 yai
 yai
-yai
-yai
-aNT
-yai
-yai
-yai
-yai
+fGn
+fGn
 yai
 yai
 yai
@@ -201047,28 +201220,28 @@ yai
 yai
 aNT
 aNT
-cTM
-cTM
+fiO
+fiO
 yai
 aNT
 aNT
 aNT
 aNT
-aNT
-aNT
-aNT
-aNT
+afg
+syM
+syM
+asg
 aNT
 aNT
 aNT
 yai
+asg
+syM
+syM
+afg
 aNT
 aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+fDz
 yai
 aab
 aab
@@ -201311,25 +201484,25 @@ aNT
 aNT
 aNT
 aNT
+ieK
+aNT
+aNT
+aNT
+aKD
+aKD
+aNT
+aNT
+aXC
+aNT
+aNT
+aNT
 avU
 aNT
 aNT
 aNT
+aKD
 aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+aKD
 aNT
 yai
 aab
@@ -201567,7 +201740,7 @@ aab
 aab
 aab
 yai
-cTM
+fiO
 aNT
 aNT
 yai
@@ -201581,15 +201754,15 @@ aNT
 aNT
 aNT
 aNT
-aNT
-aNT
+aXC
+aXC
 aNT
 aNT
 yai
 aNT
 aNT
 aNT
-aNT
+aKD
 aNT
 aNT
 aNT
@@ -201829,12 +202002,12 @@ aab
 aab
 aab
 yai
-dhH
+fqI
 aNT
-dSx
+fTz
 yai
-icA
-etX
+ggk
+hft
 yai
 aNT
 aNT
@@ -201845,16 +202018,16 @@ aNT
 aNT
 aNT
 aNT
-aNT
-aNT
-yai
 aNT
 aNT
 yai
 yai
-yai
-yai
 aNT
+yai
+yai
+yai
+yai
+sRd
 yai
 aab
 aab
@@ -202091,32 +202264,32 @@ aab
 aab
 aab
 pRr
-cTM
+fiO
 aNT
 aNT
 yai
-aNT
-aNT
-yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+gUr
+gUr
 yai
 aNT
 aNT
 aNT
 aNT
+aNT
+aNT
+aNT
+aNT
+aKD
+aNT
+aNT
 yai
 aNT
 aNT
+aNT
+aNT
+yai
+sRd
+sRd
 yai
 aab
 aab
@@ -202356,9 +202529,9 @@ pRr
 aNT
 aNT
 aNT
-avU
-aNT
-aNT
+avF
+gUr
+gUr
 yai
 aNT
 aNT
@@ -202373,12 +202546,12 @@ aNT
 aNT
 yai
 aNT
+fDz
 aNT
-aNT
-aNT
+kSc
 yai
-aNT
-aNT
+sRd
+sRd
 yai
 aab
 aab
@@ -202615,16 +202788,16 @@ aab
 aab
 aab
 yai
-aNT
+rlk
 aNT
 aNT
 yai
-efY
-aNT
+ggn
+hwo
 yai
+aXC
 aNT
-aNT
-eMI
+irK
 aWV
 aWV
 aWV
@@ -202877,8 +203050,8 @@ aab
 aab
 aab
 yai
-aNT
-afg
+rlk
+afk
 aNT
 yai
 yai
@@ -202886,7 +203059,7 @@ yai
 yai
 aNT
 aNT
-eMI
+irK
 aWV
 aWV
 aWV
@@ -202899,10 +203072,10 @@ yai
 aNT
 aNT
 aNT
-aNT
+kSc
 yai
-aNT
-aNT
+sRd
+sRd
 yai
 aab
 aab
@@ -203140,7 +203313,7 @@ aab
 aab
 yai
 yai
-dti
+fNd
 aNT
 xcn
 sRd
@@ -203148,7 +203321,7 @@ sRd
 yai
 aNT
 aNT
-eMI
+irK
 aWV
 aWV
 aWV
@@ -203163,8 +203336,8 @@ aNT
 aNT
 aNT
 yai
-aNT
-aNT
+sRd
+sRd
 yai
 aab
 aab
@@ -203405,8 +203578,8 @@ yai
 yai
 aNT
 yai
-ega
-eBE
+gCn
+hwN
 yai
 aNT
 aNT
@@ -203417,16 +203590,16 @@ yai
 yai
 yai
 yai
-aNT
-aNT
-yai
-aNT
-aNT
-yai
-yai
+aXC
+aXC
 yai
 yai
 aNT
+yai
+yai
+yai
+yai
+sRd
 yai
 aab
 aab
@@ -203674,10 +203847,10 @@ aNT
 aNT
 aNT
 aNT
-aNT
-aNT
-aNT
-aNT
+aKD
+aKD
+aWV
+aWV
 aNT
 aNT
 aNT
@@ -203930,20 +204103,20 @@ aab
 aab
 aab
 yai
+aKD
+aNT
+aNT
+aXC
+aNT
+aKD
+aKD
+aWV
+aWV
 aNT
 aNT
 aNT
 aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-yai
+avU
 aNT
 aNT
 aNT
@@ -204192,16 +204365,16 @@ aab
 aab
 aab
 yai
-aNT
+aKD
 aNT
 aNT
 yai
-eMT
-eMT
-eMT
-eMT
-eMT
-eMT
+itZ
+itZ
+itZ
+aWV
+aWV
+itZ
 yai
 aNT
 aNT
@@ -204466,7 +204639,7 @@ aWV
 aWV
 yai
 aNT
-aNT
+aKD
 yai
 yai
 yai
@@ -204718,7 +204891,7 @@ aab
 yai
 aNT
 aNT
-eMI
+irK
 aWV
 aWV
 aWV
@@ -204980,7 +205153,7 @@ aab
 yai
 aNT
 aNT
-eMI
+irK
 aWV
 aWV
 aWV
@@ -204993,11 +205166,11 @@ aNT
 aNT
 avU
 aNT
-aNT
-aNT
+aXC
+aXC
 lnD
-eRF
-faQ
+ljo
+llW
 aWV
 yai
 aab
@@ -205241,8 +205414,8 @@ aab
 aab
 yai
 aNT
-aNT
-eMI
+aXC
+irK
 aWV
 aWV
 aWV
@@ -205513,7 +205686,7 @@ aWV
 aWV
 aWV
 yai
-aNT
+aXC
 aNT
 yai
 yai
@@ -205768,12 +205941,12 @@ aNT
 aNT
 aNT
 yai
-ePb
-ePb
-ePb
-ePb
-ePb
-ePb
+iyn
+iyn
+iyn
+iyn
+iyn
+iyn
 yai
 aNT
 aNT
@@ -206030,16 +206203,16 @@ aNT
 aNT
 aNT
 aNT
+aKD
+aKD
+aNT
+aXC
 aNT
 aNT
 aNT
 aNT
 aNT
-aNT
-aNT
-aNT
-aNT
-yai
+avU
 aNT
 aNT
 aNT
@@ -206298,7 +206471,7 @@ aNT
 aNT
 aNT
 aNT
-aNT
+aKD
 aNT
 aNT
 yai
@@ -206547,30 +206720,30 @@ aab
 aab
 yai
 yai
-cTM
+fiO
 yai
-eqy
+gGu
 vRx
 yai
-aNT
-aNT
-yai
-yai
-yai
-yai
-yai
-yai
-yai
-aNT
-aNT
-yai
-aNT
+aXC
 aNT
 yai
 yai
 yai
 yai
+yai
+yai
+yai
 aNT
+aNT
+yai
+yai
+aNT
+yai
+yai
+yai
+yai
+sRd
 yai
 aab
 aab
@@ -206808,15 +206981,15 @@ aab
 aab
 yai
 yai
+eaU
 aNT
-dZN
 xcn
 sRd
 sRd
 yai
 aNT
 aNT
-eMI
+irK
 aWV
 aWV
 aWV
@@ -206824,15 +206997,15 @@ aWV
 aWV
 aWV
 aNT
-aNT
+aXC
 yai
 aNT
 aNT
 aNT
 aNT
 yai
-aNT
-aNT
+sRd
+sRd
 yai
 aab
 aab
@@ -207069,16 +207242,16 @@ aab
 aab
 aab
 yai
-dlf
+fCz
 aNT
-dlJ
+fDz
 yai
 yai
 yai
 yai
 aNT
 aNT
-eMI
+irK
 aWV
 aWV
 aWV
@@ -207091,10 +207264,10 @@ yai
 aNT
 aNT
 aNT
-aNT
+kTZ
 yai
-aNT
-aNT
+sRd
+sRd
 yai
 aab
 aab
@@ -207335,12 +207508,12 @@ aNT
 aNT
 aNT
 yai
-aNT
-aYO
+gUr
+hBy
 yai
 aNT
-aNT
-eMI
+aKD
+irK
 aWV
 aWV
 aWV
@@ -207596,29 +207769,29 @@ pRr
 aNT
 aNT
 aNT
-avU
-aNT
-dlJ
+avF
+gUr
+hHu
 yai
 aNT
-aNT
-yai
-yai
+aKD
 yai
 yai
 yai
 yai
 yai
+yai
+yai
 aNT
 aNT
 yai
 aNT
 aNT
 aNT
-aNT
+kZq
 yai
-aNT
-aNT
+sRd
+sRd
 yai
 aab
 aab
@@ -207854,26 +208027,21 @@ aab
 aab
 aab
 aab
-cRg
+faQ
 xeZ
 aNT
-eem
+fTC
+yai
+gUr
+gUr
 yai
 aNT
 aNT
-yai
+aNT
+aXC
 aNT
 aNT
 aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-yai
 aNT
 aNT
 aNT
@@ -207881,6 +208049,11 @@ aNT
 yai
 aNT
 aNT
+aNT
+aNT
+yai
+sRd
+sRd
 yai
 aab
 aab
@@ -208121,8 +208294,8 @@ aNT
 aNT
 aNT
 yai
-dlf
-eEW
+hbw
+hMS
 yai
 aNT
 aNT
@@ -208132,17 +208305,17 @@ aNT
 aNT
 aNT
 aNT
-aNT
-aNT
-aNT
-yai
-aNT
+aXC
+aXC
 aNT
 yai
 yai
-yai
-yai
 aNT
+yai
+yai
+yai
+yai
+sRd
 yai
 aab
 aab
@@ -208379,8 +208552,8 @@ aab
 aab
 aab
 yai
-dlJ
-afg
+fDz
+afk
 aNT
 yai
 yai
@@ -208388,15 +208561,15 @@ yai
 yai
 aNT
 aNT
+aKD
+aKD
+aNT
+aNT
+aXC
 aNT
 aNT
 aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+aKD
 yai
 aNT
 aNT
@@ -208642,10 +208815,10 @@ aab
 aab
 yai
 yai
-cTM
+fiO
 aNT
 aNT
-aNT
+aKD
 aNT
 avU
 aNT
@@ -208654,12 +208827,12 @@ aNT
 aNT
 aNT
 aNT
+aXC
 aNT
 aNT
 aNT
 aNT
-aNT
-yai
+avU
 aNT
 aNT
 aNT
@@ -208905,10 +209078,10 @@ aab
 aab
 yai
 yai
+fiO
 aNT
 aNT
-cTM
-cTM
+aNT
 yai
 aNT
 aNT
@@ -209174,7 +209347,7 @@ yai
 yai
 yai
 yai
-aNT
+avF
 yai
 yai
 yai
@@ -209182,7 +209355,7 @@ yai
 yai
 yai
 yai
-aNT
+avF
 yai
 yai
 yai
@@ -209435,21 +209608,21 @@ aab
 aab
 aab
 yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+gUr
+gUr
+gUr
+gUr
+sRd
+sRd
+sRd
 yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+gUr
+gUr
+gUr
+gUr
+sRd
+sRd
+sRd
 yai
 aae
 aae
@@ -209697,21 +209870,21 @@ aab
 aab
 aab
 yai
-aNT
-aNT
-aNT
-aNT
+gUr
+gUr
+gUr
+gUr
 yai
-aNT
-aNT
+sRd
+sRd
 yai
-aNT
-aNT
-aNT
-aNT
+gUr
+gUr
+gUr
+gUr
 yai
-aNT
-aNT
+sRd
+sRd
 yai
 aae
 aae
@@ -209959,18 +210132,18 @@ aab
 aab
 aab
 yai
-aNT
-aNT
-aNT
-aNT
+gUr
+gUr
+gUr
+gUr
 yai
 yai
 yai
 yai
-aNT
-aNT
-aNT
-aNT
+gUr
+gUr
+gUr
+gUr
 yai
 yai
 yai
@@ -210221,21 +210394,21 @@ aab
 aab
 aab
 yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+gUr
+gUr
+gUr
+gUr
 yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+gUr
+jBr
+yai
+gUr
+gUr
+gUr
+gUr
+yai
+gUr
+ldL
 yai
 aae
 aae
@@ -210483,21 +210656,21 @@ aab
 aab
 aab
 yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+gUr
+gUr
+gUr
+gUr
+gUr
+gUr
+gUr
 yai
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
-aNT
+gUr
+gUr
+gUr
+gUr
+gUr
+gUr
+gUr
 yai
 aae
 aae
