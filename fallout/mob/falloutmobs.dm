@@ -41,8 +41,12 @@
 	food_type = list()
 	tame_chance = 25
 	bonus_tame_chance = 15
-	footstep_type = FOOTSTEP_MOB_SHOE
+	footstep_type = FOOTSTEP_MOB_HEAVY
+	status_flags = CANSTUN
+	mob_size = MOB_SIZE_LARGE
 	stop_automated_movement_when_pulled = 1
+	wound_bonus = -5
+	bare_wound_bonus = 10
 	//does the homie have chemss/chems to extract? Poison, Milk, Other :flushed:
 	var/milkable = FALSE
 	//Chems that the creature makes
@@ -70,6 +74,8 @@
 	var/young_type = null
 	//adult
 	var/adult_type = null
+	//timer on growing up
+	var/growth
 	//hunger for tamed mobs, dictates starvation and things like production of eggs/milk and such
 	var/hunger = 200
 	var/maxhunger = 200
@@ -83,7 +89,6 @@
 	if(is_young == TRUE)
 		bambinoscale.Scale(0.7, 0.7)
 		transform = bambinoscale
-		return
 	if(smallasslad == TRUE)
 		//makes them small ass lads look all funky n shi
 		pixel_x = rand(-6, 6)
@@ -93,7 +98,6 @@
 	if(tame)
 		if(milkable == TRUE)
 			chems = new()
-			return . = ..()
 		if(eggable == TRUE)
 			eggsleft = 0
 	else
@@ -104,64 +108,59 @@
 		qdel(chems)
 		chems = null
 		return ..()
-	return . = ..()
 
 //hunger and baby grow/birth/speed shitcode
-/mob/living/simple_animal/hostile/fallout/Life()
+/mob/living/simple_animal/fallout/Life()
 	. =..()
+	if(saddled == TRUE)
+		saddleup()
+	if(largeasslad == TRUE)
+		pixel_x = -16
 	if(tame)
+		visible_message("<span class='alertalien'>[src] is now tamed.</span>")
 		var/hungerrate = rand(0.2,0.3)
 		hunger -= hungerrate
-		return
 		if(hunger == 0)
 			hungerrate = 0
+		if(stat == CONSCIOUS && breedable == TRUE)
+			if((prob(3) && has_young))
+				has_young++
+			if(has_young > 10)
+				has_young = 0
+				visible_message("<span class='alertalien'>[src] has produced a baby.</span>")
+				new young_type(src.loc)
+			if(is_young)
+				growth++
+				if(growth > 50)
+					is_young = 0
+					new adult_type(src.loc)
+					qdel(src)
+					visible_message("<span class='alertalien'>[src] has fully grown.</span>")
+					if(milkable == TRUE)
+						chems = new()
+					return
+		if(milkable == TRUE)
+			if(hunger > 0)
+				chems.generateChem()
 			return
-	if(stat == CONSCIOUS && breedable == TRUE)
-		if((prob(3) && has_young))
-			has_young++
-		if(has_young > 10)
-			has_young = 0
-			visible_message("<span class='alertalien'>[src] has produced a baby.</span>")
-			new young_type(src.loc)
-		if(is_young)
-			if(prob(3))
-				is_young = 0
-				new adult_type(src.loc)
-				qdel(src)
-				visible_message("<span class='alertalien'>[src] has fully grown.</span>")
-				if(milkable == TRUE)
-					chems = new()
+		if(eggable == TRUE)
+			if(!stat)
+				if(hunger >= 150 && eggsleft < 8)
+					eggsleft += rand(1, 4)
+					hunger -= 100
+				if(hunger == 0)
+					eggsleft = 0 //starvin now foo
+				else
+					return
+			if((!stat && prob(3) && eggsleft > 0) && egg_type)
+				visible_message("<span class='alertalien'>[src] [pick(EGG_LAYING_MESSAGES)]</span>")
+				eggsleft--
+				var/obj/item/E = new egg_type(get_turf(src))
+				E.pixel_x = rand(-6,6)
+				E.pixel_y = rand(-6,6)
 				return
-	if(milkable == TRUE)
-		if(hunger == 0)
-			return
-		else
-			chems.generateChem()
-			return
-	if(eggable == TRUE)
-		if(!stat)
-			if(hunger >= 150 && eggsleft < 8)
-				eggsleft += rand(1, 4)
-				hunger -= 100
-			if(hunger == 0)
-				eggsleft = 0 //starvin now foo
-			else
-				return
-			return
-		if((!stat && prob(3) && eggsleft > 0) && egg_type)
-			visible_message("<span class='alertalien'>[src] [pick(EGG_LAYING_MESSAGES)]</span>")
-			eggsleft--
-			var/obj/item/E = new egg_type(get_turf(src))
-			E.pixel_x = rand(-6,6)
-			E.pixel_y = rand(-6,6)
-			return
-	if(tame == 1)
-		visible_message("<span class='alertalien'>[src] is now tamed.</span>")
-	if(saddled == TRUE)
-		saddled()
-		return
 
-/mob/living/simple_animal/fallout/proc/saddled()
+/mob/living/simple_animal/fallout/proc/saddleup()
 	var/speedmodifier = speed/(hunger/maxhunger)
 	if(saddled == TRUE)
 		can_buckle = TRUE
@@ -180,6 +179,15 @@
 
 /mob/living/simple_animal/fallout/attackby(obj/item/O, mob/user, params)
 	. = ..()
+	if(is_type_in_list(O, food_type))
+		user.visible_message("<span class='notice'>[user] hand-feeds [O] to [src].</span>", "<span class='notice'>You hand-feed [O] to [src].</span>")
+		qdel(O)
+		if(do_after(user, 3 SECONDS, target = src))
+			if (prob(tame_chance)) //note: lack of feedback message is deliberate, keep them guessing!
+				tame = TRUE
+				tamed(user)
+			else
+				tame_chance += bonus_tame_chance
 	if(tame == 1)
 		visible_message("<span class='alertalien'>[src] is now tamed.</span>")
 	if(stat == CONSCIOUS && tame)
@@ -199,7 +207,6 @@
 					qdel(O)
 			else if(hunger >= maxhunger)
 				user.visible_message("<span class='notice'>The [src] rejects the [O] they dont seem to be hungry right now.</span>")
-			return . = ..()
 		if(rideable == TRUE)
 			if(istype(O, /obj/item/saddle) && !saddled)
 				if(tame && do_after(user,55,target=src))
@@ -207,21 +214,15 @@
 					user.visible_message("<span class='notice'>You manage to put [O] on [src], you can now ride [p_them()].</span>")
 					qdel(O)
 					saddled = TRUE
-					saddled()
 					return
 				else
 					user.visible_message("<span class='warning'>[src] is rocking around! You can't put the saddle on!</span>")
-				return . = ..()
 		if(milkable == TRUE)
 			if(istype(O, /obj/item/reagent_containers/glass))
 				chems.extractAnimal(O, user)
-				return 1
+				return TRUE
 			else
 				return ..()
-		else
-			return ..()
-	else
-		return ..()
 
 /obj/item/fallout/animalchem
 	name = "animalchem"
@@ -287,8 +288,16 @@
 	food_type = list()
 	tame_chance = 10
 	bonus_tame_chance = 15
-	footstep_type = FOOTSTEP_MOB_SHOE
+	aggro_vision_range = 10
+	a_intent = INTENT_HARM
+	see_in_dark = 8
+	obj_damage = 10
+	footstep_type = FOOTSTEP_MOB_HEAVY
+	status_flags = CANSTUN
+	mob_size = MOB_SIZE_LARGE
 	stop_automated_movement_when_pulled = 1
+	wound_bonus = -5
+	bare_wound_bonus = 10
 	var/milkable = FALSE
 	var/extract = null
 	var/obj/item/fallout/animalchem/chems = null
@@ -304,6 +313,7 @@
 	var/has_young = FALSE
 	var/young_type = null
 	var/adult_type = null
+	var/growth
 	var/hunger = 200
 	var/maxhunger = 200
 	var/offsetx = 0
@@ -320,10 +330,11 @@
 		//makes them small ass lads look all funky n shi
 		pixel_x = rand(-6, 6)
 		pixel_y = rand(0, 10)
+	if(largeasslad == TRUE)
+		pixel_x = -16
 	if(tame)
 		if(milkable == TRUE)
 			chems = new()
-			return . = ..()
 		if(eggable == TRUE)
 			eggsleft = 0
 	else
@@ -334,65 +345,59 @@
 		qdel(chems)
 		chems = null
 		return ..()
-	return . = ..()
 
 //hunger and baby grow/birth/speed shitcode
 /mob/living/simple_animal/hostile/fallout/Life()
 	. =..()
+	if(saddled == TRUE)
+		saddleup()
+	if(largeasslad == TRUE)
+		pixel_x = -16
 	if(tame)
+		visible_message("<span class='alertalien'>[src] is now tamed.</span>")
 		var/hungerrate = rand(0.2,0.3)
 		hunger -= hungerrate
-		return
 		if(hunger == 0)
 			hungerrate = 0
+		if(stat == CONSCIOUS && breedable == TRUE)
+			if((prob(3) && has_young))
+				has_young++
+			if(has_young > 10)
+				has_young = 0
+				visible_message("<span class='alertalien'>[src] has produced a baby.</span>")
+				new young_type(src.loc)
+			if(is_young)
+				growth++
+				if(growth > 50)
+					is_young = 0
+					new adult_type(src.loc)
+					qdel(src)
+					visible_message("<span class='alertalien'>[src] has fully grown.</span>")
+					if(milkable == TRUE)
+						chems = new()
+					return
+		if(milkable == TRUE)
+			if(hunger > 0)
+				chems.generateChem()
 			return
-	if(stat == CONSCIOUS && breedable == TRUE)
-		if((prob(3) && has_young))
-			has_young++
-		if(has_young > 10)
-			has_young = 0
-			visible_message("<span class='alertalien'>[src] has produced a baby.</span>")
-			new young_type(src.loc)
-		if(is_young)
-			if(prob(3))
-				is_young = 0
-				new adult_type(src.loc)
-				qdel(src)
-				visible_message("<span class='alertalien'>[src] has fully grown.</span>")
-				if(milkable == TRUE)
-					chems = new()
+		if(eggable == TRUE)
+			if(!stat)
+				if(hunger >= 150 && eggsleft < 8)
+					eggsleft += rand(1, 4)
+					hunger -= 100
+				if(hunger == 0)
+					eggsleft = 0 //starvin now foo
+				else
+					return
+			if((!stat && prob(3) && eggsleft > 0) && egg_type)
+				visible_message("<span class='alertalien'>[src] [pick(EGG_LAYING_MESSAGES)]</span>")
+				eggsleft--
+				var/obj/item/E = new egg_type(get_turf(src))
+				E.pixel_x = rand(-6,6)
+				E.pixel_y = rand(-6,6)
 				return
-	if(milkable == TRUE)
-		if(hunger == 0)
-			return
-		else
-			chems.generateChem()
-			return
-	if(eggable == TRUE)
-		if(!stat)
-			if(hunger >= 150 && eggsleft < 8)
-				eggsleft += rand(1, 4)
-				hunger -= 100
-			if(hunger == 0)
-				eggsleft = 0 //starvin now foo
-			else
-				return
-			return
-		if((!stat && prob(3) && eggsleft > 0) && egg_type)
-			visible_message("<span class='alertalien'>[src] [pick(EGG_LAYING_MESSAGES)]</span>")
-			eggsleft--
-			var/obj/item/E = new egg_type(get_turf(src))
-			E.pixel_x = rand(-6,6)
-			E.pixel_y = rand(-6,6)
-			return
-	if(tame == 1)
-		visible_message("<span class='alertalien'>[src] is now tamed.</span>")
-	if(saddled == TRUE)
-		saddled()
-		return
-	return
 
-/mob/living/simple_animal/hostile/fallout/proc/saddled()
+/mob/living/simple_animal/hostile/fallout/proc/saddleup()
 	var/speedmodifier = speed/(hunger/maxhunger)
 	if(saddled == TRUE)
 		can_buckle = TRUE
@@ -411,6 +416,15 @@
 
 /mob/living/simple_animal/hostile/fallout/attackby(obj/item/O, mob/user, params)
 	. = ..()
+	if(is_type_in_list(O, food_type))
+		user.visible_message("<span class='notice'>[user] hand-feeds [O] to [src].</span>", "<span class='notice'>You hand-feed [O] to [src].</span>")
+		qdel(O)
+		if(do_after(user, 3 SECONDS, target = src))
+			if (prob(tame_chance)) //note: lack of feedback message is deliberate, keep them guessing!
+				tame = TRUE
+				tamed(user)
+			else
+				tame_chance += bonus_tame_chance
 	if(stat == CONSCIOUS && tame)
 		if(is_type_in_list(O, food_type))
 			if(hunger <= maxhunger)
@@ -428,7 +442,6 @@
 					qdel(O)
 			else if(hunger >= maxhunger)
 				user.visible_message("<span class='notice'>The [src] rejects the [O] they dont seem to be hungry right now.</span>")
-			return . = ..()
 		if(rideable == TRUE)
 			if(istype(O, /obj/item/saddle) && !saddled)
 				if(tame && do_after(user,55,target=src))
@@ -436,21 +449,15 @@
 					user.visible_message("<span class='notice'>You manage to put [O] on [src], you can now ride [p_them()].</span>")
 					qdel(O)
 					saddled = TRUE
-					saddled()
 					return
 				else
 					user.visible_message("<span class='warning'>[src] is rocking around! You can't put the saddle on!</span>")
-				return . = ..()
 		if(milkable == TRUE)
 			if(istype(O, /obj/item/reagent_containers/glass))
 				chems.extractAnimal(O, user)
-				return 1
+				return TRUE
 			else
 				return ..()
-		else
-			return ..()
-	else
-		return ..()
 
 //Mobs that attack in retaliation, Brahmin, etc. (oh yeah, boo hoo, no more slaughtering 85 brahmin for meat dawg)
 
@@ -488,8 +495,12 @@
 	food_type = list()
 	tame_chance = 10
 	bonus_tame_chance = 15
-	footstep_type = FOOTSTEP_MOB_SHOE
+	footstep_type = FOOTSTEP_MOB_HEAVY
+	status_flags = CANSTUN
+	mob_size = MOB_SIZE_LARGE
 	stop_automated_movement_when_pulled = 1
+	wound_bonus = -5
+	bare_wound_bonus = 10
 	var/milkable = FALSE
 	var/extract = null
 	var/obj/item/fallout/animalchem/chems = null
@@ -505,6 +516,7 @@
 	var/has_young = FALSE
 	var/young_type = null
 	var/adult_type = null
+	var/growth
 	var/hunger = 200
 	var/maxhunger = 200
 	var/offsetx = 0
@@ -516,15 +528,15 @@
 	if(is_young == TRUE)
 		bambinoscale.Scale(0.7, 0.7)
 		transform = bambinoscale
-		return
 	if(smallasslad == TRUE)
 		//makes them small ass lads look all funky n shi
 		pixel_x = rand(-6, 6)
 		pixel_y = rand(0, 10)
+	if(largeasslad == TRUE)
+		pixel_x = -16
 	if(tame)
 		if(milkable == TRUE)
 			chems = new()
-			return . = ..()
 		if(eggable == TRUE)
 			eggsleft = 0
 	else
@@ -535,70 +547,63 @@
 		qdel(chems)
 		chems = null
 		return ..()
-	return . = ..()
 
 //hunger and baby grow/birth/speed shitcode
 /mob/living/simple_animal/hostile/retaliate/fallout/Life()
-	. = ..()
+	. =..()
 	if(enemies.len && prob(10))
 		enemies = list()
 		LoseTarget()
 		src.visible_message("<span class='notice'>[src] calms down.</span>")
-		return
+	if(saddled == TRUE)
+		saddleup()
+	if(largeasslad == TRUE)
+		pixel_x = -16
 	if(tame)
+		visible_message("<span class='alertalien'>[src] is now tamed.</span>")
 		var/hungerrate = rand(0.2,0.3)
 		hunger -= hungerrate
-		return
 		if(hunger == 0)
 			hungerrate = 0
+		if(stat == CONSCIOUS && breedable == TRUE)
+			if((prob(3) && has_young))
+				has_young++
+			if(has_young > 10)
+				has_young = 0
+				visible_message("<span class='alertalien'>[src] has produced a baby.</span>")
+				new young_type(src.loc)
+			if(is_young)
+				growth++
+				if(growth > 50)
+					is_young = 0
+					new adult_type(src.loc)
+					qdel(src)
+					visible_message("<span class='alertalien'>[src] has fully grown.</span>")
+					if(milkable == TRUE)
+						chems = new()
+					return
+		if(milkable == TRUE)
+			if(hunger > 0)
+				chems.generateChem()
 			return
-	if(stat == CONSCIOUS && breedable == TRUE)
-		if((prob(3) && has_young))
-			has_young++
-		if(has_young > 10)
-			has_young = 0
-			visible_message("<span class='alertalien'>[src] has produced a baby.</span>")
-			new young_type(src.loc)
-		if(is_young)
-			if(prob(3))
-				is_young = 0
-				new adult_type(src.loc)
-				qdel(src)
-				visible_message("<span class='alertalien'>[src] has fully grown.</span>")
-				if(milkable == TRUE)
-					chems = new()
+		if(eggable == TRUE)
+			if(!stat)
+				if(hunger >= 150 && eggsleft < 8)
+					eggsleft += rand(1, 4)
+					hunger -= 100
+				if(hunger == 0)
+					eggsleft = 0 //starvin now foo
+				else
+					return
+			if((!stat && prob(3) && eggsleft > 0) && egg_type)
+				visible_message("<span class='alertalien'>[src] [pick(EGG_LAYING_MESSAGES)]</span>")
+				eggsleft--
+				var/obj/item/E = new egg_type(get_turf(src))
+				E.pixel_x = rand(-6,6)
+				E.pixel_y = rand(-6,6)
 				return
-	if(milkable == TRUE)
-		if(hunger == 0)
-			return
-		else
-			chems.generateChem()
-			return
-	if(eggable == TRUE)
-		if(!stat)
-			if(hunger >= 150 && eggsleft < 8)
-				eggsleft += rand(1, 4)
-				hunger -= 100
-			if(hunger == 0)
-				eggsleft = 0 //starvin now foo
-			else
-				return
-			return
-		if((!stat && prob(3) && eggsleft > 0) && egg_type)
-			visible_message("<span class='alertalien'>[src] [pick(EGG_LAYING_MESSAGES)]</span>")
-			eggsleft--
-			var/obj/item/E = new egg_type(get_turf(src))
-			E.pixel_x = rand(-6,6)
-			E.pixel_y = rand(-6,6)
-			return
-	if(tame == 1)
-		visible_message("<span class='alertalien'>[src] is now tamed.</span>")
-	if(saddled == TRUE)
-		saddled()
-		return
-	return
 
-/mob/living/simple_animal/hostile/retaliate/fallout/proc/saddled()
+/mob/living/simple_animal/hostile/retaliate/fallout/proc/saddleup()
 	var/speedmodifier = speed/(hunger/maxhunger)
 	if(saddled == TRUE)
 		can_buckle = TRUE
@@ -615,12 +620,21 @@
 		update_icon()
 		D.vehicle_move_delay = speedmodifier
 
-/mob/living/simple_animal/hostile/retaliate/goat/Retaliate()
+/mob/living/simple_animal/hostile/retaliate/fallout/Retaliate()
 	..()
 	src.visible_message("<span class='danger'>The [src] starts kicking off!</span>")
 
 /mob/living/simple_animal/hostile/retaliate/fallout/attackby(obj/item/O, mob/user, params)
 	. = ..()
+	if(is_type_in_list(O, food_type))
+		user.visible_message("<span class='notice'>[user] hand-feeds [O] to [src].</span>", "<span class='notice'>You hand-feed [O] to [src].</span>")
+		qdel(O)
+		if(do_after(user, 3 SECONDS, target = src))
+			if (prob(tame_chance)) //note: lack of feedback message is deliberate, keep them guessing!
+				tame = TRUE
+				tamed(user)
+			else
+				tame_chance += bonus_tame_chance
 	if(tame == 1)
 		visible_message("<span class='alertalien'>[src] is now tamed.</span>")
 	if(stat == CONSCIOUS && tame)
@@ -640,7 +654,6 @@
 					qdel(O)
 			else if(hunger >= maxhunger)
 				user.visible_message("<span class='notice'>The [src] rejects the [O] they dont seem to be hungry right now.</span>")
-			return . = ..()
 		if(rideable == TRUE)
 			if(istype(O, /obj/item/saddle) && !saddled)
 				if(tame && do_after(user,55,target=src))
@@ -648,18 +661,12 @@
 					user.visible_message("<span class='notice'>You manage to put [O] on [src], you can now ride [p_them()].</span>")
 					qdel(O)
 					saddled = TRUE
-					saddled()
 					return
 				else
 					user.visible_message("<span class='warning'>[src] is rocking around! You can't put the saddle on!</span>")
-				return . = ..()
 		if(milkable == TRUE)
 			if(istype(O, /obj/item/reagent_containers/glass))
 				chems.extractAnimal(O, user)
-				return 1
+				return TRUE
 			else
 				return ..()
-		else
-			return ..()
-	else
-		return ..()

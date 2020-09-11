@@ -7,6 +7,7 @@
 
 //seeds potency change - can be used for tweaking other starting plant variables
 //also consiser plant code
+
 /obj/item/seeds/fallout
 	growing_icon = 'fallout/icons/hydroponics/growing.dmi'
 	icon = 'fallout/icons/hydroponics/seeds.dmi'
@@ -140,6 +141,21 @@
 	throw_speed = 3
 	throw_range = 4
 	sharpness = IS_SHARP_AXE
+
+//animal mounting items - basic stuff, mainly the saddle and lasso
+
+/obj/item/saddle/fallout
+	desc = "A cowboys tool of the trade, get on comfy on your beast pard'."
+	icon = 'fallout/icons/hydroponics/equipment.dmi'
+	icon_state = "saddle"
+
+/obj/item/key/lasso/fallout
+	name = "lasso"
+	desc = "A cowboys tool of the tade, used for reighning them critters, W'hooowhey! Ride!"
+	force = 15
+	icon = 'fallout/icons/hydroponics/equipment.dmi'
+	icon_state = "lasso"
+
 /////////////////////////////////////////////////////////////
 ////////////// MOJAVE SUN BOTANY CHEMS //////////////////////
 /////////////////////////////////////////////////////////////
