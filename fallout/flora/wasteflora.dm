@@ -148,6 +148,8 @@
 	desc = "A cowboys tool of the trade, get on comfy on your beast pard'."
 	icon = 'fallout/icons/hydroponics/equipment.dmi'
 	icon_state = "saddle"
+	drop_sound = 'sound/items/handling/cloth_drop.ogg'
+	pickup_sound =  'sound/items/handling/cloth_pickup.ogg'
 
 /obj/item/key/lasso/fallout
 	name = "lasso"
@@ -155,6 +157,7 @@
 	force = 15
 	icon = 'fallout/icons/hydroponics/equipment.dmi'
 	icon_state = "lasso"
+	pickup_sound =  'sound/items/handling/cloth_pickup.ogg'
 
 /////////////////////////////////////////////////////////////
 ////////////// MOJAVE SUN BOTANY CHEMS //////////////////////

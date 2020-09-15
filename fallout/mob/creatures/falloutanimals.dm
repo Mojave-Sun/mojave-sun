@@ -18,8 +18,7 @@
 	attack_verb_continuous = "headbutts"
 	attack_verb_simple = "headbutt"
 	turns_per_move = 3
-	butcher_results = list()//brahmin meat, tongue, horns, hide
-	guaranteed_butcher_results = list()//brahmin meat
+	butcher_results = list(/obj/item/fallout/hide/brahmin = 1, /obj/item/fallout/carcass/large/brahmin = 1, /obj/item/fallout/animalitem/brahmin/horns = 2)//brahmin meat, tongue, horns, hide
 	attack_sound = 'sound/weapons/punch1.ogg'
 	speed = 3
 	health = 200
@@ -48,8 +47,8 @@
 	turns_per_move = 3
 	melee_damage_lower = 0
 	melee_damage_upper = 0
-	butcher_results = list()//brahmin veal?
-	guaranteed_butcher_results = list()//brahmin meat
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
+	splatter = TRUE
 	health = 50
 	maxHealth = 50
 	is_young = TRUE
@@ -69,8 +68,7 @@
 	attack_verb_continuous = "headbutts"
 	attack_verb_simple = "headbutt"
 	turns_per_move = 1
-	butcher_results = list()//brahmiluff meat, tongue, horns, hide, fur
-	guaranteed_butcher_results = list()//brahmiluff meat
+	butcher_results = list(/obj/item/fallout/hide/brahmiluff = 1, /obj/item/fallout/carcass/large/brahmiluff = 1, /obj/item/fallout/animalitem/brahmiluff/horns = 2)//brahmiluff meat, tongue, horns, hide, fur
 	attack_sound = 'sound/weapons/punch1.ogg'
 	health = 300
 	maxHealth = 300
@@ -99,14 +97,13 @@
 	emote_hear = list("cheeps")
 	emote_see = list("flaps its wings")
 	turns_per_move = 2
-	butcher_results = list()//feathers(rare, homie bald), beak, "chicken"
-	guaranteed_butcher_results = list()//chicken
+	butcher_results = list(/obj/item/fallout/carcass/clucker = 1, /obj/item/fallout/animalitem/clucker/feather = 1)//feathers(rare, homie bald), beak, "chicken"
 	health = 20
 	maxHealth = 20
 	speed = 1
 	food_type = list(/obj/item/reagent_containers/food/snacks/grown/fallout/razorgrain, /obj/item/reagent_containers/food/snacks/grown/fallout/baifan)
 	eggable = TRUE
-	egg_type = null//clucker egg
+	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/clucker
 	smallasslad = TRUE
 	tame = TRUE
 
@@ -126,8 +123,7 @@
 	attack_verb_simple = "kick"
 	speak_chance = 10
 	turns_per_move = 5
-	butcher_results = list()//slepnir hide, hooves, hair, meat
-	guaranteed_butcher_results = list()//meat
+	butcher_results = list(/obj/item/fallout/hide/slepnir = 1, /obj/item/fallout/carcass/large/slepnir/front = 1, /obj/item/fallout/carcass/large/slepnir/back = 1, /obj/item/fallout/animalitem/slepnir/hooves = 2)//slepnir hide, hooves, hair, meat
 	attack_sound = 'fallout/sound/f13weapons/meleesounds/slam.ogg'
 	health = 400
 	maxHealth = 400
@@ -157,8 +153,7 @@
 	attack_verb_simple = "bite"
 	speak_chance = 30
 	turns_per_move = 5
-	butcher_results = list()//pigrat hide, snout, meat
-	guaranteed_butcher_results = list()//meat
+	butcher_results = list(/obj/item/fallout/hide/pigrat = 1, /obj/item/fallout/carcass/large/pigrat = 1, /obj/item/fallout/animalitem/pigrat/snout = 1)//pigrat hide, snout, meat
 	attack_sound = 'sound/weapons/bite.ogg'
 	health = 100
 	maxHealth = 100
@@ -189,8 +184,8 @@
 	melee_damage_lower = 0
 	melee_damage_upper = 0
 	speed = 1
-	butcher_results = list()//pigrat veal?
-	guaranteed_butcher_results = list()//pigrat meat
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
+	splatter = TRUE
 	health = 30
 	maxHealth = 30
 	is_young = TRUE
@@ -214,8 +209,7 @@
 	attack_verb_simple = "bite"
 	speak_chance = 30
 	turns_per_move = 5
-	butcher_results = list()//molerat hide, teeth, meat
-	guaranteed_butcher_results = list()//meat
+	butcher_results = list(/obj/item/fallout/hide/molerat = 1, /obj/item/fallout/carcass/molerat = 1)//molerat hide, teeth, meat
 	attack_sound = 'sound/weapons/bite.ogg'
 	health = 100
 	maxHealth = 100
@@ -247,8 +241,8 @@
 	melee_damage_lower = 0
 	melee_damage_upper = 0
 	speed = 1.5
-	butcher_results = list()//molerat veal?
-	guaranteed_butcher_results = list()//pigrat meat
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
+	splatter = TRUE
 	health = 10
 	maxHealth = 10
 	is_young = TRUE
@@ -269,7 +263,6 @@
 	speak_chance = 0
 	turns_per_move = 5
 	butcher_results = list()//radroach meat, eggs, innards
-	guaranteed_butcher_results = list()//meat
 	attack_sound = 'sound/weapons/bite.ogg'
 	health = 50
 	maxHealth = 50
@@ -280,18 +273,16 @@
 	tame_chance = 5
 	bonus_tame_chance = 5
 	eggable = TRUE
-	egg_type = null//radroach egg
-
-/mob/living/simple_animal/hostile/fallout/radroach/poison
+	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/radroach
 	var/poison_per_bite = 5
 	var/poison_type = /datum/reagent/toxin
 
-/mob/living/simple_animal/hostile/fallout/radroach/poison/AttackingTarget()
+/mob/living/simple_animal/hostile/fallout/radroach/AttackingTarget()
 	. = ..()
 	if(.)
 		inject_poison(target)
 
-/mob/living/simple_animal/hostile/fallout/radroach/poison/proc/inject_poison(mob/living/L)
+/mob/living/simple_animal/hostile/fallout/radroach/proc/inject_poison(mob/living/L)
 	if(poison_type && istype(L) && L.reagents)
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
@@ -310,8 +301,7 @@
 	attack_verb_simple = "scratch"
 	speak_chance = 40
 	turns_per_move = 5
-	butcher_results = list()//gecko meat, eggs, hide
-	guaranteed_butcher_results = list()//meat
+	butcher_results = list(/obj/item/fallout/hide/gecko = 1, /obj/item/fallout/carcass/gecko = 1, /obj/item/fallout/animalitem/gecko/claws = 1)//gecko meat, eggs, hide
 	attack_sound = 'sound/weapons/slash.ogg'//scratch
 	health = 150
 	maxHealth = 150
@@ -323,15 +313,17 @@
 	bonus_tame_chance = 15
 	rideable = TRUE
 	eggable = TRUE
-	egg_type = null//gecko egg
+	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/gecko
 	offsetx = 2
 	offsety = 5
 
 /mob/living/simple_animal/hostile/fallout/gecko/ice
 	icon_state = "icegecko"
+	butcher_results = list(/obj/item/fallout/hide/gecko/ice = 1, /obj/item/fallout/carcass/gecko = 1, /obj/item/fallout/animalitem/gecko/claws = 1)
 
 /mob/living/simple_animal/hostile/fallout/gecko/sand
 	icon_state = "sandgecko"
+	butcher_results = list(/obj/item/fallout/hide/gecko/sand = 1, /obj/item/fallout/carcass/gecko = 1, /obj/item/fallout/animalitem/gecko/claws = 1)
 
 //mirelurk
 
@@ -348,7 +340,6 @@
 	speak_chance = 40
 	turns_per_move = 10
 	butcher_results = list()//mirelurk meat, eggs, chitin
-	guaranteed_butcher_results = list()//meat
 	attack_sound = 'sound/weapons/slash.ogg'
 	health = 400
 	maxHealth = 400
@@ -360,7 +351,7 @@
 	bonus_tame_chance = 5
 	rideable = TRUE
 	eggable = TRUE
-	egg_type = null//mirelurk egg
+	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/mirelurk
 	offsetx = 2
 	offsety = 5
 
@@ -385,7 +376,6 @@
 	speak_chance = 40
 	turns_per_move = 5
 	butcher_results = list()//ant meat, eggs, chitin
-	guaranteed_butcher_results = list()//meat
 	attack_sound = 'sound/weapons/slash.ogg'
 	health = 100
 	maxHealth = 100
@@ -396,7 +386,7 @@
 	tame_chance = 5
 	bonus_tame_chance = 5
 	eggable = TRUE
-	egg_type = null//ant egg
+	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/ant
 
 //nightstalker, very good mount
 
@@ -414,8 +404,7 @@
 	attack_verb_simple = "maul"
 	speak_chance = 20
 	turns_per_move = 3
-	butcher_results = list()//nightstalker hide, extract, meat
-	guaranteed_butcher_results = list()//meat
+	butcher_results = list(/obj/item/fallout/hide/nightstalker = 1, /obj/item/fallout/carcass/large/nightstalker = 1, /obj/item/fallout/animalitem/nightstalker/teeth = 2)//nightstalker hide, extract, meat
 	attack_sound = 'fallout/sound/f13weapons/meleesounds/slam.ogg'
 	health = 400
 	maxHealth = 400
@@ -427,23 +416,21 @@
 	bonus_tame_chance = 2 //this things a jack of all tame trades
 	rideable = TRUE
 	eggable = TRUE
-	egg_type = null//nightstalker eggs
+	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/nightstalker
 	milkable = TRUE
 	extract = null//nightstalkers squeezin
 	largeasslad = TRUE
 	offsetx = 2
 	offsety = 10
-
-/mob/living/simple_animal/hostile/fallout/nightstalker/poison
 	var/poison_per_bite = 10
 	var/poison_type = /datum/reagent/toxin
 
-/mob/living/simple_animal/hostile/fallout/nightstalker/poison/AttackingTarget()
+/mob/living/simple_animal/hostile/fallout/nightstalker/AttackingTarget()
 	. = ..()
 	if(.)
 		inject_poison(target)
 
-/mob/living/simple_animal/hostile/fallout/nightstalker/poison/proc/inject_poison(mob/living/L)
+/mob/living/simple_animal/hostile/fallout/nightstalker/proc/inject_poison(mob/living/L)
 	if(poison_type && istype(L) && L.reagents)
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
@@ -462,7 +449,6 @@
 	speak_chance = 60
 	turns_per_move = 3
 	butcher_results = list()//honeybeast meat, queen bee, chitin
-	guaranteed_butcher_results = list()//meat
 	attack_sound = 'sound/weapons/bite.ogg'
 	health = 400
 	maxHealth = 400
@@ -496,7 +482,6 @@
 	speak_chance = 20
 	turns_per_move = 4
 	butcher_results = list()//radscoprion meat, radscorpion tail, chitin
-	guaranteed_butcher_results = list()//meat
 	attack_sound = 'sound/weapons/slash.ogg'
 	health = 200
 	maxHealth = 200
@@ -508,17 +493,15 @@
 	bonus_tame_chance = 5
 	milkable = TRUE
 	extract = null//poison
-
-/mob/living/simple_animal/hostile/fallout/radscorpion/poison
 	var/poison_per_bite = 20
 	var/poison_type = /datum/reagent/toxin
 
-/mob/living/simple_animal/hostile/fallout/radscorpion/poison/AttackingTarget()
+/mob/living/simple_animal/hostile/fallout/radscorpion/AttackingTarget()
 	. = ..()
 	if(.)
 		inject_poison(target)
 
-/mob/living/simple_animal/hostile/fallout/radscorpion/poison/proc/inject_poison(mob/living/L)
+/mob/living/simple_animal/hostile/fallout/radscorpion/proc/inject_poison(mob/living/L)
 	if(poison_type && istype(L) && L.reagents)
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
@@ -543,8 +526,7 @@
 	attack_verb_simple = "kick"
 	speak_chance = 10
 	turns_per_move = 1
-	butcher_results = list()//radstag meat, radstag hide ,radstag horns
-	guaranteed_butcher_results = list()//meat
+	butcher_results = list(/obj/item/fallout/hide/radstag = 1, /obj/item/fallout/carcass/large/radstag = 1, /obj/item/fallout/animalitem/radstag/antlers = 2)//radstag meat, radstag hide ,radstag horns
 	attack_sound = 'fallout/sound/f13weapons/meleesounds/slam.ogg'
 	health = 200
 	maxHealth = 200
@@ -591,8 +573,8 @@
 	melee_damage_lower = 0
 	melee_damage_upper = 0
 	speed = 1.5
-	butcher_results = list()//radstag veal?
-	guaranteed_butcher_results = list()//pigrat meat
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
+	splatter = TRUE
 	health = 50
 	maxHealth = 50
 	is_young = TRUE
@@ -612,8 +594,7 @@
 	attack_verb_simple = "bite"
 	speak_chance = 40
 	turns_per_move = 3
-	butcher_results = list()//mongrel meat, mongrel skin
-	guaranteed_butcher_results = list()//meat
+	butcher_results = list(/obj/item/fallout/hide/mongrel = 1, /obj/item/fallout/carcass/mongrel = 1)//mongrel meat, mongrel skin
 	attack_sound = 'sound/weapons/bite.ogg'
 	health = 100
 	maxHealth = 100
@@ -646,7 +627,7 @@
 	melee_damage_upper = 0
 	speed = 1.5
 	butcher_results = list()//mungrel meat
-	guaranteed_butcher_results = list()//pigrat meat
+	splatter = TRUE
 	health = 50
 	maxHealth = 50
 	is_young = TRUE
@@ -666,8 +647,7 @@
 	attack_verb_simple = "bite"
 	speak_chance = 40
 	turns_per_move = 3
-	butcher_results = list()//wolf meat, wolf hide
-	guaranteed_butcher_results = list()//meat
+	butcher_results = list(/obj/item/fallout/hide/wolf = 1,/obj/item/fallout/carcass/wolf = 1, /obj/item/fallout/animalitem/wolf/teeth = 2)//wolf meat, wolf hide
 	attack_sound = 'sound/weapons/bite.ogg'
 	health = 200
 	maxHealth = 200
@@ -692,8 +672,7 @@
 	attack_verb_simple = "harm"
 	speak_chance = 80
 	turns_per_move = 3
-	butcher_results = list()//tunneler meat, tunneler hide
-	guaranteed_butcher_results = list()//meat
+	butcher_results = list(/obj/item/fallout/hide/tunneler = 1, /obj/item/fallout/carcass/large/tunneller = 1)//tunneler meat, tunneler hide
 	attack_sound = 'sound/weapons/slash.ogg'
 	health = 300
 	maxHealth = 300
@@ -713,7 +692,7 @@
 	name = "yao guai"
 	desc = "A massive mutated bear wolf, monster, fuck, you better get running boy."
 	icon = 'fallout/icons/mob/32x64.dmi'
-	icon_state = "yoaguai"
+	icon_state = "yaoguai"
 	gender = MALE
 	speak = list("ROARRRRRR","GRRRRRRRRR","RWAAAAAAAAA")
 	speak_emote = list("growls")
@@ -723,8 +702,7 @@
 	attack_verb_simple = "maul"
 	speak_chance = 40
 	turns_per_move = 10
-	butcher_results = list()//yaoguai hide, yaoguai meat
-	guaranteed_butcher_results = list()//meat
+	butcher_results = list(/obj/item/fallout/hide/yaoguai = 1, /obj/item/fallout/carcass/large/yaoguai/front = 1, /obj/item/fallout/carcass/large/yaoguai/back = 1)//yaoguai hide, yaoguai meat
 	attack_sound = 'fallout/sound/f13weapons/meleesounds/slam.ogg'
 	health = 500
 	maxHealth = 500
@@ -755,8 +733,7 @@
 	attack_verb_simple = "chomp"
 	speak_chance = 40
 	turns_per_move = 3
-	butcher_results = list()//hellpig hide, hellpig meat, hellpig tusks
-	guaranteed_butcher_results = list()//meat
+	butcher_results = list(/obj/item/fallout/hide/large/hellpig = 1, /obj/item/fallout/carcass/large/hellpig/front = 1, /obj/item/fallout/carcass/large/hellpig/back = 1, /obj/item/fallout/carcass/large/hellpig/leg = 4)//hellpig hide, hellpig meat, hellpig tusks
 	attack_sound = 'fallout/sound/f13weapons/meleesounds/slam.ogg'
 	health = 600
 	maxHealth = 600

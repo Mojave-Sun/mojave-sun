@@ -5,6 +5,16 @@
 /////////////////////// BASE CODE ///////////////////////////
 /////////////////////////////////////////////////////////////
 
+//Cattle-Prod Functionality, hopefully allows for stunning simplemobs to feed and tame them
+
+/obj/item/melee/baton/attack(mob/M, mob/living/carbon/human/user)
+	. = ..()
+	if(turned_on)
+		. = ..()
+		if(isanimal(M))
+			var/mob/living/simple_animal/critter = M
+			critter.Stun(5 SECONDS)
+
 //Non-Aggresive Mobs, Defenceless Mobs, things like, babies and such
 
 /mob/living/simple_animal/fallout
@@ -43,10 +53,12 @@
 	bonus_tame_chance = 15
 	footstep_type = FOOTSTEP_MOB_HEAVY
 	status_flags = CANSTUN
+	environment_smash = ENVIRONMENT_SMASH_NONE
 	mob_size = MOB_SIZE_LARGE
 	stop_automated_movement_when_pulled = 1
 	wound_bonus = -5
-	bare_wound_bonus = 10
+	bare_wound_bonus = 5
+	splatter = FALSE
 	//does the homie have chemss/chems to extract? Poison, Milk, Other :flushed:
 	var/milkable = FALSE
 	//Chems that the creature makes
@@ -114,6 +126,7 @@
 	. =..()
 	if(saddled == TRUE)
 		saddleup()
+		egg_type = null
 	if(largeasslad == TRUE)
 		pixel_x = -16
 	if(tame)
@@ -294,10 +307,12 @@
 	obj_damage = 10
 	footstep_type = FOOTSTEP_MOB_HEAVY
 	status_flags = CANSTUN
+	environment_smash = ENVIRONMENT_SMASH_NONE
 	mob_size = MOB_SIZE_LARGE
 	stop_automated_movement_when_pulled = 1
 	wound_bonus = -5
-	bare_wound_bonus = 10
+	bare_wound_bonus = 5
+	splatter = FALSE
 	var/milkable = FALSE
 	var/extract = null
 	var/obj/item/fallout/animalchem/chems = null
@@ -351,6 +366,7 @@
 	. =..()
 	if(saddled == TRUE)
 		saddleup()
+		egg_type = null
 	if(largeasslad == TRUE)
 		pixel_x = -16
 	if(tame)
@@ -500,7 +516,8 @@
 	mob_size = MOB_SIZE_LARGE
 	stop_automated_movement_when_pulled = 1
 	wound_bonus = -5
-	bare_wound_bonus = 10
+	bare_wound_bonus = 5
+	splatter = FALSE
 	var/milkable = FALSE
 	var/extract = null
 	var/obj/item/fallout/animalchem/chems = null
@@ -557,6 +574,7 @@
 		src.visible_message("<span class='notice'>[src] calms down.</span>")
 	if(saddled == TRUE)
 		saddleup()
+		egg_type = null
 	if(largeasslad == TRUE)
 		pixel_x = -16
 	if(tame)

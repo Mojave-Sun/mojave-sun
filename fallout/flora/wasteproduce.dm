@@ -163,7 +163,7 @@
 	var/hit_zone = (C.held_index_to_dir(C.active_hand_index) == "l"? "l_":"r_") + "arm"
 	var/obj/item/bodypart/affecting = C.get_bodypart(hit_zone)
 	if(affecting)
-		if(affecting.receive_damage(0, force))
+		if(affecting.receive_damage(brute = 10))
 			C.update_damage_overlays()
 	to_chat(C, "<span class='userdanger'>The spines pierce your bare hand!</span>")
 	return TRUE
@@ -1193,7 +1193,7 @@
 	var/hit_zone = (C.held_index_to_dir(C.active_hand_index) == "l"? "l_":"r_") + "arm"
 	var/obj/item/bodypart/affecting = C.get_bodypart(hit_zone)
 	if(affecting)
-		if(affecting.receive_damage(0, force))
+		if(affecting.receive_damage(burn = 20))
 			C.update_damage_overlays()
 	to_chat(C, "<span class='userdanger'>The thistles sting your bare hand!</span>")
 	return TRUE
@@ -1267,6 +1267,7 @@
 	name = "cave fungus spores"
 	desc = "These spores grow into cave fungi, an edible variety of mushroom with anti-toxic properties."
 	species = "mushroom"
+	icon_harvest = "mushroom-grow4"
 	growing_color =  "#cd6c4b"
 	wholeiconcolor = TRUE
 	plantname = "Cave Fungus Mushrooms"
@@ -1296,6 +1297,7 @@
 	name = "glow fungus spores"
 	desc = "These spores grow into glowing cave fungi, an edible variety of mushroom with potent anti-toxic properties."
 	species = "mushroom"
+	icon_harvest = "mushroom-grow4"
 	growing_color =  "#98b752"
 	wholeiconcolor = TRUE
 	plantname = "Glowfungus Mushrooms"
@@ -1323,6 +1325,7 @@
 /datum/plant_gene/trait/glow/falloutgreen
 	//oh no, now i'm radioactive
 	name = "Radioactive Bioluminescence"
+	rate = 0.01
 	glow_color = "#3eff3e"
 
 //////////////////////// BLIGHT /////////////////////////////
@@ -1331,6 +1334,7 @@
 	name = "blight spores"
 	desc = "These spores grow into the blight mushroom, an potentially edible fungus."
 	species = "blight"
+	icon_harvest = "blight-grow4"
 	plantname = "Blight Fungus"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/blight
@@ -1359,6 +1363,7 @@
 	name = "brain fungus spores"
 	desc = "These spores grow into the brain fungus, a deadly neurotoxic mushroom, that secretes its chemicals if picked up."
 	species = "brainfung"
+	icon_harvest = "brainfung-grow4"
 	plantname = "Brain Fungus"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
 	product = /obj/item/reagent_containers/food/snacks/grown/fallout/brainfung
@@ -1381,12 +1386,27 @@
 	filling_color = "#c87070"
 	tastes = list("illness"= 5)
 
+/obj/item/reagent_containers/food/snacks/grown/fallout/brainfung/pickup(mob/living/user)
+	..()
+	if(!iscarbon(user))
+		return FALSE
+	var/mob/living/carbon/C = user
+	if(C.gloves)
+		return FALSE
+	if(HAS_TRAIT(C, TRAIT_PIERCEIMMUNE))
+		return FALSE
+	else
+		C.adjustOrganLoss(ORGAN_SLOT_BRAIN, 50)
+	to_chat(C, "<span class='userdanger'>The brainfungus injects you!</span>")
+	return TRUE
+
 //////////////////////// FIRECAP ////////////////////////////
 
 /obj/item/seeds/fallout/firecap
 	name = "firecap spores"
 	desc = "These spores grow into the firecap mushroom, a burning pest of a plant."
 	species = "mushroom"
+	icon_harvest = "mushroom-grow4"
 	growing_color =  "#eb9320"
 	wholeiconcolor = TRUE
 	plantname = "Firecap Cluster"
@@ -1411,12 +1431,30 @@
 	filling_color = "#3f2e0f"
 	tastes = list("fire"= 5, "mushroom"= 1)
 
+/obj/item/reagent_containers/food/snacks/grown/fallout/firecap/pickup(mob/living/user)
+	..()
+	if(!iscarbon(user))
+		return FALSE
+	var/mob/living/carbon/C = user
+	if(C.gloves)
+		return FALSE
+	if(HAS_TRAIT(C, TRAIT_PIERCEIMMUNE))
+		return FALSE
+	var/hit_zone = (C.held_index_to_dir(C.active_hand_index) == "l"? "l_":"r_") + "arm"
+	var/obj/item/bodypart/affecting = C.get_bodypart(hit_zone)
+	if(affecting)
+		if(affecting.receive_damage(burn = 50))
+			C.update_damage_overlays()
+	to_chat(C, "<span class='userdanger'>The thistles sting your bare hand!</span>")
+	return TRUE
+
 //////////////////////// GUTSHROOM ////////////////////////////
 
 /obj/item/seeds/fallout/gutshroom
 	name = "gutshroom spores"
 	desc = "These spores grow into a toxic fungus plant, that cause intense stomach pain."
 	species = "longshroom"
+	icon_harvest = "longshroom-grow4"
 	growing_color =  "#8f8c69"
 	wholeiconcolor = TRUE
 	plantname = "Gutshroom Cluster"
@@ -1441,12 +1479,27 @@
 	filling_color = "#38372a"
 	tastes = list("pain"= 5)
 
+/obj/item/reagent_containers/food/snacks/grown/fallout/gutshroom/pickup(mob/living/user)
+	..()
+	if(!iscarbon(user))
+		return FALSE
+	var/mob/living/carbon/C = user
+	if(C.gloves)
+		return FALSE
+	if(HAS_TRAIT(C, TRAIT_PIERCEIMMUNE))
+		return FALSE
+	else
+		C.adjustOrganLoss(ORGAN_SLOT_STOMACH, 100)
+	to_chat(C, "<span class='userdanger'>The gutshroom secretes onto you!</span>")
+	return TRUE
+
 //////////////////////// LURE WEED //////////////////////////
 
 /obj/item/seeds/fallout/lureweed
 	name = "lureweed spores"
 	desc = "These spores grow into the invasive lureweed, pretty bland but filling."
 	species = "lureweed"
+	icon_harvest = "lureweed-grow4"
 	growing_color = "#735d32"
 	wholeiconcolor = TRUE
 	plantname = "Lureweeds"
@@ -1476,6 +1529,7 @@
 	name = "nara spores"
 	desc = "These spores grow into the nara fungus, part flesh and plant, it contains blood and restorative enzymes."
 	species = "longshroom"
+	icon_harvest = "longshroom-grow4"
 	growing_color =  "#9b6e49"
 	wholeiconcolor = TRUE
 	plantname = "Nara Fungus"
