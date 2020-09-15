@@ -148,10 +148,10 @@
 		payload.name = P.name
 	payload.embedding = P.embedding
 	payload.updateEmbedding()
-		var/mob/living/carbon/C = hit
+	var/mob/living/carbon/C = hit
 	var/obj/item/bodypart/limb = C.get_bodypart(hit_zone)
-		if(!limb)
-			limb = C.get_bodypart()
+	if(!limb)
+		limb = C.get_bodypart()
 
 	. = payload.tryEmbed(limb)
 	Detach(P)

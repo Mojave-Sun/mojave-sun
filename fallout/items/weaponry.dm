@@ -22,9 +22,10 @@
 	desc = "A heavy rusted pipe, good for smashing heads. "
 	icon_state = "pipe"
 	inhand_icon_state = "pipe"
-	attack_verb = list("mashed", "bashed", "piped", "hit", "bludgeoned", "whacked", "bonked")
+	attack_verb_continuous = list("mashes", "bashes", "pipes", "hits", "bludgeons", "whacks", "bonks") /* wtf is piped */
+	attack_verb_simple = list("mashed", "bashed", "piped", "hit", "bludgeoned", "whacked", "bonked")
 	force = 25
-	sharpness = IS_BLUNT
+	sharpness = SHARP_NONE
 
 /obj/item/claymore/machete/pipe/tireiron
 	name = "tire iron"
@@ -38,9 +39,10 @@
 	desc = "This old and quite heavy 9 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
 	icon_state = "golf9"
 	inhand_icon_state = "golf9"
-	attack_verb = list("mashed", "bashed", "piped", "hit", "bludgeoned", "whacked", "bonked")
+	attack_verb_continuous = list("mashes", "bashes", "pipes", "hits", "bludgeons", "whacks", "bonks") /* wtf is piped */
+	attack_verb_simple = list("mashed", "bashed", "piped", "hit", "bludgeoned", "whacked", "bonked")
 	force = 25
-	sharpness = IS_BLUNT
+	sharpness = SHARP_NONE
 
 /obj/item/claymore/machete/golf/teniron
 	name = "10 iron"

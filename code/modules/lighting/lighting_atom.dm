@@ -1,4 +1,3 @@
-
 // The proc you should always use to set the light of this atom.
 // Nonesensical value for l_color default, so we can detect if it gets set to null.
 #define NONSENSICAL_VALUE -99999
@@ -43,7 +42,6 @@
 		else
 			light = new/datum/light_source(src, .)
 
-			T.reconsider_sunlight()
 
 /**
   * Updates the atom's opacity value.
@@ -66,10 +64,8 @@
 
 	if(opacity)
 		AddElement(/datum/element/light_blocking)
-		T.reconsider_sunlight()
 	else
 		RemoveElement(/datum/element/light_blocking)
-			T.reconsider_sunlight()
 
 
 /turf/set_opacity(new_opacity)
@@ -91,7 +87,7 @@
 	switch (var_name)
 		if (NAMEOF(src, light_range))
 			if(light_system == STATIC_LIGHT)
-			set_light(l_range=var_value)
+				set_light(l_range = var_value)
 			else
 				set_light_range(var_value)
 			datum_flags |= DF_VAR_EDITED
@@ -99,7 +95,7 @@
 
 		if (NAMEOF(src, light_power))
 			if(light_system == STATIC_LIGHT)
-			set_light(l_power=var_value)
+				set_light(l_power = var_value)
 			else
 				set_light_power(var_value)
 			datum_flags |= DF_VAR_EDITED
@@ -107,7 +103,7 @@
 
 		if (NAMEOF(src, light_color))
 			if(light_system == STATIC_LIGHT)
-			set_light(l_color=var_value)
+				set_light(l_color = var_value)
 			else
 				set_light_color(var_value)
 			datum_flags |= DF_VAR_EDITED

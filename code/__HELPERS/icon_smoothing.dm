@@ -37,7 +37,7 @@
 #define NO_ADJ_FOUND 0
 #define ADJ_FOUND 1
 #define NULLTURF_BORDER 2
-#define SMOOTH_OLD		(1<<5)	//If the icon uses the old junction stuff.
+
 #define DEFAULT_UNDERLAY_ICON 			'icons/turf/floors.dmi'
 #define DEFAULT_UNDERLAY_ICON_STATE 	"plating"
 
@@ -90,22 +90,6 @@
 						. |= N_SOUTHEAST
 				if(ADJ_FOUND)
 					. |= N_SOUTHEAST
-//do not use, use queue_smooth(atom)
-/proc/smooth_icon(atom/A)
-	if(!A || !A.smooth)
-		return
-	A.smooth &= ~SMOOTH_QUEUED
-	if (!A.z)
-		return
-	if(QDELETED(A))
-		return
-
-	if(A.smooth & SMOOTH_OLD)
-		A:recalculate_junction()
-		A:relative()
-
-	else if(A.smooth & (SMOOTH_TRUE | SMOOTH_MORE))
-		var/adjacencies = calculate_adjacencies(A)
 
 
 /atom/movable/calculate_adjacencies()
@@ -119,6 +103,7 @@
 	smoothing_flags &= ~SMOOTH_QUEUED
 	if (!z)
 		CRASH("[type] called smooth_icon() without being on a z-level")
+	// todo legacy smoothing
 	if(smoothing_flags & SMOOTH_CORNERS)
 		if(smoothing_flags & SMOOTH_DIAGONAL)
 			corners_diagonal_smooth(calculate_adjacencies())
@@ -162,30 +147,30 @@
 	adjacencies = reverse_ndir(adjacencies)
 	if(adjacencies == NONE)
 		return
-		var/mutable_appearance/underlay_appearance = mutable_appearance(layer = TURF_LAYER, plane = FLOOR_PLANE)
-		var/list/U = list(underlay_appearance)
-		if(fixed_underlay)
-			if(fixed_underlay["space"])
-				underlay_appearance.icon = 'icons/turf/space.dmi'
-				underlay_appearance.icon_state = SPACE_ICON_STATE
-				underlay_appearance.plane = PLANE_SPACE
-			else
-				underlay_appearance.icon = fixed_underlay["icon"]
-				underlay_appearance.icon_state = fixed_underlay["icon_state"]
+	var/mutable_appearance/underlay_appearance = mutable_appearance(layer = TURF_LAYER, plane = FLOOR_PLANE)
+	var/list/U = list(underlay_appearance)
+	if(fixed_underlay)
+		if(fixed_underlay["space"])
+			underlay_appearance.icon = 'icons/turf/space.dmi'
+			underlay_appearance.icon_state = SPACE_ICON_STATE
+			underlay_appearance.plane = PLANE_SPACE
 		else
-			var/turned_adjacency = turn(adjacencies, 180)
+			underlay_appearance.icon = fixed_underlay["icon"]
+			underlay_appearance.icon_state = fixed_underlay["icon_state"]
+	else
+		var/turned_adjacency = turn(adjacencies, 180)
 		var/turf/neighbor_turf = get_step(src, turned_adjacency)
 		if(!neighbor_turf.get_smooth_underlay_icon(underlay_appearance, src, turned_adjacency))
 			neighbor_turf = get_step(src, turn(adjacencies, 135))
 			if(!neighbor_turf.get_smooth_underlay_icon(underlay_appearance, src, turned_adjacency))
 				neighbor_turf = get_step(src, turn(adjacencies, 225))
-			//if all else fails, ask our own turf
+		//if all else fails, ask our own turf
 		if(!neighbor_turf.get_smooth_underlay_icon(underlay_appearance, src, turned_adjacency) && !get_smooth_underlay_icon(underlay_appearance, src, turned_adjacency))
-				underlay_appearance.icon = DEFAULT_UNDERLAY_ICON
-				underlay_appearance.icon_state = DEFAULT_UNDERLAY_ICON_STATE
-		underlays = U
+			underlay_appearance.icon = DEFAULT_UNDERLAY_ICON
+			underlay_appearance.icon_state = DEFAULT_UNDERLAY_ICON_STATE
+	underlays = U
 
-		// Drop posters which were previously placed on this wall.
+	// Drop posters which were previously placed on this wall.
 	for(var/obj/structure/sign/poster/wall_poster in src)
 		wall_poster.roll_and_drop(src)
 
@@ -395,26 +380,6 @@
 	smoothing_flags = SMOOTH_CORNERS|SMOOTH_DIAGONAL|SMOOTH_BORDER
 	smoothing_groups = null
 	canSmoothWith = null
-
-/atom
-	var/icon_type_smooth
-	var/junction
-
-/atom/proc/recalculate_junction()
-	junction = 0
-
-	for(var/cdir in GLOB.cardinals)
-		var/turf/T = get_step(src,cdir)
-		if(!T)
-			continue
-		for(var/a_type in canSmoothWith)
-			var/A = locate(a_type) in T
-			if(A || T.type == a_type)
-				junction |= cdir
-				break
-
-atom/proc/relative(custom_junction = junction)
-	icon_state = "[src.icon_type_smooth][custom_junction]"
 
 #undef N_NORTH
 #undef N_SOUTH

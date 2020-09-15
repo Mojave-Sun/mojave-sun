@@ -467,16 +467,17 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	for(var/thing in contents)
 		var/atom/movable/movable_thing = thing
 		if(QDELETED(movable_thing))
-					continue
+			continue
 		if(!movable_thing.ex_check(explosion_id))
 			continue
-			switch(severity)
-				if(EXPLODE_DEVASTATE)
+		switch(severity)
+			if(EXPLODE_DEVASTATE)
 				SSexplosions.high_mov_atom += movable_thing
-				if(EXPLODE_HEAVY)
+			if(EXPLODE_HEAVY)
 				SSexplosions.med_mov_atom += movable_thing
-				if(EXPLODE_LIGHT)
+			if(EXPLODE_LIGHT)
 				SSexplosions.low_mov_atom += movable_thing
+
 
 
 /turf/narsie_act(force, ignore_mobs, probability = 20)

@@ -1,9 +1,10 @@
 /* smoothing_flags */
-#define SMOOTH_CORNERS	(1<<0) //Smoothing system in where adjacencies are calculated and used to build an image by mounting each corner at runtime.
+#define SMOOTH_CORNERS	(1<<0)  //Smoothing system in where adjacencies are calculated and used to build an image by mounting each corner at runtime.
 #define SMOOTH_DIAGONAL	(1<<2)	//if atom should smooth diagonally, this should be present in 'smoothing_flags' var
-#define SMOOTH_BORDER	(1<<3)	//atom will smooth with the borders of the map
-#define SMOOTH_QUEUED	(1<<4)	//atom is currently queued to smooth.
-#define SMOOTH_OBJ		(1<<5)	//smooths with objects, and will thus need to scan turfs for contents.
+#define SMOOTH_SIMPLE	(1<<3)  // legacy support for older style icons - these should be ported to smooth_corners. Use icon_type_smooth for base icon
+#define SMOOTH_BORDER	(1<<4)	//atom will smooth with the borders of the map
+#define SMOOTH_QUEUED	(1<<5)	//atom is currently queued to smooth.
+#define SMOOTH_OBJ		(1<<6)	//smooths with objects, and will thus need to scan turfs for contents.
 
 
 /*smoothing macros*/
@@ -73,31 +74,41 @@
 #define SMOOTH_GROUP_TITANIUM_WALLS S_OBJ(11)			///turf/closed/wall/mineral/titanium, /obj/structure/falsewall/titanium
 #define SMOOTH_GROUP_PLASTITANIUM_WALLS S_OBJ(13)		///turf/closed/wall/mineral/plastitanium, /obj/structure/falsewall/plastitanium
 #define SMOOTH_GROUP_SURVIVAL_TIANIUM_POD S_OBJ(14)		///turf/closed/wall/mineral/titanium/survival/pod, /obj/machinery/door/airlock/survival_pod, /obj/structure/window/shuttle/survival_pod
+#define SMOOTH_GROUP_FALLOUT_WALL S_OBJ(15)				///obj/structure/table/low_wall, /turf/closed/wall/f13
+#define SMOOTH_GROUP_FALLOUT_WALL_METAL S_OBJ(16)		///obj/structure/table/low_wall/metal, /turf/closed/wall/f13/metal
+#define SMOOTH_GROUP_FALLOUT_WALL_WOOD S_OBJ(17)		///obj/structure/table/low_wall/wood, /turf/closed/wall/f13/wood
+#define SMOOTH_GROUP_FALLOUT_WALL_SCRAP S_OBJ(18)		///obj/structure/table/low_wall/scrap, /turf/closed/wall/f13/scrap
+#define SMOOTH_GROUP_FALLOUT_WALL_ADOBE S_OBJ(19)		///obj/structure/table/low_wall/adobe, /turf/closed/wall/f13/adobe
+#define SMOOTH_GROUP_FALLOUT_WALL_BRICK S_OBJ(20)		///obj/structure/table/low_wall/brick, /turf/closed/wall/f13/brick
+#define SMOOTH_GROUP_FALLOUT_WALL_REINFORCED S_OBJ(21)	///obj/structure/table/low_wall/reinforced, /turf/closed/wall/r_wall/f13
+#define SMOOTH_GROUP_FALLOUT_MINERALS S_OBJ(22)			///turf/closed/mineral/random/f13, /turf/closed/indestructible/rock/f13
+#define SMOOTH_GROUP_FALLOUT_WINDOW S_OBJ(23)			///obj/structure/window/fulltile/f13/glass
 
-#define SMOOTH_GROUP_PAPERFRAME S_OBJ(20)				///obj/structure/window/paperframe, /obj/structure/mineral_door/paperframe
 
-#define SMOOTH_GROUP_WINDOW_FULLTILE S_OBJ(21)			///obj/structure/window/fulltile, /obj/structure/window/reinforced/fulltile, /obj/structure/window/reinforced/tinted/fulltile, /obj/structure/window/plasma/fulltile, /obj/structure/window/plasma/reinforced/fulltile
+#define SMOOTH_GROUP_PAPERFRAME S_OBJ(30)				///obj/structure/window/paperframe, /obj/structure/mineral_door/paperframe
 
-#define SMOOTH_GROUP_LATTICE  S_OBJ(30)					///obj/structure/lattice
+#define SMOOTH_GROUP_WINDOW_FULLTILE S_OBJ(31)			///obj/structure/window/fulltile, /obj/structure/window/reinforced/fulltile, /obj/structure/window/reinforced/tinted/fulltile, /obj/structure/window/plasma/fulltile, /obj/structure/window/plasma/reinforced/fulltile
 
-#define SMOOTH_GROUP_AIRLOCK S_OBJ(40)					///obj/machinery/door/airlock
+#define SMOOTH_GROUP_LATTICE  S_OBJ(40)					///obj/structure/lattice
 
-#define SMOOTH_GROUP_TABLES S_OBJ(50)					///obj/structure/table
-#define SMOOTH_GROUP_WOOD_TABLES S_OBJ(51)				///obj/structure/table/wood
-#define SMOOTH_GROUP_FANCY_WOOD_TABLES S_OBJ(52)		///obj/structure/table/wood/fancy
-#define SMOOTH_GROUP_BRONZE_TABLES S_OBJ(53)			///obj/structure/table/bronze
+#define SMOOTH_GROUP_AIRLOCK S_OBJ(50)					///obj/machinery/door/airlock
 
-#define SMOOTH_GROUP_ALIEN_RESIN S_OBJ(60)				///obj/structure/alien/resin
-#define SMOOTH_GROUP_ALIEN_WALLS S_OBJ(61)				///obj/structure/alien/resin/wall, /obj/structure/alien/resin/membrane
-#define SMOOTH_GROUP_ALIEN_WEEDS S_OBJ(62)				///obj/structure/alien/weeds
+#define SMOOTH_GROUP_TABLES S_OBJ(60)					///obj/structure/table
+#define SMOOTH_GROUP_WOOD_TABLES S_OBJ(61)				///obj/structure/table/wood
+#define SMOOTH_GROUP_FANCY_WOOD_TABLES S_OBJ(62)		///obj/structure/table/wood/fancy
+#define SMOOTH_GROUP_BRONZE_TABLES S_OBJ(63)			///obj/structure/table/bronze
 
-#define SMOOTH_GROUP_SECURITY_BARRICADE S_OBJ(63)		///obj/structure/barricade/security
-#define SMOOTH_GROUP_SANDBAGS S_OBJ(64)					///obj/structure/barricade/sandbags
+#define SMOOTH_GROUP_ALIEN_RESIN S_OBJ(70)				///obj/structure/alien/resin
+#define SMOOTH_GROUP_ALIEN_WALLS S_OBJ(71)				///obj/structure/alien/resin/wall, /obj/structure/alien/resin/membrane
+#define SMOOTH_GROUP_ALIEN_WEEDS S_OBJ(72)				///obj/structure/alien/weeds
 
-#define SMOOTH_GROUP_HEDGE_FLUFF S_OBJ(65)				///obj/structure/fluff/hedge
+#define SMOOTH_GROUP_SECURITY_BARRICADE S_OBJ(73)		///obj/structure/barricade/security
+#define SMOOTH_GROUP_SANDBAGS S_OBJ(74)					///obj/structure/barricade/sandbags
 
-#define SMOOTH_GROUP_SHUTTLE_PARTS S_OBJ(66)			///obj/structure/window/shuttle, /obj/structure/window/plasma/reinforced/plastitanium, /turf/closed/indestructible/opsglass, /obj/structure/shuttle
+#define SMOOTH_GROUP_HEDGE_FLUFF S_OBJ(75)				///obj/structure/fluff/hedge
 
-#define SMOOTH_GROUP_CLEANABLE_DIRT	S_OBJ(67)			///obj/effect/decal/cleanable/dirt
+#define SMOOTH_GROUP_SHUTTLE_PARTS S_OBJ(76)			///obj/structure/window/shuttle, /obj/structure/window/plasma/reinforced/plastitanium, /turf/closed/indestructible/opsglass, /obj/structure/shuttle
 
-#define SMOOTH_GROUP_INDUSTRIAL_LIFT S_OBJ(70)			///obj/structure/industrial_lift
+#define SMOOTH_GROUP_CLEANABLE_DIRT	S_OBJ(77)			///obj/effect/decal/cleanable/dirt
+
+#define SMOOTH_GROUP_INDUSTRIAL_LIFT S_OBJ(80)			///obj/structure/industrial_lift

@@ -109,6 +109,7 @@
 		directional_opacity = ALL_CARDINALS
 		if(. != directional_opacity)
 			reconsider_lights()
+			reconsider_sunlight()
 		return
 	directional_opacity = NONE
 	for(var/am in opacity_sources)
@@ -120,6 +121,7 @@
 			break
 	if(. != directional_opacity && (. == ALL_CARDINALS || directional_opacity == ALL_CARDINALS))
 		reconsider_lights() //The lighting system only cares whether the tile is fully concealed from all directions or not.
+		reconsider_sunlight()
 
 
 /turf/proc/change_area(area/old_area, area/new_area)

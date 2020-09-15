@@ -13,5 +13,5 @@
 	desc = "A table, masterfully designed with high-tech to become... round"
 	icon_state = "roundtable"
 	icon = 'fallout/icons/objects/structures.dmi'
-	smooth = SMOOTH_FALSE
+	smoothing_flags = null
 	canSmoothWith = list()
