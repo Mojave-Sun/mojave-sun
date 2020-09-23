@@ -144,6 +144,49 @@
 
 //////////////////////////////////////////////
 //                                          //
+//              ELDRITCH CULT               //
+//                                          //
+//////////////////////////////////////////////
+
+/datum/dynamic_ruleset/roundstart/heretics
+	name = "Heretics"
+	antag_flag = ROLE_HERETIC
+	antag_datum = /datum/antagonist/heretic
+	protected_roles = list("Prisoner","Security Officer", "Warden", "Detective", "Head of Security", "Captain")
+	restricted_roles = list("AI", "Cyborg")
+	required_candidates = 1
+	weight = 3
+	cost = 20
+	scaling_cost = 15
+	requirements = list(50,45,45,40,35,20,20,15,10,10)
+	antag_cap = list(1,1,1,1,2,2,2,2,3,3)
+
+
+/datum/dynamic_ruleset/roundstart/heretics/pre_execute()
+	. = ..()
+	var/num_ecult = antag_cap[indice_pop] * (scaled_times + 1)
+
+	for (var/i = 1 to num_ecult)
+		var/mob/picked_candidate = pick_n_take(candidates)
+		assigned += picked_candidate.mind
+		picked_candidate.mind.restricted_roles = restricted_roles
+		picked_candidate.mind.special_role = ROLE_HERETIC
+		GLOB.pre_setup_antags += picked_candidate.mind
+	return TRUE
+
+/datum/dynamic_ruleset/roundstart/heretics/execute()
+
+	for(var/c in assigned)
+		var/datum/mind/cultie = c
+		var/datum/antagonist/heretic/new_antag = new antag_datum()
+		cultie.add_antag_datum(new_antag)
+		GLOB.pre_setup_antags -= cultie
+
+	return TRUE
+
+
+//////////////////////////////////////////////
+//                                          //
 //               WIZARDS                    //
 //                                          //
 //////////////////////////////////////////////
@@ -294,7 +337,7 @@
 	return TRUE
 
 /datum/dynamic_ruleset/roundstart/nuclear/round_result()
-	var result = nuke_team.get_result()
+	var/result = nuke_team.get_result()
 	switch(result)
 		if(NUKE_RESULT_FLUKE)
 			SSticker.mode_result = "loss - syndicate nuked - disk secured"
@@ -416,7 +459,7 @@
 		return RULESET_STOP_PROCESSING
 
 /// Checks for revhead loss conditions and other antag datums.
-/datum/dynamic_ruleset/roundstart/revs/proc/check_eligible(var/datum/mind/M)
+/datum/dynamic_ruleset/roundstart/revs/proc/check_eligible(datum/mind/M)
 	var/turf/T = get_turf(M.current)
 	if(!considered_afk(M) && considered_alive(M) && is_station_level(T.z) && !M.antag_datums?.len && !HAS_TRAIT(M, TRAIT_MINDSHIELD))
 		return TRUE
@@ -477,6 +520,7 @@
 	handler = new /datum/gang_handler(candidates,restricted_roles)
 	handler.gangs_to_generate = (antag_cap[indice_pop] / 2)
 	handler.gang_balance_cap = clamp((indice_pop - 3), 2, 5) // gang_balance_cap by indice_pop: (2,2,2,2,2,3,4,5,5,5)
+	handler.use_dynamic_timing = TRUE
 	return handler.pre_setup_analogue()
 
 /datum/dynamic_ruleset/roundstart/families/execute()
@@ -542,58 +586,6 @@
 			V.assigned_role = "Clown Operative"
 			V.special_role = "Clown Operative"
 
-//////////////////////////////////////////////
-//                                          //
-//               DEVIL                      //
-//                                          //
-//////////////////////////////////////////////
-
-/datum/dynamic_ruleset/roundstart/devil
-	name = "Devil"
-	antag_flag = ROLE_DEVIL
-	antag_datum = /datum/antagonist/devil
-	restricted_roles = list("Lawyer", "Curator", "Chaplain", "Prisoner", "Head of Security", "Captain", "AI")
-	required_candidates = 1
-	weight = 3
-	cost = 0
-	requirements = list(101,101,101,101,101,101,101,101,101,101)
-	antag_cap = list(1,1,1,2,2,2,3,3,3,4)
-
-/datum/dynamic_ruleset/roundstart/devil/pre_execute()
-	. = ..()
-	var/num_devils = antag_cap[indice_pop]
-
-	for(var/j = 0, j < num_devils, j++)
-		if (!candidates.len)
-			break
-		var/mob/devil = pick_n_take(candidates)
-		assigned += devil.mind
-		devil.mind.special_role = ROLE_DEVIL
-		devil.mind.restricted_roles = restricted_roles
-		GLOB.pre_setup_antags += devil.mind
-
-		log_game("[key_name(devil)] has been selected as a devil")
-	return TRUE
-
-/datum/dynamic_ruleset/roundstart/devil/execute()
-	for(var/datum/mind/devil in assigned)
-		add_devil(devil.current, ascendable = TRUE)
-		GLOB.pre_setup_antags -= devil
-		add_devil_objectives(devil,2)
-	return TRUE
-
-/datum/dynamic_ruleset/roundstart/devil/proc/add_devil_objectives(datum/mind/devil_mind, quantity)
-	var/list/validtypes = list(/datum/objective/devil/soulquantity, /datum/objective/devil/soulquality, /datum/objective/devil/sintouch, /datum/objective/devil/buy_target)
-	var/datum/antagonist/devil/D = devil_mind.has_antag_datum(/datum/antagonist/devil)
-	for(var/i = 1 to quantity)
-		var/type = pick(validtypes)
-		var/datum/objective/devil/objective = new type(null)
-		objective.owner = devil_mind
-		D.objectives += objective
-		if(!istype(objective, /datum/objective/devil/buy_target))
-			validtypes -= type
-		else
-			objective.find_target()
 
 //////////////////////////////////////////////
 //                                          //
@@ -670,7 +662,7 @@
 	cost = 0
 	requirements = list(101,101,101,101,101,101,101,101,101,101)
 	var/meteordelay = 2000
-	var/nometeors = 0
+	var/nometeors = FALSE
 	var/rampupdelta = 5
 
 /datum/dynamic_ruleset/roundstart/meteor/rule_process()

@@ -209,7 +209,7 @@
 	description = "Listening stations form the backbone of the syndicate's information-gathering operations. \
 	Assignment to these stations is dreaded by most agents, as it entails long and lonely shifts listening to nearby stations chatter incessantly about the most meaningless things."
 
-/datum/map_template/ruin/space/oldAIsat
+/datum/map_template/ruin/space/old_ai_sat
 	id = "oldAIsat"
 	suffix = "oldAIsat.dmm"
 	name = "Abandoned Telecommunications Satellite"
@@ -269,12 +269,6 @@
 	name = "Feline-Human Combination Den"
 	description = "With heated debates over the legality of the catperson and their status in the workforce, there's always a place for the blackmarket to slip in for some cash. Whether the results \
 	are morally sound or not is another issue entirely."
-
-/datum/map_template/ruin/space/hilbertresearchfacility
-	id = "hilbert_facility"
-	suffix = "hilbertshoteltestingsite.dmm"
-	name = "Hilbert Research Facility"
-	description = "A research facility of great bluespace discoveries. Long since abandoned, willingly or not..."
 
 /datum/map_template/ruin/space/clownplanet
 	id = "clownplanet"

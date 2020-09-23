@@ -1,4 +1,4 @@
-// Tool types
+// Tool types, if you add new ones please add them to /obj/item/debug/omnitool in code/game/objects/items/debug_items.dm
 #define TOOL_CROWBAR 		"crowbar"
 #define TOOL_MULTITOOL 		"multitool"
 #define TOOL_SCREWDRIVER 	"screwdriver"
@@ -17,6 +17,8 @@
 #define TOOL_RELBENCH       "reloading bench"
 #define TOOL_ADVRELBENCH    "advanced reloading bench"
 #define TOOL_BONESET		"bonesetter"
+#define TOOL_KNIFE			"knife"
+#define TOOL_BLOODFILTER	"bloodfilter"
 
 // If delay between the start and the end of tool operation is less than MIN_TOOL_SOUND_DELAY,
 // tool sound is only played when op is started. If not, it's played twice.

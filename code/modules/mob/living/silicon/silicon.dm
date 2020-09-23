@@ -11,10 +11,9 @@
 	weather_immunities = list("ash")
 	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
 	mob_biotypes = MOB_ROBOTIC
-	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 	deathsound = 'sound/voice/borg_deathsound.ogg'
 	speech_span = SPAN_ROBOT
-	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 | HEAR_1
+	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 | HEAR_1 | RAD_PROTECT_CONTENTS_1 | RAD_NO_CONTAMINATE_1
 	var/datum/ai_laws/laws = null//Now... THEY ALL CAN ALL HAVE LAWS
 	var/last_lawchange_announce = 0
 	var/list/alarms_to_show = list()
@@ -32,8 +31,7 @@
 	var/lawcheck[1]
 	var/ioncheck[1]
 	var/hackedcheck[1]
-	var/devillawcheck[5]
-	
+
 	///Are our siliconHUDs on? TRUE for yes, FALSE for no.
 	var/sensors_on = TRUE
 	var/med_hud = DATA_HUD_MEDICAL_ADVANCED //Determines the med hud to use
@@ -60,19 +58,20 @@
 	diag_hud_set_health()
 	add_sensors()
 
-/mob/living/silicon/med_hud_set_health()
-	return //we use a different hud
-
-/mob/living/silicon/med_hud_set_status()
-	return //we use a different hud
-
 /mob/living/silicon/Destroy()
 	QDEL_NULL(radio)
 	QDEL_NULL(aicamera)
 	QDEL_NULL(builtInCamera)
 	QDEL_NULL(aiPDA)
+	QDEL_NULL(laws)
 	GLOB.silicon_mobs -= src
 	return ..()
+
+/mob/living/silicon/med_hud_set_health()
+	return //we use a different hud
+
+/mob/living/silicon/med_hud_set_status()
+	return //we use a different hud
 
 /mob/living/silicon/contents_explosion(severity, target)
 	return
@@ -202,20 +201,14 @@
 				hackedcheck[L] = "Yes"
 		checklaws()
 
-	if (href_list["lawdevil"]) // Toggling whether or not a law gets stated by the State Laws verb --NeoFite
-		var/L = text2num(href_list["lawdevil"])
-		switch(devillawcheck[L])
-			if ("Yes")
-				devillawcheck[L] = "No"
-			if ("No")
-				devillawcheck[L] = "Yes"
-		checklaws()
-
 
 	if (href_list["laws"]) // With how my law selection code works, I changed statelaws from a verb to a proc, and call it through my law selection panel. --NeoFite
 		statelaws()
 
 	if (href_list["printlawtext"]) // this is kinda backwards
+		if (href_list["dead"] && (!isdead(usr) && !usr.client.holder)) // do not print deadchat law notice if the user is now alive
+			to_chat(usr, "<span class='warning'>You cannot view law changes that were made while you were dead.</span>")
+			return
 		to_chat(usr, href_list["printlawtext"])
 
 	return
@@ -229,13 +222,6 @@
 	//laws.show_laws(world)
 	var/number = 1
 	sleep(10)
-
-	if (laws.devillaws && laws.devillaws.len)
-		for(var/index = 1, index <= laws.devillaws.len, index++)
-			if (force || devillawcheck[index] == "Yes")
-				say("[radiomod] 666. [laws.devillaws[index]]")
-				sleep(10)
-
 
 	if (laws.zeroth)
 		if (force || lawcheck[1] == "Yes")
@@ -281,12 +267,6 @@
 /mob/living/silicon/proc/checklaws() //Gives you a link-driven interface for deciding what laws the statelaws() proc will share with the crew. --NeoFite
 
 	var/list = "<b>Which laws do you want to include when stating them for the crew?</b><br><br>"
-
-	if (laws.devillaws && laws.devillaws.len)
-		for(var/index = 1, index <= laws.devillaws.len, index++)
-			if (!devillawcheck[index])
-				devillawcheck[index] = "No"
-			list += {"<A href='byond://?src=[REF(src)];lawdevil=[index]'>[devillawcheck[index]] 666:</A> <font color='#cc5500'>[laws.devillaws[index]]</font><BR>"}
 
 	if (laws.zeroth)
 		if (!lawcheck[1])
@@ -369,12 +349,12 @@
 	to_chat(src, "<span class='notice'>Automatic announcements [Autochan == "None" ? "will not use the radio." : "set to [Autochan]."]</span>")
 
 /mob/living/silicon/put_in_hand_check() // This check is for borgs being able to receive items, not put them in others' hands.
-	return 0
+	return FALSE
 
 // The src mob is trying to place an item on someone
 // But the src mob is a silicon!!  Disable.
 /mob/living/silicon/stripPanelEquip(obj/item/what, mob/who, slot)
-	return 0
+	return FALSE
 
 
 /mob/living/silicon/assess_threat(judgement_criteria, lasercolor = "", datum/callback/weaponcheck=null) //Secbots won't hunt silicon units
@@ -431,3 +411,6 @@
 
 /mob/living/silicon/handle_high_gravity(gravity)
 	return
+
+/mob/living/silicon/rust_heretic_act()
+	adjustBruteLoss(500)
