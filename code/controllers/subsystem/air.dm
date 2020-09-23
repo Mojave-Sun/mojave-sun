@@ -61,7 +61,7 @@ SUBSYSTEM_DEF(air)
 	msg += "AS:[active_super_conductivity.len]|"
 	msg += "AT/MS:[round((cost ? active_turfs.len/cost : 0),0.1)]"
 	return ..()
-#endif
+
 
 #ifndef HALT_ATMOS
 /datum/controller/subsystem/air/Initialize(timeofday)

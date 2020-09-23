@@ -74,10 +74,10 @@ Sunlight System
 	neighbourTurfs = GetNeighbours()
 
 /atom/movable/sunlight_object/proc/GetState()
-	if(!(source_turf.has_opaque_atom || HasRoof() ))
+	if(!(IS_OPAQUE_TURF(source_turf) || HasRoof() ))
 		state = SUNLIGHT_OUTDOOR
 		for(var/turf/CT in neighbourTurfs)
-			if(CT.has_opaque_atom  || (CT.sunlight_object && CT.sunlight_object.HasRoof())) /* update our unroofed, unlighty friends */
+			if(IS_OPAQUE_TURF(CT) || (CT.sunlight_object && CT.sunlight_object.HasRoof())) /* update our unroofed, unlighty friends */
 				state = SUNLIGHT_BORDER
 				break
 	else /* roofed, so turn off the lights*/
@@ -185,7 +185,7 @@ Sunlight System
 	var/list/corners  = list() /* corners we are currently affecting */
 
 	for(T in view(CEILING(GLOB.GLOBAL_LIGHT_RANGE, 1), source_turf))
-		if(T.has_opaque_atom) /* get_corners used to do opacity checks for arse */
+		if(IS_OPAQUE_TURF(T)) /* get_corners used to do opacity checks for arse */
 			continue
 		if (!T.lighting_corners_initialised)
 			T.generate_missing_corners()

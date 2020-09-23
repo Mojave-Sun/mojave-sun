@@ -19,7 +19,8 @@ GLOBAL_LIST_INIT(hay_recipes, list ( \
 	max_amount = 50
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 0)
 	resistance_flags = FLAMMABLE
-	attack_verb = list("tickled", "poked", "whipped")
+	attack_verb_continuous = list("tickles", "pokes", "whips")
+	attack_verb_simple = list("tickled", "poked", "whipped")
 
 /obj/item/stack/sheet/hay/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.hay_recipes

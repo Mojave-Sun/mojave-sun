@@ -148,12 +148,12 @@
 		payload.name = P.name
 	payload.embedding = P.embedding
 	payload.updateEmbedding()
-		var/mob/living/carbon/C = hit
+	var/mob/living/carbon/C = hit
 	var/obj/item/bodypart/limb = C.get_bodypart(hit_zone)
-		if(!limb)
-			limb = C.get_bodypart()
+	if(!limb)
+		limb = C.get_bodypart()
 
-	payload.tryEmbed(limb) // at this point we've created our shrapnel baby and set them up to embed in the target, we can now die in peace as they handle their embed try on their own
+	. = payload.tryEmbed(limb)
 	Detach(P)
 
 /**
@@ -187,4 +187,5 @@
 		hit_zone = limb.body_zone
 		C = limb.owner
 
-	return checkEmbed(I, C, hit_zone, forced=TRUE)
+	checkEmbed(I, C, hit_zone, forced=TRUE)
+	return TRUE
