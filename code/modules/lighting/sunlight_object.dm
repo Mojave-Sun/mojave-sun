@@ -273,11 +273,11 @@ Sunlight System
 	icon_state = "roof"
 	var/turf/roofType
 
-/obj/effect/mapping_helpers/sunlight/roofSettermountain
+/obj/effect/mapping_helpers/sunlight/roofSetter/mountain
 	roofType = /turf/closed/indestructible/rock
 	icon_state = "roof_rock"
 
-/obj/effect/mapping_helpers/sunlight/roofSetterwood
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood
 	roofType = /turf/open/floor/wood/f13
 	icon_state = "roof_wood"
 
