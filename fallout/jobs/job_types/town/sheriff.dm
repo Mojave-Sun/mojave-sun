@@ -1,4 +1,4 @@
-datum/job/f13/town/sheriff
+/datum/job/f13/town/sheriff
 	title = "Sheriff"
 	total_positions = 1
 	spawn_positions = 1

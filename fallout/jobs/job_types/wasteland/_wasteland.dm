@@ -1,4 +1,4 @@
-datum/job/f13/wasteland
+/datum/job/f13/wasteland
 	selection_color = "#ff915e"
 
 /datum/outfit/job/f13/wasteland

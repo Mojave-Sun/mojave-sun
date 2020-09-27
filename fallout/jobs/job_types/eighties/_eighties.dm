@@ -1,4 +1,4 @@
-datum/job/f13/eighties
+/datum/job/f13/eighties
 	selection_color = "#30389c"
 
 /datum/outfit/job/f13/eighties

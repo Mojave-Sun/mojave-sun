@@ -1,4 +1,4 @@
-datum/job/f13/wasteland/canaanite
+/datum/job/f13/wasteland/canaanite
 	title = "New Canaanite"
 	total_positions = 2
 	spawn_positions = 2

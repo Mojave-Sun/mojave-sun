@@ -1,4 +1,4 @@
-datum/job/f13/tribe
+/datum/job/f13/tribe
 	selection_color = "#eb544f"
 
 /datum/outfit/job/f13/tribe

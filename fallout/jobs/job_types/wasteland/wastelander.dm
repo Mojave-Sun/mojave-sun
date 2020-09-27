@@ -1,4 +1,4 @@
-datum/job/f13/wasteland/wastelander
+/datum/job/f13/wasteland/wastelander
 	title = "Wastelander"
 	total_positions = 200
 	spawn_positions = 2
