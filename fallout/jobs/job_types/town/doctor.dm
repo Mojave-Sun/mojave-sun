@@ -15,5 +15,7 @@
 	name = "Doctor"
 	jobtype = /datum/job/f13/town/doctor
 
+	head = /obj/item/clothing/head/collectable/petehat
+
 /datum/outfit/job/f13/town/doctor/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -15,5 +15,7 @@
 	name = "Bartender"
 	jobtype = /datum/job/f13/town/bartender
 
+	head = /obj/item/clothing/head/collectable/petehat
+
 /datum/outfit/job/f13/town/bartender/pre_equip(mob/living/carbon/human/H)
 	..()

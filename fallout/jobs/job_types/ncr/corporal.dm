@@ -15,5 +15,7 @@
 	name = "Corporal"
 	jobtype = /datum/job/f13/ncr/corporal
 
+	head = /obj/item/clothing/head/collectable/petehat
+
 /datum/outfit/job/f13/ncr/corporal/pre_equip(mob/living/carbon/human/H)
 	..()

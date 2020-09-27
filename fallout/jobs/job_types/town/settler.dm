@@ -15,5 +15,7 @@
 	name = "Settler"
 	jobtype = /datum/job/f13/town/settler
 
+	head = /obj/item/clothing/head/collectable/petehat
+
 /datum/outfit/job/f13/town/settler/pre_equip(mob/living/carbon/human/H)
 	..()

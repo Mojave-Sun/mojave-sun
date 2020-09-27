@@ -15,5 +15,7 @@
 	name = "Knight"
 	jobtype = /datum/job/f13/bos/knight
 
+	head = /obj/item/clothing/head/collectable/petehat
+
 /datum/outfit/job/f13/bos/knight/pre_equip(mob/living/carbon/human/H)
 	..()

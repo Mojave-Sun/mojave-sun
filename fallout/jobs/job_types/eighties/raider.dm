@@ -12,8 +12,10 @@
 	display_order = JOB_DISPLAY_ORDER_F13_RAIDER
 
 /datum/outfit/job/f13/eighties/raider
-	name = "Raider"
+	name = "_F13 - Raider"
 	jobtype = /datum/job/f13/eighties/raider
+
+	head = /obj/item/clothing/head/collectable/petehat
 
 /datum/outfit/job/f13/eighties/raider/pre_equip(mob/living/carbon/human/H)
 	..()

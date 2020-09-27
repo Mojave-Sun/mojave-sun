@@ -15,5 +15,7 @@
 	name = "Shopkeep"
 	jobtype = /datum/job/f13/town/shopkeep
 
+	head = /obj/item/clothing/head/collectable/petehat
+
 /datum/outfit/job/f13/town/shopkeep/pre_equip(mob/living/carbon/human/H)
 	..()

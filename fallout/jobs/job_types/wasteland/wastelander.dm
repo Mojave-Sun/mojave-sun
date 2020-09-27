@@ -15,6 +15,8 @@
 	name = "Wastelander"
 	jobtype = /datum/job/f13/wasteland/wastelander
 
+	head = /obj/item/clothing/head/collectable/petehat
+
 /datum/outfit/job/f13/wasteland/wastelander/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = pick(

@@ -15,5 +15,7 @@
 	name = "Hubologist"
 	jobtype = /datum/job/f13/wasteland/hubologist
 
+	head = /obj/item/clothing/head/collectable/petehat
+
 /datum/outfit/job/f13/wasteland/hubologist/pre_equip(mob/living/carbon/human/H)
 	..()

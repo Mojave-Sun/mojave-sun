@@ -15,5 +15,7 @@
 	name = "Enforcer"
 	jobtype = /datum/job/f13/eighties/enforcer
 
+	head = /obj/item/clothing/head/collectable/petehat
+
 /datum/outfit/job/f13/eighties/enforcer/pre_equip(mob/living/carbon/human/H)
 	..()

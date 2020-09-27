@@ -15,5 +15,7 @@
 	name = "Warrior"
 	jobtype = /datum/job/f13/tribe/warrior
 
+	head = /obj/item/clothing/head/collectable/petehat
+
 /datum/outfit/job/f13/tribe/warrior/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -15,5 +15,7 @@
 	name = "Initiate"
 	jobtype = /datum/job/f13/bos/initiate
 
+	head = /obj/item/clothing/head/collectable/petehat
+
 /datum/outfit/job/f13/bos/initiate/pre_equip(mob/living/carbon/human/H)
 	..()

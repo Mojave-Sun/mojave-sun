@@ -15,5 +15,7 @@
 	name = "Head Scribe"
 	jobtype = /datum/job/f13/bos/head_scribe
 
+	head = /obj/item/clothing/head/collectable/petehat
+
 /datum/outfit/job/f13/bos/head_scribe/pre_equip(mob/living/carbon/human/H)
 	..()
