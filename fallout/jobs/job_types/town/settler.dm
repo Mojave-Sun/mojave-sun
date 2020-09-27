@@ -1,4 +1,4 @@
-datum/job/f13/town/settler
+/datum/job/f13/town/settler
 	title = "Settler"
 	total_positions = 10
 	spawn_positions = 10

@@ -1,4 +1,4 @@
-datum/job/f13/bos/paladin
+/datum/job/f13/bos/paladin
 	title = "Paladin"
 	total_positions = 1
 	spawn_positions = 1

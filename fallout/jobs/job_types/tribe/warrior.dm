@@ -1,4 +1,4 @@
-datum/job/f13/tribe/warrior
+/datum/job/f13/tribe/warrior
 	title = "Warrior"
 	total_positions = 4
 	spawn_positions = 4

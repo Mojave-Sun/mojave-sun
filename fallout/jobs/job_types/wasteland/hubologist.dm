@@ -1,4 +1,4 @@
-datum/job/f13/wasteland/hubologist
+/datum/job/f13/wasteland/hubologist
 	title = "Hubologist"
 	total_positions = 2
 	spawn_positions = 2

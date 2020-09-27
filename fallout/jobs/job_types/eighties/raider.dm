@@ -1,4 +1,4 @@
-datum/job/f13/eighties/raider
+/datum/job/f13/eighties/raider
 	title = "Raider"
 	total_positions = 6
 	spawn_positions = 6

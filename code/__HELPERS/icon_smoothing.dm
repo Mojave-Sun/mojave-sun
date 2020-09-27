@@ -382,7 +382,7 @@
 	smoothing_groups = null
 	canSmoothWith = null
 
-atom/proc/plus_smooth(adjacencies)
+/atom/proc/plus_smooth(adjacencies)
 	var/normalizedAdjacencies = (adjacencies & N_NORTH)|(adjacencies & N_SOUTH)|(adjacencies & N_EAST)|(adjacencies & N_WEST)
 	icon_state = "[src.icon_type_smooth][normalizedAdjacencies]"
 
