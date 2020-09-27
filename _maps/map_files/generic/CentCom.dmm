@@ -5256,7 +5256,6 @@
 	name = "Shower"
 	},
 /obj/item/soap/deluxe,
-/obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plasteel/white,
 /area/centcom/ferry)
 "nl" = (
@@ -5416,9 +5415,6 @@
 /turf/closed/indestructible/riveted,
 /area/centcom/ferry)
 "nB" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 6
-	},
 /turf/open/floor/plasteel/white,
 /area/centcom/ferry)
 "nC" = (
@@ -5428,9 +5424,6 @@
 	},
 /obj/structure/mirror{
 	pixel_x = 28
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 9
 	},
 /turf/open/floor/plasteel/white,
 /area/centcom/ferry)
@@ -5651,7 +5644,6 @@
 /obj/machinery/door/airlock/silver{
 	name = "Bathroom"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/white,
 /area/centcom/ferry)
 "nT" = (
@@ -5846,20 +5838,6 @@
 /obj/machinery/status_display/evac{
 	pixel_y = 32
 	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/centcom/ferry)
-"ok" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -6094,10 +6072,6 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
-"oF" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/wood,
-/area/centcom/ferry)
 "oG" = (
 /obj/structure/table/wood,
 /obj/item/clipboard,
@@ -6109,28 +6083,10 @@
 /obj/item/stamp,
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
-"oH" = (
-/obj/structure/chair/comfy/brown{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 6
-	},
-/turf/open/floor/plasteel/grimy,
-/area/centcom/ferry)
-"oI" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/turf/open/floor/plasteel/grimy,
-/area/centcom/ferry)
 "oJ" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Administrative Office";
 	req_access_txt = "109"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -6148,9 +6104,6 @@
 /obj/structure/chair/comfy/brown{
 	color = "#596479";
 	dir = 1
-	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 8
 	},
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
@@ -6313,17 +6266,8 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/centcom/ferry)
-"oY" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/open/floor/wood,
-/area/centcom/ferry)
 "oZ" = (
 /obj/structure/chair/comfy/black{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /turf/open/floor/plasteel/grimy,
@@ -6344,9 +6288,6 @@
 /obj/item/clothing/mask/cigarette/cigar{
 	pixel_x = 4.5
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 10
-	},
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "pb" = (
@@ -6364,7 +6305,6 @@
 "pd" = (
 /obj/structure/table/wood,
 /obj/machinery/computer/security/wooden_tv,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "pe" = (
@@ -6731,33 +6671,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/centcom/ferry)
-"pI" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 8
-	},
-/turf/open/floor/wood,
-/area/centcom/ferry)
-"pJ" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/turf/open/floor/wood,
-/area/centcom/ferry)
-"pK" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
-/turf/open/floor/wood,
-/area/centcom/ferry)
-"pL" = (
-/obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
-/turf/open/floor/plasteel/grimy,
-/area/centcom/ferry)
 "pM" = (
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = 24
-	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 8
 	},
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
@@ -7338,7 +7255,6 @@
 	name = "Administrative Office";
 	req_access_txt = "109"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/ferry)
@@ -7647,10 +7563,6 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/centcom/ferry)
-"rx" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "ry" = (
 /obj/machinery/computer/card/centcom,
@@ -8155,9 +8067,6 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -32
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -8165,26 +8074,12 @@
 /area/centcom/ferry)
 "sy" = (
 /obj/structure/chair/comfy/black,
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plasteel/grimy,
-/area/centcom/ferry)
-"sz" = (
-/obj/structure/chair/office{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/structure/cable,
-/turf/open/floor/wood,
 /area/centcom/ferry)
 "sA" = (
 /obj/item/clipboard,
 /obj/structure/table/reinforced,
 /obj/item/detective_scanner,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -8206,14 +8101,10 @@
 /obj/structure/chair/office{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
 /obj/structure/cable,
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "sC" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/structure/cable,
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
@@ -8221,9 +8112,6 @@
 /obj/machinery/door/airlock/centcom{
 	name = "Administrative Storage";
 	req_access_txt = "106"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -8242,9 +8130,6 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/manifold/supply/visible{
-	dir = 1
-	},
 /obj/machinery/meter,
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
@@ -8260,9 +8145,6 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/manifold/supply/visible{
-	dir = 1
-	},
 /obj/structure/cable,
 /turf/open/floor/plasteel/dark,
 /area/centcom/ferry)
@@ -8277,16 +8159,10 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/manifold/supply/visible{
-	dir = 1
-	},
 /obj/machinery/meter,
 /turf/open/floor/plasteel/dark,
 /area/centcom/ferry)
 "sH" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -8295,38 +8171,6 @@
 	},
 /obj/machinery/door/poddoor/shutters/indestructible,
 /turf/open/floor/plasteel,
-/area/centcom/ferry)
-"sI" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/centcom/ferry)
-"sJ" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
 /area/centcom/ferry)
 "sK" = (
 /obj/effect/turf_decal/tile/red{
@@ -8656,7 +8500,6 @@
 "tB" = (
 /obj/item/storage/fancy/donut_box,
 /obj/structure/table/reinforced,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -8700,9 +8543,6 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/obj/machinery/atmospherics/components/unary/portables_connector/visible{
-	dir = 1
-	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plasteel,
 /area/centcom/ferry)
@@ -8711,9 +8551,6 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 1
-	},
 /obj/machinery/computer/monitor/secret{
 	dir = 1
 	},
@@ -8725,9 +8562,6 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/components/unary/tank/air{
-	dir = 1
-	},
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
@@ -9080,12 +8914,6 @@
 /area/centcom/ferry)
 "ur" = (
 /obj/structure/cable,
-/turf/open/floor/wood,
-/area/centcom/ferry)
-"us" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 1
-	},
 /turf/open/floor/wood,
 /area/centcom/ferry)
 "ut" = (
@@ -56775,7 +56603,7 @@ aa
 mD
 og
 oB
-oY
+oB
 oB
 qc
 mD
@@ -57290,10 +57118,10 @@ mD
 oi
 oD
 pa
-pI
-oF
+oB
+oB
 qQ
-ok
+sw
 sy
 ty
 uq
@@ -57547,11 +57375,11 @@ mD
 oj
 oE
 pb
-pJ
+oB
 qe
 mD
 ru
-pJ
+oB
 oB
 oB
 uT
@@ -57801,14 +57629,14 @@ mE
 nj
 nB
 nS
-ok
-oF
-oF
-pK
+sw
+oB
+oB
+oB
 qf
 nU
 rv
-sz
+tz
 tz
 ur
 uU
@@ -58061,7 +57889,7 @@ mD
 ol
 oG
 pc
-oI
+pg
 qg
 mE
 rw
@@ -58316,15 +58144,15 @@ mD
 mD
 nT
 om
-oH
+pb
 pd
-pL
-ok
+pg
+sw
 qQ
-rx
+pg
 sB
 tB
-us
+oB
 uW
 mD
 su
@@ -58573,7 +58401,7 @@ aa
 aa
 nU
 on
-oI
+pg
 pe
 pM
 qi
@@ -59087,7 +58915,7 @@ jE
 iF
 mD
 oo
-oI
+pg
 pf
 pN
 qj
@@ -60121,7 +59949,7 @@ pP
 qm
 nU
 rC
-sI
+sw
 tG
 mD
 va
@@ -60378,7 +60206,7 @@ nm
 qm
 qR
 rD
-sJ
+sw
 tH
 mD
 vb
