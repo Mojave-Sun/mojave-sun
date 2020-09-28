@@ -39,7 +39,7 @@
 #define F13_SCRIBE			(1<<4)
 #define F13_HEAD_SCRIBE		(1<<5)
 
-#define F13_EIGHTIES		(1<<5)
+#define F13_RAIDERS         (1<<5)
 
 #define F13_RAIDER			(1<<0)
 #define F13_ENFORCER		(1<<1)
@@ -80,4 +80,4 @@
 #define EXP_TYPE_TRIBE "Tribe"
 #define EXP_TYPE_NCR "NCR"
 #define EXP_TYPE_BOS "BOS"
-#define EXP_TYPE_EIGHTIES "80s"
+#define EXP_TYPE_RAIDERS "Raiders"

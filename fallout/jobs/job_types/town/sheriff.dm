@@ -12,8 +12,10 @@
 	display_order = JOB_DISPLAY_ORDER_F13_SHERIFF
 
 /datum/outfit/job/f13/town/sheriff
-	name = "Sheriff"
+	name = "_Town Sheriff"
 	jobtype = /datum/job/f13/town/sheriff
+
+	head = /obj/item/clothing/head/collectable/petehat
 
 /datum/outfit/job/f13/town/sheriff/pre_equip(mob/living/carbon/human/H)
 	..()
