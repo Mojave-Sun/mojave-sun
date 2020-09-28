@@ -12,7 +12,7 @@
 	display_order = JOB_DISPLAY_ORDER_F13_CANAANITE
 
 /datum/outfit/job/f13/wasteland/canaanite
-	name = "New Canaanite"
+	name = "_New Canaanite"
 	jobtype = /datum/job/f13/wasteland/canaanite
 
 	head = /obj/item/clothing/head/collectable/petehat

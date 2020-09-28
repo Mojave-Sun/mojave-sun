@@ -12,7 +12,7 @@
 	display_order = JOB_DISPLAY_ORDER_F13_CORPORAL
 
 /datum/outfit/job/f13/ncr/corporal
-	name = "Corporal"
+	name = "_NCR Corporal"
 	jobtype = /datum/job/f13/ncr/corporal
 
 	head = /obj/item/clothing/head/collectable/petehat

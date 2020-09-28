@@ -12,7 +12,7 @@
 	display_order = JOB_DISPLAY_ORDER_F13_KNIGHT
 
 /datum/outfit/job/f13/bos/knight
-	name = "Knight"
+	name = "_BoS Knight"
 	jobtype = /datum/job/f13/bos/knight
 
 	head = /obj/item/clothing/head/collectable/petehat

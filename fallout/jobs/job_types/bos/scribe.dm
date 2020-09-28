@@ -12,7 +12,7 @@
 	display_order = JOB_DISPLAY_ORDER_F13_SCRIBE
 
 /datum/outfit/job/f13/bos/scribe
-	name = "Scribe"
+	name = "_BoS Scribe"
 	jobtype = /datum/job/f13/bos/scribe
 
 	head = /obj/item/clothing/head/collectable/petehat

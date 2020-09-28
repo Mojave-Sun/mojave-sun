@@ -12,7 +12,7 @@
 	display_order = JOB_DISPLAY_ORDER_F13_CHIEFTAIN
 
 /datum/outfit/job/f13/tribe/chieftain
-	name = "Chieftain"
+	name = "_Tribal Chieftain"
 	jobtype = /datum/job/f13/tribe/chieftain
 
 	head = /obj/item/clothing/head/collectable/petehat

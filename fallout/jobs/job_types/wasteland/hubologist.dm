@@ -12,7 +12,7 @@
 	display_order = JOB_DISPLAY_ORDER_F13_HUBOLOGIST
 
 /datum/outfit/job/f13/wasteland/hubologist
-	name = "Hubologist"
+	name = "_Hubologist"
 	jobtype = /datum/job/f13/wasteland/hubologist
 
 	head = /obj/item/clothing/head/collectable/petehat

@@ -12,7 +12,7 @@
 	display_order = JOB_DISPLAY_ORDER_F13_LIEUTENANT
 
 /datum/outfit/job/f13/ncr/lieutenant
-	name = "Lieutenant"
+	name = "_NCR Lieutenant"
 	jobtype = /datum/job/f13/ncr/lieutenant
 
 	head = /obj/item/clothing/head/collectable/petehat

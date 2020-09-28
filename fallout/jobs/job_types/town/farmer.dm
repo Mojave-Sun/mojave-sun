@@ -12,7 +12,7 @@
 	display_order = JOB_DISPLAY_ORDER_F13_FARMER
 
 /datum/outfit/job/f13/town/farmer
-	name = "Farmer"
+	name = "_Town Farmer"
 	jobtype = /datum/job/f13/town/farmer
 
 	head = /obj/item/clothing/head/collectable/petehat

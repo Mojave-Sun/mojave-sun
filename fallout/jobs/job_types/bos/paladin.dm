@@ -12,7 +12,7 @@
 	display_order = JOB_DISPLAY_ORDER_F13_PALADIN
 
 /datum/outfit/job/f13/bos/paladin
-	name = "Paladin"
+	name = "_BoS Paladin"
 	jobtype = /datum/job/f13/bos/paladin
 
 	head = /obj/item/clothing/head/collectable/petehat

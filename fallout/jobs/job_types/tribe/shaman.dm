@@ -12,7 +12,7 @@
 	display_order = JOB_DISPLAY_ORDER_F13_SHAMAN
 
 /datum/outfit/job/f13/tribe/shaman
-	name = "Shaman"
+	name = "_Shaman"
 	jobtype = /datum/job/f13/tribe/shaman
 
 	head = /obj/item/clothing/head/collectable/petehat
