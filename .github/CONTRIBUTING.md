@@ -269,6 +269,9 @@ This is good:
 	* Please attempt to clean out any dirty variables that may be contained within items you alter through var-editing. For example, due to how DM functions, changing the `pixel_x` variable from 23 to 0 will leave a dirty record in the map's code of `pixel_x = 0`. Likewise this can happen when changing an item's icon to something else and then back. This can lead to some issues where an item's icon has changed within the code, but becomes broken on the map due to it still attempting to use the old entry.
 	* Areas should not be var-edited on a map to change it's name or attributes. All areas of a single type and it's altered instances are considered the same area within the code, and editing their variables on a map can lead to issues with powernets and event subsystems which are difficult to debug.
 
+* Screenshots.
+	* When opening a mapping PR, please include screenshots of everything you worked on, for ease of review.
+
 ### User Interfaces
 * All new player-facing user interfaces must use TGUI.
 * Raw HTML is permitted for admin and debug UIs.
