@@ -1,4 +1,4 @@
-## Mojave Sun codebase
+## Mojave Sun
 
 [![Build Status](https://travis-ci.com/Mojave-Sun/mojave-sun.svg?branch=master)](https://travis-ci.com/github/Mojave-Sun/mojave-sun)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
@@ -14,23 +14,8 @@
 
 This is the codebase for the Fallout-themed SpaceStation 13 server using modern /tg/station.
 
-## DOWNLOADING
-[Downloading](.github/DOWNLOADING.md)
-
-[Running on the server](.github/RUNNING_A_SERVER.md)
-
-[Maps and Away Missions](.github/MAPS_AND_AWAY_MISSIONS.md)
-
 ## Requirements for contributors
 [Guidelines for Contributors](.github/CONTRIBUTING.md)
-
-[HACKMD account]() - Design documentation here
-
-[Documenting your code](.github/AUTODOC_GUIDE.md)
-
-[Policy configuration system](.github/POLICYCONFIG.md)
-
-[Interested in some starting lore?](https://github.com/tgstation/common_core)
 
 ## LICENSE
 
