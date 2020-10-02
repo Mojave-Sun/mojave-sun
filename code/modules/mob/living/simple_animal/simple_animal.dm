@@ -32,6 +32,8 @@
 	var/wander = 1
 	///When set to 1 this stops the animal from moving when someone is pulling it.
 	var/stop_automated_movement_when_pulled = 1
+	///Stops an animal moving when ridden
+	var/saddled = FALSE
 
 	///When someone interacts with the simple animal.
 	///Help-intent verb in present continuous tense.
@@ -205,6 +207,8 @@
 
 ///Extra effects to add when the mob is tamed, such as adding a riding component
 /mob/living/simple_animal/proc/tamed(whomst)
+	. = ..()
+	visible_message("<span class='alertalien'>[src] is now tamed.</span>")
 	return
 
 /mob/living/simple_animal/examine(mob/user)
@@ -240,7 +244,9 @@
 		if((isturf(loc) || allow_movement_on_non_turfs) && (mobility_flags & MOBILITY_MOVE))		//This is so it only moves if it's not inside a closet, gentics machine, etc.
 			turns_since_move++
 			if(turns_since_move >= turns_per_move)
-				if(!(stop_automated_movement_when_pulled && pulledby)) //Some animals don't move when pulled
+				if(saddled)
+					return
+				else if(!(stop_automated_movement_when_pulled && pulledby)) //Some animals don't move when pulled or saddled/ridden (like hitching)
 					var/anydir = pick(GLOB.cardinals)
 					if(Process_Spacemove(anydir))
 						Move(get_step(src, anydir), anydir)
