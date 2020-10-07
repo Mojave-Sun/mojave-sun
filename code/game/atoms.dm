@@ -139,8 +139,6 @@
 	var/list/smoothing_groups = null
 	///List of smoothing groups this atom can smooth with. If this is null and atom is smooth, it smooths only with itself.
 	var/list/canSmoothWith = null
-	//for legacy icon smoothing
-	var/icon_type_smooth
 
 
 /**
