@@ -14,20 +14,16 @@
 
 /turf/closed/mineral/random/f13/Initialize()
 	. = ..()
-	underlays += mutable_appearance('fallout/icons/turf/mining.dmi', "rockfloor1", TURF_LAYER)
 	pixel_x = 4
-	pixel_y = 4
+	pixel_y = 4 //To offset a pixel shift done on /turf/closed/mineral
 
 /turf/closed/indestructible/rock/f13
 	name = "dense rock"
 	desc = "An extremely densely-packed rock, most mining tools or explosives would never get through this."
 	icon = 'fallout/icons/turf/walls/indestructible_rock.dmi'
-	icon_state = "indestructible-0"
-	base_icon_state = "indestructible"
+	icon_state = "indestructible_rock-0"
+	base_icon_state = "indestructible_rock"
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_MINERALS)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_MINERALS)
-
-/turf/closed/indestructible/rock/f13/Initialize()
-	. = ..()
-	underlays += mutable_appearance('fallout/icons/turf/mining.dmi', "rockfloor1", TURF_LAYER)
+	layer = EDGED_TURF_LAYER //Remove this is tall walls or overlays end up not being used.
