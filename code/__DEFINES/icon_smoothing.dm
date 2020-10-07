@@ -73,7 +73,25 @@ DEFINE_BITFIELD(smoothing_flags, list(
 #define MAX_S_TURF SMOOTH_GROUP_SURVIVAL_TITANIUM_WALLS //Always match this value with the one above it.
 
 
-#define S_OBJ(num) (MAX_S_TURF + 1 + num)
+// FALLOUT CHANGES BEGIN
+#define S_OBJ_FO(num) (MAX_S_TURF + 1 + num)
+
+#define SMOOTH_GROUP_FALLOUT_WALL S_OBJ_FO(0)				///obj/structure/table/low_wall, /turf/closed/wall/f13
+#define SMOOTH_GROUP_FALLOUT_WALL_METAL S_OBJ_FO(1)		///obj/structure/table/low_wall/metal, /turf/closed/wall/f13/metal
+#define SMOOTH_GROUP_FALLOUT_WALL_WOOD S_OBJ_FO(2)		///obj/structure/table/low_wall/wood, /turf/closed/wall/f13/wood
+#define SMOOTH_GROUP_FALLOUT_WALL_SCRAP S_OBJ_FO(3)		///obj/structure/table/low_wall/scrap, /turf/closed/wall/f13/scrap
+#define SMOOTH_GROUP_FALLOUT_WALL_ADOBE S_OBJ_FO(4)		///obj/structure/table/low_wall/adobe, /turf/closed/wall/f13/adobe
+#define SMOOTH_GROUP_FALLOUT_WALL_BRICK S_OBJ_FO(5)		///obj/structure/table/low_wall/brick, /turf/closed/wall/f13/brick
+#define SMOOTH_GROUP_FALLOUT_WALL_REINFORCED S_OBJ_FO(6)	///obj/structure/table/low_wall/reinforced, /turf/closed/wall/r_wall/f13
+#define SMOOTH_GROUP_FALLOUT_MINERALS S_OBJ_FO(7)			///turf/closed/mineral/random/f13, /turf/closed/indestructible/rock/f13
+#define SMOOTH_GROUP_FALLOUT_WINDOW S_OBJ_FO(8)			///obj/structure/window/fulltile/f13/glass
+
+#define SMOOTH_GROUP_FALLOUT_TABLES S_OBJ_FO(20)			///obj/structure/table/f13
+
+#define MAX_S_TURF_FO SMOOTH_GROUP_FALLOUT_TABLES //Always match this value with the one above it.
+
+#define S_OBJ(num) (MAX_S_TURF_FO + 1 + num)
+// FALLOUT CHANGES END
 /* /obj included */
 
 #define SMOOTH_GROUP_WALLS S_OBJ(0)						///turf/closed/wall, /obj/structure/falsewall
@@ -91,15 +109,6 @@ DEFINE_BITFIELD(smoothing_flags, list(
 #define SMOOTH_GROUP_PLASTITANIUM_WALLS S_OBJ(13)		///turf/closed/wall/mineral/plastitanium, /obj/structure/falsewall/plastitanium
 #define SMOOTH_GROUP_SURVIVAL_TIANIUM_POD S_OBJ(14)		///turf/closed/wall/mineral/titanium/survival/pod, /obj/machinery/door/airlock/survival_pod, /obj/structure/window/shuttle/survival_pod
 #define SMOOTH_GROUP_HIERO_WALL S_OBJ(15)				///obj/effect/temp_visual/elite_tumor_wall, /obj/effect/temp_visual/hierophant/wall
-#define SMOOTH_GROUP_FALLOUT_WALL S_OBJ(16)				///obj/structure/table/low_wall, /turf/closed/wall/f13
-#define SMOOTH_GROUP_FALLOUT_WALL_METAL S_OBJ(17)		///obj/structure/table/low_wall/metal, /turf/closed/wall/f13/metal
-#define SMOOTH_GROUP_FALLOUT_WALL_WOOD S_OBJ(18)		///obj/structure/table/low_wall/wood, /turf/closed/wall/f13/wood
-#define SMOOTH_GROUP_FALLOUT_WALL_SCRAP S_OBJ(19)		///obj/structure/table/low_wall/scrap, /turf/closed/wall/f13/scrap
-#define SMOOTH_GROUP_FALLOUT_WALL_ADOBE S_OBJ(20)		///obj/structure/table/low_wall/adobe, /turf/closed/wall/f13/adobe
-#define SMOOTH_GROUP_FALLOUT_WALL_BRICK S_OBJ(21)		///obj/structure/table/low_wall/brick, /turf/closed/wall/f13/brick
-#define SMOOTH_GROUP_FALLOUT_WALL_REINFORCED S_OBJ(22)	///obj/structure/table/low_wall/reinforced, /turf/closed/wall/r_wall/f13
-#define SMOOTH_GROUP_FALLOUT_MINERALS S_OBJ(23)			///turf/closed/mineral/random/f13, /turf/closed/indestructible/rock/f13
-#define SMOOTH_GROUP_FALLOUT_WINDOW S_OBJ(24)			///obj/structure/window/fulltile/f13/glass
 
 #define SMOOTH_GROUP_PAPERFRAME S_OBJ(25)				///obj/structure/window/paperframe, /obj/structure/mineral_door/paperframe
 
@@ -118,7 +127,6 @@ DEFINE_BITFIELD(smoothing_flags, list(
 #define SMOOTH_GROUP_BRONZE_TABLES S_OBJ(53)			///obj/structure/table/bronze
 #define SMOOTH_GROUP_ABDUCTOR_TABLES S_OBJ(54)			///obj/structure/table/abductor
 #define SMOOTH_GROUP_GLASS_TABLES S_OBJ(55)				///obj/structure/table/glass
-#define SMOOTH_GROUP_FALLOUT_TABLES S_OBJ(56)			///obj/structure/table/f13
 
 #define SMOOTH_GROUP_ALIEN_NEST S_OBJ(59)				///obj/structure/bed/nest
 #define SMOOTH_GROUP_ALIEN_RESIN S_OBJ(60)				///obj/structure/alien/resin

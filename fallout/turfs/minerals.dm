@@ -1,9 +1,9 @@
 /turf/closed/mineral/random/f13
 	icon = 'fallout/icons/turf/walls/mineral.dmi'
 	smooth_icon = 'fallout/icons/turf/walls/mineral.dmi'
-	icon_state = "mineral0"
-	smoothing_flags = SMOOTH_BORDER|SMOOTH_SIMPLE
-	icon_type_smooth = "mineral"
+	icon_state = "mineral-0"
+	base_icon_state = "mineral"
+	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_MINERALS)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_MINERALS)
 	baseturfs = /turf/open/floor/plating/ground/mountain
@@ -22,9 +22,9 @@
 	name = "dense rock"
 	desc = "An extremely densely-packed rock, most mining tools or explosives would never get through this."
 	icon = 'fallout/icons/turf/walls/indestructible_rock.dmi'
-	icon_state = "indestructible0"
-	smoothing_flags = SMOOTH_BORDER|SMOOTH_SIMPLE
-	icon_type_smooth = "indestructible"
+	icon_state = "indestructible-0"
+	base_icon_state = "indestructible"
+	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_MINERALS)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_MINERALS)
 
