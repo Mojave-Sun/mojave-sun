@@ -1,7 +1,7 @@
 /turf/closed/wall/f13
 	name = "base class wall"
 	desc = "God has abandoned us"
-	smoothing_flags = SMOOTH_BORDER|SMOOTH_SIMPLE
+	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL,SMOOTH_GROUP_FALLOUT_WINDOW)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL,SMOOTH_GROUP_FALLOUT_WINDOW)
 
@@ -9,8 +9,8 @@
 	name = "metal wall"
 	desc = ""
 	icon = 'fallout/icons/turf/walls/metal.dmi'
-	icon_state = "metal0"
-	icon_type_smooth = "metal"
+	icon_state = "metal-0"
+	base_icon_state = "metal"
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
 
@@ -18,15 +18,15 @@
 	name = "rusted metal wall"
 	desc = ""
 	icon = 'fallout/icons/turf/walls/rust.dmi'
-	icon_state = "rust0"
-	icon_type_smooth = "rust"
+	icon_state = "rust-0"
+	base_icon_state = "rust"
 
 /turf/closed/wall/f13/wood
 	name = "wood wall"
 	desc = ""
 	icon = 'fallout/icons/turf/walls/wood.dmi'
-	icon_state = "wood0"
-	icon_type_smooth = "wood"
+	icon_state = "wood-0"
+	base_icon_state = "wood"
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_WOOD,SMOOTH_GROUP_FALLOUT_WINDOW)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_WOOD,SMOOTH_GROUP_FALLOUT_WINDOW)
 
@@ -34,8 +34,8 @@
 	name = "scrap wall"
 	desc = ""
 	icon = 'fallout/icons/turf/walls/scrap.dmi'
-	icon_state = "scrap0"
-	icon_type_smooth = "scrap"
+	icon_state = "scrap-0"
+	base_icon_state = "scrap"
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_SCRAP,SMOOTH_GROUP_FALLOUT_WINDOW)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_SCRAP,SMOOTH_GROUP_FALLOUT_WINDOW)
 
@@ -43,8 +43,8 @@
 	name = "adobe wall"
 	desc = ""
 	icon = 'fallout/icons/turf/walls/adobe.dmi'
-	icon_state = "adobe0"
-	icon_type_smooth = "adobe"
+	icon_state = "adobe-0"
+	base_icon_state = "adobe"
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_ADOBE,SMOOTH_GROUP_FALLOUT_WINDOW)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_ADOBE,SMOOTH_GROUP_FALLOUT_WINDOW)
 
@@ -52,15 +52,15 @@
 	name = "brick wall"
 	desc = ""
 	icon = 'fallout/icons/turf/walls/brick.dmi'
-	icon_state = "brick0"
-	icon_type_smooth = "brick"
+	icon_state = "brick-0"
+	base_icon_state = "brick"
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_BRICK,SMOOTH_GROUP_FALLOUT_WINDOW)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_BRICK,SMOOTH_GROUP_FALLOUT_WINDOW)
 
 /turf/closed/wall/r_wall/f13
 	name = "base class wall"
 	desc = "AHHH FUCK A BASE CLASS WALL"
-	smoothing_flags = SMOOTH_BORDER|SMOOTH_SIMPLE
+	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_REINFORCED,SMOOTH_GROUP_FALLOUT_WINDOW)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_REINFORCED,SMOOTH_GROUP_FALLOUT_WINDOW)
 
@@ -68,8 +68,8 @@
 	name = "reinforced metal wall"
 	desc = ""
 	icon = 'fallout/icons/turf/walls/reinforced_metal.dmi'
-	icon_state = "reinforced_metal0"
-	icon_type_smooth = "reinforced_metal"
+	icon_state = "reinforced_metal-0"
+	base_icon_state = "reinforced_metal"
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
 
@@ -77,15 +77,15 @@
 	name = "rusted reinforced metal wall"
 	desc = ""
 	icon = 'fallout/icons/turf/walls/reinforced_rust.dmi'
-	icon_state = "reinforced_rust0"
-	icon_type_smooth = "reinforced_rust"
+	icon_state = "reinforced_rust-0"
+	base_icon_state = "reinforced_rust"
 
 /turf/closed/wall/r_wall/f13/bunker
 	name = "bunker wall"
 	desc = ""
 	icon = 'fallout/icons/turf/walls/bunker.dmi'
-	icon_state = "bunker0"
-	icon_type_smooth = "bunker"
+	icon_state = "bunker-0"
+	base_icon_state = "bunker"
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
 
@@ -95,8 +95,8 @@
 	name = "metal wall"
 	desc = ""
 	icon = 'fallout/icons/turf/walls/metal.dmi'
-	icon_state = "metal0"
-	icon_type_smooth = "metal"
+	icon_state = "metal-0"
+	base_icon_state = "metal"
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
 
