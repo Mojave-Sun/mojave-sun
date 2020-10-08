@@ -12,7 +12,7 @@
 * **Mojave Sun Discord:** Soon
 * **Coderbus Discord:** https://discord.gg/Vh8TJp9
 
-This is the codebase for the Fallout-themed SpaceStation 13 server using modern /tg/station.
+Mojave Sun is a post-apocalyptic SS13 server based on modern /tg/station.
 
 ## Requirements for contributors
 [Guidelines for Contributors](.github/CONTRIBUTING.md)
