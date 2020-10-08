@@ -451,59 +451,47 @@
 	var/effectiveness = 80 //percentage effectiveness; numbers above 100 yield extra drops
 	var/bonus_modifier = 0 //percentage increase to bonus item chance
 	var/butcher_sound = 'sound/effects/butcher.ogg' //sound played when butchering
-	var/butchering_enabled = TRUE
-	var/can_be_blunt = FALSE
 
-/datum/component/itembutchering/Initialize(_speed, _effectiveness, _bonus_modifier, _butcher_sound, disabled, _can_be_blunt)
+/datum/component/itembutchering/Initialize(_speed, _effectiveness, _butcher_sound)
 	if(_speed)
 		speed = _speed
 	if(_effectiveness)
 		effectiveness = _effectiveness
-	if(_bonus_modifier)
-		bonus_modifier = _bonus_modifier
 	if(_butcher_sound)
 		butcher_sound = _butcher_sound
-	if(disabled)
-		butchering_enabled = FALSE
-	if(_can_be_blunt)
-		can_be_blunt = _can_be_blunt
 	if(isitem(parent))
 		RegisterSignal(parent, COMSIG_ITEM_ATTACK, .proc/onItemAttack)
 
 /datum/component/itembutchering/proc/onItemAttack(obj/item/source, obj/item/fallout/carcass/M, mob/living/user)
 	if(user.a_intent != INTENT_HARM)
 		return
-	if(isturf(M.loc) && (M.butcher_results)) //can we butcher it? - Has to be on a table/surface thing.
-		if(butchering_enabled && (can_be_blunt || source.get_sharpness()))
-			INVOKE_ASYNC(src, .proc/startButcher, source, M, user)
-			return COMPONENT_ITEM_NO_ATTACK
+	if(source.get_sharpness())
+		INVOKE_ASYNC(src, .proc/startCutting, source, M, user)
+		return COMPONENT_ITEM_NO_ATTACK
 
-/datum/component/itembutchering/proc/startButcher(obj/item/source, obj/item/fallout/carcass/M, mob/living/user)
+/datum/component/itembutchering/proc/startCutting(obj/item/source, obj/item/fallout/carcass/M, mob/living/user)
 	to_chat(user, "<span class='notice'>You begin to butcher [M]...</span>")
 	playsound(M.loc, butcher_sound, 50, TRUE, -1)
-	if(do_mob(user, M, speed) && M.Adjacent(source))
-		Butcher(user, M)
+	if(M.Adjacent(source))
+		ButcherItem(user, M)
 
-/datum/component/itembutchering/proc/Butcher(mob/living/butcher, obj/item/fallout/carcass/meat)
-	var/turf/T = meat.drop_location()
-	var/final_effectiveness = effectiveness - meat.butcher_difficulty //previous butchering code was wack, this just means that if you dont have the correct butchering tools you botch the harvest.
-	for(var/V in meat.butcher_results)
+/datum/component/itembutchering/proc/ButcherItem(mob/living/U, obj/item/fallout/carcass/E)
+	var/turf/T = E.drop_location()
+	var/final_effectiveness = effectiveness - E.butcher_difficulty //previous butchering code was wack, this just means that if you dont have the correct butchering tools you botch the harvest.
+	for(var/V in E.butcher_results)
 		var/obj/item/reagent_containers/food/snacks/meat/meatamount = V
 		if(final_effectiveness < 80)
-			if(butcher)
-				to_chat(butcher, "<span class='warning'>You botch the harvest of the [initial(meatamount.name)] from [meat].</span>")
+			to_chat(U, "<span class='warning'>You botch the harvest of the [E].</span>")
 		else
-			if(butcher)
-				to_chat(butcher, "<span class='info'>You harvest some extra [initial(meatamount.name)] from [meat]!</span>")
-				new meatamount (T)
-	if(butcher)
-		butcher.visible_message("<span class='notice'>[butcher] butchers [meat].</span>", \
-								"<span class='notice'>You butcher [meat].</span>")
-	ButcherEffects(meat)
-	meat.harvest(butcher)
-	new /obj/effect/gibspawner/generic(get_turf(meat), meat)
+			to_chat(U, "<span class='info'>You efficiently harvest some [initial(meatamount.name)] from the [E]!</span>")
+			new meatamount (T)
+		U.visible_message("<span class='notice'>[U] butchers [E].</span>", \
+								"<span class='notice'>You butcher [E].</span>")
+	ButcherItemEffects(E)
+	E.harvest(U)
+	new /obj/effect/gibspawner/generic(get_turf(E), E)
 
-/datum/component/itembutchering/proc/ButcherEffects(obj/item/fallout/carcass/meat) //extra effects called on butchering, override this via subtypes
+/datum/component/itembutchering/proc/ButcherItemEffects(obj/item/fallout/carcass/E) //extra effects called on butchering, override this via subtypes
 	return
 
 /obj/item/ComponentInitialize()
@@ -515,6 +503,3 @@
 /obj/item/kitchen/knife/ComponentInitialize() //basically currently only knives can be used to butcher without destroying the meat (unless its small game)
 	. = ..()
 	AddComponent(/datum/component/itembutchering, 70 + force, 100, force - 10)
-
-/mob/living
-	var/splatter = TRUE

@@ -58,7 +58,6 @@
 	stop_automated_movement_when_pulled = 1
 	wound_bonus = -5
 	bare_wound_bonus = 5
-	splatter = FALSE
 	//does the homie have chemss/chems to extract? Poison, Milk, Other :flushed:
 	var/milkable = FALSE
 	//Chems that the creature makes
@@ -176,10 +175,6 @@
 		add_overlay("[icon_state]_saddled")
 		var/datum/component/riding/D = LoadComponent(/datum/component/riding)
 		D.set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(0, 8 + offsety), TEXT_SOUTH = list(0, 8 + offsety), TEXT_EAST = list(-2 - offsetx, 8 + offsety), TEXT_WEST = list(2 + offsetx, 8 + offsety)))
-		D.set_vehicle_dir_layer(SOUTH, RIDING_LAYER)
-		D.set_vehicle_dir_layer(NORTH, OBJ_LAYER)
-		D.set_vehicle_dir_layer(EAST, OBJ_LAYER)
-		D.set_vehicle_dir_layer(WEST, OBJ_LAYER)
 		D.drive_verb = "ride"
 		D.vehicle_move_delay = speedmodifier
 
@@ -326,7 +321,6 @@
 	stop_automated_movement_when_pulled = 1
 	wound_bonus = -5
 	bare_wound_bonus = 5
-	splatter = FALSE
 	var/milkable = FALSE
 	var/extract = null
 	var/obj/item/fallout/animalchem/chems = null
@@ -428,10 +422,6 @@
 		add_overlay("[icon_state]_saddled")
 		var/datum/component/riding/D = LoadComponent(/datum/component/riding)
 		D.set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(0, 8 + offsety), TEXT_SOUTH = list(0, 8 + offsety), TEXT_EAST = list(-2 - offsetx, 8 + offsety), TEXT_WEST = list(2 + offsetx, 8 + offsety)))
-		D.set_vehicle_dir_layer(SOUTH, RIDING_LAYER)
-		D.set_vehicle_dir_layer(NORTH, OBJ_LAYER)
-		D.set_vehicle_dir_layer(EAST, OBJ_LAYER)
-		D.set_vehicle_dir_layer(WEST, OBJ_LAYER)
 		D.keytype = /obj/item/key/lasso
 		D.drive_verb = "ride"
 		D.vehicle_move_delay = speedmodifier
@@ -546,7 +536,6 @@
 	stop_automated_movement_when_pulled = 1
 	wound_bonus = -5
 	bare_wound_bonus = 5
-	splatter = FALSE
 	var/milkable = FALSE
 	var/extract = null
 	var/obj/item/fallout/animalchem/chems = null
@@ -652,10 +641,6 @@
 		add_overlay("[icon_state]_saddled")
 		var/datum/component/riding/D = LoadComponent(/datum/component/riding)
 		D.set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(0, 8 + offsety), TEXT_SOUTH = list(0, 8 + offsety), TEXT_EAST = list(-2 - offsetx, 8 + offsety), TEXT_WEST = list(2 + offsetx, 8 + offsety)))
-		D.set_vehicle_dir_layer(SOUTH, RIDING_LAYER)
-		D.set_vehicle_dir_layer(NORTH, OBJ_LAYER)
-		D.set_vehicle_dir_layer(EAST, OBJ_LAYER)
-		D.set_vehicle_dir_layer(WEST, OBJ_LAYER)
 		D.drive_verb = "ride"
 		D.vehicle_move_delay = speedmodifier
 

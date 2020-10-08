@@ -207,7 +207,6 @@
 
 ///Extra effects to add when the mob is tamed, such as adding a riding component
 /mob/living/simple_animal/proc/tamed(whomst)
-	. = ..()
 	visible_message("<span class='alertalien'>[src] is now tamed.</span>")
 	return
 

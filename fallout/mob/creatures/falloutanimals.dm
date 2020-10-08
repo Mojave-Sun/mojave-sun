@@ -36,6 +36,8 @@
 	largemob = TRUE
 	young_type = /mob/living/simple_animal/fallout/brahminyoung
 	adult_type = /mob/living/simple_animal/hostile/retaliate/fallout/brahmin
+	offsetx = 3
+	offsety = 11
 
 /mob/living/simple_animal/fallout/brahminyoung
 	name = "brahmin calf"
@@ -52,7 +54,6 @@
 	melee_damage_lower = 0
 	melee_damage_upper = 0
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
-	splatter = TRUE
 	health = 50
 	maxHealth = 50
 	is_young = TRUE
@@ -87,8 +88,8 @@
 	young_type = null
 	adult_type = null
 	bonus_tame_chance = 5
-	offsetx = 6
-	offsety = 5
+	offsetx = 5
+	offsety = 7
 
 //clucker - chicken
 
@@ -190,7 +191,6 @@
 	melee_damage_upper = 0
 	speed = 1
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
-	splatter = TRUE
 	health = 30
 	maxHealth = 30
 	is_young = TRUE
@@ -247,7 +247,6 @@
 	melee_damage_upper = 0
 	speed = 1.5
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
-	splatter = TRUE
 	health = 10
 	maxHealth = 10
 	is_young = TRUE
@@ -319,7 +318,7 @@
 	rideable = TRUE
 	eggable = TRUE
 	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/gecko
-	offsetx = 2
+	offsetx = 6
 	offsety = 5
 
 /mob/living/simple_animal/hostile/fallout/gecko/ice
@@ -357,7 +356,7 @@
 	rideable = TRUE
 	eggable = TRUE
 	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/mirelurk
-	offsetx = 2
+	offsetx = 4
 	offsety = 5
 
 /mob/living/simple_animal/hostile/fallout/mirelurk/radlurk
@@ -426,8 +425,7 @@
 	extract = null//nightstalkers squeezin
 	pixel_x = -16
 	largemob = TRUE
-	offsetx = 2
-	offsety = 10
+	offsety = 6
 	var/poison_per_bite = 10
 	var/poison_type = /datum/reagent/toxin
 
@@ -555,7 +553,7 @@
 	young_type = /mob/living/simple_animal/fallout/radstagyoung
 	adult_type = /mob/living/simple_animal/hostile/fallout/radstag/tamed
 	offsetx = 2
-	offsety = 10
+	offsety = 7
 
 /mob/living/simple_animal/hostile/fallout/radstag/GiveTarget(new_target)
 	target = new_target
@@ -585,7 +583,6 @@
 	melee_damage_upper = 0
 	speed = 1.5
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
-	splatter = TRUE
 	health = 50
 	maxHealth = 50
 	is_young = TRUE
@@ -638,7 +635,6 @@
 	melee_damage_upper = 0
 	speed = 1.5
 	butcher_results = list()//mungrel meat
-	splatter = TRUE
 	health = 50
 	maxHealth = 50
 	is_young = TRUE
@@ -695,7 +691,7 @@
 	bonus_tame_chance = 5
 	rideable = TRUE
 	offsetx = 2
-	offsety = 10
+	offsety = 5
 
 //yaoguai
 
@@ -726,8 +722,8 @@
 	rideable = TRUE
 	pixel_x = -16
 	largemob = TRUE
-	offsetx = 2
-	offsety = 10
+	offsetx = 8
+	offsety = 8
 
 //hellpig - pig from hell, very good mount if you have 100 human flesh - prolly gonna be ooooh wee mojave sun sekrit mount wowza
 
@@ -759,5 +755,5 @@
 	pixel_x = -16
 	largemob = TRUE
 	status_flags = null
-	offsetx = 2
-	offsety = 10
+	offsetx = 6
+	offsety = 32
