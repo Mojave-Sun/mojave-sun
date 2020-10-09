@@ -144,7 +144,7 @@
 	righthand_file = 'fallout/icons/mob/inhands/misc/butchering_righthand.dmi'
 	throw_range = 2
 	w_class = WEIGHT_CLASS_BULKY
-	var/butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4) //placeholder meat
+	var/item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4) //placeholder meat
 	var/butcher_difficulty = 0
 	drop_sound = 'fallout/sound/f13items/f13handling/meat_drop.ogg'
 	pickup_sound =  'fallout/sound/f13items/f13handling/meat_pickup.ogg'
@@ -161,7 +161,7 @@
 	inhand_icon_state = "clucker_carcass"
 	throw_range = 4
 	w_class = WEIGHT_CLASS_NORMAL
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
 	butcher_difficulty = -20
 
 /obj/item/fallout/carcass/gecko
@@ -170,7 +170,7 @@
 	icon_state = "gecko_carcass"
 	inhand_icon_state = "gecko_carcass"
 	throw_range = 2
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 3)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 3)
 	butcher_difficulty = -20
 
 /obj/item/fallout/carcass/wolf
@@ -179,7 +179,7 @@
 	icon_state = "dog_carcass"
 	inhand_icon_state = "dog_carcass"
 	throw_range = 2
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2)
 	butcher_difficulty = -20
 
 /obj/item/fallout/carcass/mongrel
@@ -188,7 +188,7 @@
 	icon_state = "dog_carcass"
 	inhand_icon_state = "dog_carcass"
 	throw_range = 2
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2)
 	butcher_difficulty = -20
 
 /obj/item/fallout/carcass/molerat
@@ -197,7 +197,7 @@
 	icon_state = "rat_carcass"
 	inhand_icon_state = "rat_carcass"
 	throw_range = 2
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2)
 	butcher_difficulty = -20
 
 //large
@@ -210,7 +210,7 @@
 	inhand_icon_state = "rat_carcass"
 	throw_range = 1
 	w_class = WEIGHT_CLASS_HUGE
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 3)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 3)
 
 /obj/item/fallout/carcass/large/radstag
 	name = "radstag carcass"
@@ -219,7 +219,7 @@
 	inhand_icon_state = "radstag_carcass"
 	throw_range = 1
 	w_class = WEIGHT_CLASS_HUGE
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 5)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 5)
 
 /obj/item/fallout/carcass/large/tunneller
 	name = "tunneler carcass"
@@ -228,7 +228,7 @@
 	inhand_icon_state = "tunneller_carcass"
 	throw_range = 1
 	w_class = WEIGHT_CLASS_HUGE
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
 
 /obj/item/fallout/carcass/large/nightstalker
 	name = "nightstalker carcass"
@@ -237,7 +237,7 @@
 	inhand_icon_state = "nightstalker_carcass"
 	throw_range = 1
 	w_class = WEIGHT_CLASS_HUGE
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
 	butcher_difficulty = 15
 
 /obj/item/fallout/carcass/large/brahmiluff
@@ -247,7 +247,7 @@
 	inhand_icon_state = "brahmiluff_carcass"
 	throw_range = 1
 	w_class = WEIGHT_CLASS_HUGE
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
 
 /obj/item/fallout/carcass/large/brahmiluff/front
 	icon_state = "cowbeastfront_carcass"
@@ -264,7 +264,7 @@
 	inhand_icon_state = "brahmin_carcass"
 	throw_range = 1
 	w_class = WEIGHT_CLASS_HUGE
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 3)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 3)
 
 /obj/item/fallout/carcass/large/brahmin/front
 	icon_state = "cowbeastfront_carcass"
@@ -279,7 +279,7 @@
 	desc = "A skinned body section of a yaoguai."
 	throw_range = 1
 	w_class = WEIGHT_CLASS_HUGE
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
 	butcher_difficulty = 20
 
 /obj/item/fallout/carcass/large/yaoguai/front
@@ -295,7 +295,7 @@
 	desc = "A skinned body section of a slepnir."
 	throw_range = 1
 	w_class = WEIGHT_CLASS_HUGE
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
 	butcher_difficulty = 25
 
 /obj/item/fallout/carcass/large/slepnir/front
@@ -311,7 +311,7 @@
 	desc = "A skinned body section of a hellpig."
 	throw_range = 1
 	w_class = WEIGHT_CLASS_HUGE
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 6)
+	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 6)
 	butcher_difficulty = 30
 
 /obj/item/fallout/carcass/large/hellpig/front
@@ -460,38 +460,41 @@
 	if(_butcher_sound)
 		butcher_sound = _butcher_sound
 	if(isitem(parent))
-		RegisterSignal(parent, COMSIG_ITEM_ATTACK, .proc/onItemAttack)
+		RegisterSignal(parent, COMSIG_ITEM_ATTACK_OBJ, .proc/onItemAttack)
 
-/datum/component/itembutchering/proc/onItemAttack(obj/item/source, obj/item/fallout/carcass/M, mob/living/user)
+/datum/component/itembutchering/proc/onItemAttack(obj/item/source, atom/movable/target, mob/living/user)
+	SIGNAL_HANDLER
+
 	if(user.a_intent != INTENT_HARM)
 		return
-	if(source.get_sharpness())
-		INVOKE_ASYNC(src, .proc/startCutting, source, M, user)
-		return COMPONENT_ITEM_NO_ATTACK
+	if(istype(target, /obj/item/fallout/carcass))
+		if(source.get_sharpness())
+			INVOKE_ASYNC(src, .proc/startCutting, source, target, user)
+			return COMPONENT_ITEM_NO_ATTACK
 
 /datum/component/itembutchering/proc/startCutting(obj/item/source, obj/item/fallout/carcass/M, mob/living/user)
 	to_chat(user, "<span class='notice'>You begin to butcher [M]...</span>")
 	playsound(M.loc, butcher_sound, 50, TRUE, -1)
-	if(M.Adjacent(source))
-		ButcherItem(user, M)
+	if(do_after(user, M, speed) && M.Adjacent(source))
+		itemButcher(user, M)
 
-/datum/component/itembutchering/proc/ButcherItem(mob/living/U, obj/item/fallout/carcass/E)
+/datum/component/itembutchering/proc/itemButcher(mob/living/U, obj/item/fallout/carcass/E)
 	var/turf/T = E.drop_location()
 	var/final_effectiveness = effectiveness - E.butcher_difficulty //previous butchering code was wack, this just means that if you dont have the correct butchering tools you botch the harvest.
-	for(var/V in E.butcher_results)
+	for(var/V in E.item_butcher_results)
 		var/obj/item/reagent_containers/food/snacks/meat/meatamount = V
 		if(final_effectiveness < 80)
-			to_chat(U, "<span class='warning'>You botch the harvest of the [E].</span>")
+			to_chat(U, "<span class='warning'>You botch the harvest of the [initial(meatamount.name)] from [E].</span>")
 		else
-			to_chat(U, "<span class='info'>You efficiently harvest some [initial(meatamount.name)] from the [E]!</span>")
+			to_chat(U, "<span class='info'>You harvest some extra [initial(meatamount.name)] from [E]!</span>")
 			new meatamount (T)
 		U.visible_message("<span class='notice'>[U] butchers [E].</span>", \
 								"<span class='notice'>You butcher [E].</span>")
-	ButcherItemEffects(E)
+	ButcherEffects(E)
 	E.harvest(U)
 	new /obj/effect/gibspawner/generic(get_turf(E), E)
 
-/datum/component/itembutchering/proc/ButcherItemEffects(obj/item/fallout/carcass/E) //extra effects called on butchering, override this via subtypes
+/datum/component/itembutchering/proc/ButcherEffects(obj/item/fallout/carcass/meat) //extra effects called on butchering, override this via subtypes
 	return
 
 /obj/item/ComponentInitialize()

@@ -634,7 +634,7 @@
 	melee_damage_lower = 0
 	melee_damage_upper = 0
 	speed = 1.5
-	butcher_results = list()//mungrel meat
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)//mungrel meat
 	health = 50
 	maxHealth = 50
 	is_young = TRUE
