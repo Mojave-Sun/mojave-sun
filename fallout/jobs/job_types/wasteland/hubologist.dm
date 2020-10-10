@@ -1,4 +1,4 @@
-datum/job/f13/wasteland/hubologist
+/datum/job/f13/wasteland/hubologist
 	title = "Hubologist"
 	total_positions = 2
 	spawn_positions = 2
@@ -12,8 +12,10 @@ datum/job/f13/wasteland/hubologist
 	display_order = JOB_DISPLAY_ORDER_F13_HUBOLOGIST
 
 /datum/outfit/job/f13/wasteland/hubologist
-	name = "Hubologist"
+	name = "_Hubologist"
 	jobtype = /datum/job/f13/wasteland/hubologist
+
+	head = /obj/item/clothing/head/collectable/petehat
 
 /datum/outfit/job/f13/wasteland/hubologist/pre_equip(mob/living/carbon/human/H)
 	..()

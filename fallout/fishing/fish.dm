@@ -82,7 +82,7 @@
 	name = "raw fish fillet"
 	desc = "A raw fish fillet. You shouldn't be seeing this."
 	icon_state = "sockeye_cutlet"
-	cooked_type = /obj/item/reagent_containers/food/snacks/meat/cutlet/plain
+	cooked_type = /obj/item/food/meat/rawcutlet/plain
 	bitesize = 4
 	list_reagents = list(/datum/reagent/consumable/nutriment = 4)
 	bonus_reagents = list(/datum/reagent/consumable/nutriment/vitamin = 2)

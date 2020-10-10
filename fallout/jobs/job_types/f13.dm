@@ -10,8 +10,26 @@ Fallout 13 Job Base Class
 	name = "Default"
 	jobtype = /datum/job/f13
 
+	//This is all nulled to override /datum/outfit/job giving everyone assistant gear.
+
+	uniform = null
+	id = null
+	ears = null
+	belt = null
+	back = null
+	shoes = null
+	box = null
+
+	backpack = null
+	satchel  = null
+	duffelbag = null
+
+	pda_slot = null
+
+	skillchip_path = null
+
 /datum/outfit/job/f13/pre_equip(mob/living/carbon/human/H)
-	..()
+	//Blank for now, utilize as needed later on.
 
 //These are base jobs, we don't want them appearing at all
 /datum/job/f13/config_check()
