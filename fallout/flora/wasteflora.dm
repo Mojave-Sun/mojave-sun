@@ -357,14 +357,13 @@
 
 //fallout plant tray
 
-#define SMOOTH_GROUP_SOIL S_OBJ(55)					///obj/machinery/hydroponics/fallout/soil
-
 /obj/machinery/hydroponics/fallout/soil
 	name = "soil"
 	desc = "A patch of dirt."
 	icon = 'fallout/icons/hydroponics/soil.dmi'
-	icon_state = "soil"
-	smoothing_flags = SMOOTH_CORNERS
+	icon_state = "soil-0"
+	base_icon_state = "soil"
+	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_SOIL)
 	canSmoothWith = list(SMOOTH_GROUP_SOIL)
 	pixel_z = 0
