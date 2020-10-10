@@ -1,4 +1,4 @@
-datum/job/f13/wasteland/wastelander
+/datum/job/f13/wasteland/wastelander
 	title = "Wastelander"
 	total_positions = 200
 	spawn_positions = 2
@@ -12,8 +12,10 @@ datum/job/f13/wasteland/wastelander
 	display_order = JOB_DISPLAY_ORDER_F13_WASTELANDER
 
 /datum/outfit/job/f13/wasteland/wastelander
-	name = "Wastelander"
+	name = "_Wastelander"
 	jobtype = /datum/job/f13/wasteland/wastelander
+
+	head = /obj/item/clothing/head/collectable/petehat
 
 /datum/outfit/job/f13/wasteland/wastelander/pre_equip(mob/living/carbon/human/H)
 	..()
