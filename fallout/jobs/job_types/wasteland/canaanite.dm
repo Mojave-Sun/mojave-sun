@@ -1,4 +1,4 @@
-datum/job/f13/wasteland/canaanite
+/datum/job/f13/wasteland/canaanite
 	title = "New Canaanite"
 	total_positions = 2
 	spawn_positions = 2
@@ -12,8 +12,10 @@ datum/job/f13/wasteland/canaanite
 	display_order = JOB_DISPLAY_ORDER_F13_CANAANITE
 
 /datum/outfit/job/f13/wasteland/canaanite
-	name = "New Canaanite"
+	name = "_New Canaanite"
 	jobtype = /datum/job/f13/wasteland/canaanite
+
+	head = /obj/item/clothing/head/collectable/petehat
 
 /datum/outfit/job/f13/wasteland/canaanite/pre_equip(mob/living/carbon/human/H)
 	..()

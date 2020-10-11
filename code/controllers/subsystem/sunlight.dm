@@ -70,10 +70,10 @@ SUBSYSTEM_DEF(sunlight)
 	var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/morning(), new /datum/time_of_day/day(),  \
                                  new /datum/time_of_day/evening(), new /datum/time_of_day/night())
 
-datum/controller/subsystem/sunlight/stat_entry()
+/datum/controller/subsystem/sunlight/stat_entry()
 	..("W:[GLOB.SUNLIGHT_QUEUE_WORK.len]|C:[GLOB.SUNLIGHT_QUEUE_CORNER.len]|U:[GLOB.SUNLIGHT_QUEUE_UPDATE.len]")
 
-datum/controller/subsystem/sunlight/proc/fullPlonk()
+/datum/controller/subsystem/sunlight/proc/fullPlonk()
 	GLOB.SUNLIGHT_QUEUE_WORK = GLOB.sunlight_objects
 
 /datum/controller/subsystem/sunlight/Initialize(timeofday)
