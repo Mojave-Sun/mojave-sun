@@ -16,10 +16,18 @@
 	var/productdesc
 	/// Used to update icons. Should match the name in the sprites unless all icon_* are overridden.
 	var/species = ""
+	/// Checks if whole object needs to be custom coloured (wheat, etc)
+	var/wholeiconcolor = FALSE
+	/// Checks product colour sprite is seperate
+	var/harvest_icon = 0
 	///the file that stores the sprites of the growing plant from this seed.
 	var/growing_icon = 'icons/obj/hydroponics/growing.dmi'
+	///the growing color of the plant
+	var/growing_color = "#00000000"
 	/// Used to override grow icon (default is `"[species]-grow"`). You can use one grow icon for multiple closely related plants with it.
 	var/icon_grow
+	/// Used to override product icon (default is "[species]-product").
+	var/icon_product
 	/// Used to override dead icon (default is `"[species]-dead"`). You can use one dead icon for multiple closely related plants with it.
 	var/icon_dead
 	/// Used to override harvest icon (default is `"[species]-harvest"`). If null, plant will use `[icon_grow][growthstages]`.
@@ -66,6 +74,9 @@
 	. = ..()
 	pixel_x = rand(-8, 8)
 	pixel_y = rand(-8, 8)
+
+	if(!icon_product)
+		icon_product = "[species]-product"
 
 	if(!icon_grow)
 		icon_grow = "[species]-grow"
