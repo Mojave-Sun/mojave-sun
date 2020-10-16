@@ -183,7 +183,7 @@
 
 /* our sunny version - I will need to figure out a less shit way of copying this */
 /obj/screen/fullscreen/lighting_backdrop/Sunlight
-	icon = 'icons/mob/screen_gen.dmi'
+	icon = 'icons/hud/screen_gen.dmi'
 	icon_state = "flash"
 	screen_loc = "CENTER"
 	transform = null
