@@ -1,6 +1,33 @@
-//Contains new hay craftable objects, will be moved into their relevant files eventually
-//For now these are collated here for ease of my lazyness times -Gomble
+//////////////////////////////////////////////////////////////////////////////
+//CONTAINS FALLOUT STACKS AND MINERAL/ORES, also sheet crafting for ease :) //
+//////////////////////////////////////////////////////////////////////////////
 
+//COTTON//
+
+/obj/item/stack/sheet/cotton/fallout
+	name = "raw cotton bundle"
+	desc = "A bundle of raw cotton ready to be spun on the loom."
+	singular_name = "raw cotton ball"
+	icon = 'fallout/icons/objects/stack_objects.dmi'
+	icon_state = "sheet-cotton"
+	resistance_flags = FLAMMABLE
+	force = 0
+	throwforce = 0
+	merge_type = /obj/item/stack/sheet/cotton
+	max_amount = 30
+	loom_result = /obj/item/stack/sheet/cloth //fallout
+	grind_results = list(/datum/reagent/cellulose = 20)
+
+/obj/item/stack/sheet/cotton/ten
+	amount = 10
+
+/obj/item/stack/sheet/cotton/twenty
+	amount = 20
+
+/obj/item/stack/sheet/cotton/thirty
+	amount = 30
+
+//HAY//
 GLOBAL_LIST_INIT(hay_recipes, list ( \
 	new/datum/stack_recipe("rice hat", /obj/item/clothing/head/rice_hat, 4, time = 5, one_per_turf = FALSE, on_floor = FALSE), \
 ))
@@ -19,8 +46,8 @@ GLOBAL_LIST_INIT(hay_recipes, list ( \
 	max_amount = 50
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 0)
 	resistance_flags = FLAMMABLE
-	attack_verb_continuous = list("tickles", "pokes", "whips")
-	attack_verb_simple = list("tickled", "poked", "whipped")
+	attack_verb_continuous = list("thrashes")
+	attack_verb_simple = list("thrash")
 
 /obj/item/stack/sheet/hay/Initialize(mapload, new_amount, merge = TRUE)
 	recipes = GLOB.hay_recipes
