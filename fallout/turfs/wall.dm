@@ -51,11 +51,15 @@
 /turf/closed/wall/f13/brick
 	name = "brick wall"
 	desc = ""
-	icon = 'fallout/icons/turf/walls/brick.dmi'
+	icon = 'fallout/icons/turf/walls/tallbrick-dark.dmi'
 	icon_state = "brick-0"
 	base_icon_state = "brick"
 	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_BRICK,SMOOTH_GROUP_FALLOUT_WINDOW)
 	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_BRICK,SMOOTH_GROUP_FALLOUT_WINDOW)
+	layer = EDGED_TURF_LAYER
+
+/turf/closed/wall/f13/brick/alt
+	icon = 'fallout/icons/turf/walls/tallbrick-light.dmi'
 
 /turf/closed/wall/r_wall/f13
 	name = "base class wall"
