@@ -72,6 +72,8 @@ DEFINE_BITFIELD(smoothing_flags, list(
 
 #define MAX_S_TURF SMOOTH_GROUP_SURVIVAL_TITANIUM_WALLS //Always match this value with the one above it.
 
+#define S_OBJ(num) (MAX_S_TURF + 1 + num)
+
 /* /obj included */
 
 #define SMOOTH_GROUP_WALLS S_OBJ(0)						///turf/closed/wall, /obj/structure/falsewall
