@@ -10,6 +10,7 @@
 #define SMOOTH_GROUP_FALLOUT_MINERALS S_OBJ_FO(7)			///turf/closed/mineral/random/f13, /turf/closed/indestructible/rock/f13
 #define SMOOTH_GROUP_FALLOUT_WINDOW S_OBJ_FO(8)			///obj/structure/window/fulltile/f13/glass
 
+#define SMOOTH_GROUP_SOIL S_OBJ_FO(19)					///obj/machinery/hydroponics/fallout/soil
 #define SMOOTH_GROUP_FALLOUT_TABLES S_OBJ_FO(20)			///obj/structure/table/f13
 
 #define MAX_S_TURF_FO SMOOTH_GROUP_FALLOUT_TABLES //Always match this value with the one above it.
