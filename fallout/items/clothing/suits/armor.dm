@@ -207,47 +207,59 @@
 	inhand_icon_state = "ncr_reinforced_mantle_w"
 	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 30, "acid" = 25)
 
-/obj/item/clothing/suit/armor/fallout/legion
+/obj/item/clothing/suit/armor/fallout/legion/recruit
 	name = "legion recruit armor"
 	desc = "Standard armor for Legion recruits, cobbled together with various sports equipment and additional reinforcements as needed."
-	icon_state = "legrecruit"
+	icon_state = "leg_rec"
 	inhand_icon_state = "legarmor"
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 5, "rad" = 5, "fire" = 15, "acid" = 5)
 
 /obj/item/clothing/suit/armor/fallout/legion/prime
 	name = "legion prime armor"
 	desc = "Sturdier armor given to Prime legionaries, those who survive long enough to get there."
-	icon_state = "legprime"
+	icon_state = "leg_prime"
 	armor = list("melee" = 45, "bullet" = 35, "laser" = 15, "energy" = 15, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 25, "acid" = 10)
 
 /obj/item/clothing/suit/armor/fallout/legion/veteran
 	name = "legion veteran armor"
 	desc = "High quality Legion armor given only to their best; feared Legion Veterans."
-	icon_state = "legvet"
+	icon_state = "leg_vet"
 	armor = list("melee" = 50, "bullet" = 40, "laser" = 20, "energy" = 20, "bomb" = 30, "bio" = 20, "rad" = 20, "fire" = 30, "acid" = 20)
 
-/obj/item/clothing/suit/armor/fallout/legion/scout
+/obj/item/clothing/suit/armor/fallout/legion/mobile/scout
 	name = "legion scout armor"
 	desc = "Legion recruit armor without a chestplate, slightly reduced protection as a result."
-	icon_state = "legscout"
+	icon_state = "leg_scout"
 	armor = list("melee" = 35, "bullet" = 25, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 5, "rad" = 5, "fire" = 10, "acid" = 5)
 
-/obj/item/clothing/suit/armor/fallout/legion/explorer
+/obj/item/clothing/suit/armor/fallout/legion/mobile/explorer
 	name = "legion explorer armor"
 	desc = "Legion veteran armor with less reinforcements, reducing some of it's protection."
-	icon_state = "legexplorer"
+	icon_state = "leg_exp"
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
 
-/obj/item/clothing/suit/armor/fallout/legion/vexil
+/obj/item/clothing/suit/armor/fallout/legion/mobile/speculatore
+	name = "legion explorer armor"
+	desc = "Legion veteran armor with less reinforcements, reducing some of it's protection."
+	icon_state = "leg_exp"
+	armor = list("melee" = 45, "bullet" = 40, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
+
+/obj/item/clothing/suit/armor/fallout/legion/vexillarius
 	name = "legion vexillarius armor"
-	desc = "Legion veteran armor with the addition of protective plates and a Legion banner on it's back."
-	icon_state = "legvet"
+	desc = "Legion vexillarius armor with the addition of protective plates and defining color."
+	icon_state = "leg_vex"
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 20, "rad" = 20, "fire" = 30, "acid" = 20)
+
+/obj/item/clothing/suit/armor/fallout/legion/praetorian
+	name = "legion praetorian armor"
+	desc = "Legion praetorian armor, worn only by the most skilled guardians of the Legion."
+	icon_state = "leg_prae"
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 20, "rad" = 20, "fire" = 30, "acid" = 20)
 
-/obj/item/clothing/suit/armor/fallout/legion/cent
+/obj/item/clothing/suit/armor/fallout/legion/centurion
 	name = "legion centurion armor"
 	desc = "A Legion suit of armor made mostly of various pieces of armor, former opponents of the Centurion who made it."
-	icon_state = "legcenturion"
+	icon_state = "leg_Cent"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 30, "energy" = 30, "bomb" = 45, "bio" = 30, "rad" = 30, "fire" = 50, "acid" = 30)
 
 /obj/item/clothing/suit/armor/fallout/scribe
