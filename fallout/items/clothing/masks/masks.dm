@@ -3,7 +3,7 @@
     desc = "this doesn't even exist"
     icon = 'fallout/icons/objects/clothing/masks.dmi'
     worn_icon = 'fallout/icons/mob/clothing/mask.dmi'
-    
+
 /obj/item/clothing/mask/fallout/legion/clothmask
     name = "cloth mask"
     desc = "A simple cloth mask often used by legionares for an assortment of reasons."
