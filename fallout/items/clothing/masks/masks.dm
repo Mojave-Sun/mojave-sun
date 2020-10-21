@@ -8,6 +8,7 @@
     name = "cloth mask"
     desc = "A simple cloth mask often used by legionares for an assortment of reasons."
     icon_state = "leg_mask"
+    flags_inv = HIDEFACE
 
 /obj/item/clothing/mask/fallout/legion/speculatore
 	name = "legion speculatore mask"
@@ -15,3 +16,4 @@
 	icon_state = "leg_spec"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 20)
+    flags_inv = HIDEFACE
