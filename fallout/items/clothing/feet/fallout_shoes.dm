@@ -107,19 +107,27 @@
 	icon_state = "ncr_officer_boots_w"
 	inhand_icon_state = "ncr_officer_boots_w"
 
-/obj/item/clothing/shoes/fallout/military/legionleather
-	name = "leather boots"
-	desc = "A pair of leather boots commonly worn by the Caesar's Legion recruits."
-	icon_state = "legionleather"
+/obj/item/clothing/shoes/fallout/military/legiontanboots
+	name = "tan leather boots"
+	desc = "A crude pair of leather boots commonly worn by the Caesar's Legion recruits. These ones are made of a tan leather."
+	icon_state = "leg_tanboot"
 	inhand_icon_state = "legionleather"
-	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+	armor = list(melee = 20, bullet = 10, laser = 10, energy = 0, bomb = 10, bio = 0, rad = 5, fire = 10, acid = 0)
 
-/obj/item/clothing/shoes/fallout/military/legionmetal
-	name = "metal boots"
-	desc = "A pair of metal boots commonly worn by Caesar's Legion veterans."
-	icon_state = "legionmetal"
+/obj/item/clothing/shoes/fallout/military/legiondarkboots
+	name = "dark leather boots"
+	desc = "A crude pair of leather boots commonly worn by the Caesar's Legion recruits. These ones are made of a darker leather."
+	icon_state = "leg_darkboot"
+	inhand_icon_state = "legionleather"
+	armor = list(melee = 20, bullet = 10, laser = 10, energy = 0, bomb = 10, bio = 0, rad = 5, fire = 10, acid = 0)
+
+/obj/item/clothing/shoes/fallout/military/legioncleats
+	name = "cleats"
+	desc = "A pair of cleats, often sported by mobility focused legionaries."
+	icon_state = "leg_cleats"
 	inhand_icon_state = "legionmetal"
-	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
+	clothing_flags = NOSLIP
+	armor = list(melee = 10, bullet = 10, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 
 /obj/item/clothing/shoes/fallout/military/legionlegate
 	name = "legate boots"

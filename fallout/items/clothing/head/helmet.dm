@@ -350,15 +350,15 @@
 	icon_state = "leg_prime"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 35, "bullet" = 20, "laser" = 15, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/fallout/legion/veteran
 	name = "legion veteran helmet"
 	desc = "A helmet used by Veteran legionaries. It's got a face guard to keep you from bumping into things!"
-	icon_state = "leg_prime"
+	icon_state = "leg_vet"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/fallout/legion/decanus/recruit
 	name = "recruit decanus helmet"
@@ -390,7 +390,7 @@
 	icon_state = "leg_cent"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 60, "bullet" = 40, "laser" = 35, "energy" = 20, "bomb" = 55, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/fallout/legion/praetorian
 	name = "praetorian helmet"
@@ -398,29 +398,20 @@
 	icon_state = "leg_prae"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 65, "bullet" = 50, "laser" = 45, "energy" = 20, "bomb" = 65, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/helmet/fallout/legion/mobile/helmet
+/obj/item/clothing/head/helmet/fallout/legion/helmet
 	name = "legion scout helmet"
 	desc = "A simple skull-cap helmet, often seen sucking the brain straight ouf of Legion Scouts"
-	icon_state = "leg_exp"
+	icon_state = "leg_scout"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 20, "bomb" = 35, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
-	flags_inv = HIDEEARS|HIDEFACE
+	flags_inv = HIDEEARS
 
-/obj/item/clothing/head/helmet/fallout/legion/mobile/explorer
+/obj/item/clothing/head/helmet/fallout/legion/explorer
 	name = "legion explorer cap"
 	desc = "A relatively preserved pre-war baseball cap, now pridefully adopted by Legion explorers. Style over Strength."
 	icon_state = "leg_exp"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 15, "bullet" = 20, "laser" = 15, "energy" = 20, "bomb" = 15, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
 	
-/obj/item/clothing/head/helmet/fallout/legion/mobile/speculatore
-	name = "legion speculatore mask"
-	desc = "A mask only worn by the near unheard of Speculatores of the Legion. Whatever metal it's made of is good for deflecting bullets received to the face- If you can hit them."
-	icon_state = "leg_spec"
-	inhand_icon_state = "owl_mask"
-	armor = list("melee" = 40, "bullet" = 45, "laser" = 40, "energy" = 20, "bomb" = 35, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
-
-
