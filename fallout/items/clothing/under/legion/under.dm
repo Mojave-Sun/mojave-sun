@@ -55,3 +55,9 @@
 	desc = "A white uniform worn by members of Caesar's Legion for snowy environments. This one is padded."
 	icon_state = "leg_wp_skirt"
 	inhand_icon_state = "bl_suit"
+
+/obj/item/clothing/under/fallout/legion/fatigues/slaverags
+	name = "Slave Rags"
+	desc = "Rags indicating you've been given the highest honor the Legion can bestow upon you- Servitude. Ave Caesar!"
+	icon_state = "leg_slave"
+	inhand_icon_state = "bl_suit"
