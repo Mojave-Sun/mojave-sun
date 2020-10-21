@@ -414,4 +414,3 @@
 	icon_state = "leg_exp"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 20, "bomb" = 15, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
-	

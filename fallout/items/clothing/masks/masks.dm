@@ -17,4 +17,3 @@
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 20)
 	flags_inv = HIDEFACE
-	

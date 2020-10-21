@@ -35,6 +35,3 @@
 	name = "brown half cloak"
 	desc = "A brown half cloak worn by certain legionaires. It's got the symbol of the bull on its back."
 	icon_state = "leg_brownhalf"
-	
-
-	
