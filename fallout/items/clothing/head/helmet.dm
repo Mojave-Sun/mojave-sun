@@ -415,3 +415,8 @@
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 20, "bomb" = 15, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
 
+/obj/item/clothing/head/helmet/fallout/manny
+	name = "manny mammoth head"
+	desc = "A perfectly preserved pre-war VINTAGE Manny Mammoth head! It smells of crusty pizza."
+	icon_state = "mannyhead"
+	inhand_icon_state = "mannyhead"
