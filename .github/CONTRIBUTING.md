@@ -59,7 +59,7 @@ datum
 				proc3()
 					code
 			proc2()
-				..()
+				. = ..()
 				code
 ```
 
