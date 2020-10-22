@@ -20,9 +20,11 @@
 /datum/outfit/job/f13/legion/centurion/pre_equip(mob/living/carbon/human/H)
 	..()
 	glasses = /obj/item/clothing/glasses/sunglasses/big
-	back = /obj/item/storage/backpack/satchel/leather
+	backpack = /obj/item/storage/backpack/satchel/leather
 	uniform = /obj/item/clothing/under/fallout/legion/fatigues/redpadded
 	shoes = /obj/item/clothing/shoes/fallout/military/legiondarkboots
 	suit = /obj/item/clothing/suit/armor/fallout/legion/centurion
 	suit_store = /obj/item/gun/ballistic/automatic/fallout/smg10mm
 	r_hand = /obj/item/melee/powerfist
+	l_pocket = /obj/item/tank/internals/emergency_oxygen
+	r_pocket = /obj/item/ammo_box/magazine/fallout/smgm10mm

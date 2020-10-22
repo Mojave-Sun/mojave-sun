@@ -400,7 +400,7 @@
 	armor = list("melee" = 65, "bullet" = 50, "laser" = 45, "energy" = 20, "bomb" = 65, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/helmet/fallout/legion/helmet
+/obj/item/clothing/head/helmet/fallout/legion/scout
 	name = "legion scout helmet"
 	desc = "A simple helmet, often seen sucking onto the heads of Legionary scouts."
 	icon_state = "leg_scout"
@@ -414,3 +414,4 @@
 	icon_state = "leg_exp"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 20, "bomb" = 15, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
+
