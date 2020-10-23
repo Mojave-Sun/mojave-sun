@@ -470,7 +470,7 @@
 	if(istype(target, /obj/item/fallout/carcass))
 		if(source.get_sharpness())
 			INVOKE_ASYNC(src, .proc/startCutting, source, target, user)
-			return COMPONENT_ITEM_NO_ATTACK
+			return COMPONENT_CANCEL_ATTACK_CHAIN
 
 /datum/component/itembutchering/proc/startCutting(obj/item/source, obj/item/fallout/carcass/M, mob/living/user)
 	to_chat(user, "<span class='notice'>You begin to butcher [M]...</span>")
