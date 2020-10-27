@@ -89,10 +89,14 @@
 
 //Plasteel (generic) floor tiles.
 
+/obj/item/stack/tile/plasteel/f13
+	turf_type = /turf/open/floor/plasteel/f13
+
 
 /turf/open/floor/plasteel/f13
 	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "floor"
+	floor_tile = /obj/item/stack/tile/plasteel/f13
 
 /turf/open/floor/plasteel/f13/_dirty
 	icon = 'fallout/icons/turf/floors_2.dmi'
