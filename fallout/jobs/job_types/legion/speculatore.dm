@@ -14,8 +14,6 @@
 	name = "_Legion Speculatore"
 	jobtype = /datum/job/f13/legion/speculatore
 
-	head = /obj/item/clothing/head/helmet/fallout/legion
-
 /datum/outfit/job/f13/legion/speculatore/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = /obj/item/clothing/under/fallout/legion/fatigues/brownstealth
@@ -25,3 +23,4 @@
 	gloves = /obj/item/clothing/gloves/fallout/darkwraps
 	suit_store = /obj/item/gun/ballistic/rifle/fallout/hunting/scoped/amr
 	l_pocket = /obj/item/ammo_box/magazine/fallout/amr
+	neck = /obj/item/clothing/neck/cloak/fallout/speculatore
