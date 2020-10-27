@@ -13,8 +13,60 @@
 
 /obj/structure/table/f13/round
 	name = "round table"
-	desc = "A table, masterfully designed with high-tech to become... round"
+	desc = "A table, masterfully designed with high-tech to become... round."
 	icon_state = "roundtable"
 	icon = 'fallout/icons/objects/structures.dmi'
 	smoothing_flags = NONE
 	canSmoothWith = null
+
+/obj/structure/table/f13/no_smooth
+	name = "non-smoothing wasteland table"
+	desc = "Much like a regular table, except it doesn't smooth. Revolutionary, I know."
+	icon_state = "desk"
+	icon = 'fallout/icons/structure/standalone_tables.dmi'
+	smoothing_flags = NONE
+	canSmoothWith = null
+
+/obj/structure/table/f13/no_smooth/desk
+	name = "wooden desk"
+	desc = "A desk. The drawers are stuck."
+	icon_state = "desk"
+
+/obj/structure/table/f13/standalone/workbench
+	name = "workbench"
+	desc = "A perfect surface for arts and crafts. It's got so much space for activities!"
+	icon_state = "workbench"
+
+/obj/structure/table/f13/standalone/pool
+	name = "pool table"
+	desc = "A favourite of students and drunkards alike. Watch out for sharks!"
+	icon_state = "pool_left"
+
+/obj/structure/table/f13/standalone/pool/right
+	icon_state = "pool_right"
+
+/obj/structure/table/f13/standalone/cards
+	name = "cards table"
+	desc = "Very classy. Reminds you of that time in New Reno..."
+	icon_state = "cards_left"
+
+/obj/structure/table/f13/standalone/cards/right
+	icon_state = "cards_right"
+
+/obj/structure/table/f13/standalone/wood
+	name = "wooden table"
+	desc = "Sturdy and hardwearing."
+	icon_state = "wood_top"
+
+/obj/structure/table/f13/standalone/wood/bottom
+	icon_state = "wood_bottom"
+
+/obj/structure/table/f13/no_smooth/dice
+	name = "dice table"
+	desc = "Shoot the dice with your friends. Preferably not literally."
+	icon_state = "dice_dirty"
+
+/obj/structure/table/f13/no_smooth/dice/pristine
+	name = "pristine dice table"
+	desc = "Shoot the dice with your friends. Preferably not literally."
+	icon_state = "dice_clean"
