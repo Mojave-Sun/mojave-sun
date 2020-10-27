@@ -32,33 +32,33 @@
 	desc = "A desk. The drawers are stuck."
 	icon_state = "desk"
 
-/obj/structure/table/f13/standalone/workbench
+/obj/structure/table/f13/no_smooth/workbench
 	name = "workbench"
 	desc = "A perfect surface for arts and crafts. It's got so much space for activities!"
 	icon_state = "workbench"
 
-/obj/structure/table/f13/standalone/pool
+/obj/structure/table/f13/no_smooth/pool
 	name = "pool table"
 	desc = "A favourite of students and drunkards alike. Watch out for sharks!"
 	icon_state = "pool_left"
 
-/obj/structure/table/f13/standalone/pool/right
+/obj/structure/table/f13/no_smooth/pool/right
 	icon_state = "pool_right"
 
-/obj/structure/table/f13/standalone/cards
+/obj/structure/table/f13/no_smooth/cards
 	name = "cards table"
 	desc = "Very classy. Reminds you of that time in New Reno..."
 	icon_state = "cards_left"
 
-/obj/structure/table/f13/standalone/cards/right
+/obj/structure/table/f13/no_smooth/cards/right
 	icon_state = "cards_right"
 
-/obj/structure/table/f13/standalone/wood
+/obj/structure/table/f13/no_smooth/wood
 	name = "wooden table"
 	desc = "Sturdy and hardwearing."
 	icon_state = "wood_top"
 
-/obj/structure/table/f13/standalone/wood/bottom
+/obj/structure/table/f13/no_smooth/wood/bottom
 	icon_state = "wood_bottom"
 
 /obj/structure/table/f13/no_smooth/dice

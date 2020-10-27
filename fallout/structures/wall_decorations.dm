@@ -2,6 +2,7 @@
 	name = "wasteland poster"
 	desc = "Display your radioactive dust on your wall."
 	icon = 'fallout/icons/objects/posters.dmi'
+	layer = 4.4
 
 /obj/structure/sign/poster/f13/careless
 	name = "Careless Talk Costs Lives"
