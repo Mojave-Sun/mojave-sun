@@ -393,3 +393,8 @@
 	desc = "A segment of broken ice."
 	icon = 'fallout/icons/turf/ice.dmi'
 	icon_state = "chunk"
+
+//This functions like normal openspace but prevents placing lattice, so people cannot cheese catwalks or floors clear across the map.
+//TODO: give unique icon_state/color to make it visually distinct from regular openspace.
+/turf/open/transparent/openspace/f13_no_build
+	can_build_on = FALSE
