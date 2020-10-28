@@ -22,7 +22,7 @@
 	suit = /obj/item/clothing/suit/armor/fallout/legion/centurion
 	suit_store = /obj/item/gun/ballistic/automatic/fallout/smg10mm
 	r_hand = /obj/item/melee/powerfist
-	l_pocket = /obj/item/tank/internals/oxygen
+	l_hand = /obj/item/tank/internals/oxygen/yellow
 	r_pocket = /obj/item/ammo_box/magazine/fallout/smgm10mm
 
 /datum/outfit/job/f13/legion/centurion/pre_equip(mob/living/carbon/human/H)
