@@ -2,7 +2,7 @@
 	title = "Recruit Legionary"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "The Centurion, Any Decanus."
+	supervisors = "The Centurion, any Decanus."
 	description = "Assist the higher ranks in handling your soldiers, keep them in line and focused on the goals at hand."
 
 	outfit = /datum/outfit/job/f13/legion/recruitlegionary
