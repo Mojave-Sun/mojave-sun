@@ -3,7 +3,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Centurion, Veteran Decanii."
-	description = "Fight in the name of Caesar, and claim the lands for the bull! Listen to your superiors, They will guide you to victory."
+	description = "Fight in the name of Caesar, and claim the lands for the Bull! Listen to your superiors, they will guide you to victory."
 
 	outfit = /datum/outfit/job/f13/legion/veteranlegionary
 
