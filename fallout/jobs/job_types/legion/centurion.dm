@@ -4,7 +4,6 @@
 	spawn_positions = 1
 	supervisors = "Praetorians, The Legate, and Caesar."
 	description = "Command your Centura, leading them to glorious victory at all costs."
-	forbid = "Caesar's Legion forbids: Chem usage, Over-reliance on technology of all forms."
 	enforce = "The Legion expects you to lead them effectively. Do not be a coward."
 
 	outfit = /datum/outfit/job/f13/legion/centurion
@@ -16,9 +15,6 @@
 	jobtype = /datum/job/f13/legion/centurion
 
 	head = /obj/item/clothing/head/helmet/fallout/legion/centurion
-
-/datum/outfit/job/f13/legion/centurion/pre_equip(mob/living/carbon/human/H)
-	..()
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	backpack = /obj/item/storage/backpack/satchel/leather
 	uniform = /obj/item/clothing/under/fallout/legion/fatigues/redpadded
@@ -28,3 +24,6 @@
 	r_hand = /obj/item/melee/powerfist
 	l_pocket = /obj/item/tank/internals/emergency_oxygen
 	r_pocket = /obj/item/ammo_box/magazine/fallout/smgm10mm
+
+/datum/outfit/job/f13/legion/centurion/pre_equip(mob/living/carbon/human/H)
+	..()
