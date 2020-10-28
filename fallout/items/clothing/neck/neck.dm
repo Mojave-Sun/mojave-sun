@@ -6,7 +6,7 @@
 	icon_state = "qmcloak"
 	inhand_icon_state = "qmcloak"
 	
-	/obj/item/clothing/neck/cloak/fallout/legion
+/obj/item/clothing/neck/cloak/fallout/legion
 	name = "brown cloak"
 	desc = "This shouldn't really exist"
 	icon_state = "leg_whitehalf"

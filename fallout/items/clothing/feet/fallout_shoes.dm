@@ -114,7 +114,7 @@
 	inhand_icon_state = "legionleather"
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 0, bomb = 10, bio = 0, rad = 5, fire = 10, acid = 0)
 	
-	/obj/item/clothing/shoes/fallout/military/legion/tanboots
+/obj/item/clothing/shoes/fallout/military/legion/tanboots
 	name = "tan leather boots"
 	desc = "A crude pair of leather boots commonly worn by the Caesar's Legion recruits. These ones are made of a tan leather."
 	icon_state = "leg_tanboot"
