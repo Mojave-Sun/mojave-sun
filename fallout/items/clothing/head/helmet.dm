@@ -331,7 +331,7 @@
 	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/fallout/legion/vexillarius
-	name = "veteran vexillarius headdress"
+	name = "vexillarius headdress"
 	desc = "A helmet used by only the loudest message relayers and heartiest morale boosters of the Legion"
 	icon_state = "leg_vex"
 	inhand_icon_state = "owl_mask"
