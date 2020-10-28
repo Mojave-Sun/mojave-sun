@@ -14,7 +14,7 @@
 	jobtype = /datum/job/f13/legion/explorer
 
 	head = /obj/item/clothing/head/helmet/fallout/legion/explorer
-		back = /obj/item/storage/backpack/satchel/leather
+	back = /obj/item/storage/backpack/satchel/leather
 	uniform = /obj/item/clothing/under/fallout/legion/fatigues/brownstealth
 	shoes = /obj/item/clothing/shoes/fallout/military/legioncleats
 	suit = /obj/item/clothing/suit/armor/fallout/legion/explorer

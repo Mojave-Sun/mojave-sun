@@ -14,7 +14,7 @@
 	jobtype = /datum/job/f13/legion/primelegionary
 
 	head = /obj/item/clothing/head/helmet/fallout/legion/prime
-		glasses = /obj/item/clothing/glasses/sunglasses/big
+	glasses = /obj/item/clothing/glasses/sunglasses/big
 	back = /obj/item/storage/backpack/satchel/leather
 	uniform = /obj/item/clothing/under/fallout/legion/fatigues/red
 	shoes = /obj/item/clothing/shoes/fallout/military/legiondarkboots

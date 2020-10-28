@@ -24,6 +24,5 @@
 	suit_store = /obj/item/gun/ballistic/automatic/fallout/smg9mm
 	l_pocket = /obj/item/ammo_box/magazine/fallout/smgm9mm
 
-
 /datum/outfit/job/f13/legion/recruitdecanus/pre_equip(mob/living/carbon/human/H)
 	..()
