@@ -20,7 +20,7 @@
 	gloves = /obj/item/clothing/gloves/fallout/legion/darkwraps
 	suit_store = /obj/item/gun/ballistic/rifle/fallout/hunting/scoped/amr
 	l_pocket = /obj/item/ammo_box/magazine/fallout/amr
-	neck = /obj/item/clothing/neck/cloak/fallout/speculatore
+	neck = /obj/item/clothing/neck/cloak/fallout/legion/speculatore
 
 /datum/outfit/job/f13/legion/speculatore/pre_equip(mob/living/carbon/human/H)
 	..()
