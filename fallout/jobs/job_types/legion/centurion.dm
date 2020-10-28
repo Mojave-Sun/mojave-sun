@@ -18,7 +18,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	backpack = /obj/item/storage/backpack/satchel/leather
 	uniform = /obj/item/clothing/under/fallout/legion/fatigues/redpadded
-	shoes = /obj/item/clothing/shoes/fallout/military/legiondarkboots
+	shoes = /obj/item/clothing/shoes/fallout/military/legion/darkboots
 	suit = /obj/item/clothing/suit/armor/fallout/legion/centurion
 	suit_store = /obj/item/gun/ballistic/automatic/fallout/smg10mm
 	r_hand = /obj/item/melee/powerfist

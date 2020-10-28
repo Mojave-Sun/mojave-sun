@@ -16,9 +16,9 @@
 	head = /obj/item/clothing/head/helmet/fallout/legion/explorer
 	back = /obj/item/storage/backpack/satchel/leather
 	uniform = /obj/item/clothing/under/fallout/legion/fatigues/brownstealth
-	shoes = /obj/item/clothing/shoes/fallout/military/legioncleats
+	shoes = /obj/item/clothing/shoes/fallout/military/legion/cleats
 	suit = /obj/item/clothing/suit/armor/fallout/legion/explorer
-	gloves = /obj/item/clothing/gloves/fallout/bracers
+	gloves = /obj/item/clothing/gloves/fallout/legion/bracers
 	suit_store = /obj/item/gun/ballistic/rifle/fallout/hunting/scoped
 	l_pocket = /obj/item/ammo_box/magazine/fallout/r308
 

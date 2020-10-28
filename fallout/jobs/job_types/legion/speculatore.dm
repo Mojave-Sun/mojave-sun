@@ -15,9 +15,9 @@
 
 	uniform = /obj/item/clothing/under/fallout/legion/fatigues/brownstealth
 	mask = /obj/item/clothing/mask/fallout/legion/speculatore
-	shoes = /obj/item/clothing/shoes/fallout/military/legioncleats
+	shoes = /obj/item/clothing/shoes/fallout/military/legion/cleats
 	suit = /obj/item/clothing/suit/armor/fallout/legion/speculatore
-	gloves = /obj/item/clothing/gloves/fallout/darkwraps
+	gloves = /obj/item/clothing/gloves/fallout/legion/darkwraps
 	suit_store = /obj/item/gun/ballistic/rifle/fallout/hunting/scoped/amr
 	l_pocket = /obj/item/ammo_box/magazine/fallout/amr
 	neck = /obj/item/clothing/neck/cloak/fallout/speculatore

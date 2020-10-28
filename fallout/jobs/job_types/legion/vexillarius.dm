@@ -17,9 +17,9 @@
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	back = /obj/item/storage/backpack/satchel/leather
 	uniform = /obj/item/clothing/under/fallout/legion/fatigues/brownpadded
-	shoes = /obj/item/clothing/shoes/fallout/military/legiontanboots
+	shoes = /obj/item/clothing/shoes/fallout/military/legion/tanboots
 	suit = /obj/item/clothing/suit/armor/fallout/legion/vexillarius
-	gloves = /obj/item/clothing/gloves/fallout/tanwraps
+	gloves = /obj/item/clothing/gloves/fallout/legion/tanwraps
 	suit_store = /obj/item/gun/ballistic/automatic/fallout/smg9mm
 	l_pocket = /obj/item/ammo_box/magazine/fallout/smgm9mm
 
