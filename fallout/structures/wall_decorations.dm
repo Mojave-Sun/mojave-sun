@@ -25,7 +25,7 @@
 	icon_state = "poster4"
 
 /obj/structure/sign/poster/f13/loaded
-	name = "\improper Loaded propaganda poster"
+	name = "\improper 'Loaded?' propaganda poster"
 	desc = "A propaganda poster from the NCR. It reminds the reader that loose women may also be loaded with disease."
 	icon_state = "poster5"
 
