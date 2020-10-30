@@ -257,32 +257,48 @@
 /turf/open/floor/plating/ground/road
 	name = "\proper road"
 	desc = "A stretch of road."
-	icon = 'fallout/icons/turf/roadsidewalk.dmi'
-	icon_state = "road"
-	var/dir_variation = TRUE
+	icon = 'fallout/icons/turf/road.dmi'
+	icon_state = "road-255"
+	base_icon_state = "road"
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_ROAD)
+	canSmoothWith = list(SMOOTH_GROUP_FALLOUT_ROAD)
 
 /turf/open/floor/plating/ground/road/Initialize()
 	. = ..()
-	if(dir_variation)
-		dir = pick(GLOB.cardinals)
+	var/crack_randomiser = "crack_[rand(1,18)]"
+	var/road_randomiser = "rand(-10,10)"
+	var/direction_randomiser = "rand(0,8)"
+	if(prob(20))
+		add_overlay(image('fallout/icons/turf/road.dmi', crack_randomiser, FLOAT_LAYER, direction_randomiser, road_randomiser, road_randomiser))
+		return
 
-/turf/open/floor/plating/ground/road/curb
-	icon_state = "curb"
-	dir_variation = FALSE
-
-/turf/open/floor/plating/ground/road/curb/corner
-	icon_state = "curbcorner"
-	dir_variation = FALSE
-
-/turf/open/floor/plating/ground/road/sidewalk
+/turf/open/floor/plating/ground/sidewalk
 	name = "sidewalk"
 	desc = "Paved tiles specifically designed for walking upon."
-	icon_state = "sidewalk"
-	dir_variation = FALSE
+	icon = 'fallout/icons/turf/sidewalk.dmi'
+	icon_state = "sidewalk-255"
+	base_icon_state = "sidewalk"
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_SIDEWALK)
+	canSmoothWith = list(SMOOTH_GROUP_FALLOUT_SIDEWALK, SMOOTH_GROUP_FALLOUT_WALL, SMOOTH_GROUP_FALLOUT_WALL_METAL, SMOOTH_GROUP_FALLOUT_WALL_WOOD, SMOOTH_GROUP_FALLOUT_WALL_SCRAP, SMOOTH_GROUP_FALLOUT_WALL_ADOBE, SMOOTH_GROUP_FALLOUT_WALL_BRICK, SMOOTH_GROUP_FALLOUT_WALL_REINFORCED, SMOOTH_GROUP_FALLOUT_WINDOW)
 
-/turf/open/floor/plating/ground/road/sidewalk/edge
-	icon_state = "sidewalkedge"
-	dir_variation = FALSE
+/turf/open/floor/plating/ground/sidewalk/Initialize()
+	. = ..()
+	addtimer(CALLBACK(src, /atom/.proc/update_icon), 1)
+
+/turf/open/floor/plating/ground/sidewalk/update_icon()
+	add_overlay(image('fallout/icons/turf/curb.dmi', icon_state, FLOAT_LAYER))
+	if(prob(20))
+		icon_state = "crack_[rand(1,11)]"
+		dir = rand(0,8)
+
+/turf/open/floor/plating/ground/sidewalk/cracked
+	icon_state = "crack_3"
+
+/turf/open/floor/plating/ground/sidewalk/cracked/Initialize()
+	. = ..()
+	icon_state = "crack_[rand(1,11)]"
 
 /turf/open/floor/plating/roof
 	icon = 'fallout/icons/turf/floors_1.dmi'
