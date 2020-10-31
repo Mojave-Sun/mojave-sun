@@ -32,7 +32,8 @@
 	rideable = TRUE
 	breedable = TRUE
 	baggable = TRUE
-	base_pixel_x = -48
+	pixel_x = -16
+	base_pixel_x = -16
 	young_type = /mob/living/simple_animal/fallout/brahminyoung
 	adult_type = /mob/living/simple_animal/hostile/retaliate/fallout/brahmin
 	offsetx = 3
@@ -138,7 +139,8 @@
 	tame_chance = 5
 	bonus_tame_chance = 15
 	rideable = TRUE
-	base_pixel_x = -48
+	pixel_x = -16
+	base_pixel_x = -16
 	offsetx = 2
 	offsety = 10
 
