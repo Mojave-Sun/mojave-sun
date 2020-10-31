@@ -10,6 +10,7 @@
 	icon = 'fallout/icons/turf/road_decals.dmi'
 
 /obj/effect/turf_decal/MS13/road/Initialize()
+	. = ..()
 	dir = rand(0,8)
 
 /obj/effect/turf_decal/MS13/road/horizontalline

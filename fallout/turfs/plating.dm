@@ -266,6 +266,9 @@
 
 /turf/open/floor/plating/ground/road/Initialize()
 	. = ..()
+	addtimer(CALLBACK(src, /atom/.proc/update_icon), 1)
+
+/turf/open/floor/plating/ground/road/update_icon()
 	var/crack_randomiser = "crack_[rand(1,18)]"
 	var/road_randomiser = "rand(-10,10)"
 	var/direction_randomiser = "rand(0,8)"
