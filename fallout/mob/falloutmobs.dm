@@ -103,8 +103,6 @@
 	if(is_young == TRUE)
 		bambinoscale.Scale(0.7, 0.7)
 		transform = bambinoscale
-	if(largemob == TRUE)
-		pixel_x = -16
 	if(smallasslad == TRUE)
 		//makes them small ass lads look all funky n shi
 		pixel_x = rand(-6, 6)
@@ -350,8 +348,6 @@
 	if(is_young == TRUE)
 		bambinoscale.Scale(0.7, 0.7)
 		transform = bambinoscale
-	if(largemob == TRUE)
-		pixel_x = -16
 	if(smallasslad == TRUE)
 		//makes them small ass lads look all funky n shi
 		pixel_x = rand(-6, 6)
@@ -565,8 +561,6 @@
 	if(is_young == TRUE)
 		bambinoscale.Scale(0.7, 0.7)
 		transform = bambinoscale
-	if(largemob == TRUE)
-		pixel_x = -16
 	if(smallasslad == TRUE)
 		//makes them small ass lads look all funky n shi
 		pixel_x = rand(-6, 6)
