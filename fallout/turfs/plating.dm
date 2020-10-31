@@ -274,7 +274,6 @@
 	var/direction_randomiser = "rand(0,8)"
 	if(prob(20))
 		add_overlay(image('fallout/icons/turf/road.dmi', crack_randomiser, FLOAT_LAYER, direction_randomiser, road_randomiser, road_randomiser))
-		return
 
 /turf/open/floor/plating/ground/sidewalk
 	name = "sidewalk"
