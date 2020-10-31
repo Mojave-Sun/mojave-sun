@@ -105,8 +105,8 @@
 		transform = bambinoscale
 	if(smallasslad == TRUE)
 		//makes them small ass lads look all funky n shi
-		pixel_x = rand(-6, 6)
-		pixel_y = rand(0, 10)
+		set_base_pixel_x(base_pixel_x + rand(-6, 6))
+		set_base_pixel_y(base_pixel_y + rand(0, 10))
 	if(tame)
 		if(milkable == TRUE)
 			chems = new()
@@ -350,8 +350,8 @@
 		transform = bambinoscale
 	if(smallasslad == TRUE)
 		//makes them small ass lads look all funky n shi
-		pixel_x = rand(-6, 6)
-		pixel_y = rand(0, 10)
+		set_base_pixel_x(base_pixel_x + rand(-6, 6))
+		set_base_pixel_y(base_pixel_y + rand(0, 10))
 	if(tame)
 		if(milkable == TRUE)
 			chems = new()
@@ -563,8 +563,8 @@
 		transform = bambinoscale
 	if(smallasslad == TRUE)
 		//makes them small ass lads look all funky n shi
-		pixel_x = rand(-6, 6)
-		pixel_y = rand(0, 10)
+		set_base_pixel_x(base_pixel_x + rand(-6, 6))
+		set_base_pixel_y(base_pixel_y + rand(0, 10))
 	if(tame)
 		if(milkable == TRUE)
 			chems = new()
