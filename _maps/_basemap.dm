@@ -14,7 +14,7 @@
 		#include "map_files\Mammoth\Mammoth.dmm"
 		#include "map_files\CombatArena\CombatArena.dmm"
 
-		#ifdef TRAVISBUILDING
+		#ifdef CIBUILDING
 			#include "templates.dm"
 		#endif
 	#endif
