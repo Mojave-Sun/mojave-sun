@@ -385,7 +385,7 @@
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 
 /obj/item/clothing/head/helmet/fallout/legion/centurion
-	name = "centurion helmet"
+	name = "\improper Legion centurion helmet"
 	desc = "A donned by only the most esteemed Centurions in the Legion. Impressive!"
 	icon_state = "leg_cent"
 	inhand_icon_state = "owl_mask"
