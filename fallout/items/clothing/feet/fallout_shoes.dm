@@ -107,36 +107,21 @@
 	icon_state = "ncr_officer_boots_w"
 	inhand_icon_state = "ncr_officer_boots_w"
 
-/obj/item/clothing/shoes/fallout/military/legion
-	name = "generic legion boots"
-	desc = "Generic boots worn by legionaires."
-	icon_state = "leg_tanboot"
+/obj/item/clothing/shoes/fallout/military/legionleather
+	name = "leather boots"
+	desc = "A pair of leather boots commonly worn by the Caesar's Legion recruits."
+	icon_state = "legionleather"
 	inhand_icon_state = "legionleather"
-	armor = list(melee = 20, bullet = 10, laser = 10, energy = 0, bomb = 10, bio = 0, rad = 5, fire = 10, acid = 0)
-	
-/obj/item/clothing/shoes/fallout/military/legion/tanboots
-	name = "tan leather boots"
-	desc = "A crude pair of leather boots commonly worn by the Caesar's Legion recruits. These ones are made of a tan leather."
-	icon_state = "leg_tanboot"
-	inhand_icon_state = "legionleather"
-	armor = list(melee = 10, bullet = 5, laser = 10, energy = 0, bomb = 10, bio = 0, rad = 5, fire = 10, acid = 0)
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
 
-/obj/item/clothing/shoes/fallout/military/legion/darkboots
-	name = "dark leather boots"
-	desc = "A crude pair of leather boots commonly worn by the Caesar's Legion recruits. These ones are made of a darker leather."
-	icon_state = "leg_darkboot"
-	inhand_icon_state = "legionleather"
-	armor = list(melee = 10, bullet = 5, laser = 10, energy = 0, bomb = 10, bio = 0, rad = 5, fire = 10, acid = 0)
-
-/obj/item/clothing/shoes/fallout/military/legion/cleats
-	name = "cleats"
-	desc = "A pair of cleats, often sported by mobility focused legionaries."
-	icon_state = "leg_cleats"
+/obj/item/clothing/shoes/fallout/military/legionmetal
+	name = "metal boots"
+	desc = "A pair of metal boots commonly worn by Caesar's Legion veterans."
+	icon_state = "legionmetal"
 	inhand_icon_state = "legionmetal"
-	clothing_flags = NOSLIP
-	armor = list(melee = 5, bullet = 10, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
+	armor = list(melee = 20, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 
-/obj/item/clothing/shoes/fallout/military/legion/legate
+/obj/item/clothing/shoes/fallout/military/legionlegate
 	name = "legate boots"
 	desc = "A pair of heavy boots worn by the Caesar's Legion Legate."
 	icon_state = "legionlegate"
@@ -184,3 +169,4 @@
 	armor = list(melee = 20, bullet = 0, laser = 0, energy = 0, bomb = 20, bio = 0, rad = 0, fire = 0, acid = 0)
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
+	
