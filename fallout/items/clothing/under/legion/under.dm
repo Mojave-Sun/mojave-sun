@@ -1,5 +1,5 @@
 /obj/item/clothing/under/fallout/legion/fatigues
-	name = "legion fatigues"
+	name = "\improper Legion fatigues"
 	desc = "This doesn't exist. Send help."
 	icon_state = "leg_skirt"
 	inhand_icon_state = "bl_suit"
