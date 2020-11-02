@@ -9,6 +9,8 @@
 #define SMOOTH_GROUP_FALLOUT_WALL_REINFORCED S_OBJ_FO(6)	///obj/structure/table/low_wall/reinforced, /turf/closed/wall/r_wall/f13
 #define SMOOTH_GROUP_FALLOUT_MINERALS S_OBJ_FO(7)			///turf/closed/mineral/random/f13, /turf/closed/indestructible/rock/f13
 #define SMOOTH_GROUP_FALLOUT_WINDOW S_OBJ_FO(8)			///obj/structure/window/fulltile/f13/glass
+#define SMOOTH_GROUP_FALLOUT_ROAD S_OBJ_FO(9)			///turf/open/floor/plating/ground/road
+#define SMOOTH_GROUP_FALLOUT_SIDEWALK S_OBJ_FO(10)			///turf/open/floor/plating/ground/sidewalk
 
 #define SMOOTH_GROUP_SOIL S_OBJ_FO(19)					///obj/machinery/hydroponics/fallout/soil
 #define SMOOTH_GROUP_FALLOUT_TABLES S_OBJ_FO(20)			///obj/structure/table/f13
