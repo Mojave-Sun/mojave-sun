@@ -39,6 +39,20 @@ GLOBAL_LIST_INIT(raiders_positions, list(
 	"Enforcer",
 	"Boss"))
 
+GLOBAL_LIST_INIT(legion_positions, list(
+	"Praetorian",
+	"Centurion",
+	"Veteran Decanus",
+	"Prime Decanus",
+	"Recruit Decanus",
+	"Veteran Legionary",
+	"Prime Legionary",
+	"Recruit Legionary",
+	"Vexillarius",
+	"Speculatore",
+	"Explorer",
+	"Scout",))
+
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(f13_position_categories, list(
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#eec66f"),
