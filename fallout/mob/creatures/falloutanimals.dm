@@ -33,7 +33,7 @@
 	breedable = TRUE
 	baggable = TRUE
 	pixel_x = -16
-	largemob = TRUE
+	base_pixel_x = -16
 	young_type = /mob/living/simple_animal/fallout/brahminyoung
 	adult_type = /mob/living/simple_animal/hostile/retaliate/fallout/brahmin
 	offsetx = 3
@@ -140,7 +140,7 @@
 	bonus_tame_chance = 15
 	rideable = TRUE
 	pixel_x = -16
-	largemob = TRUE
+	base_pixel_x = -16
 	offsetx = 2
 	offsety = 10
 
@@ -423,8 +423,7 @@
 	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/nightstalker
 	milkable = TRUE
 	extract = null//nightstalkers squeezin
-	pixel_x = -16
-	largemob = TRUE
+	base_pixel_x = -48
 	offsety = 6
 	var/poison_per_bite = 10
 	var/poison_type = /datum/reagent/toxin
@@ -720,8 +719,7 @@
 	tame_chance = 5
 	bonus_tame_chance = 2
 	rideable = TRUE
-	pixel_x = -16
-	largemob = TRUE
+	base_pixel_x = -48
 	offsetx = 8
 	offsety = 8
 
@@ -752,8 +750,7 @@
 	tame_chance = 1
 	bonus_tame_chance = 1
 	rideable = TRUE
-	pixel_x = -16
-	largemob = TRUE
+	base_pixel_x = -48
 	status_flags = null
 	offsetx = 6
 	offsety = 32

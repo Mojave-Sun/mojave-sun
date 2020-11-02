@@ -90,3 +90,30 @@
 
 /obj/effect/landmark/start/f13/boss
 	name = "Boss"
+
+/obj/effect/landmark/start/f13/legion_praetorian
+	name = "Legion Praetorian"
+
+/obj/effect/landmark/start/f13/legion_centurion
+	name = "Legion Centurion"
+
+/obj/effect/landmark/start/f13/legion_veteran_decanus
+	name = "Legion Veteran Decanus"
+
+/obj/effect/landmark/start/f13/legion_prime_decanus
+	name = "Legion Prime Decanus"
+
+/obj/effect/landmark/start/f13/legion_recruit_decanus
+	name = "Legion Recruit Decanus"
+
+/obj/effect/landmark/start/f13/legion_veteran_legionary
+	name = "Legion Veteran Legionary"
+
+/obj/effect/landmark/start/f13/legion_speculatore
+	name = "Legion Speculatore"
+
+/obj/effect/landmark/start/f13/legion_explorer
+	name = "Legion Explorer"
+
+/obj/effect/landmark/start/f13/legion_scout
+	name = "Legion Scout"
