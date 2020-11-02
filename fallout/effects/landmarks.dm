@@ -91,8 +91,8 @@
 /obj/effect/landmark/start/f13/boss
 	name = "Boss"
 
-/obj/effect/landmark/start/f13/praetorian
-	name = "Praetorian"
+/obj/effect/landmark/start/f13/legion_praetorian
+	name = "Legion Praetorian"
 
 /obj/effect/landmark/start/f13/legion_centurion
 	name = "Legion Centurion"
