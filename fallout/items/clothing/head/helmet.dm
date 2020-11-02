@@ -377,7 +377,7 @@
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 
 /obj/item/clothing/head/helmet/fallout/legion/decanus/veteran
-	name = "veteran decanus helmet"
+	name = "\improper Legion veteran decanus helmet"
 	desc = "A helmet used by only the most experienced Decanii of the Legion! It's got striped feathers to signify superior rank."
 	icon_state = "leg_decv"
 	inhand_icon_state = "owl_mask"
