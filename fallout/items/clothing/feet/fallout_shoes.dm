@@ -108,8 +108,8 @@
 	inhand_icon_state = "ncr_officer_boots_w"
 
 /obj/item/clothing/shoes/fallout/military/legion
-	name = "generic legion boots"
-	desc = "Generic boots worn by legionaires."
+	name = "generic Legion boots"
+	desc = "Generic boots worn by Legionaries."
 	icon_state = "leg_tanboot"
 	inhand_icon_state = "legionleather"
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 0, bomb = 10, bio = 0, rad = 5, fire = 10, acid = 0)
@@ -130,7 +130,7 @@
 
 /obj/item/clothing/shoes/fallout/military/legion/cleats
 	name = "cleats"
-	desc = "A pair of cleats, often sported by mobility focused legionaries."
+	desc = "A pair of cleats, often sported by mobility focused Legionaries."
 	icon_state = "leg_cleats"
 	inhand_icon_state = "legionmetal"
 	clothing_flags = NOSLIP

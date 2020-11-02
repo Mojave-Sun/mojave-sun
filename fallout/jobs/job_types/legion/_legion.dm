@@ -1,6 +1,6 @@
 /datum/job/f13/legion
 	selection_color = "#9c0000"	
-	forbid = "Caesar's Legion forbids: Chem usage, Over-reliance on technology of all forms."
+	forbid = "Caesar's Legion forbids: chem usage, over-reliance on technology of all forms."
 
 /datum/outfit/job/f13/legion
 	name = "Default"

@@ -5,8 +5,8 @@
     worn_icon = 'fallout/icons/mob/clothing/hands.dmi'
 
 /obj/item/clothing/gloves/fallout/legion
-    name = "generic legion gloves"
-    desc = "Generic gloves worn by legionaires."
+    name = "generic Legion gloves"
+    desc = "Generic gloves worn by Legionaries."
     icon_state = "leg_tanwraps"
     
 /obj/item/clothing/gloves/fallout/legion/bracers

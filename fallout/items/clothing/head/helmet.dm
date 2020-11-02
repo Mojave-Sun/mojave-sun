@@ -345,32 +345,32 @@
 	armor = list("melee" = 10, "bullet" = 5, "laser" = 15, "energy" = 15, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 20)
 
 /obj/item/clothing/head/helmet/fallout/legion/prime
-	name = "legion prime helmet"
-	desc = "A helmet used by Prime legionaries. It's pretty dense."
+	name = "\improper Legion prime helmet"
+	desc = "A helmet used by Prime Legionaries. It's pretty dense."
 	icon_state = "leg_prime"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 35, "bullet" = 20, "laser" = 15, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/fallout/legion/veteran
-	name = "legion veteran helmet"
-	desc = "A helmet used by Veteran legionaries. It's got a face guard to keep you from bumping into things!"
+	name = "\improper Legion veteran helmet"
+	desc = "A helmet used by Veteran Legionaries. It's got a face guard to keep you from bumping into things!"
 	icon_state = "leg_vet"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 40, "bullet" = 25, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/fallout/legion/decanus/recruit
-	name = "recruit decanus helmet"
-	desc = "A helmet used by recruit decanii of the Legion. It sports some brown feathers to signify lesser leadership"
+	name = "\improper Legion recruit decanus helmet"
+	desc = "A helmet used by recruit decanii of the Legion. It sports some brown feathers to signify lesser leadership."
 	icon_state = "leg_decr"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 30, "bullet" = 35, "laser" = 30, "energy" = 20, "bomb" = 35, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 
 /obj/item/clothing/head/helmet/fallout/legion/decanus/prime
-	name = "prime decanus helmet"
-	desc = "A helmet used by prime decanii of the Legion. It's got black feathers to signify a moderate rank"
+	name = "\improper Legion prime decanus helmet"
+	desc = "A helmet used by prime decanii of the Legion. It's got black feathers to signify a moderate rank."
 	icon_state = "leg_decp"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 35, "bullet" = 40, "laser" = 30, "energy" = 20, "bomb" = 35, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
@@ -386,14 +386,14 @@
 
 /obj/item/clothing/head/helmet/fallout/legion/centurion
 	name = "\improper Legion centurion helmet"
-	desc = "A donned by only the most esteemed Centurions in the Legion. Impressive!"
+	desc = "A helmet donned by only the most esteemed Centurions in the Legion. Impressive!"
 	icon_state = "leg_cent"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 60, "bullet" = 40, "laser" = 35, "energy" = 20, "bomb" = 55, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/fallout/legion/praetorian
-	name = "praetorian helmet"
+	name = "\improper Legion praetorian helmet"
 	desc = "A skillfuly forged helmet for a skill endowed man. Only the highest of guards may wear this."
 	icon_state = "leg_prae"
 	inhand_icon_state = "owl_mask"
@@ -401,7 +401,7 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/fallout/legion/scout
-	name = "legion scout helmet"
+	name = "\improper Legion scout helmet"
 	desc = "A simple helmet, often seen sucking onto the heads of Legionary scouts."
 	icon_state = "leg_scout"
 	inhand_icon_state = "owl_mask"
@@ -409,14 +409,14 @@
 	flags_inv = HIDEEARS
 
 /obj/item/clothing/head/helmet/fallout/legion/explorer
-	name = "legion explorer cap"
+	name = "\improper Legion explorer cap"
 	desc = "A relatively preserved pre-war baseball cap, now pridefully adopted by Legion explorers. Style over Strength."
 	icon_state = "leg_exp"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 20, "bomb" = 15, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
 
 /obj/item/clothing/head/helmet/fallout/manny
-	name = "manny mammoth head"
+	name = "\improper Manny Mammoth head"
 	desc = "A perfectly preserved pre-war VINTAGE Manny Mammoth head! It smells of crusty pizza."
 	icon_state = "mannyhead"
 	inhand_icon_state = "mannyhead"

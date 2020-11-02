@@ -106,14 +106,14 @@
 /obj/effect/landmark/start/f13/legion_recruit_decanus
 	name = "Legion Recruit Decanus"
 
-/obj/effect/landmark/start/f13/veteranlegionary
-	name = "Veteran Legionary"
+/obj/effect/landmark/start/f13/legion_veteran_legionary
+	name = "Legion Veteran Legionary"
 
-/obj/effect/landmark/start/f13/speculatore
-	name = "Speculatore"
+/obj/effect/landmark/start/f13/legion_speculatore
+	name = "Legion Speculatore"
 
-/obj/effect/landmark/start/f13/explorer
-	name = "Explorer"
+/obj/effect/landmark/start/f13/legion_explorer
+	name = "Legion Explorer"
 
-/obj/effect/landmark/start/f13/scout
-	name = "Scout"
+/obj/effect/landmark/start/f13/legion_scout
+	name = "Legion Scout"

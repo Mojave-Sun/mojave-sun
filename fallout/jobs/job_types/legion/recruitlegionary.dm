@@ -3,14 +3,14 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Centurion, any Decanus."
-	description = "Assist the higher ranks in handling your soldiers, keep them in line and focused on the goals at hand."
+	description = "Fight in the name of Caesar, and claim the lands for the Bull! Listen to your superiors, they will guide you to victory."
 
 	outfit = /datum/outfit/job/f13/legion/recruitlegionary
 
 	display_order = JOB_DISPLAY_ORDER_F13_RECRUITLEGIONARY
 
 /datum/outfit/job/f13/legion/recruitlegionary
-	name = "_Legion Recruit Legionary"
+	name = "_Legion Recruit"
 	jobtype = /datum/job/f13/legion/recruitlegionary
 
 	head = /obj/item/clothing/head/helmet/fallout/legion/recruit
