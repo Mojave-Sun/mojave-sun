@@ -227,7 +227,7 @@
 	armor = list("melee" = 45, "bullet" = 35, "laser" = 15, "energy" = 15, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 25, "acid" = 10)
 
 /obj/item/clothing/suit/armor/fallout/legion/veteran
-	name = "legion veteran armor"
+	name = "\improper Legion veteran armor"
 	desc = "High quality Legion armor given only to their best; feared Legion Veterans."
 	icon_state = "leg_vet"
 	armor = list("melee" = 50, "bullet" = 40, "laser" = 20, "energy" = 20, "bomb" = 30, "bio" = 20, "rad" = 20, "fire" = 30, "acid" = 20)
