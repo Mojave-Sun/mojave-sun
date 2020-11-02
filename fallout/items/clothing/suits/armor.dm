@@ -208,7 +208,7 @@
 	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 30, "acid" = 25)
 
 /obj/item/clothing/suit/armor/fallout/legion
-	name = "standard legion armor"
+	name = "standard Legion armor"
 	desc = "Standard non-existant armor for Legion recruits, cobbled together with various sports equipment and additional reinforcements as needed."
 	icon_state = "leg_rec"
 	inhand_icon_state = "legarmor"
