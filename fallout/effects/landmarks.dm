@@ -100,8 +100,8 @@
 /obj/effect/landmark/start/f13/veterandecanus
 	name = "Veteran Decanus"
 
-/obj/effect/landmark/start/f13/primedecanus
-	name = "Prime Decanus"
+/obj/effect/landmark/start/f13/legion_prime_decanus
+	name = "Legion Prime Decanus"
 
 /obj/effect/landmark/start/f13/legion_recruit_decanus
 	name = "Legion Recruit Decanus"
