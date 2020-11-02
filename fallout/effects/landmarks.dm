@@ -90,3 +90,30 @@
 
 /obj/effect/landmark/start/f13/boss
 	name = "Boss"
+
+/obj/effect/landmark/start/f13/praetorian
+	name = "Praetorian"
+
+/obj/effect/landmark/start/f13/centurion
+	name = "Centurion"
+
+/obj/effect/landmark/start/f13/veterandecanus
+	name = "Veteran Decanus"
+
+/obj/effect/landmark/start/f13/primedecanus
+	name = "Prime Decanus"
+
+/obj/effect/landmark/start/f13/recruitdecanus
+	name = "Recruit Decanus"
+
+/obj/effect/landmark/start/f13/veteranlegionary
+	name = "Veteran Legionary"
+
+/obj/effect/landmark/start/f13/speculatore
+	name = "Speculatore"
+
+/obj/effect/landmark/start/f13/explorer
+	name = "Explorer"
+
+/obj/effect/landmark/start/f13/scout
+	name = "Scout"
