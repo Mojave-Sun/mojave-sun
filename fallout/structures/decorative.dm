@@ -49,3 +49,9 @@
 	name = "postbox"
 	desc = "Last pickup, October 22nd, 2077."
 	icon_state = "mailbox"
+
+/obj/structure/fluff/f13/mammoth_sign
+	name = "\improper Mammoth Lakes sign"
+	desc = "Welcome to Mammoth Lakes: the town where it's always winter!"
+	icon = 'fallout/icons/structure/64x64_misc.dmi'
+	icon_state = "mammoth_sign"

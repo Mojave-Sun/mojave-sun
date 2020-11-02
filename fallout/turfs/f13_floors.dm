@@ -10,6 +10,15 @@
 	if(icon_state == "housewood1")
 		icon_state = "housewood[rand(1,3)]" //This automatically gives wooden floors a nice varied pattern.
 
+/turf/open/floor/wood/f13/burn_tile()
+	burnt = 1
+	return //We lack sprites for this. To do: make overlay here instead.
+
+/turf/open/floor/wood/f13/break_tile()
+	broken = 1
+	return
+
+
 /turf/open/floor/wood/f13/broken
 	icon_state = "housebase"
 	desc = "Rotting wooden flooring."
@@ -89,10 +98,24 @@
 
 //Plasteel (generic) floor tiles.
 
+/obj/item/stack/tile/plasteel/f13 //We need this because upstream turf code is not great.
+	turf_type = /turf/open/floor/plasteel/f13
+
 
 /turf/open/floor/plasteel/f13
 	icon = 'fallout/icons/turf/floors_2.dmi'
 	icon_state = "floor"
+	floor_tile = /obj/item/stack/tile/plasteel/f13
+
+
+/turf/open/floor/plasteel/f13/burn_tile()
+	burnt = 1
+	return //We're not spriting damage variations for the millions of tiles we have. To do: make overlay here instead.
+
+/turf/open/floor/plasteel/f13/break_tile()
+	broken = 1
+	return
+
 
 /turf/open/floor/plasteel/f13/_dirty
 	icon = 'fallout/icons/turf/floors_2.dmi'

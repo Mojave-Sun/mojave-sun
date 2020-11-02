@@ -256,3 +256,9 @@
 	desc = "A fleeced overcoat for the pre-war bourgeois."
 	icon_state = "dapper"
 	inhand_icon_state = "coatwinter"
+
+/obj/item/clothing/suit/fallout/manny
+	name = "\improper Manny Mammoth suit"
+	desc = "A perfectly preserved pre-war VINTAGE Manny Mammoth suit! It smells of crusty pizza."
+	icon_state = "mannybody"
+	inhand_icon_state = "chickensuit"
