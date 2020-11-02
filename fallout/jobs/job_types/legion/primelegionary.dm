@@ -10,7 +10,7 @@
 	display_order = JOB_DISPLAY_ORDER_F13_PRIMELEGIONARY
 
 /datum/outfit/job/f13/legion/primelegionary
-	name = "_Legion Veteran Legionary"
+	name = "_Legion Prime Legionary"
 	jobtype = /datum/job/f13/legion/primelegionary
 
 	head = /obj/item/clothing/head/helmet/fallout/legion/prime
