@@ -34,10 +34,24 @@ GLOBAL_LIST_INIT(bos_positions, list(
 	"Scribe",
 	"Head Scribe"))
 
-GLOBAL_LIST_INIT(eighties_positions, list(
+GLOBAL_LIST_INIT(raiders_positions, list(
 	"Raider",
 	"Enforcer",
 	"Boss"))
+
+GLOBAL_LIST_INIT(legion_positions, list(
+	"Praetorian",
+	"Centurion",
+	"Veteran Decanus",
+	"Prime Decanus",
+	"Recruit Decanus",
+	"Veteran Legionary",
+	"Prime Legionary",
+	"Recruit Legionary",
+	"Vexillarius",
+	"Speculatore",
+	"Explorer",
+	"Scout",))
 
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(f13_position_categories, list(
@@ -46,7 +60,7 @@ GLOBAL_LIST_INIT(f13_position_categories, list(
 	EXP_TYPE_TRIBE = list("jobs" = tribe_positions, "color" = "#eb544f"),
 	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#cfd1ba"),
 	EXP_TYPE_BOS = list("jobs" = bos_positions, "color" = "#737592"),
-	EXP_TYPE_EIGHTIES = list("jobs" = eighties_positions, "color" = "#30389c")
+	EXP_TYPE_RAIDERS = list("jobs" = raiders_positions, "color" = "#30389c")
 ))
 
 GLOBAL_LIST_INIT(f13_exp_jobsmap, list(
@@ -55,7 +69,7 @@ GLOBAL_LIST_INIT(f13_exp_jobsmap, list(
 	EXP_TYPE_TRIBE = list("titles" = tribe_positions),
 	EXP_TYPE_NCR = list("titles" = ncr_positions),
 	EXP_TYPE_BOS = list("titles" = bos_positions),
-	EXP_TYPE_EIGHTIES = list("titles" = eighties_positions)
+	EXP_TYPE_RAIDERS = list("titles" = raiders_positions)
 ))
 
 GLOBAL_PROTECT(f13_exp_jobsmap)

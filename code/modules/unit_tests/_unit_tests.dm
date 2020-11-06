@@ -34,7 +34,6 @@
 #include "metabolizing.dm"
 #include "outfit_sanity.dm"
 #include "pills.dm"
-#include "plantgrowth_tests.dm"
 #include "quick_swap_sanity.dm"
 #include "reagent_id_typos.dm"
 #include "reagent_mod_expose.dm"
@@ -42,16 +41,19 @@
 #include "reagent_recipe_collisions.dm"
 #include "resist.dm"
 #include "say.dm"
+#include "serving_tray.dm"
 #include "siunit.dm"
 #include "spawn_humans.dm"
 #include "species_whitelists.dm"
 #include "stomach.dm"
 #include "subsystem_init.dm"
 #include "surgeries.dm"
+#include "teleporters.dm"
 #include "timer_sanity.dm"
 #include "unit_test.dm"
 
 #undef TEST_ASSERT
 #undef TEST_ASSERT_EQUAL
 #undef TEST_ASSERT_NOTEQUAL
+#undef TEST_FOCUS
 #endif

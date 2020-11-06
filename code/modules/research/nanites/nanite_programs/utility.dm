@@ -33,19 +33,16 @@
 
 /datum/nanite_program/monitoring/enable_passive_effect()
 	. = ..()
-	SSnanites.nanite_monitored_mobs |= host_mob
+	ADD_TRAIT(host_mob, TRAIT_NANITE_MONITORING, "nanites") //Shows up in diagnostic and medical HUDs as a small blinking icon
 	if(ishuman(host_mob))
-		var/mob/living/carbon/human/H = host_mob
-		if(!(H in GLOB.nanite_sensors_list))
-			GLOB.nanite_sensors_list |= H
+		GLOB.nanite_sensors_list |= host_mob
 	host_mob.hud_set_nanite_indicator()
 
 /datum/nanite_program/monitoring/disable_passive_effect()
 	. = ..()
-	SSnanites.nanite_monitored_mobs -= host_mob
+	REMOVE_TRAIT(host_mob, TRAIT_NANITE_MONITORING, "nanites")
 	if(ishuman(host_mob))
-		var/mob/living/carbon/human/H = host_mob
-		GLOB.nanite_sensors_list -= H
+		GLOB.nanite_sensors_list -= host_mob
 
 	host_mob.hud_set_nanite_indicator()
 
@@ -346,7 +343,7 @@
 /datum/action/innate/nanite_button
 	name = "Button"
 	icon_icon = 'icons/mob/actions/actions_items.dmi'
-	check_flags = AB_CHECK_RESTRAINED|AB_CHECK_STUN|AB_CHECK_CONSCIOUS
+	check_flags = AB_CHECK_HANDS_BLOCKED|AB_CHECK_IMMOBILE|AB_CHECK_CONSCIOUS
 	button_icon_state = "power_green"
 	var/datum/nanite_program/dermal_button/program
 

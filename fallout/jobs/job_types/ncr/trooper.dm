@@ -1,4 +1,4 @@
-datum/job/f13/ncr/trooper
+/datum/job/f13/ncr/trooper
 	title = "NCR Trooper"
 	total_positions = 10
 	spawn_positions = 10
@@ -12,8 +12,10 @@ datum/job/f13/ncr/trooper
 	display_order = JOB_DISPLAY_ORDER_F13_TROOPER
 
 /datum/outfit/job/f13/ncr/trooper
-	name = "Trooper"
+	name = "_NCR Trooper"
 	jobtype = /datum/job/f13/ncr/trooper
+
+	head = /obj/item/clothing/head/collectable/petehat
 
 /datum/outfit/job/f13/ncr/trooper/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -310,7 +310,7 @@
 		update_icon_lights()
 
 	if(!self_sustaining)
-		if(myseed && myseed.get_gene(/datum/plant_gene/trait/glow))
+		if(myseed?.get_gene(/datum/plant_gene/trait/glow))
 			var/datum/plant_gene/trait/glow/G = myseed.get_gene(/datum/plant_gene/trait/glow)
 			set_light(G.glow_range(myseed), G.glow_power(myseed), G.glow_color)
 		else
@@ -319,18 +319,26 @@
 	return
 
 /obj/machinery/hydroponics/proc/update_icon_plant()
+	var/mutable_appearance/harvest_overlay = mutable_appearance(myseed.growing_icon, layer = OBJ_LAYER + 0.02)
 	var/mutable_appearance/plant_overlay = mutable_appearance(myseed.growing_icon, layer = OBJ_LAYER + 0.01)
+	plant_overlay.pixel_z = 5
+	harvest_overlay.pixel_z = 5
+	if(myseed.wholeiconcolor == TRUE)
+		plant_overlay.color = myseed.growing_color
 	if(dead)
 		plant_overlay.icon_state = myseed.icon_dead
 	else if(harvest)
-		if(!myseed.icon_harvest)
+		if(myseed.harvest_icon == 1)
 			plant_overlay.icon_state = "[myseed.icon_grow][myseed.growthstages]"
+			harvest_overlay.icon_state = myseed.icon_product
+			harvest_overlay.color = myseed.growing_color
 		else
 			plant_overlay.icon_state = myseed.icon_harvest
 	else
 		var/t_growthstate = clamp(round((age / myseed.maturation) * myseed.growthstages), 1, myseed.growthstages)
 		plant_overlay.icon_state = "[myseed.icon_grow][t_growthstate]"
 	add_overlay(plant_overlay)
+	add_overlay(harvest_overlay)
 
 /obj/machinery/hydroponics/proc/update_icon_lights()
 	if(waterlevel <= 10)
@@ -384,21 +392,21 @@
 		oldPlantName = "empty tray"
 	switch(rand(1,18))		// randomly pick predominative weed
 		if(16 to 18)
-			myseed = new /obj/item/seeds/reishi(src)
+			myseed = new /obj/item/seeds/fallout/thistle(src)
 		if(14 to 15)
-			myseed = new /obj/item/seeds/nettle(src)
+			myseed = new /obj/item/seeds/fallout/blight(src)
 		if(12 to 13)
-			myseed = new /obj/item/seeds/harebell(src)
+			myseed = new /obj/item/seeds/fallout/lureweed(src)
 		if(10 to 11)
-			myseed = new /obj/item/seeds/amanita(src)
+			myseed = new /obj/item/seeds/fallout/nara(src)
 		if(8 to 9)
-			myseed = new /obj/item/seeds/chanter(src)
+			myseed = new /obj/item/seeds/fallout/brainfung(src)
 		if(6 to 7)
-			myseed = new /obj/item/seeds/tower(src)
+			myseed = new /obj/item/seeds/fallout/gutshroom(src)
 		if(4 to 5)
-			myseed = new /obj/item/seeds/plump(src)
+			myseed = new /obj/item/seeds/fallout/cavefungus(src)
 		else
-			myseed = new /obj/item/seeds/starthistle(src)
+			myseed = new /obj/item/seeds/fallout/firecap(src)
 	age = 0
 	plant_health = myseed.endurance
 	lastcycle = world.time

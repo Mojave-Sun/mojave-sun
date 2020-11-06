@@ -155,11 +155,19 @@
 	qdel(src)
 
 /proc/wabbajack(mob/living/M, randomize)
+	// If the mob has a shapeshifted form, we want to pull out the reference of the caster's original body from it.
+	// We then want to restore this original body through the shapeshift holder itself.
+	var/obj/shapeshift_holder/shapeshift = locate() in M
+	if(shapeshift)
+		M = shapeshift.stored
+		shapeshift.restore()
+
 	if(!istype(M) || M.stat == DEAD || M.notransform || (GODMODE & M.status_flags))
 		return
 
 	M.notransform = TRUE
-	M.mobility_flags = NONE
+	ADD_TRAIT(M, TRAIT_IMMOBILIZED, MAGIC_TRAIT)
+	ADD_TRAIT(M, TRAIT_HANDS_BLOCKED, MAGIC_TRAIT)
 	M.icon = null
 	M.cut_overlays()
 	M.invisibility = INVISIBILITY_ABSTRACT
