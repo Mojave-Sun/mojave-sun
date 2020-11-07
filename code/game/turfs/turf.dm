@@ -169,14 +169,6 @@ GLOBAL_LIST_EMPTY(station_turfs)
 /turf/proc/multiz_turf_new(turf/T, dir)
 	SEND_SIGNAL(src, COMSIG_TURF_MULTIZ_NEW, T, dir)
 
-/turf/update_multiz(prune_on_fail = FALSE)
-	. = ..()
-	/* update sunlight for turfs below us */
-	var/turf/T = below()
-	if(T)
-		T.update_multiz(prune_on_fail)
-	reconsider_sunlight()
-
 ///returns if the turf has something dense inside it. if exclude_mobs is true, skips dense mobs like fat yoshi.
 /turf/proc/is_blocked_turf(exclude_mobs)
 	if(density)

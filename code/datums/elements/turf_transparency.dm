@@ -30,6 +30,7 @@
 
 ///Updates the viscontents or underlays below this tile.
 /datum/element/turf_z_transparency/proc/update_multiz(turf/our_turf, prune_on_fail = FALSE, init = FALSE)
+	our_turf.reconsider_sunlight()
 	var/turf/below_turf = our_turf.below()
 	if(!below_turf)
 		our_turf.vis_contents.len = 0
