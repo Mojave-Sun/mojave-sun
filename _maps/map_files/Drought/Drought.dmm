@@ -606,6 +606,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/grimy,
 /area/f13/sunny_dale)
+"den" = (
+/obj/structure/closet,
+/obj/item/storage/backpack/satchel/leather,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "dhM" = (
 /obj/effect/landmark/latejoin,
 /turf/open/floor/plating/ground/road,
@@ -1451,6 +1459,10 @@
 "iTV" = (
 /turf/open/floor/carpet/black,
 /area/f13/sunny_dale)
+"iUi" = (
+/obj/structure/fence/fencenormal,
+/turf/open/floor/plating/ground/road,
+/area/f13)
 "iVI" = (
 /obj/structure/table/low_wall/wood,
 /obj/structure/barricade/wooden,
@@ -1564,6 +1576,10 @@
 /obj/structure/table/low_wall/scrap,
 /turf/open/floor/plasteel/f13/_full,
 /area/f13/sunny_dale)
+"jCB" = (
+/obj/item/toy/beach_ball/holoball/dodgeball,
+/turf/open/floor/plating/ground/road,
+/area/f13)
 "jGX" = (
 /obj/machinery/light{
 	dir = 4;
@@ -2032,12 +2048,8 @@
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "mVL" = (
-/obj/structure/closet,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/wood/f13,
-/area/f13/sunny_dale)
+/turf/open/floor/plating/dirt,
+/area/f13)
 "mWg" = (
 /obj/structure/chair/comfy/f13/armchair{
 	dir = 4
@@ -2516,13 +2528,9 @@
 /turf/open/floor/plasteel/f13/_full,
 /area/f13/sunny_dale)
 "qjE" = (
-/obj/structure/closet,
-/obj/item/storage/backpack/satchel/leather,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/wood/f13,
-/area/f13/sunny_dale)
+/obj/item/toy/crayon/spraycan,
+/turf/open/floor/plating/ground/desert,
+/area/f13)
 "qjX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2626,6 +2634,10 @@
 /obj/item/storage/briefcase,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
+"qPf" = (
+/obj/structure/fence/fencenormal,
+/turf/open/floor/plating/dirt,
+/area/f13)
 "qSn" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -2719,6 +2731,13 @@
 	},
 /turf/open/floor/plating/ground/desert,
 /area/f13)
+"rsO" = (
+/obj/structure/closet,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "ruB" = (
 /obj/structure/rack,
 /obj/item/gun/ballistic/shotgun,
@@ -74155,7 +74174,7 @@ tfu
 nQR
 kDL
 uNP
-tfu
+haD
 azf
 quO
 fnU
@@ -83522,11 +83541,11 @@ iMK
 iMK
 iMK
 tfu
+rsO
 azf
-mVL
 tfu
-qjE
-sTj
+azf
+den
 tfu
 iMK
 iMK
@@ -83706,17 +83725,17 @@ bLu
 oNR
 iMK
 bCt
-bCt
-bCt
+naw
+tCT
 tfu
 tfu
+mXJ
+tfu
+mXJ
 tfu
 tfu
-tfu
-tfu
-tfu
-bCt
-bCt
+tCT
+naw
 bCt
 iMK
 oNR
@@ -83893,17 +83912,17 @@ bLu
 oNR
 iMK
 bCt
+tkT
 bCt
 bCt
 bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
+mVL
+qPf
+oNR
+iMK
+iMK
+oNR
+iUi
 bCt
 iMK
 oNR
@@ -84080,17 +84099,17 @@ bLu
 oNR
 iMK
 bCt
+tkT
 bCt
+mVL
+mVL
 bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
+tkT
+oNR
+oNR
+oNR
+oNR
+iUi
 bCt
 iMK
 oNR
@@ -84267,17 +84286,17 @@ bLu
 oNR
 iMK
 bCt
+tkT
 bCt
+mVL
+mVL
 bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
+tkT
+oNR
+oNR
+oNR
+oNR
+iUi
 bCt
 iMK
 oNR
@@ -84454,17 +84473,17 @@ bLu
 oNR
 iMK
 bCt
+tkT
 bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
+mVL
+mVL
+mVL
+tkT
+oNR
+oNR
+oNR
+oNR
+iUi
 bCt
 iMK
 oNR
@@ -84641,17 +84660,17 @@ oNR
 oNR
 iMK
 bCt
+tkT
 bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
+qjE
+mVL
+mVL
+tkT
+oNR
+oNR
+oNR
+oNR
+iUi
 bCt
 iMK
 oNR
@@ -84828,17 +84847,17 @@ oNR
 oNR
 iMK
 bCt
+tkT
 bCt
 bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
+mVL
+mVL
+tkT
+oNR
+jCB
+oNR
+oNR
+iUi
 bCt
 iMK
 oNR
@@ -85015,17 +85034,17 @@ iMK
 iMK
 iMK
 bCt
+tkT
 bCt
 bCt
 bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
+mVL
+tkT
+oNR
+oNR
+oNR
+oNR
+iUi
 bCt
 iMK
 oNR
@@ -85202,17 +85221,17 @@ bCt
 bCt
 bCt
 bCt
+tkT
 bCt
 bCt
 bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
+mVL
+tkT
+oNR
+oNR
+oNR
+oNR
+iUi
 bCt
 iMK
 oNR
@@ -85389,17 +85408,17 @@ bCt
 bCt
 bCt
 bCt
+tkT
+mVL
 bCt
 bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
+mVL
+tkT
+oNR
+iMK
+iMK
+oNR
+iUi
 bCt
 iMK
 oNR
@@ -85576,17 +85595,17 @@ bCt
 bCt
 bCt
 bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
+hiZ
+vwR
+vwR
+vwR
+vwR
+tFv
+vwR
+vwR
+vwR
+vwR
+tFv
 bCt
 iMK
 oNR
