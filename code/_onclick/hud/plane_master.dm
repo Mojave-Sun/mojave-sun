@@ -86,7 +86,7 @@
 	// filters += filter(type="alpha", render_source=SUNLIGHTING_RENDER_TARGET, flags=MASK_INVERSE)
 
 //Contains all sunlight objects
-/obj/screen/plane_master/Sunlight
+/atom/movable/screen/plane_master/Sunlight
 	name = "lighting plane master"
 	plane = SUNLIGHTING_PLANE
 	blend_mode = BLEND_MULTIPLY
