@@ -47,8 +47,11 @@
 
 	enemy_name = "Sys_Admin"
 
-/obj/machinery/computer/arcade/fallout/bruteforce/ui_interact(mob/user)
+/obj/machinery/computer/arcade/fallout/bruteforce/ui_interact(mob/_user)
 	. = ..()
+	if (!isliving(_user))
+		return
+	var/mob/living/user = _user
 	var/dat = "<a href='byond://?src=[REF(src)];close=1'>Close</a>"
 	dat += "<center><h4>[enemy_name]</h4></center>"
 
@@ -140,7 +143,10 @@
 	updateUsrDialog()
 	return
 
-/obj/machinery/computer/arcade/fallout/bruteforce/proc/arcade_action(mob/user)
+/obj/machinery/computer/arcade/fallout/bruteforce/proc/arcade_action(mob/_user)
+	if (!isliving(_user))
+		return
+	var/mob/living/user = _user
 	var/xp_gained = 0
 	if ((enemy_mp <= 0) || (enemy_hp <= 0))
 		if(!gameover)
@@ -181,7 +187,7 @@
 			temp = "You have lost control of the system! FORCE DISCONNECT"
 			playsound(loc, 'sound/arcade/lose.ogg', 50, TRUE, extrarange = -3)
 			if(obj_flags & EMAGGED)
-				usr.gib()
+				user.gib()
 			SSblackbox.record_feedback("nested tally", "arcade_results", 1, list("loss", "mana", (obj_flags & EMAGGED ? "emagged":"normal")))
 
 	else if ((enemy_hp <= 10) && (enemy_mp > 4))
@@ -202,7 +208,7 @@
 		playsound(loc, 'sound/arcade/lose.ogg', 50, TRUE, extrarange = -3)
 		xp_gained += 10//pity points
 		if(obj_flags & EMAGGED)
-			usr.gib()
+			user.gib()
 		SSblackbox.record_feedback("nested tally", "arcade_results", 1, list("loss", "hp", (obj_flags & EMAGGED ? "emagged":"normal")))
 
 	user?.mind?.adjust_experience(/datum/skill/gaming, xp_gained+1)//always gain at least 1 point of XP
@@ -210,7 +216,7 @@
 	return
 
 
-/obj/machinery/computer/arcade/fallout/bruteforce/emag_act(mob/user)
+/obj/machinery/computer/arcade/fallout/bruteforce/emag_act(mob/living/user)
 	if(obj_flags & EMAGGED)
 		return
 	to_chat(user, "<span class='warning'>A mesmerizing Rhumba beat starts playing from the arcade machine's speakers!</span>")
