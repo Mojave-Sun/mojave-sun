@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import sys
+import collections
 import dmm
 import mapmerge
 
@@ -16,6 +17,8 @@ def select(base, left, right):
     else:
         # all three versions are different
         return None
+
+debug_stats = collections.defaultdict(int)
 
 def three_way_merge(base, left, right):
     if base.size != left.size or base.size != right.size:
@@ -38,15 +41,45 @@ def three_way_merge(base, left, right):
         # try to merge the whole tiles
         whole_tile_merge = select(base_tile, left_tile, right_tile)
         if whole_tile_merge is not None:
+            debug_stats['select whole tiles'] += 1
             merged.set_tile(coord, whole_tile_merge)
             continue
 
-        # TODO: try other strategies here
+        # try to merge each group independently (movables, turfs, areas)
+        base_movables, base_turfs, base_areas = split_atom_groups(base_tile)
+        left_movables, left_turfs, left_areas = split_atom_groups(left_tile)
+        right_movables, right_turfs, right_areas = split_atom_groups(right_tile)
+
+        merged_movables = select(base_movables, left_movables, right_movables)
+        merged_turfs = select(base_turfs, left_turfs, right_turfs)
+        merged_areas = select(base_areas, left_areas, right_areas)
+
+        if merged_movables is not None and merged_turfs is not None and merged_areas is not None:
+            debug_stats['select groups'] += 1
+            merged.set_tile(coord, merged_movables + merged_turfs + merged_areas)
+            continue
+
+        # TODO: more advanced strategies?
 
         # fall back to requiring manual conflict resolution
         trouble = True
         print(f" C: Both sides touch the tile at {coord}")
-        merged.set_tile(coord, left_tile + right_tile)
+
+        if merged_movables is None:
+            debug_stats['movable conflict']
+            merged_movables = left_movables + ['/obj'] + right_movables
+        if merged_turfs is None:
+            debug_stats['turf conflict'] += 1
+            merged_turfs = left_turfs
+            print(f"    Saving turf: {left_turfs}")
+            print(f"    Alternative: {right_turfs}")
+        if merged_areas is None:
+            debug_stats['area conflict'] += 1
+            merged_areas = left_areas
+            print(f"    Saving area: {left_areas}")
+            print(f"    Alternative: {right_areas}")
+
+        merged.set_tile(coord, merged_movables + merged_turfs + merged_areas)
 
     merged = mapmerge.merge_map(merged, base)
     return trouble, merged
@@ -64,12 +97,13 @@ def main(path, original, left, right):
     if trouble:
         print("!!! Manual merge required!")
         if merged:
-            print("    A best-effort merge was performed. You must edit the map and remove all")
-            print("    /obj/effect/mapping_helpers/conflict.")
+            print("    A best-effort merge was performed. You must edit the map and update all")
+            print("    coordinates mentioned above.")
         else:
             print("    The map was totally unable to be merged, you must start with one version")
             print("    or the other and manually resolve the conflict.")
         print("    Information about which tiles conflicted is listed above.")
+    print(f"    Debug stats: {debug_stats}")
     return trouble
 
 if __name__ == '__main__':
