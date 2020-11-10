@@ -3,6 +3,20 @@ import sys
 import dmm
 import mapmerge
 
+def select(base, left, right):
+    if left == right:
+        # whether or not it's in the base, both sides agree
+        return left
+    elif base == left:
+        # base == left, but right is different: accept right
+        return right
+    elif base == right:
+        # base == right, but left is different: accept left
+        return left
+    else:
+        # all three versions are different
+        return None
+
 def three_way_merge(base, left, right):
     if base.size != left.size or base.size != right.size:
         print("Dimensions have changed:")
@@ -21,26 +35,24 @@ def three_way_merge(base, left, right):
         left_tile = left.get_tile(coord)
         right_tile = right.get_tile(coord)
 
-        if left_tile == right_tile:
-            # whether or not it's in the base, both sides agree
-            merged.set_tile(coord, left_tile)
-        elif base_tile == left_tile:
-            # base == left, but right is different: accept right
-            merged.set_tile(coord, right_tile)
-        elif base_tile == right_tile:
-            # base == right, but left is different: accept left
-            merged.set_tile(coord, left_tile)
-        else:
-            # all three versions are different
-            trouble = True
-            print(f" C: Both sides touch the tile at {coord}")
-            merged.set_tile(coord, left_tile + right_tile)
+        # try to merge the whole tiles
+        whole_tile_merge = select(base_tile, left_tile, right_tile)
+        if whole_tile_merge is not None:
+            merged.set_tile(coord, whole_tile_merge)
+            continue
+
+        # TODO: try other strategies here
+
+        # fall back to requiring manual conflict resolution
+        trouble = True
+        print(f" C: Both sides touch the tile at {coord}")
+        merged.set_tile(coord, left_tile + right_tile)
 
     merged = mapmerge.merge_map(merged, base)
     return trouble, merged
 
 def main(path, original, left, right):
-    print(f"Resolving merge conflicts: {path}")
+    print(f"Merging map: {path}")
 
     map_orig = dmm.DMM.from_file(original)
     map_left = dmm.DMM.from_file(left)

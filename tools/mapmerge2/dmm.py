@@ -244,10 +244,8 @@ def is_bad_atom_ordering(key, atoms):
         print(f"Warning: key '{key}' is missing either a turf or area")
     return can_fix
 
-def fix_atom_ordering(atoms):
-    movables = []
-    turfs = []
-    areas = []
+def split_atom_groups(atoms):
+    movables, turfs, areas = [], [], []
     for each in atoms:
         if each.startswith('/turf'):
             turfs.append(each)
@@ -255,6 +253,10 @@ def fix_atom_ordering(atoms):
             areas.append(each)
         else:
             movables.append(each)
+    return movables, turfs, areas
+
+def fix_atom_ordering(atoms):
+    movables, turfs, areas = split_atom_groups(atoms)
     movables.extend(turfs)
     movables.extend(areas)
     return movables
