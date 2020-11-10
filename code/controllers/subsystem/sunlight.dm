@@ -101,7 +101,7 @@ SUBSYSTEM_DEF(sunlight)
 	if(world.time > step_finish)
 		set_time_of_day(current_step + 1)
 
-/datum/controller/subsystem/sunlight/proc/set_time_of_day(var/step)
+/datum/controller/subsystem/sunlight/proc/set_time_of_day(step)
 	if(step > time_cycle_steps.len)
 		step = STEP_DAY
 	step_started = world.time
