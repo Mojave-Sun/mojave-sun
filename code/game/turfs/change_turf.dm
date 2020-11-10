@@ -139,7 +139,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	if(SSsunlight.initialized)
 		sunlight_object = old_sunlight_object
 
-	update_multiz()
+	SEND_SIGNAL(src, COMSIG_TURF_MULTIZ_NEW, src, dir)
 
 	return W
 
