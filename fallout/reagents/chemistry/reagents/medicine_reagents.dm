@@ -30,6 +30,61 @@
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 
+/datum/reagent/medicine/hyper_stimpak_fluid
+	name = "Hyper-Stimpak Fluid"
+	description = "A wildcat stimpak fluid made for the wasteland. Fucks you up while it's in your system, but has unmatched healing power."
+	reagent_state = LIQUID
+	color = "#FFCF00"
+	metabolization_rate = 2.5 * REAGENTS_METABOLISM
+	overdose_threshold = 30
+
+/datum/reagent/medicine/hyper_stimpak_fluid/on_mob_metabolize(mob/living/L)
+	L.overlay_fullscreen("hyper_stim", /obj/screen/fullscreen/hyper_stim)
+	to_chat(L, "<span class='swarmer'>You feel absolutely fucked up!</span>")
+
+/datum/reagent/medicine/hyper_stimpak_fluid/on_mob_end_metabolize(mob/living/L)
+	L.clear_fullscreen("hyper_stim")
+
+/datum/reagent/medicine/hyper_stimpak_fluid/on_mob_life(mob/living/carbon/M)
+	M.Jitter(5)
+	M.adjustToxLoss(-4.0*REM, 0)
+	M.adjustOxyLoss(-4.0*REM, 0)
+	M.adjustBruteLoss(-4.0*REM, 0)
+	M.adjustFireLoss(-4.0*REM, 0)
+	M.adjustOrganLoss(ORGAN_SLOT_LUNGS, -2.0*REM)
+	M.adjustOrganLoss(ORGAN_SLOT_HEART, -2.0*REM)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -2.0*REM)
+	M.adjustOrganLoss(ORGAN_SLOT_LIVER, -2.0*REM)
+	M.adjustOrganLoss(ORGAN_SLOT_EYES, -2.0*REM)
+	M.adjustOrganLoss(ORGAN_SLOT_EARS, -2.0*REM)
+	M.adjustOrganLoss(ORGAN_SLOT_STOMACH, -2.0*REM)
+	if(prob(30))
+		var/reaction = rand(1,3)
+		switch(reaction)
+			if(1)
+				M.emote("laugh")
+				SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "hyper_stimpak", /datum/mood_event/happiness_drug_good_od)
+			if(2)
+				M.emote("sway")
+				M.Dizzy(25)
+			if(3)
+				M.emote("frown")
+				SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "hyper_stimpak", /datum/mood_event/happiness_drug_bad_od)
+	if(prob(3) && iscarbon(M))
+		M.visible_message("<span class='danger'>[M] starts having a seizure!</span>", "<span class='userdanger'>You have a seizure!</span>")
+		M.Unconscious(100)
+		M.Jitter(350)
+	..()
+	. = 1
+
+/datum/reagent/medicine/woundpak_fluid
+	name = "Woundpak Fluid"
+	description = "A specialised stimpak. Has less direct healing, but is more effective in treating wounds."
+	reagent_state = LIQUID
+	color = "#FDFD96"
+	metabolization_rate = 2.5 * REAGENTS_METABOLISM
+	overdose_threshold = 30
+
 /datum/reagent/medicine/healing_powder
 	name = "Healing Powder"
 	description = "A makeshift medicine made from various foraged herbs and flowers."

@@ -16,12 +16,12 @@
 		SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "numb", /datum/mood_event/narcotic_medium, name)
 	..()
 
-/datum/reagent/drug/calmex/reaction_mob(mob/living/carbon/C, method=INJECT, reac_volume)
-	if(method == INJECT)
-		for(var/s in C.surgeries)
-			var/datum/surgery/S = s
-			S.speed_modifier = max(0.2, S.speed_modifier)
-	..()
+//datum/reagent/drug/calmex/reaction_mob(mob/living/carbon/C, method=INJECT, reac_volume)
+//	if(method == INJECT)
+//		for(var/s in C.surgeries)
+//			var/datum/surgery/S = s
+//			S.speed_modifier = max(0.2, S.speed_modifier)
+//	..()
 
 /datum/reagent/drug/calmex/overdose_process(mob/living/M)
 	switch(current_cycle)
@@ -65,7 +65,7 @@
 /datum/reagent/drug/smooch/on_mob_life(mob/living/carbon/M)
 	M.set_drugginess(15)
 	M.jitteriness = 0
-	M.confused = 0
+	//M.confused = 0
 	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.2)
 	if(prob(7))
 		M.emote(pick("twitch","drool","moan","giggle"))
