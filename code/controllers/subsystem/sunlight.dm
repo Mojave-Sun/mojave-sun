@@ -52,7 +52,7 @@ SUBSYSTEM_DEF(sunlight)
 	init_order = INIT_ORDER_SUNLIGHT
 
 
-	var/list/obj/screen/fullscreen/lighting_backdrop/Sunlight/sunlighting_planes = list()
+	var/list/atom/movable/screen/fullscreen/lighting_backdrop/Sunlight/sunlighting_planes = list()
 
 	/* thanks ruskis */
 	var/datum/time_of_day/current_step_datum
@@ -101,7 +101,7 @@ SUBSYSTEM_DEF(sunlight)
 	if(world.time > step_finish)
 		set_time_of_day(current_step + 1)
 
-/datum/controller/subsystem/sunlight/proc/set_time_of_day(var/step)
+/datum/controller/subsystem/sunlight/proc/set_time_of_day(step)
 	if(step > time_cycle_steps.len)
 		step = STEP_DAY
 	step_started = world.time
@@ -187,7 +187,7 @@ SUBSYSTEM_DEF(sunlight)
 	current_color = BlendRGB(current_step_datum.color, next_step_datum.color, blend_amount)
 
 	/* for each thing, update the colour */
-	for (var/obj/screen/fullscreen/lighting_backdrop/Sunlight/SP in sunlighting_planes)
+	for (var/atom/movable/screen/fullscreen/lighting_backdrop/Sunlight/SP in sunlighting_planes)
 		SP.color = current_color
 
 

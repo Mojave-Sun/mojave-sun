@@ -54,7 +54,7 @@ Sunlight System
 	var/turf/source_turf
 	var/list/datum/lighting_corner/affectingCorners
 
-/atom/movable/sunlight_object/Destroy(var/force)
+/atom/movable/sunlight_object/Destroy(force)
 	if (force)
 		var/turf/badTurf = get_turf(source_turf)
 		stack_trace("A sunlighting object has been deleted [COORD(badTurf)]")
