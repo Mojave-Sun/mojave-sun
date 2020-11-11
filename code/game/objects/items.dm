@@ -468,8 +468,6 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	if(!silent)
 		playsound(src, drop_sound, DROP_SOUND_VOLUME, ignore_walls = FALSE)
 	user?.update_equipment_speed_mods()
-	if(log_pickup_and_drop)
-		user.log_message("[user] dropped a [name]", INDIVIDUAL_ATTACK_LOG)
 
 /// called just as an item is picked up (loc is not yet changed)
 /obj/item/proc/pickup(mob/user)
@@ -506,9 +504,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	if(!log_pickup_and_drop || initial) //MS13: herein weapon pulling and holstering is sent to admin logs.
 		return
 	if(slot == ITEM_SLOT_HANDS)
-		user.log_message("[user] pulled a [name]", INDIVIDUAL_ATTACK_LOG)
-	else
-		user.log_message("[user] holstered a [name]", INDIVIDUAL_ATTACK_LOG)
+		user.log_message("[user] grabbed a [name]", INDIVIDUAL_ATTACK_LOG)
 
 ///sometimes we only want to grant the item's action if it's equipped in a specific slot.
 /obj/item/proc/item_action_slot_check(slot, mob/user)
