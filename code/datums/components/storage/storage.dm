@@ -678,8 +678,6 @@
 	if(M)
 		parent.add_fingerprint(M)
 	. = master.handle_item_insertion_from_slave(src, I, prevent_warning, M)
-	if(I.log_pickup_and_drop)
-		M.log_message("holstered a [I.name]", INDIVIDUAL_ATTACK_LOG)
 
 /datum/component/storage/proc/mob_item_insertion_feedback(mob/user, mob/M, obj/item/I, override = FALSE)
 	if(silent && !override)
