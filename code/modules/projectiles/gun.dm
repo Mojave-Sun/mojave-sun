@@ -77,6 +77,8 @@
 	var/automatic = 0 //can gun use it, 0 is no, anything above 0 is the delay between clicks in ds
 	var/pb_knockback = 0
 
+	log_pickup_and_drop = TRUE
+
 /obj/item/gun/Initialize()
 	. = ..()
 	if(pin)

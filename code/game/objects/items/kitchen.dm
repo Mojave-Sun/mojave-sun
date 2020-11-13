@@ -97,6 +97,8 @@
 	bare_wound_bonus = 10
 	tool_behaviour = TOOL_KNIFE
 
+	log_pickup_and_drop = TRUE
+
 /obj/item/kitchen/knife/ComponentInitialize()
 	. = ..()
 	set_butchering()
