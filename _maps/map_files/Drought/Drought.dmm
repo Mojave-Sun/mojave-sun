@@ -290,6 +290,19 @@
 /obj/structure/table/low_wall/wood,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
+"bnD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
+"brL" = (
+/obj/structure/rack,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_containers/syringe,
+/obj/item/reagent_containers/syringe,
+/obj/item/reagent_containers/syringe,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "bsQ" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/plasteel/f13/_full,
@@ -436,7 +449,6 @@
 /obj/structure/bed/f13/bedframe/metal,
 /obj/structure/bed/f13/mattress/filthy,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "bXn" = (
@@ -887,6 +899,14 @@
 	},
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
+"eUV" = (
+/obj/machinery/light/small{
+	brightness = 3;
+	dir = 8
+	},
+/obj/item/reagent_containers/syringe,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "eYj" = (
 /obj/structure/table/f13/no_smooth/desk{
 	dir = 1
@@ -1268,10 +1288,6 @@
 /obj/structure/table/low_wall/wood,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
-"hkk" = (
-/obj/structure/fence/corner,
-/turf/open/floor/plating/ground/desert,
-/area/f13)
 "hlA" = (
 /obj/structure/table/wood,
 /obj/structure/f13/tv,
@@ -1945,7 +1961,7 @@
 /area/f13/sunny_dale)
 "lNa" = (
 /obj/item/paper_bin,
-/obj/structure/table/f13/no_smooth/wood,
+/obj/structure/table/wood,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "lND" = (
@@ -2175,15 +2191,6 @@
 	},
 /turf/open/floor/plating/ground/desert,
 /area/f13)
-"nbc" = (
-/obj/structure/table/f13/no_smooth/wood{
-	pixel_y = 4
-	},
-/obj/structure/safe/floor{
-	pixel_x = -6
-	},
-/turf/open/floor/wood/f13,
-/area/f13/sunny_dale)
 "ndO" = (
 /obj/machinery/light/small{
 	dir = 8;
@@ -2219,6 +2226,14 @@
 	},
 /turf/open/floor/plating/ground/road,
 /area/f13)
+"nso" = (
+/obj/machinery/light/small{
+	brightness = 3;
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "nta" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -2413,10 +2428,7 @@
 /obj/machinery/recharger{
 	pixel_y = 4
 	},
-/obj/structure/table/f13/no_smooth/wood/bottom{
-	pixel_y = 4
-	},
-/obj/structure/table/f13/no_smooth/wood/bottom,
+/obj/structure/table/wood,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "oEf" = (
@@ -2556,6 +2568,12 @@
 /obj/structure/bed/f13/bedframe/metal,
 /obj/structure/bed/f13/mattress/dirty,
 /obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
+"pJX" = (
+/obj/structure/rack,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/syringes,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "pMp" = (
@@ -2727,6 +2745,11 @@
 /obj/item/chair/stool/bar,
 /turf/open/floor/plasteel/f13/_full,
 /area/f13/sunny_dale)
+"qFC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_containers/syringe,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "qJR" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/wood/f13,
@@ -2832,14 +2855,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/grimy,
 /area/f13/sunny_dale)
-"riz" = (
-/obj/machinery/light/small{
-	brightness = 3;
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/f13,
-/area/f13/sunny_dale)
 "rkL" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/black,
@@ -2917,6 +2932,15 @@
 "rMc" = (
 /obj/structure/table/wood,
 /turf/open/floor/plasteel/grimy,
+/area/f13/sunny_dale)
+"rNV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/remains/human,
+/obj/item/clothing/head/fedora/det_hat{
+	pixel_y = 5
+	},
+/turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "rPp" = (
 /turf/open/floor/plasteel/f13/white,
@@ -3078,6 +3102,12 @@
 	},
 /turf/open/floor/wood/f13/stage_l,
 /area/f13)
+"sUf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_containers/syringe,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
 "sWd" = (
 /obj/item/cigbutt,
 /turf/open/floor/plasteel/f13/_full,
@@ -3311,6 +3341,10 @@
 /area/f13/sunny_dale)
 "uuA" = (
 /obj/effect/decal/cleanable/oil,
+/turf/open/floor/wood/f13,
+/area/f13/sunny_dale)
+"uvB" = (
+/obj/item/reagent_containers/syringe,
 /turf/open/floor/wood/f13,
 /area/f13/sunny_dale)
 "uyc" = (
@@ -60060,7 +60094,7 @@ bCt
 bCt
 bCt
 bCt
-bCm
+tkT
 bCt
 iMK
 oNR
@@ -60247,7 +60281,7 @@ bCt
 bCt
 bCt
 bCt
-bCm
+tkT
 bCt
 iMK
 oNR
@@ -60434,7 +60468,7 @@ bCt
 bCt
 bCt
 bCt
-bCm
+tkT
 bCt
 iMK
 oNR
@@ -60621,7 +60655,7 @@ bCt
 bCt
 bCt
 bCt
-bCm
+tkT
 bCt
 iMK
 oNR
@@ -60808,7 +60842,7 @@ bCt
 bCt
 bCt
 bCt
-bCm
+tkT
 bCt
 iMK
 oNR
@@ -60985,17 +61019,17 @@ bIQ
 bIQ
 bIQ
 bIQ
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCt
-bCm
+vwR
+vwR
+vwR
+vwR
+vwR
+vwR
+vwR
+vwR
+vwR
+vwR
+tFv
 bCt
 iMK
 oNR
@@ -61182,7 +61216,7 @@ bCt
 bCt
 bCt
 bCt
-bCm
+bCt
 bCt
 iMK
 oNR
@@ -61369,7 +61403,7 @@ bCt
 bCt
 bCt
 bCt
-bCm
+bCt
 bCt
 iMK
 oNR
@@ -61556,7 +61590,7 @@ bCt
 bCt
 bCt
 bCt
-bCm
+bCt
 bCt
 iMK
 oNR
@@ -61743,7 +61777,7 @@ bCt
 bCt
 bCt
 bCt
-bCm
+bCt
 bCt
 iMK
 oNR
@@ -61930,7 +61964,7 @@ bCt
 bCt
 bCt
 bCt
-bCm
+bCt
 bCt
 iMK
 oNR
@@ -62117,7 +62151,7 @@ bCt
 bCt
 bCt
 bCt
-bCm
+bCt
 bCt
 iMK
 oNR
@@ -62304,7 +62338,7 @@ bCt
 bCt
 bCt
 bCt
-bCm
+bCt
 bCt
 iMK
 oNR
@@ -62482,16 +62516,16 @@ bsW
 bIQ
 bIQ
 bsW
-wws
-wws
-wws
-wws
-wws
-wws
-wws
-wws
-wws
-hkk
+bCt
+bCt
+bCt
+bCt
+bCt
+bCt
+bCt
+bCt
+bCt
+bCt
 bCt
 iMK
 oNR
@@ -76387,14 +76421,14 @@ bLu
 oNR
 iMK
 tfu
-azf
+uSi
 joM
-qvn
+eUV
 lzy
 azf
 pGT
 okE
-azf
+uvB
 wvs
 uSi
 azf
@@ -76574,16 +76608,16 @@ bLu
 oNR
 iMK
 tfu
-azf
-vFI
+uSi
+sUf
 uSi
 uSi
 uSi
 azf
-uSi
+qFC
 nlV
 wvs
-uSi
+rNV
 uSi
 tfu
 iMK
@@ -76764,10 +76798,10 @@ tfu
 uSi
 vFI
 xup
-uSi
+qFC
 azf
 uSi
-azf
+uvB
 azf
 wvs
 uSi
@@ -76948,11 +76982,11 @@ bLu
 oNR
 iMK
 tfu
-uSi
+qFC
 fDb
 uSi
 bVD
-uSi
+qFC
 dTc
 uSi
 uSi
@@ -77324,7 +77358,7 @@ iMK
 tfu
 uSi
 uSi
-riz
+nso
 uSi
 tfu
 bCt
@@ -77509,9 +77543,9 @@ bLu
 oNR
 iMK
 tfu
-sTj
-uWH
-uWH
+bnD
+brL
+pJX
 uWH
 tfu
 bCt
@@ -80880,7 +80914,7 @@ bCt
 tfu
 vAb
 lNa
-nbc
+ueX
 oAP
 wsP
 tfu
