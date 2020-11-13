@@ -504,7 +504,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	if(!log_pickup_and_drop || initial) //MS13: herein weapon pulling and holstering is sent to admin logs.
 		return
 	if(slot == ITEM_SLOT_HANDS)
-		user.log_message("[user] grabbed a [name]", INDIVIDUAL_ATTACK_LOG)
+		user.log_message("[user] grabbed a [name]", LOG_ATTACK)
 
 ///sometimes we only want to grant the item's action if it's equipped in a specific slot.
 /obj/item/proc/item_action_slot_check(slot, mob/user)
