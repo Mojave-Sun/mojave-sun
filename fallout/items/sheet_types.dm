@@ -55,7 +55,7 @@ GLOBAL_LIST_INIT(hay_recipes, list ( \
 
 /obj/item/stack/sheet/hay/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] begins shoving hay up [user.p_their()] arse! It looks like [user.p_theyre()] trying to commit suicide!</span>")
-	addtimer(CALLBACK(user, /mob/proc/gib), 30) //fancy callback bullshit
+	addtimer(CALLBACK(user, /mob/living/proc/gib), 30) //fancy callback bullshit
 	return BRUTELOSS
 
 /obj/item/stack/sheet/hay/fifty

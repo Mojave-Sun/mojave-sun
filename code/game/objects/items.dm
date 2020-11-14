@@ -189,6 +189,9 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 
 	var/canMouseDown = FALSE
 
+	///MS13: For logging, in attack logs, things (chiefly weapons) being equipped, dropped, or taken into hand.
+	var/log_pickup_and_drop = FALSE
+
 /obj/item/Initialize()
 
 	if(attack_verb_continuous)
@@ -421,7 +424,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 /obj/item/attack_alien(mob/user)
 	var/mob/living/carbon/alien/A = user
 
-	if(!A.has_fine_manipulation)
+	if(!ISADVANCEDTOOLUSER(A))
 		if(src in A.contents) // To stop Aliens having items stuck in their pockets
 			A.dropItemToGround(src)
 		to_chat(user, "<span class='warning'>Your claws aren't capable of such fine manipulation!</span>")
@@ -498,6 +501,10 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 		else if(slot == ITEM_SLOT_HANDS)
 			playsound(src, pickup_sound, PICKUP_SOUND_VOLUME, ignore_walls = FALSE)
 	user.update_equipment_speed_mods()
+	if(!log_pickup_and_drop || initial) //MS13: herein weapon pulling and holstering is sent to admin logs.
+		return
+	if(slot == ITEM_SLOT_HANDS)
+		user.log_message("[user] grabbed a [name]", LOG_ATTACK)
 
 ///sometimes we only want to grant the item's action if it's equipped in a specific slot.
 /obj/item/proc/item_action_slot_check(slot, mob/user)
