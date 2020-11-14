@@ -73,14 +73,17 @@ def three_way_merge(base, left, right):
 
         if merged_movables is None:
             merged_movables = left_movables + ['/obj'] + right_movables
+            print(f"    Left and right movable groups are split by a generic `/obj`")
         if merged_turfs is None:
             merged_turfs = left_turfs
-            print(f"    Saving turf: {left_turfs}")
-            print(f"    Alternative: {right_turfs}")
+            print(f"    Saving turf: {', '.join(left_turfs)}")
+            print(f"    Alternative: {', '.join(right_turfs)}")
+            print(f"    Original:    {', '.join(base_turfs)}")
         if merged_areas is None:
             merged_areas = left_areas
-            print(f"    Saving area: {left_areas}")
-            print(f"    Alternative: {right_areas}")
+            print(f"    Saving area: {', '.join(left_areas)}")
+            print(f"    Alternative: {', '.join(right_areas)}")
+            print(f"    Original:    {', '.join(base_areas)}")
 
         merged.set_tile(coord, merged_movables + merged_turfs + merged_areas)
 
@@ -100,12 +103,12 @@ def main(path, original, left, right):
     if trouble:
         print("!!! Manual merge required!")
         if merged:
-            print("    A best-effort merge was performed. You must edit the map and update all")
-            print("    coordinates mentioned above.")
+            print("    A best-effort merge was performed. You must edit the map and confirm")
+            print("    that all coordinates mentioned above are as desired.")
         else:
-            print("    The map was totally unable to be merged, you must start with one version")
-            print("    or the other and manually resolve the conflict.")
-        print("    Information about which tiles conflicted is listed above.")
+            print("    The map was totally unable to be merged; you must start with one version")
+            print("    or the other and manually resolve the conflict. Information about the")
+            print("    conflicting tiles is listed above.")
     print(f"    Debug stats: {dict(debug_stats)}")
     return trouble
 
