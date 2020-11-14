@@ -55,6 +55,7 @@ class DMM:
         return self.dictionary[self.grid[coord]]
 
     def set_tile(self, coord, tile):
+        tile = tuple(tile)
         self.grid[coord] = self.get_or_generate_key(tile)
 
     def generate_new_key(self):
