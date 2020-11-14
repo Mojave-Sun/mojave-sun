@@ -53,9 +53,9 @@ def three_way_merge(base, left, right):
             continue
 
         # try to merge each group independently (movables, turfs, areas)
-        base_movables, base_turfs, base_areas = split_atom_groups(base_tile)
-        left_movables, left_turfs, left_areas = split_atom_groups(left_tile)
-        right_movables, right_turfs, right_areas = split_atom_groups(right_tile)
+        base_movables, base_turfs, base_areas = dmm.split_atom_groups(base_tile)
+        left_movables, left_turfs, left_areas = dmm.split_atom_groups(left_tile)
+        right_movables, right_turfs, right_areas = dmm.split_atom_groups(right_tile)
 
         merged_movables = select(base_movables, left_movables, right_movables, debug='movable')
         merged_turfs = select(base_turfs, left_turfs, right_turfs, debug='turf')
