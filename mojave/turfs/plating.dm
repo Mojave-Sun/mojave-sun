@@ -185,30 +185,30 @@
 		if(istype(curr_area, /area/ms13/snow/deepforest))
 			if(prob(40))
 				randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
-			else
-				if(prob(20))
-					randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
 				turfPlant = new randPlant(src)
-				. = TRUE
-				return .
+			else if(prob(20))
+				randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
+				turfPlant = new randPlant(src)
+			. = TRUE
+			return .
 		if(istype(curr_area, /area/ms13/snow/forest))
 			if(prob(20))
 				randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
-			else
-				if(prob(10))
-					randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
 				turfPlant = new randPlant(src)
-				. = TRUE
-				return .
+			else if(prob(10))
+				randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
+				turfPlant = new randPlant(src)
+			. = TRUE
+			return .
 		if(istype(curr_area, /area/ms13/snow/lightforest))
 			if(prob(5))
 				randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
-			else
-				if(prob(10))
-					randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
 				turfPlant = new randPlant(src)
-				. = TRUE
-				return .
+			else if(prob(10))
+				randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
+				turfPlant = new randPlant(src)
+			. = TRUE
+			return .
 		else
 			if(prob(Weight))
 				if(Weight == (20 * GRASS_WEIGHT))
