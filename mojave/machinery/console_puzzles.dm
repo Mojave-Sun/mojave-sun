@@ -1,6 +1,6 @@
-//GLOBAL_LIST_INIT(fallout_safe_prize_pool, list()
+//GLOBAL_LIST_INIT(ms13_safe_prize_pool, list()
 
-/obj/machinery/computer/arcade/fallout
+/obj/machinery/computer/arcade/ms13
 	name = "random hackable console"
 	desc = "random hackable console"
 	icon_state = "computer"
@@ -8,32 +8,32 @@
 	icon_screen = "invaders"
 	light_color = LIGHT_COLOR_GREEN
 
-/obj/item/circuitboard/computer/arcade/fallout/bruteforce
+/obj/item/circuitboard/computer/arcade/ms13/bruteforce
 	name = "Brute Force Console (Computer Board)"
 	icon_state = "generic"
-	build_path = /obj/machinery/computer/arcade/fallout/bruteforce
+	build_path = /obj/machinery/computer/arcade/ms13/bruteforce
 
-/obj/item/circuitboard/computer/arcade/fallout/safe
+/obj/item/circuitboard/computer/arcade/ms13/safe
 	name = "Safe Hacking Console (Computer Board)"
 	icon_state = "generic"
-	build_path = /obj/machinery/computer/arcade/fallout/safe
+	build_path = /obj/machinery/computer/arcade/ms13/safe
 
 // ** Safe Hacking ** //
 
-/obj/machinery/computer/arcade/fallout/safe
+/obj/machinery/computer/arcade/ms13/safe
 	name = "Electronic Safe"
 	desc = "Capacitors for Tumblers."
 	icon_state = "computer"
-	circuit = /obj/item/circuitboard/computer/arcade/fallout/safe
+	circuit = /obj/item/circuitboard/computer/arcade/ms13/safe
 
 // ** Brute Force Hack** //
 
 
-/obj/machinery/computer/arcade/fallout/bruteforce
+/obj/machinery/computer/arcade/ms13/bruteforce
 	name = "Control Console"
 	desc = "The Gibson Doesn't Stand A Chance."
 	icon_state = "computer"
-	circuit = /obj/item/circuitboard/computer/arcade/fallout/bruteforce
+	circuit = /obj/item/circuitboard/computer/arcade/ms13/bruteforce
 	var/enemy_name = "Sys_Admin"
 	var/temp = "The Code Stares Back" //Temporary message, for attack messages, etc
 	var/player_hp = 30 //Player health/attack points
@@ -47,7 +47,7 @@
 
 	enemy_name = "Sys_Admin"
 
-/obj/machinery/computer/arcade/fallout/bruteforce/ui_interact(mob/_user)
+/obj/machinery/computer/arcade/ms13/bruteforce/ui_interact(mob/_user)
 	. = ..()
 	if (!isliving(_user))
 		return
@@ -70,7 +70,7 @@
 	popup.set_content(dat)
 	popup.open()
 
-/obj/machinery/computer/arcade/fallout/bruteforce/Topic(href, href_list)
+/obj/machinery/computer/arcade/ms13/bruteforce/Topic(href, href_list)
 	if(..())
 		return
 
@@ -143,7 +143,7 @@
 	updateUsrDialog()
 	return
 
-/obj/machinery/computer/arcade/fallout/bruteforce/proc/arcade_action(mob/_user)
+/obj/machinery/computer/arcade/ms13/bruteforce/proc/arcade_action(mob/_user)
 	if (!isliving(_user))
 		return
 	var/mob/living/user = _user
@@ -216,7 +216,7 @@
 	return
 
 
-/obj/machinery/computer/arcade/fallout/bruteforce/emag_act(mob/living/user)
+/obj/machinery/computer/arcade/ms13/bruteforce/emag_act(mob/living/user)
 	if(obj_flags & EMAGGED)
 		return
 	to_chat(user, "<span class='warning'>A mesmerizing Rhumba beat starts playing from the arcade machine's speakers!</span>")

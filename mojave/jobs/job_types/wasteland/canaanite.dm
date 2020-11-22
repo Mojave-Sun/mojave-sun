@@ -1,4 +1,4 @@
-/datum/job/f13/wasteland/canaanite
+/datum/job/ms13/wasteland/canaanite
 	title = "New Canaanite"
 	total_positions = 2
 	spawn_positions = 2
@@ -7,15 +7,15 @@
 	forbid = ""
 	enforce = ""
 
-	outfit = /datum/outfit/job/f13/wasteland/canaanite
+	outfit = /datum/outfit/job/ms13/wasteland/canaanite
 
-	display_order = JOB_DISPLAY_ORDER_F13_CANAANITE
+	display_order = JOB_DISPLAY_ORDER_MS13_CANAANITE
 
-/datum/outfit/job/f13/wasteland/canaanite
+/datum/outfit/job/ms13/wasteland/canaanite
 	name = "_New Canaanite"
-	jobtype = /datum/job/f13/wasteland/canaanite
+	jobtype = /datum/job/ms13/wasteland/canaanite
 
 	head = /obj/item/clothing/head/collectable/petehat
 
-/datum/outfit/job/f13/wasteland/canaanite/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/ms13/wasteland/canaanite/pre_equip(mob/living/carbon/human/H)
 	..()

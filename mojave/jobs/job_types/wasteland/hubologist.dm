@@ -1,4 +1,4 @@
-/datum/job/f13/wasteland/hubologist
+/datum/job/ms13/wasteland/hubologist
 	title = "Hubologist"
 	total_positions = 2
 	spawn_positions = 2
@@ -7,15 +7,15 @@
 	forbid = ""
 	enforce = ""
 
-	outfit = /datum/outfit/job/f13/wasteland/hubologist
+	outfit = /datum/outfit/job/ms13/wasteland/hubologist
 
-	display_order = JOB_DISPLAY_ORDER_F13_HUBOLOGIST
+	display_order = JOB_DISPLAY_ORDER_MS13_HUBOLOGIST
 
-/datum/outfit/job/f13/wasteland/hubologist
+/datum/outfit/job/ms13/wasteland/hubologist
 	name = "_Hubologist"
-	jobtype = /datum/job/f13/wasteland/hubologist
+	jobtype = /datum/job/ms13/wasteland/hubologist
 
 	head = /obj/item/clothing/head/collectable/petehat
 
-/datum/outfit/job/f13/wasteland/hubologist/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/ms13/wasteland/hubologist/pre_equip(mob/living/carbon/human/H)
 	..()

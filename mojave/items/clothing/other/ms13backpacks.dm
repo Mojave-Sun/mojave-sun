@@ -2,8 +2,8 @@
 /////////////////// MOJAVE SUN BACKPACKS ////////////////////
 /////////////////////////////////////////////////////////////
 
-/obj/item/storage/fallout
-	name = "generic fallout storage"
+/obj/item/storage/ms13
+	name = "generic ms13 storage"
 	desc = "Da error tho, the crazy error yo!!"
 	icon = 'mojave/icons/objects/clothing/backpack.dmi'
 	worn_icon = null //'mojave/icons/mob/clothing/belt.dmi' or 'mojave/icons/mob/clothing/back.dmi'
@@ -17,14 +17,14 @@
 	resistance_flags = NONE
 	max_integrity = 300
 
-/obj/item/storage/fallout/ComponentInitialize() //backpacks are smaller but hold larger things
+/obj/item/storage/ms13/ComponentInitialize() //backpacks are smaller but hold larger things
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_combined_w_class = 40
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.max_items = 12
 
-/obj/item/storage/fallout/sack
+/obj/item/storage/ms13/sack
 	name = "sack"
 	desc = "A gnarly weave-sack, very abundant, useful for storage and a carvanners necessity."
 	worn_icon = 'mojave/icons/mob/clothing/belt.dmi'

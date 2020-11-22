@@ -1,4 +1,4 @@
-/datum/job/f13/tribe/warrior
+/datum/job/ms13/tribe/warrior
 	title = "Warrior"
 	total_positions = 4
 	spawn_positions = 4
@@ -7,15 +7,15 @@
 	forbid = ""
 	enforce = ""
 
-	outfit = /datum/outfit/job/f13/tribe/warrior
+	outfit = /datum/outfit/job/ms13/tribe/warrior
 
-	display_order = JOB_DISPLAY_ORDER_F13_WARRIOR
+	display_order = JOB_DISPLAY_ORDER_MS13_WARRIOR
 
-/datum/outfit/job/f13/tribe/warrior
+/datum/outfit/job/ms13/tribe/warrior
 	name = "_Tribal Warrior"
-	jobtype = /datum/job/f13/tribe/warrior
+	jobtype = /datum/job/ms13/tribe/warrior
 
 	head = /obj/item/clothing/head/collectable/petehat
 
-/datum/outfit/job/f13/tribe/warrior/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/ms13/tribe/warrior/pre_equip(mob/living/carbon/human/H)
 	..()

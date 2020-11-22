@@ -1,4 +1,4 @@
-/datum/job/f13/bos/paladin
+/datum/job/ms13/bos/paladin
 	title = "Paladin"
 	total_positions = 1
 	spawn_positions = 1
@@ -7,15 +7,15 @@
 	forbid = ""
 	enforce = ""
 
-	outfit = /datum/outfit/job/f13/bos/paladin
+	outfit = /datum/outfit/job/ms13/bos/paladin
 
-	display_order = JOB_DISPLAY_ORDER_F13_PALADIN
+	display_order = JOB_DISPLAY_ORDER_MS13_PALADIN
 
-/datum/outfit/job/f13/bos/paladin
+/datum/outfit/job/ms13/bos/paladin
 	name = "_BoS Paladin"
-	jobtype = /datum/job/f13/bos/paladin
+	jobtype = /datum/job/ms13/bos/paladin
 
 	head = /obj/item/clothing/head/collectable/petehat
 
-/datum/outfit/job/f13/bos/paladin/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/ms13/bos/paladin/pre_equip(mob/living/carbon/human/H)
 	..()

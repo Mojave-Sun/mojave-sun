@@ -6,7 +6,7 @@
 
 //brahmin
 
-/mob/living/simple_animal/hostile/retaliate/fallout/brahmin
+/mob/living/simple_animal/hostile/retaliate/ms13/brahmin
 	name = "brahmin"
 	desc = "Mutated cattle, renowed over the wastes for their labor, milk, fertilizer, leather, and meat."
 	icon = 'mojave/icons/mob/32x64.dmi'
@@ -19,14 +19,14 @@
 	attack_verb_continuous = "headbutts"
 	attack_verb_simple = "headbutt"
 	turns_per_move = 3
-	butcher_results = list(/obj/item/fallout/hide/brahmin = 1, /obj/item/fallout/carcass/large/brahmiluff/front = 1, /obj/item/fallout/carcass/large/brahmiluff/back = 1, /obj/item/fallout/animalitem/brahmin/horns = 2)//brahmin meat, tongue, horns, hide
+	butcher_results = list(/obj/item/ms13/hide/brahmin = 1, /obj/item/ms13/carcass/large/brahmiluff/front = 1, /obj/item/ms13/carcass/large/brahmiluff/back = 1, /obj/item/ms13/animalitem/brahmin/horns = 2)//brahmin meat, tongue, horns, hide
 	attack_sound = 'sound/weapons/punch1.ogg'
 	speed = 3
 	health = 200
 	maxHealth = 200
 	melee_damage_lower = 3
 	melee_damage_upper = 5
-	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/fallout/tato, /obj/item/reagent_containers/food/snacks/grown/fallout/potato, /obj/item/reagent_containers/food/snacks/grown/fallout/razorgrain, /obj/item/reagent_containers/food/snacks/grown/fallout/baifan, /obj/item/reagent_containers/food/snacks/grown/fallout/cabbage)
+	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/ms13/tato, /obj/item/reagent_containers/food/snacks/grown/ms13/potato, /obj/item/reagent_containers/food/snacks/grown/ms13/razorgrain, /obj/item/reagent_containers/food/snacks/grown/ms13/baifan, /obj/item/reagent_containers/food/snacks/grown/ms13/cabbage)
 	milkable = TRUE
 	extract = null//brahmin milk
 	rideable = TRUE
@@ -34,12 +34,12 @@
 	baggable = TRUE
 	pixel_x = -16
 	base_pixel_x = -16
-	young_type = /mob/living/simple_animal/fallout/brahminyoung
-	adult_type = /mob/living/simple_animal/hostile/retaliate/fallout/brahmin
+	young_type = /mob/living/simple_animal/ms13/brahminyoung
+	adult_type = /mob/living/simple_animal/hostile/retaliate/ms13/brahmin
 	offsetx = 3
 	offsety = 11
 
-/mob/living/simple_animal/fallout/brahminyoung
+/mob/living/simple_animal/ms13/brahminyoung
 	name = "brahmin calf"
 	desc = "Mutated cattle, renowed over the wastes for their labor, milk, fertilizer, leather, and meat."
 	icon_state = "brahmin"
@@ -57,11 +57,11 @@
 	health = 50
 	maxHealth = 50
 	is_young = TRUE
-	adult_type = /mob/living/simple_animal/hostile/retaliate/fallout/brahmin
+	adult_type = /mob/living/simple_animal/hostile/retaliate/ms13/brahmin
 
 //brahmiluff
 
-/mob/living/simple_animal/hostile/retaliate/fallout/brahmin/brahmiluff
+/mob/living/simple_animal/hostile/retaliate/ms13/brahmin/brahmiluff
 	name = "brahmiluff"
 	desc = "Mutated wild cattle, native to the cold and covered in fur, a close relative to the brahmin and a native species to the area."
 	icon = 'mojave/icons/mob/32x64.dmi'
@@ -74,13 +74,13 @@
 	attack_verb_continuous = "headbutts"
 	attack_verb_simple = "headbutt"
 	turns_per_move = 1
-	butcher_results = list(/obj/item/fallout/hide/brahmiluff = 1, /obj/item/fallout/carcass/large/brahmiluff/front = 1, /obj/item/fallout/carcass/large/brahmiluff/back = 1, /obj/item/fallout/animalitem/brahmiluff/horns = 2)//brahmiluff meat, tongue, horns, hide, fur
+	butcher_results = list(/obj/item/ms13/hide/brahmiluff = 1, /obj/item/ms13/carcass/large/brahmiluff/front = 1, /obj/item/ms13/carcass/large/brahmiluff/back = 1, /obj/item/ms13/animalitem/brahmiluff/horns = 2)//brahmiluff meat, tongue, horns, hide, fur
 	attack_sound = 'sound/weapons/punch1.ogg'
 	health = 300
 	maxHealth = 300
 	melee_damage_lower = 5
 	melee_damage_upper = 20
-	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/fallout/blackberry, /obj/item/reagent_containers/food/snacks/grown/fallout/mutfruit, /obj/item/reagent_containers/food/snacks/grown/fallout/razorgrain, /obj/item/reagent_containers/food/snacks/grown/fallout/carrot, /obj/item/reagent_containers/food/snacks/grown/fallout/cavefungus)
+	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/ms13/blackberry, /obj/item/reagent_containers/food/snacks/grown/ms13/mutfruit, /obj/item/reagent_containers/food/snacks/grown/ms13/razorgrain, /obj/item/reagent_containers/food/snacks/grown/ms13/carrot, /obj/item/reagent_containers/food/snacks/grown/ms13/cavefungus)
 	milkable = TRUE
 	extract = null//brahmiluff milk
 	rideable = TRUE
@@ -93,7 +93,7 @@
 
 //clucker - chicken
 
-/mob/living/simple_animal/fallout/clucker
+/mob/living/simple_animal/ms13/clucker
 	name = "clucker"
 	desc = "A bald wasteland chicken, produces nutritious eggs and tasty meat."
 	icon_state = "clucker"
@@ -103,18 +103,18 @@
 	emote_hear = list("cheeps")
 	emote_see = list("flaps its wings")
 	turns_per_move = 2
-	butcher_results = list(/obj/item/fallout/carcass/clucker = 1, /obj/item/fallout/animalitem/clucker/feather = 1)//feathers(rare, homie bald), beak, "chicken"
+	butcher_results = list(/obj/item/ms13/carcass/clucker = 1, /obj/item/ms13/animalitem/clucker/feather = 1)//feathers(rare, homie bald), beak, "chicken"
 	health = 20
 	maxHealth = 20
 	speed = 1
-	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/fallout/razorgrain, /obj/item/reagent_containers/food/snacks/grown/fallout/baifan)
+	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/ms13/razorgrain, /obj/item/reagent_containers/food/snacks/grown/ms13/baifan)
 	eggable = TRUE
-	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/clucker
+	egg_type = /obj/item/reagent_containers/food/snacks/egg/ms13/clucker
 	smallasslad = TRUE
 
 //slepnir - horse mount
 
-/mob/living/simple_animal/hostile/retaliate/fallout/slepnir
+/mob/living/simple_animal/hostile/retaliate/ms13/slepnir
 	name = "slepnir"
 	desc = "A large, mutated horse, featuring six working legs it provides excellent mobility and speed, as well as being a backbone of unpowered travel across the wastes."
 	icon = 'mojave/icons/mob/32x64.dmi'
@@ -128,14 +128,14 @@
 	attack_verb_simple = "kick"
 	speak_chance = 10
 	turns_per_move = 5
-	butcher_results = list(/obj/item/fallout/hide/slepnir = 1, /obj/item/fallout/carcass/large/slepnir/front = 1, /obj/item/fallout/carcass/large/slepnir/back = 1, /obj/item/fallout/animalitem/slepnir/hooves = 2)//slepnir hide, hooves, hair, meat
-	attack_sound = 'mojave/sound/f13weapons/meleesounds/slam.ogg'
+	butcher_results = list(/obj/item/ms13/hide/slepnir = 1, /obj/item/ms13/carcass/large/slepnir/front = 1, /obj/item/ms13/carcass/large/slepnir/back = 1, /obj/item/ms13/animalitem/slepnir/hooves = 2)//slepnir hide, hooves, hair, meat
+	attack_sound = 'mojave/sound/ms13weapons/meleesounds/slam.ogg'
 	health = 400
 	maxHealth = 400
 	melee_damage_lower = 5
 	melee_damage_upper = 20 //getting kicked by a horse should hurt
 	speed = 1.5
-	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/fallout/apple, /obj/item/reagent_containers/food/snacks/grown/fallout/cmutfruit)
+	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/ms13/apple, /obj/item/reagent_containers/food/snacks/grown/ms13/cmutfruit)
 	tame_chance = 5
 	bonus_tame_chance = 15
 	rideable = TRUE
@@ -146,7 +146,7 @@
 
 //pigrat - pig but a rat
 
-/mob/living/simple_animal/hostile/fallout/pigrat
+/mob/living/simple_animal/hostile/ms13/pigrat
 	name = "pigrat"
 	desc = "A foul abomination of the earths two most filthy creatures, initially wild beasts but if tamed are known to be a source of nutritious meat and milk."
 	icon_state = "pigrat"
@@ -159,23 +159,23 @@
 	attack_verb_simple = "bite"
 	speak_chance = 30
 	turns_per_move = 5
-	butcher_results = list(/obj/item/fallout/hide/pigrat = 1, /obj/item/fallout/carcass/large/pigrat = 1, /obj/item/fallout/animalitem/pigrat/snout = 1)//pigrat hide, snout, meat
+	butcher_results = list(/obj/item/ms13/hide/pigrat = 1, /obj/item/ms13/carcass/large/pigrat = 1, /obj/item/ms13/animalitem/pigrat/snout = 1)//pigrat hide, snout, meat
 	attack_sound = 'sound/weapons/bite.ogg'
 	health = 100
 	maxHealth = 100
 	melee_damage_lower = 10
 	melee_damage_upper = 15
 	speed = 1
-	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/fallout/xander, /obj/item/reagent_containers/food/snacks/grown/fallout/carrot)
+	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/ms13/xander, /obj/item/reagent_containers/food/snacks/grown/ms13/carrot)
 	tame_chance = 5
 	bonus_tame_chance = 5
 	milkable = TRUE
 	extract = null//pigrat milk
 	breedable = TRUE
-	young_type = /mob/living/simple_animal/fallout/pigratyoung
-	adult_type = /mob/living/simple_animal/hostile/fallout/pigrat/tamed
+	young_type = /mob/living/simple_animal/ms13/pigratyoung
+	adult_type = /mob/living/simple_animal/hostile/ms13/pigrat/tamed
 
-/mob/living/simple_animal/fallout/pigratyoung
+/mob/living/simple_animal/ms13/pigratyoung
 	name = "pigrat"
 	desc = "A foul abomination of the earths two most filthy creatures, initially wild beasts but if tamed are known to be a source of nutritious meat and milk."
 	icon_state = "pigrat"
@@ -194,14 +194,14 @@
 	health = 30
 	maxHealth = 30
 	is_young = TRUE
-	adult_type = /mob/living/simple_animal/hostile/fallout/pigrat/tamed
+	adult_type = /mob/living/simple_animal/hostile/ms13/pigrat/tamed
 
-/mob/living/simple_animal/hostile/fallout/pigrat/tamed
+/mob/living/simple_animal/hostile/ms13/pigrat/tamed
 	faction = list("neutral")
 
 //molerat
 
-/mob/living/simple_animal/hostile/fallout/molerat
+/mob/living/simple_animal/hostile/ms13/molerat
 	name = "molerat"
 	desc = "A disgusting flesh beast, known for its hostility and edible meat."
 	icon_state = "molerat"
@@ -214,24 +214,24 @@
 	attack_verb_simple = "bite"
 	speak_chance = 30
 	turns_per_move = 5
-	butcher_results = list(/obj/item/fallout/hide/molerat = 1, /obj/item/fallout/carcass/molerat = 1)//molerat hide, teeth, meat
+	butcher_results = list(/obj/item/ms13/hide/molerat = 1, /obj/item/ms13/carcass/molerat = 1)//molerat hide, teeth, meat
 	attack_sound = 'sound/weapons/bite.ogg'
 	health = 100
 	maxHealth = 100
 	melee_damage_lower = 7
 	melee_damage_upper = 10
 	speed = 1.5
-	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/fallout/potato)
+	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/ms13/potato)
 	tame_chance = 20
 	bonus_tame_chance = 5
 	breedable = TRUE
-	young_type = /mob/living/simple_animal/fallout/moleratyoung
-	adult_type = /mob/living/simple_animal/hostile/fallout/molerat/tamed
+	young_type = /mob/living/simple_animal/ms13/moleratyoung
+	adult_type = /mob/living/simple_animal/hostile/ms13/molerat/tamed
 
-/mob/living/simple_animal/hostile/fallout/molerat/tamed
+/mob/living/simple_animal/hostile/ms13/molerat/tamed
 	faction = list("neutral")
 
-/mob/living/simple_animal/fallout/moleratyoung
+/mob/living/simple_animal/ms13/moleratyoung
 	name = "molerat"
 	desc = "A small disgusting flesh beast, known for its hostility and edible meat."
 	icon_state = "molerat"
@@ -250,11 +250,11 @@
 	health = 10
 	maxHealth = 10
 	is_young = TRUE
-	adult_type = /mob/living/simple_animal/hostile/fallout/molerat/tamed
+	adult_type = /mob/living/simple_animal/hostile/ms13/molerat/tamed
 
 //radroach
 
-/mob/living/simple_animal/hostile/fallout/radroach
+/mob/living/simple_animal/hostile/ms13/radroach
 	name = "radroach"
 	desc = "A large mutated cockroach, an angry beast thats extremely territorial."
 	icon_state = "radroach"
@@ -277,22 +277,22 @@
 	tame_chance = 5
 	bonus_tame_chance = 5
 	eggable = TRUE
-	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/radroach
+	egg_type = /obj/item/reagent_containers/food/snacks/egg/ms13/radroach
 	var/poison_per_bite = 5
 	var/poison_type = /datum/reagent/toxin
 
-/mob/living/simple_animal/hostile/fallout/radroach/AttackingTarget()
+/mob/living/simple_animal/hostile/ms13/radroach/AttackingTarget()
 	. = ..()
 	if(.)
 		inject_poison(target)
 
-/mob/living/simple_animal/hostile/fallout/radroach/proc/inject_poison(mob/living/L)
+/mob/living/simple_animal/hostile/ms13/radroach/proc/inject_poison(mob/living/L)
 	if(poison_type && istype(L) && L.reagents)
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 //gecko
 
-/mob/living/simple_animal/hostile/fallout/gecko
+/mob/living/simple_animal/hostile/ms13/gecko
 	name = "gecko"
 	desc = "A large mutated bipedal lizard, an angry squatter of the wastes, keen to fish-like prey and also rarely used as a mount."
 	icon_state = "gecko"
@@ -305,7 +305,7 @@
 	attack_verb_simple = "scratch"
 	speak_chance = 40
 	turns_per_move = 5
-	butcher_results = list(/obj/item/fallout/hide/gecko = 1, /obj/item/fallout/carcass/gecko = 1, /obj/item/fallout/animalitem/gecko/claws = 1)//gecko meat, eggs, hide
+	butcher_results = list(/obj/item/ms13/hide/gecko = 1, /obj/item/ms13/carcass/gecko = 1, /obj/item/ms13/animalitem/gecko/claws = 1)//gecko meat, eggs, hide
 	attack_sound = 'sound/weapons/slash.ogg'//scratch
 	health = 150
 	maxHealth = 150
@@ -317,21 +317,21 @@
 	bonus_tame_chance = 15
 	rideable = TRUE
 	eggable = TRUE
-	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/gecko
+	egg_type = /obj/item/reagent_containers/food/snacks/egg/ms13/gecko
 	offsetx = 6
 	offsety = 5
 
-/mob/living/simple_animal/hostile/fallout/gecko/ice
+/mob/living/simple_animal/hostile/ms13/gecko/ice
 	icon_state = "icegecko"
-	butcher_results = list(/obj/item/fallout/hide/gecko/ice = 1, /obj/item/fallout/carcass/gecko = 1, /obj/item/fallout/animalitem/gecko/claws = 1)
+	butcher_results = list(/obj/item/ms13/hide/gecko/ice = 1, /obj/item/ms13/carcass/gecko = 1, /obj/item/ms13/animalitem/gecko/claws = 1)
 
-/mob/living/simple_animal/hostile/fallout/gecko/sand
+/mob/living/simple_animal/hostile/ms13/gecko/sand
 	icon_state = "sandgecko"
-	butcher_results = list(/obj/item/fallout/hide/gecko/sand = 1, /obj/item/fallout/carcass/gecko = 1, /obj/item/fallout/animalitem/gecko/claws = 1)
+	butcher_results = list(/obj/item/ms13/hide/gecko/sand = 1, /obj/item/ms13/carcass/gecko = 1, /obj/item/ms13/animalitem/gecko/claws = 1)
 
 //mirelurk
 
-/mob/living/simple_animal/hostile/fallout/mirelurk
+/mob/living/simple_animal/hostile/ms13/mirelurk
 	name = "mirelurk"
 	desc = "A large mutated crab monster, lurks its prey from the deep, keen to meat and a vital food source for many roamers."
 	icon_state = "cavelurk"
@@ -355,19 +355,19 @@
 	bonus_tame_chance = 5
 	rideable = TRUE
 	eggable = TRUE
-	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/mirelurk
+	egg_type = /obj/item/reagent_containers/food/snacks/egg/ms13/mirelurk
 	offsetx = 4
 	offsety = 5
 
-/mob/living/simple_animal/hostile/fallout/mirelurk/radlurk
+/mob/living/simple_animal/hostile/ms13/mirelurk/radlurk
 	icon_state = "radlurk"
 
-/mob/living/simple_animal/hostile/fallout/mirelurk/nukalurk
+/mob/living/simple_animal/hostile/ms13/mirelurk/nukalurk
 	icon_state = "mirelurk"
 
 //giantant
 
-/mob/living/simple_animal/hostile/fallout/giantant
+/mob/living/simple_animal/hostile/ms13/giantant
 	name = "giant ant"
 	desc = "A large mutated ant, loyal to the hive and will protect it at all costs."
 	icon_state = "ant"
@@ -386,15 +386,15 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 30
 	speed = 2
-	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/fallout/punga, /obj/item/reagent_containers/food/snacks/grown/fallout/geigpunga)
+	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/ms13/punga, /obj/item/reagent_containers/food/snacks/grown/ms13/geigpunga)
 	tame_chance = 5
 	bonus_tame_chance = 5
 	eggable = TRUE
-	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/ant
+	egg_type = /obj/item/reagent_containers/food/snacks/egg/ms13/ant
 
 //nightstalker, very good mount
 
-/mob/living/simple_animal/hostile/fallout/nightstalker
+/mob/living/simple_animal/hostile/ms13/nightstalker
 	name = "nightstalker"
 	desc = "A large hybrid and dangerous creature of a snake and lion, known for its speed, cunning and squeezin!"
 	icon = 'mojave/icons/mob/32x64.dmi'
@@ -408,8 +408,8 @@
 	attack_verb_simple = "maul"
 	speak_chance = 20
 	turns_per_move = 3
-	butcher_results = list(/obj/item/fallout/hide/nightstalker = 1, /obj/item/fallout/carcass/large/nightstalker = 1, /obj/item/fallout/animalitem/nightstalker/teeth = 2)//nightstalker hide, extract, meat
-	attack_sound = 'mojave/sound/f13weapons/meleesounds/slam.ogg'
+	butcher_results = list(/obj/item/ms13/hide/nightstalker = 1, /obj/item/ms13/carcass/large/nightstalker = 1, /obj/item/ms13/animalitem/nightstalker/teeth = 2)//nightstalker hide, extract, meat
+	attack_sound = 'mojave/sound/ms13weapons/meleesounds/slam.ogg'
 	health = 400
 	maxHealth = 400
 	melee_damage_lower = 20
@@ -420,7 +420,7 @@
 	bonus_tame_chance = 2 //this things a jack of all tame trades
 	rideable = TRUE
 	eggable = TRUE
-	egg_type = /obj/item/reagent_containers/food/snacks/egg/fallout/nightstalker
+	egg_type = /obj/item/reagent_containers/food/snacks/egg/ms13/nightstalker
 	milkable = TRUE
 	extract = null//nightstalkers squeezin
 	base_pixel_x = -48
@@ -428,18 +428,18 @@
 	var/poison_per_bite = 10
 	var/poison_type = /datum/reagent/toxin
 
-/mob/living/simple_animal/hostile/fallout/nightstalker/AttackingTarget()
+/mob/living/simple_animal/hostile/ms13/nightstalker/AttackingTarget()
 	. = ..()
 	if(.)
 		inject_poison(target)
 
-/mob/living/simple_animal/hostile/fallout/nightstalker/proc/inject_poison(mob/living/L)
+/mob/living/simple_animal/hostile/ms13/nightstalker/proc/inject_poison(mob/living/L)
 	if(poison_type && istype(L) && L.reagents)
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 //honeybeast - mutated beehive thing
 
-/mob/living/simple_animal/hostile/fallout/honeybeast
+/mob/living/simple_animal/hostile/ms13/honeybeast
 	name = "honeybeast"
 	desc = "A large mutated clusterous queen, sporting a menancing hive, OH THE BEES, AHHHHHHHHHHHH, BEEES."
 	icon_state = "honeybeast"
@@ -458,16 +458,16 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	speed = 3
-	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/fallout/pricklypear)
+	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/ms13/pricklypear)
 	tame_chance = 5
 	bonus_tame_chance = 20
 	milkable = TRUE
 	extract = null//honey
 	var/bee_type = /mob/living/simple_animal/hostile/poison/bees/short
 
-/mob/living/simple_animal/hostile/fallout/honeybeast/OpenFire(the_target)
+/mob/living/simple_animal/hostile/ms13/honeybeast/OpenFire(the_target)
 	if(world.time >= ranged_cooldown)
-		var/mob/living/simple_animal/hostile/fallout/honeybeast/A = new bee_type(src.loc)
+		var/mob/living/simple_animal/hostile/ms13/honeybeast/A = new bee_type(src.loc)
 
 		A.flags_1 |= (flags_1 & ADMIN_SPAWNED_1)
 		A.GiveTarget(target)
@@ -477,7 +477,7 @@
 
 //radscorpion
 
-/mob/living/simple_animal/hostile/fallout/radscorpion
+/mob/living/simple_animal/hostile/ms13/radscorpion
 	name = "radscorpion"
 	desc = "A large mutated scorpion, found across the wastes, extremely lethal with not only its menacing pincers but toxic stinger to boot."
 	icon_state = "blackscorpion"
@@ -496,7 +496,7 @@
 	melee_damage_lower = 30
 	melee_damage_upper = 40
 	speed = 2
-	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/fallout/soot, /obj/item/reagent_containers/food/snacks/grown/fallout/toxicsoot)
+	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/ms13/soot, /obj/item/reagent_containers/food/snacks/grown/ms13/toxicsoot)
 	tame_chance = 5
 	bonus_tame_chance = 5
 	milkable = TRUE
@@ -504,24 +504,24 @@
 	var/poison_per_bite = 20
 	var/poison_type = /datum/reagent/toxin
 
-/mob/living/simple_animal/hostile/fallout/radscorpion/AttackingTarget()
+/mob/living/simple_animal/hostile/ms13/radscorpion/AttackingTarget()
 	. = ..()
 	if(.)
 		inject_poison(target)
 
-/mob/living/simple_animal/hostile/fallout/radscorpion/proc/inject_poison(mob/living/L)
+/mob/living/simple_animal/hostile/ms13/radscorpion/proc/inject_poison(mob/living/L)
 	if(poison_type && istype(L) && L.reagents)
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
-/mob/living/simple_animal/hostile/fallout/radscorpion/ice
+/mob/living/simple_animal/hostile/ms13/radscorpion/ice
 	icon_state = "bluescorpion"
 
-/mob/living/simple_animal/hostile/fallout/radscorpion/cave
+/mob/living/simple_animal/hostile/ms13/radscorpion/cave
 	icon_state = "brownscorpion"
 
 //radstag - hunting animal, runs from the user, gotta use binoculars/scope to get it before it runs
 
-/mob/living/simple_animal/hostile/fallout/radstag
+/mob/living/simple_animal/hostile/ms13/radstag
 	name = "radstag"
 	desc = "A wild mutated deer, a distant relative to the brahmin with its two heads and distinct udders, fleeing at the sight of life, they are a hunters dream and folklore to many.."
 	icon_state = "radstag"
@@ -534,27 +534,27 @@
 	attack_verb_simple = "kick"
 	speak_chance = 10
 	turns_per_move = 1
-	butcher_results = list(/obj/item/fallout/hide/radstag = 1, /obj/item/fallout/carcass/large/radstag = 1, /obj/item/fallout/animalitem/radstag/antlers = 2)//radstag meat, radstag hide ,radstag horns
-	attack_sound = 'mojave/sound/f13weapons/meleesounds/slam.ogg'
+	butcher_results = list(/obj/item/ms13/hide/radstag = 1, /obj/item/ms13/carcass/large/radstag = 1, /obj/item/ms13/animalitem/radstag/antlers = 2)//radstag meat, radstag hide ,radstag horns
+	attack_sound = 'mojave/sound/ms13weapons/meleesounds/slam.ogg'
 	health = 200
 	maxHealth = 200
 	melee_damage_lower = 15
 	melee_damage_upper = 20
 	aggro_vision_range = 30
 	speed = 1.5
-	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/fallout/aster)
+	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/ms13/aster)
 	tame_chance = 20
 	bonus_tame_chance = 25
 	rideable = TRUE
 	milkable = TRUE
 	extract = null//radstag milk
 	breedable = TRUE
-	young_type = /mob/living/simple_animal/fallout/radstagyoung
-	adult_type = /mob/living/simple_animal/hostile/fallout/radstag/tamed
+	young_type = /mob/living/simple_animal/ms13/radstagyoung
+	adult_type = /mob/living/simple_animal/hostile/ms13/radstag/tamed
 	offsetx = 2
 	offsety = 7
 
-/mob/living/simple_animal/hostile/fallout/radstag/GiveTarget(new_target)
+/mob/living/simple_animal/hostile/ms13/radstag/GiveTarget(new_target)
 	target = new_target
 	if(target != null)
 		if(isliving(target))
@@ -563,10 +563,10 @@
 			retreat_distance = 30
 			minimum_distance = 30
 
-/mob/living/simple_animal/hostile/fallout/radstag/tamed
+/mob/living/simple_animal/hostile/ms13/radstag/tamed
 	faction = list("neutral")
 
-/mob/living/simple_animal/fallout/radstagyoung
+/mob/living/simple_animal/ms13/radstagyoung
 	name = "radstag"
 	desc = "A wild mutated deer, a distant relative to the brahmin with its two heads and distinct udders, fleeing at the sight of life, they are a hunters dream and folklore to many.."
 	icon_state = "radstag"
@@ -585,11 +585,11 @@
 	health = 50
 	maxHealth = 50
 	is_young = TRUE
-	adult_type = /mob/living/simple_animal/hostile/fallout/radstag/tamed
+	adult_type = /mob/living/simple_animal/hostile/ms13/radstag/tamed
 
 //mongrel
 
-/mob/living/simple_animal/hostile/fallout/mongrel
+/mob/living/simple_animal/hostile/ms13/mongrel
 	name = "mongrel"
 	desc = "An extremely hostile mutated flesh beast, somewhat dog, somehow, a fearsome pack predator of the wastes."
 	icon_state = "mongrel"
@@ -601,7 +601,7 @@
 	attack_verb_simple = "bite"
 	speak_chance = 40
 	turns_per_move = 3
-	butcher_results = list(/obj/item/fallout/hide/mongrel = 1, /obj/item/fallout/carcass/mongrel = 1)//mongrel meat, mongrel skin
+	butcher_results = list(/obj/item/ms13/hide/mongrel = 1, /obj/item/ms13/carcass/mongrel = 1)//mongrel meat, mongrel skin
 	attack_sound = 'sound/weapons/bite.ogg'
 	health = 100
 	maxHealth = 100
@@ -612,13 +612,13 @@
 	tame_chance = 10
 	bonus_tame_chance = 10
 	breedable = TRUE
-	young_type = /mob/living/simple_animal/fallout/mongrelyoung
-	adult_type = /mob/living/simple_animal/hostile/fallout/mongrel/tamed
+	young_type = /mob/living/simple_animal/ms13/mongrelyoung
+	adult_type = /mob/living/simple_animal/hostile/ms13/mongrel/tamed
 
-/mob/living/simple_animal/hostile/fallout/mongrel/tamed
+/mob/living/simple_animal/hostile/ms13/mongrel/tamed
 	faction = list("neutral")
 
-/mob/living/simple_animal/fallout/mongrelyoung
+/mob/living/simple_animal/ms13/mongrelyoung
 	name = "mongrel"
 	desc = "An extremely hostile mutated flesh beast, somewhat dog, somehow, a fearsome pack predator of the wastes."
 	icon_state = "mongrel"
@@ -637,11 +637,11 @@
 	health = 50
 	maxHealth = 50
 	is_young = TRUE
-	adult_type = /mob/living/simple_animal/hostile/fallout/mongrel/tamed
+	adult_type = /mob/living/simple_animal/hostile/ms13/mongrel/tamed
 
 //wolf
 
-/mob/living/simple_animal/hostile/fallout/wolf
+/mob/living/simple_animal/hostile/ms13/wolf
 	name = "wolf"
 	desc = "An extremely hostile native pack wolf, only hardened by radiation, fearsome and a killer."
 	icon_state = "wolf"
@@ -653,7 +653,7 @@
 	attack_verb_simple = "bite"
 	speak_chance = 40
 	turns_per_move = 3
-	butcher_results = list(/obj/item/fallout/hide/wolf = 1,/obj/item/fallout/carcass/wolf = 1, /obj/item/fallout/animalitem/wolf/teeth = 2)//wolf meat, wolf hide
+	butcher_results = list(/obj/item/ms13/hide/wolf = 1,/obj/item/ms13/carcass/wolf = 1, /obj/item/ms13/animalitem/wolf/teeth = 2)//wolf meat, wolf hide
 	attack_sound = 'sound/weapons/bite.ogg'
 	health = 200
 	maxHealth = 200
@@ -666,7 +666,7 @@
 
 //tunneler - idk what this was but cool sprite :flushed:
 
-/mob/living/simple_animal/hostile/fallout/tunneler
+/mob/living/simple_animal/hostile/ms13/tunneler
 	name = "tunneler"
 	desc = "A preadatory cave lurker, a native species to the area, youre unsure what it could be..."
 	icon_state = "tunneler"
@@ -678,14 +678,14 @@
 	attack_verb_simple = "harm"
 	speak_chance = 80
 	turns_per_move = 3
-	butcher_results = list(/obj/item/fallout/hide/tunneler = 1, /obj/item/fallout/carcass/large/tunneller = 1)//tunneler meat, tunneler hide
+	butcher_results = list(/obj/item/ms13/hide/tunneler = 1, /obj/item/ms13/carcass/large/tunneller = 1)//tunneler meat, tunneler hide
 	attack_sound = 'sound/weapons/slash.ogg'
 	health = 300
 	maxHealth = 300
 	melee_damage_lower = 30
 	melee_damage_upper = 40
 	speed = 1
-	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/fallout/blight)
+	//food_type = list(/obj/item/reagent_containers/food/snacks/grown/ms13/blight)
 	tame_chance = 5
 	bonus_tame_chance = 5
 	rideable = TRUE
@@ -694,7 +694,7 @@
 
 //yaoguai
 
-/mob/living/simple_animal/hostile/fallout/yaoguai
+/mob/living/simple_animal/hostile/ms13/yaoguai
 	name = "yao guai"
 	desc = "A massive mutated bear wolf, monster, fuck, you better get running boy."
 	icon = 'mojave/icons/mob/32x64.dmi'
@@ -708,8 +708,8 @@
 	attack_verb_simple = "maul"
 	speak_chance = 40
 	turns_per_move = 10
-	butcher_results = list(/obj/item/fallout/hide/yaoguai = 1, /obj/item/fallout/carcass/large/yaoguai/front = 1, /obj/item/fallout/carcass/large/yaoguai/back = 1)//yaoguai hide, yaoguai meat
-	attack_sound = 'mojave/sound/f13weapons/meleesounds/slam.ogg'
+	butcher_results = list(/obj/item/ms13/hide/yaoguai = 1, /obj/item/ms13/carcass/large/yaoguai/front = 1, /obj/item/ms13/carcass/large/yaoguai/back = 1)//yaoguai hide, yaoguai meat
+	attack_sound = 'mojave/sound/ms13weapons/meleesounds/slam.ogg'
 	health = 500
 	maxHealth = 500
 	melee_damage_lower = 50
@@ -725,7 +725,7 @@
 
 //hellpig - pig from hell, very good mount if you have 100 human flesh - prolly gonna be ooooh wee mojave sun sekrit mount wowza
 
-/mob/living/simple_animal/hostile/fallout/hellpig
+/mob/living/simple_animal/hostile/ms13/hellpig
 	name = "hellpig"
 	desc = "A massive mutated pig, wild, deadly start praying boy."
 	icon = 'mojave/icons/mob/64x64.dmi'
@@ -739,8 +739,8 @@
 	attack_verb_simple = "chomp"
 	speak_chance = 40
 	turns_per_move = 3
-	butcher_results = list(/obj/item/fallout/hide/large/hellpig = 1, /obj/item/fallout/carcass/large/hellpig/front = 1, /obj/item/fallout/carcass/large/hellpig/back = 1, /obj/item/fallout/carcass/large/hellpig/leg = 4)//hellpig hide, hellpig meat, hellpig tusks
-	attack_sound = 'mojave/sound/f13weapons/meleesounds/slam.ogg'
+	butcher_results = list(/obj/item/ms13/hide/large/hellpig = 1, /obj/item/ms13/carcass/large/hellpig/front = 1, /obj/item/ms13/carcass/large/hellpig/back = 1, /obj/item/ms13/carcass/large/hellpig/leg = 4)//hellpig hide, hellpig meat, hellpig tusks
+	attack_sound = 'mojave/sound/ms13weapons/meleesounds/slam.ogg'
 	health = 600
 	maxHealth = 600
 	melee_damage_lower = 40

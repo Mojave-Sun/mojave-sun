@@ -54,7 +54,7 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Scout",))
 
 // job categories for rendering the late join menu
-GLOBAL_LIST_INIT(f13_position_categories, list(
+GLOBAL_LIST_INIT(ms13_position_categories, list(
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#eec66f"),
 	EXP_TYPE_TOWN= list("jobs" = town_positions, "color" = "#4feb64"),
 	EXP_TYPE_TRIBE = list("jobs" = tribe_positions, "color" = "#eb544f"),
@@ -63,7 +63,7 @@ GLOBAL_LIST_INIT(f13_position_categories, list(
 	EXP_TYPE_RAIDERS = list("jobs" = raiders_positions, "color" = "#30389c")
 ))
 
-GLOBAL_LIST_INIT(f13_exp_jobsmap, list(
+GLOBAL_LIST_INIT(ms13_exp_jobsmap, list(
 	EXP_TYPE_WASTELAND = list("titles" = wasteland_positions),
 	EXP_TYPE_TOWN = list("titles" = town_positions),
 	EXP_TYPE_TRIBE = list("titles" = tribe_positions),
@@ -72,4 +72,4 @@ GLOBAL_LIST_INIT(f13_exp_jobsmap, list(
 	EXP_TYPE_RAIDERS = list("titles" = raiders_positions)
 ))
 
-GLOBAL_PROTECT(f13_exp_jobsmap)
+GLOBAL_PROTECT(ms13_exp_jobsmap)

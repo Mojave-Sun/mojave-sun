@@ -1,10 +1,10 @@
 //////////////////////////////////////////////////////////////////////////////
-//CONTAINS FALLOUT STACKS AND MINERAL/ORES, also sheet crafting for ease :) //
+//CONTAINS MS13 STACKS AND MINERAL/ORES, also sheet crafting for ease :) //
 //////////////////////////////////////////////////////////////////////////////
 
 //COTTON//
 
-/obj/item/stack/sheet/cotton/fallout
+/obj/item/stack/sheet/cotton/ms13
 	name = "raw cotton bundle"
 	desc = "A bundle of raw cotton ready to be spun on the loom."
 	singular_name = "raw cotton ball"
@@ -15,7 +15,7 @@
 	throwforce = 0
 	merge_type = /obj/item/stack/sheet/cotton
 	max_amount = 30
-	loom_result = /obj/item/stack/sheet/cloth //fallout
+	loom_result = /obj/item/stack/sheet/cloth //ms13
 	grind_results = list(/datum/reagent/cellulose = 20)
 
 /obj/item/stack/sheet/cotton/ten

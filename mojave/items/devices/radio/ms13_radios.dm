@@ -1,4 +1,4 @@
-/obj/item/radio/fallout
+/obj/item/radio/ms13
 	icon = 'mojave/icons/objects/hamradio.dmi'
 	name = "clip-on walkie talkie"
 	icon_state = "handradio"

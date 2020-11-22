@@ -1,8 +1,8 @@
 #define GRASS_SPONTANEOUS 		2
 #define GRASS_WEIGHT 			2
-#define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/fallout/tree/tallpine = 7, /obj/structure/flora/fallout/tree/deadsnow = 5, /obj/structure/flora/fallout/tree/pine = 5, /obj/structure/flora/fallout/shrub = 5, /obj/structure/flora/bush = 5, /obj/structure/flora/fallout/forage = 1, /obj/structure/flora/fallout/forage/blackberry = 1, /obj/structure/flora/fallout/forage/mutfruit = 1, /obj/structure/flora/fallout/forage/ashrose = 1, /obj/structure/flora/fallout/forage/wildcarrot = 1, /obj/structure/flora/fallout/forage/aster = 1)
+#define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/ms13/tree/tallpine = 7, /obj/structure/flora/ms13/tree/deadsnow = 5, /obj/structure/flora/ms13/tree/pine = 5, /obj/structure/flora/ms13/shrub = 5, /obj/structure/flora/bush = 5, /obj/structure/flora/ms13/forage = 1, /obj/structure/flora/ms13/forage/blackberry = 1, /obj/structure/flora/ms13/forage/mutfruit = 1, /obj/structure/flora/ms13/forage/ashrose = 1, /obj/structure/flora/ms13/forage/wildcarrot = 1, /obj/structure/flora/ms13/forage/aster = 1)
 #define DESOLATE_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland/snow = 10, /obj/structure/flora/bush = 1)
-#define MUSHROOM_SPAWN_LIST list(/obj/structure/flora/fallout/forage/mushroom = 5, /obj/structure/flora/fallout/forage/mushroom/glowing = 1)
+#define MUSHROOM_SPAWN_LIST list(/obj/structure/flora/ms13/forage/mushroom = 5, /obj/structure/flora/ms13/forage/mushroom/glowing = 1)
 //A plating that can't be destroyed but can have stuff like floor tiles slapped on for construction
 
 /turf/open/floor/plating/ground
@@ -182,7 +182,7 @@
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 
-		if(istype(curr_area, /area/f13/snow/deepforest))
+		if(istype(curr_area, /area/ms13/snow/deepforest))
 			if(prob(40))
 				randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
 			else
@@ -191,7 +191,7 @@
 				turfPlant = new randPlant(src)
 				. = TRUE
 				return .
-		if(istype(curr_area, /area/f13/snow/forest))
+		if(istype(curr_area, /area/ms13/snow/forest))
 			if(prob(20))
 				randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
 			else
@@ -200,7 +200,7 @@
 				turfPlant = new randPlant(src)
 				. = TRUE
 				return .
-		if(istype(curr_area, /area/f13/snow/lightforest))
+		if(istype(curr_area, /area/ms13/snow/lightforest))
 			if(prob(5))
 				randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
 			else
@@ -261,8 +261,8 @@
 	icon_state = "road-255"
 	base_icon_state = "road"
 	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_ROAD)
-	canSmoothWith = list(SMOOTH_GROUP_FALLOUT_ROAD)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_ROAD)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_ROAD)
 
 /turf/open/floor/plating/ground/road/Initialize()
 	. = ..()
@@ -282,8 +282,8 @@
 	icon_state = "sidewalk-255"
 	base_icon_state = "sidewalk"
 	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_SIDEWALK)
-	canSmoothWith = list(SMOOTH_GROUP_FALLOUT_SIDEWALK, SMOOTH_GROUP_FALLOUT_WALL, SMOOTH_GROUP_FALLOUT_WALL_METAL, SMOOTH_GROUP_FALLOUT_WALL_WOOD, SMOOTH_GROUP_FALLOUT_WALL_SCRAP, SMOOTH_GROUP_FALLOUT_WALL_ADOBE, SMOOTH_GROUP_FALLOUT_WALL_BRICK, SMOOTH_GROUP_FALLOUT_WALL_REINFORCED, SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_SIDEWALK)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_SIDEWALK, SMOOTH_GROUP_MS13_WALL, SMOOTH_GROUP_MS13_WALL_METAL, SMOOTH_GROUP_MS13_WALL_WOOD, SMOOTH_GROUP_MS13_WALL_SCRAP, SMOOTH_GROUP_MS13_WALL_ADOBE, SMOOTH_GROUP_MS13_WALL_BRICK, SMOOTH_GROUP_MS13_WALL_REINFORCED, SMOOTH_GROUP_MS13_WINDOW)
 
 /turf/open/floor/plating/ground/sidewalk/Initialize()
 	. = ..()
@@ -308,12 +308,12 @@
 	name = "roof"
 	desc = "Some metal roofing."
 
-/turf/open/floor/plating/fallout/ice
+/turf/open/floor/plating/ms13/ice
 	name = "ice sheet"
 	desc = "A sheet of solid ice. Looks slippery. Tread Carefully."
 	icon = 'mojave/icons/turf/ice.dmi'
 	icon_state = "ice"
-	baseturfs = /turf/open/floor/plating/fallout/ice
+	baseturfs = /turf/open/floor/plating/ms13/ice
 	slowdown = 1
 	attachment_holes = FALSE
 	bullet_sizzle = TRUE
@@ -329,19 +329,19 @@
 	var/cracked = FALSE
 	var/hole = FALSE
 
-/turf/open/floor/plating/fallout/ice/attackby(obj/item/stack/tile/T, mob/user, params)
+/turf/open/floor/plating/ms13/ice/attackby(obj/item/stack/tile/T, mob/user, params)
 	return
 
-/turf/open/floor/plating/fallout/ice/break_tile()
+/turf/open/floor/plating/ms13/ice/break_tile()
 	return //unbreakable
 
-/turf/open/floor/plating/fallout/ice/burn_tile()
+/turf/open/floor/plating/ms13/ice/burn_tile()
 	return //unburnable
 
-/turf/open/floor/plating/fallout/ice/ex_act(severity, target)
+/turf/open/floor/plating/ms13/ice/ex_act(severity, target)
 	return
 
-/turf/open/floor/plating/fallout/ice/attackby(obj/item/W, mob/user, params)
+/turf/open/floor/plating/ms13/ice/attackby(obj/item/W, mob/user, params)
 	. = ..()
 	if(W.tool_behaviour == TOOL_SHOVEL || W.tool_behaviour == TOOL_MINING)
 		if(hole)
@@ -353,7 +353,7 @@
 
 		to_chat(user, "<span class='notice'>You start picking at the ice...</span>")
 
-		playsound(get_turf(src), 'mojave/sound/f13effects/icebreak.ogg', 100, FALSE, FALSE)
+		playsound(get_turf(src), 'mojave/sound/ms13effects/icebreak.ogg', 100, FALSE, FALSE)
 
 		if(W.use_tool(src, user, 100, volume=0))
 			if(!cracked)
@@ -369,41 +369,41 @@
 					hole = TRUE
 					return
 
-/turf/open/floor/plating/fallout/ice/Initialize()
+/turf/open/floor/plating/ms13/ice/Initialize()
 	. = ..()
 	MakeSlippery(TURF_WET_PERMAFROST, INFINITY, 0, INFINITY, TRUE)
 
-/turf/open/floor/plating/fallout/ice/innercorner
+/turf/open/floor/plating/ms13/ice/innercorner
 	icon_state = "inner_corner"
 
-/turf/open/floor/plating/fallout/ice/innercurve
+/turf/open/floor/plating/ms13/ice/innercurve
 	icon_state = "inner_curve_large"
 
-/turf/open/floor/plating/fallout/ice/corner
+/turf/open/floor/plating/ms13/ice/corner
 	icon_state = "corner"
 
-/turf/open/floor/plating/fallout/ice/edge
+/turf/open/floor/plating/ms13/ice/edge
 	icon_state = "edge"
 
-/turf/open/floor/plating/fallout/ice/smallcorner
+/turf/open/floor/plating/ms13/ice/smallcorner
 	icon_state = "cornerpiece"
 
-/turf/open/floor/plating/fallout/ice/end
+/turf/open/floor/plating/ms13/ice/end
 	icon_state = "end"
 
-/turf/open/floor/plating/fallout/ice/thin
+/turf/open/floor/plating/ms13/ice/thin
 	icon_state = "thin"
 
-/turf/open/floor/plating/fallout/ice/shrinkage
+/turf/open/floor/plating/ms13/ice/shrinkage
 	icon_state = "shrinkage"
 
-/turf/open/floor/plating/fallout/ice/shore
+/turf/open/floor/plating/ms13/ice/shore
 	icon_state = "shore"
 
-/turf/open/floor/plating/fallout/ice/single
+/turf/open/floor/plating/ms13/ice/single
 	icon_state = "junction0"
 
-/turf/open/floor/plating/fallout/ice/tunnel
+/turf/open/floor/plating/ms13/ice/tunnel
 	icon_state = "tunnel"
 
 /obj/structure/fluff/icechunk
@@ -413,12 +413,12 @@
 	icon_state = "chunk"
 
 //This functions like normal openspace but prevents placing lattice, so people cannot cheese catwalks or floors clear across the map.
-/turf/open/openspace/f13_no_build
+/turf/open/openspace/ms13_no_build
 	icon = 'mojave/icons/turf/ground.dmi'
 	icon_state = "transparent" //Different icon so it's visually distinct for mappers.
 	can_build_on = FALSE
 
-/turf/open/openspace/f13_no_build/Initialize()
+/turf/open/openspace/ms13_no_build/Initialize()
 	. = ..()
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "transparent" //Reset to original icon so it doesn't darken things when viewed in game.

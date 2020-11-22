@@ -1,4 +1,4 @@
-/datum/job/f13/bos/scribe
+/datum/job/ms13/bos/scribe
 	title = "Scribe"
 	total_positions = 2
 	spawn_positions = 2
@@ -7,15 +7,15 @@
 	forbid = ""
 	enforce = ""
 
-	outfit = /datum/outfit/job/f13/bos/scribe
+	outfit = /datum/outfit/job/ms13/bos/scribe
 
-	display_order = JOB_DISPLAY_ORDER_F13_SCRIBE
+	display_order = JOB_DISPLAY_ORDER_MS13_SCRIBE
 
-/datum/outfit/job/f13/bos/scribe
+/datum/outfit/job/ms13/bos/scribe
 	name = "_BoS Scribe"
-	jobtype = /datum/job/f13/bos/scribe
+	jobtype = /datum/job/ms13/bos/scribe
 
 	head = /obj/item/clothing/head/collectable/petehat
 
-/datum/outfit/job/f13/bos/scribe/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/ms13/bos/scribe/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -1,4 +1,4 @@
-/obj/item/fallout/radiopack
+/obj/item/ms13/radiopack
 	icon = 'mojave/icons/objects/radiopack.dmi'
 	name = "radiopack"
 	icon_state = "radiopack"
@@ -13,9 +13,9 @@
 	w_class = WEIGHT_CLASS_BULKY
 	custom_materials = list(/datum/material/iron=75, /datum/material/glass=25)
 	var/held = 0
-	var/obj/item/radio/fallout/NCR/radio
+	var/obj/item/radio/ms13/NCR/radio
 
-/obj/item/fallout/radiopack/Initialize()
+/obj/item/ms13/radiopack/Initialize()
 	. = ..()
 	radio = new(src)
 	START_PROCESSING(SSobj, src)
@@ -24,11 +24,11 @@
 	STR.max_combined_w_class = 18
 	STR.max_items = 6
 
-/obj/item/fallout/radiopack/Destroy()
+/obj/item/ms13/radiopack/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/item/fallout/radiopack/AltClick(var/mob/living/carbon/user)
+/obj/item/ms13/radiopack/AltClick(var/mob/living/carbon/user)
 	if(src.loc == user)
 		if(!held)
 			if(user.get_item_by_slot(ITEM_SLOT_BACK) == src)
@@ -44,18 +44,18 @@
 	else
 		..()
 
-/obj/item/fallout/radiopack/attackby(obj/item/W, mob/user, params)
+/obj/item/ms13/radiopack/attackby(obj/item/W, mob/user, params)
 	if(W == radio)
 		user.dropItemToGround(radio, TRUE)
 	else
 		..()
 
-/obj/item/fallout/radiopack/dropped(mob/user)
+/obj/item/ms13/radiopack/dropped(mob/user)
 	. = ..()
 	if(held)
 		user.dropItemToGround(radio, TRUE)
 
-/obj/item/fallout/radiopack/MouseDrop(atom/over_object)
+/obj/item/ms13/radiopack/MouseDrop(atom/over_object)
 	. = ..()
 	if(held)
 		return
@@ -71,7 +71,7 @@
 				var/atom/movable/screen/inventory/hand/H = over_object
 				M.putItemFromInventoryInHandIfPossible(src, H.held_index)
 
-/obj/item/fallout/radiopack/proc/attach_radio(var/mob/user)
+/obj/item/ms13/radiopack/proc/attach_radio(var/mob/user)
 	if(!radio)
 		radio = new(src)
 	radio.forceMove(src)
@@ -83,14 +83,14 @@
 	update_icon()
 	user.update_inv_back()
 
-/obj/item/radio/fallout/NCR
+/obj/item/radio/ms13/NCR
 	obj_flags = USES_TGUI
 	broadcasting = TRUE
 	freerange = TRUE
 	frequency = 1359
 	keyslot = new /obj/item/encryptionkey/headset_sec
 	subspace_transmission = TRUE
-	var/obj/item/fallout/radiopack/radio_pack
+	var/obj/item/ms13/radiopack/radio_pack
 
 /obj/item/radio/can_receive(freq, level, AIuser)
 	if(ishuman(src.loc))
@@ -101,8 +101,8 @@
 		return ..(freq, level)
 	return FALSE
 
-/obj/item/radio/fallout/NCR/Initialize()
-	if(istype(loc, /obj/item/fallout/radiopack))
+/obj/item/radio/ms13/NCR/Initialize()
+	if(istype(loc, /obj/item/ms13/radiopack))
 		radio_pack = loc
 
 	else
@@ -110,10 +110,10 @@
 
 	return ..()
 
-/obj/item/radio/fallout/NCR/attack_self(mob/living/user)
+/obj/item/radio/ms13/NCR/attack_self(mob/living/user)
 	return
 
-/obj/item/radio/fallout/NCR/dropped(mob/user)
+/obj/item/radio/ms13/NCR/dropped(mob/user)
 	SHOULD_CALL_PARENT(0)
 	if(radio_pack)
 		radio_pack.attach_radio(user)

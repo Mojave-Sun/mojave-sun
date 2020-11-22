@@ -1,1 +1,1 @@
-/obj/structure/window/f13
+/obj/structure/window/ms13

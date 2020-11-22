@@ -52,7 +52,7 @@
 /obj/item/storage/trash_stack/proc/generate_trash()
 	var/list/back = list()
 	for(var/i=0, i<rand(1,4), i++)
-		var/itemtype = pick(/obj/item/ammo_casing/fallout/a762)
+		var/itemtype = pick(/obj/item/ammo_casing/ms13/a762)
 		var/I = new itemtype(src)
 		back += I
 	return back

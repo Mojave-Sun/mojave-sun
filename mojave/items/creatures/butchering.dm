@@ -6,7 +6,7 @@
 ////////////////////////// HIDES ////////////////////////////
 /////////////////////////////////////////////////////////////
 
-/obj/item/fallout/hide
+/obj/item/ms13/hide
 	name = "hide"
 	desc = "A hide-n bug."
 	icon = 'mojave/icons/mob/skinning.dmi'
@@ -19,50 +19,50 @@
 	drop_sound = 'sound/items/handling/cloth_drop.ogg'
 	pickup_sound =  'sound/items/handling/cloth_pickup.ogg'
 
-/obj/item/fallout/hide/gecko
+/obj/item/ms13/hide/gecko
 	name = "gecko hide"
 	desc = "A skinned gecko hide."
 	icon_state = "gecko_hide"
 	inhand_icon_state = "gecko_hide"
 	throw_range = 3
 
-/obj/item/fallout/hide/gecko/ice
+/obj/item/ms13/hide/gecko/ice
 	icon_state = "icegecko_hide"
 	inhand_icon_state = "icegecko_hide"
 
-/obj/item/fallout/hide/gecko/sand
+/obj/item/ms13/hide/gecko/sand
 	icon_state = "sandgecko_hide"
 	inhand_icon_state = "sandgecko_hide"
 
-/obj/item/fallout/hide/wolf
+/obj/item/ms13/hide/wolf
 	name = "wolf hide"
 	desc = "A skinned wolf hide."
 	icon_state = "wolf_hide"
 	inhand_icon_state = "wolf_hide"
 	throw_range = 3
 
-/obj/item/fallout/hide/mongrel
+/obj/item/ms13/hide/mongrel
 	name = "mongrel hide"
 	desc = "A skinned mongrel hide."
 	icon_state = "mongrel_hide"
 	inhand_icon_state = "mongrel_hide"
 	throw_range = 3
 
-/obj/item/fallout/hide/molerat
+/obj/item/ms13/hide/molerat
 	name = "molerat hide"
 	desc = "A skinned molerat hide."
 	icon_state = "molerat_hide"
 	inhand_icon_state = "molerat_hide"
 	throw_range = 3
 
-/obj/item/fallout/hide/pigrat
+/obj/item/ms13/hide/pigrat
 	name = "pigrat hide"
 	desc = "A skinned pigrat hide."
 	icon_state = "pigrat_hide"
 	inhand_icon_state = "pigrat_hide"
 	throw_range = 3
 
-/obj/item/fallout/hide/brahmin
+/obj/item/ms13/hide/brahmin
 	name = "brahmin hide"
 	desc = "A skinned brahmin hide."
 	icon_state = "brahmin_hide"
@@ -70,7 +70,7 @@
 	throw_range = 2
 	w_class = WEIGHT_CLASS_BULKY
 
-/obj/item/fallout/hide/radstag
+/obj/item/ms13/hide/radstag
 	name = "radstag hide"
 	desc = "A skinned radstag hide."
 	icon_state = "radstag_hide"
@@ -78,7 +78,7 @@
 	throw_range = 2
 	w_class = WEIGHT_CLASS_BULKY
 
-/obj/item/fallout/hide/brahmiluff
+/obj/item/ms13/hide/brahmiluff
 	name = "brahmiluff hide"
 	desc = "A skinned brahmiluff hide."
 	icon_state = "brahmiluff_hide"
@@ -86,7 +86,7 @@
 	throw_range = 2
 	w_class = WEIGHT_CLASS_BULKY
 
-/obj/item/fallout/hide/tunneler
+/obj/item/ms13/hide/tunneler
 	name = "tunneler hide"
 	desc = "A skinned tunneler hide."
 	icon_state = "tunneler_hide"
@@ -94,7 +94,7 @@
 	throw_range = 2
 	w_class = WEIGHT_CLASS_BULKY
 
-/obj/item/fallout/hide/nightstalker
+/obj/item/ms13/hide/nightstalker
 	name = "nightstalker hide"
 	desc = "A skinned nightstalker hide."
 	icon_state = "nightstalker_hide"
@@ -102,7 +102,7 @@
 	throw_range = 2
 	w_class = WEIGHT_CLASS_BULKY
 
-/obj/item/fallout/hide/yaoguai
+/obj/item/ms13/hide/yaoguai
 	name = "yaoguai hide"
 	desc = "A skinned yaoguai hide."
 	icon_state = "yaoguai_hide"
@@ -110,7 +110,7 @@
 	throw_range = 2
 	w_class = WEIGHT_CLASS_BULKY
 
-/obj/item/fallout/hide/slepnir
+/obj/item/ms13/hide/slepnir
 	name = "slepnir hide"
 	desc = "A skinned slepnir hide."
 	icon_state = "slepnir_hide"
@@ -118,7 +118,7 @@
 	throw_range = 2
 	w_class = WEIGHT_CLASS_BULKY
 
-/obj/item/fallout/hide/large/hellpig
+/obj/item/ms13/hide/large/hellpig
 	name = "hellpig hide"
 	desc = "A skinned hellpig hide."
 	icon_state = "hellpig_hide"
@@ -126,7 +126,7 @@
 	throw_range = 2
 	w_class = WEIGHT_CLASS_HUGE
 
-/obj/item/fallout/hide/large/ComponentInitialize()
+/obj/item/ms13/hide/large/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
 
@@ -134,7 +134,7 @@
 //////////////////////// CARCASSES //////////////////////////
 /////////////////////////////////////////////////////////////
 
-/obj/item/fallout/carcass
+/obj/item/ms13/carcass
 	name = "carcass"
 	desc = "A meaty error :)."
 	icon = 'mojave/icons/mob/skinning.dmi'
@@ -146,15 +146,15 @@
 	w_class = WEIGHT_CLASS_BULKY
 	var/item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4) //placeholder meat
 	var/butcher_difficulty = 0
-	drop_sound = 'mojave/sound/f13items/f13handling/meat_drop.ogg'
-	pickup_sound =  'mojave/sound/f13items/f13handling/meat_pickup.ogg'
+	drop_sound = 'mojave/sound/ms13items/ms13handling/meat_drop.ogg'
+	pickup_sound =  'mojave/sound/ms13items/ms13handling/meat_pickup.ogg'
 
-/obj/item/fallout/carcass/proc/harvest(mob/living/user) //used for extra objects etc. in butchering
+/obj/item/ms13/carcass/proc/harvest(mob/living/user) //used for extra objects etc. in butchering
 	return
 
 //small/medium
 
-/obj/item/fallout/carcass/clucker
+/obj/item/ms13/carcass/clucker
 	name = "clucker carcass"
 	desc = "A de-feathered body of a clucker."
 	icon_state = "clucker_carcass"
@@ -164,7 +164,7 @@
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 1)
 	butcher_difficulty = -20
 
-/obj/item/fallout/carcass/gecko
+/obj/item/ms13/carcass/gecko
 	name = "gecko carcass"
 	desc = "A skinned body of a gecko."
 	icon_state = "gecko_carcass"
@@ -173,7 +173,7 @@
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 3)
 	butcher_difficulty = -20
 
-/obj/item/fallout/carcass/wolf
+/obj/item/ms13/carcass/wolf
 	name = "wolf carcass"
 	desc = "A skinned body of a wolf."
 	icon_state = "dog_carcass"
@@ -182,7 +182,7 @@
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2)
 	butcher_difficulty = -20
 
-/obj/item/fallout/carcass/mongrel
+/obj/item/ms13/carcass/mongrel
 	name = "mongrel carcass"
 	desc = "A skinned body of a mongrel."
 	icon_state = "dog_carcass"
@@ -191,7 +191,7 @@
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 2)
 	butcher_difficulty = -20
 
-/obj/item/fallout/carcass/molerat
+/obj/item/ms13/carcass/molerat
 	name = "molerat carcass"
 	desc = "A skinned body of a molerat."
 	icon_state = "rat_carcass"
@@ -203,7 +203,7 @@
 //large
 
 
-/obj/item/fallout/carcass/large/pigrat
+/obj/item/ms13/carcass/large/pigrat
 	name = "pigrat carcass"
 	desc = "A skinned body of a pigrat."
 	icon_state = "rat_carcass"
@@ -212,7 +212,7 @@
 	w_class = WEIGHT_CLASS_HUGE
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 3)
 
-/obj/item/fallout/carcass/large/radstag
+/obj/item/ms13/carcass/large/radstag
 	name = "radstag carcass"
 	desc = "A skinned body of a radstag."
 	icon_state = "radstag_carcass"
@@ -221,7 +221,7 @@
 	w_class = WEIGHT_CLASS_HUGE
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 5)
 
-/obj/item/fallout/carcass/large/tunneller
+/obj/item/ms13/carcass/large/tunneller
 	name = "tunneler carcass"
 	desc = "A skinned body of a tunneler."
 	icon_state = "tunneller_carcass"
@@ -230,7 +230,7 @@
 	w_class = WEIGHT_CLASS_HUGE
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
 
-/obj/item/fallout/carcass/large/nightstalker
+/obj/item/ms13/carcass/large/nightstalker
 	name = "nightstalker carcass"
 	desc = "A skinned body of a nightstalker."
 	icon_state = "nightstalker_carcass"
@@ -240,7 +240,7 @@
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
 	butcher_difficulty = 15
 
-/obj/item/fallout/carcass/large/brahmiluff
+/obj/item/ms13/carcass/large/brahmiluff
 	name = "brahmiluff carcass"
 	desc = "A skinned body of a brahmiluff."
 	icon_state = "brahmiluff_carcass"
@@ -249,15 +249,15 @@
 	w_class = WEIGHT_CLASS_HUGE
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
 
-/obj/item/fallout/carcass/large/brahmiluff/front
+/obj/item/ms13/carcass/large/brahmiluff/front
 	icon_state = "cowbeastfront_carcass"
 	inhand_icon_state = "cowbeastfront_carcass"
 
-/obj/item/fallout/carcass/large/brahmiluff/back
+/obj/item/ms13/carcass/large/brahmiluff/back
 	icon_state = "cowbeastback_carcass"
 	inhand_icon_state = "cowbeastback_carcass"
 
-/obj/item/fallout/carcass/large/brahmin
+/obj/item/ms13/carcass/large/brahmin
 	name = "brahmin carcass"
 	desc = "A skinned body of a brahmin."
 	icon_state = "brahmin_carcass"
@@ -266,15 +266,15 @@
 	w_class = WEIGHT_CLASS_HUGE
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 3)
 
-/obj/item/fallout/carcass/large/brahmin/front
+/obj/item/ms13/carcass/large/brahmin/front
 	icon_state = "cowbeastfront_carcass"
 	inhand_icon_state = "cowbeastfront_carcass"
 
-/obj/item/fallout/carcass/large/brahmin/back
+/obj/item/ms13/carcass/large/brahmin/back
 	icon_state = "cowbeastback_carcass"
 	inhand_icon_state = "cowbeastback_carcass"
 
-/obj/item/fallout/carcass/large/yaoguai
+/obj/item/ms13/carcass/large/yaoguai
 	name = "yaoguai carcass"
 	desc = "A skinned body section of a yaoguai."
 	throw_range = 1
@@ -282,15 +282,15 @@
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
 	butcher_difficulty = 20
 
-/obj/item/fallout/carcass/large/yaoguai/front
+/obj/item/ms13/carcass/large/yaoguai/front
 	icon_state = "yaoguaifront_carcass"
 	inhand_icon_state = "yaoguaifront_carcass"
 
-/obj/item/fallout/carcass/large/yaoguai/back
+/obj/item/ms13/carcass/large/yaoguai/back
 	icon_state = "yaoguaiback_carcass"
 	inhand_icon_state = "yaoguaiback_carcass"
 
-/obj/item/fallout/carcass/large/slepnir
+/obj/item/ms13/carcass/large/slepnir
 	name = "slepnir carcass"
 	desc = "A skinned body section of a slepnir."
 	throw_range = 1
@@ -298,15 +298,15 @@
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4)
 	butcher_difficulty = 25
 
-/obj/item/fallout/carcass/large/slepnir/front
+/obj/item/ms13/carcass/large/slepnir/front
 	icon_state = "slepnirfront_carcass"
 	inhand_icon_state = "slepnirfront_carcass"
 
-/obj/item/fallout/carcass/large/slepnir/back
+/obj/item/ms13/carcass/large/slepnir/back
 	icon_state = "slepnirback_carcass"
 	inhand_icon_state = "slepnirback_carcass"
 
-/obj/item/fallout/carcass/large/hellpig
+/obj/item/ms13/carcass/large/hellpig
 	name = "hellpig carcass"
 	desc = "A skinned body section of a hellpig."
 	throw_range = 1
@@ -314,21 +314,21 @@
 	item_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 6)
 	butcher_difficulty = 30
 
-/obj/item/fallout/carcass/large/hellpig/front
+/obj/item/ms13/carcass/large/hellpig/front
 	icon_state = "hellpigfront_carcass"
 	inhand_icon_state = "hellpigfront_carcass"
 
-/obj/item/fallout/carcass/large/hellpig/back
+/obj/item/ms13/carcass/large/hellpig/back
 	icon_state = "hellpigback_carcass"
 	inhand_icon_state = "hellpigback_carcass"
 
-/obj/item/fallout/carcass/large/hellpig/leg
+/obj/item/ms13/carcass/large/hellpig/leg
 	name = "hellpig leg"
 	icon_state = "hellpigleg_carcass"
 	inhand_icon_state = "hellpigleg_carcass"
 	w_class = WEIGHT_CLASS_BULKY
 
-/obj/item/fallout/carcass/large/ComponentInitialize()
+/obj/item/ms13/carcass/large/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
 
@@ -336,7 +336,7 @@
 ////////////////////////// ITEMS ////////////////////////////
 /////////////////////////////////////////////////////////////
 
-/obj/item/fallout/animalitem
+/obj/item/ms13/animalitem
 	name = "animal item"
 	desc = "Default Item, wtf!!!"
 	icon = 'mojave/icons/mob/animalproduce.dmi'
@@ -347,97 +347,97 @@
 	throw_range = 5
 	w_class = WEIGHT_CLASS_NORMAL
 
-/obj/item/fallout/animalitem/brahmin/tongue
+/obj/item/ms13/animalitem/brahmin/tongue
 	name = "brahmin tongue"
 	desc = "The tongue of a brahmin, a tasty morsel and provider of hyper-condensed coagulant"
 	icon_state = "brahmin_tongue"
 	grind_results = null
 
-/obj/item/fallout/animalitem/brahmin/horns
+/obj/item/ms13/animalitem/brahmin/horns
 	name = "brahmin horn"
 	desc = "A sturdy brahmin horn, slightly valuable."
 	icon_state = "brahmin_horn"
 	grind_results = null
 
-/obj/item/fallout/animalitem/brahmiluff/tongue
+/obj/item/ms13/animalitem/brahmiluff/tongue
 	name = "brahmiluff tongue"
 	desc = "The tongue of a brahmiluff, more nutritious than its hairless cousins."
 	icon_state = "brahmin_tongue"
 	grind_results = null
 
-/obj/item/fallout/animalitem/brahmiluff/horns
+/obj/item/ms13/animalitem/brahmiluff/horns
 	name = "brahmiluff horn"
 	desc = "A valued brahmiluff horn, catches a good price."
 	icon_state = "brahmiluff_horn"
 
-/obj/item/fallout/animalitem/clucker/feather
+/obj/item/ms13/animalitem/clucker/feather
 	name = "clucker feather"
 	desc = "A singular clucker feather, rare commodities in a post-feather society."
 	icon_state = "clucker_feather"
 	throw_range = 2
 
-/obj/item/fallout/animalitem/slepnir/hooves
+/obj/item/ms13/animalitem/slepnir/hooves
 	name = "slepnir hoof"
 	desc = "A slepnirs Hoof, known for its ability to create natural adhesive."
 	icon_state = "slepnir_hoof"
 	grind_results = null
 
-/obj/item/fallout/animalitem/pigrat/snout
+/obj/item/ms13/animalitem/pigrat/snout
 	name = "pigrat snout"
 	desc = "A pigrats snout, a laden fine delicacy."
 	icon_state = "pigrat_snout"
 
-/obj/item/fallout/animalitem/molerat/teeth
+/obj/item/ms13/animalitem/molerat/teeth
 	name = "molerat tooth"
 	desc = "A molerats tooth, laden with disease."
 	icon_state = "molerat_tooth"
 /*
-/obj/item/fallout/animalitem/radroach/innards
+/obj/item/ms13/animalitem/radroach/innards
 	name = ""
 	desc = ""
 	icon_state =
 */
-/obj/item/fallout/animalitem/gecko/claws
+/obj/item/ms13/animalitem/gecko/claws
 	name = "gecko claw"
 	desc = "A lucky gecko paw, only slightly deadly."
 	icon_state = "gecko_claw"
 
-/obj/item/fallout/animalitem/nightstalker/teeth
+/obj/item/ms13/animalitem/nightstalker/teeth
 	name = "nightstalker fang"
 	desc = "A nightstalker fang, still dripping with potent venom."
 	icon_state = "nightstalker_tooth"
 /*
-/obj/item/fallout/animalitem/radscorpion/stinger
+/obj/item/ms13/animalitem/radscorpion/stinger
 	name = ""
 	desc = ""
 	icon_state =
 */
-/obj/item/fallout/animalitem/radstag/antlers
+/obj/item/ms13/animalitem/radstag/antlers
 	name = "radstag antler"
 	desc = "A valuable and sturdy radstag antler."
 	icon_state = "radstag_antler"
 
-/obj/item/fallout/animalitem/wolf/teeth
+/obj/item/ms13/animalitem/wolf/teeth
 	name = "wolf tooth"
 	desc = "A valuable and sacred wolf tooth."
 	icon_state = "wolf_tooth"
 /*
-/obj/item/fallout/animalitem/tunneler/spike
+/obj/item/ms13/animalitem/tunneler/spike
 	name = "tunneller_spike"
 	desc = "A razor sharp spear like protusion found on tunnellers."
 	icon_state = "tunneller_spike"
 
-/obj/item/fallout/animalitem/yaoguai/claw
+/obj/item/ms13/animalitem/yaoguai/claw
 	name = ""
 	desc = ""
 	icon_state =
 
-/obj/item/fallout/animalitem/yaoguai/teeth
+/obj/item/ms13/animalitem/yaoguai/teeth
 	name = ""
 	desc = ""
 	icon_state =
 
-/obj/item/fallout/animalitem/hellpig/tusk
+/obj/item/ms13/animalitem/hellpig/tusk
 	name = ""
 	desc = ""
 	icon_state =
@@ -467,18 +467,18 @@
 
 	if(user.a_intent != INTENT_HARM)
 		return
-	if(istype(target, /obj/item/fallout/carcass))
+	if(istype(target, /obj/item/ms13/carcass))
 		if(source.get_sharpness())
 			INVOKE_ASYNC(src, .proc/startCutting, source, target, user)
 			return COMPONENT_CANCEL_ATTACK_CHAIN
 
-/datum/component/itembutchering/proc/startCutting(obj/item/source, obj/item/fallout/carcass/M, mob/living/user)
+/datum/component/itembutchering/proc/startCutting(obj/item/source, obj/item/ms13/carcass/M, mob/living/user)
 	to_chat(user, "<span class='notice'>You begin to butcher [M]...</span>")
 	playsound(M.loc, butcher_sound, 50, TRUE, -1)
 	if(do_after(user, M, speed) && M.Adjacent(source))
 		itemButcher(user, M)
 
-/datum/component/itembutchering/proc/itemButcher(mob/living/U, obj/item/fallout/carcass/E)
+/datum/component/itembutchering/proc/itemButcher(mob/living/U, obj/item/ms13/carcass/E)
 	var/turf/T = E.drop_location()
 	var/final_effectiveness = effectiveness - E.butcher_difficulty //previous butchering code was wack, this just means that if you dont have the correct butchering tools you botch the harvest.
 	for(var/V in E.item_butcher_results)
@@ -494,7 +494,7 @@
 	E.harvest(U)
 	new /obj/effect/gibspawner/generic(get_turf(E), E)
 
-/datum/component/itembutchering/proc/ButcherEffects(obj/item/fallout/carcass/meat) //extra effects called on butchering, override this via subtypes
+/datum/component/itembutchering/proc/ButcherEffects(obj/item/ms13/carcass/meat) //extra effects called on butchering, override this via subtypes
 	return
 
 /obj/item/ComponentInitialize()

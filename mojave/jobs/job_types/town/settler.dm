@@ -1,4 +1,4 @@
-/datum/job/f13/town/settler
+/datum/job/ms13/town/settler
 	title = "Settler"
 	total_positions = 10
 	spawn_positions = 10
@@ -7,15 +7,15 @@
 	forbid = ""
 	enforce = ""
 
-	outfit = /datum/outfit/job/f13/town/settler
+	outfit = /datum/outfit/job/ms13/town/settler
 
-	display_order = JOB_DISPLAY_ORDER_F13_SETTLER
+	display_order = JOB_DISPLAY_ORDER_MS13_SETTLER
 
-/datum/outfit/job/f13/town/settler
+/datum/outfit/job/ms13/town/settler
 	name = "_Town Settler"
-	jobtype = /datum/job/f13/town/settler
+	jobtype = /datum/job/ms13/town/settler
 
 	head = /obj/item/clothing/head/collectable/petehat
 
-/datum/outfit/job/f13/town/settler/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/ms13/town/settler/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -56,7 +56,7 @@
 	desc = "An ancient cast iron frying pan.<br>It's heavy, but fairly useful if you need to keep the mutants away, and don't have a better weapon around."
 	icon_state = "pan"
 	inhand_icon_state = "pan"
-//	hitsound = 'sound/f13weapons/pan.ogg'
+//	hitsound = 'sound/ms13weapons/pan.ogg'
 	slot_flags = ITEM_SLOT_BELT
 	force = 15 //Just try to swing a frying pan
 	throw_speed = 1

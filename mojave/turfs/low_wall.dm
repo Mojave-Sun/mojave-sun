@@ -5,8 +5,8 @@
 	icon_state = "table-0"
 	base_icon_state = "table"
 	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL,SMOOTH_GROUP_MS13_WINDOW)
 
 
 /obj/structure/table/low_wall/metal
@@ -15,8 +15,8 @@
 	icon = 'mojave/icons/turf/walls/metal.dmi'
 	icon_state = "metal_low-0"
 	base_icon_state = "metal_low"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
 
 /obj/structure/table/low_wall/metal/rust
 	name = "low rusted metal wall"
@@ -31,8 +31,8 @@
 	icon = 'mojave/icons/turf/walls/wood.dmi'
 	icon_state = "wood_low-0"
 	base_icon_state = "wood_low"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_WOOD,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_WOOD,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_WOOD,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_WOOD,SMOOTH_GROUP_MS13_WINDOW)
 
 /obj/structure/table/low_wall/scrap
 	name = "low scrap wall"
@@ -40,8 +40,8 @@
 	icon = 'mojave/icons/turf/walls/scrap.dmi'
 	icon_state = "scrap_low-0"
 	base_icon_state = "scrap_low"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_SCRAP,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_SCRAP,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_SCRAP,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_SCRAP,SMOOTH_GROUP_MS13_WINDOW)
 
 /obj/structure/table/low_wall/adobe
 	name = "low adobe wall"
@@ -49,8 +49,8 @@
 	icon = 'mojave/icons/turf/walls/adobe.dmi'
 	icon_state = "adobe_low-0"
 	base_icon_state = "adobe_low"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_ADOBE,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_ADOBE,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_ADOBE,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_ADOBE,SMOOTH_GROUP_MS13_WINDOW)
 
 /obj/structure/table/low_wall/brick
 	name = "low brick wall"
@@ -58,8 +58,8 @@
 	icon = 'mojave/icons/turf/walls/brick.dmi'
 	icon_state = "brick_low-0"
 	base_icon_state = "brick_low"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_BRICK,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_BRICK,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_BRICK,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_BRICK,SMOOTH_GROUP_MS13_WINDOW)
 
 /obj/structure/table/low_wall/reinforced
 	name = "base class low reinforced wall"
@@ -67,8 +67,8 @@
 	icon = 'icons/obj/smooth_structures/table.dmi'
 	icon_state = "table-0"
 	base_icon_state = "table"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_REINFORCED,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_REINFORCED,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_REINFORCED,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_REINFORCED,SMOOTH_GROUP_MS13_WINDOW)
 
 /obj/structure/table/low_wall/reinforced/metal
 	name = "low reinforced metal wall"
@@ -76,8 +76,8 @@
 	icon = 'mojave/icons/turf/walls/reinforced_metal.dmi'
 	icon_state = "reinforced_metal_low-0"
 	base_icon_state = "reinforced_metal_low"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
 
 /obj/structure/table/low_wall/reinforced/metal/rust
 	name = "rusted low reinforced metal wall"
@@ -92,5 +92,5 @@
 	icon = 'mojave/icons/turf/walls/bunker.dmi'
 	icon_state = "bunker_low-0"
 	base_icon_state = "bunker_low"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)

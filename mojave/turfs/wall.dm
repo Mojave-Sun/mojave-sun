@@ -1,116 +1,116 @@
-/turf/closed/wall/f13
+/turf/closed/wall/ms13
 	name = "base class wall"
 	desc = "God has abandoned us"
 	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL,SMOOTH_GROUP_MS13_WINDOW)
 
-/turf/closed/wall/f13/metal
+/turf/closed/wall/ms13/metal
 	name = "metal wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/metal.dmi'
 	icon_state = "metal-0"
 	base_icon_state = "metal"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
 
-/turf/closed/wall/f13/metal/rust
+/turf/closed/wall/ms13/metal/rust
 	name = "rusted metal wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/rust.dmi'
 	icon_state = "rust-0"
 	base_icon_state = "rust"
 
-/turf/closed/wall/f13/wood
+/turf/closed/wall/ms13/wood
 	name = "wood wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/wood.dmi'
 	icon_state = "wood-0"
 	base_icon_state = "wood"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_WOOD,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_WOOD,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_WOOD,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_WOOD,SMOOTH_GROUP_MS13_WINDOW)
 
-/turf/closed/wall/f13/scrap
+/turf/closed/wall/ms13/scrap
 	name = "scrap wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/scrap.dmi'
 	icon_state = "scrap-0"
 	base_icon_state = "scrap"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_SCRAP,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_SCRAP,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_SCRAP,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_SCRAP,SMOOTH_GROUP_MS13_WINDOW)
 
-/turf/closed/wall/f13/adobe
+/turf/closed/wall/ms13/adobe
 	name = "adobe wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/adobe.dmi'
 	icon_state = "adobe-0"
 	base_icon_state = "adobe"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_ADOBE,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_ADOBE,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_ADOBE,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_ADOBE,SMOOTH_GROUP_MS13_WINDOW)
 
-/turf/closed/wall/f13/brick
+/turf/closed/wall/ms13/brick
 	name = "brick wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/tallbrick-dark.dmi'
 	icon_state = "brick-0"
 	base_icon_state = "brick"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_BRICK,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_BRICK,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_BRICK,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_BRICK,SMOOTH_GROUP_MS13_WINDOW)
 	layer = EDGED_TURF_LAYER
 
-/turf/closed/wall/f13/brick/alt
+/turf/closed/wall/ms13/brick/alt
 	icon = 'mojave/icons/turf/walls/tallbrick-light.dmi'
 
-/turf/closed/wall/r_wall/f13
+/turf/closed/wall/r_wall/ms13
 	name = "base class wall"
 	desc = "AHHH FUCK A BASE CLASS WALL"
 	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_REINFORCED,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_REINFORCED,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_REINFORCED,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_REINFORCED,SMOOTH_GROUP_MS13_WINDOW)
 
-/turf/closed/wall/r_wall/f13/metal
+/turf/closed/wall/r_wall/ms13/metal
 	name = "reinforced metal wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/reinforced_metal.dmi'
 	icon_state = "reinforced_metal-0"
 	base_icon_state = "reinforced_metal"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
 
-/turf/closed/wall/r_wall/f13/metal/rust
+/turf/closed/wall/r_wall/ms13/metal/rust
 	name = "rusted reinforced metal wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/reinforced_rust.dmi'
 	icon_state = "reinforced_rust-0"
 	base_icon_state = "reinforced_rust"
 
-/turf/closed/wall/r_wall/f13/bunker
+/turf/closed/wall/r_wall/ms13/bunker
 	name = "bunker wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/bunker.dmi'
 	icon_state = "bunker-0"
 	base_icon_state = "bunker"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
 
-/turf/closed/indestructible/f13
+/turf/closed/indestructible/ms13
 
-/turf/closed/indestructible/f13/metal
+/turf/closed/indestructible/ms13/metal
 	name = "metal wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/metal.dmi'
 	icon_state = "metal-0"
 	base_icon_state = "metal"
-	smoothing_groups = list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
-	canSmoothWith= list(SMOOTH_GROUP_FALLOUT_WALL_METAL,SMOOTH_GROUP_FALLOUT_WINDOW)
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL_METAL,SMOOTH_GROUP_MS13_WINDOW)
 
-/turf/closed/indestructible/f13/matrix
+/turf/closed/indestructible/ms13/matrix
 	name = "the matrix"
 	desc = "Looking at this gives you the feeling the physical world is very limited... (Click and drag yourself on this to remove your current character from the round.)"
 	icon = 'mojave/icons/turf/walls/matrix.dmi'
 	icon_state = "matrix"
 
-/turf/closed/indestructible/f13/matrix/MouseDrop_T(atom/dropping, mob/user)
+/turf/closed/indestructible/ms13/matrix/MouseDrop_T(atom/dropping, mob/user)
 	. = ..()
 	if(dropping != user)
 		return //You can only matrix yourself.

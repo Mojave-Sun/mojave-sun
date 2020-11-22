@@ -1,16 +1,16 @@
-/obj/item/clothing/mask/fallout
-	name = "generic fallout mask"
+/obj/item/clothing/mask/ms13
+	name = "generic ms13 mask"
 	desc = "this doesn't even exist"
 	icon = 'mojave/icons/objects/clothing/masks.dmi'
 	worn_icon = 'mojave/icons/mob/clothing/mask.dmi'
 
-/obj/item/clothing/mask/fallout/legion/clothmask
+/obj/item/clothing/mask/ms13/legion/clothmask
 	name = "cloth mask"
 	desc = "A simple cloth mask often used by Legionaries for an assortment of reasons."
 	icon_state = "leg_mask"
 	flags_inv = HIDEFACE
 
-/obj/item/clothing/mask/fallout/legion/speculatore
+/obj/item/clothing/mask/ms13/legion/speculatore
 	name = "\improper Legion speculatore mask"
 	desc = "A mask only worn by the near unheard of Speculatores of the Legion. Whatever metal it's made of is good for deflecting bullets received to the face - if you can hit them."
 	icon_state = "leg_spec"

@@ -4,7 +4,7 @@
 
 ///////////////////// BARREL CACTUS /////////////////////////
 
-/obj/item/seeds/fallout/barrelcactus
+/obj/item/seeds/ms13/barrelcactus
 	name = "barrel cactus seeds"
 	desc = "These seeds grow into a barrel cactus."
 	species = "cactus2"
@@ -12,8 +12,8 @@
 	plantname = "Barrel Cactus"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/barrelcactus
-	mutatelist = list(/obj/item/seeds/fallout/pricklypear)
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/barrelcactus
+	mutatelist = list(/obj/item/seeds/ms13/pricklypear)
 	lifespan = 60
 	endurance = 20
 	yield = 2
@@ -23,8 +23,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/barrelcactus
-	seed = /obj/item/seeds/fallout/barrelcactus
+/obj/item/reagent_containers/food/snacks/grown/ms13/barrelcactus
+	seed = /obj/item/seeds/ms13/barrelcactus
 	name = "barrel cactus fruit"
 	desc = "Barrel cactus fruit are found on spherical barrel cacti and are both nutritious and highly toxic."
 	bitesize_mod = 2
@@ -35,7 +35,7 @@
 
 ///////////////////// MUTFRUIT /////////////////////////
 
-/obj/item/seeds/fallout/mutfruit
+/obj/item/seeds/ms13/mutfruit
 	name = "mutfruit seeds"
 	desc = "These seeds grow into a mutfruit sapling."
 	species = "bush"
@@ -43,8 +43,8 @@
 	plantname = "Mutfruit Sapling"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/mutfruit
-	mutatelist = list(/obj/item/seeds/fallout/cmutfruit)
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/mutfruit
+	mutatelist = list(/obj/item/seeds/ms13/cmutfruit)
 	lifespan = 30
 	endurance = 20
 	yield = 3
@@ -53,8 +53,8 @@
 	maturation = 5
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/mutfruit
-	seed = /obj/item/seeds/fallout/mutfruit
+/obj/item/reagent_containers/food/snacks/grown/ms13/mutfruit
+	seed = /obj/item/seeds/ms13/mutfruit
 	name = "mutfruit"
 	desc = "Mutfruit provides both hydration and sustenance, but the mutated plant also carries small amounts of radiation."
 	bitesize_mod = 2
@@ -65,14 +65,14 @@
 
 //CRUNCHY MUTFRUITx
 
-/obj/item/seeds/fallout/cmutfruit
+/obj/item/seeds/ms13/cmutfruit
 	name = "crunchy mutfruit husks"
 	desc = "These husks grow crunchy mutfruits from the ground."
 	species = "vines"
 	growing_color =  "#da9249"
 	plantname = "Crunchy Mutfruits"
 	harvest_icon = 1
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/cmutfruit
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/cmutfruit
 	mutatelist = list()
 	lifespan = 80
 	endurance = 60
@@ -82,8 +82,8 @@
 	maturation = 6
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/cmutfruit
-	seed = /obj/item/seeds/fallout/cmutfruit
+/obj/item/reagent_containers/food/snacks/grown/ms13/cmutfruit
+	seed = /obj/item/seeds/ms13/cmutfruit
 	name = "crunchy mutfruit"
 	desc = "A special kind of mutfruit species, grown in the ground and significantly sweeter and crunchier than normal."
 	foodtype = FRUIT
@@ -94,15 +94,15 @@
 
 //APPLEx
 
-/obj/item/seeds/fallout/apple
+/obj/item/seeds/ms13/apple
 	name = "apple seeds"
 	desc = "Some mutated apple shrub seeds."
 	species = "tree"
 	growing_color =  "#9b3434"
 	plantname = "Apple Shrub"
 	harvest_icon = 1
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/apple
-	mutatelist = list(/obj/item/seeds/fallout/cmutfruit)
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/apple
+	mutatelist = list(/obj/item/seeds/ms13/cmutfruit)
 	lifespan = 100
 	endurance = 30
 	yield = 5
@@ -111,8 +111,8 @@
 	maturation = 10
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/apple
-	seed = /obj/item/seeds/fallout/apple
+/obj/item/reagent_containers/food/snacks/grown/ms13/apple
+	seed = /obj/item/seeds/ms13/apple
 	name = "apple"
 	desc = "A radiation proofed dark red apple."
 	bitesize_mod = 1
@@ -123,7 +123,7 @@
 
 ///////////////////// PRICKLY PEAR /////////////////////////
 
-/obj/item/seeds/fallout/pricklypear
+/obj/item/seeds/ms13/pricklypear
 	name = "prickly pear seeds"
 	desc = "These seeds grow into a prickly pear cactus."
 	species = "cactus"
@@ -131,8 +131,8 @@
 	plantname = "Prickly Pear Cactus"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest,/datum/plant_gene/trait/stinging) //could be a bad idea idk
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/pricklypear
-	mutatelist = list(/obj/item/seeds/fallout/barrelcactus)
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/pricklypear
+	mutatelist = list(/obj/item/seeds/ms13/barrelcactus)
 	lifespan = 60
 	endurance = 20
 	yield = 2
@@ -141,8 +141,8 @@
 	maturation = 5
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/pricklypear
-	seed = /obj/item/seeds/fallout/pricklypear
+/obj/item/reagent_containers/food/snacks/grown/ms13/pricklypear
+	seed = /obj/item/seeds/ms13/pricklypear
 	name = "prickly pear fruit"
 	desc = "Grown on the prickly pear cactus, these plants bear high nutrition yet are covered in menacing spikes."
 	icon_state = "prickly"
@@ -151,7 +151,7 @@
 	bitesize_mod = 2
 	tastes = list("sweetness"= 1)
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/pricklypear/pickup(mob/living/user)
+/obj/item/reagent_containers/food/snacks/grown/ms13/pricklypear/pickup(mob/living/user)
 	..()
 	if(!iscarbon(user))
 		return FALSE
@@ -170,7 +170,7 @@
 
 ///////////////////// PUNGA /////////////////////////
 
-/obj/item/seeds/fallout/punga
+/obj/item/seeds/ms13/punga
 	name = "punga pits"
 	desc = "These small black pits grow into a punga bush"
 	species = "bush"
@@ -178,7 +178,7 @@
 	plantname = "Punga Bush"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/pungafruit
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/pungafruit
 	lifespan = 80
 	endurance = 30
 	maturation = 15
@@ -187,8 +187,8 @@
 	growthstages = 4
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/pungafruit
-	seed = /obj/item/seeds/fallout/punga
+/obj/item/reagent_containers/food/snacks/grown/ms13/pungafruit
+	seed = /obj/item/seeds/ms13/punga
 	name = "pungafruit"
 	desc = "A large fleshy fruit with a yellowish-brown, thick skin. Due to growing in radioactive environments it purges radiation and toxins from the body."
 	icon_state = "punga"
@@ -199,7 +199,7 @@
 
 //refined punga
 
-/obj/item/seeds/fallout/geigpunga
+/obj/item/seeds/ms13/geigpunga
 	name = "geiger punga pits"
 	desc = "These small glowing green pits grow into a punga bush"
 	species = "bush"
@@ -207,7 +207,7 @@
 	plantname = "Geigerpunga Bush"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/geigpungafruit
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/geigpungafruit
 	lifespan = 100
 	endurance = 20
 	maturation = 8
@@ -217,8 +217,8 @@
 	growthstages = 4
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/geigpungafruit
-	seed = /obj/item/seeds/fallout/geigpunga
+/obj/item/reagent_containers/food/snacks/grown/ms13/geigpungafruit
+	seed = /obj/item/seeds/ms13/geigpunga
 	name = "geiger pungafruit"
 	desc = "A mutated pung afruit, glowing green and ever shifting."
 	icon_state = "geigpunga"
@@ -229,14 +229,14 @@
 
 ///////////////////// SNAPTAIL /////////////////////////x
 
-/obj/item/seeds/fallout/snaptail
+/obj/item/seeds/ms13/snaptail
 	name = "snaptail grains"
 	desc = "These waxy grains grow into the sugary snaptail plant."
 	species = "stalk"
 	growing_color =  "#bda75f"
 	wholeiconcolor = TRUE
 	plantname = "Snaptail Reeds"
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/snaptail
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/snaptail
 	lifespan = 40
 	endurance = 50
 	yield = 5
@@ -245,8 +245,8 @@
 	maturation = 8
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/snaptail
-	seed = /obj/item/seeds/fallout/snaptail
+/obj/item/reagent_containers/food/snacks/grown/ms13/snaptail
+	seed = /obj/item/seeds/ms13/snaptail
 	name = "snaptail"
 	desc = "A post-apocalyptic mutated sugarcane variant."
 	icon_state = "snaptail"
@@ -257,7 +257,7 @@
 
 ///////////////////// TARBERRY /////////////////////////x
 
-/obj/item/seeds/fallout/tarberry
+/obj/item/seeds/ms13/tarberry
 	name = "tarberry seeds"
 	desc = "These seeds grow into a tarberry bush."
 	species = "vines"
@@ -265,9 +265,9 @@
 	plantname = "Tarberry Bush"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/tarberry
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/tarberry
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	mutatelist = list(/obj/item/seeds/fallout/blackberry)
+	mutatelist = list(/obj/item/seeds/ms13/blackberry)
 	lifespan = 30
 	endurance = 30
 	yield = 8
@@ -276,8 +276,8 @@
 	maturation = 2
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/tarberry
-	seed = /obj/item/seeds/fallout/tarberry
+/obj/item/reagent_containers/food/snacks/grown/ms13/tarberry
+	seed = /obj/item/seeds/ms13/tarberry
 	name = "tarberry"
 	desc = "A dark and sticky berry, found in cold and damp environments."
 	bitesize_mod = 1
@@ -288,7 +288,7 @@
 
 //BLACKBERRYx
 
-/obj/item/seeds/fallout/blackberry
+/obj/item/seeds/ms13/blackberry
 	name = "blackberry seeds"
 	desc = "These seeds grow into a mutated blackberry bush."
 	species = "bush"
@@ -296,9 +296,9 @@
 	plantname = "Blackberry Bush"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/blackberry
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/blackberry
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	mutatelist = list(/obj/item/seeds/fallout/radberry, /obj/item/seeds/fallout/tarberry)
+	mutatelist = list(/obj/item/seeds/ms13/radberry, /obj/item/seeds/ms13/tarberry)
 	lifespan = 40
 	endurance = 20
 	yield = 5
@@ -307,8 +307,8 @@
 	maturation = 4
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/blackberry
-	seed = /obj/item/seeds/fallout/blackberry
+/obj/item/reagent_containers/food/snacks/grown/ms13/blackberry
+	seed = /obj/item/seeds/ms13/blackberry
 	name = "blackberry"
 	desc = "A radiation-induced mutated version of the pre-war blackberry."
 	bitesize_mod = 1
@@ -319,7 +319,7 @@
 
 //RADBERRYx
 
-/obj/item/seeds/fallout/radberry
+/obj/item/seeds/ms13/radberry
 	name = "radberry pips"
 	desc = "The seeds grow into the radioactive radberry."
 	species = "bush2"
@@ -327,7 +327,7 @@
 	plantname = "Radberry Shrub"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/radberry
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/radberry
 	lifespan = 10
 	endurance = 20
 	instability = 100
@@ -337,8 +337,8 @@
 	maturation = 6
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/radberry
-	seed = /obj/item/seeds/fallout/radberry
+/obj/item/reagent_containers/food/snacks/grown/ms13/radberry
+	seed = /obj/item/seeds/ms13/radberry
 	name = "tarberry"
 	desc = "A highly radioactive berry."
 	icon_state = "radberry"
@@ -349,12 +349,12 @@
 
 ///////////////////// YUCCA /////////////////////////
 
-/obj/item/seeds/fallout/yucca
+/obj/item/seeds/ms13/yucca
 	name = "yucca seeds"
 	desc = "These seeds grow into an yucca plant."
 	species = "yucca"
 	plantname = "yucca plant"
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/yucca
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/yucca
 	lifespan = 50
 	endurance = 30
 	yield = 3
@@ -365,8 +365,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/yucca
-	seed = /obj/item/seeds/fallout/yucca
+/obj/item/reagent_containers/food/snacks/grown/ms13/yucca
+	seed = /obj/item/seeds/ms13/yucca
 	name = "yucca fruit"
 	desc = "The fleshy banana like fruit. It smells and tastes similar to a sweet potato."
 	icon_state = "yucca"
@@ -381,7 +381,7 @@
 
 //////////////////////// TATO /////////////////////////////
 
-/obj/item/seeds/fallout/tato
+/obj/item/seeds/ms13/tato
 	name = "tato sprouts"
 	desc = "These tato sprouts replicate the disgusting tato plant."
 	species = "bush2"
@@ -389,8 +389,8 @@
 	plantname = "Tato Plant"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/tato
-	mutatelist = list(/obj/item/seeds/fallout/tomato, /obj/item/seeds/fallout/potato)
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/tato
+	mutatelist = list(/obj/item/seeds/ms13/tomato, /obj/item/seeds/ms13/potato)
 	lifespan = 40
 	endurance = 80
 	yield = 2
@@ -400,8 +400,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/tato
-	seed = /obj/item/seeds/fallout/tato
+/obj/item/reagent_containers/food/snacks/grown/ms13/tato
+	seed = /obj/item/seeds/ms13/tato
 	name = "tato"
 	desc = "A raw tato, an awful tasting combination of the pre-war tomato and potato plant."
 	bitesize_mod = 3
@@ -412,13 +412,13 @@
 
 //POTATO
 
-/obj/item/seeds/fallout/potato
+/obj/item/seeds/ms13/potato
 	name = "potato sprouts"
 	desc = "Pre-war potato sprouts, grow into clusters of potatos in the soil, highly resistant."
 	species = "root"
 	plantname = "Potatos"
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/potato
-	mutatelist = list(/obj/item/seeds/fallout/tato)
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/potato
+	mutatelist = list(/obj/item/seeds/ms13/tato)
 	lifespan = 30
 	endurance = 90
 	yield = 4
@@ -428,8 +428,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/potato
-	seed = /obj/item/seeds/fallout/potato
+/obj/item/reagent_containers/food/snacks/grown/ms13/potato
+	seed = /obj/item/seeds/ms13/potato
 	name = "potato"
 	desc = "A starchy resilient tubor, a classic staple food, radiation proofed and amazing cooked."
 	bitesize_mod = 2
@@ -440,7 +440,7 @@
 
 //TOMATO
 
-/obj/item/seeds/fallout/tomato
+/obj/item/seeds/ms13/tomato
 	name = "tomato seeds"
 	desc = "Pre-war tomato seeds, radiation proofed and just as juicy."
 	species = "bush"
@@ -448,8 +448,8 @@
 	plantname = "Tomato Plant"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash, /datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/tomato
-	mutatelist = list(/obj/item/seeds/fallout/tato, /datum/plant_gene/trait/repeated_harvest)
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/tomato
+	mutatelist = list(/obj/item/seeds/ms13/tato, /datum/plant_gene/trait/repeated_harvest)
 	lifespan = 30
 	endurance = 30
 	yield = 3
@@ -459,8 +459,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/tomato
-	seed = /obj/item/seeds/fallout/tomato
+/obj/item/reagent_containers/food/snacks/grown/ms13/tomato
+	seed = /obj/item/seeds/ms13/tomato
 	name = "tomato"
 	desc = "A juicy red, radiation proofed tomato, a unique plant to survive in the wastes."
 	bitesize_mod = 2
@@ -471,7 +471,7 @@
 
 ////////////////////// JALEPENO /////////////////////////////
 
-/obj/item/seeds/fallout/jalepeno
+/obj/item/seeds/ms13/jalepeno
 	name = "jalepeno seeds"
 	desc = "These seeds grow into long spicy desert-proof peppers."
 	species = "bush"
@@ -479,8 +479,8 @@
 	plantname = "Jalepeno Plant"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/jalepeno
-	mutatelist = list(/obj/item/seeds/fallout/radpepper)
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/jalepeno
+	mutatelist = list(/obj/item/seeds/ms13/radpepper)
 	lifespan = 40
 	endurance = 60
 	yield = 5
@@ -490,8 +490,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/jalepeno
-	seed = /obj/item/seeds/fallout/jalepeno
+/obj/item/reagent_containers/food/snacks/grown/ms13/jalepeno
+	seed = /obj/item/seeds/ms13/jalepeno
 	name = "jalepeno"
 	desc = "A spicy jalepeno pepper, climatised to the wasteland, tasty and spicy."
 	bitesize_mod = 1
@@ -502,7 +502,7 @@
 
 //RADPEPPER
 
-/obj/item/seeds/fallout/radpepper
+/obj/item/seeds/ms13/radpepper
 	name = "radpepper seeds"
 	desc = "The seeds grow into an even spicier and radioactive jalepeno variant."
 	species = "bush"
@@ -510,8 +510,8 @@
 	plantname = "Radpepper Bush"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash, /datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/radpepper
-	mutatelist = list(/obj/item/seeds/fallout/jalepeno)
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/radpepper
+	mutatelist = list(/obj/item/seeds/ms13/jalepeno)
 	lifespan = 10
 	instability = 100
 	endurance = 50
@@ -522,8 +522,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/radpepper
-	seed = /obj/item/seeds/fallout/radpepper
+/obj/item/reagent_containers/food/snacks/grown/ms13/radpepper
+	seed = /obj/item/seeds/ms13/radpepper
 	name = "radpepper"
 	desc = "A mutated jalepeno variant, condensed spiciness create an extremely powerful and somewhat painful taste."
 	bitesize_mod = 1
@@ -534,13 +534,13 @@
 
 //////////////////////// ONION //////////////////////////////
 
-/obj/item/seeds/fallout/onion
+/obj/item/seeds/ms13/onion
 	name = "onion sprouts"
 	desc = "The sprouts grow into a hardy onion plant."
 	species = "root"
 	plantname = "Onions"
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/onion
-	mutatelist = list(/obj/item/seeds/fallout/garlic)
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/onion
+	mutatelist = list(/obj/item/seeds/ms13/garlic)
 	lifespan = 20
 	endurance = 70
 	yield = 3
@@ -550,8 +550,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/onion
-	seed = /obj/item/seeds/fallout/onion
+/obj/item/reagent_containers/food/snacks/grown/ms13/onion
+	seed = /obj/item/seeds/ms13/onion
 	name = "onion"
 	desc = "A hardy and aromatic root vegetable, a staple ingredient in cooking good food."
 	bitesize_mod = 4
@@ -562,13 +562,13 @@
 
 //GARLIC
 
-/obj/item/seeds/fallout/garlic
+/obj/item/seeds/ms13/garlic
 	name = "garlic seeds"
 	desc = "These garlic seeds grow into a condensed onion variant."
 	species = "root"
 	plantname = "Garlic Plant"
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/garlic
-	mutatelist = list(/obj/item/seeds/fallout/onion)
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/garlic
+	mutatelist = list(/obj/item/seeds/ms13/onion)
 	maturation = 10
 	production = 1
 	yield = 5
@@ -577,8 +577,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/garlic
-	seed = /obj/item/seeds/fallout/garlic
+/obj/item/reagent_containers/food/snacks/grown/ms13/garlic
+	seed = /obj/item/seeds/ms13/garlic
 	name = "garlic"
 	desc = "A potent and tasty onion variant, also works as a medicinal root."
 	bitesize_mod = 1
@@ -589,12 +589,12 @@
 
 //////////////////////// XANDER /////////////////////////////
 
-/obj/item/seeds/fallout/xander
+/obj/item/seeds/ms13/xander
 	name = "xander roots"
 	desc = "These xander roots grow in size, producing denser and healing Xander roots."
 	species = "root"
 	plantname = "Xander Roots"
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/xander
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/xander
 	maturation = 10
 	production = 1
 	yield = 5
@@ -603,8 +603,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/xander
-	seed = /obj/item/seeds/fallout/xander
+/obj/item/reagent_containers/food/snacks/grown/ms13/xander
+	seed = /obj/item/seeds/ms13/xander
 	name = "xander root"
 	desc = "A bitter, turnip like root, known for its toxin healing and fulfilment."
 	bitesize_mod = 4
@@ -616,12 +616,12 @@
 
 //////////////////////// CARROT /////////////////////////////
 
-/obj/item/seeds/fallout/carrot
+/obj/item/seeds/ms13/carrot
 	name = "carrot seeds"
 	desc = "Some hardy mutated carrot seeds."
 	species = "root"
 	plantname = "Carrots"
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/carrot
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/carrot
 	maturation = 10
 	production = 1
 	yield = 5
@@ -630,8 +630,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/carrot
-	seed = /obj/item/seeds/fallout/carrot
+/obj/item/reagent_containers/food/snacks/grown/ms13/carrot
+	seed = /obj/item/seeds/ms13/carrot
 	name = "carrot"
 	desc = "A root vegetable, useful for its mildsweetness and eye healing properties."
 	bitesize_mod = 2
@@ -643,22 +643,22 @@
 
 //////////////////////// RAZORGRAIN /////////////////////////
 
-/obj/item/seeds/fallout/razorgrain
+/obj/item/seeds/ms13/razorgrain
 	name = "razorgrain grains"
 	desc = "Some hardy mutated wheat grains, a staple plant in the wasteland."
 	species = "stalk"
 	growing_color = "#644e2c"
 	wholeiconcolor = TRUE
 	plantname = "Razorgrain Stalks"
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/razorgrain
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/razorgrain
 	yield = 4
 	production = 1
 	maturation = 5
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/razorgrain
-	seed = /obj/item/seeds/fallout/razorgrain
+/obj/item/reagent_containers/food/snacks/grown/ms13/razorgrain
+	seed = /obj/item/seeds/ms13/razorgrain
 	name = "razorgrain"
 	desc = "A hardy grain, known for its materials properties and starchy powder, a backbone of the wasteland."
 	bitesize_mod = 1
@@ -670,22 +670,22 @@
 
 //////////////////////// BAIFAN /////////////////////////////
 
-/obj/item/seeds/fallout/baifan
+/obj/item/seeds/ms13/baifan
 	name = "baifan grains"
 	desc = "Some hardy mutated rice grains, a staple plant in the wasteland."
 	species = "stalk"
 	growing_color = "#688265"
 	wholeiconcolor = TRUE
 	plantname = "Baifan Stalks"
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/baifan
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/baifan
 	yield = 4
 	production = 1
 	maturation = 5
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/baifan
-	seed = /obj/item/seeds/fallout/baifan
+/obj/item/reagent_containers/food/snacks/grown/ms13/baifan
+	seed = /obj/item/seeds/ms13/baifan
 	name = "baifan"
 	desc = "A hardy grain, grows best in warm damp environments, yields a rice-like grain."
 	bitesize_mod = 1
@@ -697,14 +697,14 @@
 
 /////////////////////// CABBAGE /////////////////////////////
 
-/obj/item/seeds/fallout/cabbage
+/obj/item/seeds/ms13/cabbage
 	name = "cabbage seeds"
 	desc = "Some hardy cabbage seeds."
 	species = "vines"
 	growing_color =  "#334632"
 	plantname = "Cabbage Plant"
 	harvest_icon = 1
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/cabbage
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/cabbage
 	maturation = 10
 	production = 1
 	yield = 5
@@ -713,8 +713,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/cabbage
-	seed = /obj/item/seeds/fallout/cabbage
+/obj/item/reagent_containers/food/snacks/grown/ms13/cabbage
+	seed = /obj/item/seeds/ms13/cabbage
 	name = "cabbage"
 	desc = "A resilient leaf plant, only green thing out here."
 	bitesize_mod = 4
@@ -726,7 +726,7 @@
 
 //////////////////////// PINYON /////////////////////////////
 
-/obj/item/seeds/fallout/pinyon
+/obj/item/seeds/ms13/pinyon
 	name = "pinyon nuts"
 	desc = "Some pinyon nuts, grows into a pinyon pine"
 	species = "tree"
@@ -734,7 +734,7 @@
 	plantname = "Pinyon Pine"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/pinyon
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/pinyon
 	lifespan = 60
 	endurance = 20
 	yield = 2
@@ -744,8 +744,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/pinyon
-	seed = /obj/item/seeds/fallout/pinyon
+/obj/item/reagent_containers/food/snacks/grown/ms13/pinyon
+	seed = /obj/item/seeds/ms13/pinyon
 	name = "pinyon nuts"
 	desc = "Sour pinyon nuts, good if youre starving and contain many nutrients."
 	bitesize_mod = VEGETABLES
@@ -757,7 +757,7 @@
 
 ///////////////////////// MESQUITE //////////////////////////
 
-/obj/item/seeds/fallout/mesquite
+/obj/item/seeds/ms13/mesquite
 	name = "mesquite seeds"
 	desc = "Some honey mesquite seeds."
 	species = "bush"
@@ -765,7 +765,7 @@
 	plantname = "Mesquite Plant"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/mesquite
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/mesquite
 	lifespan = 80
 	endurance = 60
 	yield = 3
@@ -775,8 +775,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/mesquite
-	seed = /obj/item/seeds/fallout/mesquite
+/obj/item/reagent_containers/food/snacks/grown/ms13/mesquite
+	seed = /obj/item/seeds/ms13/mesquite
 	name = "mesquite"
 	desc = "Sweet medicinal honey mesquite pods, had a multitude of purposes."
 	bitesize_mod = 2
@@ -788,7 +788,7 @@
 
 /////////////////////// BUFFALO /////////////////////////////
 
-/obj/item/seeds/fallout/buffalo
+/obj/item/seeds/ms13/buffalo
 	name = "buffalo seeds"
 	desc = "Some buffalo gourd seeds."
 	species = "vines"
@@ -796,7 +796,7 @@
 	plantname = "Buffalo Vines"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash)
-	product = (/obj/item/reagent_containers/food/snacks/grown/fallout/)
+	product = (/obj/item/reagent_containers/food/snacks/grown/ms13/)
 	lifespan = 60
 	endurance = 20
 	yield = 8
@@ -806,8 +806,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/buffalo
-	seed = /obj/item/seeds/fallout/buffalo
+/obj/item/reagent_containers/food/snacks/grown/ms13/buffalo
+	seed = /obj/item/seeds/ms13/buffalo
 	name = "buffalo"
 	desc = "A large buffalo gourd, a decent ingredient, but nasty when raw."
 	bitesize_mod = 6
@@ -819,20 +819,20 @@
 
 //////////////////////// MAIZE //////////////////////////////
 
-/obj/item/seeds/fallout/maize
+/obj/item/seeds/ms13/maize
 	name = "maize seeds"
 	desc = "A hardy packet of a post-war corn-like crop."
 	species = "corn"
 	plantname = "Maize Stalks"
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/maize
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/maize
 	yield = 4
 	production = 1
 	growthstages = 3
 	maturation = 5
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/maize
-	seed = /obj/item/seeds/fallout/maize
+/obj/item/reagent_containers/food/snacks/grown/ms13/maize
+	seed = /obj/item/seeds/ms13/maize
 	name = "maize"
 	desc = "A hardy maize crop, known for its extensive use in the west."
 	bitesize_mod = 4
@@ -848,7 +848,7 @@
 
 ///////////////////////// ASH ROSE //////////////////////////
 
-/obj/item/seeds/fallout/ashrose
+/obj/item/seeds/ms13/ashrose
 	name = "ash rose seeds"
 	desc = "Some ash rose seeds, a potent flower known for expelling radiation and toxins."
 	species = "flower2"
@@ -856,7 +856,7 @@
 	plantname = "Ash Roses"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/ashrose
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/ashrose
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -867,8 +867,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/ashrose
-	seed = /obj/item/seeds/fallout/ashrose
+/obj/item/reagent_containers/food/snacks/grown/ms13/ashrose
+	seed = /obj/item/seeds/ms13/ashrose
 	name = "ash rose"
 	desc = "A potent radiation and toxin healing flower."
 	bitesize_mod = 1
@@ -879,7 +879,7 @@
 
 //radrose
 
-/obj/item/seeds/fallout/radrose
+/obj/item/seeds/ms13/radrose
 	name = "rad rose seeds"
 	desc = "Some rad rose seeds, an extremely potent and radioactive version of the ash rose flower."
 	species = "flower2"
@@ -887,7 +887,7 @@
 	plantname = "Rad Roses"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/radrose
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/radrose
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -898,8 +898,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/radrose
-	seed = /obj/item/seeds/fallout/radrose
+/obj/item/reagent_containers/food/snacks/grown/ms13/radrose
+	seed = /obj/item/seeds/ms13/radrose
 	name = "rad rose"
 	desc = "An extremely potent and radioactive version of the ash rose flower."
 	bitesize_mod = 1
@@ -910,7 +910,7 @@
 
 /////////////////////////// SOOT ////////////////////////////
 
-/obj/item/seeds/fallout/soot
+/obj/item/seeds/ms13/soot
 	name = "soot seeds"
 	desc = "Some soot seeds, a poisonous flower."
 	species = "flower"
@@ -918,7 +918,7 @@
 	plantname = "Soot Flowers"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/soot
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/soot
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -929,8 +929,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/soot
-	seed = /obj/item/seeds/fallout/soot
+/obj/item/reagent_containers/food/snacks/grown/ms13/soot
+	seed = /obj/item/seeds/ms13/soot
 	name = "soot flower"
 	desc = "A poisonous soot flower."
 	bitesize_mod = 1
@@ -941,7 +941,7 @@
 
 //toxicsoot
 
-/obj/item/seeds/fallout/toxicsoot
+/obj/item/seeds/ms13/toxicsoot
 	name = "toxic soot seeds"
 	desc = "Some mutated soot seeds, grows into an extremely poisonous flower"
 	species = "flower"
@@ -949,7 +949,7 @@
 	plantname = "Toxic Soot Flowers"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/toxicsoot
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/toxicsoot
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -960,8 +960,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/toxicsoot
-	seed = /obj/item/seeds/fallout/toxicsoot
+/obj/item/reagent_containers/food/snacks/grown/ms13/toxicsoot
+	seed = /obj/item/seeds/ms13/toxicsoot
 	name = "toxic soot flower"
 	desc = "An extremely poisonous soot flower."
 	bitesize_mod = 1
@@ -972,7 +972,7 @@
 
 ////////////////////////// DATURA ///////////////////////////
 
-/obj/item/seeds/fallout/datura
+/obj/item/seeds/ms13/datura
 	name = "datura seeds"
 	desc = "Some datura seeds, a native flower that causes the user to hallucinate."
 	species = "flower2"
@@ -980,7 +980,7 @@
 	plantname = "Datura Flowers"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/datura
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/datura
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -991,8 +991,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/datura
-	seed = /obj/item/seeds/fallout/datura
+/obj/item/reagent_containers/food/snacks/grown/ms13/datura
+	seed = /obj/item/seeds/ms13/datura
 	name = "datura flower"
 	desc = "A native flower that causes the user to hallucinate."
 	bitesize_mod = 1
@@ -1003,7 +1003,7 @@
 
 //radtura
 
-/obj/item/seeds/fallout/radtura
+/obj/item/seeds/ms13/radtura
 	name = "radtura seeds"
 	desc = "Some radtura seeds, an extremely potent and mindbreaking species of datura."
 	species = "flower2"
@@ -1011,7 +1011,7 @@
 	plantname = "Radtura Flowers"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/radtura
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/radtura
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -1022,8 +1022,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/radtura
-	seed = /obj/item/seeds/fallout/radtura
+/obj/item/reagent_containers/food/snacks/grown/ms13/radtura
+	seed = /obj/item/seeds/ms13/radtura
 	name = "radtura flower"
 	desc = "An extremely potent and mindbreaking species of datura."
 	bitesize_mod = 1
@@ -1034,7 +1034,7 @@
 
 ////////////////////////// COTTON ///////////////////////////
 
-/obj/item/seeds/cotton/fallout
+/obj/item/seeds/cotton/ms13
 	name = "cotton seeds"
 	desc = "Some seeds that'll grow into a cotton plant. Wastelanders make good free labor if neccesary."
 	icon = 'mojave/icons/hydroponics/seeds.dmi'
@@ -1043,7 +1043,7 @@
 	species = "cotton"
 	plantname = "Cotton Plant"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/grown/cotton/fallout
+	product = /obj/item/grown/cotton/ms13
 	lifespan = 35
 	endurance = 25
 	maturation = 15
@@ -1056,23 +1056,23 @@
 	//reagents_add =
 
 
-/obj/item/grown/cotton/fallout
-	seed = /obj/item/seeds/cotton/fallout
+/obj/item/grown/cotton/ms13
+	seed = /obj/item/seeds/cotton/ms13
 	name = "cotton"
 	desc = "A fluffy bundle of cotton."
 	icon_state = "cotton"
-	cotton_type = /obj/item/stack/sheet/cotton/fallout
+	cotton_type = /obj/item/stack/sheet/cotton/ms13
 	cotton_name = "raw cotton"
 
 ////////////////////////// COYOTE ///////////////////////////
 
-/obj/item/seeds/fallout/coyote
+/obj/item/seeds/ms13/coyote
 	name = "coyote tobacco stems"
 	desc = "Some seeds that grow into a potent native tobacco plant, it has many uses."
 	species = "root"
 	plantname = "Coyote Tobacco"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/coyote
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/coyote
 	lifespan = 20
 	maturation = 5
 	production = 5
@@ -1081,8 +1081,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/coyote
-	seed = /obj/item/seeds/fallout/coyote
+/obj/item/reagent_containers/food/snacks/grown/ms13/coyote
+	seed = /obj/item/seeds/ms13/coyote
 	name = "coyote"
 	desc = "A potent native tobacco plant, it has many uses."
 	bitesize_mod = 1
@@ -1092,7 +1092,7 @@
 
 ////////////////////////// ASTER ////////////////////////////
 
-/obj/item/seeds/fallout/aster
+/obj/item/seeds/ms13/aster
 	name = "aster seeds"
 	desc = "Some aster seeds."
 	species = "flower"
@@ -1100,7 +1100,7 @@
 	plantname = "Aster Flowers"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/aster
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/aster
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -1111,8 +1111,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/aster
-	seed = /obj/item/seeds/fallout/aster
+/obj/item/reagent_containers/food/snacks/grown/ms13/aster
+	seed = /obj/item/seeds/ms13/aster
 	name = "aster flower"
 	desc = "Some tasty aster flowers."
 	bitesize_mod = 1
@@ -1122,7 +1122,7 @@
 
 /////////////////////// ASH BLOSSOM /////////////////////////
 
-/obj/item/seeds/fallout/ashblossom
+/obj/item/seeds/ms13/ashblossom
 	name = "ash blossom seeds"
 	desc = "These ash blossom seeds grow into the wastelands favourite coffee substitute."
 	species = "flower2"
@@ -1130,7 +1130,7 @@
 	plantname = "Ash Blossoms"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/ashblossom
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/ashblossom
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -1141,8 +1141,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/ashblossom
-	seed = /obj/item/seeds/fallout/ashblossom
+/obj/item/reagent_containers/food/snacks/grown/ms13/ashblossom
+	seed = /obj/item/seeds/ms13/ashblossom
 	name = "ash blossom"
 	desc = "A potent coffee like caffeine induced and antiseptic flower."
 	bitesize_mod = 1
@@ -1152,7 +1152,7 @@
 
 ///////////////////////// THISTLE ///////////////////////////
 
-/obj/item/seeds/fallout/thistle
+/obj/item/seeds/ms13/thistle
 	name = "thistle seeds"
 	desc = "Some thistle seeds, an invasive mutated and prickly weed."
 	species = "vines"
@@ -1160,7 +1160,7 @@
 	plantname = "Thistles"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest,/datum/plant_gene/trait/stinging)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/thistle
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/thistle
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -1171,8 +1171,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/thistle
-	seed = /obj/item/seeds/fallout/thistle
+/obj/item/reagent_containers/food/snacks/grown/ms13/thistle
+	seed = /obj/item/seeds/ms13/thistle
 	name = "thistle"
 	desc = "An invasive mutated and prickly weed."
 	bitesize_mod = 1
@@ -1181,7 +1181,7 @@
 	filling_color = "#a64e5a"
 	tastes = list("pain"= 5)
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/thistle/pickup(mob/living/user)
+/obj/item/reagent_containers/food/snacks/grown/ms13/thistle/pickup(mob/living/user)
 	..()
 	if(!iscarbon(user))
 		return FALSE
@@ -1200,7 +1200,7 @@
 
 ////////////////////////// AGAVE ////////////////////////////
 
-/obj/item/seeds/fallout/agave
+/obj/item/seeds/ms13/agave
 	name = "agave spines"
 	desc = "These seeds grow into the burn healing agave plant."
 	species = "cactus2"
@@ -1208,7 +1208,7 @@
 	plantname = "Agave"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/agave
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/agave
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -1219,8 +1219,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/agave
-	seed = /obj/item/seeds/fallout/agave
+/obj/item/reagent_containers/food/snacks/grown/ms13/agave
+	seed = /obj/item/seeds/ms13/agave
 	name = "agave"
 	desc = "A strange kind of fleshy grass often used as a primitive burn medication that rapidly depletes stored nutrients in the body."
 	bitesize_mod = 1
@@ -1230,7 +1230,7 @@
 
 /////////////////////// BROC FLOWER /////////////////////////
 
-/obj/item/seeds/fallout/brocflower
+/obj/item/seeds/ms13/brocflower
 	name = "broc flower seeds"
 	desc = "These seeds grow into broc flowers."
 	species = "flower"
@@ -1238,7 +1238,7 @@
 	plantname = "Broc Flowers"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/brocflower
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/brocflower
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -1248,8 +1248,8 @@
 	growthstages = 3
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/brocflower
-	seed = /obj/item/seeds/fallout/brocflower
+/obj/item/reagent_containers/food/snacks/grown/ms13/brocflower
+	seed = /obj/item/seeds/ms13/brocflower
 	name = "broc flower"
 	desc = "This vibrant, orange flower grows on tall stalks in the wasteland and exhibits moderate healing properties."
 	bitesize_mod = 1
@@ -1263,7 +1263,7 @@
 
 //////////////////////// CAVEFUNG ///////////////////////////
 
-/obj/item/seeds/fallout/cavefungus
+/obj/item/seeds/ms13/cavefungus
 	name = "cave fungus spores"
 	desc = "These spores grow into cave fungi, an edible variety of mushroom with anti-toxic properties."
 	species = "mushroom"
@@ -1272,7 +1272,7 @@
 	wholeiconcolor = TRUE
 	plantname = "Cave Fungus Mushrooms"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/cavefungus
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/cavefungus
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1282,8 +1282,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/cavefungus
-	seed = /obj/item/seeds/fallout/cavefungus
+/obj/item/reagent_containers/food/snacks/grown/ms13/cavefungus
+	seed = /obj/item/seeds/ms13/cavefungus
 	name = "cave fungus"
 	desc = "An edible mushroom, with multiple toxin healing and cooking properties."
 	bitesize_mod = 1
@@ -1293,7 +1293,7 @@
 
 //GLOWCAVEFUNG
 
-/obj/item/seeds/fallout/glowfungus
+/obj/item/seeds/ms13/glowfungus
 	name = "glow fungus spores"
 	desc = "These spores grow into glowing cave fungi, an edible variety of mushroom with potent anti-toxic properties."
 	species = "mushroom"
@@ -1301,8 +1301,8 @@
 	growing_color =  "#98b752"
 	wholeiconcolor = TRUE
 	plantname = "Glowfungus Mushrooms"
-	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/glow/falloutgreen)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/cavefungus
+	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/glow/ms13green)
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/cavefungus
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1312,8 +1312,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/glowfungus
-	seed = /obj/item/seeds/fallout/glowfungus
+/obj/item/reagent_containers/food/snacks/grown/ms13/glowfungus
+	seed = /obj/item/seeds/ms13/glowfungus
 	name = "glow fungus"
 	desc = "A radioactive mushroom, with multiple potent toxin healing and radioactive properties."
 	bitesize_mod = 1
@@ -1322,7 +1322,7 @@
 	filling_color = "#357944"
 	tastes = list("mushroom"= 5, "warmth"= 5)
 
-/datum/plant_gene/trait/glow/falloutgreen
+/datum/plant_gene/trait/glow/ms13green
 	//oh no, now i'm radioactive
 	name = "Radioactive Bioluminescence"
 	rate = 0.01
@@ -1330,14 +1330,14 @@
 
 //////////////////////// BLIGHT /////////////////////////////
 
-/obj/item/seeds/fallout/blight
+/obj/item/seeds/ms13/blight
 	name = "blight spores"
 	desc = "These spores grow into the blight mushroom, an potentially edible fungus."
 	species = "blight"
 	icon_harvest = "blight-grow4"
 	plantname = "Blight Fungus"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/blight
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/blight
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1347,8 +1347,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/blight
-	seed = /obj/item/seeds/fallout/blight
+/obj/item/reagent_containers/food/snacks/grown/ms13/blight
+	seed = /obj/item/seeds/ms13/blight
 	name = "blight"
 	desc = "A potentially edible mushroom weed."
 	bitesize_mod = 1
@@ -1359,14 +1359,14 @@
 
 ////////////////////// BRAIN FUNGUS /////////////////////////
 
-/obj/item/seeds/fallout/brainfung
+/obj/item/seeds/ms13/brainfung
 	name = "brain fungus spores"
 	desc = "These spores grow into the brain fungus, a deadly neurotoxic mushroom, that secretes its chemicals if picked up."
 	species = "brainfung"
 	icon_harvest = "brainfung-grow4"
 	plantname = "Brain Fungus"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/brainfung
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/brainfung
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1376,8 +1376,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/brainfung
-	seed = /obj/item/seeds/fallout/brainfung
+/obj/item/reagent_containers/food/snacks/grown/ms13/brainfung
+	seed = /obj/item/seeds/ms13/brainfung
 	name = "brain fungus"
 	desc = "An extremly toxic brain damaging fungus, handle with extreme care."
 	bitesize_mod = 1
@@ -1386,7 +1386,7 @@
 	filling_color = "#c87070"
 	tastes = list("illness"= 5)
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/brainfung/pickup(mob/living/user)
+/obj/item/reagent_containers/food/snacks/grown/ms13/brainfung/pickup(mob/living/user)
 	..()
 	if(!iscarbon(user))
 		return FALSE
@@ -1402,7 +1402,7 @@
 
 //////////////////////// FIRECAP ////////////////////////////
 
-/obj/item/seeds/fallout/firecap
+/obj/item/seeds/ms13/firecap
 	name = "firecap spores"
 	desc = "These spores grow into the firecap mushroom, a burning pest of a plant."
 	species = "mushroom"
@@ -1411,7 +1411,7 @@
 	wholeiconcolor = TRUE
 	plantname = "Firecap Cluster"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/firecap
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/firecap
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1421,8 +1421,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/firecap
-	seed = /obj/item/seeds/fallout/firecap
+/obj/item/reagent_containers/food/snacks/grown/ms13/firecap
+	seed = /obj/item/seeds/ms13/firecap
 	name = "firecap"
 	desc = "A burning pest of a mushroom, sears the flesh of all that touch or consume it."
 	bitesize_mod = 1
@@ -1431,7 +1431,7 @@
 	filling_color = "#3f2e0f"
 	tastes = list("fire"= 5, "mushroom"= 1)
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/firecap/pickup(mob/living/user)
+/obj/item/reagent_containers/food/snacks/grown/ms13/firecap/pickup(mob/living/user)
 	..()
 	if(!iscarbon(user))
 		return FALSE
@@ -1450,7 +1450,7 @@
 
 //////////////////////// GUTSHROOM ////////////////////////////
 
-/obj/item/seeds/fallout/gutshroom
+/obj/item/seeds/ms13/gutshroom
 	name = "gutshroom spores"
 	desc = "These spores grow into a toxic fungus plant, that cause intense stomach pain."
 	species = "longshroom"
@@ -1459,7 +1459,7 @@
 	wholeiconcolor = TRUE
 	plantname = "Gutshroom Cluster"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/gutshroom
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/gutshroom
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1469,8 +1469,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/gutshroom
-	seed = /obj/item/seeds/fallout/gutshroom
+/obj/item/reagent_containers/food/snacks/grown/ms13/gutshroom
+	seed = /obj/item/seeds/ms13/gutshroom
 	name = "gutshroom"
 	desc = "A toxic fungus plant, that causes awful intestine and stomach pain."
 	bitesize_mod = 1
@@ -1479,7 +1479,7 @@
 	filling_color = "#38372a"
 	tastes = list("pain"= 5)
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/gutshroom/pickup(mob/living/user)
+/obj/item/reagent_containers/food/snacks/grown/ms13/gutshroom/pickup(mob/living/user)
 	..()
 	if(!iscarbon(user))
 		return FALSE
@@ -1495,7 +1495,7 @@
 
 //////////////////////// LURE WEED //////////////////////////
 
-/obj/item/seeds/fallout/lureweed
+/obj/item/seeds/ms13/lureweed
 	name = "lureweed spores"
 	desc = "These spores grow into the invasive lureweed, pretty bland but filling."
 	species = "lureweed"
@@ -1504,7 +1504,7 @@
 	wholeiconcolor = TRUE
 	plantname = "Lureweeds"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/lureweed
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/lureweed
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1514,8 +1514,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/lureweed
-	seed = /obj/item/seeds/fallout/lureweed
+/obj/item/reagent_containers/food/snacks/grown/ms13/lureweed
+	seed = /obj/item/seeds/ms13/lureweed
 	name = "lureweed"
 	desc = "A long and hard, edible and invasive fungus, only really used as food as a last resort."
 	bitesize_mod = 8
@@ -1525,7 +1525,7 @@
 
 ////////////////////////// NARA /////////////////////////////
 
-/obj/item/seeds/fallout/nara
+/obj/item/seeds/ms13/nara
 	name = "nara spores"
 	desc = "These spores grow into the nara fungus, part flesh and plant, it contains blood and restorative enzymes."
 	species = "longshroom"
@@ -1534,7 +1534,7 @@
 	wholeiconcolor = TRUE
 	plantname = "Nara Fungus"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/fallout/nara
+	product = /obj/item/reagent_containers/food/snacks/grown/ms13/nara
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1544,8 +1544,8 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/fallout/nara
-	seed = /obj/item/seeds/fallout/nara
+/obj/item/reagent_containers/food/snacks/grown/ms13/nara
+	seed = /obj/item/seeds/ms13/nara
 	name = "nara fungus"
 	desc = "Part flesh and plant, this invasive fungus contains blood and restorative enzymes."
 	bitesize_mod = 2

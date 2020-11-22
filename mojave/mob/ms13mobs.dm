@@ -17,10 +17,10 @@
 
 //Non-Aggresive Mobs, Defenceless Mobs, things like, babies and such
 
-/mob/living/simple_animal/fallout
-	name = "fallout mob"
+/mob/living/simple_animal/ms13
+	name = "ms13 mob"
 	desc = "If you see this, kill it, purge it and call the developer hotline, we will beat those mappers/admins, lickety split!"
-	icon = 'mojave/icons/mob/falloutanimals.dmi'
+	icon = 'mojave/icons/mob/ms13animals.dmi'
 	icon_state = ""
 	gender = NEUTER
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
@@ -62,7 +62,7 @@
 	var/milkable = FALSE
 	//Chems that the creature makes
 	var/extract = null
-	var/obj/item/fallout/animalchem/chems = null
+	var/obj/item/ms13/animalchem/chems = null
 	//does the homie lay eggs?
 	var/eggable = FALSE
 	var/egg_type = null
@@ -96,7 +96,7 @@
 	var/offsetx = 0
 	var/offsety = 0
 
-/mob/living/simple_animal/fallout/Initialize()
+/mob/living/simple_animal/ms13/Initialize()
 	. = ..()
 	icon_dead = "[icon_state]_dead"
 	var/matrix/bambinoscale = matrix()
@@ -113,14 +113,14 @@
 		if(eggable == TRUE)
 			eggsleft = 0
 
-/mob/living/simple_animal/fallout/Destroy()
+/mob/living/simple_animal/ms13/Destroy()
 	if(milkable == TRUE)
 		qdel(chems)
 		chems = null
 		return ..()
 
 //hunger and baby grow/birth/speed shitcode
-/mob/living/simple_animal/fallout/Life()
+/mob/living/simple_animal/ms13/Life()
 	. =..()
 	if(tame)
 		var/hungerrate = rand(0.2,0.3)
@@ -165,7 +165,7 @@
 				E.pixel_y = rand(-6,6)
 				return
 
-/mob/living/simple_animal/fallout/proc/saddleup()
+/mob/living/simple_animal/ms13/proc/saddleup()
 	var/speedmodifier = speed/(hunger/maxhunger)
 	if(saddled == TRUE)
 		can_buckle = TRUE
@@ -176,7 +176,7 @@
 		D.drive_verb = "ride"
 		D.vehicle_move_delay = speedmodifier
 
-/mob/living/simple_animal/fallout/proc/bogged()
+/mob/living/simple_animal/ms13/proc/bogged()
 	if(bagged == TRUE)
 		AddComponent(/datum/component/storage/concrete)
 		var/datum/component/storage/STR = GetComponent(/datum/component/storage)
@@ -185,7 +185,7 @@
 		STR.max_items = 20
 		add_overlay("[icon_state]_bagged")
 
-/mob/living/simple_animal/fallout/attackby(obj/item/O, mob/user, params)
+/mob/living/simple_animal/ms13/attackby(obj/item/O, mob/user, params)
 	. = ..()
 	if(O == /obj/item/melee/baton)
 		Stun(70 -  melee_damage_upper)
@@ -216,7 +216,7 @@
 			else if(hunger >= maxhunger)
 				user.visible_message("<span class='notice'>The [src] rejects the [O] they dont seem to be hungry right now.</span>")
 		if(baggable == TRUE)
-			if(istype(O, /obj/item/storage/fallout/sack) && !bagged)
+			if(istype(O, /obj/item/storage/ms13/sack) && !bagged)
 				if(tame && do_after(user,55,target=src))
 					playsound(get_turf(src), "rustle", 50, TRUE)
 					user.visible_message("<span class='notice'>You manage to put [O] on [src], allowing them to store heavy goods.</span>")
@@ -244,16 +244,16 @@
 			else
 				return ..()
 
-/obj/item/fallout/animalchem
+/obj/item/ms13/animalchem
 	name = "animalchem"
-	var/mob/living/simple_animal/fallout/chemicalgen = null
+	var/mob/living/simple_animal/ms13/chemicalgen = null
 
-/obj/item/fallout/animalchem/Initialize()
+/obj/item/ms13/animalchem/Initialize()
 	create_reagents(50)
 	reagents.add_reagent(chemicalgen.extract, 20)
 	. = ..()
 
-/obj/item/fallout/animalchem/proc/extractAnimal(obj/O, mob/user)
+/obj/item/ms13/animalchem/proc/extractAnimal(obj/O, mob/user)
 	var/obj/item/reagent_containers/glass/G = O
 	if(G.reagents.total_volume >= G.volume)
 		to_chat(user, "<span class='warning'>[O] is full.</span>")
@@ -268,16 +268,16 @@
 	else
 		to_chat(user, "<span class='warning'>The glands are dry. Wait a bit longer...</span>")
 
-/obj/item/fallout/animalchem/proc/generateChem()
+/obj/item/ms13/animalchem/proc/generateChem()
 	if(prob(5))
 		reagents.add_reagent(chemicalgen.extract, rand(5, 10))
 
 //Aggressive Mobs - Things that Run/Attack you (TG shitcode, I know)
 
-/mob/living/simple_animal/hostile/fallout
-	name = "fallout mob"
+/mob/living/simple_animal/hostile/ms13
+	name = "ms13 mob"
 	desc = "If you see this, kill it, purge it and call the developer hotline, we will beat those mappers/admins, lickety split!"
-	icon = 'mojave/icons/mob/falloutanimals.dmi'
+	icon = 'mojave/icons/mob/ms13animals.dmi'
 	icon_state = ""
 	gender = NEUTER
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
@@ -321,7 +321,7 @@
 	bare_wound_bonus = 5
 	var/milkable = FALSE
 	var/extract = null
-	var/obj/item/fallout/animalchem/chems = null
+	var/obj/item/ms13/animalchem/chems = null
 	var/eggable = FALSE
 	var/egg_type = null
 	var/eggsleft = 0
@@ -341,7 +341,7 @@
 	var/offsetx = 0
 	var/offsety = 0
 
-/mob/living/simple_animal/hostile/fallout/Initialize()
+/mob/living/simple_animal/hostile/ms13/Initialize()
 	. = ..()
 	icon_dead = "[icon_state]_dead"
 	var/matrix/bambinoscale = matrix()
@@ -358,14 +358,14 @@
 		if(eggable == TRUE)
 			eggsleft = 0
 
-/mob/living/simple_animal/hostile/fallout/Destroy()
+/mob/living/simple_animal/hostile/ms13/Destroy()
 	if(milkable == TRUE)
 		qdel(chems)
 		chems = null
 		return ..()
 
 //hunger and baby grow/birth/speed shitcode
-/mob/living/simple_animal/hostile/fallout/Life()
+/mob/living/simple_animal/hostile/ms13/Life()
 	. =..()
 	if(tame)
 		var/hungerrate = rand(0.2,0.3)
@@ -410,7 +410,7 @@
 				E.pixel_y = rand(-6,6)
 				return
 
-/mob/living/simple_animal/hostile/fallout/proc/saddleup()
+/mob/living/simple_animal/hostile/ms13/proc/saddleup()
 	var/speedmodifier = speed/(hunger/maxhunger)
 	if(saddled == TRUE)
 		can_buckle = TRUE
@@ -422,7 +422,7 @@
 		D.drive_verb = "ride"
 		D.vehicle_move_delay = speedmodifier
 
-/mob/living/simple_animal/hostile/fallout/proc/bogged()
+/mob/living/simple_animal/hostile/ms13/proc/bogged()
 	if(bagged == TRUE)
 		AddComponent(/datum/component/storage/concrete)
 		var/datum/component/storage/STR = GetComponent(/datum/component/storage)
@@ -431,7 +431,7 @@
 		STR.max_items = 20
 		add_overlay("[icon_state]_bagged")
 
-/mob/living/simple_animal/hostile/fallout/attackby(obj/item/O, mob/user, params)
+/mob/living/simple_animal/hostile/ms13/attackby(obj/item/O, mob/user, params)
 	. = ..()
 	if(O == /obj/item/melee/baton)
 		Stun(70 -  melee_damage_upper)
@@ -462,7 +462,7 @@
 			else if(hunger >= maxhunger)
 				user.visible_message("<span class='notice'>The [src] rejects the [O] they dont seem to be hungry right now.</span>")
 		if(baggable == TRUE)
-			if(istype(O, /obj/item/storage/fallout/sack) && !bagged)
+			if(istype(O, /obj/item/storage/ms13/sack) && !bagged)
 				if(tame && do_after(user,55,target=src))
 					playsound(get_turf(src), "rustle", 50, TRUE)
 					user.visible_message("<span class='notice'>You manage to put [O] on [src], allowing them to store heavy goods.</span>")
@@ -492,10 +492,10 @@
 
 //Mobs that attack in retaliation, Brahmin, etc. (oh yeah, boo hoo, no more slaughtering 85 brahmin for meat dawg)
 
-/mob/living/simple_animal/hostile/retaliate/fallout
-	name = "fallout mob"
+/mob/living/simple_animal/hostile/retaliate/ms13
+	name = "ms13 mob"
 	desc = "If you see this, kill it, purge it and call the developer hotline, we will beat those mappers/admins, lickety split!"
-	icon = 'mojave/icons/mob/falloutanimals.dmi'
+	icon = 'mojave/icons/mob/ms13animals.dmi'
 	icon_state = ""
 	gender = NEUTER
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
@@ -534,7 +534,7 @@
 	bare_wound_bonus = 5
 	var/milkable = FALSE
 	var/extract = null
-	var/obj/item/fallout/animalchem/chems = null
+	var/obj/item/ms13/animalchem/chems = null
 	var/eggable = FALSE
 	var/egg_type = null
 	var/eggsleft = 0
@@ -554,7 +554,7 @@
 	var/offsetx = 0
 	var/offsety = 0
 
-/mob/living/simple_animal/hostile/retaliate/fallout/Initialize()
+/mob/living/simple_animal/hostile/retaliate/ms13/Initialize()
 	. = ..()
 	icon_dead = "[icon_state]_dead"
 	var/matrix/bambinoscale = matrix()
@@ -571,14 +571,14 @@
 		if(eggable == TRUE)
 			eggsleft = 0
 
-/mob/living/simple_animal/hostile/retaliate/fallout/Destroy()
+/mob/living/simple_animal/hostile/retaliate/ms13/Destroy()
 	if(milkable == TRUE)
 		qdel(chems)
 		chems = null
 		return ..()
 
 //hunger and baby grow/birth/speed shitcode
-/mob/living/simple_animal/hostile/retaliate/fallout/Life()
+/mob/living/simple_animal/hostile/retaliate/ms13/Life()
 	. =..()
 	if(enemies.len && prob(10))
 		enemies = list()
@@ -627,7 +627,7 @@
 				E.pixel_y = rand(-6,6)
 				return
 
-/mob/living/simple_animal/hostile/retaliate/fallout/proc/saddleup()
+/mob/living/simple_animal/hostile/retaliate/ms13/proc/saddleup()
 	var/speedmodifier = speed/(hunger/maxhunger)
 	if(saddled == TRUE)
 		can_buckle = TRUE
@@ -638,7 +638,7 @@
 		D.drive_verb = "ride"
 		D.vehicle_move_delay = speedmodifier
 
-/mob/living/simple_animal/hostile/retaliate/fallout/proc/bogged()
+/mob/living/simple_animal/hostile/retaliate/ms13/proc/bogged()
 	if(bagged == TRUE)
 		AddComponent(/datum/component/storage/concrete)
 		var/datum/component/storage/STR = GetComponent(/datum/component/storage)
@@ -647,11 +647,11 @@
 		STR.max_items = 20
 		add_overlay("[icon_state]_bagged")
 
-/mob/living/simple_animal/hostile/retaliate/fallout/Retaliate()
+/mob/living/simple_animal/hostile/retaliate/ms13/Retaliate()
 	..()
 	src.visible_message("<span class='danger'>The [src] starts kicking off!</span>")
 
-/mob/living/simple_animal/hostile/retaliate/fallout/attackby(obj/item/O, mob/user, params)
+/mob/living/simple_animal/hostile/retaliate/ms13/attackby(obj/item/O, mob/user, params)
 	. = ..()
 	if(O == /obj/item/melee/baton)
 		Stun(70 -  melee_damage_upper)
@@ -682,7 +682,7 @@
 			else if(hunger >= maxhunger)
 				user.visible_message("<span class='notice'>The [src] rejects the [O] they dont seem to be hungry right now.</span>")
 		if(baggable == TRUE)
-			if(istype(O, /obj/item/storage/fallout/sack) && !bagged)
+			if(istype(O, /obj/item/storage/ms13/sack) && !bagged)
 				if(tame && do_after(user,55,target=src))
 					playsound(get_turf(src), "rustle", 50, TRUE)
 					user.visible_message("<span class='notice'>You manage to put [O] on [src], allowing them to store heavy goods.</span>")

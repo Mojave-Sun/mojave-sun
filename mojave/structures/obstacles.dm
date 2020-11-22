@@ -14,7 +14,7 @@
 //Metal fence
 /obj/structure/fence/fencenormal
 	name = "metal fence"
-	desc = "You see nothing out of the ordinary." //It's an original description from Fallout.
+	desc = "You see nothing out of the ordinary."
 	icon = 'mojave/icons/obstacles/obstacles.dmi'
 	icon_state = "normal_fence"
 	density = 1
@@ -115,8 +115,8 @@
 	icon_state = "fence_door_front_closed"
 	density = 1
 	anchored = 1
-	var/open_sound = 'mojave/sound/f13machines/doorchainlink_open.ogg'
-	var/close_sound = 'mojave/sound/f13machines/doorchainlink_close.ogg'
+	var/open_sound = 'mojave/sound/ms13machines/doorchainlink_open.ogg'
+	var/close_sound = 'mojave/sound/ms13machines/doorchainlink_close.ogg'
 
 /obj/structure/fence/fencedoor/Initialize()
 	. = ..()
@@ -178,8 +178,8 @@
 	icon_state = "fence_door_side_closed"
 	density = 1
 	anchored = 1
-	var/open_sound = 'mojave/sound/f13machines/doorchainlink_open.ogg'
-	var/close_sound = 'mojave/sound/f13machines/doorchainlink_close.ogg'
+	var/open_sound = 'mojave/sound/ms13machines/doorchainlink_open.ogg'
+	var/close_sound = 'mojave/sound/ms13machines/doorchainlink_close.ogg'
 
 /obj/structure/fence/fencedoorside/attackby(obj/item/I, mob/living/user, params)
 	if (density)

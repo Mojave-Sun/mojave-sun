@@ -1,119 +1,119 @@
-/obj/effect/landmark/start/f13
-	name = "Fallout 13"
+/obj/effect/landmark/start/ms13
+	name = "Mojave Sun"
 	icon_state = "Assistant"
 	jobspawn_override = TRUE
 	delete_after_roundstart = FALSE
 
-/obj/effect/landmark/start/f13/wastelander
+/obj/effect/landmark/start/ms13/wastelander
 	name = "Wastelander"
 
-/obj/effect/landmark/start/f13/canaanite
+/obj/effect/landmark/start/ms13/canaanite
 	name = "New Canaanite"
 
-/obj/effect/landmark/start/f13/hubologist
+/obj/effect/landmark/start/ms13/hubologist
 	name = "Hubologist"
 
-/obj/effect/landmark/start/f13/mayor
+/obj/effect/landmark/start/ms13/mayor
 	name = "Mayor"
 
-/obj/effect/landmark/start/f13/settler
+/obj/effect/landmark/start/ms13/settler
 	name = "Settler"
 
-/obj/effect/landmark/start/f13/shopkeep
+/obj/effect/landmark/start/ms13/shopkeep
 	name = "Shopkeep"
 
-/obj/effect/landmark/start/f13/bartender
+/obj/effect/landmark/start/ms13/bartender
 	name = "Bartender"
 
-/obj/effect/landmark/start/f13/farmer
+/obj/effect/landmark/start/ms13/farmer
 	name = "Farmer"
 
-/obj/effect/landmark/start/f13/doctor
+/obj/effect/landmark/start/ms13/doctor
 	name = "Doctor"
 
-/obj/effect/landmark/start/f13/deputy
+/obj/effect/landmark/start/ms13/deputy
 	name = "Deputy"
 
-/obj/effect/landmark/start/f13/sheriff
+/obj/effect/landmark/start/ms13/sheriff
 	name = "Sheriff"
 
-/obj/effect/landmark/start/f13/tribal
+/obj/effect/landmark/start/ms13/tribal
 	name = "Tribal"
 
-/obj/effect/landmark/start/f13/warrior
+/obj/effect/landmark/start/ms13/warrior
 	name = "Warrior"
 
-/obj/effect/landmark/start/f13/berserker
+/obj/effect/landmark/start/ms13/berserker
 	name = "Berserker"
 
-/obj/effect/landmark/start/f13/shaman
+/obj/effect/landmark/start/ms13/shaman
 	name = "Shaman"
 
-/obj/effect/landmark/start/f13/chieftain
+/obj/effect/landmark/start/ms13/chieftain
 	name = "Chieftain"
 
-/obj/effect/landmark/start/f13/trooper
+/obj/effect/landmark/start/ms13/trooper
 	name = "Trooper"
 
-/obj/effect/landmark/start/f13/corporal
+/obj/effect/landmark/start/ms13/corporal
 	name = "Corporal"
 
-/obj/effect/landmark/start/f13/sergeant
+/obj/effect/landmark/start/ms13/sergeant
 	name = "Sergeant"
 
-/obj/effect/landmark/start/f13/lieutenant
+/obj/effect/landmark/start/ms13/lieutenant
 	name = "Lieutenant"
 
-/obj/effect/landmark/start/f13/initiate
+/obj/effect/landmark/start/ms13/initiate
 	name = "Initiate"
 
-/obj/effect/landmark/start/f13/knight
+/obj/effect/landmark/start/ms13/knight
 	name = "Knight"
 
-/obj/effect/landmark/start/f13/scribe
+/obj/effect/landmark/start/ms13/scribe
 	name = "Scribe"
 
-/obj/effect/landmark/start/f13/paladin
+/obj/effect/landmark/start/ms13/paladin
 	name = "Paladin"
 
-/obj/effect/landmark/start/f13/head_paladin
+/obj/effect/landmark/start/ms13/head_paladin
 	name = "Head Paladin"
 
-/obj/effect/landmark/start/f13/head_scribe
+/obj/effect/landmark/start/ms13/head_scribe
 	name = "Head Scribe"
 
-/obj/effect/landmark/start/f13/raider
+/obj/effect/landmark/start/ms13/raider
 	name = "Raider"
 
-/obj/effect/landmark/start/f13/enforcer
+/obj/effect/landmark/start/ms13/enforcer
 	name = "Enforcer"
 
-/obj/effect/landmark/start/f13/boss
+/obj/effect/landmark/start/ms13/boss
 	name = "Boss"
 
-/obj/effect/landmark/start/f13/legion_praetorian
+/obj/effect/landmark/start/ms13/legion_praetorian
 	name = "Legion Praetorian"
 
-/obj/effect/landmark/start/f13/legion_centurion
+/obj/effect/landmark/start/ms13/legion_centurion
 	name = "Legion Centurion"
 
-/obj/effect/landmark/start/f13/legion_veteran_decanus
+/obj/effect/landmark/start/ms13/legion_veteran_decanus
 	name = "Legion Veteran Decanus"
 
-/obj/effect/landmark/start/f13/legion_prime_decanus
+/obj/effect/landmark/start/ms13/legion_prime_decanus
 	name = "Legion Prime Decanus"
 
-/obj/effect/landmark/start/f13/legion_recruit_decanus
+/obj/effect/landmark/start/ms13/legion_recruit_decanus
 	name = "Legion Recruit Decanus"
 
-/obj/effect/landmark/start/f13/legion_veteran_legionary
+/obj/effect/landmark/start/ms13/legion_veteran_legionary
 	name = "Legion Veteran Legionary"
 
-/obj/effect/landmark/start/f13/legion_speculatore
+/obj/effect/landmark/start/ms13/legion_speculatore
 	name = "Legion Speculatore"
 
-/obj/effect/landmark/start/f13/legion_explorer
+/obj/effect/landmark/start/ms13/legion_explorer
 	name = "Legion Explorer"
 
-/obj/effect/landmark/start/f13/legion_scout
+/obj/effect/landmark/start/ms13/legion_scout
 	name = "Legion Scout"

@@ -1,14 +1,14 @@
 /*
-Fallout 13 Job Base Class
+Mojave Sun Job Base Class
 */
-/datum/job/f13
-	title = "Default - please implement the title in your dataum/job/f13/yourjob file"
-	supervisors = "N/A - please implement the supervisors in your dataum/job/f13/yourjob file"
+/datum/job/ms13
+	title = "Default - please implement the title in your dataum/job/ms13/yourjob file"
+	supervisors = "N/A - please implement the supervisors in your dataum/job/ms13/yourjob file"
 	faction = "Wasteland"
 
-/datum/outfit/job/f13
+/datum/outfit/job/ms13
 	name = "Default"
-	jobtype = /datum/job/f13
+	jobtype = /datum/job/ms13
 
 	//This is all nulled to override /datum/outfit/job giving everyone assistant gear.
 
@@ -28,16 +28,16 @@ Fallout 13 Job Base Class
 
 	skillchip_path = null
 
-/datum/outfit/job/f13/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/ms13/pre_equip(mob/living/carbon/human/H)
 	//Blank for now, utilize as needed later on.
 
 //These are base jobs, we don't want them appearing at all
-/datum/job/f13/config_check()
-	if(type == /datum/job/f13)
+/datum/job/ms13/config_check()
+	if(type == /datum/job/ms13)
 		return FALSE
 	return ..()
 
-/datum/job/f13/map_check()
-	if(type == /datum/job/f13)
+/datum/job/ms13/map_check()
+	if(type == /datum/job/ms13)
 		return FALSE
 	return ..()

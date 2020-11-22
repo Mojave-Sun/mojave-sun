@@ -1,4 +1,4 @@
-/datum/job/f13/raiders/boss
+/datum/job/ms13/raiders/boss
 	title = "Boss"
 	total_positions = 1
 	spawn_positions = 1
@@ -7,15 +7,15 @@
 	forbid = ""
 	enforce = ""
 
-	outfit = /datum/outfit/job/f13/raiders/boss
+	outfit = /datum/outfit/job/ms13/raiders/boss
 
-	display_order = JOB_DISPLAY_ORDER_F13_BOSS
+	display_order = JOB_DISPLAY_ORDER_MS13_BOSS
 
-/datum/outfit/job/f13/raiders/boss
+/datum/outfit/job/ms13/raiders/boss
 	name = "_Raider Boss"
-	jobtype = /datum/job/f13/raiders/boss
+	jobtype = /datum/job/ms13/raiders/boss
 
 	head = /obj/item/clothing/head/collectable/petehat
 
-/datum/outfit/job/f13/raiders/boss/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/ms13/raiders/boss/pre_equip(mob/living/carbon/human/H)
 	..()
