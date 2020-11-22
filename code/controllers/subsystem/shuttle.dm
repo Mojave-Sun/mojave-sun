@@ -375,7 +375,7 @@ SUBSYSTEM_DEF(shuttle)
 		//Make all cargo consoles speak up
 
 /datum/controller/subsystem/shuttle/proc/checkHostileEnvironment()
-/* MS13 13: This causes a runtime and we don't particularly need shuttles for anything.
+/* MS13: This causes a runtime and we don't particularly need shuttles for anything.
 	for(var/datum/d in hostileEnvironments)
 		if(!istype(d) || QDELETED(d))
 			hostileEnvironments -= d
