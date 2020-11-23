@@ -3739,7 +3739,7 @@
 /area/ms13/sunny_dale)
 "aYn" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/table,
+/obj/structure/table/ms13/metal,
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "aYp" = (
@@ -6172,7 +6172,7 @@
 /area/ms13/sunny_dale)
 "enR" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/table,
+/obj/structure/table/ms13/metal,
 /turf/open/floor/plasteel/white,
 /area/ms13/ncr_main)
 "eoi" = (
@@ -8959,9 +8959,9 @@
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/ncr_main)
 "ifE" = (
-/obj/structure/table,
 /obj/item/kitchen/knife/butcher,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/table/ms13/metal,
 /turf/open/floor/plasteel/white,
 /area/ms13/ncr_main)
 "ifJ" = (
@@ -12375,6 +12375,10 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/plasteel/ms13/red/_dirty,
 /area/ms13/sunny_dale)
+"mTt" = (
+/obj/structure/table/ms13/round,
+/turf/open/floor/wood/ms13,
+/area/ms13/ncr_main)
 "mUc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/sofa/left{
@@ -12728,8 +12732,8 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "ntP" = (
-/obj/structure/table/reinforced,
 /obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/structure/table/ms13/metal,
 /turf/open/floor/plasteel,
 /area/ms13/ncr_main)
 "ntW" = (
@@ -12806,8 +12810,8 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "nwX" = (
-/obj/structure/table/reinforced,
 /obj/item/stack/medical/gauze,
+/obj/structure/table/ms13/metal,
 /turf/open/floor/plasteel,
 /area/ms13/ncr_main)
 "nxS" = (
@@ -12981,8 +12985,8 @@
 /turf/open/floor/plating/ground/road,
 /area/ms13)
 "nLr" = (
-/obj/structure/table/reinforced,
 /obj/item/storage/firstaid,
+/obj/structure/table/ms13/metal,
 /turf/open/floor/plasteel,
 /area/ms13/ncr_main)
 "nMd" = (
@@ -14014,10 +14018,10 @@
 /turf/open/openspace/ms13_no_build,
 /area/ms13)
 "peE" = (
-/obj/structure/table/reinforced,
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/table/ms13/metal,
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "peH" = (
@@ -14585,10 +14589,10 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "pOf" = (
-/obj/structure/table/wood,
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/table/ms13/round,
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "pOo" = (
@@ -15294,10 +15298,6 @@
 	dir = 1
 	},
 /turf/open/floor/wood/ms13/carpet,
-/area/ms13/ncr_main)
-"qRv" = (
-/obj/structure/table,
-/turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "qRJ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -16390,7 +16390,7 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "sqM" = (
-/obj/structure/table/reinforced,
+/obj/structure/table/ms13/metal,
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "sqO" = (
@@ -20135,7 +20135,7 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/ms13/sunny_dale)
 "xNW" = (
-/obj/structure/table/reinforced,
+/obj/structure/table/ms13/metal,
 /turf/open/floor/plasteel/ms13/white,
 /area/ms13/ncr_main)
 "xOf" = (
@@ -96971,7 +96971,7 @@ gmJ
 gmJ
 uLC
 aZg
-dEl
+mTt
 reM
 dER
 aSF
@@ -97752,7 +97752,7 @@ sVx
 rNZ
 aiz
 aZg
-gmJ
+aYn
 mPo
 dLt
 kxE
@@ -102229,7 +102229,7 @@ sJm
 aiz
 kBD
 vXy
-dEl
+mTt
 aQd
 aSF
 aZg
@@ -104827,12 +104827,12 @@ rNZ
 aiz
 aZg
 aQd
-qRv
-qRv
-qRv
+sqM
+sqM
+sqM
 aYn
-qRv
-qRv
+sqM
+sqM
 aQd
 aQd
 afe
@@ -105089,11 +105089,11 @@ rNZ
 aiz
 aZg
 aQd
-qRv
+sqM
 aYn
 aYn
 aYn
-qRv
+sqM
 aYn
 aSF
 aQd
