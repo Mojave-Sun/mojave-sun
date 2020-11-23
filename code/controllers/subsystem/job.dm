@@ -255,7 +255,7 @@ SUBSYSTEM_DEF(job)
 		return validate_required_jobs(required_jobs)
 
 	//Scale number of open security officer slots to population
-	//FALLOUT 13: This proc just causes runtimes since we don't use the sec officer job, so I'm commenting it out.
+	//MS13: This proc just causes runtimes since we don't use the sec officer job, so I'm commenting it out.
 	//setup_officer_positions()
 
 	//Jobs will have fewer access permissions if the number of players exceeds the threshold defined in game_options.txt

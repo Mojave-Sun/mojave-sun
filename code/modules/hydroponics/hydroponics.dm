@@ -392,21 +392,21 @@
 		oldPlantName = "empty tray"
 	switch(rand(1,18))		// randomly pick predominative weed
 		if(16 to 18)
-			myseed = new /obj/item/seeds/fallout/thistle(src)
+			myseed = new /obj/item/seeds/ms13/thistle(src)
 		if(14 to 15)
-			myseed = new /obj/item/seeds/fallout/blight(src)
+			myseed = new /obj/item/seeds/ms13/blight(src)
 		if(12 to 13)
-			myseed = new /obj/item/seeds/fallout/lureweed(src)
+			myseed = new /obj/item/seeds/ms13/lureweed(src)
 		if(10 to 11)
-			myseed = new /obj/item/seeds/fallout/nara(src)
+			myseed = new /obj/item/seeds/ms13/nara(src)
 		if(8 to 9)
-			myseed = new /obj/item/seeds/fallout/brainfung(src)
+			myseed = new /obj/item/seeds/ms13/brainfung(src)
 		if(6 to 7)
-			myseed = new /obj/item/seeds/fallout/gutshroom(src)
+			myseed = new /obj/item/seeds/ms13/gutshroom(src)
 		if(4 to 5)
-			myseed = new /obj/item/seeds/fallout/cavefungus(src)
+			myseed = new /obj/item/seeds/ms13/cavefungus(src)
 		else
-			myseed = new /obj/item/seeds/fallout/firecap(src)
+			myseed = new /obj/item/seeds/ms13/firecap(src)
 	age = 0
 	plant_health = myseed.endurance
 	lastcycle = world.time
