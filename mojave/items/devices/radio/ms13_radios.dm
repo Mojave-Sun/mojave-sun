@@ -1,6 +1,6 @@
 /obj/item/radio/ms13
 	icon = 'mojave/icons/objects/hamradio.dmi'
-	name = "Walkie Talkie"
+	name = "walkie-talkie"
 	icon_state = "handradio"
 	inhand_icon_state = "handradio_"
 	desc = "A basic handheld radio that communicates over a relatively long range, and is proven to be 254% better than yelling loudly."

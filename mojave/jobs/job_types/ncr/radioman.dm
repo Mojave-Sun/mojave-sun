@@ -1,8 +1,8 @@
 /datum/job/ms13/ncr/radioman
 	title = "NCR Radioman"
-	total_positions = 4
-	spawn_positions = 4
-	supervisors = "Sergeant, and Lieutenant"
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "the Corporals, the Sergeants, and the Lieutenant"
 	description = "Relay messages, obey orders and relay changes in situations to keep command up to date."
 	forbid = "The NCR forbids: Recreational drugs(barring med-x), drinking or gambling on duty, disobeying lawful orders. CO determines who is off-duty. Radiomen found to be abusing their radio will be first delimbed, then shot."
 	enforce = ""
