@@ -22,6 +22,7 @@ GLOBAL_LIST_INIT(tribe_positions, list(
 
 GLOBAL_LIST_INIT(ncr_positions, list(
 	"Trooper",
+	"Radioman",
 	"Corporal",
 	"Sergeant",
 	"Lieutenant"))

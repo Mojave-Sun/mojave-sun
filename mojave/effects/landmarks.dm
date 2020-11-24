@@ -55,6 +55,9 @@
 /obj/effect/landmark/start/ms13/trooper
 	name = "Trooper"
 
+/obj/effect/landmark/start/ms13/radioman
+	name = "Radioman"
+
 /obj/effect/landmark/start/ms13/corporal
 	name = "Corporal"
 
