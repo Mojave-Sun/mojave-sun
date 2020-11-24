@@ -22,7 +22,7 @@
 	var/datum/component/storage/STR = AddComponent(/datum/component/storage/concrete)
 	STR.max_w_class = WEIGHT_CLASS_SMALL
 	STR.max_combined_w_class = 18
-	STR.max_items = 6
+	STR.max_items = 5
 
 /obj/item/ms13/radiopack/Destroy()
 	STOP_PROCESSING(SSobj, src)
