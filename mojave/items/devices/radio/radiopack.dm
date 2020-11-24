@@ -1,5 +1,5 @@
 /obj/item/ms13/radiopack
-	icon = 'mojave/icons/objects/radiopack.dmi'
+	icon = 'mojave/icons/objects/clothing/backpack.dmi'
 	name = "radiopack"
 	icon_state = "radiopack"
 	worn_icon = 'mojave/icons/mob/clothing/back.dmi'
