@@ -3,7 +3,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "None, outside of exceptional circumstances."
-	description = "Organize the sergeants, corporals, troopers, and other miscellaneous idiots and try to secure the local area."
+	description = "Organize the sergeants, corporals, troopers, and local recruits to secure the area."
 
 	outfit = /datum/outfit/job/ms13/ncr/lieutenant
 
@@ -12,7 +12,7 @@
 /datum/outfit/job/ms13/ncr/lieutenant
 	name = "_NCR Lieutenant"
 	jobtype = /datum/job/ms13/ncr/lieutenant
-	id = 		 /obj/item/card/id/dogtag/ncrlieutenant
+	id = 		 /obj/item/card/id/ms13/ncrlieutenant
 	uniform =    /obj/item/clothing/under/ms13/ncr/fatigues/winter
 	head = 	     /obj/item/clothing/head/helmet/ms13/ncr/beret
 	suit =       /obj/item/clothing/suit/armor/ms13/ncr/mantle/reinforced

@@ -12,7 +12,7 @@
 /datum/outfit/job/ms13/ncr/corporal
 	name = "_NCR Corporal"
 	jobtype = /datum/job/ms13/ncr/corporal
-	id = 		 /obj/item/card/id/dogtag/ncrtrooper
+	id = 		 /obj/item/card/id/ms13/ncrtrooper
 	uniform =    /obj/item/clothing/under/ms13/ncr/fatigues/winter
 	head = 	     /obj/item/clothing/head/helmet/ms13/ncr/goggles
 	suit =       /obj/item/clothing/suit/armor/ms13/ncr/reinforced
