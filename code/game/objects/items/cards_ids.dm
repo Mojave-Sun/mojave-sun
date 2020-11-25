@@ -77,10 +77,10 @@
 	var/registered_name = null // The name registered_name on the card
 	var/assignment = null
 	var/access_txt // mapping aid
+	var/datum/bank_account/registered_account
 	var/obj/machinery/paystand/my_store
 	var/uses_overlays = TRUE
 	var/icon/cached_flat_icon
-	var/datum/bank_account/registered_account
 	var/registered_age = 13 // default age for ss13 players
 
 /obj/item/card/id/Initialize(mapload)
@@ -752,7 +752,8 @@ update_label()
 	desc = "An advanced holographic dogtag, that shows the duty of a BoS member."
 	icon_state = "holodogtag"
 	uses_overlays = FALSE
-	var/datum/bank_account/null
+	var/datum/bank_account = null
+
 /obj/item/card/id/dogtag/deputy
 	name = "deputy's badge"
 	desc = "A silver badge which shows honour and dedication."
