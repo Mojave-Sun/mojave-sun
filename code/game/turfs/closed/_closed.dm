@@ -60,7 +60,7 @@
 /turf/closed/indestructible/splashscreen
 	name = "Wasteland"
 	desc = "The wasteland is calling you..."
-	icon = 'fallout/icons/splashscreen.dmi'
+	icon = 'mojave/icons/splashscreen.dmi'
 	icon_state = ""
 	layer = SPLASHSCREEN_LAYER
 	plane = SPLASHSCREEN_PLANE
@@ -75,8 +75,8 @@
 
 	..()
 	icon_state = "transition"
-	addtimer(CALLBACK(src, .proc/swap_splashscreen, 'fallout/icons/title_roll.dmi', ""), 5 SECONDS)
-	addtimer(CALLBACK(src, .proc/swap_splashscreen, 'fallout/icons/splashscreen.dmi', "title_loading"), 40 SECONDS)
+	addtimer(CALLBACK(src, .proc/swap_splashscreen, 'mojave/icons/title_roll.dmi', ""), 5 SECONDS)
+	addtimer(CALLBACK(src, .proc/swap_splashscreen, 'mojave/icons/splashscreen.dmi', "title_loading"), 40 SECONDS)
 
 /turf/closed/indestructible/splashscreen/proc/swap_splashscreen(new_icon, new_icon_state)
 	icon = new_icon

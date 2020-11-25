@@ -67,7 +67,7 @@
 
 
 
-	//Additional f13 specific info for jobs
+	//Additional ms13 specific info for jobs
 	var/description = ""
 	var/forbid = ""
 	var/enforce = ""

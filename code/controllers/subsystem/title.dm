@@ -38,7 +38,7 @@ SUBSYSTEM_DEF(title)
 
 	icon = new(fcopy_rsc(file_path))
 
-	/* What could possibly go wrong? -tgclaw
+	/* MS13 - What could possibly go wrong? 
 	if(splash_turf)
 		splash_turf.icon = icon
 	*/
@@ -61,7 +61,7 @@ SUBSYSTEM_DEF(title)
 	for(var/thing in GLOB.clients)
 		if(!thing)
 			continue
-		var/obj/screen/splash/S = new(thing, FALSE)
+		var/atom/movable/screen/splash/S = new(thing, FALSE)
 		S.Fade(FALSE,FALSE)
 
 /datum/controller/subsystem/title/Recover()

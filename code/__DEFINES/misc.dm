@@ -474,6 +474,7 @@ GLOBAL_LIST_INIT(pda_styles, sortList(list(MONO, VT, ORBITRON, SHARE)))
 
 #define VOMIT_TOXIC 1
 #define VOMIT_PURPLE 2
+#define VOMIT_NANITE 3
 
 //chem grenades defines
 #define GRENADE_EMPTY 1
@@ -485,6 +486,7 @@ GLOBAL_LIST_INIT(pda_styles, sortList(list(MONO, VT, ORBITRON, SHARE)))
 
 // art quality defines, used in datums/components/art.dm, elsewhere
 #define BAD_ART 12.5
+#define OK_ART 20
 #define GOOD_ART 25
 #define GREAT_ART 50
 
