@@ -771,6 +771,19 @@ update_label()
 	desc = "A golden Sheriff's badge."
 	icon_state = "sheriff"
 
+/obj/item/card/id/dogtag/ncrrecruit
+	name = "recruit's tags"
+	desc = "A dog tag proving enlistment. Issued to local recruits."
+	icon_state = "ncrdogtagtrooper"
+	assignment = NCR Recruit
+
+/obj/item/card/id/dogtag/ncrrecruit/attackby(obj/item/W, mob/user, params)
+	if(istype(W, /obj/item/card/id/dogtag/ncrlieutenant))
+		registered_name = stripped_input(user, "Who do you want to designate as a recruit?", , "", MAX_NAME_LEN)
+		to_chat(user, "You scribble the [registered_name] for the name on the dogtag.")
+		update_label()
+	return ..()
+
 /obj/item/card/id/dogtag/ncrtrooper
 	name = "trooper's tags"
 	desc = "A dog tag proving enlistment."
@@ -800,6 +813,14 @@ update_label()
 	name = "recruit medallion"
 	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to a recruit."
 	icon_state = "legionmedallionrecruit"
+	assignment = Legion Recruit
+
+/obj/item/card/id/dogtag/legrecruit/attackby(obj/item/W, mob/user, params)
+	if(istype(W, /obj/item/card/id/dogtag/legcenturion))
+		registered_name = stripped_input(user, "Who do you want to designate as a recruit?", , "", MAX_NAME_LEN)
+		to_chat(user, "You scribble the [registered_name] for the name on the medallion.")
+		update_label()
+	return ..()
 
 /obj/item/card/id/dogtag/legprime
 	name = "prime medallion"
