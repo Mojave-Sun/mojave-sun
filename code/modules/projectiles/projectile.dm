@@ -11,7 +11,7 @@
 	pass_flags = PASSTABLE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	movement_type = FLYING
-	wound_bonus = CANT_WOUND // can't wound by default
+	wound_bonus = 0 // will wound by default, higher damage per shot weapons wound much more often
 	//The sound this plays on impact.
 	var/hitsound = 'sound/weapons/pierce.ogg'
 	var/hitsound_wall = ""
