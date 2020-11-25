@@ -774,8 +774,8 @@ update_label()
 /obj/item/card/id/dogtag/ncrrecruit
 	name = "recruit's tags"
 	desc = "A dog tag proving enlistment. Issued to local recruits."
+	assignment = "NCR Recruit"
 	icon_state = "ncrdogtagtrooper"
-	assignment = NCR Recruit
 
 /obj/item/card/id/dogtag/ncrrecruit/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/card/id/dogtag/ncrlieutenant))
@@ -812,8 +812,9 @@ update_label()
 /obj/item/card/id/dogtag/legrecruit
 	name = "recruit medallion"
 	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to a recruit."
+	assignment = "Legion Recruit"
 	icon_state = "legionmedallionrecruit"
-	assignment = Legion Recruit
+
 
 /obj/item/card/id/dogtag/legrecruit/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/card/id/dogtag/legcenturion))
