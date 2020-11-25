@@ -77,10 +77,10 @@
 	var/registered_name = null // The name registered_name on the card
 	var/assignment = null
 	var/access_txt // mapping aid
-	var/datum/bank_account/registered_account
 	var/obj/machinery/paystand/my_store
 	var/uses_overlays = TRUE
 	var/icon/cached_flat_icon
+	var/datum/bank_account/registered_account
 	var/registered_age = 13 // default age for ss13 players
 
 /obj/item/card/id/Initialize(mapload)
@@ -741,3 +741,78 @@ update_label()
 
 /obj/item/card/id/departmental_budget/AltClick(mob/living/user)
 	registered_account.bank_card_talk("<span class='warning'>Withdrawing is not compatible with this card design.</span>", TRUE) //prevents the vault bank machine being useless and putting money from the budget to your card to go over personal crates
+
+
+/* The old dogtags
+* and medallions from BD.
+* all have the dogtag subtype
+*/
+/obj/item/card/id/dogtag
+	name = "holo dogtag"
+	desc = "An advanced holographic dogtag, that shows the duty of a BoS member."
+	icon_state = "holodogtag"
+	uses_overlays = FALSE
+	var/datum/bank_account/null
+/obj/item/card/id/dogtag/deputy
+	name = "deputy's badge"
+	desc = "A silver badge which shows honour and dedication."
+	assignment = "Deputy"
+	icon_state = "deputy"
+
+/obj/item/card/id/dogtag/deputy/attackby(obj/item/W, mob/user, params)
+	if(istype(W, /obj/item/card/id/dogtag/sheriff))
+		registered_name = stripped_input(user, "Who do you want to designate as your deputy?", , "", MAX_NAME_LEN)
+		to_chat(user, "You scribble the [registered_name] for the name on the badge.")
+		update_label()
+	return ..()
+
+/obj/item/card/id/dogtag/sheriff
+	name = "sheriff's badge"
+	desc = "A golden Sheriff's badge."
+	icon_state = "sheriff"
+
+/obj/item/card/id/dogtag/ncrtrooper
+	name = "trooper's tags"
+	desc = "A dog tag proving enlistment."
+	icon_state = "ncrdogtagtrooper"
+
+/obj/item/card/id/dogtag/ncrsergeant
+	name = "sergeant's tags"
+	desc = "A chevron decorated dog tag showing NCO-ship."
+	icon_state = "ncrdogtagsergeant"
+
+/obj/item/card/id/dogtag/ncrlieutenant
+	name = "lieutenant's tags"
+	desc = "A silver bar dog tag that denotes a member of the NCR military with a lieutenant commission."
+	icon_state = "ncrdogtagofficer"
+
+/obj/item/card/id/dogtag/ncrcaptain
+	name = "captain's tags"
+	desc = "A dog tag that demands respect from all those subordinate to it. This one belongs to an NCR captain."
+	icon_state = "ncrdogtagcaptain"
+
+/obj/item/card/id/dogtag/ncrranger
+	name = "ranger tags"
+	desc = "A dog tag that invokes fear in those who see it, belongs to a man with a big iron on his hip."
+	icon_state = "ncrdogtagranger"
+
+/obj/item/card/id/dogtag/legrecruit
+	name = "recruit medallion"
+	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to a recruit."
+	icon_state = "legionmedallionrecruit"
+
+/obj/item/card/id/dogtag/legprime
+	name = "prime medallion"
+	desc = "A marked silver disc stamped with the Legion's Bull insignia. Belongs to a prime."
+	icon_state = "legionmedallionprime"
+
+/obj/item/card/id/dogtag/legveteran
+	name = "veteran medallion"
+	desc = "A heavily marked silver disc stamped with the Legion's Bull insignia. Belongs to a veteran, and reeks of iron."
+	icon_state = "legionmedallionveteran"
+
+/obj/item/card/id/dogtag/legcenturion
+	name = "centurion medallion"
+	desc = "A golden disc awarded to the most fierce men in the whole legion. If you are close enough to read the insignia you won't be alive much longer."
+	icon_state = "legionmedallioncent"
+
