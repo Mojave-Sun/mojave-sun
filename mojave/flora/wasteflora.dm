@@ -17,6 +17,9 @@
 
 /obj/item/reagent_containers/food/snacks/grown/ms13
 	icon = 'mojave/icons/hydroponics/harvest.dmi'
+	inhand_icon_state = "plant"
+	lefthand_file = 'mojave/icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 
 //food size change, less gimmicky jumbofoods
 
