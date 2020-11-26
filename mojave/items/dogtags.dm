@@ -54,7 +54,7 @@
 
 /obj/item/card/id/ms13/ncrsergeant
 	name = "sergeant's tags"
-	desc = "A chevron decorated dog tag showing NCO-ship."
+	desc = "A chevron decorated dog tag showing NCO status within the NCR."
 	icon_state = "ncrdogtagsergeant"
 
 /obj/item/card/id/ms13/ncrlieutenant
