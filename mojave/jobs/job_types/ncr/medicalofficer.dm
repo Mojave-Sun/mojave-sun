@@ -3,7 +3,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Lieutenant."
-	description = "ou are in charge of providing medical support to the NCR throughout the region. You are a non-combat role and should not be using your authority for anything outside of medical purposes."
+	description = "You are in charge of providing medical support to the NCR throughout the region. You are a non-combat role and should not be using your authority for anything outside of medical purposes."
 
 	outfit = /datum/outfit/job/ms13/ncr/medicalofficer
 
