@@ -98,5 +98,5 @@
 
 /obj/item/card/id/ms13/legcenturion
 	name = "centurion medallion"
-	desc = "A golden disc awarded to the most fierce men in the whole legion. If you are close enough to read the insignia you won't be alive much longer."
+	desc = "A golden disc awarded to the most fierce men in the entire Legion. If you are close enough to read the insignia you won't be alive much longer."
 	icon_state = "legionmedallioncent"
