@@ -54,8 +54,6 @@
 	layer = EDGED_TURF_LAYER
 
 /turf/closed/wall/ms13/brick/alt
-	icon_state = "brick-0"
-	base_icon_state = "brick"
 	icon = 'mojave/icons/turf/walls/brickalt.dmi'
 
 /turf/closed/wall/r_wall/ms13
