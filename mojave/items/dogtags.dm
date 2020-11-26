@@ -49,7 +49,7 @@
 
 /obj/item/card/id/ms13/ncrtrooper
 	name = "trooper's tags"
-	desc = "A dog tag proving enlistment."
+	desc = "A dog tag proving enlistment in the NCR."
 	icon_state = "ncrdogtagtrooper"
 
 /obj/item/card/id/ms13/ncrsergeant
