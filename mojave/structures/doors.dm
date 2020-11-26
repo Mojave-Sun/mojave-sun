@@ -21,6 +21,7 @@
 
 /obj/machinery/door/unpowered/ms13/rustic
 	icon = 'mojave/icons/structure/talldoor.dmi'
+	icon_state = "rustic_closed"
 	name = "log door"
 	opacity = 1
 	density = TRUE
