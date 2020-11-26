@@ -22,11 +22,11 @@
 	glasses = 	 /obj/item/clothing/glasses/sunglasses/big
 	back = 		 /obj/item/ms13/storage/backpack/radiopack
 	r_pocket = 	 /obj/item/reagent_containers/hypospray/medipen/stimpak
+	r_hand = 	 /obj/item/food/bread/plain
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/ms13/m9mm=2, \
 		/obj/item/kitchen/knife/combat/survival=1, \
-		/obj/item/stack/medical/gauze=1, \
-		/obj/item/food/bread/plain=1)
+		/obj/item/stack/medical/gauze=1)
 
 /datum/outfit/job/ms13/ncr/radioman/pre_equip(mob/living/carbon/human/H)
 	..()
