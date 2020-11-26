@@ -21,10 +21,10 @@
 	ears = 		 null
 	glasses = 	 /obj/item/clothing/glasses/sunglasses/big
 	back = 		 /obj/item/ms13/storage/backpack/radiopack
+	r_pocket = 	 /obj/item/reagent_containers/hypospray/medipen/stimpak
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/ms13/r20=1, \
 		/obj/item/kitchen/knife/combat/survival=1, \
-		/obj/item/reagent_containers/hypospray/medipen/stimpak=1, \
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/food/bread/plain=1)
 
