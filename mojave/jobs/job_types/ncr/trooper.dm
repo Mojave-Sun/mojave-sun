@@ -2,7 +2,7 @@
 	title = "NCR Trooper"
 	total_positions = 10
 	spawn_positions = 10
-	supervisors = "Lieutenant, Sergeant, and Corporal, in that order."
+	supervisors = "the Lieutenant, Sergeants, and Corporals, in that order."
 	description = "Hold the line, and do as ordered."
 
 	outfit = /datum/outfit/job/ms13/ncr/trooper
@@ -29,6 +29,5 @@
 
 /datum/outfit/job/ms13/ncr/trooper/pre_equip(mob/living/carbon/human/H)
 	..()
-
 
 
