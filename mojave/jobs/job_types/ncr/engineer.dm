@@ -2,7 +2,7 @@
 	title = "NCR Engineer"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Lieutenant and the Sergeants, in that order."
+	supervisors = "the Lieutenant, Sergeants, and Corporals.  In that order."
 	description = "You are in charge of fortifying and building for NCR strategic locations throughout the region."
 
 	outfit = /datum/outfit/job/ms13/ncr/engineer
