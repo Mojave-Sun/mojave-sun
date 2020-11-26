@@ -2,7 +2,7 @@
 	title = "NCR Corporal"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "Sergeant, and Lieutenant"
+	supervisors = "the Lieutenant and the Sergeants, in that order."
 	description = "Keep troopers in line, obey orders and relay changes in situations to keep command up to date."
 
 	outfit = /datum/outfit/job/ms13/ncr/corporal

@@ -2,7 +2,7 @@
 	title = "NCR Radioman"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Corporals, the Sergeants, and the Lieutenant"
+	supervisors = "the Lieutenant, Sergeants, and Corporals. In that order."
 	description = "Relay messages, obey orders and relay changes in situations to keep command up to date. Your radiopack functions as a backpack, and should be worn as such."
 
 	outfit = /datum/outfit/job/ms13/ncr/radioman

@@ -4,14 +4,14 @@
 */
 
 /obj/item/card/id/ms13
-	name = "ID Tags"
-	desc = "A simple identification tag.."
+	name = "\improper ID tag"
+	desc = "A simple identification tag. This is a base class and you shouldn't be seeing it."
 	icon = 'mojave/icons/objects/dogtags.dmi'
 	icon_state = "holodogtag"
 	uses_overlays = FALSE
 	var/datum/bank_account = null
 
-/obj/item/card/id/ms13/dogtag
+/obj/item/card/id/ms13/bos
 	name = "holo dogtag"
 	desc = "An advanced holographic dogtag, that shows the duty of a BoS member."
 	icon_state = "holodogtag"
@@ -36,7 +36,7 @@
 
 /obj/item/card/id/ms13/ncrrecruit
 	name = "recruit's tags"
-	desc = "A dog tag proving enlistment. Issued to local recruits."
+	desc = "A dog tag proving enlistment in the NCR, issued to local recruits."
 	assignment = "NCR Recruit"
 	icon_state = "ncrdogtagtrooper"
 
@@ -49,12 +49,12 @@
 
 /obj/item/card/id/ms13/ncrtrooper
 	name = "trooper's tags"
-	desc = "A dog tag proving enlistment."
+	desc = "A dog tag proving enlistment in the NCR."
 	icon_state = "ncrdogtagtrooper"
 
 /obj/item/card/id/ms13/ncrsergeant
 	name = "sergeant's tags"
-	desc = "A chevron decorated dog tag showing NCO-ship."
+	desc = "A chevron decorated dog tag showing NCO status within the NCR."
 	icon_state = "ncrdogtagsergeant"
 
 /obj/item/card/id/ms13/ncrlieutenant
@@ -68,8 +68,8 @@
 	icon_state = "ncrdogtagcaptain"
 
 /obj/item/card/id/ms13/ncrranger
-	name = "ranger tags"
-	desc = "A dog tag that invokes fear in those who see it, belongs to a man with a big iron on his hip."
+	name = "ranger's tags"
+	desc = "A dog tag that invokes fear in those who see it. Belongs to an elite of the NCR, usually with a big iron on their hip."
 	icon_state = "ncrdogtagranger"
 
 /obj/item/card/id/ms13/legrecruit
@@ -98,6 +98,5 @@
 
 /obj/item/card/id/ms13/legcenturion
 	name = "centurion medallion"
-	desc = "A golden disc awarded to the most fierce men in the whole legion. If you are close enough to read the insignia you won't be alive much longer."
+	desc = "A golden disc awarded to the most fierce men in the entire Legion. If you are close enough to read the insignia you won't be alive much longer."
 	icon_state = "legionmedallioncent"
-

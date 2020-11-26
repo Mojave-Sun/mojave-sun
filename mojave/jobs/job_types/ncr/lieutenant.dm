@@ -3,7 +3,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "None, outside of exceptional circumstances."
-	description = "Organize the sergeants, corporals, troopers, and local recruits to secure the area."
+	description = "Organize and command your forces."
 
 	outfit = /datum/outfit/job/ms13/ncr/lieutenant
 
