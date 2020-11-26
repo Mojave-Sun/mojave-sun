@@ -36,7 +36,7 @@
 
 /obj/item/card/id/ms13/ncrrecruit
 	name = "recruit's tags"
-	desc = "A dog tag proving enlistment. Issued to local recruits."
+	desc = "A dog tag proving enlistment in the NCR, issued to local recruits."
 	assignment = "NCR Recruit"
 	icon_state = "ncrdogtagtrooper"
 
