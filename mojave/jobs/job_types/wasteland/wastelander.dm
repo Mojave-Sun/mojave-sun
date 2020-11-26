@@ -28,7 +28,6 @@
 		/obj/item/clothing/under/ms13/wasteland/merca)
 	
 	r_hand = pick(
-		/obj/item/claymore/machete/pipe,\
-		/obj/item/claymore/machete/pipe/tireiron,\
-		/obj/item/claymore/machete/golf)
+		/obj/item/claymore/ms13/machete/pipe,\
+		/obj/item/claymore/ms13/machete/pipe/tireiron)
 
