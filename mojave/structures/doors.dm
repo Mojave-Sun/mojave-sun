@@ -18,3 +18,32 @@
 			flick("roomc0", src)
 		if("closing")
 			flick("roomc1", src)
+
+/obj/machinery/door/unpowered/ms13/rustic
+	icon = 'mojave/icons/structure/talldoor.dmi'
+	name = "log door"
+	opacity = 1
+	density = TRUE
+	explosion_block = 1
+	layer = ABOVE_MOB_LAYER
+
+/obj/machinery/door/unpowered/ms13/rustic/update_icon()
+	if(density)
+		icon_state = "rustic_closed"
+	else
+		icon_state = "rustic_open"
+	if(dir == NORTH)
+		pixel_y = 8
+	if(dir == EAST)
+		pixel_x = -6
+	if(dir == SOUTH)
+		pixel_y = -8
+	if(dir == WEST)
+		pixel_x = 6
+
+/obj/machinery/door/unpowered/ms13/rustic/do_animate(animation)
+	switch(animation)
+		if("opening")
+			flick("rustic_opening", src)
+		if("closing")
+			flick("rustic_closing", src)
