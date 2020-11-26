@@ -1,7 +1,5 @@
 /obj/projectile/bullet/ms13
 	speed = 0.6 //Vanilla tg is 0.8
-	wound_bonus = 0  // will wound by default, higher damage per shot weapons wound much more often
-
 
 /obj/projectile/bullet/ms13/needle
 	name = "needle"
