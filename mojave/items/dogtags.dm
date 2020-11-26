@@ -69,7 +69,7 @@
 
 /obj/item/card/id/ms13/ncrranger
 	name = "ranger tags"
-	desc = "A dog tag that invokes fear in those who see it, belongs to a man with a big iron on his hip."
+	desc = "A dog tag that invokes fear in those who see it. Belongs to an elite of the NCR, usually with a big iron on their hip."
 	icon_state = "ncrdogtagranger"
 
 /obj/item/card/id/ms13/legrecruit
