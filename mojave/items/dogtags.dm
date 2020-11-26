@@ -5,7 +5,7 @@
 
 /obj/item/card/id/ms13
 	name = "ID Tags"
-	desc = "A simple identification tag.."
+	desc = "A simple identification tag. This is a base class and you shouldn't be seeing it."
 	icon = 'mojave/icons/objects/dogtags.dmi'
 	icon_state = "holodogtag"
 	uses_overlays = FALSE
