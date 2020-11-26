@@ -20,7 +20,7 @@
 	belt = 		 /obj/item/storage/belt/military/army
 	ears = 		 null
 	glasses = 	 /obj/item/clothing/glasses/sunglasses/big
-	r_hand = 	 /obj/item/ms13/radiopack
+	back = 		 /obj/item/ms13/storage/backpack/radiopack
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/ms13/r20=1, \
 		/obj/item/kitchen/knife/combat/survival=1, \
