@@ -11,7 +11,7 @@
 	uses_overlays = FALSE
 	var/datum/bank_account = null
 
-/obj/item/card/id/ms13/dogtag
+/obj/item/card/id/ms13/bos
 	name = "holo dogtag"
 	desc = "An advanced holographic dogtag, that shows the duty of a BoS member."
 	icon_state = "holodogtag"
@@ -100,4 +100,3 @@
 	name = "centurion medallion"
 	desc = "A golden disc awarded to the most fierce men in the whole legion. If you are close enough to read the insignia you won't be alive much longer."
 	icon_state = "legionmedallioncent"
-
