@@ -19,7 +19,6 @@
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/ms13/deagle
 	belt = 		 /obj/item/storage/belt/military/army
 	shoes = 	 /obj/item/clothing/shoes/ms13/military/ncr_officer/winter
-	ears = 		 /obj/item/radio/headset
 	glasses =	 /obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/ms13/deagle=2, \

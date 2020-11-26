@@ -18,7 +18,6 @@
 	suit =       /obj/item/clothing/suit/armor/ms13/ncr/reinforced
 	suit_store = /obj/item/gun/ballistic/automatic/ms13/marksman/service
 	belt = 		 /obj/item/storage/belt/military/army
-	ears = 		 /obj/item/radio/headset
 	glasses =	 null
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/ms13/r20=1, \

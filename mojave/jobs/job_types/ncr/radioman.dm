@@ -16,14 +16,14 @@
 	uniform = 	 /obj/item/clothing/under/ms13/ncr/fatigues/winter
 	head = 		 /obj/item/clothing/head/helmet/ms13/ncr
 	suit = 		 /obj/item/clothing/suit/armor/ms13/ncr
-	suit_store = /obj/item/gun/ballistic/automatic/ms13/marksman/service
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/ms13/m9mm
 	belt = 		 /obj/item/storage/belt/military/army
 	ears = 		 null
 	glasses = 	 /obj/item/clothing/glasses/sunglasses/big
 	back = 		 /obj/item/ms13/storage/backpack/radiopack
 	r_pocket = 	 /obj/item/reagent_containers/hypospray/medipen/stimpak
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/ms13/r20=1, \
+		/obj/item/ammo_box/magazine/ms13/m9mm=2, \
 		/obj/item/kitchen/knife/combat/survival=1, \
 		/obj/item/stack/medical/gauze=1, \
 		/obj/item/food/bread/plain=1)
