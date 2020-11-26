@@ -68,7 +68,7 @@
 	icon_state = "ncrdogtagcaptain"
 
 /obj/item/card/id/ms13/ncrranger
-	name = "ranger tags"
+	name = "ranger's tags"
 	desc = "A dog tag that invokes fear in those who see it. Belongs to an elite of the NCR, usually with a big iron on their hip."
 	icon_state = "ncrdogtagranger"
 
