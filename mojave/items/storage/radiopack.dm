@@ -10,7 +10,7 @@
 	slot_flags = ITEM_SLOT_BACK
 	throw_speed = 3
 	throw_range = 7
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron=75, /datum/material/glass=25)
 	var/held = 0
 	var/obj/item/radio/ms13/NCR/radio
