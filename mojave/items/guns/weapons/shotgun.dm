@@ -90,7 +90,7 @@
 
 
 /obj/item/gun/ballistic/shotgun/automatic/ms13/battle/sks/scoped
-	name = "\improper scoped SKS"
+	name = "scoped SKS"
 	desc = "An SKS with a scope attached and some improved rifling for better penetration."
 	icon_state = "scoped_sks"
 	inhand_icon_state = "scoped_sks"
