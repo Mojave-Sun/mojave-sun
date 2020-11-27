@@ -7,6 +7,7 @@
 	throwforce = 15
 	wound_bonus = 0
 	sharpness = SHARP_EDGED
+	log_pickup_and_drop = TRUE
 
 /obj/item/kitchen/knife/ms13/combat
 	name = "combat knife"
@@ -38,6 +39,7 @@
 	wound_bonus = 3
 	bare_wound_bonus = 10
 	sharpness = SHARP_EDGED
+	log_pickup_and_drop = TRUE
 
 /obj/item/kitchen/knife/butcher/ms13/unique
 	name = "\improper Chopper"

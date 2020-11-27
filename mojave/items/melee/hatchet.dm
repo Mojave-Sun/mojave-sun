@@ -8,6 +8,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	wound_bonus = 0
 	bare_wound_bonus = 10
+	log_pickup_and_drop = TRUE
 
 /obj/item/hatchet/ms13/icepick
 	name = "ice pick"

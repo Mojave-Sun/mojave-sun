@@ -13,6 +13,7 @@
 	force = 30
 	wound_bonus = 3
 	sharpness = SHARP_EDGED
+	log_pickup_and_drop = TRUE
 
 /obj/item/claymore/ms13/machete/gladius
 	name = "machete gladius"

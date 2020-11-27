@@ -15,6 +15,7 @@
 	sharpness = SHARP_POINTY
 	armour_penetration = 5
 	wound_bonus = 0
+	log_pickup_and_drop = TRUE
 
 /obj/item/throwing_star/ms13/throwingknife
 	name = "throwing knife"
@@ -30,3 +31,4 @@
 	w_class = WEIGHT_CLASS_SMALL
 	sharpness = SHARP_POINTY
 	wound_bonus = 0
+	log_pickup_and_drop = TRUE
