@@ -78,7 +78,7 @@
 	armor = list("melee" = 40, "bullet" = 20, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 15, "acid" = 10)
 
 /obj/item/clothing/suit/armor/ms13/vaultvan
-	name = "Vault-tec van armor"
+	name = "\improper Vault-tec van armor"
 	desc = "Makeshift armor scrounged together from, as one may expect, the old remains of a Vault-tec van. Being made almost entirely of metal does make it susceptible to laser and energy weapons, however."
 	icon_state = "vaultvanarmor"
 	inhand_icon_state = "vaultvanarmor"
@@ -90,7 +90,7 @@
 	icon_state = "bmetalarmor"
 	inhand_icon_state = "bmetalarmor"
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 0, "energy" = 0, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 80, "acid" = 20)
-	slowdown = 0.5
+	slowdown = 0.3
 
 /obj/item/clothing/suit/armor/ms13/metal/light
 	name = "lightweight metal armor"
@@ -157,7 +157,7 @@
 	icon_state = "reinfcombat"
 	inhand_icon_state = "reinfcombat"
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 10, "energy" = 10, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 80, "acid" = 25)
-	slowdown = 0.5
+	slowdown = 0.3
 
 /obj/item/clothing/suit/armor/ms13/combat/black
 	name = "black combat armor"

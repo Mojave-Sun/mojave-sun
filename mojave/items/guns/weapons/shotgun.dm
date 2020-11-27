@@ -35,6 +35,7 @@
 	fire_delay = 5
 	extra_damage = 40
 	extra_penetration = 10
+	force = 15
 
 /obj/item/gun/ballistic/shotgun/ms13/cowboy
 	name = "cowboy repeater"
@@ -48,6 +49,7 @@
 	fire_delay = 5
 	extra_damage = 35
 	extra_penetration = 10
+	force = 15
 
 /obj/item/gun/ballistic/shotgun/ms13/brush
 	name = "brush gun"
@@ -61,6 +63,7 @@
 	fire_delay = 5
 	extra_damage = 55
 	extra_penetration = 10
+	force = 15
 
 /obj/item/gun/ballistic/shotgun/automatic/ms13/battle
 	name = "battle rifle"
@@ -76,7 +79,7 @@
 	extra_penetration = 15
 
 /obj/item/gun/ballistic/shotgun/automatic/ms13/battle/sks
-	name = "SKS"
+	name = "\improper SKS"
 	desc = "An old European semi-automatic rifle chambered for 7.62 rounds and normally fed from 10 round stripper clips."
 	icon_state = "sks"
 	inhand_icon_state = "sks"
@@ -87,7 +90,7 @@
 
 
 /obj/item/gun/ballistic/shotgun/automatic/ms13/battle/sks/scoped
-	name = "Scoped SKS"
+	name = "scoped SKS"
 	desc = "An SKS with a scope attached and some improved rifling for better penetration."
 	icon_state = "scoped_sks"
 	inhand_icon_state = "scoped_sks"

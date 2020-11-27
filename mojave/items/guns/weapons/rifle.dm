@@ -36,7 +36,7 @@
 	mag_type = /obj/item/ammo_box/magazine/ms13/r10
 	
 /obj/item/gun/ballistic/rifle/ms13/varmint/ratslayer
-	name = "ratslayer"
+	name = "\improper Ratslayer"
 	desc = "A uniquely modified varmint rifle with greatly improved rifling, a scope, and supressor attached."
 	icon_state = "ratslayer"
 	inhand_icon_state = "ratslayer"
