@@ -172,7 +172,7 @@
 	zoomable = FALSE
 	
 /obj/item/gun/ballistic/automatic/ms13/marksman/service/survival
-	name = "\improper Survivalist rifle"
+	name = "survivalist rifle"
 	desc = "A unique, heavy duty service rifle. Fires slower but packs a much heavier punch. Has definitely seen it's fair share of battle."
 	icon_state = "survivalist"
 	inhand_icon_state = "survivalist"
