@@ -30,7 +30,7 @@
 	internal_magazine = TRUE
 
 /obj/item/gun/ballistic/automatic/pistol/ms13/m10mm/chinese/v420
-	name = "\improper v420 Chinese pistol"
+	name = "v420 Chinese pistol"
 	desc = "A prototype Chinese pistol with a slower fire rate but much higher damage, also sporting some much better looks."
 	icon_state = "420pistol"
 	inhand_icon_state = "420pistol"
