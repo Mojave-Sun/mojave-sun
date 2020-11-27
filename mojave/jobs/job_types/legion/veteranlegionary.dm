@@ -23,7 +23,7 @@
 	mask = /obj/item/clothing/mask/ms13/legion/clothmask
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/ms13/m9mm
 	l_pocket = /obj/item/ammo_box/magazine/ms13/m9mm
-	r_hand = /obj/item/claymore/machete/gladius
+	r_hand = /obj/item/claymore/ms13/machete/gladius
 
 /datum/outfit/job/ms13/legion/veteranlegionary/pre_equip(mob/living/carbon/human/H)
 	..()
