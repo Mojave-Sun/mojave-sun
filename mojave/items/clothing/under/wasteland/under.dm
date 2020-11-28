@@ -473,4 +473,3 @@
 	alternate_appearances = "mechanicalt_d"
 	can_adjust = TRUE
 	alt_covers_chest = FALSE
-
