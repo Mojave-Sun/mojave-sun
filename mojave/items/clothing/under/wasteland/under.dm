@@ -249,28 +249,18 @@
 	can_adjust = TRUE
 	alt_covers_chest = FALSE
 
-/obj/item/clothing/under/ms13/mechanicprewar/mechanicgrey/alt
-	icon_state = "mechanicg_d"
-
 /obj/item/clothing/under/ms13/mechanicprewar/mechanicgrey
 	name = "grey mechanic shirt"
 	desc = "A grey mechanic shirt. It smells of oil."
 	icon_state = "mechanicg"
 	inhand_icon_state = "bl_suit"
-	alternate_worn_layer = "mechanicg"
 	can_adjust = TRUE
 	alt_covers_chest = FALSE
-	alternate_appearances = "mechanicg_d"
-
-/obj/item/clothing/under/ms13/mechanicprewar/mechanicgreen/alt
-	icon_state = "mechanicalt_d"
 
 /obj/item/clothing/under/ms13/mechanicprewar/mechanicgreen
 	name = "green mechanic shirt"
 	desc = "A green mechanic shirt. It smells of oil, but is surprisingly clean."
 	icon_state = "mechanicalt"
 	inhand_icon_state = "g_suit"
-	alternate_worn_layer = "mechanicalt_d"
-	alternate_appearances = "mechanicalt_d"
 	can_adjust = TRUE
 	alt_covers_chest = FALSE
