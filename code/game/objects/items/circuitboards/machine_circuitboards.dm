@@ -358,7 +358,7 @@
 /obj/item/circuitboard/machine/HFR_core
 	name = "HFR core (Machine Board)"
 	icon_state = "engineering"
-	build_path = /obj/machinery/atmospherics/components/binary/hypertorus/core
+	build_path = /obj/machinery/atmospherics/components/unary/hypertorus/core
 	req_components = list(
 		/obj/item/stack/cable_coil = 10,
 		/obj/item/stack/sheet/glass = 10,
@@ -566,6 +566,7 @@
 		/obj/machinery/vending/wardrobe/viro_wardrobe = "ViroDrobe",
 		/obj/machinery/vending/clothing = "ClothesMate",
 		/obj/machinery/vending/medical = "NanoMed Plus",
+		/obj/machinery/vending/drugs = "NanoDrug Plus",
 		/obj/machinery/vending/wallmed = "NanoMed",
 		/obj/machinery/vending/assist  = "Vendomat",
 		/obj/machinery/vending/engivend = "Engi-Vend",
