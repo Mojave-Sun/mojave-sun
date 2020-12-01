@@ -14,6 +14,10 @@
 	icon_state = "seed"
 	potency = 50
 	growthstages = 5
+	//vars added here to stop compilation issues.  Removed from base botany and will need to be refactored.
+	var/growing_color = ""
+	var/harvest_icon = 1
+	var/wholeiconcolor = TRUE
 
 /obj/item/reagent_containers/food/snacks/grown/ms13
 	icon = 'mojave/icons/hydroponics/harvest.dmi'
