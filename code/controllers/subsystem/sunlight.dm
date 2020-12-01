@@ -68,7 +68,7 @@ SUBSYSTEM_DEF(sunlight)
 
 	var/currentTime
 	var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/morning(), new /datum/time_of_day/day(), \
-                                new /datum/time_of_day/evening(), new /datum/time_of_day/night())
+														new /datum/time_of_day/evening(), new /datum/time_of_day/night())
 
 /datum/controller/subsystem/sunlight/stat_entry()
 	..("W:[GLOB.SUNLIGHT_QUEUE_WORK.len]|C:[GLOB.SUNLIGHT_QUEUE_CORNER.len]|U:[GLOB.SUNLIGHT_QUEUE_UPDATE.len]")
