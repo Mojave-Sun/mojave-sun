@@ -326,7 +326,7 @@
 	var/egg_type = null
 	var/eggsleft = 0
 	var/rideable = FALSE
-	saddled = FALSE
+	var/saddled = FALSE
 	var/baggable = FALSE
 	var/bagged = FALSE
 	var/breedable = FALSE
@@ -539,7 +539,7 @@
 	var/egg_type = null
 	var/eggsleft = 0
 	var/rideable = FALSE
-	saddled = FALSE
+	var/saddled = FALSE
 	var/baggable = FALSE
 	var/bagged = FALSE
 	var/breedable = FALSE
