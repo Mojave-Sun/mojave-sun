@@ -319,26 +319,18 @@
 	return
 
 /obj/machinery/hydroponics/proc/update_icon_plant()
-	var/mutable_appearance/harvest_overlay = mutable_appearance(myseed.growing_icon, layer = OBJ_LAYER + 0.02)
 	var/mutable_appearance/plant_overlay = mutable_appearance(myseed.growing_icon, layer = OBJ_LAYER + 0.01)
-	plant_overlay.pixel_z = 5
-	harvest_overlay.pixel_z = 5
-	if(myseed.wholeiconcolor == TRUE)
-		plant_overlay.color = myseed.growing_color
 	if(dead)
 		plant_overlay.icon_state = myseed.icon_dead
 	else if(harvest)
-		if(myseed.harvest_icon == 1)
+		if(!myseed.icon_harvest)
 			plant_overlay.icon_state = "[myseed.icon_grow][myseed.growthstages]"
-			harvest_overlay.icon_state = myseed.icon_product
-			harvest_overlay.color = myseed.growing_color
 		else
 			plant_overlay.icon_state = myseed.icon_harvest
 	else
 		var/t_growthstate = clamp(round((age / myseed.maturation) * myseed.growthstages), 1, myseed.growthstages)
 		plant_overlay.icon_state = "[myseed.icon_grow][t_growthstate]"
 	add_overlay(plant_overlay)
-	add_overlay(harvest_overlay)
 
 /obj/machinery/hydroponics/proc/update_icon_lights()
 	if(waterlevel <= 10)
@@ -392,21 +384,21 @@
 		oldPlantName = "empty tray"
 	switch(rand(1,18))		// randomly pick predominative weed
 		if(16 to 18)
-			myseed = new /obj/item/seeds/ms13/thistle(src)
+			myseed = new /obj/item/seeds/reishi(src)
 		if(14 to 15)
-			myseed = new /obj/item/seeds/ms13/blight(src)
+			myseed = new /obj/item/seeds/nettle(src)
 		if(12 to 13)
-			myseed = new /obj/item/seeds/ms13/lureweed(src)
+			myseed = new /obj/item/seeds/harebell(src)
 		if(10 to 11)
-			myseed = new /obj/item/seeds/ms13/nara(src)
+			myseed = new /obj/item/seeds/amanita(src)
 		if(8 to 9)
-			myseed = new /obj/item/seeds/ms13/brainfung(src)
+			myseed = new /obj/item/seeds/chanter(src)
 		if(6 to 7)
-			myseed = new /obj/item/seeds/ms13/gutshroom(src)
+			myseed = new /obj/item/seeds/tower(src)
 		if(4 to 5)
-			myseed = new /obj/item/seeds/ms13/cavefungus(src)
+			myseed = new /obj/item/seeds/plump(src)
 		else
-			myseed = new /obj/item/seeds/ms13/firecap(src)
+			myseed = new /obj/item/seeds/starthistle(src)
 	age = 0
 	plant_health = myseed.endurance
 	lastcycle = world.time
