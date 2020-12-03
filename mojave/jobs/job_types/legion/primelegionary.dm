@@ -1,5 +1,5 @@
 /datum/job/ms13/legion/primelegionary
-	title = "Legion Prime"
+	title = "Prime Legionary"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Centurion, Prime and Veteran Decanii."

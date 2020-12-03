@@ -1,5 +1,5 @@
 /datum/job/ms13/legion/recruitlegionary
-	title = "Legion Recruit"
+	title = "Recruit Legionary"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Centurion, any Decanus."

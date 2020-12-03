@@ -1,5 +1,5 @@
 /datum/job/ms13/legion/veteranlegionary
-	title = "Legion Veteran"
+	title = "Veteran Legionary"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Centurion, Veteran Decanii."
