@@ -1,5 +1,5 @@
 /datum/job/ms13/legion/speculatore
-	title = "Speculatore"
+	title = "Legion Speculatore"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Caesar, Praetorians, Legates."

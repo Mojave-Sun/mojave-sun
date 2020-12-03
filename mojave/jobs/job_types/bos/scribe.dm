@@ -1,5 +1,5 @@
 /datum/job/ms13/bos/scribe
-	title = "Scribe"
+	title = "BoS Scribe"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = ""

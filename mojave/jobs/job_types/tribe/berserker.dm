@@ -1,5 +1,5 @@
 /datum/job/ms13/tribe/berserker
-	title = "Berserker"
+	title = "Tribal Berserker"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = ""
