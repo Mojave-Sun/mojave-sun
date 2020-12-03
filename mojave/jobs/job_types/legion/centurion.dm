@@ -1,5 +1,5 @@
 /datum/job/ms13/legion/centurion
-	title = "Centurion"
+	title = "Legion Centurion"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Praetorians, The Legate, and Caesar."

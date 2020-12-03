@@ -1,5 +1,5 @@
 /datum/job/ms13/town/farmer
-	title = "Farmer"
+	title = "Town Farmer"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = ""
