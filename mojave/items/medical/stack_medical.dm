@@ -28,6 +28,7 @@
     singular_name = "burn cream"
     amount = 10
     max_amount = 10
+    repeating = TRUE
     self_delay = 30
     other_delay = 15
     heal_burn = 4
