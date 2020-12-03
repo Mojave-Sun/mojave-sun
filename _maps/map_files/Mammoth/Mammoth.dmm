@@ -6632,7 +6632,7 @@
 /turf/open/floor/plasteel/ms13/_dirty,
 /area/ms13/sunny_dale)
 "eQY" = (
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/randomsnackvend,
 /turf/open/floor/plasteel/ms13/_dirty,
 /area/ms13/sunny_dale)
 "eRx" = (
@@ -11523,9 +11523,9 @@
 /turf/open/floor/wood/ms13/carpet/broken/right4,
 /area/ms13/sunny_dale)
 "lMa" = (
-/obj/item/reagent_containers/food/snacks/grown/wheat,
-/obj/item/reagent_containers/food/snacks/grown/wheat,
-/obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/food/grown/wheat,
+/obj/item/food/grown/wheat,
+/obj/item/food/grown/wheat,
 /obj/structure/closet/crate/ms13/footlocker,
 /turf/open/floor/plating/ground/snow,
 /area/ms13)
@@ -11833,9 +11833,7 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "mgU" = (
-/obj/structure/fireplace{
-	pixel_x = 0
-	},
+/obj/structure/fireplace,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "mhh" = (
@@ -17326,7 +17324,7 @@
 /area/ms13/sunny_dale)
 "tBm" = (
 /obj/structure/table/ms13,
-/obj/item/reagent_containers/food/snacks/grown/poppy,
+/obj/item/food/grown/poppy,
 /turf/open/floor/plating,
 /area/ms13/sunny_dale)
 "tBC" = (

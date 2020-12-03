@@ -18,13 +18,13 @@
 	loom_result = /obj/item/stack/sheet/cloth //ms13
 	grind_results = list(/datum/reagent/cellulose = 20)
 
-/obj/item/stack/sheet/cotton/ten
+/obj/item/stack/sheet/cotton/ms13/ten
 	amount = 10
 
-/obj/item/stack/sheet/cotton/twenty
+/obj/item/stack/sheet/cotton/ms13/twenty
 	amount = 20
 
-/obj/item/stack/sheet/cotton/thirty
+/obj/item/stack/sheet/cotton/ms13/thirty
 	amount = 30
 
 //HAY//
@@ -43,6 +43,7 @@ GLOBAL_LIST_INIT(hay_recipes, list ( \
 	throwforce = 1
 	throw_speed = 1
 	throw_range = 2
+	merge_type = /obj/item/stack/sheet/hay
 	max_amount = 50
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 0)
 	resistance_flags = FLAMMABLE
