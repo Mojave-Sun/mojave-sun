@@ -19,11 +19,25 @@
 	anchored = TRUE
 	max_integrity = 10000
 	custom_materials = list(/datum/material/iron = 10000) //probably gonna be one of the main sources of scrap
+	var/body_state = null
+
+/obj/structure/ms13/vehicle_ruin/coupe
+	body_state = "coupe"
+
+/obj/structure/ms13/vehicle_ruin/muscle
+	body_state = "muscle"
+
+/obj/structure/ms13/vehicle_ruin/sport
+	body_state = "sport"
+
+/obj/structure/ms13/vehicle_ruin/van
+	body_state = "van"
 
 /obj/structure/ms13/vehicle_ruin/Initialize()
 	. = ..()
-	var/randomiser = rand(0,5)
-	var/body_state = pickweight(RUIN_BODIES)
+	var/randomiser = rand(1,5)
+	if(!body_state)
+		body_state = pickweight(RUIN_BODIES)
 	if(body_state == "coupe")
 		name = "coupe car wreck"
 		desc = "An old pre-war coupe car, scrapped and destroyed beyond repair. You may be able to salvage something from it."
