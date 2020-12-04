@@ -1,5 +1,4 @@
-#define RUIN_BODIES_LEFT list("coupe-left" = 10, "muscle-left" = 3, "sport-left" = 3, "van-left" = 1)
-#define RUIN_BODIES_RIGHT list("coupe-right" = 10, "muscle-right" = 3, "sport-right" = 3, "van-right" = 1)
+#define RUIN_BODIES list("coupe" = 10, "muscle" = 3, "sport" = 3, "van" = 2)
 
 /////////////////////////////////////////////////////////////
 ////////////// MOJAVE SUN RUINS/TRASH ///////////////////////
@@ -9,81 +8,71 @@
 
 //Cars//
 
-/obj/structure/ms13/vehicle
+/obj/structure/ms13/vehicle_ruin
 	name = "vehicle ruin"
 	desc = "A base class unrandomised vehicle, if you see it, report it foo."
-	icon = 'mojave/icons/structure/vehicles.dmi'
+	icon = 'mojave/icons/structure/wrecks.dmi'
 	icon_state = "helper"
+	bound_width = 96
 	density = TRUE
 	layer = FLY_LAYER
 	anchored = TRUE
-	bound_width = 96
-	var/direction = "test"
-	var/direction_base = "test"
+	max_integrity = 10000
+	custom_materials = list(/datum/material/iron = 10000) //probably gonna be one of the main sources of scrap
 
-/obj/structure/ms13/vehicle/left
-	icon_state = "helper-left"
-	direction = "left"
-	direction_base = RUIN_BODIES_LEFT
-
-/obj/structure/ms13/vehicle/right
-	icon_state = "helper-right"
-	direction = "right"
-	direction_base = RUIN_BODIES_RIGHT
-
-/obj/structure/ms13/vehicle/Initialize()
+/obj/structure/ms13/vehicle_ruin/Initialize()
 	. = ..()
-	var/randomiser = rand(0,8)
-	icon_state = pickweight(direction_base)
-	if(icon_state == "coupe-[direction]")
+	var/randomiser = rand(0,5)
+	var/body_state = pickweight(RUIN_BODIES)
+	if(body_state == "coupe")
 		name = "coupe car wreck"
 		desc = "An old pre-war coupe car, scrapped and destroyed beyond repair. You may be able to salvage something from it."
-		dir = randomiser
-		add_overlay(image(icon, "coupe-tires-[direction]", FLOAT_LAYER, randomiser))
+		icon_state = "coupe-[randomiser]"
+		add_overlay(image(icon, "coupe-tires-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "coupe-bumper-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "coupe-bumper-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "coupe-part-1-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "coupe-part-1-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "coupe-part-2-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "coupe-part-2-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "coupe-part-3-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "coupe-part-3-[randomiser]", FLOAT_LAYER, dir))
 		return
-	if(icon_state == "muscle-[direction]")
+	if(body_state == "muscle")
 		name = "muscle car wreck"
 		desc = "An old pre-war muscle car, scrapped and destroyed beyond repair, legend says it has an interior capable of accommodating as much as seven people, including a super mutant, robobrain, and a deathclaw. You may be able to salvage something from it."
-		dir = randomiser
-		add_overlay(image(icon, "muscle-tires-[direction]", FLOAT_LAYER, randomiser))
+		icon_state = "muscle-[randomiser]"
+		add_overlay(image(icon, "muscle-tires-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "muscle-bumper-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "muscle-bumper-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "muscle-part-1-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "muscle-part-1-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "muscle-part-2-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "muscle-part-2-[randomiser]", FLOAT_LAYER, dir))
 		return
-	if(icon_state == "sport-[direction]")
+	if(body_state == "sport")
 		name = "sport car wreck"
 		desc = "An old pre-war sport car, scrapped and destroyed beyond repair. You may be able to salvage something from it."
-		dir = randomiser
-		add_overlay(image(icon, "sport-tires-[direction]", FLOAT_LAYER, randomiser))
+		icon_state = "sport-[randomiser]"
+		add_overlay(image(icon, "sport-tires-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "sport-bumper-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "sport-bumper-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "sport-part-1-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "sport-part-1-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "sport-part-2-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "sport-part-2-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "sport-part-3-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "sport-part-3-[randomiser]", FLOAT_LAYER, dir))
 		return
-	if(icon_state == "van-[direction]")
+	if(body_state == "van")
 		name = "van wreck"
 		desc = "An old pre-war van, scrapped and destroyed beyond repair. You may be able to salvage something from it."
-		dir = randomiser
-		add_overlay(image(icon, "van-tires-[direction]", FLOAT_LAYER, randomiser))
+		icon_state =  "van-[randomiser]"
+		add_overlay(image(icon, "van-tires-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "van-bumper-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "van-bumper-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "van-part-1-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "van-part-1-[randomiser]", FLOAT_LAYER, dir))
 		if(prob(50))
-			add_overlay(image(icon, "van-part-2-[direction]", FLOAT_LAYER, randomiser))
+			add_overlay(image(icon, "van-part-2-[randomiser]", FLOAT_LAYER, dir))
 		return
