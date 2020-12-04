@@ -42,12 +42,12 @@
     max_amount = 12
     self_delay = 35
     other_delay = 20
-    heal_burn = 12
+    heal_burn = 10
 
 /obj/item/stack/medical/mesh/ms13/prewar
     name = "pre-war burn mesh"
     desc = "Sterile, advanced mesh from before the war meant to be applied to burn wounds. Incredibly effective at sanitizing and mending burn related injuries."
-    heal_burn = 18
+    heal_burn = 15
     sanitization = 1.25
     flesh_regeneration = 4
 
@@ -57,13 +57,14 @@
     singular_name = "rolls of gauze"
     self_delay = 35
     other_delay = 20
-    amount = 12
+    max_amount = 16
+    amount = 16
     absorption_rate = 0.2
     absorption_capacity = 4
     splint_factor = 0.5
 
 /obj/item/stack/medical/gauze/ms13/half
-    amount = 6
+    amount = 8
 
 /obj/item/stack/medical/gauze/ms13/prewar
     name = "pre-war gauze"
