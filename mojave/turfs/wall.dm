@@ -3,6 +3,7 @@
 	desc = "God has abandoned us"
 	icon_state = "wall-0"
 	base_icon_state = "wall"
+	layer = EDGED_TURF_LAYER
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL)
 	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL)
@@ -11,7 +12,6 @@
 	name = "metal wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/metal.dmi'
-	layer = EDGED_TURF_LAYER
 
 /turf/closed/wall/ms13/metal/rust
 	name = "rusted metal wall"
@@ -22,14 +22,11 @@
 	name = "wood wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/wood.dmi'
-	icon_state = "wood-0"
-	base_icon_state = "wood"
 
 /turf/closed/wall/ms13/scrap
 	name = "scrap wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/scrap.dmi'
-	layer = EDGED_TURF_LAYER
 
 /turf/closed/wall/ms13/scrap/white
 	icon = 'mojave/icons/turf/walls/scrapwhite.dmi'
@@ -44,14 +41,11 @@
 	name = "adobe wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/adobe.dmi'
-	icon_state = "adobe-0"
-	base_icon_state = "adobe"
 
 /turf/closed/wall/ms13/brick
 	name = "brick wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/brick.dmi'
-	layer = EDGED_TURF_LAYER
 
 /turf/closed/wall/ms13/brick/alt
 	icon = 'mojave/icons/turf/walls/brickalt.dmi'
@@ -61,6 +55,7 @@
 	desc = "AHHH FUCK A BASE CLASS WALL"
 	icon_state = "wall-0"
 	base_icon_state = "wall"
+	layer = EDGED_TURF_LAYER
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL)
 	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL)
@@ -69,7 +64,6 @@
 	name = "reinforced metal wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/rmetal.dmi'
-	layer = EDGED_TURF_LAYER
 
 /turf/closed/wall/r_wall/ms13/metal/rust
 	name = "rusted reinforced metal wall"
@@ -86,12 +80,12 @@
 /turf/closed/wall/r_wall/ms13/concrete
 	name = "concrete wall"
 	icon = 'mojave/icons/turf/walls/concrete.dmi'
-	layer = EDGED_TURF_LAYER
 
 /turf/closed/wall/r_wall/ms13/concrete/alt
 	icon = 'mojave/icons/turf/walls/concretealt.dmi'
 
 /turf/closed/indestructible/ms13
+	layer = EDGED_TURF_LAYER
 
 /turf/closed/indestructible/ms13/metal
 	name = "metal wall"

@@ -29,22 +29,12 @@
 	layer = ABOVE_MOB_LAYER
 
 /obj/machinery/door/unpowered/ms13/rustic/update_icon()
-	if(density)
-		icon_state = "rustic_closed"
-	else
-		icon_state = "rustic_open"
-	if(dir == NORTH)
-		pixel_y = 8
-	if(dir == EAST)
-		pixel_x = -6
-	if(dir == SOUTH)
-		pixel_y = -8
-	if(dir == WEST)
-		pixel_x = 6
-
-/obj/machinery/door/unpowered/ms13/rustic/do_animate(animation)
-	switch(animation)
-		if("opening")
-			flick("rustic_opening", src)
-		if("closing")
-			flick("rustic_closing", src)
+	switch(dir)
+		if(NORTH)
+			pixel_y = 8
+		if(EAST)
+			pixel_x = -6
+		if(SOUTH)
+			pixel_y = -8
+		if(WEST)
+			pixel_x = 6
