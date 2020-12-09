@@ -18,7 +18,7 @@
 			flick("roomc0", src)
 		if("closing")
 			flick("roomc1", src)
-
+/*
 /obj/machinery/door/unpowered/ms13/rustic
 	icon = 'mojave/icons/structure/talldoor.dmi'
 	icon_state = "rustic_closed"
@@ -38,3 +38,4 @@
 			pixel_y = -8
 		if(WEST)
 			pixel_x = 6
+*/// in slumber until the wallening arrives
