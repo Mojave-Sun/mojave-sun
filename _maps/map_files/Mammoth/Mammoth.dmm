@@ -6271,8 +6271,8 @@
 /turf/open/floor/plasteel/ms13/_rusty,
 /area/ms13/underground/bos)
 "iDY" = (
-/obj/effect/mob_spawn/human/skeleton/alive,
 /obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/remains/human,
 /turf/open/floor/plasteel/ms13/blue/_rusty,
 /area/ms13/sunny_dale)
 "iEg" = (
@@ -6348,6 +6348,10 @@
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"iHP" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plasteel/ms13/blue/_dirty,
 /area/ms13/sunny_dale)
 "iHR" = (
 /obj/machinery/door/unpowered/wooddoor,
@@ -9120,10 +9124,6 @@
 /obj/structure/chair/stool,
 /turf/open/floor/carpet/red,
 /area/ms13/underground/mountain)
-"myn" = (
-/obj/effect/mob_spawn/human/skeleton/alive,
-/turf/open/floor/plasteel/ms13/blue/_dirty,
-/area/ms13/sunny_dale)
 "myU" = (
 /obj/structure/chair/sofa/corp/left,
 /obj/effect/landmark/start/ms13/enforcer,
@@ -13780,11 +13780,11 @@
 /area/ms13/ncr_main)
 "sXT" = (
 /obj/item/ammo_casing/c9mm,
-/obj/effect/mob_spawn/human/skeleton/alive,
 /obj/effect/decal/cleanable/blood/old{
 	pixel_x = 13;
 	pixel_y = 16
 	},
+/obj/effect/decal/remains/human,
 /turf/open/floor/carpet,
 /area/ms13/sunny_dale)
 "sXZ" = (
@@ -60307,7 +60307,7 @@ afK
 afK
 afK
 jIO
-pkd
+iHP
 pkd
 qZO
 pkd
@@ -135804,7 +135804,7 @@ bby
 pkd
 pkd
 jTo
-myn
+iHP
 pLw
 pkd
 pkd
