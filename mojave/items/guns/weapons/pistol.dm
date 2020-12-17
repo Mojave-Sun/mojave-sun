@@ -19,7 +19,7 @@
 	extra_damage = 25
 
 /obj/item/gun/ballistic/automatic/pistol/ms13/m10mm/chinese
-	name = "Chinese pistol"
+	name = "\improper Chinese pistol"
 	desc = "A mass produced pre-war Chinese pistol chambered for 10mm rounds."
 	icon_state = "cpistol"
 	inhand_icon_state = "cpistol"
@@ -51,7 +51,7 @@
 	extra_penetration = 5
 
 /obj/item/gun/ballistic/automatic/pistol/ms13/m9mm/maria
-	name = "Maria"
+	name = "\improper Maria"
 	desc = "A custom and improved model of the 9mm pistol with improved rate of fire, damage, and style. Does look a bit like an 18-karat run of bad luck though."
 	icon_state = "maria"
 	inhand_icon_state = "maria"
@@ -79,7 +79,7 @@
 	extra_penetration = 15
 
 /obj/item/gun/ballistic/automatic/pistol/ms13/m12mm/devil
-	name = "Li'l Devil"
+	name = "\improper Li'l Devil"
 	desc = "A unique and modified version of the 12.7mm pistol with a higher fire rate, improved damage, and a suppressor attached."
 	icon_state = "devil"
 	inhand_icon_state = "devil"

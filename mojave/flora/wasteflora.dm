@@ -14,43 +14,17 @@
 	icon_state = "seed"
 	potency = 50
 	growthstages = 5
+	//vars added here to stop compilation issues.  Removed from base botany and will need to be refactored.
+	var/growing_color = ""
+	var/harvest_icon = 1
+	var/wholeiconcolor = TRUE
 
-/obj/item/reagent_containers/food/snacks/grown/ms13
+/obj/item/food/grown/ms13
 	icon = 'mojave/icons/hydroponics/harvest.dmi'
+	inhand_icon_state = "plant"
+	lefthand_file = 'mojave/icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/equipment/hydroponics_righthand.dmi'
 
-//food size change, less gimmicky jumbofoods
-
-/obj/item/reagent_containers/food/snacks/grown/ms13/Initialize(mapload, obj/item/seeds/new_seed)
-	. = ..()
-	if(!tastes)
-		tastes = list("[name]" = 1)
-
-	if(new_seed)
-		seed = new_seed.Copy()
-	else if(ispath(seed))
-		// This is for adminspawn or map-placed growns. They get the default stats of their seed type.
-		seed = new seed()
-		seed.adjust_potency(50-seed.potency)
-
-	pixel_x = rand(-5, 5)
-	pixel_y = rand(-5, 5)
-
-	if(dried_type == -1)
-		dried_type = src.type
-
-	if(seed)
-		for(var/datum/plant_gene/trait/T in seed.genes)
-			T.on_new(src, loc)
-		seed.prepare_result(src)
-		var/matrix/M = matrix()
-		if(seed.potency >= 80)
-			M.Scale(1, 1)
-			transform = M
-			return
-		else
-			M.Scale(seed.potency/80, seed.potency/80)
-			transform = M
-		add_juice()
 
 /////////////////////////////////////////////////////////////
 ////////////////// MOJAVE SUN BOTANY ITEMS //////////////////
@@ -69,7 +43,7 @@
 	STR.max_items = 100
 	STR.set_holdable(list(
 		//obj/item/ms13/seedpacket,
-		/obj/item/reagent_containers/food/snacks/grown,
+		/obj/item/food/grown,
 		/obj/item/grown,
 		/obj/item/reagent_containers/honeycomb,
 		/obj/item/graft,
@@ -271,8 +245,8 @@
 	if(extractor)
 		seedloc = extractor.loc
 
-	if(istype(O, /obj/item/reagent_containers/food/snacks/grown/))
-		var/obj/item/reagent_containers/food/snacks/grown/F = O
+	if(istype(O, /obj/item/food/grown/))
+		var/obj/item/food/grown/F = O
 		if(F.seed)
 			if(user && !user.temporarilyRemoveItemFromInventory(O)) //couldn't drop the item
 				return
@@ -329,7 +303,7 @@
 	if(reagents.total_volume == tank_volume)
 		to_chat(user,"<span class='warning'>The [src] is filled to capacity!</span>")
 		return
-	if(istype(W, /obj/item/seeds/ms13 || /obj/item/reagent_containers/food/snacks/grown))
+	if(istype(W, /obj/item/seeds/ms13 || /obj/item/food/grown))
 		if(user.transferItemToLoc(W, src))
 			to_chat(user, "<span class='notice'>You load the [W] into the [src].</span>")
 			playsound(loc, 'sound/effects/blobattack.ogg', 25, 1, -1)
@@ -349,7 +323,7 @@
 		if(istype(C, /obj/item/seeds))
 			reagents.add_reagent("fertilizer", seed_value)
 			qdel(C)
-		else if(istype(C, /obj/item/reagent_containers/food))
+		else if(istype(C, /obj/item/food))
 			reagents.add_reagent("fertilizer", food_value)
 			qdel(C)
 		else //Not sure how we got here, but there's only one reasonable thing to do.

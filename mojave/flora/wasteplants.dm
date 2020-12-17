@@ -12,7 +12,7 @@
 	var/harvested_name = "tarberry"
 	var/harvested_desc = "A dark and sticky berry, found in cold and damp environments."
 	var/needs_sharp_harvest = FALSE
-	var/harvest = /obj/item/reagent_containers/food/snacks/grown/ms13/tarberry
+	var/harvest = /obj/item/food/grown/ms13/tarberry
 	var/harvest_amount_low = 1
 	var/harvest_amount_high = 4
 	var/harvest_time = 60
@@ -83,7 +83,7 @@
 	desc = "A plant bearing a mutated version of blackberries, a sweet and bitter fruit."
 	harvested_name = "blackberry"
 	harvested_desc = "A radiation-induced mutated version of the pre-war blackberry."
-	harvest = /obj/item/reagent_containers/food/snacks/grown/ms13/blackberry
+	harvest = /obj/item/food/grown/ms13/blackberry
 
 /obj/structure/flora/ms13/forage/mutfruit
 	icon_state = "mutfruit"
@@ -91,7 +91,7 @@
 	desc = "A plant bearing Mutfruits, a native fruit providing both hydration and sustance, with the slight factor of radiation too."
 	harvested_name = "mutfruit"
 	harvested_desc = "A Mutfruit provides both hydration and sustenance, but the mutated plant also carries small amounts of radiation."
-	harvest = /obj/item/reagent_containers/food/snacks/grown/ms13/mutfruit
+	harvest = /obj/item/food/grown/ms13/mutfruit
 	harvest_message_low = "You harvest the fruits, but fail to attain many of them."
 	harvest_message_med = "You harvest the fruits, collecting a decent amount from the forage."
 	harvest_message_high = "You harvest and collect many fruits from the wild plant."
@@ -103,7 +103,7 @@
 	desc = "A patch of ash rose, a flower widely known for its use in expelling radiation and toxins from the body."
 	harvested_name = "ash rose"
 	harvested_desc = "A potent radiation and toxin healing flower."
-	harvest = /obj/item/reagent_containers/food/snacks/grown/ms13/ashrose
+	harvest = /obj/item/food/grown/ms13/ashrose
 	harvest_message_low = "You harvest the flowers, but fail to salvage many of them."
 	harvest_message_med = "You harvest the flowers, collecting a small bunch of them."
 	harvest_message_high = "You harvest and collect many flowers from the patch."
@@ -116,7 +116,7 @@
 	desc = "A patch of wild carrots, a starchy mutated tuber carrying minor amounts of ardiation and well known for impromptu eye healing."
 	harvested_name = "wild carrot"
 	harvested_desc = "A wild root vegetable, useful for its mild sweetness and eye healing properties."
-	harvest = /obj/item/reagent_containers/food/snacks/grown/ms13/carrot
+	harvest = /obj/item/food/grown/ms13/carrot
 	harvest_message_low = "You dig up the roots, but fail to salvage many produce."
 	harvest_message_med = "You dig up the roots, collecting a small bunch of carrots."
 	harvest_message_high = "You dig up many roots from the patch, collecting a good harvest."
@@ -129,7 +129,7 @@
 	harvested_name = "aster flower"
 	harvest_time = 120
 	harvested_desc = "Some tasty aster flowers."
-	harvest = /obj/item/reagent_containers/food/snacks/grown/ms13/aster
+	harvest = /obj/item/food/grown/ms13/aster
 	harvest_message_low = "You accidentally destroy the delicate flowers, salvaging nothing."
 	harvest_message_med = "You collect a handful of delicate flowers."
 	harvest_message_high = "You delicately pick many flowers, collecting a good harvest."
@@ -145,7 +145,7 @@
 	desc = "A patch of edible cave mushroom, with multiple toxin healing and cooking properties."
 	harvested_name = "cave fungus"
 	harvested_desc = "An edible mushroom, with multiple toxin healing and cooking properties."
-	harvest = /obj/item/reagent_containers/food/snacks/grown/ms13/cavefungus
+	harvest = /obj/item/food/grown/ms13/cavefungus
 	harvest_message_low = "Gather a small amount of mushrooms from the cluster."
 	harvest_message_med = "You collect a decent amount of mushrooms from the cluster."
 	harvest_message_high = "You collect a hearty harvest from the mushroom cluster."
@@ -158,7 +158,7 @@
 	desc = "A patch of radioactive cave mushroom, with multiple potent toxin healing and radioactive properties."
 	harvested_name = "glowing fungus"
 	harvested_desc = "A radioactive cave mushroom, with multiple potent toxin healing and radioactive properties."
-	harvest = /obj/item/reagent_containers/food/snacks/grown/ms13/glowfungus
+	harvest = /obj/item/food/grown/ms13/glowfungus
 	light_range = 1.5
 	light_power = 2.1
 	light_color = "#3eff3e"

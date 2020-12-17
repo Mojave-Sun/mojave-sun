@@ -70,7 +70,7 @@
 	//can the homie be ridden?
 	var/rideable = FALSE
 	//does the homie have a saddle to ride?
-	saddled = FALSE
+	var/saddled = FALSE
 	//god I hate adding like 5000 variables but this one makes it so only certain things are baggable so slower, larger pack animals are used as caravan things and not just like nightstalkers and good shit.
 	var/baggable = FALSE
 	//does the homiehave da bag (backpack mode, for caravans and such, takes larger items than a backpack so very useful)
@@ -326,7 +326,7 @@
 	var/egg_type = null
 	var/eggsleft = 0
 	var/rideable = FALSE
-	saddled = FALSE
+	var/saddled = FALSE
 	var/baggable = FALSE
 	var/bagged = FALSE
 	var/breedable = FALSE
@@ -539,7 +539,7 @@
 	var/egg_type = null
 	var/eggsleft = 0
 	var/rideable = FALSE
-	saddled = FALSE
+	var/saddled = FALSE
 	var/baggable = FALSE
 	var/bagged = FALSE
 	var/breedable = FALSE

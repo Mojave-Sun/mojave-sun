@@ -221,7 +221,7 @@
 	icon_state = "metalhelmet"
 	inhand_icon_state = "metalhelmet"
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 0, "energy" = 0, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 80, "acid" = 20)
-	slowdown = 0.25
+	slowdown = 0.2
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
@@ -268,7 +268,7 @@
 	icon_state = "reinfcombat"
 	inhand_icon_state = "reinfcombat"
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 10, "energy" = 10, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 80, "acid" = 25)
-	slowdown = 0.25
+	slowdown = 0.2
 
 /obj/item/clothing/head/helmet/ms13/combat/black
 	name = "black combat helmet"

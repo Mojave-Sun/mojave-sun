@@ -46,6 +46,7 @@
 	extra_damage = 15
 	extra_penetration = 5
 	spread = 12
+	force = 10
 
 /obj/item/gun/ballistic/automatic/ms13/smg9mm
 	name = "9mm submachine gun"
@@ -60,6 +61,7 @@
 	extra_damage = 15
 	force = 15
 	spread = 12
+	force = 10
 
 /obj/item/gun/ballistic/automatic/ms13/smg9mm/handmade
 	name = "handmade submachine gun"
@@ -82,7 +84,7 @@
 	fire_delay = 3
 	extra_damage = 15
 	extra_penetration = 15
-	force = 15
+	force = 10
 	spread = 10
 
 /obj/item/gun/ballistic/automatic/ms13/assaultrifle
@@ -102,7 +104,7 @@
 	spread = 8
 
 /obj/item/gun/ballistic/automatic/ms13/assaultrifle/infiltrator
-	name = "Infiltrator"
+	name = "\improper Infiltrator"
 	desc = "A heavily modified and customized assault rifle with a scope and suppressor as it's most notable additions. Sacrifices a little bit of damage for a little more control."
 	icon_state = "infiltrator"
 	inhand_icon_state = "infiltrator"
@@ -116,7 +118,7 @@
 	spread = 6
 	
 /obj/item/gun/ballistic/automatic/ms13/assaultrifle/chinese
-	name = "Chinese assault rifle"
+	name = "\improper Chinese assault rifle"
 	desc = "A Chinese made assault rifle chambered in the heavier 7.62 round, packs a bigger punch in exchange for reduced accuracy."
 	icon_state = "chinesear"
 	inhand_icon_state = "chinesear"
@@ -152,7 +154,7 @@
 	automatic = null
 	
 /obj/item/gun/ballistic/automatic/ms13/marksman/american
-	name = "All-American"
+	name = "\improper All-American"
 	desc = "A unique and customized marksman carbine. Improved rifling and similar modifications allow for higher damage and an improved paint job allows for higher patriotism."
 	icon_state = "allamerican"
 	inhand_icon_state = "allamerican"
@@ -170,7 +172,7 @@
 	zoomable = FALSE
 	
 /obj/item/gun/ballistic/automatic/ms13/marksman/service/survival
-	name = "Survivalist rifle"
+	name = "survivalist rifle"
 	desc = "A unique, heavy duty service rifle. Fires slower but packs a much heavier punch. Has definitely seen it's fair share of battle."
 	icon_state = "survivalist"
 	inhand_icon_state = "survivalist"

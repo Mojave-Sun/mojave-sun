@@ -15,7 +15,7 @@
 	desc = "A very cheap and very common shotgun with only a single round, better make it count."
 	icon_state = "singleshot"
 	inhand_icon_state = "singleshot"
-	force = 15
+	force = 20
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/single
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/caravan/caravan2.ogg'
 	w_class = WEIGHT_CLASS_BULKY
@@ -27,7 +27,7 @@
 	icon_state = "hshot"
 
 /obj/item/gun/ballistic/revolver/ms13/rev44
-	name = ".44 Magnum revolver"
+	name = ".44 magnum revolver"
 	desc = "A double action revolver chambered for .44 Magnum rounds. Decently fast and damaging at the same time."
 	icon_state = "44magnum"
 	inhand_icon_state = "44magnum"
@@ -39,7 +39,7 @@
 	extra_penetration = 10
 
 /obj/item/gun/ballistic/revolver/ms13/rev44/mysterious
-	name = "Mysterious Magnum"
+	name = "\improper Mysterious Magnum"
 	desc = "A unique .44 Magnum with a silver finish for style, and a higher rate of fire and damage for killing. Something sure is mysterious about this gun though."
 	icon_state = "mysterious"
 	inhand_icon_state = "mysterious"
@@ -58,7 +58,7 @@
 	extra_penetration = 10
 
 /obj/item/gun/ballistic/revolver/ms13/rev357
-	name = ".357 Magnum revolver"
+	name = ".357 magnum revolver"
 	desc = "A classic .357 Magnum revolver, doesn't fire very fast but packs a decent punch."
 	icon_state = "rev357"
 	inhand_icon_state = "rev357"
@@ -70,7 +70,7 @@
 	extra_penetration = 10
 
 /obj/item/gun/ballistic/revolver/ms13/rev357/lucky
-	name = "Lucky"
+	name = "\improper Lucky"
 	desc = "A unique .357 Magnum with fancy engravings and a nice finish, fires faster and hits harder than it's lamer brother too."
 	icon_state = "lucky"
 	inhand_icon_state = "lucky"
@@ -140,7 +140,7 @@
 	extra_damage = 45
 
 /obj/item/gun/ballistic/revolver/ms13/huntingrev/sequoia
-	name = "Sequoia"
+	name = "\improper Sequoia"
 	desc = "A unique and modified .45-70 revolver that hits quite a bit harder."
 	icon_state = "sequoia"
 	inhand_icon_state = "sequoia"
