@@ -39,6 +39,9 @@
 /obj/structure/table/low_wall/scrap/blue
 	icon = 'mojave/icons/turf/walls/scrapblue.dmi'
 
+/obj/structure/table/low_wall/concrete
+	icon = 'mojave/icons/turf/walls/concrete.dmi'
+
 /obj/structure/table/low_wall/adobe
 	name = "low adobe wall"
 	desc = ""
