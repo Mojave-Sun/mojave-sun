@@ -17,10 +17,16 @@
 	RegisterSignal(parent, list(COMSIG_PARENT_EXAMINE), .proc/examine_dehydration)
 	START_PROCESSING(SSdcs, src)
 
+/datum/element/thirst/Detach(datum/target)
+	. = ..()
+	UnregisterSignal(target, COMSIG_PARENT_EXAMINE)
+
+
 
 /datum/component/thirst/process()
 	modify_thirst(modify_by = rate_of_thirst)
-	//Hardcode galore
+	//Hardcode galore; first stage of dehydration is what players will spawn with and serves as a warning for later effects to come
+
 
 ///Modifies thirst by modify_by VIA +=
 /datum/component/thirst/proc/modify_thirst(modify_by = 0)
@@ -30,3 +36,5 @@
 /datum/component/thirst/proc/examine_dehydration(datum/source, mob/M)
 	SIGNAL_HANDLER
 	to_chat(M,
+
+///Generic stage of dehydration => text, used for clearing/making alerts
