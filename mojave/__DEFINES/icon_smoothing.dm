@@ -11,6 +11,7 @@
 #define SMOOTH_GROUP_MS13_WINDOW S_OBJ_FO(8)			///obj/structure/window/fulltile/ms13/glass
 #define SMOOTH_GROUP_MS13_ROAD S_OBJ_FO(9)			///turf/open/floor/plating/ground/road
 #define SMOOTH_GROUP_MS13_SIDEWALK S_OBJ_FO(10)			///turf/open/floor/plating/ground/sidewalk
+#define SMOOTH_GROUP_MS13_LOW_WALL S_OBJ_FO(11)			///obj/structure/table/low_wall
 
 #define SMOOTH_GROUP_SOIL S_OBJ_FO(19)					///obj/machinery/hydroponics/ms13/soil
 #define SMOOTH_GROUP_MS13_TABLES S_OBJ_FO(20)			///obj/structure/table/ms13
