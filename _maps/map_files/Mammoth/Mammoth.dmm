@@ -1902,7 +1902,6 @@
 /area/ms13/powerplant)
 "bnQ" = (
 /obj/structure/table/ms13/no_smooth/desk,
-/obj/effect/spawner/lootdrop/ms13/gun/tier1,
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13/broken/left,
@@ -2657,6 +2656,7 @@
 /obj/machinery/light/small/broken{
 	dir = 1
 	},
+/obj/effect/spawner/lootdrop/ms13/medical/tier1,
 /turf/open/floor/plasteel/ms13/green/white/corner,
 /area/ms13/sunny_dale)
 "bQz" = (
@@ -11169,9 +11169,11 @@
 /turf/open/floor/plasteel/ms13/blue/_dirty,
 /area/ms13/sunny_dale)
 "ijY" = (
-/mob/living/simple_animal/ms13/brahminyoung,
-/turf/open/floor/plating/ground/snow,
-/area/ms13)
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/ms13/mongrel,
+/turf/open/floor/wood/ms13/broken/slightlybroken1,
+/area/ms13/sunny_dale)
 "iky" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -11530,7 +11532,6 @@
 "iuY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table_frame/wood,
-/obj/effect/spawner/lootdrop/ms13/gun/tier1,
 /turf/open/floor/wood/ms13/broken/slightlybroken2,
 /area/ms13/sunny_dale)
 "ivJ" = (
@@ -22181,11 +22182,6 @@
 	},
 /turf/open/floor/plasteel/ms13/_dirty,
 /area/ms13/powerplant)
-"qSZ" = (
-/obj/structure/table/wood,
-/obj/item/throwing_star/ms13/throwingknife,
-/turf/open/floor/wood/ms13,
-/area/ms13/sunny_dale)
 "qTm" = (
 /obj/structure/curtain/bounty,
 /obj/structure/table/low_wall/brick/alt,
@@ -108391,7 +108387,7 @@ aOB
 kPV
 hFw
 iUe
-nEw
+ijY
 huH
 xNO
 vBx
@@ -113083,7 +113079,7 @@ afK
 afK
 ome
 ome
-ijY
+ome
 ome
 ome
 ome
@@ -113955,7 +113951,7 @@ abE
 ome
 cWa
 ome
-hpj
+ome
 ome
 ome
 ome
@@ -115970,7 +115966,7 @@ uya
 pwP
 qVK
 fat
-qSZ
+sxD
 vBx
 vBx
 pwP
@@ -126764,7 +126760,7 @@ ome
 ome
 ome
 ome
-ijY
+ome
 nKL
 gRy
 iPR
