@@ -166,6 +166,11 @@
 	desc = "You're severely malnourished. The hunger pains make moving around a chore."
 	icon_state = "starving"
 
+/atom/movable/screen/alert/not_thirsty
+	name = "Not Thirsty"
+	desc = "A rarity in the wasteland, not being thirstful is a sign of a good life so far."
+	icon_state = "water1"
+
 /atom/movable/screen/alert/slight_thirst
 	name = "Slightly Thirsty"
 	desc = "Your mouth feels a bit dry, could solve that problem by applying some purified water to it."
