@@ -319,26 +319,18 @@
 	return
 
 /obj/machinery/hydroponics/proc/update_icon_plant()
-	var/mutable_appearance/harvest_overlay = mutable_appearance(myseed.growing_icon, layer = OBJ_LAYER + 0.02)
 	var/mutable_appearance/plant_overlay = mutable_appearance(myseed.growing_icon, layer = OBJ_LAYER + 0.01)
-	plant_overlay.pixel_z = 5
-	harvest_overlay.pixel_z = 5
-	if(myseed.wholeiconcolor == TRUE)
-		plant_overlay.color = myseed.growing_color
 	if(dead)
 		plant_overlay.icon_state = myseed.icon_dead
 	else if(harvest)
-		if(myseed.harvest_icon == 1)
+		if(!myseed.icon_harvest)
 			plant_overlay.icon_state = "[myseed.icon_grow][myseed.growthstages]"
-			harvest_overlay.icon_state = myseed.icon_product
-			harvest_overlay.color = myseed.growing_color
 		else
 			plant_overlay.icon_state = myseed.icon_harvest
 	else
 		var/t_growthstate = clamp(round((age / myseed.maturation) * myseed.growthstages), 1, myseed.growthstages)
 		plant_overlay.icon_state = "[myseed.icon_grow][t_growthstate]"
 	add_overlay(plant_overlay)
-	add_overlay(harvest_overlay)
 
 /obj/machinery/hydroponics/proc/update_icon_lights()
 	if(waterlevel <= 10)
@@ -378,9 +370,9 @@
 	to_chat(user, "" )
 
 /**
-  * What happens when a tray's weeds grow too large.
-  * Plants a new weed in an empty tray, then resets the tray.
-  */
+ * What happens when a tray's weeds grow too large.
+ * Plants a new weed in an empty tray, then resets the tray.
+ */
 /obj/machinery/hydroponics/proc/weedinvasion()
 	dead = FALSE
 	var/oldPlantName
@@ -392,21 +384,21 @@
 		oldPlantName = "empty tray"
 	switch(rand(1,18))		// randomly pick predominative weed
 		if(16 to 18)
-			myseed = new /obj/item/seeds/ms13/thistle(src)
+			myseed = new /obj/item/seeds/reishi(src)
 		if(14 to 15)
-			myseed = new /obj/item/seeds/ms13/blight(src)
+			myseed = new /obj/item/seeds/nettle(src)
 		if(12 to 13)
-			myseed = new /obj/item/seeds/ms13/lureweed(src)
+			myseed = new /obj/item/seeds/harebell(src)
 		if(10 to 11)
-			myseed = new /obj/item/seeds/ms13/nara(src)
+			myseed = new /obj/item/seeds/amanita(src)
 		if(8 to 9)
-			myseed = new /obj/item/seeds/ms13/brainfung(src)
+			myseed = new /obj/item/seeds/chanter(src)
 		if(6 to 7)
-			myseed = new /obj/item/seeds/ms13/gutshroom(src)
+			myseed = new /obj/item/seeds/tower(src)
 		if(4 to 5)
-			myseed = new /obj/item/seeds/ms13/cavefungus(src)
+			myseed = new /obj/item/seeds/plump(src)
 		else
-			myseed = new /obj/item/seeds/ms13/firecap(src)
+			myseed = new /obj/item/seeds/starthistle(src)
 	age = 0
 	plant_health = myseed.endurance
 	lastcycle = world.time
@@ -474,9 +466,9 @@
 		to_chat(usr, "<span class='warning'>The few weeds in [src] seem to react, but only for a moment...</span>")
 
 /**
-  * Plant Death Proc.
-  * Cleans up various stats for the plant upon death, including pests, harvestability, and plant health.
-  */
+ * Plant Death Proc.
+ * Cleans up various stats for the plant upon death, including pests, harvestability, and plant health.
+ */
 /obj/machinery/hydroponics/proc/plantdies()
 	plant_health = 0
 	harvest = FALSE
@@ -487,11 +479,11 @@
 		dead = TRUE
 
 /**
-  * Plant Cross-Pollination.
-  * Checks all plants in the tray's oview range, then averages out the seed's potency, instability, and yield values.
-  * If the seed's instability is >= 20, the seed donates one of it's reagents to that nearby plant.
-  * * Range - The Oview range of trays to which to look for plants to donate reagents.
-  */
+ * Plant Cross-Pollination.
+ * Checks all plants in the tray's oview range, then averages out the seed's potency, instability, and yield values.
+ * If the seed's instability is >= 20, the seed donates one of it's reagents to that nearby plant.
+ * * Range - The Oview range of trays to which to look for plants to donate reagents.
+ */
 /obj/machinery/hydroponics/proc/pollinate(range = 1)
 	for(var/obj/machinery/hydroponics/T in oview(src, range))
 		//Here is where we check for window blocking.
@@ -513,10 +505,10 @@
 					continue
 
 /**
-  * Pest Mutation Proc.
-  * When a tray is mutated with high pest values, it will spawn spiders.
-  * * User - Person who last added chemicals to the tray for logging purposes.
-  */
+ * Pest Mutation Proc.
+ * When a tray is mutated with high pest values, it will spawn spiders.
+ * * User - Person who last added chemicals to the tray for logging purposes.
+ */
 /obj/machinery/hydroponics/proc/mutatepest(mob/user)
 	if(pestlevel > 5)
 		message_admins("[ADMIN_LOOKUPFLW(user)] last altered a hydro tray's contents which spawned spiderlings")
@@ -710,7 +702,7 @@
 
 	else if(istype(O, /obj/item/storage/bag/plants))
 		attack_hand(user)
-		for(var/obj/item/reagent_containers/food/snacks/grown/G in locate(user.x,user.y,user.z))
+		for(var/obj/item/food/grown/G in locate(user.x,user.y,user.z))
 			SEND_SIGNAL(O, COMSIG_TRY_STORAGE_INSERT, G, user, TRUE)
 		return
 
@@ -823,12 +815,12 @@
 		to_chat(user, "<span class='warning'>You empty [src]'s nutrient tank.</span>")
 
 /**
-  * Update Tray Proc
-  * Handles plant harvesting on the tray side, by clearing the sead, names, description, and dead stat.
-  * Shuts off autogrow if enabled.
-  * Sends messages to the cleaer about plants harvested, or if nothing was harvested at all.
-  * * User - The mob who clears the tray.
-  */
+ * Update Tray Proc
+ * Handles plant harvesting on the tray side, by clearing the sead, names, description, and dead stat.
+ * Shuts off autogrow if enabled.
+ * Sends messages to the cleaer about plants harvested, or if nothing was harvested at all.
+ * * User - The mob who clears the tray.
+ */
 /obj/machinery/hydroponics/proc/update_tray(mob/user)
 	harvest = FALSE
 	lastproduce = age
@@ -852,10 +844,10 @@
 
 /// Tray Setters - The following procs adjust the tray or plants variables, and make sure that the stat doesn't go out of bounds.
 /**
-  * Adjust water.
-  * Raises or lowers tray water values by a set value. Adding water will dillute toxicity from the tray.
-  * * adjustamt - determines how much water the tray will be adjusted upwards or downwards.
-  */
+ * Adjust water.
+ * Raises or lowers tray water values by a set value. Adding water will dillute toxicity from the tray.
+ * * adjustamt - determines how much water the tray will be adjusted upwards or downwards.
+ */
 /obj/machinery/hydroponics/proc/adjustWater(adjustamt)
 	waterlevel = clamp(waterlevel + adjustamt, 0, maxwater)
 
@@ -863,42 +855,42 @@
 		adjustToxic(-round(adjustamt/4))//Toxicity dilutation code. The more water you put in, the lesser the toxin concentration.
 
 /**
-  * Adjust Health.
-  * Raises the tray's plant_health stat by a given amount, with total health determined by the seed's endurance.
-  * * adjustamt - Determines how much the plant_health will be adjusted upwards or downwards.
-  */
+ * Adjust Health.
+ * Raises the tray's plant_health stat by a given amount, with total health determined by the seed's endurance.
+ * * adjustamt - Determines how much the plant_health will be adjusted upwards or downwards.
+ */
 /obj/machinery/hydroponics/proc/adjustHealth(adjustamt)
 	if(myseed && !dead)
 		plant_health = clamp(plant_health + adjustamt, 0, myseed.endurance)
 
 /**
-  * Adjust Health.
-  * Raises the plant's plant_health stat by a given amount, with total health determined by the seed's endurance.
-  * * adjustamt - Determines how much the plant_health will be adjusted upwards or downwards.
-  */
+ * Adjust Health.
+ * Raises the plant's plant_health stat by a given amount, with total health determined by the seed's endurance.
+ * * adjustamt - Determines how much the plant_health will be adjusted upwards or downwards.
+ */
 /obj/machinery/hydroponics/proc/adjustToxic(adjustamt)
 	toxic = clamp(toxic + adjustamt, 0, 100)
 
 /**
-  * Adjust Pests.
-  * Raises the tray's pest level stat by a given amount.
-  * * adjustamt - Determines how much the pest level will be adjusted upwards or downwards.
-  */
+ * Adjust Pests.
+ * Raises the tray's pest level stat by a given amount.
+ * * adjustamt - Determines how much the pest level will be adjusted upwards or downwards.
+ */
 /obj/machinery/hydroponics/proc/adjustPests(adjustamt)
 	pestlevel = clamp(pestlevel + adjustamt, 0, 10)
 
 /**
-  * Adjust Weeds.
-  * Raises the plant's weed level stat by a given amount.
-  * * adjustamt - Determines how much the weed level will be adjusted upwards or downwards.
-  */
+ * Adjust Weeds.
+ * Raises the plant's weed level stat by a given amount.
+ * * adjustamt - Determines how much the weed level will be adjusted upwards or downwards.
+ */
 /obj/machinery/hydroponics/proc/adjustWeeds(adjustamt)
 	weedlevel = clamp(weedlevel + adjustamt, 0, 10)
 
 /**
-  * Spawn Plant.
-  * Upon using strange reagent on a tray, it will spawn a killer tomato or killer tree at random.
-  */
+ * Spawn Plant.
+ * Upon using strange reagent on a tray, it will spawn a killer tomato or killer tree at random.
+ */
 /obj/machinery/hydroponics/proc/spawnplant() // why would you put strange reagent in a hydro tray you monster I bet you also feed them blood
 	var/list/livingplants = list(/mob/living/simple_animal/hostile/tree, /mob/living/simple_animal/hostile/killertomato)
 	var/chosen = pick(livingplants)

@@ -12,7 +12,7 @@
 	plantname = "Barrel Cactus"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/barrelcactus
+	product = /obj/item/food/grown/ms13/barrelcactus
 	mutatelist = list(/obj/item/seeds/ms13/pricklypear)
 	lifespan = 60
 	endurance = 20
@@ -23,12 +23,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/barrelcactus
+/obj/item/food/grown/ms13/barrelcactus
 	seed = /obj/item/seeds/ms13/barrelcactus
 	name = "barrel cactus fruit"
 	desc = "Barrel cactus fruit are found on spherical barrel cacti and are both nutritious and highly toxic."
-	bitesize_mod = 2
-	foodtype = FRUIT | TOXIC
+	bite_consumption_mod = 2
+	foodtypes = FRUIT | TOXIC
 	icon_state = "barrelcactus"
 	filling_color = "#a6b115"
 	tastes = list("sourness"= 10, "burning"= 1)
@@ -43,7 +43,7 @@
 	plantname = "Mutfruit Sapling"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/mutfruit
+	product = /obj/item/food/grown/ms13/mutfruit
 	mutatelist = list(/obj/item/seeds/ms13/cmutfruit)
 	lifespan = 30
 	endurance = 20
@@ -53,12 +53,12 @@
 	maturation = 5
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/mutfruit
+/obj/item/food/grown/ms13/mutfruit
 	seed = /obj/item/seeds/ms13/mutfruit
 	name = "mutfruit"
 	desc = "Mutfruit provides both hydration and sustenance, but the mutated plant also carries small amounts of radiation."
-	bitesize_mod = 2
-	foodtype = FRUIT
+	bite_consumption_mod = 2
+	foodtypes = FRUIT
 	icon_state = "mutfruit"
 	filling_color = "#5f035f"
 	tastes = list("warmth"= 5, "sweetness"= 5)
@@ -72,7 +72,7 @@
 	growing_color =  "#da9249"
 	plantname = "Crunchy Mutfruits"
 	harvest_icon = 1
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/cmutfruit
+	product = /obj/item/food/grown/ms13/cmutfruit
 	mutatelist = list()
 	lifespan = 80
 	endurance = 60
@@ -82,12 +82,12 @@
 	maturation = 6
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/cmutfruit
+/obj/item/food/grown/ms13/cmutfruit
 	seed = /obj/item/seeds/ms13/cmutfruit
 	name = "crunchy mutfruit"
 	desc = "A special kind of mutfruit species, grown in the ground and significantly sweeter and crunchier than normal."
-	foodtype = FRUIT
-	bitesize_mod = 2
+	foodtypes = FRUIT
+	bite_consumption_mod = 2
 	icon_state = "cmutfruit"
 	filling_color = "#7c3e04"
 	tastes = list("crunchiness"= 5, "apples?..."= 1)
@@ -101,7 +101,7 @@
 	growing_color =  "#9b3434"
 	plantname = "Apple Shrub"
 	harvest_icon = 1
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/apple
+	product = /obj/item/food/grown/ms13/apple
 	mutatelist = list(/obj/item/seeds/ms13/cmutfruit)
 	lifespan = 100
 	endurance = 30
@@ -111,12 +111,12 @@
 	maturation = 10
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/apple
+/obj/item/food/grown/ms13/apple
 	seed = /obj/item/seeds/ms13/apple
 	name = "apple"
 	desc = "A radiation proofed dark red apple."
-	bitesize_mod = 1
-	foodtype = FRUIT
+	bite_consumption_mod = 1
+	foodtypes = FRUIT
 	icon_state = "apple"
 	filling_color = "#9b7470"
 	tastes = list("apple"= 1)
@@ -131,7 +131,7 @@
 	plantname = "Prickly Pear Cactus"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest,/datum/plant_gene/trait/stinging) //could be a bad idea idk
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/pricklypear
+	product = /obj/item/food/grown/ms13/pricklypear
 	mutatelist = list(/obj/item/seeds/ms13/barrelcactus)
 	lifespan = 60
 	endurance = 20
@@ -141,17 +141,17 @@
 	maturation = 5
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/pricklypear
+/obj/item/food/grown/ms13/pricklypear
 	seed = /obj/item/seeds/ms13/pricklypear
 	name = "prickly pear fruit"
 	desc = "Grown on the prickly pear cactus, these plants bear high nutrition yet are covered in menacing spikes."
 	icon_state = "prickly"
 	filling_color = "#8a0483"
-	foodtype = FRUIT
-	bitesize_mod = 2
+	foodtypes = FRUIT
+	bite_consumption_mod = 2
 	tastes = list("sweetness"= 1)
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/pricklypear/pickup(mob/living/user)
+/obj/item/food/grown/ms13/pricklypear/pickup(mob/living/user)
 	..()
 	if(!iscarbon(user))
 		return FALSE
@@ -178,7 +178,7 @@
 	plantname = "Punga Bush"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/pungafruit
+	product = /obj/item/food/grown/ms13/pungafruit
 	lifespan = 80
 	endurance = 30
 	maturation = 15
@@ -187,13 +187,13 @@
 	growthstages = 4
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/pungafruit
+/obj/item/food/grown/ms13/pungafruit
 	seed = /obj/item/seeds/ms13/punga
 	name = "pungafruit"
 	desc = "A large fleshy fruit with a yellowish-brown, thick skin. Due to growing in radioactive environments it purges radiation and toxins from the body."
 	icon_state = "punga"
-	bitesize_mod = 2
-	foodtype = FRUIT | TOXIC
+	bite_consumption_mod = 2
+	foodtypes = FRUIT | TOXIC
 	filling_color = "#695d19"
 	tastes = list("sourness"= 6, "cleansing"= 1)
 
@@ -207,7 +207,7 @@
 	plantname = "Geigerpunga Bush"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/geigpungafruit
+	product = /obj/item/food/grown/ms13/geigpungafruit
 	lifespan = 100
 	endurance = 20
 	maturation = 8
@@ -217,13 +217,13 @@
 	growthstages = 4
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/geigpungafruit
+/obj/item/food/grown/ms13/geigpungafruit
 	seed = /obj/item/seeds/ms13/geigpunga
 	name = "geiger pungafruit"
 	desc = "A mutated pung afruit, glowing green and ever shifting."
 	icon_state = "geigpunga"
-	bitesize_mod = 2
-	foodtype = FRUIT | TOXIC
+	bite_consumption_mod = 2
+	foodtypes = FRUIT | TOXIC
 	filling_color = "#55ff06"
 	tastes = list("acid"= 6, "warmth"= 5, "cleansing"= 1)
 
@@ -236,7 +236,7 @@
 	growing_color =  "#bda75f"
 	wholeiconcolor = TRUE
 	plantname = "Snaptail Reeds"
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/snaptail
+	product = /obj/item/food/grown/ms13/snaptail
 	lifespan = 40
 	endurance = 50
 	yield = 5
@@ -245,13 +245,13 @@
 	maturation = 8
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/snaptail
+/obj/item/food/grown/ms13/snaptail
 	seed = /obj/item/seeds/ms13/snaptail
 	name = "snaptail"
 	desc = "A post-apocalyptic mutated sugarcane variant."
 	icon_state = "snaptail"
-	bitesize_mod = 1
-	foodtype = SUGAR | GROSS
+	bite_consumption_mod = 1
+	foodtypes = SUGAR | GROSS
 	filling_color = "#caa3a3"
 	tastes = list("sugar"= 5, "reed"= 5)
 
@@ -265,7 +265,7 @@
 	plantname = "Tarberry Bush"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/tarberry
+	product = /obj/item/food/grown/ms13/tarberry
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	mutatelist = list(/obj/item/seeds/ms13/blackberry)
 	lifespan = 30
@@ -276,12 +276,12 @@
 	maturation = 2
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/tarberry
+/obj/item/food/grown/ms13/tarberry
 	seed = /obj/item/seeds/ms13/tarberry
 	name = "tarberry"
 	desc = "A dark and sticky berry, found in cold and damp environments."
-	bitesize_mod = 1
-	foodtype = FRUIT | GROSS
+	bite_consumption_mod = 1
+	foodtypes = FRUIT | GROSS
 	icon_state = "tarberry"
 	filling_color = "#2f2525ff"
 	tastes = list("oil"= 5, "juice"= 1)
@@ -296,7 +296,7 @@
 	plantname = "Blackberry Bush"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/blackberry
+	product = /obj/item/food/grown/ms13/blackberry
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 	mutatelist = list(/obj/item/seeds/ms13/radberry, /obj/item/seeds/ms13/tarberry)
 	lifespan = 40
@@ -307,12 +307,12 @@
 	maturation = 4
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/blackberry
+/obj/item/food/grown/ms13/blackberry
 	seed = /obj/item/seeds/ms13/blackberry
 	name = "blackberry"
 	desc = "A radiation-induced mutated version of the pre-war blackberry."
-	bitesize_mod = 1
-	foodtype = FRUIT
+	bite_consumption_mod = 1
+	foodtypes = FRUIT
 	icon_state = "blackberry"
 	filling_color = "#15172a"
 	tastes = list("berries"= 5, "juice"= 1)
@@ -327,7 +327,7 @@
 	plantname = "Radberry Shrub"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/radberry
+	product = /obj/item/food/grown/ms13/radberry
 	lifespan = 10
 	endurance = 20
 	instability = 100
@@ -337,13 +337,13 @@
 	maturation = 6
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/radberry
+/obj/item/food/grown/ms13/radberry
 	seed = /obj/item/seeds/ms13/radberry
 	name = "tarberry"
 	desc = "A highly radioactive berry."
 	icon_state = "radberry"
-	bitesize_mod = 1
-	foodtype = FRUIT | GROSS
+	bite_consumption_mod = 1
+	foodtypes = FRUIT | GROSS
 	filling_color = "#00ff2a"
 	tastes = list("metal"= 5, "sweetness"= 1)
 
@@ -354,7 +354,7 @@
 	desc = "These seeds grow into an yucca plant."
 	species = "yucca"
 	plantname = "yucca plant"
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/yucca
+	product = /obj/item/food/grown/ms13/yucca
 	lifespan = 50
 	endurance = 30
 	yield = 3
@@ -365,13 +365,13 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/yucca
+/obj/item/food/grown/ms13/yucca
 	seed = /obj/item/seeds/ms13/yucca
 	name = "yucca fruit"
 	desc = "The fleshy banana like fruit. It smells and tastes similar to a sweet potato."
 	icon_state = "yucca"
-	bitesize_mod = 4
-	foodtype = FRUIT
+	bite_consumption_mod = 4
+	foodtypes = FRUIT
 	filling_color = "#b4a031ff"
 	tastes = list("sweet potato"= 5)
 
@@ -389,7 +389,7 @@
 	plantname = "Tato Plant"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/tato
+	product = /obj/item/food/grown/ms13/tato
 	mutatelist = list(/obj/item/seeds/ms13/tomato, /obj/item/seeds/ms13/potato)
 	lifespan = 40
 	endurance = 80
@@ -400,12 +400,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/tato
+/obj/item/food/grown/ms13/tato
 	seed = /obj/item/seeds/ms13/tato
 	name = "tato"
 	desc = "A raw tato, an awful tasting combination of the pre-war tomato and potato plant."
-	bitesize_mod = 3
-	foodtype = VEGETABLES | GROSS
+	bite_consumption_mod = 3
+	foodtypes = VEGETABLES | GROSS
 	icon_state = "tato"
 	filling_color = "#4b2727"
 	tastes = list("raw eggs"= 5)
@@ -417,7 +417,7 @@
 	desc = "Pre-war potato sprouts, grow into clusters of potatos in the soil, highly resistant."
 	species = "root"
 	plantname = "Potatos"
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/potato
+	product = /obj/item/food/grown/ms13/potato
 	mutatelist = list(/obj/item/seeds/ms13/tato)
 	lifespan = 30
 	endurance = 90
@@ -428,12 +428,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/potato
+/obj/item/food/grown/ms13/potato
 	seed = /obj/item/seeds/ms13/potato
 	name = "potato"
 	desc = "A starchy resilient tubor, a classic staple food, radiation proofed and amazing cooked."
-	bitesize_mod = 2
-	foodtype = VEGETABLES | GROSS
+	bite_consumption_mod = 2
+	foodtypes = VEGETABLES | GROSS
 	icon_state = "potato"
 	filling_color = "#ada876"
 	tastes = list("raw potato"= 5)
@@ -448,7 +448,7 @@
 	plantname = "Tomato Plant"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash, /datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/tomato
+	product = /obj/item/food/grown/ms13/tomato
 	mutatelist = list(/obj/item/seeds/ms13/tato, /datum/plant_gene/trait/repeated_harvest)
 	lifespan = 30
 	endurance = 30
@@ -459,12 +459,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/tomato
+/obj/item/food/grown/ms13/tomato
 	seed = /obj/item/seeds/ms13/tomato
 	name = "tomato"
 	desc = "A juicy red, radiation proofed tomato, a unique plant to survive in the wastes."
-	bitesize_mod = 2
-	foodtype = FRUIT | VEGETABLES
+	bite_consumption_mod = 2
+	foodtypes = FRUIT | VEGETABLES
 	icon_state = "tomato"
 	filling_color = "#8d1d1d"
 	tastes = list("tomato"= 5)
@@ -479,7 +479,7 @@
 	plantname = "Jalepeno Plant"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/jalepeno
+	product = /obj/item/food/grown/ms13/jalepeno
 	mutatelist = list(/obj/item/seeds/ms13/radpepper)
 	lifespan = 40
 	endurance = 60
@@ -490,12 +490,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/jalepeno
+/obj/item/food/grown/ms13/jalepeno
 	seed = /obj/item/seeds/ms13/jalepeno
 	name = "jalepeno"
 	desc = "A spicy jalepeno pepper, climatised to the wasteland, tasty and spicy."
-	bitesize_mod = 1
-	foodtype = VEGETABLES
+	bite_consumption_mod = 1
+	foodtypes = VEGETABLES
 	icon_state = "jalepeno"
 	filling_color = "#233b29"
 	tastes = list("spicy"= 5)
@@ -510,7 +510,7 @@
 	plantname = "Radpepper Bush"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash, /datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/radpepper
+	product = /obj/item/food/grown/ms13/radpepper
 	mutatelist = list(/obj/item/seeds/ms13/jalepeno)
 	lifespan = 10
 	instability = 100
@@ -522,12 +522,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/radpepper
+/obj/item/food/grown/ms13/radpepper
 	seed = /obj/item/seeds/ms13/radpepper
 	name = "radpepper"
 	desc = "A mutated jalepeno variant, condensed spiciness create an extremely powerful and somewhat painful taste."
-	bitesize_mod = 1
-	foodtype = VEGETABLES | TOXIC
+	bite_consumption_mod = 1
+	foodtypes = VEGETABLES | TOXIC
 	icon_state = "radpepper"
 	filling_color = "#837e3c"
 	tastes = list("death"= 5, "pain"= 5)
@@ -539,7 +539,7 @@
 	desc = "The sprouts grow into a hardy onion plant."
 	species = "root"
 	plantname = "Onions"
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/onion
+	product = /obj/item/food/grown/ms13/onion
 	mutatelist = list(/obj/item/seeds/ms13/garlic)
 	lifespan = 20
 	endurance = 70
@@ -550,12 +550,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/onion
+/obj/item/food/grown/ms13/onion
 	seed = /obj/item/seeds/ms13/onion
 	name = "onion"
 	desc = "A hardy and aromatic root vegetable, a staple ingredient in cooking good food."
-	bitesize_mod = 4
-	foodtype = VEGETABLES | GROSS
+	bite_consumption_mod = 4
+	foodtypes = VEGETABLES | GROSS
 	icon_state = "onion"
 	filling_color = "#5d5151"
 	tastes = list("sour"= 5)
@@ -567,7 +567,7 @@
 	desc = "These garlic seeds grow into a condensed onion variant."
 	species = "root"
 	plantname = "Garlic Plant"
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/garlic
+	product = /obj/item/food/grown/ms13/garlic
 	mutatelist = list(/obj/item/seeds/ms13/onion)
 	maturation = 10
 	production = 1
@@ -577,12 +577,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/garlic
+/obj/item/food/grown/ms13/garlic
 	seed = /obj/item/seeds/ms13/garlic
 	name = "garlic"
 	desc = "A potent and tasty onion variant, also works as a medicinal root."
-	bitesize_mod = 1
-	foodtype = VEGETABLES
+	bite_consumption_mod = 1
+	foodtypes = VEGETABLES
 	icon_state = "garlic"
 	filling_color = "#707070"
 	tastes = list("garlic"= 5)
@@ -594,7 +594,7 @@
 	desc = "These xander roots grow in size, producing denser and healing Xander roots."
 	species = "root"
 	plantname = "Xander Roots"
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/xander
+	product = /obj/item/food/grown/ms13/xander
 	maturation = 10
 	production = 1
 	yield = 5
@@ -603,12 +603,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/xander
+/obj/item/food/grown/ms13/xander
 	seed = /obj/item/seeds/ms13/xander
 	name = "xander root"
 	desc = "A bitter, turnip like root, known for its toxin healing and fulfilment."
-	bitesize_mod = 4
-	foodtype = VEGETABLES | GROSS
+	bite_consumption_mod = 4
+	foodtypes = VEGETABLES | GROSS
 	icon_state = "xander"
 	filling_color = "#2f2424"
 	tastes = list("bitterness"= 5)
@@ -621,7 +621,7 @@
 	desc = "Some hardy mutated carrot seeds."
 	species = "root"
 	plantname = "Carrots"
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/carrot
+	product = /obj/item/food/grown/ms13/carrot
 	maturation = 10
 	production = 1
 	yield = 5
@@ -630,12 +630,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/carrot
+/obj/item/food/grown/ms13/carrot
 	seed = /obj/item/seeds/ms13/carrot
 	name = "carrot"
 	desc = "A root vegetable, useful for its mildsweetness and eye healing properties."
-	bitesize_mod = 2
-	foodtype = VEGETABLES
+	bite_consumption_mod = 2
+	foodtypes = VEGETABLES
 	icon_state = "carrot"
 	filling_color = "#815c1f"
 	tastes = list("sweetness"= 1)
@@ -650,19 +650,19 @@
 	growing_color = "#644e2c"
 	wholeiconcolor = TRUE
 	plantname = "Razorgrain Stalks"
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/razorgrain
+	product = /obj/item/food/grown/ms13/razorgrain
 	yield = 4
 	production = 1
 	maturation = 5
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/razorgrain
+/obj/item/food/grown/ms13/razorgrain
 	seed = /obj/item/seeds/ms13/razorgrain
 	name = "razorgrain"
 	desc = "A hardy grain, known for its materials properties and starchy powder, a backbone of the wasteland."
-	bitesize_mod = 1
-	foodtype = GRAIN | GROSS
+	bite_consumption_mod = 1
+	foodtypes = GRAIN | GROSS
 	icon_state = "razorgrain"
 	filling_color = "#8f905b"
 	tastes = list("chalky grain"= 5)
@@ -677,19 +677,19 @@
 	growing_color = "#688265"
 	wholeiconcolor = TRUE
 	plantname = "Baifan Stalks"
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/baifan
+	product = /obj/item/food/grown/ms13/baifan
 	yield = 4
 	production = 1
 	maturation = 5
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/baifan
+/obj/item/food/grown/ms13/baifan
 	seed = /obj/item/seeds/ms13/baifan
 	name = "baifan"
 	desc = "A hardy grain, grows best in warm damp environments, yields a rice-like grain."
-	bitesize_mod = 1
-	foodtype = GRAIN | GROSS
+	bite_consumption_mod = 1
+	foodtypes = GRAIN | GROSS
 	icon_state = "baifan"
 	filling_color = "#505749"
 	tastes = list("chalky grain"= 5, "raw rice"= 1)
@@ -704,7 +704,7 @@
 	growing_color =  "#334632"
 	plantname = "Cabbage Plant"
 	harvest_icon = 1
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/cabbage
+	product = /obj/item/food/grown/ms13/cabbage
 	maturation = 10
 	production = 1
 	yield = 5
@@ -713,12 +713,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/cabbage
+/obj/item/food/grown/ms13/cabbage
 	seed = /obj/item/seeds/ms13/cabbage
 	name = "cabbage"
 	desc = "A resilient leaf plant, only green thing out here."
-	bitesize_mod = 4
-	foodtype = VEGETABLES
+	bite_consumption_mod = 4
+	foodtypes = VEGETABLES
 	icon_state = "cabbage"
 	filling_color = "#2d382a"
 	tastes = list("cabbage"= 5)
@@ -734,7 +734,7 @@
 	plantname = "Pinyon Pine"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/pinyon
+	product = /obj/item/food/grown/ms13/pinyon
 	lifespan = 60
 	endurance = 20
 	yield = 2
@@ -744,12 +744,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/pinyon
+/obj/item/food/grown/ms13/pinyon
 	seed = /obj/item/seeds/ms13/pinyon
 	name = "pinyon nuts"
 	desc = "Sour pinyon nuts, good if youre starving and contain many nutrients."
-	bitesize_mod = VEGETABLES
-	foodtype = 2
+	bite_consumption_mod = 2
+	foodtypes = VEGETABLES
 	icon_state = "pinyon"
 	filling_color = "#7b7c68"
 	tastes = list("nutty"= 4, "sourness"= 1)
@@ -765,7 +765,7 @@
 	plantname = "Mesquite Plant"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/mesquite
+	product = /obj/item/food/grown/ms13/mesquite
 	lifespan = 80
 	endurance = 60
 	yield = 3
@@ -775,12 +775,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/mesquite
+/obj/item/food/grown/ms13/mesquite
 	seed = /obj/item/seeds/ms13/mesquite
 	name = "mesquite"
 	desc = "Sweet medicinal honey mesquite pods, had a multitude of purposes."
-	bitesize_mod = 2
-	foodtype = VEGETABLES
+	bite_consumption_mod = 2
+	foodtypes = VEGETABLES
 	icon_state = "mesquite"
 	filling_color = "#223a24"
 	tastes = list("sour"= 5, "sweet"= 5)
@@ -796,7 +796,7 @@
 	plantname = "Buffalo Vines"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/squash)
-	product = (/obj/item/reagent_containers/food/snacks/grown/ms13/)
+	product = (/obj/item/food/grown/ms13/)
 	lifespan = 60
 	endurance = 20
 	yield = 8
@@ -806,12 +806,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/buffalo
+/obj/item/food/grown/ms13/buffalo
 	seed = /obj/item/seeds/ms13/buffalo
 	name = "buffalo"
 	desc = "A large buffalo gourd, a decent ingredient, but nasty when raw."
-	bitesize_mod = 6
-	foodtype = VEGETABLES | GROSS
+	bite_consumption_mod = 6
+	foodtypes = VEGETABLES | GROSS
 	icon_state = "buffalo"
 	filling_color = "#2b3325"
 	tastes = list("wood"= 5)
@@ -824,19 +824,19 @@
 	desc = "A hardy packet of a post-war corn-like crop."
 	species = "corn"
 	plantname = "Maize Stalks"
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/maize
+	product = /obj/item/food/grown/ms13/maize
 	yield = 4
 	production = 1
 	growthstages = 3
 	maturation = 5
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/maize
+/obj/item/food/grown/ms13/maize
 	seed = /obj/item/seeds/ms13/maize
 	name = "maize"
 	desc = "A hardy maize crop, known for its extensive use in the west."
-	bitesize_mod = 4
-	foodtype = VEGETABLES | GRAIN
+	bite_consumption_mod = 4
+	foodtypes = VEGETABLES | GRAIN
 	icon_state = "maize"
 	filling_color = "#bbb81c"
 	tastes = list("corn"= 5)
@@ -856,7 +856,7 @@
 	plantname = "Ash Roses"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/ashrose
+	product = /obj/item/food/grown/ms13/ashrose
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -867,12 +867,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/ashrose
+/obj/item/food/grown/ms13/ashrose
 	seed = /obj/item/seeds/ms13/ashrose
 	name = "ash rose"
 	desc = "A potent radiation and toxin healing flower."
-	bitesize_mod = 1
-	foodtype = GROSS
+	bite_consumption_mod = 1
+	foodtypes = GROSS
 	icon_state = "ashrose"
 	filling_color = "#411c19"
 	tastes = list("sourness"= 5)
@@ -887,7 +887,7 @@
 	plantname = "Rad Roses"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/radrose
+	product = /obj/item/food/grown/ms13/radrose
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -898,12 +898,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/radrose
+/obj/item/food/grown/ms13/radrose
 	seed = /obj/item/seeds/ms13/radrose
 	name = "rad rose"
 	desc = "An extremely potent and radioactive version of the ash rose flower."
-	bitesize_mod = 1
-	foodtype = GROSS | TOXIC
+	bite_consumption_mod = 1
+	foodtypes = GROSS | TOXIC
 	icon_state = "radrose"
 	filling_color = "#579797"
 	tastes = list("warmth"= 5, "sourness"= 5, "pain"= 5)
@@ -918,7 +918,7 @@
 	plantname = "Soot Flowers"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/soot
+	product = /obj/item/food/grown/ms13/soot
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -929,12 +929,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/soot
+/obj/item/food/grown/ms13/soot
 	seed = /obj/item/seeds/ms13/soot
 	name = "soot flower"
 	desc = "A poisonous soot flower."
-	bitesize_mod = 1
-	foodtype = GROSS | TOXIC
+	bite_consumption_mod = 1
+	foodtypes = GROSS | TOXIC
 	icon_state = "soot"
 	filling_color = "#462050"
 	tastes = list("bitterness"= 5)
@@ -949,7 +949,7 @@
 	plantname = "Toxic Soot Flowers"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/toxicsoot
+	product = /obj/item/food/grown/ms13/toxicsoot
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -960,12 +960,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/toxicsoot
+/obj/item/food/grown/ms13/toxicsoot
 	seed = /obj/item/seeds/ms13/toxicsoot
 	name = "toxic soot flower"
 	desc = "An extremely poisonous soot flower."
-	bitesize_mod = 1
-	foodtype = GROSS | TOXIC
+	bite_consumption_mod = 1
+	foodtypes = GROSS | TOXIC
 	icon_state = "toxsoot"
 	filling_color = "#34773f"
 	tastes = list("bitterness"= 10)
@@ -980,7 +980,7 @@
 	plantname = "Datura Flowers"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/datura
+	product = /obj/item/food/grown/ms13/datura
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -991,12 +991,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/datura
+/obj/item/food/grown/ms13/datura
 	seed = /obj/item/seeds/ms13/datura
 	name = "datura flower"
 	desc = "A native flower that causes the user to hallucinate."
-	bitesize_mod = 1
-	foodtype = GROSS
+	bite_consumption_mod = 1
+	foodtypes = GROSS
 	icon_state = "datura"
 	filling_color = "#a7a7a7"
 	tastes = list("bitterness"= 5)
@@ -1011,7 +1011,7 @@
 	plantname = "Radtura Flowers"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/radtura
+	product = /obj/item/food/grown/ms13/radtura
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -1022,12 +1022,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/radtura
+/obj/item/food/grown/ms13/radtura
 	seed = /obj/item/seeds/ms13/radtura
 	name = "radtura flower"
 	desc = "An extremely potent and mindbreaking species of datura."
-	bitesize_mod = 1
-	foodtype = GROSS
+	bite_consumption_mod = 1
+	foodtypes = GROSS
 	icon_state = "radtura"
 	filling_color = "#a2a36c"
 	tastes = list("bitterness"= 5, "warmth"= 5)
@@ -1072,7 +1072,7 @@
 	species = "root"
 	plantname = "Coyote Tobacco"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/coyote
+	product = /obj/item/food/grown/ms13/coyote
 	lifespan = 20
 	maturation = 5
 	production = 5
@@ -1081,12 +1081,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/coyote
+/obj/item/food/grown/ms13/coyote
 	seed = /obj/item/seeds/ms13/coyote
 	name = "coyote"
 	desc = "A potent native tobacco plant, it has many uses."
-	bitesize_mod = 1
-	foodtype = GROSS
+	bite_consumption_mod = 1
+	foodtypes = GROSS
 	icon_state = "coyote"
 	filling_color = "#1d3821"
 
@@ -1100,7 +1100,7 @@
 	plantname = "Aster Flowers"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/aster
+	product = /obj/item/food/grown/ms13/aster
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -1111,11 +1111,11 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/aster
+/obj/item/food/grown/ms13/aster
 	seed = /obj/item/seeds/ms13/aster
 	name = "aster flower"
 	desc = "Some tasty aster flowers."
-	bitesize_mod = 1
+	bite_consumption_mod = 1
 	icon_state = "aster"
 	filling_color = "#1e2b2c"
 	tastes = list("salty"= 5, "peppery"= 5)
@@ -1130,7 +1130,7 @@
 	plantname = "Ash Blossoms"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/ashblossom
+	product = /obj/item/food/grown/ms13/ashblossom
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -1141,12 +1141,12 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/ashblossom
+/obj/item/food/grown/ms13/ashblossom
 	seed = /obj/item/seeds/ms13/ashblossom
 	name = "ash blossom"
 	desc = "A potent coffee like caffeine induced and antiseptic flower."
-	bitesize_mod = 1
-	foodtype = GROSS
+	bite_consumption_mod = 1
+	foodtypes = GROSS
 	icon_state = "ashblossom"
 	filling_color = "#213436"
 
@@ -1160,7 +1160,7 @@
 	plantname = "Thistles"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest,/datum/plant_gene/trait/stinging)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/thistle
+	product = /obj/item/food/grown/ms13/thistle
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -1171,17 +1171,17 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/thistle
+/obj/item/food/grown/ms13/thistle
 	seed = /obj/item/seeds/ms13/thistle
 	name = "thistle"
 	desc = "An invasive mutated and prickly weed."
-	bitesize_mod = 1
-	foodtype = GROSS
+	bite_consumption_mod = 1
+	foodtypes = GROSS
 	icon_state = "thistle"
 	filling_color = "#a64e5a"
 	tastes = list("pain"= 5)
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/thistle/pickup(mob/living/user)
+/obj/item/food/grown/ms13/thistle/pickup(mob/living/user)
 	..()
 	if(!iscarbon(user))
 		return FALSE
@@ -1208,7 +1208,7 @@
 	plantname = "Agave"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/agave
+	product = /obj/item/food/grown/ms13/agave
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -1219,11 +1219,11 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/agave
+/obj/item/food/grown/ms13/agave
 	seed = /obj/item/seeds/ms13/agave
 	name = "agave"
 	desc = "A strange kind of fleshy grass often used as a primitive burn medication that rapidly depletes stored nutrients in the body."
-	bitesize_mod = 1
+	bite_consumption_mod = 1
 	icon_state = "agave"
 	filling_color = "#37524e"
 	tastes = list("bitterness"= 5)
@@ -1238,7 +1238,7 @@
 	plantname = "Broc Flowers"
 	harvest_icon = 1
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/brocflower
+	product = /obj/item/food/grown/ms13/brocflower
 	lifespan = 25
 	endurance = 10
 	maturation = 6
@@ -1248,11 +1248,11 @@
 	growthstages = 3
 	//reagents_add =
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/brocflower
+/obj/item/food/grown/ms13/brocflower
 	seed = /obj/item/seeds/ms13/brocflower
 	name = "broc flower"
 	desc = "This vibrant, orange flower grows on tall stalks in the wasteland and exhibits moderate healing properties."
-	bitesize_mod = 1
+	bite_consumption_mod = 1
 	icon_state = "brocflower"
 	filling_color = "#493d28"
 	tastes = list("broc"= 5)
@@ -1272,7 +1272,7 @@
 	wholeiconcolor = TRUE
 	plantname = "Cave Fungus Mushrooms"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/cavefungus
+	product = /obj/item/food/grown/ms13/cavefungus
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1282,11 +1282,11 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/cavefungus
+/obj/item/food/grown/ms13/cavefungus
 	seed = /obj/item/seeds/ms13/cavefungus
 	name = "cave fungus"
 	desc = "An edible mushroom, with multiple toxin healing and cooking properties."
-	bitesize_mod = 1
+	bite_consumption_mod = 1
 	icon_state = "cavefungus"
 	filling_color = "#64553b"
 	tastes = list("mushroom"= 5)
@@ -1302,7 +1302,7 @@
 	wholeiconcolor = TRUE
 	plantname = "Glowfungus Mushrooms"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism, /datum/plant_gene/trait/glow/ms13green)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/cavefungus
+	product = /obj/item/food/grown/ms13/cavefungus
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1312,13 +1312,13 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/glowfungus
+/obj/item/food/grown/ms13/glowfungus
 	seed = /obj/item/seeds/ms13/glowfungus
 	name = "glow fungus"
 	desc = "A radioactive mushroom, with multiple potent toxin healing and radioactive properties."
-	bitesize_mod = 1
+	bite_consumption_mod = 1
 	icon_state = "glowfungus"
-	foodtype = TOXIC
+	foodtypes = TOXIC
 	filling_color = "#357944"
 	tastes = list("mushroom"= 5, "warmth"= 5)
 
@@ -1337,7 +1337,7 @@
 	icon_harvest = "blight-grow4"
 	plantname = "Blight Fungus"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/blight
+	product = /obj/item/food/grown/ms13/blight
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1347,13 +1347,13 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/blight
+/obj/item/food/grown/ms13/blight
 	seed = /obj/item/seeds/ms13/blight
 	name = "blight"
 	desc = "A potentially edible mushroom weed."
-	bitesize_mod = 1
+	bite_consumption_mod = 1
 	icon_state = "blight"
-	foodtype = GROSS | TOXIC
+	foodtypes = GROSS | TOXIC
 	filling_color = "#575c2a"
 	tastes = list("spice"= 5, "gunk"= 5)
 
@@ -1366,7 +1366,7 @@
 	icon_harvest = "brainfung-grow4"
 	plantname = "Brain Fungus"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/brainfung
+	product = /obj/item/food/grown/ms13/brainfung
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1376,17 +1376,17 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/brainfung
+/obj/item/food/grown/ms13/brainfung
 	seed = /obj/item/seeds/ms13/brainfung
 	name = "brain fungus"
 	desc = "An extremly toxic brain damaging fungus, handle with extreme care."
-	bitesize_mod = 1
-	foodtype = GROSS | TOXIC
+	bite_consumption_mod = 1
+	foodtypes = GROSS | TOXIC
 	icon_state = "brainfung"
 	filling_color = "#c87070"
 	tastes = list("illness"= 5)
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/brainfung/pickup(mob/living/user)
+/obj/item/food/grown/ms13/brainfung/pickup(mob/living/user)
 	..()
 	if(!iscarbon(user))
 		return FALSE
@@ -1411,7 +1411,7 @@
 	wholeiconcolor = TRUE
 	plantname = "Firecap Cluster"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/firecap
+	product = /obj/item/food/grown/ms13/firecap
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1421,17 +1421,17 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/firecap
+/obj/item/food/grown/ms13/firecap
 	seed = /obj/item/seeds/ms13/firecap
 	name = "firecap"
 	desc = "A burning pest of a mushroom, sears the flesh of all that touch or consume it."
-	bitesize_mod = 1
-	foodtype = TOXIC
+	bite_consumption_mod = 1
+	foodtypes = TOXIC
 	icon_state = "firecap"
 	filling_color = "#3f2e0f"
 	tastes = list("fire"= 5, "mushroom"= 1)
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/firecap/pickup(mob/living/user)
+/obj/item/food/grown/ms13/firecap/pickup(mob/living/user)
 	..()
 	if(!iscarbon(user))
 		return FALSE
@@ -1459,7 +1459,7 @@
 	wholeiconcolor = TRUE
 	plantname = "Gutshroom Cluster"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/gutshroom
+	product = /obj/item/food/grown/ms13/gutshroom
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1469,17 +1469,17 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/gutshroom
+/obj/item/food/grown/ms13/gutshroom
 	seed = /obj/item/seeds/ms13/gutshroom
 	name = "gutshroom"
 	desc = "A toxic fungus plant, that causes awful intestine and stomach pain."
-	bitesize_mod = 1
-	foodtype = GROSS | TOXIC
+	bite_consumption_mod = 1
+	foodtypes = GROSS | TOXIC
 	icon_state = "gutshroom"
 	filling_color = "#38372a"
 	tastes = list("pain"= 5)
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/gutshroom/pickup(mob/living/user)
+/obj/item/food/grown/ms13/gutshroom/pickup(mob/living/user)
 	..()
 	if(!iscarbon(user))
 		return FALSE
@@ -1504,7 +1504,7 @@
 	wholeiconcolor = TRUE
 	plantname = "Lureweeds"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/lureweed
+	product = /obj/item/food/grown/ms13/lureweed
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1514,11 +1514,11 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/lureweed
+/obj/item/food/grown/ms13/lureweed
 	seed = /obj/item/seeds/ms13/lureweed
 	name = "lureweed"
 	desc = "A long and hard, edible and invasive fungus, only really used as food as a last resort."
-	bitesize_mod = 8
+	bite_consumption_mod = 8
 	icon_state = "lureweed"
 	filling_color = "#383322"
 	tastes = list("lureweed"= 5)
@@ -1534,7 +1534,7 @@
 	wholeiconcolor = TRUE
 	plantname = "Nara Fungus"
 	genes = list(/datum/plant_gene/trait/plant_type/fungal_metabolism)
-	product = /obj/item/reagent_containers/food/snacks/grown/ms13/nara
+	product = /obj/item/food/grown/ms13/nara
 	lifespan = 50
 	endurance = 10
 	maturation = 8
@@ -1544,11 +1544,11 @@
 	//reagents_add =
 
 
-/obj/item/reagent_containers/food/snacks/grown/ms13/nara
+/obj/item/food/grown/ms13/nara
 	seed = /obj/item/seeds/ms13/nara
 	name = "nara fungus"
 	desc = "Part flesh and plant, this invasive fungus contains blood and restorative enzymes."
-	bitesize_mod = 2
+	bite_consumption_mod = 2
 	icon_state = "nara"
 	filling_color = "#770d0d"
 	tastes = list("blood"= 5)

@@ -196,3 +196,71 @@
 	desc = "A rugged plaid shirt."
 	icon_state = "plaid_b"
 	inhand_icon_state = "plaid_b"
+
+/obj/item/clothing/under/ms13/prewar/checkeredred
+	name = "red checkered shirt"
+	desc = "A shirt with a red checker pattern."
+	icon_state = "checkred"
+	inhand_icon_state = "plaid_r"
+
+/obj/item/clothing/under/ms13/wasteland/checkeredgreen
+	name = "green checkered shirt"
+	desc = "A shirt with a green checker pattern."
+	icon_state = "checkgreen"
+	inhand_icon_state = "plaid_g"
+
+/obj/item/clothing/under/ms13/wasteland/checkeredblue
+	name = "blue checkered shirt"
+	desc = "A shirt with a blue checkered pattern."
+	icon_state = "checkblue"
+	inhand_icon_state = "plaid_b"
+
+/obj/item/clothing/under/ms13/wasteland/stripered
+	name = "red striped shirt"
+	desc = "A red shirt with columns of white stripes."
+	icon_state = "stripered"
+	inhand_icon_state = "plaid_r"
+
+/obj/item/clothing/under/ms13/wasteland/stripeblue
+	name = "blue striped shirt"
+	desc = "A blue shirt with columns of white stripes."
+	icon_state = "stripeblue"
+	inhand_icon_state = "plaid_b"
+
+/obj/item/clothing/under/ms13/wasteland/brownvest
+	name = "brown vest"
+	desc = "A brown vest."
+	icon_state = "vestbrown"
+	inhand_icon_state = "lb_suit"
+
+/obj/item/clothing/under/ms13/wasteland/burgundyvest
+	name = "burgundy vest"
+	desc = "A burgundy vest."
+	icon_state = "vestbrown"
+	inhand_icon_state = "brownjsuit"
+
+/obj/item/clothing/under/ms13/wasteland/whiteshirt
+	name = "white shirt"
+	desc = "A plain white shirt."
+	icon_state = "shirt"
+	inhand_icon_state = "bar_suit"
+
+/obj/item/clothing/under/ms13/mechanicprewar
+	can_adjust = TRUE
+	alt_covers_chest = FALSE
+
+/obj/item/clothing/under/ms13/mechanicprewar/mechanicgrey
+	name = "grey mechanic shirt"
+	desc = "A grey mechanic shirt. It smells of oil."
+	icon_state = "mechanicg"
+	inhand_icon_state = "bl_suit"
+	can_adjust = TRUE
+	alt_covers_chest = FALSE
+
+/obj/item/clothing/under/ms13/mechanicprewar/mechanicgreen
+	name = "green mechanic shirt"
+	desc = "A green mechanic shirt. It smells of oil, but is surprisingly clean."
+	icon_state = "mechanicalt"
+	inhand_icon_state = "g_suit"
+	can_adjust = TRUE
+	alt_covers_chest = FALSE

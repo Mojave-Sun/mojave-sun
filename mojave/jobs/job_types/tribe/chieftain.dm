@@ -1,5 +1,5 @@
 /datum/job/ms13/tribe/chieftain
-	title = "Chieftain"
+	title = "Tribal Chieftain"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = ""

@@ -1,5 +1,5 @@
 /datum/job/ms13/legion/scout
-	title = "Scout"
+	title = "Legion Scout"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Centurion, Speculatores, Explorers."

@@ -1,5 +1,5 @@
 /datum/job/ms13/raiders/enforcer
-	title = "Enforcer"
+	title = "Raider Enforcer"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = ""

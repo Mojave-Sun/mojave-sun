@@ -4,57 +4,57 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Hubologist"))
 
 GLOBAL_LIST_INIT(town_positions, list(
-	"Mayor",
-	"Settler",
-	"Shopkeep",
-	"Farmer",
-	"Bartender",
-	"Doctor",
-	"Deputy",
-	"Sheriff"))
+	"Town Mayor",
+	"Town Settler",
+	"Town Shopkeep",
+	"Town Farmer",
+	"Town Bartender",
+	"Town Doctor",
+	"Town Deputy",
+	"Town Sheriff"))
 
 GLOBAL_LIST_INIT(tribe_positions, list(
 	"Tribal",
-	"Warrior",
-	"Berserker",
-	"Shaman",
-	"Chieftain"))
+	"Tribal Warrior",
+	"Tribal Berserker",
+	"Tribal Shaman",
+	"Tribal Chieftain"))
 
 GLOBAL_LIST_INIT(ncr_positions, list(
-	"Trooper",
-	"Radioman",
-	"Corporal",
-	"Engineer",
-	"Sergeant",
-	"Medical Officer",
-	"Lieutenant"))
+	"NCR Trooper",
+	"NCR Radioman",
+	"NCR Corporal",
+  "NCR Engineer",
+	"NCR Sergeant",
+  "NCR Medical Officer",
+	"NCR Lieutenant"))
 
 GLOBAL_LIST_INIT(bos_positions, list(
-	"Initiate",
-	"Knight",
-	"Paladin",
-	"Head Paladin",
-	"Scribe",
-	"Head Scribe"))
+	"BoS Initiate",
+	"BoS Knight",
+	"BoS Paladin",
+	"BoS Head Paladin",
+	"BoS Scribe",
+	"BoS Head Scribe"))
 
 GLOBAL_LIST_INIT(raiders_positions, list(
 	"Raider",
-	"Enforcer",
-	"Boss"))
+	"Raider Enforcer",
+	"Raider Boss"))
 
 GLOBAL_LIST_INIT(legion_positions, list(
-	"Praetorian",
-	"Centurion",
-	"Veteran Decanus",
-	"Prime Decanus",
-	"Recruit Decanus",
-	"Veteran Legionary",
-	"Prime Legionary",
-	"Recruit Legionary",
-	"Vexillarius",
-	"Speculatore",
-	"Explorer",
-	"Scout",))
+	"Legion Praetorian",
+	"Legion Centurion",
+	"Legion Veteran Decanus",
+	"Legion Prime Decanus",
+	"Legion Recruit Decanus",
+	"Legion Veteran",
+	"Legion Prime ",
+	"Legion Recruit",
+	"Legion Vexillarius",
+	"Legion Speculatore",
+	"Legion Explorer",
+	"Legion Scout",))
 
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(ms13_position_categories, list(

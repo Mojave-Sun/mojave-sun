@@ -1,5 +1,5 @@
 /datum/job/ms13/legion/vexillarius
-	title = "Vexillarius"
+	title = "Legion Vexillarius"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "The Centurion"

@@ -14,6 +14,7 @@
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
+	force = 20
 	
 //Automatic shotguns
 /obj/item/gun/ballistic/shotgun/automatic/ms13
@@ -23,6 +24,7 @@
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
+	force = 15
 
 //Revolvers
 /obj/item/gun/ballistic/revolver/ms13
@@ -30,6 +32,7 @@
 	icon = 'mojave/icons/objects/guns/ballistics.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	force = 10
 
 //Automatics
 /obj/item/gun/ballistic/automatic/ms13
@@ -38,7 +41,7 @@
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
 	automatic = 2 //2 decisecond delay
-	force = 20
+	force = 15
 	
 //Pistols
 /obj/item/gun/ballistic/automatic/pistol/ms13
@@ -47,6 +50,7 @@
 	icon = 'mojave/icons/objects/guns/ballistics.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	force = 10
 	
 //Bolt-actions
 /obj/item/gun/ballistic/rifle/ms13
@@ -56,6 +60,7 @@
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
 	internal_magazine = FALSE
 	tac_reloads = TRUE
+	force = 15
 
 //Loaders/Ammo boxes
 /obj/item/ammo_box/ms13
