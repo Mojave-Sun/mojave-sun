@@ -62,7 +62,6 @@
 		COOLDOWN_START(src, stealthboy_cooldown, 30 SECONDS)
 
 /obj/item/clothing/gloves/ms13/stealthboy/proc/disrupt(mob/user)
-	return
 	if(stealthboy_on)
 		user.alpha = initial(user.alpha)
 		stealthboy_on = FALSE
