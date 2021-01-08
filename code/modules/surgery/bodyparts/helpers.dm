@@ -203,7 +203,7 @@
 	. = 0
 	switch(skin_tone)
 		if("caucasian1")
-			. = "dbbeac" //MOJAVE SUN EDIT
+			. = "fcccb3" //MOJAVE SUN EDIT
 		if("caucasian2")
 			. = "ffc19e" //MOJAVE SUN EDIT
 		if("caucasian3")
@@ -213,9 +213,9 @@
 		if("mediterranean")
 			. = "ddb47b" //MOJAVE SUN EDIT
 		if("asian1")
-			. = "c8b38b" //MOJAVE SUN EDIT
+			. = "e1c898" //MOJAVE SUN EDIT
 		if("asian2")
-			. = "b6a08a" //MOJAVE SUN EDIT
+			. = "c8b088" //MOJAVE SUN EDIT
 		if("arab")
 			. = "cc926a" //MOJAVE SUN EDIT
 		if("indian")
@@ -225,7 +225,7 @@
 		if("african2")
 			. = "4c3735" //MOJAVE SUN EDIT
 		if("albino")
-			. = "fff4e6"
+			. = "ffe0d1" //MOJAVE SUN EDIT
 		if("orange")
 			. = "ffc905"
 
