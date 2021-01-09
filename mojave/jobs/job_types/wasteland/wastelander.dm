@@ -21,6 +21,7 @@
 		head = pick(
 		/obj/item/clothing/head/helmet/ms13/cowboy/black,\
 		/obj/item/clothing/head/helmet/ms13/utilitycap,\
+		/obj/item/clothing/head/helmet/ms13/baseball,\
 		/obj/item/clothing/head/helmet/ms13/cowboy/padded/ushanka)
 	else
 		head = null
@@ -65,6 +66,7 @@
 		/obj/item/claymore/ms13/machete/pipe/tireiron)
 	shoes = pick(
         /obj/item/clothing/shoes/ms13/tan,\
+		/obj/item/clothing/shoes/winterboots,\
         /obj/item/clothing/shoes/ms13/explorer,\
 		/obj/item/clothing/shoes/ms13/military,\
         /obj/item/clothing/shoes/ms13/military/diesel,\
