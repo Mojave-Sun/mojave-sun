@@ -264,3 +264,11 @@
 	inhand_icon_state = "g_suit"
 	can_adjust = TRUE
 	alt_covers_chest = FALSE
+
+/obj/item/clothing/under/ms13/vaultsuit
+	name = "vault suit"
+	desc = "An unmarked vault suit. How peculiar."
+	icon_state = "vault"
+	inhand_icon_state = "b_suit"
+	can_adjust = TRUE
+	alt_covers_chest = FALSE

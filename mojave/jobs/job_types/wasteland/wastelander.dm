@@ -17,13 +17,22 @@
 
 /datum/outfit/job/ms13/wasteland/wastelander/pre_equip(mob/living/carbon/human/H)
 	..()
-	if(prob(75))
+	if(prob(50))
 		head = pick(
 		/obj/item/clothing/head/helmet/ms13/cowboy/black,\
-    	/obj/item/clothing/head/helmet/ms13/cowboy/stormchaser,\
+		/obj/item/clothing/head/helmet/ms13/utilitycap,\
 		/obj/item/clothing/head/helmet/ms13/cowboy/padded/ushanka)
 	else
 		head = null
+
+	if(prob(25))
+		mask = pick(
+		/obj/item/clothing/mask/ms13/facewrap,\
+        /obj/item/clothing/mask/gas,\
+        /obj/item/clothing/mask/bandana/black,\
+        /obj/item/clothing/mask/balaclava)
+	else
+		mask = null
 
 	uniform = pick(
 		/obj/item/clothing/under/ms13/wasteland/petrochico,\
@@ -43,9 +52,13 @@
 	suit = pick(
         /obj/item/clothing/suit/ms13/vest/cowboy,\
         /obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat,\
+		/obj/item/clothing/suit/ms13/vest/puffer,\
         /obj/item/clothing/suit/ms13/ljacket/bomber,\
         /obj/item/clothing/suit/armor/ms13/kit/light,\
         /obj/item/clothing/suit/ms13/ljacket/biker,\
+		/obj/item/clothing/suit/ms13/trench,\
+		/obj/item/clothing/suit/ms13/trench/dapper,\
+		/obj/item/clothing/suit/ms13/ljacket/veteran,\
         /obj/item/clothing/suit/armor/ms13/leatherarmor/light)
 	r_hand = pick(
 		/obj/item/claymore/ms13/machete/pipe,\

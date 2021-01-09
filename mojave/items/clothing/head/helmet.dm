@@ -5,6 +5,33 @@
 	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
 	flags_inv = HIDEHAIR
 
+/obj/item/clothing/head/helmet/ms13/baseball
+	name = "baseball cap"
+	desc = "A classic baseball cap. A relic from pre-nuclear America."
+	icon_state = "baseball"
+	inhand_icon_state = "baseball"
+
+/obj/item/clothing/head/helmet/ms13/utilitycap
+	name = "utility cap"
+	desc = "A dusty utility cap. History practicaly seeps from the half-frayed fabrics of it."
+	icon_state = "utility_gsoft"
+	inhand_icon_state = "baseball"
+
+/obj/item/clothing/head/helmet/ms13/utilitycap/blue
+	name = "blue utility cap"
+	desc = "A pleasant blue utility cap. The brim is a bit floppy."
+	icon_state = "utility_nsoft"
+
+/obj/item/clothing/head/helmet/ms13/utilitycap/green
+	name = "green utility cap"
+	desc = "A fashionable green utility cap. Could be used to blend in with ANYTHING green nearby."
+	icon_state = "utility_osoft"
+
+/obj/item/clothing/head/helmet/ms13/utilitycap/tan
+	name = "tan utility cap"
+	desc = "An old utility cap. This one's got a nice beige colour to it."
+	icon_state = "utility_tsoft"
+
 /obj/item/clothing/head/helmet/ms13/hockey
 	name = "hockey mask"
 	desc = "A standard hockey mask. Old sports gear is common protective gear in the wastes."
