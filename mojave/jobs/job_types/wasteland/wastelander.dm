@@ -15,19 +15,44 @@
 	name = "_Wastelander"
 	jobtype = /datum/job/ms13/wasteland/wastelander
 
-	head = /obj/item/clothing/head/collectable/petehat
-
 /datum/outfit/job/ms13/wasteland/wastelander/pre_equip(mob/living/carbon/human/H)
 	..()
+	if(prob(75))
+		head = pick(
+		/obj/item/clothing/head/helmet/ms13/cowboy/black,\
+    	/obj/item/clothing/head/helmet/ms13/cowboy/stormchaser,\
+		/obj/item/clothing/head/helmet/ms13/cowboy/padded/ushanka)
+	else
+		head = null
+
 	uniform = pick(
 		/obj/item/clothing/under/ms13/wasteland/petrochico,\
 		/obj/item/clothing/under/ms13/wasteland/roving,\
 		/obj/item/clothing/under/ms13/wasteland/mechanic,\
 		/obj/item/clothing/under/ms13/wasteland/doctor,\
 		/obj/item/clothing/under/ms13/wasteland/combat,\
-		/obj/item/clothing/under/ms13/wasteland/merca)
-	
+		/obj/item/clothing/under/ms13/wasteland/merca,\
+		/obj/item/clothing/under/ms13/wasteland/brownvest,\
+        /obj/item/clothing/under/ms13/wasteland/stripeblue,\
+        /obj/item/clothing/under/ms13/wasteland/stripered,\
+        /obj/item/clothing/under/ms13/wasteland/checkeredgreen,\
+        /obj/item/clothing/under/ms13/wasteland/checkeredblue,\
+        /obj/item/clothing/under/ms13/wasteland/plaid_r,\
+        /obj/item/clothing/under/ms13/wasteland/plaid_g,\
+        /obj/item/clothing/under/ms13/wasteland/plaid_b)
+	suit = pick(
+        /obj/item/clothing/suit/ms13/vest/cowboy,\
+        /obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat,\
+        /obj/item/clothing/suit/ms13/ljacket/bomber,\
+        /obj/item/clothing/suit/armor/ms13/kit/light,\
+        /obj/item/clothing/suit/ms13/ljacket/biker,\
+        /obj/item/clothing/suit/armor/ms13/leatherarmor/light)
 	r_hand = pick(
 		/obj/item/claymore/ms13/machete/pipe,\
 		/obj/item/claymore/ms13/machete/pipe/tireiron)
-
+	shoes = pick(
+        /obj/item/clothing/shoes/ms13/tan,\
+        /obj/item/clothing/shoes/ms13/explorer,\
+		/obj/item/clothing/shoes/ms13/military,\
+        /obj/item/clothing/shoes/ms13/military/diesel,\
+        /obj/item/clothing/shoes/ms13/military/female/diesel)
