@@ -10,24 +10,31 @@ Why not use ridden vehicle instead? because that would require a upstream change
 	icon = 'icons/obj/power_armor.dmi'
 	icon_state = "t45dpowerarmor"
 	max_integrity = 500
-	
+
 	//DON'T modify below armor while the armor is applied to the user or else you'll need to code a solution for differing armor types when (de)equipping
 	armor = list(MELEE = 70, BULLET = 70, LASER = 70, ENERGY = 0, BOMB = 70, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
 
 /obj/vehicle/sealed/power_armor/after_add_occupant(mob/M)
 	. = ..()
 	REMOVE_TRAIT(M, TRAIT_HANDS_BLOCKED, VEHICLE_TRAIT)
+	ADD_TRAIT(M, TRAIT_FORCED_STANDING, "power_armor")
 	//Give an armor boost to the wearer as if it had it equipped
-	if(M.armor)
-		M.armor.attachArmor(armor)
+	if(!ishuman(M))
+		return
+	var/mob/living/carbon/human/H = M
+	if(H.physiology.armor)
+		H.physiology.armor.attachArmor(armor)
 	//Because of the problem with just using buckle via ridden vehicle, we'll just force the user to stand up even when crit/immobilized
-	ADD_TRAIT(m, TRAIT_FORCED_STANDING, "power_armor")
 
 /obj/vehicle/sealed/power_armor/after_remove_occupant(mob/M)
 	. = ..()
-	if(M.armor)
-		M.armor.detachArmor(armor)
-	REMOVE_TRAIT(m, TRAIT_FORCED_STANDING, "power_armor")
+	REMOVE_TRAIT(M, TRAIT_FORCED_STANDING, "power_armor")
+	if(!ishuman(M))
+		return
+	var/mob/living/carbon/human/H = M
+	if(H.physiology.armor)
+		H.physiology.armor.attachArmor(armor)
+	H.physiology.armor.detachArmor(armor)
 
 //Technically this is a suit of armor covering the entire human player
 //Essentially we'll damage some of this armor to represent the penetration/chip damage while the internal user gets damaged from compromised armor
@@ -38,4 +45,13 @@ Why not use ridden vehicle instead? because that would require a upstream change
 	for(var/m in return_occupants())
 		var/mob/mob_occupant = m
 		mob_occupant.bullet_act(P) //Some of this damage will get negated due to armor buff being applied to the user from after_add_occupant()
+	return TRUE
+
+//Same thing as parent but without force move
+/obj/vehicle/sealed/power_armor/mob_enter(mob/M, silent = FALSE)
+	if(!istype(M))
+		return FALSE
+	if(!silent)
+		M.visible_message("<span class='notice'>[M] climbs into \the [src]!</span>")
+	add_occupant(M)
 	return TRUE
