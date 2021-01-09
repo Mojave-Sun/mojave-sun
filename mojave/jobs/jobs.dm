@@ -24,7 +24,9 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Trooper",
 	"NCR Radioman",
 	"NCR Corporal",
+  "NCR Engineer",
 	"NCR Sergeant",
+  "NCR Medical Officer",
 	"NCR Lieutenant"))
 
 GLOBAL_LIST_INIT(bos_positions, list(
