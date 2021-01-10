@@ -3,7 +3,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "Mayor and the Sheriff."
-	description = ""
+	description = "Mine resources for the Town to use"
 	forbid = ""
 	enforce = ""
 

@@ -2,8 +2,8 @@
 	title = "Town Shopkeep"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = ""
-	description = ""
+	supervisors = "The Mayor and Sheriff."
+	description = "Hustle off any goods you come across at a questionable price. After all, what other high quality shop will they find in the next hundred miles?"
 	forbid = ""
 	enforce = ""
 

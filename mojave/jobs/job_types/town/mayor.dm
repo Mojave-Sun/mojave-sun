@@ -2,8 +2,8 @@
 	title = "Town Mayor"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = ""
-	description = ""
+	supervisors = "Yourself!"
+	description = "At long last You are the head man of the Town! Rule it however you may, it is a blank slate for anything you desire."
 	forbid = ""
 	enforce = ""
 

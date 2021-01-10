@@ -2,8 +2,8 @@
 	title = "Town Settler"
 	total_positions = 10
 	spawn_positions = 10
-	supervisors = ""
-	description = ""
+	supervisors = "Law enforcement, The Mayor."
+	description = "You're a lucky resident of the Town! It's quite a privilege. Try to make yourself useful in some way, there's work to be done everywhere."
 	forbid = ""
 	enforce = ""
 
