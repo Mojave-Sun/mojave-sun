@@ -1,7 +1,7 @@
 /datum/job/ms13/town/nurse
 	title = "Town Nurse"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "Doctors, Mayor and Sheriff."
 	description = "Assist the Town's doctors in whatever they may need."
 	forbid = ""
