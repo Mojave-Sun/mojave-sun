@@ -19,8 +19,8 @@
 	head = 	     null
 	ears = 		 null
 	mask =		 /obj/item/clothing/mask/surgical
-	glasses =	 /obj/item/clothing/suit/apron/surgical
-	suit =       /obj/item/clothing/suit/ms13/vaultlab
+	glasses =	 null
+	suit =       /obj/item/clothing/suit/apron/surgical
 	suit_store = null
 	uniform =    /obj/item/clothing/under/ms13/vaultsuit
 	gloves = 	 /obj/item/clothing/gloves/color/latex/nitrile

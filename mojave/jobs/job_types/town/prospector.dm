@@ -18,9 +18,9 @@
 	id = 		 null
 	head = 	     /obj/item/clothing/head/helmet/ms13/reinfhard
 	ears = 		 null
-	glasses =	 null
+	glasses =	 /obj/item/clothing/glasses/ms13/goggles
 	mask =		 /obj/item/clothing/mask/ms13/facewrap/halfwrap
-	suit =       null
+	suit =       /obj/item/clothing/suit/armor/ms13/kit/light
 	suit_store = null
 	uniform =    /obj/item/clothing/under/ms13/vaultsuit
 	gloves = 	 /obj/item/clothing/gloves/ms13/baseball
