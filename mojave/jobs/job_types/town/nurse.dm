@@ -18,7 +18,7 @@
 	id = 		 null
 	head = 	     null
 	ears = 		 null
-	mask =		 /obj/item/clothing/mask/surgical
+	mask =		 null
 	glasses =	 null
 	suit =       /obj/item/clothing/suit/apron/surgical
 	suit_store = null
