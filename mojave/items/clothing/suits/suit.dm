@@ -262,3 +262,9 @@
 	desc = "A perfectly preserved pre-war VINTAGE Manny Mammoth suit! It smells of crusty pizza."
 	icon_state = "mannybody"
 	inhand_icon_state = "chickensuit"
+
+/obj/item/clothing/suit/ms13/vaultlab
+	name = "vault lab coat"
+	desc = "A lab coat often worn by Vault doctors. Good for protecting your precious undersuit from rapid blood ejection from your patients."
+	icon_state = "vaultlabcoat"
+	inhand_icon_state = "labcoat"

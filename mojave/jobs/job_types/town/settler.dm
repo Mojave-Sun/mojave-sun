@@ -15,7 +15,16 @@
 	name = "_Town Settler"
 	jobtype = /datum/job/ms13/town/settler
 
-	head = /obj/item/clothing/head/collectable/petehat
+	id = 		 null
+	head = 	     null
+	ears = 		 null
+	glasses =	 null
+	suit =       null
+	suit_store = null
+	uniform =    /obj/item/clothing/under/ms13/vaultsuit
+	gloves = 	 null
+	belt = 		 null
+	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
 
 /datum/outfit/job/ms13/town/settler/pre_equip(mob/living/carbon/human/H)
 	..()

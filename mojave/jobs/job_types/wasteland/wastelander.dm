@@ -1,7 +1,7 @@
 /datum/job/ms13/wasteland/wastelander
 	title = "Wastelander"
 	total_positions = 200
-	spawn_positions = 2
+	spawn_positions = 200
 	supervisors = "God, if He remembers you exist"
 	description = "Survive. Work with your fellow man to accomplish this if you can, and stop them if they try and jeporadize your survival."
 	forbid = ""
@@ -29,11 +29,23 @@
 	if(prob(25))
 		mask = pick(
 		/obj/item/clothing/mask/ms13/facewrap,\
+		/obj/item/clothing/mask/ms13/facewrap/red,\
+		/obj/item/clothing/mask/ms13/facewrap/black,\
+		/obj/item/clothing/mask/ms13/facewrap/blue,\
         /obj/item/clothing/mask/gas,\
         /obj/item/clothing/mask/bandana/black,\
         /obj/item/clothing/mask/balaclava)
 	else
 		mask = null
+
+	if(prob(35))
+		back = pick(
+		/obj/item/storage/backpack/duffelbag,\
+		/obj/item/storage/backpack/satchel/leather,\
+		/obj/item/storage/backpack,\
+		/obj/item/storage/backpack/duffelbag)
+	else
+		back = null
 
 	uniform = pick(
 		/obj/item/clothing/under/ms13/wasteland/petrochico,\
@@ -52,6 +64,8 @@
         /obj/item/clothing/under/ms13/wasteland/plaid_b)
 	suit = pick(
         /obj/item/clothing/suit/ms13/vest/cowboy,\
+		/obj/item/clothing/suit/ms13/vest/denim,\
+        /obj/item/clothing/suit/ms13/vest/grey,\
         /obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat,\
 		/obj/item/clothing/suit/ms13/vest/puffer,\
         /obj/item/clothing/suit/ms13/ljacket/bomber,\

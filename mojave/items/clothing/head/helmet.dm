@@ -40,6 +40,13 @@
 	armor = list("melee" = 40, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 
+/obj/item/clothing/head/helmet/ms13/vaulthelmet
+	name = "vault security helmet"
+	desc = "A rather pristine vault-tec officer's helmet. Surprisingly intact."
+	icon_state = "vaulthelmet"
+	inhand_icon_state = "helmet"
+	armor = list(melee = 45, bullet = 15, laser = 20, energy = 20, bomb = 35, bio = 10, rad = 10, fire = 30, acid = 10)
+
 /obj/item/clothing/head/helmet/ms13/wastehound
 	name = "wastehound raider helmet"
 	desc = "Raider helmet with a bit of kevlar padding. Good for stopping bullets, but not much else."

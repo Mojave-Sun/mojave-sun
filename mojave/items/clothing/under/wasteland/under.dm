@@ -270,5 +270,3 @@
 	desc = "An unmarked vault suit. How peculiar."
 	icon_state = "vault"
 	inhand_icon_state = "b_suit"
-	can_adjust = TRUE
-	alt_covers_chest = FALSE
