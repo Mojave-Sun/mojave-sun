@@ -19,12 +19,13 @@
 	head = 	     null
 	ears = 		 null
 	glasses =	 null
-	suit =       null
+	suit =       /obj/item/clothing/suit/ms13/snazzyleather
 	suit_store = null
 	uniform =    /obj/item/clothing/under/ms13/vaultsuit
-	gloves = 	 /obj/item/clothing/gloves/color/white
+	gloves = 	 null
 	belt = 		 null
 	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
+	back = 		 /obj/item/storage/backpack/satchel/leather
 
 /datum/outfit/job/ms13/town/shopkeep/pre_equip(mob/living/carbon/human/H)
 	..()

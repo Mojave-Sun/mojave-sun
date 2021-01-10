@@ -9,7 +9,9 @@ GLOBAL_LIST_INIT(town_positions, list(
 	"Town Shopkeep",
 	"Town Farmer",
 	"Town Bartender",
+	"Town Prospector",
 	"Town Doctor",
+	"Town Nurse",
 	"Town Deputy",
 	"Town Sheriff"))
 

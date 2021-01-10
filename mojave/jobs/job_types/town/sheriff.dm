@@ -2,7 +2,7 @@
 	title = "Town Sheriff"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = ""
+	supervisors = "The Mayor."
 	description = ""
 	forbid = ""
 	enforce = ""
@@ -15,7 +15,7 @@
 	name = "_Town Sheriff"
 	jobtype = /datum/job/ms13/town/sheriff
 
-	id = 		 null
+	id = 		 /obj/item/card/id/ms13/sheriff
 	head = 	     /obj/item/clothing/head/helmet/ms13/cowboy/sheriff
 	ears = 		 null
 	glasses =	 null
@@ -26,5 +26,6 @@
 	belt = 		 null
 	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
 	back = 		 /obj/item/storage/backpack/satchel/leather
+
 /datum/outfit/job/ms13/town/sheriff/pre_equip(mob/living/carbon/human/H)
 	..()

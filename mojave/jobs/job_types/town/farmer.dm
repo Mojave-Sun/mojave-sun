@@ -2,7 +2,7 @@
 	title = "Town Farmer"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = ""
+	supervisors = "Mayor and the Sheriff."
 	description = ""
 	forbid = ""
 	enforce = ""
@@ -19,10 +19,10 @@
 	head = 	     null
 	ears = 		 null
 	glasses =	 null
-	suit =       null
+	suit =       /obj/item/clothing/suit/apron/waders/ms13
 	suit_store = null
 	uniform =    /obj/item/clothing/under/ms13/vaultsuit
-	gloves = 	 null
+	gloves = 	 /obj/item/clothing/gloves/ms13/leather
 	belt = 		 null
 	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
 

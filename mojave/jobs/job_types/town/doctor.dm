@@ -2,7 +2,7 @@
 	title = "Town Doctor"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = ""
+	supervisors = "Mayor and the Sheriff."
 	description = ""
 	forbid = ""
 	enforce = ""

@@ -19,7 +19,7 @@
 	head = 	     null
 	ears = 		 null
 	glasses =	 null
-	suit =       null
+	suit =       /obj/item/clothing/suit/ms13/ljacket/mayor
 	suit_store = null
 	uniform =    /obj/item/clothing/under/ms13/vaultsuit
 	gloves = 	 null

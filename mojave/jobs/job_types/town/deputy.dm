@@ -2,7 +2,7 @@
 	title = "Town Deputy"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = ""
+	supervisors = "Mayor and the Sheriff."
 	description = ""
 	forbid = ""
 	enforce = ""
@@ -15,7 +15,7 @@
 	name = "_Town Deputy"
 	jobtype = /datum/job/ms13/town/deputy
 
-	id = 		 null
+	id = 		 /obj/item/card/id/ms13/deputy
 	head = 	     /obj/item/clothing/head/helmet/ms13/vaulthelmet
 	ears = 		 null
 	glasses =	 null

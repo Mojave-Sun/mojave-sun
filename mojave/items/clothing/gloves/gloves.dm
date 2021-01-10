@@ -33,7 +33,7 @@
 
 /obj/item/clothing/gloves/ms13/baseball
 	name = "baseball glove"
-	desc = "An old baseball glove. The interior leather has formed sharp point and sorta hurts. Could probably protect your hand against a smack or two."
+	desc = "An old baseball glove. The interior leather has formed sharp point and sorta hurts. Provides some nice protection to your hand when smacking things repeatedly."
 	icon_state = "baseball"
 	inhand_icon_state = "bgloves"
 
