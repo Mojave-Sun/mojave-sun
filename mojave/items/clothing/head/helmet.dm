@@ -45,6 +45,7 @@
 	desc = "A rather pristine vault-tec officer's helmet. Surprisingly intact."
 	icon_state = "vaulthelmet"
 	inhand_icon_state = "helmet"
+	flags_inv = HIDEEARS|HIDEHAIR
 	armor = list(melee = 45, bullet = 15, laser = 20, energy = 20, bomb = 35, bio = 10, rad = 10, fire = 30, acid = 10)
 
 /obj/item/clothing/head/helmet/ms13/wastehound

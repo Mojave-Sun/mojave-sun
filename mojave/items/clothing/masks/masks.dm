@@ -10,11 +10,10 @@
 	icon_state = "facewrap"
 	flags_inv = HIDEFACE
 
-/obj/item/clothing/mask/ms13/halfwrap
+/obj/item/clothing/mask/ms13/facewrap/halfwrap
 	name = "tan halfwrap"
 	desc = "A sturdy wrapping for your face. A bit rough in some places, but overall fair quality."
 	icon_state = "halfwrap"
-	flags_inv = HIDEFACE
 
 /obj/item/clothing/mask/ms13/facewrap/black
 	name = "black facewrap"
