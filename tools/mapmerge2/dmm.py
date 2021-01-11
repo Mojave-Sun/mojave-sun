@@ -22,20 +22,19 @@ class DMM:
 
     @staticmethod
     def from_file(fname):
-        # stream the file rather than forcing all its contents to memory
         with open(fname, 'r', encoding=ENCODING) as f:
-            return _parse(iter(lambda: f.read(1), ''))
+            return _parse(f.read())
 
     @staticmethod
     def from_bytes(bytes):
         return _parse(bytes.decode(ENCODING))
 
-    def to_file(self, fname, tgm = True):
+    def to_file(self, fname, *, tgm = True):
         self._presave_checks()
         with open(fname, 'w', newline='\n', encoding=ENCODING) as f:
             (save_tgm if tgm else save_dmm)(self, f)
 
-    def to_bytes(self, tgm = True):
+    def to_bytes(self, *, tgm = True):
         self._presave_checks()
         bio = io.BytesIO()
         with io.TextIOWrapper(bio, newline='\n', encoding=ENCODING) as f:
@@ -55,6 +54,7 @@ class DMM:
         return self.dictionary[self.grid[coord]]
 
     def set_tile(self, coord, tile):
+        tile = tuple(tile)
         self.grid[coord] = self.get_or_generate_key(tile)
 
     def generate_new_key(self):
@@ -560,6 +560,11 @@ def _parse(map_raw_text):
 
     if curr_y > maxy:
         maxy = curr_y
+
+    if not grid:
+        # Usually caused by unbalanced quotes.
+        max_key = num_to_key(max(dictionary.keys()), key_length, True)
+        raise ValueError(f"dmm failed to parse, check for a syntax error near or after key {max_key!r}")
 
     # Convert from raw .dmm coordinates to DM/BYOND coordinates by flipping Y
     grid2 = dict()

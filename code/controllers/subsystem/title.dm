@@ -38,7 +38,7 @@ SUBSYSTEM_DEF(title)
 
 	icon = new(fcopy_rsc(file_path))
 
-	/* What could possibly go wrong? -tgclaw
+	/* MS13 - What could possibly go wrong? 
 	if(splash_turf)
 		splash_turf.icon = icon
 	*/

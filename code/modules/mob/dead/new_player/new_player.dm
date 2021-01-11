@@ -41,8 +41,8 @@
 	return
 
 /**
-  * This proc generates the panel that opens to all newly joining players, allowing them to join, observe, view polls, view the current crew manifest, and open the character customization menu.
-  */
+ * This proc generates the panel that opens to all newly joining players, allowing them to join, observe, view polls, view the current crew manifest, and open the character customization menu.
+ */
 /mob/dead/new_player/proc/new_player_panel()
 	if (client?.interviewee)
 		return
@@ -397,13 +397,13 @@
 	dat += "<table><tr><td valign='top'>"
 	var/column_counter = 0
 	// render each category's available jobs
-	for(var/category in GLOB.f13_position_categories)
+	for(var/category in GLOB.ms13_position_categories)
 		// position_categories contains category names mapped to available jobs and an appropriate color
-		var/cat_color = GLOB.f13_position_categories[category]["color"]
+		var/cat_color = GLOB.ms13_position_categories[category]["color"]
 		dat += "<fieldset style='width: 185px; border: 2px solid [cat_color]; display: inline'>"
 		dat += "<legend align='center' style='color: [cat_color]'>[category]</legend>"
 		var/list/dept_dat = list()
-		for(var/job in GLOB.f13_position_categories[category]["jobs"])
+		for(var/job in GLOB.ms13_position_categories[category]["jobs"])
 			var/datum/job/job_datum = SSjob.name_occupations[job]
 			if(job_datum && IsJobUnavailable(job_datum.title, TRUE) == JOB_AVAILABLE)
 				var/command_bold = ""
@@ -453,7 +453,6 @@
 
 	client.prefs.copy_to(H, antagonist = is_antag, is_latejoiner = transfer_after)
 
-	client.prefs.copy_to(H, antagonist = is_antag)
 	H.dna.update_dna_identity()
 	if(mind)
 		if(transfer_after)
@@ -530,11 +529,11 @@
 	return TRUE
 
 /**
-  * Prepares a client for the interview system, and provides them with a new interview
-  *
-  * This proc will both prepare the user by removing all verbs from them, as well as
-  * giving them the interview form and forcing it to appear.
-  */
+ * Prepares a client for the interview system, and provides them with a new interview
+ *
+ * This proc will both prepare the user by removing all verbs from them, as well as
+ * giving them the interview form and forcing it to appear.
+ */
 /mob/dead/new_player/proc/register_for_interview()
 	// First we detain them by removing all the verbs they have on client
 	for (var/v in client.verbs)

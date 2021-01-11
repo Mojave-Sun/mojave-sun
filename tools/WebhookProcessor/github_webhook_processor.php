@@ -251,7 +251,7 @@ function tag_pr($payload, $opened) {
 		$tags[] = 'Merge Conflict';
 
 	$treetags = array('_maps' => 'Map Edit', 'tools' => 'Tools', 'SQL' => 'SQL', '.github' => 'GitHub');
-	$addonlytags = array('icons' => 'Sprites', 'sound' => 'Sound', 'config' => 'Config Update', 'code/controllers/configuration/entries' => 'Config Update', 'tgui' => 'UI');
+	$addonlytags = array('icons' => 'Sprites', 'sound' => 'Sound', 'config' => 'Config Update', 'code/controllers/configuration/entries' => 'Config Update', 'code/modules/unit_tests' => 'Unit Tests', 'tgui' => 'UI');
 	foreach($treetags as $tree => $tag)
 		if(has_tree_been_edited($payload, $tree))
 			$tags[] = $tag;
@@ -644,17 +644,17 @@ function get_pr_code_friendliness($payload, $oldbalance = null){
 	//anything not in this list defaults to 0
 	$label_values = array(
 		'Fix' => 2,
-		'Refactor' => 2,
-		'CI/Tests' => 3,
+		'Refactor' => 10,
 		'Code Improvement' => 1,
 		'Grammar and Formatting' => 1,
 		'Priority: High' => 4,
 		'Priority: CRITICAL' => 5,
+		'Unit Tests' => 6,
 		'Logging' => 1,
 		'Feedback' => 1,
 		'Performance' => 3,
-		'Feature' => -1,
-		'Balance/Rebalance' => -1,
+		'Feature' => -10,
+		'Balance/Rebalance' => -8,
 		'PRB: Reset' => $startingPRBalance - $oldbalance,
 	);
 
@@ -967,7 +967,7 @@ function checkchangelog($payload, $compile = true) {
 
 function game_server_send($addr, $port, $str) {
 	// All queries must begin with a question mark (ie "?players")
-	if($str{0} != '?') $str = ('?' . $str);
+	if($str[0] != '?') $str = ('?' . $str);
 	
 	/* --- Prepare a packet to send to the server (based on a reverse-engineered packet structure) --- */
 	$query = "\x00\x83" . pack('n', strlen($str) + 6) . "\x00\x00\x00\x00\x00" . $str . "\x00";
@@ -997,23 +997,23 @@ function game_server_send($addr, $port, $str) {
 	socket_close($server); // we don't need this anymore
 	
 	if($result != "") {
-		if($result{0} == "\x00" || $result{1} == "\x83") { // make sure it's the right packet format
+		if($result[0] == "\x00" || $result[1] == "\x83") { // make sure it's the right packet format
 			
 			// Actually begin reading the output:
-			$sizebytes = unpack('n', $result{2} . $result{3}); // array size of the type identifier and content
+			$sizebytes = unpack('n', $result[2] . $result[3]); // array size of the type identifier and content
 			$size = $sizebytes[1] - 1; // size of the string/floating-point (minus the size of the identifier byte)
 			
-			if($result{4} == "\x2a") { // 4-byte big-endian floating-point
-				$unpackint = unpack('f', $result{5} . $result{6} . $result{7} . $result{8}); // 4 possible bytes: add them up together, unpack them as a floating-point
+			if($result[4] == "\x2a") { // 4-byte big-endian floating-point
+				$unpackint = unpack('f', $result[5] . $result[6] . $result[7] . $result[8]); // 4 possible bytes: add them up together, unpack them as a floating-point
 				return $unpackint[1];
 			}
-			else if($result{4} == "\x06") { // ASCII string
+			else if($result[4] == "\x06") { // ASCII string
 				$unpackstr = ""; // result string
 				$index = 5; // string index
 				
 				while($size > 0) { // loop through the entire ASCII string
 					$size--;
-					$unpackstr .= $result{$index}; // add the string position to return string
+					$unpackstr .= $result[$index]; // add the string position to return string
 					$index++;
 				}
 				return $unpackstr;

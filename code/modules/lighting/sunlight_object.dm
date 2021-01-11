@@ -278,7 +278,7 @@ Sunlight System
 	icon_state = "roof_rock"
 
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood
-	roofType = /turf/open/floor/wood/f13
+	roofType = /turf/open/floor/wood/ms13
 	icon_state = "roof_wood"
 
 

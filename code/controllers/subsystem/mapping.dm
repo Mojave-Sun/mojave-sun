@@ -155,7 +155,7 @@ SUBSYSTEM_DEF(mapping)
 		qdel(T, TRUE)
 
 /* Nuke threats, for making the blue tiles on the station go RED
-   Used by the AI doomsday and the self-destruct nuke.
+Used by the AI doomsday and the self-destruct nuke.
 */
 
 /datum/controller/subsystem/mapping/proc/add_nuke_threat(datum/nuke)
@@ -271,7 +271,7 @@ SUBSYSTEM_DEF(mapping)
 
 	if(config.minetype == "lavaland")
 		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND)
-	//TG CLAW: NO MORE LAVALAND
+	//MS13: NO MORE LAVALAND
 	//else if (!isnull(config.minetype))
 	//	INIT_ANNOUNCE("WARNING: An unknown minetype '[config.minetype]' was set! This is being ignored! Update the maploader code!")
 	else if (!isnull(config.minetype) && config.minetype != "none")
