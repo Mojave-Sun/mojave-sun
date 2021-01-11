@@ -19,9 +19,7 @@
 	uniform =    /obj/item/clothing/under/ms13/vaultsuit
 	gloves = 	 /obj/item/clothing/gloves/color/white
 	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
-
-	backpack -	 /obj/item/storage/backpack/
-	satchel = 	 /obj/item/storage/backpack/satchel/leather
+	back =	 	 /obj/item/storage/backpack/
 
 /datum/outfit/job/ms13/town/bartender/pre_equip(mob/living/carbon/human/H)
 	..()

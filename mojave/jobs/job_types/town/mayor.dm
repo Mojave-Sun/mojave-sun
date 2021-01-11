@@ -18,9 +18,7 @@
 	suit =       /obj/item/clothing/suit/ms13/ljacket/mayor
 	uniform =    /obj/item/clothing/under/ms13/vaultsuit
 	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
-
-	backpack -	 /obj/item/storage/backpack/
-	satchel = 	 /obj/item/storage/backpack/satchel/leather
+	back =	 	 /obj/item/storage/backpack/
 
 /datum/outfit/job/ms13/town/mayor/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -39,10 +39,8 @@
 		mask = null
 
 	back = pick(
-		/obj/item/storage/backpack/duffelbag,\
 		/obj/item/storage/backpack/satchel/leather,\
-		/obj/item/storage/backpack,\
-		/obj/item/storage/backpack/duffelbag)
+		/obj/item/storage/backpack)
 
 
 	uniform = pick(
