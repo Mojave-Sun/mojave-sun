@@ -15,16 +15,9 @@
 	name = "_Town Nurse"
 	jobtype = /datum/job/ms13/town/nurse
 
-	id = 		 null
-	head = 	     null
-	ears = 		 null
-	mask =		 null
-	glasses =	 null
 	suit =       /obj/item/clothing/suit/apron/surgical
-	suit_store = null
 	uniform =    /obj/item/clothing/under/ms13/vaultsuit
 	gloves = 	 /obj/item/clothing/gloves/color/latex/nitrile
-	belt = 		 null
 	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
 
 /datum/outfit/job/ms13/town/nurse/pre_equip(mob/living/carbon/human/H)

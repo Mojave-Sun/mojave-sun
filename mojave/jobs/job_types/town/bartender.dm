@@ -15,15 +15,9 @@
 	name = "_Town Bartender"
 	jobtype = /datum/job/ms13/town/bartender
 
-	id = 		 null
-	head = 	     null
-	ears = 		 null
-	glasses =	 null
 	suit =       /obj/item/clothing/suit/ms13/vest/denim
-	suit_store = null
 	uniform =    /obj/item/clothing/under/ms13/vaultsuit
 	gloves = 	 /obj/item/clothing/gloves/color/white
-	belt = 		 null
 	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
 
 /datum/outfit/job/ms13/town/bartender/pre_equip(mob/living/carbon/human/H)
