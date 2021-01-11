@@ -38,14 +38,12 @@
 	else
 		mask = null
 
-	if(prob(35))
-		back = pick(
+	back = pick(
 		/obj/item/storage/backpack/duffelbag,\
 		/obj/item/storage/backpack/satchel/leather,\
 		/obj/item/storage/backpack,\
 		/obj/item/storage/backpack/duffelbag)
-	else
-		back = null
+
 
 	uniform = pick(
 		/obj/item/clothing/under/ms13/wasteland/petrochico,\

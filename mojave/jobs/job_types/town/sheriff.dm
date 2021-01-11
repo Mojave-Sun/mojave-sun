@@ -23,5 +23,10 @@
 	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
 	back = 		 /obj/item/storage/backpack/satchel/leather
 
+	backpack -	 /obj/item/storage/backpack/
+	satchel = 	 /obj/item/storage/backpack/satchel/leather
+
+
+
 /datum/outfit/job/ms13/town/sheriff/pre_equip(mob/living/carbon/human/H)
 	..()
