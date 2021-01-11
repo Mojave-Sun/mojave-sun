@@ -7,8 +7,9 @@ This hack is done because I wanted power armor to be a menacing structure both o
 /obj/vehicle/sealed/power_armor
 	name = "Generic Power Armor"
 	desc = "Don't ever use this in the video game please."
-	icon = 'icons/obj/power_armor.dmi'
-	icon_state = "t45dpowerarmor"
+	icon = 'mojave/icons/mob/clothing/suit.dmi'
+	icon_state = "t45-pa"
+	enter_delay = 6 SECONDS
 	var/obj/item/clothing/suit/space/hardsuit/power_armor/actual_armor //The actual armor piece to make the pilot force equip
 	max_integrity = 500
 	anchored = TRUE
@@ -49,8 +50,8 @@ This hack is done because I wanted power armor to be a menacing structure both o
 /obj/item/clothing/head/helmet/space/hardsuit/power_armor
 	name = "Generic Power Armor Helmet"
 	desc = "Don't ever use this in the video game please."
-	//icon = 'icons/obj/power_armor.dmi'
-	//icon_state = "t45dpowerarmor"
+	icon = 'mojave/icons/mob/clothing/head.dmi'
+	icon_state = "t45_pa"
 	item_flags = ABSTRACT
 	strip_delay = 200
 	max_integrity = 500
@@ -60,8 +61,8 @@ This hack is done because I wanted power armor to be a menacing structure both o
 /obj/item/clothing/suit/space/hardsuit/power_armor
 	name = "Generic Power Armor"
 	desc = "Don't ever use this in the video game please."
-	icon = 'icons/obj/power_armor.dmi'
-	icon_state = "t45dpowerarmor"
+	icon = 'mojave/icons/mob/clothing/suit.dmi'
+	icon_state = "t45-pa"
 	item_flags = ABSTRACT
 	strip_delay = 200
 	var/obj/vehicle/sealed/power_armor/linked_vehicle //The vehicle instance this is linked to for regenerating back to it
@@ -106,6 +107,7 @@ This hack is done because I wanted power armor to be a menacing structure both o
 	if(prob(50))
 		var/datum/effect_system/spark_spread/spark_system = new /datum/effect_system/spark_spread
 		spark_system.start()
+	..()
 
 //Instead of qdeling the hardsuit, we'll revert it back to the vehicle and put it into a damaged and movable state as if it was a mecha suit
 /obj/item/clothing/suit/space/hardsuit/power_armor/deconstruct(disassembled = TRUE)
