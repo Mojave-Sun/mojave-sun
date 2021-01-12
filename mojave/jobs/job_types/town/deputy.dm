@@ -2,8 +2,8 @@
 	title = "Town Deputy"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = ""
-	description = ""
+	supervisors = "Mayor and the Sheriff."
+	description = "Assist the law enforcement of the Sheriff and do as they say."
 	forbid = ""
 	enforce = ""
 
@@ -15,7 +15,14 @@
 	name = "_Town Deputy"
 	jobtype = /datum/job/ms13/town/deputy
 
-	head = /obj/item/clothing/head/collectable/petehat
+	id = 		 /obj/item/card/id/ms13/deputy
+	head = 	     /obj/item/clothing/head/helmet/ms13/vaulthelmet
+	mask =		 /obj/item/clothing/mask/ms13/facewrap/halfwrap
+	suit =       /obj/item/clothing/suit/armor/ms13/vest/vault
+	uniform =    /obj/item/clothing/under/ms13/vaultsuit
+	gloves = 	 /obj/item/clothing/gloves/ms13/vault
+	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
+	back =	 	 /obj/item/storage/backpack/satchel/leather
 
 /datum/outfit/job/ms13/town/deputy/pre_equip(mob/living/carbon/human/H)
 	..()
