@@ -1,4 +1,6 @@
 /obj/item/clothing/under/ms13
+	fitted = NO_FEMALE_UNIFORM
+	///femstatics destroyed (Also stops it going invisible when someone dosent make a thottiana version.)
 	can_adjust = FALSE
 	icon = 'mojave/icons/objects/clothing/uniforms.dmi'
 	worn_icon = 'mojave/icons/mob/clothing/uniform.dmi'
@@ -11,143 +13,33 @@
 /obj/item/clothing/under/ms13/wasteland
 	can_adjust = FALSE
 
-/obj/item/clothing/under/ms13/wasteland/petrochico
-	name = "petro chico jumpsuit"
-	desc = "A jumpsuit bearing the marks of the Petro Chico gas bar logo."
-	icon_state = "petrochico"
-	inhand_icon_state = "syndicate-green-dark"
+// pants //
 
-/obj/item/clothing/under/ms13/wasteland/merchant
-	name = "merchants' clothes"
-	desc = "A set of clothes worn often by merchants in the wasteland."
-	icon_state = "merchant"
-	inhand_icon_state = "det_suit"
-
-/obj/item/clothing/under/ms13/wasteland/roving
-	name = "roving traders' clothes"
-	desc = "A set of clothes worn often by merchants traveling around in the wasteland."
-	icon_state = "roving"
-	inhand_icon_state = "det_suit"
-
-/obj/item/clothing/under/ms13/wasteland/vestslacks
-	name = "vest and slacks"
-	desc = "A set of clothes with a vest."
-	icon_state = "vest_and_slacks"
-	inhand_icon_state = "sl_suit"
-
-/obj/item/clothing/under/ms13/wasteland/cowboy
-	name = "cowboy outfit"
-	desc = "A set of clothes most often worn by western folk."
-	icon_state = "cowboyb"
-	inhand_icon_state = "sl_suit"
-
-/obj/item/clothing/under/ms13/wasteland/cowboy/grey
-	icon_state = "cowboyg"
-
-/obj/item/clothing/under/ms13/wasteland/cowboy/tan
-	icon_state = "cowboyt"
-
-/obj/item/clothing/under/ms13/wasteland/caravaneer
-	name = "caravanner clothes"
-	desc = "A set of clothes usually worn by caravaneers."
-	icon_state = "caravaneer"
-	inhand_icon_state = "sl_suit"
-
-/obj/item/clothing/under/ms13/wasteland/mechanic
-	name = "mechanic's suit"
-	desc = "A dirty suit mostly worn by wasteland tinkerers and mechanics."
-	icon_state = "mechanic"
-	inhand_icon_state = "gy_suit"
-
-/obj/item/clothing/under/ms13/wasteland/khan
-	name = "khan's clothes"
-	desc = "A set of clothes usually worn by khan gang members."
-	icon_state = "khan"
-	inhand_icon_state = "sl_suit"
-
-/obj/item/clothing/under/ms13/wasteland/raider_leather
-	name = "raider leathers"
-	desc = "A set of ragged leather clothes usually worn by raiders."
-	icon_state = "raider_leather"
-	inhand_icon_state = "sl_suit"
-
-/obj/item/clothing/under/ms13/wasteland/prewar
-	name = "pristine pre-war clothing"
-	desc = "A set of pristine clothes from before the great war."
-	icon_state = "gentlesuit"
-	inhand_icon_state = "sl_suit"
-
-/obj/item/clothing/under/ms13/wasteland/prewar/black
-	name = "pristine pre-war clothing"
-	desc = "A set of pristine clothes from before the great war."
-	icon_state = "detectivealt"
-	inhand_icon_state = "sl_suit"
-
-/obj/item/clothing/under/ms13/wasteland/prewar/relaxedwear
-	name = "pre-war relaxed wear"
-	desc = "A set of pristine clothes from before the great war."
-	icon_state = "relaxedwear_m"
-	inhand_icon_state = "sl_suit"
-
-/obj/item/clothing/under/ms13/wasteland/prewar/spring
-	name = "pre-war spring wear"
-	desc = "A set of pristine spring clothes from before the great war."
-	icon_state = "spring_m"
-	inhand_icon_state = "sl_suit"
-
-/obj/item/clothing/under/ms13/wasteland/doctor
-	name = "wasteland doctor"
-	desc = "A set of ragged clothes usually worn by wasteland doctors."
-	icon_state = "doctor_m"
-	inhand_icon_state = "det"
-
-/obj/item/clothing/under/ms13/wasteland/doctor_f
-	name = "wasteland doctor"
-	desc = "A set of ragged clothes usually worn by wasteland doctors."
-	icon_state = "doctor_f"
-	inhand_icon_state = "det"
-
-/obj/item/clothing/under/ms13/wasteland/combat
-	name = "combat uniform"
-	desc = "A uniform worn by veterans of the wasteland."
-	icon_state = "combat_shirt"
-	inhand_icon_state = "gy_suit"
-
-/obj/item/clothing/under/ms13/wasteland/merca
-	name = "merc adventurer clothes"
-	desc = "A set of clothes worn by veterans of the wasteland."
-	icon_state = "merca"
-	inhand_icon_state = "gy_suit"
-
-/obj/item/clothing/under/ms13/wasteland/merca_f
-	name = "merc adventurer clothes"
-	desc = "A set of clothes worn by veterans of the wasteland."
-	icon_state = "merca_f"
-	inhand_icon_state = "gy_suit"
-
-/obj/item/clothing/under/ms13/wasteland/mercc
-	name = "merc clothes"
-	desc = "A set of clothes worn by veterans of the wasteland."
-	icon_state = "mercc"
-	inhand_icon_state = "gy_suit"
-
-/obj/item/clothing/under/ms13/wasteland/mercc_f
-	name = "merc clothes"
-	desc = "A set of clothes worn by veterans of the wasteland."
-	icon_state = "mercc_f"
-	inhand_icon_state = "gy_suit"
-
-/obj/item/clothing/under/ms13/wasteland/guard
-	name = "guard clothes"
-	desc = "A set of clothes worn by hired guards of the wasteland."
-	icon_state = "bodyguard"
-	inhand_icon_state = "det"
-
-/obj/item/clothing/under/ms13/wasteland/caravan_pants
+/obj/item/clothing/under/ms13/wasteland/caravanpants
 	name = "caravan pants"
 	desc = "A set of clothes worn by caravaneers that can't seem to afford a shirt."
 	icon_state = "caravan"
 	inhand_icon_state = "tribalrag"
+
+/obj/item/clothing/under/ms13/wasteland/pants
+	name = "cloth pants"
+	desc = "A relatively intact pair of cloth pants, grubby and dishevelled."
+	icon_state = "cloth"
+	inhand_icon_state = "tribalrag"
+
+/obj/item/clothing/under/ms13/wasteland/ghoulpants
+	name = "tattered cloth pants"
+	desc = "A barely intact pair of ancient cloth pants."
+	icon_state = "ghoul"
+	inhand_icon_state = "tribalrag"
+
+/obj/item/clothing/under/ms13/wasteland/warboypants
+	name = "warboy pants"
+	desc = "A hardy and strange set of leather pants, fastened with multiple belts."
+	icon_state = "warboy"
+	inhand_icon_state = "petcollar"
+
+// wasteland //
 
 /obj/item/clothing/under/ms13/wasteland/rag
 	name = "rags"
@@ -155,47 +47,275 @@
 	icon_state = "rag"
 	inhand_icon_state = "tribalrag"
 
-/obj/item/clothing/under/ms13/wasteland/canaan
-	name = "canaanite outfit"
-	desc = "A fancy shirt and pants worn by Canaanite missionaries."
-	icon_state = "canaan"
-	inhand_icon_state = "canaan"
+/obj/item/clothing/under/ms13/wasteland/worn
+	name = "worn clothes"
+	desc = "A set of ragged clothes that have seen better days."
+	icon_state = "worn"
+	inhand_icon_state = "ro_suit"
+
+/obj/item/clothing/under/ms13/wasteland/doctor
+	name = "doctor uniform"
+	desc = "A set of identifiably green, ragged clothes usually worn by wasteland doctors."
+	icon_state = "doctor"
+	inhand_icon_state = "ro_suit"
+
+/obj/item/clothing/under/ms13/wasteland/peasant
+	name = "homemade garbs"
+	desc = "A set of fully homemade garbs, post-war feudalism at its finest."
+	icon_state = "peasant"
+	inhand_icon_state = "syndicate-green-dark"
+
+/obj/item/clothing/under/ms13/wasteland/cowboy
+	name = "gunslingers outfit"
+	desc = "A set of clothes most often worn by western folk."
+	icon_state = "cowboyb"
+	inhand_icon_state = "shirt"
+
+/obj/item/clothing/under/ms13/wasteland/cowboy/grey
+	icon_state = "cowboyg"
+
+/obj/item/clothing/under/ms13/wasteland/cowboy/tan
+	icon_state = "cowboyt"
+
+/obj/item/clothing/under/ms13/wasteland/manager
+	name = "office worker clothes"
+	desc = "A set of pre-war clothes meant to show corporate authority."
+	icon_state = "manager"
+	inhand_icon_state = "shirt"
+
+/obj/item/clothing/under/ms13/wasteland/followers
+	name = "followers' outfit"
+	desc = "A set of shirt and extra large slacks denoting a member of the followers."
+	icon_state = "followers"
+	inhand_icon_state = "shirt"
+
+/obj/item/clothing/under/ms13/wasteland/guard
+	name = "guard clothes"
+	desc = "A set of clothes worn by the hired muscle of the wasteland."
+	icon_state = "bodyguard"
+	inhand_icon_state = "shirt"
 
 /obj/item/clothing/under/ms13/wasteland/mammoth
-	name = "mammoth outfit"
-	desc = "A woven shirt and pants given to residents of the town of Mammoth."
+	name = "mammoth clothes"
+	desc = "A unique pair of shirt and pants favoured by the residents of the mammoth region."
 	icon_state = "mammoth"
-	inhand_icon_state = "mammoth"
+	inhand_icon_state = "shirt"
+
+/obj/item/clothing/under/ms13/wasteland/wanderer
+	name = "wanderer clothing"
+	desc = "A grubby shirt and jeans, for the roamer not held back by life."
+	icon_state = "wanderer"
+	inhand_icon_state = "shirt"
+
+/obj/item/clothing/under/ms13/wasteland/rancher
+	name = "ranchers clothes"
+	desc = "A hard wearing set of ranching clothes, staple uniform of the brahmin barons."
+	icon_state = "brahmin"
+	inhand_icon_state = "shirt"
+
+/obj/item/clothing/under/ms13/wasteland/vestslacks
+	name = "vest and slacks"
+	desc = "A snazzy set of clothes with a stylish black vest."
+	icon_state = "vestandslacks"
+	inhand_icon_state = "ro_suit"
+
+/obj/item/clothing/under/ms13/wasteland/merchant
+	name = "merchants' clothes"
+	desc = "A set of clothes worn often by merchants in the wasteland."
+	icon_state = "merchant"
+	inhand_icon_state = "ro_suit"
+
+/obj/item/clothing/under/ms13/wasteland/ranger
+	name = "rangers' clothes"
+	desc = "A set of slick, lawkeeping and intimidating clothes."
+	icon_state = "ranger"
+	inhand_icon_state = "ncr_uniform"
 
 /obj/item/clothing/under/ms13/wasteland/hubologist
-	name = "hubologist outfit"
-	desc = "Light robes typically worn under a Hubologist's heavier main robes."
+	name = "hubologists' outfit"
+	desc = "Light hubologist sect robes typically worn under a heavier main preaching robes."
 	icon_state = "hubologist"
-	inhand_icon_state = "hubologist"
+	inhand_icon_state = "ro_suit"
+
+/obj/item/clothing/under/ms13/wasteland/caravaneer
+	name = "caravanner clothes"
+	desc = "A set of clothes usually worn by caravaneers."
+	icon_state = "caravaneer"
+	inhand_icon_state = "redstripe"
+
+/obj/item/clothing/under/ms13/wasteland/canaan
+	name = "canaanite outfit"
+	desc = "A fancy and unusual shirt and pants worn by Canaanite missionaries."
+	icon_state = "canaan"
+	inhand_icon_state = "greenjump"
+
+/obj/item/clothing/under/ms13/wasteland/swatter
+	name = "swatter outfit"
+	desc = "A strange pre-war shirt and pants ... what could they have been from? Nobody knows."
+	icon_state = "swatter"
+	inhand_icon_state = "shirt"
+
+/obj/item/clothing/under/ms13/wasteland/merca
+	name = "mercenary clothes"
+	desc = "A set of clothes worn by veterans of the wasteland."
+	icon_state = "merca"
+	inhand_icon_state = "syndicate-green-dark"
+
+/obj/item/clothing/under/ms13/wasteland/machinist
+	name = "machinist bodysuit"
+	desc = "The work attire of a machinist."
+	icon_state = "machinist"
+	inhand_icon_state = "ncr_uniform"
+
+/obj/item/clothing/under/ms13/wasteland/lumberjack
+	name = "lumberjack uniform"
+	desc = "The hardy work attire of a goddamn lumberjack."
+	icon_state = "machinist"
+	inhand_icon_state = "redstripe"
+
+/obj/item/clothing/under/ms13/wasteland/mercc
+	name = "merc' clothes"
+	desc = "A set of clothes worn by the more rugged veterans of the wasteland."
+	icon_state = "mercc"
+	inhand_icon_state = "bluejump"
+
+/obj/item/clothing/under/ms13/wasteland/roving
+	name = "roving traders' clothes"
+	desc = "A set of clothes worn often by merchants traveling around in the wasteland."
+	icon_state = "roving"
+	inhand_icon_state = "ro_suit"
+
+/obj/item/clothing/under/ms13/mechanicprewar
+	can_adjust = TRUE
+	alt_covers_chest = FALSE
+
+/obj/item/clothing/under/ms13/mechanicprewar/mechanicgrey
+	name = "grey mechanic shirt"
+	desc = "A grey mechanic shirt. It smells of oil."
+	icon_state = "mechanic"
+	inhand_icon_state = "bl_suit"
+	can_adjust = TRUE
+	alt_covers_chest = FALSE
+
+/obj/item/clothing/under/ms13/mechanicprewar/mechanicgreen
+	name = "green mechanic shirt"
+	desc = "A green mechanic shirt. It smells of oil, but is surprisingly clean."
+	icon_state = "mechanicalt"
+	inhand_icon_state = "g_suit"
+	can_adjust = TRUE
+	alt_covers_chest = FALSE
+
+// suits//fancy //
 
 /obj/item/clothing/under/ms13/wasteland/heeledsuit
 	name = "well-heeled gambler suit"
 	desc = "Hey, theres the high-roller!"
 	icon_state = "heeledsuit"
-	inhand_icon_state = "tan_suit"
+	inhand_icon_state = "det_suit"
 
-/obj/item/clothing/under/ms13/wasteland/plaid_r
-	name = "red plaid shirt"
-	desc = "A rugged plaid shirt."
-	icon_state = "plaid_r"
-	inhand_icon_state = "plaid_r"
+/obj/item/clothing/under/ms13/wasteland/gentlemansuit
+	name = "gentlemans' suit"
+	desc = "A fancy set of classy garmets."
+	icon_state = "gentlesuit"
+	inhand_icon_state = "s_suit"
 
-/obj/item/clothing/under/ms13/wasteland/plaid_g
-	name = "green plaid shirt"
-	desc = "A rugged plaid shirt."
-	icon_state = "plaid_g"
-	inhand_icon_state = "plaid_g"
+/obj/item/clothing/under/ms13/wasteland/gentlemansuit/classy
+	icon_state = "classysuit"
+	inhand_icon_state = "syndicate-green-dark"
 
-/obj/item/clothing/under/ms13/wasteland/plaid_b
-	name = "blue plaid shirt"
-	desc = "A rugged plaid shirt."
-	icon_state = "plaid_b"
-	inhand_icon_state = "plaid_b"
+/obj/item/clothing/under/ms13/wasteland/gentlemansuit/vintage
+	icon_state = "formal"
+	inhand_icon_state = "ro_suit"
+
+/obj/item/clothing/under/ms13/wasteland/barmansuit
+	name = "barmans' attire"
+	desc = "A fancy set of garments for the snazzy and upperclass drink mixers of the wasteland."
+	icon_state = "barman"
+	inhand_icon_state = "ro_suit"
+
+/obj/item/clothing/under/ms13/wasteland/regalsuit
+	name = "regal attire"
+	desc = "The clothing of a god amongst men."
+	icon_state = "regal"
+	inhand_icon_state = "regal"
+
+// combat//government //
+
+/obj/item/clothing/under/ms13/wasteland/police
+	name = "police uniform"
+	desc = "Golden classics of pre-War police officers."
+	icon_state = "police"
+	inhand_icon_state = "bluejump"
+
+/obj/item/clothing/under/ms13/wasteland/navy
+	name = "navy uniform"
+	desc = "A tactical pre-war naval fighters jumpsuit, how it got all the way here you dont know."
+	icon_state = "navy"
+	inhand_icon_state = "bluejump"
+
+/obj/item/clothing/under/ms13/wasteland/navyofficer
+	name = "navy officers uniform"
+	desc = "A tactical pre-war naval fighters jumpsuit, this one seems adorned with a higher rank than normal..."
+	icon_state = "navyofficer"
+	inhand_icon_state = "bluejump"
+
+/obj/item/clothing/under/ms13/wasteland/army
+	name = "army uniform"
+	desc = "A tactical pre-war off-duty soldiers uniform, for off-duty personnel only maggot!"
+	icon_state = "combat_shirt"
+	inhand_icon_state = "greenjump"
+
+/obj/item/clothing/under/ms13/wasteland/combat
+	name = "combat uniform"
+	desc = "A tactical pre-war combat soldiers uniform, green and deadly."
+	icon_state = "combat"
+	inhand_icon_state = "greenjump"
+
+/obj/item/clothing/under/ms13/wasteland/combat/desert
+	desc = "A tactical pre-war combat soldiers uniform, for the dustwalkers of the hunt."
+	icon_state = "combatd"
+	inhand_icon_state = "ncr_uniform"
+
+// raider //
+
+/obj/item/clothing/under/ms13/wasteland/raider_leather
+	name = "raider leathers"
+	desc = "A set of ragged leather clothes usually worn by raiders."
+	icon_state = "raider_leather"
+	inhand_icon_state = "tribalrag"
+
+// vault-tec //
+
+/obj/item/clothing/under/ms13/vaultsuit
+	name = "vault-tec jumpsuit"
+	desc = "An unmarked vault suit. How peculiar."
+	icon_state = "vault"
+	inhand_icon_state = "vault"
+
+/obj/item/clothing/under/ms13/vaultsuit/seventysix
+	name = "vault-76 jumpsuit"
+	desc = "The classic jumpsuit of vault 76, how it ended up here is beyond you."
+	icon_state = "vault76"
+
+// pre-war // other //
+
+/obj/item/clothing/under/ms13/wasteland/prewar/relaxedwear
+	name = "pre-war relaxed wear"
+	desc = "A set of pristine clothes from before the great war."
+	icon_state = "relaxedwear"
+	inhand_icon_state = "sl_suit"
+
+/obj/item/clothing/under/ms13/wasteland/prewar/spring
+	name = "pre-war spring wear"
+	desc = "A set of pristine spring clothes from before the great war."
+	icon_state = "spring"
+	inhand_icon_state = "sl_suit"
+
+/obj/item/clothing/under/ms13/wasteland/combat
+	name = "combat uniform"
+	desc = "A uniform worn by veterans of the wasteland."
+	icon_state = "combat_shirt"
+	inhand_icon_state = "gy_suit"
 
 /obj/item/clothing/under/ms13/prewar/checkeredred
 	name = "red checkered shirt"
@@ -244,29 +364,3 @@
 	desc = "A plain white shirt."
 	icon_state = "shirt"
 	inhand_icon_state = "bar_suit"
-
-/obj/item/clothing/under/ms13/mechanicprewar
-	can_adjust = TRUE
-	alt_covers_chest = FALSE
-
-/obj/item/clothing/under/ms13/mechanicprewar/mechanicgrey
-	name = "grey mechanic shirt"
-	desc = "A grey mechanic shirt. It smells of oil."
-	icon_state = "mechanicg"
-	inhand_icon_state = "bl_suit"
-	can_adjust = TRUE
-	alt_covers_chest = FALSE
-
-/obj/item/clothing/under/ms13/mechanicprewar/mechanicgreen
-	name = "green mechanic shirt"
-	desc = "A green mechanic shirt. It smells of oil, but is surprisingly clean."
-	icon_state = "mechanicalt"
-	inhand_icon_state = "g_suit"
-	can_adjust = TRUE
-	alt_covers_chest = FALSE
-
-/obj/item/clothing/under/ms13/vaultsuit
-	name = "vault suit"
-	desc = "An unmarked vault suit. How peculiar."
-	icon_state = "vault"
-	inhand_icon_state = "b_suit"
