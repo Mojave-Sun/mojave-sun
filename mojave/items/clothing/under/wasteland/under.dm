@@ -190,16 +190,16 @@
 	alt_covers_chest = FALSE
 
 /obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgrey
-	name = "grey mechanic shirt"
-	desc = "A grey mechanic shirt. It smells of oil."
+	name = "grey mechanic jumpsuit"
+	desc = "A grey mechanic jumpsuit. It smells of oil."
 	icon_state = "mechanic"
 	inhand_icon_state = "bl_suit"
 	can_adjust = TRUE
 	alt_covers_chest = FALSE
 
 /obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgreen
-	name = "green mechanic shirt"
-	desc = "A green mechanic shirt. It smells of oil, but is surprisingly clean."
+	name = "green mechanic jumpsuit"
+	desc = "A green mechanic jumpsuit. It smells of oil, but is surprisingly clean."
 	icon_state = "mechanicalt"
 	inhand_icon_state = "g_suit"
 	can_adjust = TRUE
