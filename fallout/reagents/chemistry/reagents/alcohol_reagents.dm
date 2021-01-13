@@ -134,7 +134,7 @@
 
 /datum/reagent/consumable/ethanol/alcohol_z
 	name = "Alcohol-Z"
-	description = "The signature drink of the Parlor Room in Vault City. Exceptionally rare outside of old Nevada."
+	description = "The signature drink of vault bars the world over. Exceptionally rare outside of old vaults."
 	taste_description = "grain alcohol"
 	boozepwr = 65
 	quality = DRINK_NICE
@@ -201,6 +201,17 @@
 	M.adjust_blurriness(1)
 	..()
 
+/datum/reagent/consumable/ethanol/herb_brew
+	name = "Herbal Brew"
+	description = "An alcoholic herbal brew, made by tribals from the local forage. Almost tastes like cough syrup."
+	taste_description = "aniseed"
+	boozepwr = 30
+	quality = DRINK_GOOD
+	color = "#5D0F0C"
+	glass_icon_state = "whiskeycolaglass"
+	glass_name = "glass of Herbal Brew"
+	glass_desc = "The tribals claim this has medicinal properties... the raiders like to mix it with soda."
+
 //Mixed Drinks
 
 /datum/reagent/consumable/ethanol/rum_nuka
@@ -224,6 +235,17 @@
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "Whiskey and Nuka"
 	glass_desc = "An innocent-looking mixture of Nuka-Cola and whiskey. Delicious."
+
+/datum/reagent/consumable/ethanol/vodka_nuka
+	name = "Vodka and Nuka"
+	description = "Vodka and Nuka-Cola. For when you love alcohol, but hate the taste."
+	taste_description = "nuka-cola"
+	boozepwr = 40
+	quality = DRINK_NICE
+	color = "#3E1B00"
+	glass_icon_state = "whiskeycolaglass"
+	glass_name = "Vodka and Nuka"
+	glass_desc = "Also known as a Nuka-Comrade, if you're so inclined."
 
 /datum/reagent/consumable/ethanol/cuban_missile_crisis
 	name = "Cuban Missile Crisis"
@@ -305,7 +327,7 @@
 	color = "#5D0F0C"
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "Z-Twist"
-	glass_desc = "Dry, classy, and very rare outside Vault City."
+	glass_desc = "Dry, classy, and very rare outside vaults."
 
 /datum/reagent/consumable/ethanol/boneyard_405
 	name = "Boneyard 405"
@@ -396,8 +418,6 @@
 	M.Jitter(5)
 	if(prob(20))
 		M.emote(pick("twitch","drool","moan"))
-	if(prob(1))
-		M.drop_all_held_items()
 	..()
 
 /datum/reagent/consumable/ethanol/vier_bier_prost
@@ -443,6 +463,12 @@
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "Necromancer"
 	glass_desc = "To be taken before 11AM, or whenever steam or energy is needed."
+
+/datum/reagent/consumable/ethanol/necromancer/on_mob_life(mob/living/carbon/M)
+	M.drowsyness = max(0,M.drowsyness-3)
+	M.AdjustSleeping(-40)
+	..()
+	. = 1
 
 /datum/reagent/consumable/ethanol/bradberton
 	name = "Bradberton"
@@ -512,7 +538,7 @@
 
 /datum/reagent/consumable/ethanol/coolant_pump //nuka-cola and rad-ant lager
 	name = "Coolant Pump"
-	description = "Nuka-Cola and beer. Bitter yet refreshing."
+	description = "Nuka-Cola and beer. Bitter, yet refreshing."
 	taste_description = "bitter lemonade"
 	boozepwr = 10
 	quality = DRINK_VERYGOOD
