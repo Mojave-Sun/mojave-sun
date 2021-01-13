@@ -69,8 +69,8 @@
 		/obj/item/clothing/under/ms13/wasteland/lumberjack,\
 		/obj/item/clothing/under/ms13/wasteland/mercc,\
 		/obj/item/clothing/under/ms13/wasteland/roving,\
-		/obj/item/clothing/under/ms13/mechanicprewar,\
-		/obj/item/clothing/under/ms13/mechanicprewar/mechanicgreen,\
+		/obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgrey,\
+		/obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgreen,\
 		/obj/item/clothing/under/ms13/wasteland/prewar/relaxedwear,\
 		/obj/item/clothing/under/ms13/wasteland/prewar/spring)
 	if(prob(50))
