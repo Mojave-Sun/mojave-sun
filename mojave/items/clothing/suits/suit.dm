@@ -262,3 +262,23 @@
 	desc = "A perfectly preserved pre-war VINTAGE Manny Mammoth suit! It smells of crusty pizza."
 	icon_state = "mannybody"
 	inhand_icon_state = "chickensuit"
+
+/obj/item/clothing/suit/ms13/vaultlab
+	name = "vault lab coat"
+	desc = "A lab coat often worn by Vault doctors. Good for protecting your precious undersuit from rapid blood ejection from your patients."
+	icon_state = "vaultlabcoat"
+	inhand_icon_state = "labcoat"
+
+/obj/item/clothing/suit/ms13/snazzyleather
+	name = "snazzy leather jacket"
+	desc = "A leather jacket of remarkable quality. It's got a strange serpent-like symbol on the back. There's no telling where it came from."
+	icon_state = "leathersnakes"
+	inhand_icon_state = "ro_suit"
+
+/obj/item/clothing/suit/apron/waders/ms13
+	name = "leather waders"
+	desc = "A pair of heavy duty leather waders, they've seen better days."
+	icon_state = "hort_waders"
+	inhand_icon_state = "hort_waders"
+	body_parts_covered = CHEST|GROIN|LEGS
+	permeability_coefficient = 0.5

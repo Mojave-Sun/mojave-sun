@@ -4,6 +4,32 @@
 	icon = 'mojave/icons/objects/clothing/masks.dmi'
 	worn_icon = 'mojave/icons/mob/clothing/mask.dmi'
 
+/obj/item/clothing/mask/ms13/facewrap
+	name = "tan facewrap"
+	desc = "A wrap for your face. A nice sand-coloured cloth."
+	icon_state = "facewrap"
+	flags_inv = HIDEFACE
+
+/obj/item/clothing/mask/ms13/facewrap/halfwrap
+	name = "tan halfwrap"
+	desc = "A sturdy wrapping for your face. A bit rough in some places, but overall fair quality."
+	icon_state = "halfwrap"
+
+/obj/item/clothing/mask/ms13/facewrap/black
+	name = "black facewrap"
+	desc = "A wrap for your face. This one is as black as the average soul in these wastes."
+	icon_state = "facewrap_bla"
+
+/obj/item/clothing/mask/ms13/facewrap/red
+	name = "red facewrap"
+	desc = "A wrap for your face. Red representing hatred."
+	icon_state = "facewrap_red"
+
+/obj/item/clothing/mask/ms13/facewrap/blue
+	name = "blue facewrap"
+	desc = "A wrap for your face. The blue colour stands out among the bland surroundings."
+	icon_state = "facewrap_blu"
+
 /obj/item/clothing/mask/ms13/legion/clothmask
 	name = "cloth mask"
 	desc = "A simple cloth mask often used by Legionaries for an assortment of reasons."
