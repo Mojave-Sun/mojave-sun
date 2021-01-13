@@ -185,11 +185,11 @@
 	icon_state = "roving"
 	inhand_icon_state = "ro_suit"
 
-/obj/item/clothing/under/ms13/mechanicprewar
+/obj/item/clothing/under/ms13/wasteland/mechanicprewar
 	can_adjust = TRUE
 	alt_covers_chest = FALSE
 
-/obj/item/clothing/under/ms13/mechanicprewar/mechanicgrey
+/obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgrey
 	name = "grey mechanic shirt"
 	desc = "A grey mechanic shirt. It smells of oil."
 	icon_state = "mechanic"
@@ -197,7 +197,7 @@
 	can_adjust = TRUE
 	alt_covers_chest = FALSE
 
-/obj/item/clothing/under/ms13/mechanicprewar/mechanicgreen
+/obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgreen
 	name = "green mechanic shirt"
 	desc = "A green mechanic shirt. It smells of oil, but is surprisingly clean."
 	icon_state = "mechanicalt"
