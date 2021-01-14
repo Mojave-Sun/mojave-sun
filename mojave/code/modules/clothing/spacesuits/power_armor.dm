@@ -3,9 +3,9 @@
 	name = "Generic Power Armor Helmet"
 	desc = "Don't ever use this in the video game please."
 	icon = 'mojave/icons/mob/clothing/head.dmi'
-	icon_state = "t45_pa"
+	icon_state = "advhelmet2old"
 	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
-	worn_icon_state = "t45_pa"
+	worn_icon_state = "advhelmet2old"
 	strip_delay = 200
 	max_integrity = 500
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -22,9 +22,9 @@
 	name = "Generic Power Armor"
 	desc = "Don't ever use this in the video game please."
 	icon = 'mojave/icons/mob/clothing/suit.dmi'
-	icon_state = "t45-pa"
-	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
-	worn_icon_state = "t45-pa"
+	icon_state = "advancedold"
+	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
+	worn_icon_state = "advancedold"
 	density = TRUE //It's a suit of armor man
 	anchored = TRUE
 	strip_delay = 200
@@ -48,7 +48,7 @@
 		var/matrix/M = matrix(guy.transform)
 		M.Translate(0,6)
 		guy.transform = M
-		guy.dna.species.offset_features = list(OFFSET_UNIFORM = list(0,-6), OFFSET_ID = list(0,0), OFFSET_GLOVES = list(0,0), OFFSET_GLASSES = list(0,0), OFFSET_EARS = list(0,0), OFFSET_SHOES = list(0,0), OFFSET_S_STORE = list(0,0), OFFSET_FACEMASK = list(0,0), OFFSET_HEAD = list(0,3), OFFSET_FACE = list(0,0), OFFSET_BELT = list(0,3), OFFSET_BACK = list(0,0), OFFSET_SUIT = list(0,-6), OFFSET_NECK = list(0,0))
+		//guy.dna.species.offset_features = list(OFFSET_UNIFORM = list(0,-6), OFFSET_ID = list(0,0), OFFSET_GLOVES = list(0,0), OFFSET_GLASSES = list(0,0), OFFSET_EARS = list(0,0), OFFSET_SHOES = list(0,0), OFFSET_S_STORE = list(0,0), OFFSET_FACEMASK = list(0,0), OFFSET_HEAD = list(0,3), OFFSET_FACE = list(0,0), OFFSET_BELT = list(0,3), OFFSET_BACK = list(0,0), OFFSET_SUIT = list(0,-6), OFFSET_NECK = list(0,0))
 		guy.regenerate_icons()
 
 
@@ -57,7 +57,7 @@
 	. = ..()
 	REMOVE_TRAIT(user, TRAIT_FORCED_STANDING, "power_armor")
 	var/mob/living/carbon/human/guy = user
-	guy.dna.species.offset_features = initial(guy.dna.species.offset_features)
+	//guy.dna.species.offset_features = initial(guy.dna.species.offset_features)
 	guy.regenerate_icons()
 	guy.transform = initial(guy.transform)
 
