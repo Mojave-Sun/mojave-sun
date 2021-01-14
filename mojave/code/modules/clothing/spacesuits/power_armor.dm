@@ -12,8 +12,10 @@
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 80, BOMB = 80, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
 	actions_types = null //No lights my dude, sorry
 
-//1 debug later
-/obj/item/clothing/head/helmet/space/hardsuit/power_armor/build_worn_icon(default_layer = 0, default_icon_file = null, isinhands = FALSE, femaleuniform = NO_FEMALE_UNIFORM, override_state = null)
+//No touchy
+/obj/item/clothing/head/helmet/space/hardsuit/power_armor/Initialize()
+	. = ..()
+	interaction_flags_item &= ~INTERACT_ITEM_ATTACK_HAND_PICKUP
 
 //Generic power armor based off of the hardsuit
 /obj/item/clothing/suit/space/hardsuit/power_armor
@@ -35,8 +37,7 @@
 
 /obj/item/clothing/suit/space/hardsuit/power_armor/Initialize()
 	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, "power_armor")
-	ADD_TRAIT(helmet, TRAIT_NODROP, "power_armor")
+	interaction_flags_item &= ~INTERACT_ITEM_ATTACK_HAND_PICKUP
 
 //It's a suit of armor, it ain't going to fall over just because the pilot is dead
 /obj/item/clothing/suit/space/hardsuit/power_armor/equipped(mob/user, slot)
