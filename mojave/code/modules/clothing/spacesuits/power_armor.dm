@@ -4,8 +4,9 @@
 	desc = "Don't ever use this in the video game please."
 	icon = 'mojave/icons/mob/clothing/head.dmi'
 	icon_state = "t45_pa"
-	inhand_icon_state = "t45_pa"
-	//item_flags = ABSTRACT
+	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
+	worn_icon_state = "t45_pa"
+	item_flags = ABSTRACT
 	strip_delay = 200
 	max_integrity = 500
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -18,8 +19,11 @@
 	desc = "Don't ever use this in the video game please."
 	icon = 'mojave/icons/mob/clothing/suit.dmi'
 	icon_state = "t45-pa"
-	inhand_icon_state = "t45-pa"
-	//item_flags = ABSTRACT
+	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
+	worn_icon_state = "t45-pa"
+	item_flags = ABSTRACT
+	density = TRUE //It's a suit of armor man
+	anchored = TRUE
 	strip_delay = 200
 	var/obj/vehicle/sealed/power_armor/linked_vehicle //The vehicle instance this is linked to for regenerating back to it
 	max_integrity = 500
@@ -34,11 +38,11 @@
 	ADD_TRAIT(helmet, TRAIT_NODROP, "power_armor")
 
 //It's a suit of armor, it ain't going to fall over just because the pilot is dead
-/obj/item/clothing/suit/space/hardsuit/power_armor/proc/equipped(mob/user)
+/obj/item/clothing/suit/space/hardsuit/power_armor/equipped(mob/user)
 	. = ..()
 	ADD_TRAIT(user, TRAIT_FORCED_STANDING, "power_armor")
 
-/obj/item/clothing/suit/space/hardsuit/power_armor/proc/dropped(mob/user)
+/obj/item/clothing/suit/space/hardsuit/power_armor/dropped(mob/user)
 	. = ..()
 	REMOVE_TRAIT(user, TRAIT_FORCED_STANDING, "power_armor")
 
@@ -54,15 +58,14 @@
 		return FALSE
 
 	if(user.head && user.head != helmet || user.wear_suit && user.wear_suit != src)
-		to_chat(M, "You're unable to climb into the [src] due to already having a helmet or suit equipped!")
+		to_chat(user, "You're unable to climb into the [src] due to already having a helmet or suit equipped!")
 		return FALSE
 
 	else
 		if(user.wear_suit == src)
 			to_chat(user, "You begin exiting the [src].")
 			if(do_after(user, 6 SECONDS, target = user) && user.wear_suit == src)
-				user.visible_message("<span class='notice'>[user] exits from the [src].</span>")
-				playsound(src.loc, 'sound/mecha/mechmove03.ogg', 50, TRUE)
+				GetOutside(user)
 				return TRUE
 
 	to_chat(user, "You begin entering the [src].")
@@ -73,24 +76,24 @@
 	return FALSE
 
 //Let's actually get into the power armor
-/obj/item/clothing/suit/space/hardsuit/power_armor/proc/GetInside(/mob/living/carbon/human/user)
+/obj/item/clothing/suit/space/hardsuit/power_armor/proc/GetInside(mob/living/carbon/human/user)
 	if(!istype(user))
 		return
 
-	src.density = FALSE
-	src.anchored = FALSE
+	density = FALSE
+	anchored = FALSE
 	user.visible_message("<span class='warning'>[user] enters the [src]!</span>")
 	user.forceMove(get_turf(src))
-	user.equip_to_slot_if_possible(src, ITEM_SLOT_OCLOTHING))
+	user.equip_to_slot_if_possible(src, ITEM_SLOT_OCLOTHING)
 	ToggleHelmet()
 
 //Nevermind let's get out
-/obj/item/clothing/suit/space/hardsuit/power_armor/proc/GetOutside(/mob/living/carbon/human/user)
+/obj/item/clothing/suit/space/hardsuit/power_armor/proc/GetOutside(mob/living/carbon/human/user)
 	user.visible_message("<span class='warning'>[user] exits from the [src].</span>")
 	playsound(src.loc, 'sound/mecha/mechmove03.ogg', 50, TRUE)
-	user.dropItemToGround(src, force = TRUE))
-	src.density = TRUE
-	src.anchored = TRUE
+	user.dropItemToGround(src, force = TRUE)
+	density = TRUE
+	anchored = TRUE
 
 //TODO for later involving integrity and ricochets
 /obj/item/clothing/suit/space/hardsuit/power_armor/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
