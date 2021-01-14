@@ -2347,8 +2347,8 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "bFx" = (
-/mob/living/simple_animal/hostile/ms13/molerat,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/ms13/molerat,
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
 "bFy" = (
@@ -2490,6 +2490,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"bKu" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/plating/ground/road,
+/area/ms13)
 "bKC" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin,
@@ -12358,10 +12362,10 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "iZk" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /mob/living/simple_animal/hostile/ms13/nightstalker{
 	dir = 4
 	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "iZn" = (
@@ -13350,9 +13354,9 @@
 /turf/open/floor/plasteel/ms13/blue/white/whitebluechess,
 /area/ms13/sunny_dale)
 "jGo" = (
-/mob/living/simple_animal/mouse,
 /obj/item/reagent_containers/food/drinks/waterbottle/empty,
 /obj/structure/chair/wood,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/carpet/red,
 /area/ms13/underground/mountain)
 "jGG" = (
@@ -13820,8 +13824,8 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "jZU" = (
-/mob/living/simple_animal/hostile/ms13/mongrel,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/ms13/mongrel,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "kaa" = (
@@ -21281,9 +21285,9 @@
 	},
 /area/ms13/sunny_dale)
 "qmE" = (
-/mob/living/simple_animal/hostile/ms13/nightstalker,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/mob/living/simple_animal/hostile/ms13/nightstalker,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "qmL" = (
@@ -23728,9 +23732,9 @@
 /turf/open/floor/wood,
 /area/ms13/underground/vault_atrium_upper)
 "sdU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/ms13/mongrelyoung,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "sdZ" = (
@@ -146500,7 +146504,7 @@ uya
 uya
 aDo
 aDo
-aDo
+bKu
 aDo
 aDo
 lqB
