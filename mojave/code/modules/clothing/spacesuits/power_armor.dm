@@ -6,12 +6,14 @@
 	icon_state = "t45_pa"
 	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
 	worn_icon_state = "t45_pa"
-	item_flags = ABSTRACT
 	strip_delay = 200
 	max_integrity = 500
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 80, BOMB = 80, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
 	actions_types = null //No lights my dude, sorry
+
+//1 debug later
+/obj/item/clothing/head/helmet/space/hardsuit/power_armor/build_worn_icon(default_layer = 0, default_icon_file = null, isinhands = FALSE, femaleuniform = NO_FEMALE_UNIFORM, override_state = null)
 
 //Generic power armor based off of the hardsuit
 /obj/item/clothing/suit/space/hardsuit/power_armor
@@ -19,9 +21,8 @@
 	desc = "Don't ever use this in the video game please."
 	icon = 'mojave/icons/mob/clothing/suit.dmi'
 	icon_state = "t45-pa"
-	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
+	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
 	worn_icon_state = "t45-pa"
-	item_flags = ABSTRACT
 	density = TRUE //It's a suit of armor man
 	anchored = TRUE
 	strip_delay = 200
@@ -38,13 +39,26 @@
 	ADD_TRAIT(helmet, TRAIT_NODROP, "power_armor")
 
 //It's a suit of armor, it ain't going to fall over just because the pilot is dead
-/obj/item/clothing/suit/space/hardsuit/power_armor/equipped(mob/user)
+/obj/item/clothing/suit/space/hardsuit/power_armor/equipped(mob/user, slot)
 	. = ..()
 	ADD_TRAIT(user, TRAIT_FORCED_STANDING, "power_armor")
+	if(slot == ITEM_SLOT_OCLOTHING)
+		var/mob/living/carbon/human/guy = user
+		var/matrix/M = matrix(guy.transform)
+		M.Translate(0,6)
+		guy.transform = M
+		guy.dna.species.offset_features = list(OFFSET_UNIFORM = list(0,-6), OFFSET_ID = list(0,0), OFFSET_GLOVES = list(0,0), OFFSET_GLASSES = list(0,0), OFFSET_EARS = list(0,0), OFFSET_SHOES = list(0,0), OFFSET_S_STORE = list(0,0), OFFSET_FACEMASK = list(0,0), OFFSET_HEAD = list(0,3), OFFSET_FACE = list(0,0), OFFSET_BELT = list(0,3), OFFSET_BACK = list(0,0), OFFSET_SUIT = list(0,-6), OFFSET_NECK = list(0,0))
+		guy.regenerate_icons()
+
+
 
 /obj/item/clothing/suit/space/hardsuit/power_armor/dropped(mob/user)
 	. = ..()
 	REMOVE_TRAIT(user, TRAIT_FORCED_STANDING, "power_armor")
+	var/mob/living/carbon/human/guy = user
+	guy.dna.species.offset_features = initial(guy.dna.species.offset_features)
+	guy.regenerate_icons()
+	guy.transform = initial(guy.transform)
 
 //No helmet toggles for now when helmet is up
 /obj/item/clothing/suit/space/hardsuit/power_armor/ToggleHelmet()
