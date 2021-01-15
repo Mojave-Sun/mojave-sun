@@ -55,7 +55,7 @@
 	if(stealthboy_on)
 		user.alpha = 25
 		to_chat(user, "<span class='notice'>You activate the [src].</span>")
-		addtimer(CALLBACK(src, .proc/disrupt), duration=10 SECONDS)
+		addtimer(CALLBACK(src, .proc/disrupt, user), 10 SECONDS)
 	else
 		user.alpha = initial(user.alpha)
 		to_chat(user, "<span class='notice'>You deactivate the [src].</span>")
