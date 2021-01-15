@@ -164,3 +164,11 @@
 	icon_state = "cave"
 	outdoors = TRUE
 
+/area/ms13/underground/tunnel
+	name = "Tunnel"
+	outdoors = FALSE
+	icon_state = "tunnels"
+
+/area/ms13/underground/tunnel/maintenance
+	name = "Maintenance Passages"
+	icon_state = "maintenance"
