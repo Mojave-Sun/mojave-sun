@@ -154,6 +154,7 @@
 	for(var/datum/data/record/t in GLOB.data_core.general)
 		var/name = t.fields["name"]
 		var/rank = t.fields["rank"]
+		var/shown_rank = t.fields["shown_rank"] //MOJAVE SUN CHANGE
 		var/has_department = FALSE
 		for(var/department in departments)
 			var/list/jobs = departments[department]
@@ -162,7 +163,7 @@
 					manifest_out[department] = list()
 				manifest_out[department] += list(list(
 					"name" = name,
-					"rank" = rank
+					"rank" = shown_rank //MOJAVE SUN EDIT
 				))
 				has_department = TRUE
 				break
@@ -171,7 +172,7 @@
 				manifest_out["Misc"] = list()
 			manifest_out["Misc"] += list(list(
 				"name" = name,
-				"rank" = rank
+				"rank" = shown_rank //MOJAVE SUN EDIT
 			))
 	return manifest_out
 
@@ -215,6 +216,11 @@
 			assignment = H.job
 		else
 			assignment = "Unassigned"
+		//MOJAVE SUN CHANGES
+		var/shown_assignment = assignment
+		if(C && C.prefs && C.prefs.alt_titles_preferences[assignment])
+			shown_assignment = C.prefs.alt_titles_preferences[assignment]
+		//END OF MOJAVE SUN CHANGES
 
 		var/static/record_id_num = 1001
 		var/id = num2hex(record_id_num++,6)
@@ -238,6 +244,7 @@
 		G.fields["id"]			= id
 		G.fields["name"]		= H.real_name
 		G.fields["rank"]		= assignment
+		G.fields["shown_rank"]		= shown_assignment //MOJAVE SUN CHANGE
 		G.fields["age"]			= H.age
 		G.fields["species"]	= H.dna.species.name
 		G.fields["fingerprint"]	= md5(H.dna.uni_identity)

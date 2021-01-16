@@ -445,7 +445,12 @@ SUBSYSTEM_DEF(job)
 	if(living_mob.mind)
 		living_mob.mind.assigned_role = rank
 
-	to_chat(M, "<b>You are the [rank].</b>")
+	//MOJAVE SUN CHANGES
+	var/display_rank = rank
+	if(M.client && M.client.prefs && M.client.prefs.alt_titles_preferences[rank])
+		display_rank = M.client.prefs.alt_titles_preferences[rank]
+	//END OF MOJAVE SUN CHANGES
+	to_chat(M, "<b>You are the [display_rank].</b>") //MOJAVE SUN EDIT
 	if(job)
 		var/new_mob = job.equip(living_mob, null, null, joined_late , null, M.client)//silicons override this proc to return a mob
 		if(ismob(new_mob))
@@ -463,7 +468,7 @@ SUBSYSTEM_DEF(job)
 			else
 				handle_auto_deadmin_roles(M.client, rank)
 
-		to_chat(M, "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
+		to_chat(M, "<b>As the [display_rank] you fall under the leadership of [job.supervisors]. Special circumstances may change this.</b>") //MOJAVE SUN EDIT
 		to_chat(M, "<FONT color='blue'><B>[job.description]</b>")
 		to_chat(M, "<FONT color='red'><b>[job.forbid]</b>")
 		to_chat(M, "<FONT color='green'><b>[job.enforce]</b>")

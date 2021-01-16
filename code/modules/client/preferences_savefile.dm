@@ -419,6 +419,16 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(!real_name)
 		real_name = random_unique_name(gender)
 
+	//MOJAVE SUN CHANGES
+	READ_FILE(S["alt_titles_preferences"], alt_titles_preferences)
+	alt_titles_preferences = SANITIZE_LIST(alt_titles_preferences)
+	if(SSjob)
+		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
+			if(alt_titles_preferences[job.title])
+				if(!(alt_titles_preferences[job.title] in job.alt_titles))
+					alt_titles_preferences.Remove(job.title)
+	//END OF MOJAVE SUN CHANGES
+
 	for(var/custom_name_id in GLOB.preferences_custom_names)
 		var/namedata = GLOB.preferences_custom_names[custom_name_id]
 		custom_names[custom_name_id] = reject_bad_name(custom_names[custom_name_id],namedata["allow_numbers"])
@@ -550,6 +560,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Quirks
 	WRITE_FILE(S["all_quirks"]			, all_quirks)
+
+	//MOJAVE SUN CHANGES
+	WRITE_FILE(S["alt_titles_preferences"], alt_titles_preferences)
+	//END OF MOJAVE SUN CHANGES
 
 	return TRUE
 
