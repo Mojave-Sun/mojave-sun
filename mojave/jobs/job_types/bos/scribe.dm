@@ -1,7 +1,7 @@
 /datum/job/ms13/bos/scribe
 	title = "BoS Scribe"
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
-	department_head = list("Brotherhood High Command")
+	department_head = list("Head Scribe")
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Head Scribe"

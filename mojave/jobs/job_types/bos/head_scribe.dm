@@ -4,7 +4,7 @@
 	department_head = list("Brotherhood High Command")
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Brotherhood High Command"
+	supervisors = "the Elder (if present) and Brotherhood High Command"
 	req_admin_notify = 1
 	description = ""
 	forbid = ""
