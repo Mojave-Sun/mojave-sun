@@ -91,25 +91,25 @@
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 
 /obj/item/clothing/shoes/ms13/military/ncr
-	name = "NCR boots"
+	name = "\improper NCR boots"
 	desc = "A pair of standard issue NCR brown boots, with a puttee."
 	icon_state = "ncr_boots"
 	inhand_icon_state = "ncr"
 
 /obj/item/clothing/shoes/ms13/military/ncr/winter
-	name = "NCR winter boots"
+	name = "\improper NCR winter boots"
 	desc = "A pair of NCR boots intended for winter operations."
 	icon_state = "ncr_boots_w"
 	inhand_icon_state = "ncr_boots_w"
 
 /obj/item/clothing/shoes/ms13/military/ncr_officer
-	name = "NCR officer boots"
+	name = "\improper NCR officer boots"
 	desc = "A pair of brown leather boots, issued to NCR Officers."
 	icon_state = "ncr_officer_boots"
 	inhand_icon_state = "ncr_officer_boots"
 
 /obj/item/clothing/shoes/ms13/military/ncr_officer/winter
-	name = "NCR officer winter Boots"
+	name = "\improper NCR officer winter Boots"
 	desc = "A pair of boots issued to NCR officers for winter operations."
 	icon_state = "ncr_officer_boots_w"
 	inhand_icon_state = "ncr_officer_boots_w"
@@ -149,6 +149,12 @@
 	icon_state = "legionlegate"
 	inhand_icon_state = "legionlegate"
 	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 10, fire = 30, acid = 10)
+
+/obj/item/clothing/shoes/ms13/military/bos
+	name = "\improper BoS combat boots"
+	desc = "A pair of heavy military boots favored by the Brotherhood of Steel."
+	icon_state = "bos_boots"
+	inhand_icon_state = "bos_boots"
 
 //Fluff
 

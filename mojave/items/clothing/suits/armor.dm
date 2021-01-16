@@ -172,12 +172,6 @@
 	inhand_icon_state = "enclave_armor"
 	armor = list("melee" = 50, "bullet" = 40, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 
-/obj/item/clothing/suit/armor/ms13/combat/black/brotherhood
-	name = "brotherhood combat armor"
-	desc = "Armor made personally by and for the Brotherhood of Steel. Specialized for protecting against laser and energy weapons."
-	icon_state = "brotherhood_armor"
-	inhand_icon_state = "brotherhood_armor"
-
 /obj/item/clothing/suit/armor/ms13/eliteriot
 	name = "elite riot gear"
 	desc = "A highly specialized and advanced suit of armor oringinally in use by elite riot control units before the war."
@@ -275,22 +269,26 @@
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 30, "energy" = 30, "bomb" = 45, "bio" = 30, "rad" = 30, "fire" = 50, "acid" = 30)
 
 /obj/item/clothing/suit/armor/ms13/scribe
-	name = "brotherhood scribe robe"
-	desc = "A red cloth robe worn by Brotherhood of Steel Scribes."
+	name = "scribe's robe"
+	desc = "A finely made, comfortable cloth robe worn by Brotherhood scribes."
 	icon_state = "scribe"
 	inhand_icon_state = "scribe"
 	armor = list(melee = 20, bullet = 15, laser = 10, energy = 10, bomb = 10, bio = 15, rad = 15, fire = 15, acid = 15)
 
 /obj/item/clothing/suit/armor/ms13/scribe/head
-	name = "brotherhood head scribe robe"
-	desc = "A red cloth robe with gold trimmings typically worn by Brotherhood of Steel Head Scribes."
-	icon_state = "headscribe"
-	inhand_icon_state = "headscribe"
+	name = "head scribe's robe"
+	desc = "A finely made, comfortable cloth robe worn by Brotherhood scribes. This one is navy blue, denoting that it's for a head scribe."
+	icon_state = "head_scribe"
+	inhand_icon_state = "head_scribe"
 	armor = list(melee = 25, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 20, rad = 20, fire = 20, acid = 20)
 
-/obj/item/clothing/suit/armor/ms13/recon
-	name = "brotherhood recon armor"
-	desc = "A reinforced and armored jumpsuit typically given to Brotherhood Initiates."
-	icon_state = "recon"
-	inhand_icon_state = "recon"
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
+/obj/item/clothing/suit/armor/ms13/head_paladin
+	name = "head paladin's battlecoat"
+	desc = "A masterwork of Brotherhood tailoring, featuring remarkable reinforcement and armoring while not compromising on style or weight."
+	icon_state = "battlecoat"
+	inhand_icon_state = "battlecoat"
+
+/obj/item/clothing/suit/armor/ms13/combat/bos
+	name = "\improper BoS combat armor"
+	desc = "A custom built suit of combat armor, designed to hold up to the rigors of the wasteland by the Brotherhood."
+	icon_state = "bos_combat"
