@@ -18,6 +18,10 @@
 	glass_name = "glass of Nuka-Diet"
 	glass_desc = "Warm, flat, mildly radioactive, and sugar free. Tastes good, though."
 
+/datum/reagent/consumable/nuka_diet/on_mob_life(mob/living/carbon/M)
+	if(prob(1))
+		M.adjustBruteLoss(0.5) //aspartame is bad for your bones
+
 /datum/reagent/consumable/nuka_cherry
 	name = "Nuka-Cherry"
 	description = "Now this is one cherry drink."

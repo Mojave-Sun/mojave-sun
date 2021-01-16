@@ -38,19 +38,19 @@
 //ANTIVENOMS- IF ADDING AN ANIMAL VENOM, ADD A RECIPE USING IT HERE
 /datum/chemical_reaction/antivenom_cazador
 	results = list(/datum/reagent/medicine/antivenom = 5)
-	required_reagents = list(/datum/reagent/medicine/antiseptic = 2, /datum/reagent/toxin/cazador_venom = 3)
+	required_reagents = list(/datum/reagent/medicine/antiseptic = 2, /datum/reagent/toxin/ms13_venom/cazador = 3)
 
 /datum/chemical_reaction/antivenom_radscorpion
 	results = list(/datum/reagent/medicine/antivenom = 5)
-	required_reagents = list(/datum/reagent/medicine/antiseptic = 2, /datum/reagent/toxin/radscorpion_venom = 3)
+	required_reagents = list(/datum/reagent/medicine/antiseptic = 2, /datum/reagent/toxin/ms13_venom/radscorpion = 3)
 
 /datum/chemical_reaction/antivenom_nightstalker
 	results = list(/datum/reagent/medicine/antivenom = 5)
-	required_reagents = list(/datum/reagent/medicine/antiseptic = 2, /datum/reagent/toxin/nightstalker_venom = 3)
+	required_reagents = list(/datum/reagent/medicine/antiseptic = 2, /datum/reagent/toxin/ms13_venom/nightstalker = 3)
 
 /datum/chemical_reaction/antivenom_ant
 	results = list(/datum/reagent/medicine/antivenom = 5)
-	required_reagents = list(/datum/reagent/medicine/antiseptic = 2, /datum/reagent/toxin/ant_venom = 3)
+	required_reagents = list(/datum/reagent/medicine/antiseptic = 2, /datum/reagent/toxin/ms13_venom/ant = 3)
 
 /datum/chemical_reaction/bitter_drink
 	results = list(/datum/reagent/medicine/bitter_drink = 2)

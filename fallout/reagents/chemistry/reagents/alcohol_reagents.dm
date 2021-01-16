@@ -416,7 +416,7 @@
 	M.adjustFireLoss(-0.5, 0)
 	M.adjustToxLoss(1, 0)
 	M.Jitter(5)
-	if(prob(20))
+	if(prob(10))
 		M.emote(pick("twitch","drool","moan"))
 	..()
 
@@ -451,7 +451,7 @@
 	color = "#5D0F0C"
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "Ware's Waldo"
-	glass_desc = "Makes you see double."
+	glass_desc = "Makes you see double, or maybe even triple."
 
 /datum/reagent/consumable/ethanol/necromancer
 	name = "Necromancer"
@@ -479,7 +479,7 @@
 	color = "#5D0F0C"
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "Bradberton"
-	glass_desc = "A balanced mix of cola and wheat-beer, served frozen."
+	glass_desc = "A balanced mix of cola and beer, served frozen."
 
 /datum/reagent/consumable/ethanol/dirty_wastelander
 	name = "Dirty Wastelander"
@@ -525,8 +525,8 @@
 	glass_name = "Gorgon Hound"
 	glass_desc = "Fills you with the courage you need to walk the streets of the Dog City."
 
-/datum/reagent/consumable/ethanol/nuka_radler //nuka-lemon and high-voltage hefe
-	name = "Nuka-Radler"
+/datum/reagent/consumable/ethanol/nuka_shandy //nuka-lemon and high-voltage hefe
+	name = "Nuka-Shandy"
 	description = "A combination of Nuka-Lemon and beer. Really cools you down on a hot day."
 	taste_description = "bitter lemonade"
 	boozepwr = 10
@@ -534,7 +534,7 @@
 	color = "#fff44f"
 	glass_icon_state = "whiskeycolaglass"
 	glass_name = "Nuka-Radler"
-	glass_desc = "Also known as a Nuka-Shandy, if you're so inclined."
+	glass_desc = "Also known as a Nuka-Radler, if you're feeling German."
 
 /datum/reagent/consumable/ethanol/coolant_pump //nuka-cola and rad-ant lager
 	name = "Coolant Pump"

@@ -101,6 +101,21 @@
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 
+/datum/reagent/medicine/fixer/on_mob_life(mob/living/carbon/M)
+	M.clear_addictions()
+	if(prob(20))
+		var/affliction = rand(1,3)
+		switch(affliction)
+			if(1)
+				to_chat(M, "<span class='warning'>[pick("Your head hurts.", "Your head pounds.")]</span>")
+				M.Stun(10)
+			if(2)
+				M.Jitter(10)
+			if(3)
+				M.add_confusion(10)
+	..()
+	. = 1
+
 /datum/reagent/medicine/rad_x
 	name = "Rad-X"
 	description = "Protects against radiation, but causes minor dehydration."
@@ -133,6 +148,12 @@
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 
+/datum/reagent/medicine/antivenom/on_mob_life(mob/living/carbon/M)
+	var/remove_amt = 5
+	for(var/datum/reagent/toxin/ms13_venom/R in M.reagents.reagent_list)
+		M.reagents.remove_reagent(R.type,remove_amt)
+	return ..()
+
 /datum/reagent/medicine/x_111
 	name = "X-111 RadAway"
 	description = "An experimental radiation purgative. Purges radiations with fewer side effects than RadAway."
@@ -157,10 +178,32 @@
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 
-/datum/reagent/medicine/antiseptic
+/datum/reagent/medicine/antiseptic //splash that antiseptic for a surgery speed bonus, but don't drink it!
 	name = "Antiseptic"
-	description = "A general purpose antiseptic, ideal for disinfecting wounds and equipment."
+	description = "A general purpose antiseptic, ideal for disinfecting wounds and equipment, and for preventing infection during surgery."
 	reagent_state = LIQUID
 	color = "#70483C"
 	metabolization_rate = 2.5 * REAGENTS_METABOLISM
 	overdose_threshold = 30
+
+/datum/reagent/medicine/antiseptic/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume, show_message = TRUE)
+	. = ..()
+	if(!iscarbon(exposed_mob) || (exposed_mob.stat == DEAD))
+		return
+
+	if(methods & (INGEST|VAPOR|INJECT))
+		exposed_mob.adjustToxLoss(0.5)
+
+	if(methods & (PATCH|TOUCH))
+		var/mob/living/carbon/exposed_carbon = exposed_mob
+		for(var/s in exposed_carbon.surgeries)
+			var/datum/surgery/surgery = s
+			surgery.speed_modifier = max(0.1, surgery.speed_modifier)
+
+/datum/reagent/medicine/adrenaline
+	name = "Adrenaline"
+	description = "A potent hormone capable of restarting the heart should it stop beating. Also has some potent combat effects."
+	reagent_state = LIQUID
+	color = "#70483C"
+	metabolization_rate = 2.5 * REAGENTS_METABOLISM
+	overdose_threshold = 15

@@ -7,7 +7,7 @@
 
 /datum/reagent/drug/calmex //useful for surgery
 	name = "Calmex"
-	description = "A light anaesthetic. Reduces inhibitions and dulls the senses."
+	description = "A light anaesthetic. Reduces inhibitions and dulls the senses, and helps dull the pain from surgery."
 	color = "#BC13FE" // rgb: 96, 165, 132
 	overdose_threshold = 30
 
@@ -16,12 +16,14 @@
 		SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "numb", /datum/mood_event/narcotic_medium, name)
 	..()
 
-//datum/reagent/drug/calmex/reaction_mob(mob/living/carbon/C, method=INJECT, reac_volume)
-//	if(method == INJECT)
-//		for(var/s in C.surgeries)
-//			var/datum/surgery/S = s
-//			S.speed_modifier = max(0.2, S.speed_modifier)
-//	..()
+/datum/reagent/drug/calmex/expose_mob(mob/living/carbon/exposed_carbon, methods=TOUCH, reac_volume)
+	. = ..()
+	if(!(methods & (INJECT|INGEST)))
+		return
+
+	for(var/s in exposed_carbon.surgeries)
+		var/datum/surgery/surgery = s
+		surgery.speed_modifier = max(0.2, surgery.speed_modifier)
 
 /datum/reagent/drug/calmex/overdose_process(mob/living/M)
 	switch(current_cycle)
@@ -43,6 +45,12 @@
 /datum/reagent/drug/day_tripper
 	name = "Day Tripper"
 	description = "A mild hallucinogen. Helps take the edge off, but weakens muscles."
+	color = "#60A584" // rgb: 96, 165, 132
+	overdose_threshold = 30
+
+/datum/reagent/drug/med_x
+	name = "Med-X"
+	description = "A medical-grade painkiller and powerful anaesthetic."
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 30
 
