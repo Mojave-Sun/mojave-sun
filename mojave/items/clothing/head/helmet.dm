@@ -5,6 +5,33 @@
 	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
 	flags_inv = HIDEHAIR
 
+/obj/item/clothing/head/helmet/ms13/baseball
+	name = "baseball cap"
+	desc = "A classic baseball cap. A relic from pre-nuclear America."
+	icon_state = "baseball"
+	inhand_icon_state = "baseball"
+
+/obj/item/clothing/head/helmet/ms13/utilitycap
+	name = "utility cap"
+	desc = "A dusty utility cap. History practicaly seeps from the half-frayed fabrics of it."
+	icon_state = "utility_gsoft"
+	inhand_icon_state = "baseball"
+
+/obj/item/clothing/head/helmet/ms13/utilitycap/blue
+	name = "blue utility cap"
+	desc = "A pleasant blue utility cap. The brim is a bit floppy."
+	icon_state = "utility_nsoft"
+
+/obj/item/clothing/head/helmet/ms13/utilitycap/green
+	name = "green utility cap"
+	desc = "A fashionable green utility cap. Could be used to blend in with ANYTHING green nearby."
+	icon_state = "utility_osoft"
+
+/obj/item/clothing/head/helmet/ms13/utilitycap/tan
+	name = "tan utility cap"
+	desc = "An old utility cap. This one's got a nice beige colour to it."
+	icon_state = "utility_tsoft"
+
 /obj/item/clothing/head/helmet/ms13/hockey
 	name = "hockey mask"
 	desc = "A standard hockey mask. Old sports gear is common protective gear in the wastes."
@@ -12,6 +39,16 @@
 	inhand_icon_state = "hockey_mask"
 	armor = list("melee" = 40, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+
+/obj/item/clothing/head/helmet/ms13/vaulthelmet
+	name = "vault security helmet"
+	desc = "A rather pristine vault-tec officer's helmet. Surprisingly intact."
+	icon_state = "vaulthelmet"
+	inhand_icon_state = "helmet"
+	armor = list(melee = 45, bullet = 15, laser = 20, energy = 20, bomb = 35, bio = 10, rad = 10, fire = 30, acid = 10)
+	flags_inv = HIDEEARS|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/ms13/wastehound
 	name = "wastehound raider helmet"

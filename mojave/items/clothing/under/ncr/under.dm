@@ -47,4 +47,4 @@
 	name = "patrol ranger clothes"
 	desc = "A set of clothes worn often by patroling NCR rangers."
 	icon_state = "patrolranger"
-	inhand_icon_state = "sl_suit"
+	inhand_icon_state = "shirt"

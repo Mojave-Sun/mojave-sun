@@ -59,6 +59,13 @@
 	strip_delay = 40
 	resistance_flags = 0
 
+/obj/item/clothing/shoes/ms13/military/vault
+	name = "vault boots"
+	desc = "Tight-fit vault-tec branded boots. Built for style and conditioned for the worst."
+	icon_state = "vaultboots"
+	inhand_icon_state = "vaultboots"
+	armor = list(melee = 5, bullet = 5, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 10, acid = 0)
+
 /obj/item/clothing/shoes/ms13/military/light //I'm a ninja!
 	name = "advanced combat boots"
 	desc = "High speed, no-drag combat boots designed for use by U.S. special forces before the Great War.<br>The soles are made of aerated rubber to silence the movement of the wearer."
@@ -113,7 +120,7 @@
 	icon_state = "leg_tanboot"
 	inhand_icon_state = "legionleather"
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 0, bomb = 10, bio = 0, rad = 5, fire = 10, acid = 0)
-	
+
 /obj/item/clothing/shoes/ms13/military/legion/tanboots
 	name = "tan leather boots"
 	desc = "A crude pair of leather boots commonly worn by the Caesar's Legion recruits. These ones are made of a tan leather."

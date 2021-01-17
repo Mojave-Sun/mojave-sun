@@ -19,9 +19,6 @@
 /obj/effect/landmark/start/ms13/settler
 	name = "Settler"
 
-/obj/effect/landmark/start/ms13/shopkeep
-	name = "Shopkeep"
-
 /obj/effect/landmark/start/ms13/bartender
 	name = "Bartender"
 
@@ -30,6 +27,9 @@
 
 /obj/effect/landmark/start/ms13/doctor
 	name = "Doctor"
+
+/obj/effect/landmark/start/ms13/nurse
+	name = "Nurse"
 
 /obj/effect/landmark/start/ms13/deputy
 	name = "Deputy"

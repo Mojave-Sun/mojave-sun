@@ -18,7 +18,7 @@
 
 /obj/item/card/id/ms13/deputy
 	name = "deputy's badge"
-	desc = "A silver badge which shows honour and dedication."
+	desc = "A silver badge which shows honour and dedication. Has some electronic workings sloppily attached to the back of it."
 	assignment = "Deputy"
 	icon_state = "deputy"
 
@@ -31,7 +31,7 @@
 
 /obj/item/card/id/ms13/sheriff
 	name = "sheriff's badge"
-	desc = "A golden Sheriff's badge."
+	desc = "A golden Sheriff's badge. Has some electronic workings sloppily attached to the back of it."
 	icon_state = "sheriff"
 
 /obj/item/card/id/ms13/ncrrecruit
