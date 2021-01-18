@@ -25,8 +25,8 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 	var/list/stage_to_text //A list of messages to show on examine and when entering a new stage
 	var/list/stage_to_alert //What alert to pop up when reaching a certain stage, data stored as typepaths
 
-//300 is equivalent to 300 life() procs aka 10 minutes of water
-/datum/component/thirst/Initialize(thirst_rate = -1, start_thirst = 300, thirst_limit = 600, list/stage_flavor_text, list/stages_to_alerts)
+//900 being 15 minutes/900 seconds of starting water, thirst limit at 1800 is 30 minutes, 0.2u of water = 1 second of life, 1800 seconds = 360u
+/datum/component/thirst/Initialize(thirst_rate = -1, start_thirst = 900, thirst_limit = 1800, list/stage_flavor_text, list/stages_to_alerts)
 	if(iscyborg(parent) || !isliving(parent))
 		return COMPONENT_INCOMPATIBLE
 	max_thirst = thirst_limit
@@ -50,7 +50,10 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 	//Nice and hardcoded for now, probably
 	var/mob/living/the_parent = parent
 	if(the_parent.has_reagent(/datum/reagent/water))
-		modify_thirst(modify_by = 10)
+		var/datum/reagent/water/water = the_parent.reagents.get_reagent(/datum/reagent/water) //Modify metabolism rate here so don't need to edit base files
+		water.metabolization_rate = 0 // Stop water metabolization, we'll take it from here
+		modify_thirst(modify_by = min(the_parent.reagents.get_reagent_amount() * 5, 25)) //NO MICRODOSING, "metabolizes" 5 units of water per 1 second for +25 thirst
+		the_parent.reagents.remove_reagent(water, 5)
 
 ///Modifies thirst by modify_by VIA = curr_thirst + modify_by, clamps value to max_thirst or 0
 /datum/component/thirst/proc/modify_thirst(modify_by = 0)
