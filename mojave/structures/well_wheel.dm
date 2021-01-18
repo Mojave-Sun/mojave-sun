@@ -42,8 +42,8 @@ GLOBAL_LIST_EMPTY(water_wells_in_world)
 			continue
 		alive_humans++
 
-	//0.2u of water * water_ratio * all the alive humans
-	reagents.add_reagent(/datum/reagent/water, ((0.2 * water_ratio * alive_humans) / (length(GLOB.water_wells_in_world))))
+	//0.4u of water * water_ratio * all the alive humans
+	reagents.add_reagent(/datum/reagent/water, ((0.4 * water_ratio * alive_humans) / (length(GLOB.water_wells_in_world))))
 
 /obj/structure/well/proc/UpdateAllWells()
 	for(var/obj/structure/well/well in GLOB.water_wells_in_world)
