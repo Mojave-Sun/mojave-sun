@@ -172,3 +172,11 @@
 /area/ms13/underground/tunnel/maintenance
 	name = "Maintenance Passages"
 	icon_state = "maintenance"
+
+/area/ms13/underground/megabunker
+	name = "Major Pre-war bunker"
+	icon_state = "bunker"
+
+/area/ms13/underground/megabunker/upper
+	name = "Pre-War bunker entrance"
+	icon_state = "bunkentrance"

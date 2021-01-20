@@ -30,7 +30,6 @@
 /obj/machinery/power/apc/unlocked/ms13
 	name = "breaker"
 	start_charge = 0
-	var/nightshift_lights = TRUE
 
 /obj/machinery/power/apc/unlocked/ms13/north
 	dir = NORTH
