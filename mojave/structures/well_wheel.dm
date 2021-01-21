@@ -14,7 +14,7 @@ GLOBAL_LIST_EMPTY(water_wells_in_world)
 	The (water_ratio * 100)% of humans that will be sustained by the water production of all wells
 	If this was = 2, then all wells will produce enough water together so that the current alive
 	human population * 2 will be able to live without dying of thirst (provided it's all distributed)
-	This will assume the thirst component negates 0.2u of water per second per human, 30 minutes = 360u, 15 minutes = 180u etc.
+	This will assume the thirst component negates (1 / 24) u of water per second per human, 10 minutes = 25u, 20 minutes = 50u etc.
 
 	When var editing this value, call UpdateAllWells() to apply the ratio to all other wells unless you want this well
 	to produce more water and not distribute
@@ -42,8 +42,8 @@ GLOBAL_LIST_EMPTY(water_wells_in_world)
 			continue
 		alive_humans++
 
-	//0.4u of water * water_ratio * all the alive humans
-	reagents.add_reagent(/datum/reagent/water, ((0.4 * water_ratio * alive_humans) / (length(GLOB.water_wells_in_world))))
+	//Account for the 2 second delay between process(), 1/24u of water is consumed per second
+	reagents.add_reagent(/datum/reagent/water, (((1 / 12) * water_ratio * alive_humans) / (length(GLOB.water_wells_in_world))))
 
 /obj/structure/well/proc/UpdateAllWells()
 	for(var/obj/structure/well/well in GLOB.water_wells_in_world)
