@@ -179,4 +179,4 @@
 
 /area/ms13/underground/megabunker/upper
 	name = "Pre-War bunker entrance"
-	icon_state = "bunkentrance"
+	icon_state = "bunkerentrance"
