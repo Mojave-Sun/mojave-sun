@@ -7,22 +7,21 @@
 /datum/time_of_day/day
 	name = "Day"
 	color = "#FFFFFF"
-	duration = 9000
+	duration = 90
 
 /datum/time_of_day/morning
 	name = "Morning"
 	color = "#808599"
-	duration = 4500
+	duration = 45
 
 /datum/time_of_day/evening
 	name = "Evening"
 	color = "#FFA891"
-	duration = 4500
-
+	duration = 45
 /datum/time_of_day/night
 	name = "Night"
 	color = "#050d29"
-	duration = 9000
+	duration = 90
 
 #define STEP_MORNING 0
 #define STEP_DAY 1
@@ -73,28 +72,20 @@ SUBSYSTEM_DEF(sunlight)
 /datum/controller/subsystem/sunlight/stat_entry()
 	..("W:[GLOB.SUNLIGHT_QUEUE_WORK.len]|C:[GLOB.SUNLIGHT_QUEUE_CORNER.len]|U:[GLOB.SUNLIGHT_QUEUE_UPDATE.len]")
 
-/datum/controller/subsystem/sunlight/proc/fullPlonk()
-	GLOB.SUNLIGHT_QUEUE_WORK = GLOB.sunlight_objects
-
 /datum/controller/subsystem/sunlight/Initialize(timeofday)
 	if(!initialized)
 		set_time_of_day(STEP_DAY)
 		InitializeTurfs()
-		fullPlonk()
 		initialized = TRUE
 	fire(FALSE, TRUE)
 	..()
 
-// It's safe to pass a list of non-turfs to this list - it'll only check turfs.
-/* This is the proc that starts the crash loop. Maybe log what passes through it?
-	-Thooloo
-	*/
-/datum/controller/subsystem/sunlight/proc/InitializeTurfs(list/targets)
+// Initialize our sunlight work queue for first firing.
+/datum/controller/subsystem/sunlight/proc/InitializeTurfs()
 	for (var/z in SSmapping.levels_by_trait(ZTRAIT_STATION))
 		for (var/turf/T in block(locate(1,1,z), locate(world.maxx,world.maxy,z)))
 			if (T.dynamic_lighting && T.loc:dynamic_lighting)
-				// SSvis_overlays.add_vis_overlay(src, icon, overlay_state, layer, EMISSIVE_PLANE, dir)
-				T.sunlight_object = new /atom/movable/sunlight_object(T)
+				GLOB.SUNLIGHT_QUEUE_WORK += T
 
 
 /datum/controller/subsystem/sunlight/proc/check_cycle()
@@ -122,10 +113,11 @@ SUBSYSTEM_DEF(sunlight)
 		MC_SPLIT_TICK
 	var/i = 0
 	for (i in 1 to GLOB.SUNLIGHT_QUEUE_WORK.len)
-		var/atom/movable/sunlight_object/W = GLOB.SUNLIGHT_QUEUE_WORK[i]
-		if(W)
-			W.GetState()
-			GLOB.SUNLIGHT_QUEUE_UPDATE += W
+		var/turf/T = GLOB.SUNLIGHT_QUEUE_WORK[i]
+		if(T)
+			T.GetSunlightState()
+			if(T.sunlight_object)
+				GLOB.SUNLIGHT_QUEUE_UPDATE += T.sunlight_object
 
 		if(init_tick_checks)
 			CHECK_TICK
@@ -160,7 +152,16 @@ SUBSYSTEM_DEF(sunlight)
 		var/turf/T = GLOB.SUNLIGHT_QUEUE_CORNER[i]
 		var/atom/movable/sunlight_object/U = T.sunlight_object
 
-		if(!U || U.state != SUNLIGHT_INDOOR)
+		/* if we haven't initialized but we are affected, create new and check state */
+		if(!U)
+			T.sunlight_object = new /atom/movable/sunlight_object(T)
+			T.GetSunlightState()
+			U = T.sunlight_object
+			/* in case we aren't indoor somehow, wack us into the proc queue, we will be skipped on next indoor check */
+			if(U.state != SUNLIGHT_INDOOR)
+				GLOB.SUNLIGHT_QUEUE_UPDATE += T.sunlight_object
+
+		if(U.state != SUNLIGHT_INDOOR)
 			continue
 
 		U.UpdateColour()

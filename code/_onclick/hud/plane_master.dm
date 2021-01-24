@@ -83,16 +83,14 @@
 	filters += filter(type="alpha", render_source=EMISSIVE_RENDER_TARGET, flags=MASK_INVERSE)
 	filters += filter(type="alpha", render_source=EMISSIVE_UNBLOCKABLE_RENDER_TARGET, flags=MASK_INVERSE)
 	filters += filter(type="alpha", render_source = O_LIGHTING_VISUAL_RENDER_TARGET, flags = MASK_INVERSE)
-	// filters += filter(type="alpha", render_source=SUNLIGHTING_RENDER_TARGET, flags=MASK_INVERSE)
+	filters += filter(type="alpha", render_source=SUNLIGHTING_RENDER_TARGET, flags=MASK_INVERSE)
 
 //Contains all sunlight objects
 /atom/movable/screen/plane_master/Sunlight
 	name = "lighting plane master"
 	plane = SUNLIGHTING_PLANE
-	blend_mode = BLEND_MULTIPLY
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	render_target = SUNLIGHTING_RENDER_TARGET
-
 
 /**
  * Things placed on this mask the lighting plane. Doesn't render directly.

@@ -184,7 +184,7 @@
 /* our sunny version - I will need to figure out a less shit way of copying this */
 /atom/movable/screen/fullscreen/lighting_backdrop/Sunlight
 	icon = 'icons/hud/screen_gen.dmi'
-	icon_state = "flash"
+	invisibility = INVISIBILITY_LIGHTING
 	screen_loc = "CENTER"
 	transform = null
 	plane = LIGHTING_PLANE
@@ -192,10 +192,9 @@
 	blend_mode = BLEND_ADD
 	show_when_dead = TRUE
 
-
 /atom/movable/screen/fullscreen/lighting_backdrop/Sunlight/Initialize()
 	. = ..()
-	filters += filter(type="layer", render_source=SUNLIGHTING_RENDER_TARGET /*, flags=MASK_INVERSE*/ )
+	filters += filter(type="layer", render_source=SUNLIGHTING_RENDER_TARGET )
 	SSsunlight.sunlighting_planes |= src
 
 /atom/movable/screen/fullscreen/lighting_backdrop/Sunlight/Destroy()
