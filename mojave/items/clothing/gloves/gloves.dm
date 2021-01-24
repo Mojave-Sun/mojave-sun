@@ -40,7 +40,8 @@
 	actions_types = list(/datum/action/item_action/toggle)
 
 /obj/item/clothing/gloves/ms13/stealthboy/dropped(mob/user)
-	disrupt(user)
+	if(stealthboy_on)
+		disrupt(user)
 
 /obj/item/clothing/gloves/ms13/stealthboy/attack_self(mob/user)
 	toggle(user)
@@ -55,15 +56,18 @@
 	if(stealthboy_on)
 		user.alpha = 25
 		to_chat(user, "<span class='notice'>You activate the [src].</span>")
-		addtimer(CALLBACK(src, .proc/disrupt, user), 10 SECONDS)
+		addtimer(CALLBACK(src, .proc/disrupt, user), 20 SECONDS)
+		user.add_filter("stealthboy_ripple", 2, list("type" = "ripple", "flags" = WAVE_BOUNDED, "radius" = 0, "size" = 2))
+		var/filter = user.get_filter("stealthboy_ripple")
+		animate(filter, radius = 32, time = 15, size = 0, loop = 1)
 	else
 		user.alpha = initial(user.alpha)
 		to_chat(user, "<span class='notice'>You deactivate the [src].</span>")
-		COOLDOWN_START(src, stealthboy_cooldown, 30 SECONDS)
+		COOLDOWN_START(src, stealthboy_cooldown, 180 SECONDS)
 
 /obj/item/clothing/gloves/ms13/stealthboy/proc/disrupt(mob/user)
 	if(stealthboy_on)
 		user.alpha = initial(user.alpha)
 		stealthboy_on = FALSE
-	COOLDOWN_START(src, stealthboy_cooldown, 30 SECONDS)
-
+	COOLDOWN_START(src, stealthboy_cooldown, 180 SECONDS)
+	to_chat(user, "<span class='notice'>[src] deactivates.</span>")
