@@ -74,22 +74,22 @@
 	name = "Lieutenant"
 
 /obj/effect/landmark/start/ms13/initiate
-	name = "Initiate"
+	name = "BoS Initiate"
 
 /obj/effect/landmark/start/ms13/knight
-	name = "Knight"
+	name = "BoS Knight"
 
 /obj/effect/landmark/start/ms13/scribe
-	name = "Scribe"
+	name = "BoS Scribe"
 
 /obj/effect/landmark/start/ms13/paladin
-	name = "Paladin"
+	name = "BoS Paladin"
 
 /obj/effect/landmark/start/ms13/head_paladin
-	name = "Head Paladin"
+	name = "BoS Head Paladin"
 
 /obj/effect/landmark/start/ms13/head_scribe
-	name = "Head Scribe"
+	name = "BoS Head Scribe"
 
 /obj/effect/landmark/start/ms13/raider
 	name = "Raider"

@@ -7,14 +7,14 @@
 	name = "\improper ID tag"
 	desc = "A simple identification tag. This is a base class and you shouldn't be seeing it."
 	icon = 'mojave/icons/objects/dogtags.dmi'
-	icon_state = "holodogtag"
+	icon_state = "bos_holotag"
 	uses_overlays = FALSE
 	var/datum/bank_account = null
 
 /obj/item/card/id/ms13/bos
-	name = "holo dogtag"
-	desc = "An advanced holographic dogtag, that shows the duty of a BoS member."
-	icon_state = "holodogtag"
+	name = "\improper BoS holotag"
+	desc = "A set of dogtags, identifying the wearer as a member of the Brotherhood of Steel."
+	icon_state = "bos_holotag"
 
 /obj/item/card/id/ms13/deputy
 	name = "deputy's badge"
