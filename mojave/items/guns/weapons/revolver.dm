@@ -162,12 +162,12 @@
 //Magazines
 /obj/item/ammo_box/magazine/internal/shot/caravan
 	name = "caravan shotgun internal tube"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/ms13/buckshot
 	max_ammo = 2
 
 /obj/item/ammo_box/magazine/internal/shot/single
 	name = "single shotgun internal tube"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/ms13/buckshot
 	max_ammo = 1
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev44

@@ -132,12 +132,12 @@
 
 /obj/item/ammo_box/magazine/internal/shot/lever
 	name = "lever action shotgun internal tube magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/ms13/buckshot
 	max_ammo = 5
 
 /obj/item/ammo_box/magazine/internal/shot/huntingshot
 	name = "hunting shotgun internal tube magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/ms13/buckshot
 	max_ammo = 8
 
 //Loaders
