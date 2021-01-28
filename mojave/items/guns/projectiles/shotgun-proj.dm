@@ -2,6 +2,8 @@
     name = "base mojave sun shotgun pellet"
     speed = 0.6
 
+//12 gauge
+
 /obj/projectile/bullet/pellet/ms13/buckshot
     name = "buckshot pellet"
     damage = 9

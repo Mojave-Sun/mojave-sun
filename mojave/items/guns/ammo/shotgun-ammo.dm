@@ -2,6 +2,8 @@
     name = "mojave sun base shotgun shell"
     desc = "Complain when seeing this."
 
+//12 gauge
+
 /obj/item/ammo_casing/shotgun/ms13/buckshot
     name = "12 gauge buckshot shell"
     desc = "A 12 gauge shotgun shell loaded with buckshot."
