@@ -100,42 +100,42 @@
 	zoom_out_amt = 13
 
 //Magazines
-/obj/item/ammo_box/magazine/internal/shot/tube4570
+/obj/item/ammo_box/magazine/internal/shot/ms13/tube4570
 	name = "4570 internal tube magazine"
 	ammo_type = /obj/item/ammo_casing/ms13/c4570
 	caliber = "4570"
 	max_ammo = 6
 
-/obj/item/ammo_box/magazine/internal/shot/tube44
+/obj/item/ammo_box/magazine/internal/shot/ms13/tube44
 	name = ".44 magnum internal tube magazine"
 	ammo_type = /obj/item/ammo_casing/ms13/m44
 	caliber = "44"
 	max_ammo = 8
 
-/obj/item/ammo_box/magazine/internal/shot/tube357
+/obj/item/ammo_box/magazine/internal/shot/ms13/tube357
 	name = ".357 magnum internal tube magazine"
 	ammo_type = /obj/item/ammo_casing/ms13/a357
 	caliber = "357"
 	max_ammo = 7
 
-/obj/item/ammo_box/magazine/internal/shot/battler
+/obj/item/ammo_box/magazine/internal/shot/ms13/battler
 	name = "battle rifle internal magazine (.308)"
 	ammo_type = /obj/item/ammo_casing/ms13/a308
 	caliber = "a308"
 	max_ammo = 8
 
-/obj/item/ammo_box/magazine/internal/shot/sks
+/obj/item/ammo_box/magazine/internal/shot/ms13/sks
 	name = "SKS internal magazine (7.62)"
 	ammo_type = /obj/item/ammo_casing/ms13/a762
 	caliber = "a762"
 	max_ammo = 10
 
-/obj/item/ammo_box/magazine/internal/shot/lever
+/obj/item/ammo_box/magazine/internal/shot/ms13/lever
 	name = "lever action shotgun internal tube magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/ms13/buckshot
 	max_ammo = 5
 
-/obj/item/ammo_box/magazine/internal/shot/huntingshot
+/obj/item/ammo_box/magazine/internal/shot/ms13/huntingshot
 	name = "hunting shotgun internal tube magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/ms13/buckshot
 	max_ammo = 8

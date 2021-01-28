@@ -160,44 +160,44 @@
 	extra_penetration = 10
 
 //Magazines
-/obj/item/ammo_box/magazine/internal/shot/caravan
+/obj/item/ammo_box/magazine/internal/shot/ms13/caravan
 	name = "caravan shotgun internal tube"
 	ammo_type = /obj/item/ammo_casing/shotgun/ms13/buckshot
 	max_ammo = 2
 
-/obj/item/ammo_box/magazine/internal/shot/single
+/obj/item/ammo_box/magazine/internal/shot/ms13/single
 	name = "single shotgun internal tube"
 	ammo_type = /obj/item/ammo_casing/shotgun/ms13/buckshot
 	max_ammo = 1
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev44
+/obj/item/ammo_box/magazine/internal/cylinder/ms13/rev44
 	name = ".44 magnum cylinder"
 	ammo_type = /obj/item/ammo_casing/ms13/m44
 	icon = 'mojave/icons/objects/ammo.dmi'
 	caliber = "44"
 	max_ammo = 6
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev357
+/obj/item/ammo_box/magazine/internal/cylinder/ms13/rev357
 	name = ".357 magnum cylinder"
 	ammo_type = /obj/item/ammo_casing/ms13/a357
 	caliber = "357"
 	max_ammo = 6
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev10mm
+/obj/item/ammo_box/magazine/internal/cylinder/ms13/rev10mm
 	name = "10mm revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/ms13/c10mm
 	icon = 'mojave/icons/objects/ammo.dmi'
 	caliber = "10mm"
 	max_ammo = 5
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev4570
+/obj/item/ammo_box/magazine/internal/cylinder/ms13/rev4570
 	name = ".45-70 cylinder"
 	ammo_type = /obj/item/ammo_casing/ms13/c4570
 	icon = 'mojave/icons/objects/ammo.dmi'
 	caliber = "4570"
 	max_ammo = 5
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev556
+/obj/item/ammo_box/magazine/internal/cylinder/ms13/rev556
 	name = "5.56 revolver cylinder"
 	icon = 'mojave/icons/objects/ammo.dmi'
 	ammo_type = /obj/item/ammo_casing/ms13/a556

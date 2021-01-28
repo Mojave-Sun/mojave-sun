@@ -1,5 +1,6 @@
 /obj/projectile/bullet/pellet/ms13
     name = "base mojave sun shotgun pellet"
+    speed = 0.6
 
 /obj/projectile/bullet/pellet/ms13/buckshot
     name = "buckshot pellet"
@@ -18,11 +19,11 @@
     name = "flechette pellet"
     damage = 9
     wound_bonus = 4
-    armor_penetration = 5
+    armour_penetration = 5
 
-/obj/projectile/bullet/ms13/12gslug
+/obj/projectile/bullet/ms13/slug
     name = "12g slug"
     damage = 45
-    armor_penetration = 15
-    wound_bonus = -6
+    armour_penetration = 15
+    wound_bonus = -8
     speed = 0.8

@@ -26,7 +26,7 @@
     variance = 25
     projectile_type = /obj/projectile/bullet/pellet/ms13/flechette
 
-/obj/item/ammo_casing/shotgun/ms13/12gslug
+/obj/item/ammo_casing/shotgun/ms13/slug
     name = "12 gauge slug"
     desc = "A deadly 12 gauge shotgun slug firing a single powerful projectile as opposed to multiple pellets."
-    projectile_type = /obj/projectile/bullet/ms13/12gslug
+    projectile_type = /obj/projectile/bullet/ms13/slug
