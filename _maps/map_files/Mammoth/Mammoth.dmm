@@ -5758,10 +5758,10 @@
 /turf/open/floor/plasteel/ms13/blue/white/whitebluechess/whitebluechess2/dirty,
 /area/ms13/sunny_dale)
 "dWl" = (
-/obj/machinery/power/port_gen/pacman/super{
-	anchored = 1
-	},
 /obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
 /turf/open/floor/plasteel/ms13/dark/dirty,
 /area/ms13/underground/tunnel/maintenance)
 "dWA" = (
@@ -6544,10 +6544,10 @@
 /turf/open/floor/plasteel/ms13/dark/dirty,
 /area/ms13/underground/tunnel/maintenance)
 "eDO" = (
-/obj/structure/cable,
-/obj/machinery/power/port_gen/pacman/super{
-	anchored = 1
+/obj/machinery/light/small{
+	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/ms13/dark/dirty,
 /area/ms13/underground/tunnel/maintenance)
 "eDQ" = (
@@ -14103,11 +14103,8 @@
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/ncr_main)
 "jNi" = (
-/obj/machinery/power/terminal{
-	dir = 4
-	},
-/obj/structure/cable,
-/turf/open/floor/plasteel/ms13/dark/dirty,
+/obj/machinery/power/smes/magical,
+/turf/open/floor/plasteel/ms13/dark/rusty,
 /area/ms13/underground/tunnel/maintenance)
 "jNk" = (
 /obj/effect/decal/cleanable/dirt,
@@ -19286,6 +19283,7 @@
 "nYs" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/effect/decal/remains/human,
+/obj/machinery/power/smes/magical,
 /turf/open/floor/plasteel/ms13/dark/rusty,
 /area/ms13/underground/tunnel/maintenance)
 "nYw" = (
@@ -22005,7 +22003,10 @@
 /turf/open/floor/wood/ms13/carpet/broken/right5,
 /area/ms13/sunny_dale)
 "pVX" = (
-/obj/machinery/smoke_machine,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/ms13/dark/dirty,
 /area/ms13/underground/tunnel/maintenance)
 "pWh" = (
@@ -31192,13 +31193,6 @@
 /obj/structure/closet/crate/ms13/vault_tec/long,
 /turf/open/floor/plasteel/ms13/dark/dirty,
 /area/ms13/underground/tunnel/maintenance)
-"wXl" = (
-/obj/machinery/power/terminal{
-	dir = 4
-	},
-/obj/structure/cable,
-/turf/open/floor/plasteel/ms13/dark/rusty,
-/area/ms13/underground/tunnel/maintenance)
 "wXY" = (
 /obj/effect/decal/cleanable/glass,
 /obj/structure/flora/grass/jungle/b,
@@ -31543,10 +31537,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13/broken/left,
 /area/ms13/sunny_dale)
-"xgL" = (
-/obj/machinery/power/smes,
-/turf/open/floor/plasteel/ms13/dark/dirty,
-/area/ms13/underground/tunnel/maintenance)
 "xgX" = (
 /obj/structure/table/ms13/no_smooth/desk{
 	dir = 1
@@ -224718,9 +224708,9 @@ afK
 afK
 afK
 tNC
-rvD
-iGP
-rvD
+jNi
+pVX
+ydy
 ydy
 iGP
 rvD
@@ -225322,13 +225312,13 @@ afK
 afK
 afK
 tNC
-miM
-wtT
-wXl
+iGP
+iGP
+rvD
 ydy
-jNi
-wtT
-bCR
+iGP
+iGP
+rvD
 lOG
 uyo
 lTh
@@ -225626,10 +225616,10 @@ afK
 tNC
 nYs
 dWl
-xgL
+wtT
 eDO
-xgL
-eDO
+iGP
+iGP
 iGP
 tNC
 tNC
@@ -228063,7 +228053,7 @@ iGP
 tNC
 nhL
 rvD
-pVX
+uFf
 tNC
 afK
 afK
