@@ -30,7 +30,7 @@
 #define MS13_ENGINEER		(1<<2)
 #define MS13_CORPORAL		(1<<3)
 #define MS13_SERGEANT		(1<<4)
-#define MS13_MEDICALOFFICER (1<<5)
+#define MS13_MEDIC 			(1<<5)
 #define MS13_LIEUTENANT		(1<<6)
 
 #define MS13_BOS				(1<<4)

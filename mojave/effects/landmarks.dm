@@ -67,7 +67,7 @@
 /obj/effect/landmark/start/ms13/staffsergeant
 	name = "Staff Sergeant"
 
-/obj/effect/landmark/start/ms13/medicalofficer
+/obj/effect/landmark/start/ms13/medic
 	name = "Medic"
 
 /obj/effect/landmark/start/ms13/lieutenant
