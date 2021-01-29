@@ -1483,7 +1483,10 @@
 	},
 /area/ms13/underground/vault_atrium_Lower)
 "aZl" = (
-/obj/machinery/door/poddoor/shutters,
+/obj/machinery/door/poddoor/shutters{
+	id = garage-door-1;
+	name = "garage door one"
+	},
 /turf/open/floor/plasteel/ms13/dark/full/dirty,
 /area/ms13/sunny_dale)
 "aZm" = (
@@ -4833,6 +4836,16 @@
 /obj/machinery/light/small/broken,
 /turf/open/floor/plating/ground/dirt,
 /area/ms13/underground/mountain)
+"duk" = (
+/obj/structure/filingcabinet/medical{
+	pixel_x = -9
+	},
+/obj/structure/filingcabinet/filingcabinet{
+	pixel_x = 3;
+	pixel_y = 1
+	},
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "dut" = (
 /obj/structure/bed/ms13/bedframe/cot,
 /turf/open/floor/wood/ms13/broken,
@@ -5333,6 +5346,11 @@
 /obj/item/reagent_containers/food/snacks/egg/ms13/mirelurk,
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
+"dPI" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating/ground/road,
+/area/ms13/sunny_dale)
 "dPL" = (
 /obj/item/seeds/ms13/razorgrain,
 /obj/item/seeds/ms13/razorgrain,
@@ -7045,6 +7063,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"fkK" = (
+/obj/structure/rack,
+/obj/item/storage/box/stockparts/basic,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "fld" = (
 /obj/structure/barricade/wooden/crude/snow,
 /obj/structure/table/low_wall/brick/alt,
@@ -7702,6 +7725,10 @@
 "fHL" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/wood/ms13/broken/slightlybroken1,
+/area/ms13/sunny_dale)
+"fHM" = (
+/obj/structure/toilet,
+/turf/open/floor/plasteel/ms13/white,
 /area/ms13/sunny_dale)
 "fHN" = (
 /obj/effect/decal/cleanable/glass,
@@ -8505,6 +8532,11 @@
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/sunny_dale)
+"gjD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/oil/streak,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "gjJ" = (
 /obj/machinery/processor,
 /turf/open/floor/holofloor/dark,
@@ -8782,6 +8814,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13/carpet/broken/right1,
+/area/ms13/sunny_dale)
+"gtE" = (
+/obj/structure/rack,
+/obj/item/screwdriver{
+	pixel_y = 9
+	},
+/turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "gtF" = (
 /obj/structure/railing{
@@ -9579,6 +9618,15 @@
 	dir = 8
 	},
 /turf/open/floor/plating/ground/sidewalk,
+/area/ms13/sunny_dale)
+"hax" = (
+/obj/structure/table/ms13/metal,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/ms13/cash_register{
+	dir = 8
+	},
+/turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "haC" = (
 /obj/structure/curtain,
@@ -11400,6 +11448,12 @@
 	},
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"ipV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack,
+/obj/item/wrench,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "ipY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/ms13/wood{
@@ -12273,6 +12327,11 @@
 	pixel_y = 6
 	},
 /turf/open/floor/wood/ms13/broken/slightlybroken2,
+/area/ms13/sunny_dale)
+"iVW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/vending/cigarette,
+/turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "iWu" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13739,6 +13798,12 @@
 /obj/effect/landmark/start/ms13/raider,
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
+"jVL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/window/fulltile/ms13/glass,
+/obj/structure/table/low_wall/brick/alt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "jWe" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/plasteel/ms13/dark,
@@ -15029,6 +15094,12 @@
 	},
 /turf/open/floor/plasteel/ms13/teal,
 /area/ms13/sunny_dale)
+"kXX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "kYb" = (
 /obj/structure/closet/crate/ms13/vault_tec/compact,
 /obj/item/reagent_containers/hypospray/medipen/stimpack,
@@ -15067,7 +15138,10 @@
 /turf/open/floor/plasteel/ms13/teal,
 /area/ms13/sunny_dale)
 "kZy" = (
-/obj/machinery/door/poddoor/shutters,
+/obj/machinery/door/poddoor/shutters{
+	id = garage-door-1;
+	name = "garage door one"
+	},
 /turf/open/floor/plating/ground/road,
 /area/ms13/sunny_dale)
 "kZM" = (
@@ -15707,6 +15781,15 @@
 	},
 /turf/open/floor/plasteel/ms13/green/_rusty,
 /area/ms13/sunny_dale)
+"lCL" = (
+/obj/structure/table/ms13/metal,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/pen{
+	pixel_x = 7;
+	pixel_y = -7
+	},
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "lCV" = (
 /obj/structure/ms13/tv{
 	pixel_y = 12
@@ -16259,6 +16342,11 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/ms13/_dirty,
+/area/ms13/sunny_dale)
+"mjc" = (
+/obj/structure/closet,
+/obj/item/clothing/suit/ms13/ljacket/mayor/blue,
+/turf/open/floor/plating/ground/sidewalk,
 /area/ms13/sunny_dale)
 "mjr" = (
 /obj/structure/closet/cardboard,
@@ -17882,6 +17970,13 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13/carpet/broken/alt,
 /area/ms13/sunny_dale)
+"nyW" = (
+/obj/effect/decal/cleanable/blood/old{
+	pixel_x = 13;
+	pixel_y = 16
+	},
+/turf/open/floor/plating/ground/road,
+/area/ms13/sunny_dale)
 "nzj" = (
 /obj/structure/table/ms13/metal,
 /obj/effect/spawner/lootdrop/food_packaging,
@@ -18095,6 +18190,10 @@
 	},
 /turf/open/floor/wood/ms13,
 /area/ms13)
+"nGN" = (
+/obj/effect/decal/cleanable/oil/slippery,
+/turf/open/floor/plating/ground/sidewalk,
+/area/ms13/sunny_dale)
 "nGV" = (
 /obj/structure/table/ms13/metal,
 /turf/open/floor/plasteel/ms13/blue/white/whitebluechess/whitebluechess2,
@@ -18244,6 +18343,10 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"nPJ" = (
+/obj/effect/decal/cleanable/oil/streak,
+/turf/open/floor/plating/ground/road,
 /area/ms13/sunny_dale)
 "nPM" = (
 /obj/effect/decal/cleanable/blood/tracks{
@@ -18713,6 +18816,13 @@
 "okw" = (
 /obj/structure/chair/sofa/corp/right,
 /turf/open/floor/wood/ms13/carpet/broken/alt,
+/area/ms13/sunny_dale)
+"oky" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = 11
+	},
+/turf/open/floor/plasteel/ms13/white/dirty,
 /area/ms13/sunny_dale)
 "okH" = (
 /obj/structure/rack,
@@ -19696,6 +19806,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"pag" = (
+/obj/structure/rack,
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "pai" = (
@@ -21617,6 +21734,13 @@
 /obj/effect/mob_spawn/human/corpse/ms13/wastelander,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"qzB" = (
+/obj/machinery/door/poddoor/shutters{
+	id = garage-door-2;
+	name = "garage door two"
+	},
+/turf/open/floor/plating/ground/road,
+/area/ms13/sunny_dale)
 "qzD" = (
 /obj/structure/window/fulltile/ms13/glass,
 /obj/structure/table/low_wall/brick/alt,
@@ -23017,6 +23141,14 @@
 /obj/effect/decal/cleanable/blood/bubblegum,
 /turf/open/floor/wood/ms13,
 /area/ms13/underground/mountain)
+"rAR" = (
+/obj/structure/table/ms13/metal,
+/obj/item/paper_bin{
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "rAU" = (
 /obj/machinery/light/broken{
 	dir = 8
@@ -23908,6 +24040,11 @@
 	},
 /turf/open/floor/plasteel/ms13,
 /area/ms13/underground/bos)
+"sjP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/ms13/white/dirty,
+/area/ms13/sunny_dale)
 "skc" = (
 /obj/structure/table/ms13/metal,
 /obj/item/storage/box/drinkingglasses,
@@ -24965,6 +25102,13 @@
 /obj/item/claymore/ms13/machete/pipe/tireiron,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"tbJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet,
+/obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgreen,
+/obj/item/storage/toolbox/mechanical/old,
+/turf/open/floor/plasteel/ms13/white/rusty,
+/area/ms13/sunny_dale)
 "tbN" = (
 /obj/structure/rack,
 /turf/open/floor/plasteel/ms13/_dirty,
@@ -25733,6 +25877,22 @@
 "tGR" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet,
+/area/ms13/sunny_dale)
+"tGW" = (
+/obj/structure/table/ms13/metal,
+/obj/machinery/button{
+	id = garage-door-2;
+	name = "garage door two control";
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/machinery/button{
+	id = garage-door-1;
+	name = "garage door one control";
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/turf/open/floor/plating/ground/sidewalk,
 /area/ms13/sunny_dale)
 "tGY" = (
 /obj/effect/decal/cleanable/dirt,
@@ -26948,6 +27108,13 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"uGE" = (
+/obj/structure/rack,
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/ms13/sunny_dale)
 "uHH" = (
 /obj/structure/table/low_wall/wood,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
@@ -27319,6 +27486,11 @@
 "uZd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/ms13/mattress/filthy,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"uZx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "uZA" = (
@@ -28166,6 +28338,10 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
 /turf/open/floor/plasteel/ms13/_full,
 /area/ms13/underground/bos)
+"vOC" = (
+/obj/effect/decal/cleanable/oil/slippery,
+/turf/open/floor/plating/ground/road,
+/area/ms13/sunny_dale)
 "vOJ" = (
 /obj/structure/table/low_wall/wood,
 /obj/effect/decal/cleanable/glass,
@@ -28303,6 +28479,14 @@
 /obj/item/shard,
 /obj/structure/table/low_wall/brick/alt,
 /turf/open/floor/plasteel/ms13/blue/_dirty,
+/area/ms13/sunny_dale)
+"vVx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/ms13/metal,
+/obj/item/paper_bin{
+	pixel_y = 7
+	},
+/turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "vVG" = (
 /obj/effect/decal/cleanable/dirt,
@@ -31540,7 +31724,10 @@
 /turf/open/openspace/ms13_no_build,
 /area/ms13/underground/bos)
 "ykd" = (
-/obj/machinery/door/poddoor/shutters,
+/obj/machinery/door/poddoor/shutters{
+	id = garage-door-1;
+	name = "garage door one"
+	},
 /turf/open/floor/plasteel/ms13,
 /area/ms13/underground/bos)
 "ykm" = (
@@ -31572,6 +31759,12 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
 /turf/closed/indestructible/rock/ms13,
 /area/ms13/underground/mountain)
+"ylx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack,
+/obj/item/storage/box,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "ylC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/window/fulltile/ms13/glass,
@@ -86430,7 +86623,7 @@ afK
 jIO
 aPL
 lwZ
-lwZ
+vOC
 lwZ
 lwZ
 jIO
@@ -86733,7 +86926,7 @@ jIO
 aPL
 lwZ
 lwZ
-lwZ
+nPJ
 lwZ
 jIO
 afK
@@ -88242,7 +88435,7 @@ afK
 jIO
 aPL
 lwZ
-lwZ
+nyW
 lwZ
 lwZ
 jIO
@@ -88544,9 +88737,9 @@ afK
 jIO
 aPL
 lwZ
+dPI
 lwZ
-lwZ
-lwZ
+nPJ
 jIO
 afK
 sMt
@@ -137151,9 +137344,9 @@ fat
 pWp
 hkx
 bug
-wOw
-egY
-szF
+jIO
+jVL
+kkh
 jIO
 xNO
 vBx
@@ -158606,13 +158799,13 @@ vBx
 bgO
 jIO
 bfZ
+egI
 bfZ
-bfZ
 lwZ
 lwZ
+nPJ
 lwZ
-lwZ
-lwZ
+kZy
 uya
 aDo
 aDo
@@ -158906,15 +159099,15 @@ jIO
 vBx
 qcW
 vBx
-jIO
+fKL
+oBE
 bfZ
-bfZ
 eAl
 eAl
 eAl
 eAl
 eAl
-lwZ
+kZy
 aDo
 aDo
 aDo
@@ -159206,17 +159399,17 @@ jIO
 jIO
 jIO
 vBx
-qVK
-vBx
+fkK
+xNO
 jIO
+tGW
 bfZ
-bfZ
 eAl
 eAl
 eAl
 eAl
 eAl
-lwZ
+kZy
 aDo
 aDo
 aDo
@@ -159505,20 +159698,20 @@ ome
 ome
 ome
 jIO
-bgO
+fLL
 bgO
 bgO
 bgO
 vBx
 kkh
+bCk
 bfZ
 bfZ
-bfZ
+bZY
 lwZ
 lwZ
 lwZ
-lwZ
-lwZ
+kZy
 uya
 aDo
 aDo
@@ -159813,8 +160006,8 @@ vBx
 qVK
 vBx
 kkh
-bfZ
-bfZ
+uGE
+oBE
 bfZ
 lwZ
 lwZ
@@ -160110,12 +160303,12 @@ ome
 ome
 jIO
 vBx
-qcW
+ipV
 bug
-qcW
+ylx
 vBx
 kkh
-bfZ
+bCk
 bfZ
 bfZ
 lwZ
@@ -160412,19 +160605,19 @@ ome
 ome
 jIO
 vBx
-cbs
+kXX
 vBx
 qcW
 bgO
 kkh
+bCk
 bfZ
 bfZ
-bfZ
 lwZ
 lwZ
 lwZ
 lwZ
-lwZ
+qzB
 uya
 aDo
 aDo
@@ -160719,14 +160912,14 @@ bgO
 vBx
 bgO
 jIO
-bfZ
-bfZ
+mjc
+nGN
 eAl
 eAl
 eAl
 eAl
 eAl
-lwZ
+qzB
 aDo
 aDo
 aDo
@@ -161016,9 +161209,9 @@ afK
 ome
 jIO
 bgO
-qcW
+ylx
 bgO
-qcW
+uZx
 bgO
 jIO
 bfZ
@@ -161028,7 +161221,7 @@ eAl
 eAl
 eAl
 eAl
-lwZ
+qzB
 aDo
 aDo
 aDo
@@ -161325,12 +161518,12 @@ bgO
 jIO
 bfZ
 bfZ
-bfZ
+oBE
 lwZ
 lwZ
+nPJ
 lwZ
-lwZ
-lwZ
+qzB
 uya
 aDo
 aDo
@@ -161621,11 +161814,11 @@ ome
 jIO
 bgO
 qcW
-vBx
+xNO
 bgO
-bgO
+fLL
 jIO
-bgO
+fKL
 jIO
 jIO
 jIO
@@ -161927,9 +162120,9 @@ vBx
 bgO
 jIO
 jIO
-vBx
-bgO
-vBx
+gjD
+fek
+iVW
 vBx
 qVK
 vBx
@@ -162227,13 +162420,13 @@ vBx
 bgO
 bgO
 bgO
-bgO
+fKL
 bgO
 vBx
 bgO
 bgO
 xNO
-qVK
+pag
 vBx
 qcW
 kkh
@@ -162525,14 +162718,14 @@ afK
 ome
 ome
 jIO
+ctD
+bgO
 vBx
-bgO
-bgO
-bgO
+kPy
 jIO
 bgO
-tZO
-pFE
+lCL
+rAR
 vJQ
 bgO
 fIQ
@@ -162828,8 +163021,8 @@ ome
 ome
 jIO
 jIO
+bzB
 jIO
-xkE
 jIO
 jIO
 bgO
@@ -163128,12 +163321,12 @@ afK
 ome
 ome
 ome
-ome
 jIO
 wzC
 xkE
-bvp
+tbJ
 jIO
+iot
 vBx
 vBx
 vBx
@@ -163430,12 +163623,12 @@ ome
 ome
 ome
 ome
-ome
 jIO
-xJt
+fHM
 fGh
-fGh
+sjP
 jIO
+vVx
 xNO
 bgO
 bgO
@@ -163732,15 +163925,15 @@ ome
 ome
 ome
 ome
-ome
 jIO
 xkE
-wzC
+oky
 xkE
 jIO
+duk
 vBx
 tZO
-vJQ
+hax
 tZO
 vBx
 qVK
@@ -164034,7 +164227,7 @@ ome
 ome
 ome
 ome
-ome
+jIO
 jIO
 jIO
 jIO
@@ -164045,7 +164238,7 @@ vBx
 vBx
 vBx
 vBx
-qVK
+gtE
 vBx
 qVK
 kkh
