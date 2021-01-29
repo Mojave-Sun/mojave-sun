@@ -1098,6 +1098,7 @@
 	dir = 8
 	},
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13/broken/left,
 /area/ms13/sunny_dale)
 "aHN" = (
@@ -1566,11 +1567,6 @@
 /obj/item/storage/book/bible,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
-"aWn" = (
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/obj/item/ammo_casing/spent,
-/turf/open/floor/wood/ms13,
-/area/ms13/sunny_dale)
 "aWs" = (
 /obj/machinery/autolathe,
 /turf/open/floor/plasteel/ms13,
@@ -1801,12 +1797,9 @@
 	},
 /area/ms13/sunny_dale)
 "bdJ" = (
-/obj/structure/bed/ms13/mattress/yellowed,
-/obj/effect/decal/cleanable/blood/old{
-	pixel_x = 10
-	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/open/floor/wood/ms13,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/ms13/metal,
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
 /area/ms13/sunny_dale)
 "bdT" = (
 /obj/structure/chair/pew/right{
@@ -1945,10 +1938,13 @@
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "bjd" = (
-/obj/structure/chair/ms13/metal/broken{
-	dir = 4
-	},
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/table/wood,
+/obj/item/paper_bin{
+	pixel_y = 4
+	},
+/obj/item/pen,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "bjf" = (
@@ -2158,9 +2154,11 @@
 	},
 /area/ms13/underground/vault_atrium_Lower)
 "brs" = (
-/obj/structure/bed/ms13/sleepingbag/red,
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/open/floor/wood/ms13,
+/obj/structure/sink{
+	pixel_y = 28
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
 /area/ms13/sunny_dale)
 "bru" = (
 /turf/open/floor/plasteel/ms13/purple/side/dirty,
@@ -2566,6 +2564,13 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"bFj" = (
+/obj/structure/chair/ms13/wood/padded{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet/broken/right3,
 /area/ms13/sunny_dale)
 "bFx" = (
 /mob/living/simple_animal/hostile/ms13/molerat,
@@ -3482,6 +3487,12 @@
 /obj/item/flashlight/lantern,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"cjj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/ms13/metal/broken,
+/turf/open/floor/wood/ms13/carpet/broken/right3,
+/area/ms13/sunny_dale)
 "cjk" = (
 /obj/structure/fireplace{
 	pixel_x = 0
@@ -3706,11 +3717,14 @@
 /turf/open/floor/plasteel/ms13/blue/bluechess,
 /area/ms13/sunny_dale)
 "coY" = (
-/obj/structure/railing/corner{
-	dir = 8
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/ms13/metal,
+/obj/item/kitchen/knife/ms13,
+/obj/machinery/light{
+	dir = 1
 	},
-/turf/open/openspace/ms13_no_build,
-/area/ms13)
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
+/area/ms13/sunny_dale)
 "cqp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/cigbutt,
@@ -4343,7 +4357,16 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"cKF" = (
+/obj/structure/chair/ms13/wood/padded{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/broken,
 /area/ms13/sunny_dale)
 "cKU" = (
 /obj/structure/table/low_wall/wood,
@@ -4994,12 +5017,9 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "dkG" = (
-/obj/structure/rack,
-/obj/effect/decal/cleanable/glass{
-	dir = 8
-	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/open/floor/wood/ms13,
+/obj/machinery/grill,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
 /area/ms13/sunny_dale)
 "dll" = (
 /obj/structure/railing{
@@ -5419,6 +5439,12 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
 /turf/open/floor/plasteel/ms13/_rusty,
 /area/ms13/underground/bos)
+"dAv" = (
+/obj/machinery/door/unpowered/wooddoor,
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "dAM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/dim,
@@ -6306,15 +6332,9 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "efl" = (
-/obj/effect/decal/cleanable/blood/old{
-	pixel_x = 13;
-	pixel_y = 16
-	},
-/obj/effect/decal/cleanable/vomit/old,
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/mob_spawn/human/skeleton,
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/open/floor/wood/ms13,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
 /area/ms13/sunny_dale)
 "efn" = (
 /turf/open/floor/plasteel/ms13/white/full/rusty,
@@ -6599,12 +6619,15 @@
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "epY" = (
-/obj/structure/table/ms13/metal,
-/obj/effect/decal/cleanable/glass{
-	dir = 4
-	},
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/obj/effect/spawner/lootdrop/ms13/gun/lowrandom,
+/obj/effect/decal/cleanable/glass{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/office/ms13/standard/broken{
+	dir = 8
+	},
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "eqH" = (
@@ -6718,6 +6741,13 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/ms13/teal/_dirty,
+/area/ms13/sunny_dale)
+"evM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/ms13/metal/broken{
+	dir = 8
+	},
+/turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "evU" = (
 /obj/item/flashlight/lantern{
@@ -7037,12 +7067,6 @@
 /obj/structure/chair/office/ms13/standard,
 /turf/open/floor/plasteel/ms13/_dirty,
 /area/ms13/underground/megabunker/upper)
-"eKA" = (
-/obj/structure/table/ms13/metal,
-/obj/item/kitchen/knife/plastic,
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/open/floor/wood/ms13,
-/area/ms13/sunny_dale)
 "eKL" = (
 /obj/machinery/light/small/broken{
 	dir = 4
@@ -7151,6 +7175,16 @@
 /obj/effect/decal/cleanable/blood/gibs/core,
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
+"eOW" = (
+/obj/structure/table/wood,
+/obj/structure/closet/crate/ms13/cash_register{
+	dir = 1;
+	pixel_y = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet,
+/area/ms13/sunny_dale)
 "ePi" = (
 /turf/open/floor/plasteel/ms13/green/white/whitegreenchess/dirty,
 /area/ms13/sunny_dale)
@@ -7605,6 +7639,15 @@
 	pixel_y = 9
 	},
 /turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"fgP" = (
+/obj/effect/decal/cleanable/glass{
+	dir = 1
+	},
+/obj/item/stack/rods,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet/broken/alt,
 /area/ms13/sunny_dale)
 "fgZ" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
@@ -8074,6 +8117,13 @@
 	},
 /turf/open/floor/plasteel/ms13/blue/white/whitebluechess,
 /area/ms13/sunny_dale)
+"fvh" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/open/floor/plasteel/ms13/teal/white/whitetealchess/whitetealchess2/dirty,
+/area/ms13/sunny_dale)
 "fwy" = (
 /obj/structure/table/low_wall/brick,
 /obj/structure/window/reinforced/fulltile/ms13/glass,
@@ -8219,12 +8269,9 @@
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "fAf" = (
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/obj/item/ammo_casing/spent,
-/obj/item/ammo_casing/spent,
-/obj/item/ammo_casing/spent,
-/obj/item/ammo_casing/spent,
-/turf/open/floor/wood/ms13/broken/left,
+/obj/structure/closet/secure_closet/freezer/meat,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/ms13/misc/rarewhite,
 /area/ms13/sunny_dale)
 "fAu" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8246,6 +8293,12 @@
 /obj/structure/table/ms13/metal,
 /turf/open/floor/wood/ms13/carpet/broken/left5,
 /area/ms13/ncr_main)
+"fAQ" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/broken/left,
+/area/ms13/sunny_dale)
 "fBQ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/ms13/brick/alt,
@@ -8297,6 +8350,15 @@
 /obj/structure/table/low_wall/wood,
 /obj/structure/table/low_wall/wood,
 /turf/closed/wall/ms13/wood,
+/area/ms13/sunny_dale)
+"fDU" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "fDW" = (
 /obj/structure/closet/crate/ms13/footlocker,
@@ -8589,6 +8651,12 @@
 	pixel_y = 5
 	},
 /turf/open/floor/plasteel/ms13/_dirty,
+/area/ms13/sunny_dale)
+"fLx" = (
+/obj/structure/chair/ms13/wood/padded,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "fLz" = (
 /obj/structure/bed/ms13/bedframe/cot,
@@ -9542,6 +9610,11 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
+"grl" = (
+/obj/structure/railing,
+/obj/structure/lattice/catwalk,
+/turf/open/openspace/ms13_no_build,
+/area/ms13)
 "grm" = (
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks/beer{
@@ -9802,6 +9875,12 @@
 /area/ms13/underground/mountain)
 "gAp" = (
 /turf/open/floor/wood/ms13/carpet/broken/left5,
+/area/ms13/sunny_dale)
+"gBd" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table_frame,
+/turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "gBp" = (
 /obj/structure/table/wood,
@@ -10204,6 +10283,15 @@
 /obj/structure/closet/secure_closet/freezer/fridge/open,
 /turf/open/floor/plasteel/ms13/white/rusty,
 /area/ms13/sunny_dale)
+"gRd" = (
+/obj/structure/table/ms13/metal,
+/obj/structure/closet/crate/ms13/cash_register{
+	dir = 8
+	},
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "gRp" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/drinkingglass,
@@ -10374,6 +10462,9 @@
 /obj/item/storage/box/drinkingglasses,
 /obj/item/reagent_containers/food/drinks/shaker,
 /turf/open/floor/holofloor/dark,
+/area/ms13/sunny_dale)
+"gVA" = (
+/turf/open/floor/plasteel/ms13/teal/white/whitetealchess/whitetealchess2/dirty,
 /area/ms13/sunny_dale)
 "gVH" = (
 /obj/effect/decal/cleanable/dirt,
@@ -10883,17 +10974,20 @@
 /obj/item/ammo_casing/spent,
 /turf/open/floor/plating/ground/sidewalk,
 /area/ms13)
+"hoV" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/table/ms13/metal,
+/obj/machinery/chem_dispenser/drinks/beer,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "hpj" = (
 /mob/living/simple_animal/hostile/retaliate/ms13/brahmin,
 /turf/open/floor/plating/ground/snow,
 /area/ms13)
 "hpn" = (
-/obj/structure/rack,
-/obj/effect/decal/cleanable/glass{
-	dir = 4
-	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/open/floor/wood/ms13,
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/open/floor/plasteel/ms13/misc/rarewhite,
 /area/ms13/sunny_dale)
 "hpZ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11366,6 +11460,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/ms13/misc/rarewhite,
 /area/ms13/sunny_dale)
+"hFU" = (
+/obj/structure/chair/ms13/metal/broken,
+/turf/open/floor/wood/ms13,
+/area/ms13)
 "hGp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/broken{
@@ -11818,6 +11916,11 @@
 	},
 /turf/open/floor/plasteel/ms13/dark/rusty,
 /area/ms13/underground/tunnel/maintenance)
+"hWu" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/broken/slightlybroken2,
+/area/ms13/sunny_dale)
 "hWB" = (
 /obj/structure/closet/crate/ms13/footlocker{
 	dir = 1
@@ -11844,6 +11947,12 @@
 /obj/effect/decal/cleanable/blood/gibs/limb,
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/tunnel/maintenance)
+"hXg" = (
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/instrument/piano_synth/headphones,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "hXN" = (
 /obj/structure/chair/ms13/wood/padded{
 	dir = 4
@@ -11939,6 +12048,14 @@
 /obj/effect/decal/cleanable/blood/bubblegum,
 /obj/structure/bed/ms13/bedframe/cot,
 /turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"ibk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/ms13/metal/broken{
+	dir = 4
+	},
+/turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "ibq" = (
 /obj/effect/decal/cleanable/glass,
@@ -12198,8 +12315,8 @@
 /obj/effect/decal/cleanable/glass{
 	dir = 4
 	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /obj/structure/table/low_wall/brick/alt,
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "ilT" = (
@@ -12349,6 +12466,8 @@
 /obj/structure/table/ms13/metal,
 /obj/machinery/chem_dispenser/drinks/fullupgrade,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13/broken/left,
 /area/ms13/sunny_dale)
 "ipO" = (
@@ -12701,9 +12820,13 @@
 /turf/open/floor/plasteel/ms13/blue/_dirty,
 /area/ms13/sunny_dale)
 "iAH" = (
-/obj/structure/chair/ms13/metal/broken,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/wood/ms13,
-/area/ms13)
+/area/ms13/sunny_dale)
 "iAP" = (
 /obj/structure/rack,
 /obj/item/reagent_containers/glass/bucket/wooden,
@@ -13382,6 +13505,14 @@
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"iZj" = (
+/obj/effect/decal/cleanable/glass{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet,
+/area/ms13/sunny_dale)
 "iZk" = (
 /mob/living/simple_animal/hostile/ms13/nightstalker{
 	dir = 4
@@ -13457,9 +13588,8 @@
 /turf/open/floor/plasteel/ms13/white,
 /area/ms13/sunny_dale)
 "jby" = (
-/obj/structure/bed/ms13/mattress/dirty,
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/instrument/saxophone,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "jbG" = (
@@ -13585,6 +13715,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
+"jfg" = (
+/obj/structure/chair/stool/bar,
+/turf/open/floor/wood/ms13,
+/area/ms13)
 "jfq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/glass/bucket/wooden,
@@ -13790,6 +13924,12 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/openspace/ms13_no_build,
 /area/ms13/sunny_dale)
+"jlf" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/unpowered/wooddoor,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "jlt" = (
 /obj/structure/filingcabinet,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
@@ -13819,9 +13959,20 @@
 /mob/living/simple_animal/hostile/ms13/radroach,
 /turf/open/floor/plasteel/ms13/misc/cafeteria,
 /area/ms13/sunny_dale)
+"jmz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet/broken/right4,
+/area/ms13/sunny_dale)
 "jmE" = (
 /obj/structure/rack,
 /turf/open/floor/plasteel/ms13/blue/_dirty,
+/area/ms13/sunny_dale)
+"jmY" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/open/floor/plasteel/ms13/teal/white/whitetealchess/whitetealchess2/rusty,
 /area/ms13/sunny_dale)
 "jnd" = (
 /obj/machinery/light/small{
@@ -14181,6 +14332,19 @@
 /obj/structure/bed/ms13/mattress/dirty,
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
+"jAD" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/filingcabinet{
+	pixel_x = 6;
+	pixel_y = 19
+	},
+/obj/structure/filingcabinet{
+	pixel_x = -7;
+	pixel_y = 19
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/broken/right,
+/area/ms13/sunny_dale)
 "jAE" = (
 /obj/structure/curtain,
 /obj/effect/decal/cleanable/dirt,
@@ -14195,6 +14359,7 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "jAS" = (
@@ -14704,6 +14869,15 @@
 	},
 /turf/open/floor/plasteel/ms13/dark/dirty,
 /area/ms13/underground/tunnel/maintenance)
+"jTn" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/table/ms13/metal,
+/obj/item/reagent_containers/food/drinks/drinkingglass{
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "jTy" = (
 /turf/open/floor/wood/ms13/broken/right,
 /area/ms13/sunny_dale)
@@ -15218,6 +15392,12 @@
 /obj/structure/ladder,
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
+"kql" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "kqI" = (
 /obj/structure/window/fulltile/ms13/glass,
 /obj/structure/table/low_wall/brick/alt,
@@ -15414,6 +15594,12 @@
 	},
 /turf/open/floor/plasteel/ms13/red/_full/dirty,
 /area/ms13/underground/vault_atrium_upper)
+"kyd" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/table/ms13/metal,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "kye" = (
 /obj/structure/table_frame,
 /turf/open/floor/wood/ms13/broken/slightlybroken2,
@@ -15831,6 +16017,11 @@
 	},
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"kOt" = (
+/obj/machinery/door/unpowered/wooddoor,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet/broken/alt,
+/area/ms13/sunny_dale)
 "kOx" = (
 /obj/structure/closet,
 /obj/machinery/light/dim,
@@ -15852,6 +16043,13 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
+"kPd" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet,
+/area/ms13/sunny_dale)
 "kPj" = (
 /mob/living/simple_animal/mouse,
 /turf/open/floor/plating/ground/mountain,
@@ -15948,6 +16146,13 @@
 	},
 /turf/open/floor/wood/ms13,
 /area/ms13/underground/mountain)
+"kSd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/wood/ms13/carpet/broken/right2,
+/area/ms13/sunny_dale)
 "kSm" = (
 /obj/structure/flora/rock/jungle,
 /turf/closed/wall/ms13/wood,
@@ -16190,11 +16395,11 @@
 /turf/open/floor/wood/ms13/broken/right,
 /area/ms13/sunny_dale)
 "lbH" = (
-/obj/structure/railing{
-	dir = 6
-	},
-/turf/open/openspace/ms13_no_build,
-/area/ms13)
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/stool,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "lbW" = (
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
@@ -16228,11 +16433,11 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "ldd" = (
-/obj/structure/railing/corner{
-	dir = 1
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 8
 	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/closed/wall/ms13/brick/alt,
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
 /area/ms13/sunny_dale)
 "ldh" = (
 /obj/structure/barricade/sandbags,
@@ -16347,6 +16552,13 @@
 /obj/structure/table/ms13/metal,
 /obj/structure/bedsheetbin,
 /turf/open/floor/plating,
+/area/ms13/sunny_dale)
+"lhW" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/table/ms13/metal,
+/obj/machinery/chem_dispenser/drinks/fullupgrade,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "lhZ" = (
 /obj/structure/rack,
@@ -16590,6 +16802,9 @@
 	dir = 8
 	},
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/table_frame,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13/broken/left,
 /area/ms13/sunny_dale)
 "lqi" = (
@@ -17006,6 +17221,13 @@
 /obj/structure/fluff/beach_umbrella/cap,
 /turf/open/floor/carpet/blue,
 /area/ms13/sunny_dale)
+"lGW" = (
+/obj/effect/decal/cleanable/glass,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/ms13/metal/unfinished,
+/turf/open/floor/wood/ms13/carpet/broken/left2,
+/area/ms13/sunny_dale)
 "lHc" = (
 /obj/structure/rack,
 /turf/open/floor/wood/ms13/broken/left,
@@ -17118,11 +17340,10 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/underground/mountain)
 "lMX" = (
-/obj/structure/ms13/vehicle_ruin/muscle{
-	pixel_x = -8
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/ms13)
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
+/area/ms13/sunny_dale)
 "lNr" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/wood/ms13,
@@ -17222,6 +17443,11 @@
 "lUd" = (
 /obj/machinery/vending/snack,
 /turf/open/floor/plasteel/ms13/_dirty,
+/area/ms13/sunny_dale)
+"lUP" = (
+/obj/structure/table/low_wall/brick/alt,
+/obj/structure/barricade/wooden/crude/snow,
+/turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "lVw" = (
 /obj/effect/decal/cleanable/dirt,
@@ -17349,6 +17575,13 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/ms13/green/white/whitegreenchess,
+/area/ms13/sunny_dale)
+"mai" = (
+/obj/machinery/door/unpowered/wooddoor{
+	state_open = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
 /area/ms13/sunny_dale)
 "mbf" = (
 /obj/machinery/door/poddoor/shutters{
@@ -17723,11 +17956,8 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "mrQ" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/open/floor/wood/ms13,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
 /area/ms13/sunny_dale)
 "mrW" = (
 /obj/structure/closet,
@@ -17791,6 +18021,13 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/ms13/white/full/dirty,
+/area/ms13/sunny_dale)
+"mtw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/ms13/metal/unfinished{
+	dir = 1
+	},
+/turf/open/floor/wood/ms13/carpet/broken/right4,
 /area/ms13/sunny_dale)
 "mtC" = (
 /obj/structure/chair/stool,
@@ -18089,6 +18326,13 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"mDS" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "mEu" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13/broken/right,
@@ -18234,6 +18478,13 @@
 /obj/item/clothing/neck/cloak/ms13/legion/redhalfcloak,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"mJz" = (
+/obj/item/clipboard,
+/obj/item/paper,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table_frame/wood,
+/turf/open/floor/wood/ms13/carpet/broken/left4,
+/area/ms13/sunny_dale)
 "mJA" = (
 /obj/machinery/light/small/broken{
 	dir = 4
@@ -18306,11 +18557,12 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "mMS" = (
-/obj/structure/rack,
-/obj/item/clothing/mask/balaclava,
-/obj/item/clothing/mask/balaclava,
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/open/floor/wood/ms13,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
 /area/ms13/sunny_dale)
 "mNa" = (
 /obj/structure/rack,
@@ -18577,6 +18829,15 @@
 	},
 /turf/open/floor/plasteel/ms13/_rusty,
 /area/ms13/sunny_dale)
+"mXi" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/table/ms13/metal,
+/obj/structure/closet/crate/ms13/cash_register/prewar{
+	pixel_y = 13
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "mXk" = (
 /obj/structure/table/ms13/metal,
 /obj/effect/decal/cleanable/dirt,
@@ -18798,6 +19059,7 @@
 	pixel_y = 5
 	},
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13/broken/right,
 /area/ms13/sunny_dale)
 "ngl" = (
@@ -19225,6 +19487,12 @@
 /obj/structure/table/low_wall/reinforced/metal/rust,
 /turf/open/floor/plasteel/ms13/_full/dirty,
 /area/ms13/underground/megabunker/upper)
+"nwO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/rods,
+/turf/open/floor/wood/ms13/carpet/broken/right1,
+/area/ms13/sunny_dale)
 "nwS" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -19818,9 +20086,11 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "nVQ" = (
-/obj/structure/table/reinforced,
-/obj/structure/table/reinforced,
-/turf/open/floor/plasteel/ms13/white/rusty,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plasteel/ms13/misc/rarewhite,
 /area/ms13/sunny_dale)
 "nWI" = (
 /obj/structure/fence/fencenormal{
@@ -20306,6 +20576,12 @@
 /obj/structure/rack,
 /turf/open/floor/plasteel/ms13/purple/_rusty,
 /area/ms13/sunny_dale)
+"opr" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/broken/right,
+/area/ms13/sunny_dale)
 "opu" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/plating/ground/dirt,
@@ -20332,6 +20608,11 @@
 	},
 /turf/open/floor/plasteel/ms13/purple/_dirty,
 /area/ms13/sunny_dale)
+"oqH" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/ladder,
+/turf/open/openspace/ms13_no_build,
+/area/ms13)
 "oqX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sink/kitchen{
@@ -20946,6 +21227,13 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13/broken,
 /area/ms13/sunny_dale)
+"oOz" = (
+/obj/structure/chair/ms13/wood/padded{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet/broken/right3,
+/area/ms13/sunny_dale)
 "oOD" = (
 /obj/structure/sink{
 	pixel_y = 24
@@ -21390,6 +21678,13 @@
 /obj/item/chair/stool,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"pcY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/ms13/metal/broken{
+	dir = 1
+	},
+/turf/open/floor/wood/ms13/carpet,
+/area/ms13/sunny_dale)
 "pda" = (
 /obj/structure/rack,
 /obj/machinery/light/small/broken{
@@ -21512,6 +21807,12 @@
 /obj/item/assembly/mousetrap,
 /turf/open/floor/plasteel/ms13/dark/dirty,
 /area/ms13/underground/tunnel/maintenance)
+"phc" = (
+/obj/structure/chair/ms13/metal/broken{
+	dir = 1
+	},
+/turf/open/floor/wood/ms13,
+/area/ms13)
 "phd" = (
 /turf/open/floor/plasteel/ms13/red/corner/dirty,
 /area/ms13/sunny_dale)
@@ -21707,6 +22008,15 @@
 	pixel_y = 12
 	},
 /turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"pmO" = (
+/obj/item/shard,
+/obj/structure/ms13/vehicle_ruin/muscle{
+	pixel_x = -8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/broken,
 /area/ms13/sunny_dale)
 "pmQ" = (
 /turf/open/floor/plasteel/ms13/blue/corner/dirty{
@@ -22719,6 +23029,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"pWI" = (
+/obj/machinery/door/unpowered/wooddoor,
+/turf/open/floor/plasteel/ms13/teal/white/whitetealchess/whitetealchess2/dirty,
+/area/ms13/sunny_dale)
 "pWN" = (
 /obj/item/shard,
 /obj/structure/curtain/bounty,
@@ -23022,6 +23336,13 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
 /turf/open/floor/plasteel/ms13/_rusty,
 /area/ms13/underground/megabunker/upper)
+"qmi" = (
+/obj/structure/chair/sofa/left{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "qmr" = (
 /obj/structure/fence/fencecorner,
 /obj/effect/decal/cleanable/dirt,
@@ -23659,6 +23980,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/ms13/green/white/whitegreenchess,
 /area/ms13/sunny_dale)
+"qKK" = (
+/obj/structure/chair/ms13/wood/padded,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet,
+/area/ms13/sunny_dale)
 "qKN" = (
 /obj/structure/table/low_wall/brick,
 /obj/effect/decal/cleanable/glass{
@@ -23910,6 +24236,12 @@
 /obj/structure/table/wood,
 /obj/structure/fluff/paper/stack,
 /turf/open/floor/wood/ms13/carpet,
+/area/ms13/sunny_dale)
+"qST" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/rack,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "qTm" = (
 /obj/structure/curtain/bounty,
@@ -24448,6 +24780,11 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/plasteel/ms13/dark/rusty,
 /area/ms13/underground/tunnel/maintenance)
+"rmu" = (
+/obj/structure/table/low_wall/brick/alt,
+/obj/item/shard,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "rmF" = (
 /obj/structure/table/low_wall/brick,
 /obj/structure/window/fulltile/ms13/glass,
@@ -24610,6 +24947,14 @@
 /obj/structure/closet/crate/ms13/vault_tec/long,
 /turf/open/floor/plasteel/ms13/_dirty,
 /area/ms13/underground/megabunker/upper)
+"rro" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet,
+/area/ms13/sunny_dale)
 "rru" = (
 /obj/structure/barricade/sandbags,
 /obj/structure/barricade/sandbags,
@@ -25286,10 +25631,8 @@
 /area/ms13/sunny_dale)
 "rOL" = (
 /obj/structure/table/ms13/metal,
-/obj/structure/closet/crate/ms13/cash_register{
-	dir = 8
-	},
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "rPu" = (
@@ -25302,13 +25645,20 @@
 /obj/structure/railing/corner{
 	dir = 8
 	},
-/turf/open/floor/plating/roof,
+/turf/closed/wall/ms13/brick/alt,
 /area/ms13)
 "rPW" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/ms13/green/side{
 	dir = 1
 	},
+/area/ms13/sunny_dale)
+"rQz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/wood/ms13/broken/slightlybroken2,
 /area/ms13/sunny_dale)
 "rQW" = (
 /obj/structure/closet/secure_closet/freezer/fridge/open{
@@ -25706,6 +26056,14 @@
 /obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/plasteel/ms13/_dirty,
 /area/ms13/underground/megabunker/upper)
+"sfR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/wood/ms13/carpet/broken/left1,
+/area/ms13/sunny_dale)
 "sfU" = (
 /obj/structure/chair/ms13/wood/padded,
 /turf/open/floor/plasteel/ms13/_rusty,
@@ -26028,10 +26386,8 @@
 /turf/open/floor/wood/ms13/carpet/broken/left1,
 /area/ms13/sunny_dale)
 "srk" = (
-/obj/effect/decal/cleanable/blood/footprints{
-	dir = 4
-	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/instrument/guitar,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "srs" = (
@@ -26379,13 +26735,8 @@
 /turf/open/floor/plasteel/ms13/red/_dirty,
 /area/ms13/sunny_dale)
 "sCh" = (
-/obj/structure/rack,
-/obj/effect/decal/cleanable/glass{
-	dir = 4
-	},
-/obj/item/kitchen/knife/hunting,
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/open/floor/wood/ms13,
+/obj/machinery/door/unpowered/wooddoor,
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
 /area/ms13/sunny_dale)
 "sCp" = (
 /obj/machinery/door/airlock/hatch,
@@ -26402,6 +26753,13 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/ms13/misc/cafeteria,
+/area/ms13/sunny_dale)
+"sDY" = (
+/obj/structure/chair/ms13/wood/padded{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "sEl" = (
 /obj/effect/decal/cleanable/blood/tracks{
@@ -26433,6 +26791,13 @@
 "sFM" = (
 /obj/effect/spawner/lootdrop/food_packaging,
 /turf/open/floor/wood/ms13/carpet,
+/area/ms13/sunny_dale)
+"sFS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/wood/ms13/broken/left,
 /area/ms13/sunny_dale)
 "sFU" = (
 /obj/machinery/vending/cola/starkist,
@@ -26481,9 +26846,11 @@
 /turf/open/floor/plasteel/ms13/green/_rusty,
 /area/ms13/sunny_dale)
 "sHj" = (
-/obj/item/ms13_small_flag,
-/turf/open/floor/plating/ground/sidewalk,
-/area/ms13)
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
+/area/ms13/sunny_dale)
 "sHk" = (
 /obj/machinery/vending/cigarette,
 /obj/machinery/light,
@@ -26620,10 +26987,10 @@
 /turf/open/floor/plasteel/ms13/green/_rusty,
 /area/ms13/sunny_dale)
 "sLa" = (
-/obj/structure/rack,
-/obj/machinery/light,
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/open/floor/wood/ms13,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table_frame,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/ms13/misc/rarewhite/rarewhitechess2,
 /area/ms13/sunny_dale)
 "sLi" = (
 /obj/structure/table/ms13/metal,
@@ -26845,6 +27212,12 @@
 /obj/item/seeds/ms13/barrelcactus,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"sVF" = (
+/obj/structure/chair/ms13/metal/broken{
+	dir = 4
+	},
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "sVT" = (
 /obj/structure/table/ms13/metal,
 /obj/machinery/reagentgrinder,
@@ -26952,9 +27325,11 @@
 	},
 /area/ms13/sunny_dale)
 "tab" = (
-/obj/structure/bed/ms13/mattress/yellowed,
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "tam" = (
@@ -27204,6 +27579,11 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
 /turf/open/floor/plasteel/ms13,
 /area/ms13/underground/bos)
+"tjn" = (
+/obj/structure/chair/ms13/wood/padded,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/broken/left,
+/area/ms13/sunny_dale)
 "tjw" = (
 /obj/structure/table/ms13/metal,
 /turf/open/floor/plasteel/ms13/blue/_dirty,
@@ -27401,6 +27781,7 @@
 "tsE" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "tsG" = (
@@ -27517,6 +27898,11 @@
 /obj/item/toy/plush/beeplushie,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"txh" = (
+/obj/structure/railing,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "txm" = (
 /obj/structure/window/fulltile/ms13/glass,
@@ -27653,6 +28039,12 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
+"tDu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table_frame/wood,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet/broken/alt,
+/area/ms13/sunny_dale)
 "tDA" = (
 /obj/structure/table_frame,
 /obj/effect/decal/cleanable/blood/gibs,
@@ -27878,12 +28270,10 @@
 /turf/open/floor/wood/ms13/broken/slightlybroken1,
 /area/ms13/sunny_dale)
 "tNc" = (
-/obj/structure/table/ms13/metal,
-/obj/machinery/microwave{
-	pixel_x = -3;
-	pixel_y = 5
-	},
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/microwave,
+/obj/structure/table_frame,
 /turf/open/floor/wood/ms13/broken,
 /area/ms13/sunny_dale)
 "tNn" = (
@@ -27954,6 +28344,11 @@
 	},
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/ground/mountain,
+/area/ms13/sunny_dale)
+"tRy" = (
+/obj/structure/table/wood/fancy,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "tRz" = (
 /obj/effect/decal/cleanable/glass{
@@ -28071,6 +28466,21 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"tVD" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/rack,
+/obj/item/reagent_containers/food/drinks/drinkingglass{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/food/drinks/drinkingglass{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "tVQ" = (
@@ -28249,6 +28659,10 @@
 	},
 /turf/open/floor/wood/ms13/carpet/broken/alt,
 /area/ms13/sunny_dale)
+"ubb" = (
+/obj/machinery/vending/cigarette,
+/turf/open/floor/wood/ms13,
+/area/ms13)
 "ubw" = (
 /obj/structure/curtain,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -28331,6 +28745,11 @@
 "ufv" = (
 /obj/structure/table_frame,
 /turf/open/floor/plasteel/ms13/_dirty,
+/area/ms13/sunny_dale)
+"ugp" = (
+/obj/machinery/door/unpowered/wooddoor,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/broken/right,
 /area/ms13/sunny_dale)
 "ugv" = (
 /obj/machinery/light/small/built{
@@ -28452,6 +28871,11 @@
 	},
 /turf/open/floor/plating/ground/snow,
 /area/ms13)
+"ule" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet/broken,
+/area/ms13/sunny_dale)
 "uln" = (
 /obj/structure/rack,
 /obj/machinery/light/dim{
@@ -28817,17 +29241,23 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/ms13/white/dirty,
 /area/ms13/sunny_dale)
+"uyP" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "uyQ" = (
 /obj/structure/table/reinforced,
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
 /turf/open/floor/plasteel/ms13/_rusty,
 /area/ms13/underground/bos)
 "uzf" = (
-/obj/structure/table/ms13/metal,
-/obj/structure/closet/crate/ms13/cash_register/prewar{
-	pixel_y = 13
+/obj/structure/chair/comfy/ms13/ergo{
+	dir = 4
 	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "uzg" = (
@@ -28945,6 +29375,16 @@
 /obj/effect/decal/cleanable/blood/gibs/up,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /turf/open/floor/wood/ms13/broken/left,
+/area/ms13/sunny_dale)
+"uDD" = (
+/obj/effect/decal/cleanable/glass{
+	dir = 1
+	},
+/obj/structure/table_frame/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/shard,
+/turf/open/floor/wood/ms13/carpet/broken/left3,
 /area/ms13/sunny_dale)
 "uDF" = (
 /obj/structure/filingcabinet/filingcabinet{
@@ -29075,6 +29515,11 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"uJP" = (
+/obj/structure/table/wood/fancy,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet/broken/right4,
 /area/ms13/sunny_dale)
 "uJS" = (
 /obj/structure/table/low_wall/brick,
@@ -29371,12 +29816,11 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "uXn" = (
-/obj/effect/decal/cleanable/blood/footprints{
-	dir = 4
-	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/open/floor/wood/ms13/broken/left,
-/area/ms13/sunny_dale)
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/instrument/piano_synth/headphones,
+/turf/open/floor/wood/ms13,
+/area/ms13)
 "uXx" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/wood/ms13/carpet,
@@ -29881,6 +30325,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"vvf" = (
+/obj/structure/table/wood/fancy,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/broken,
+/area/ms13/sunny_dale)
 "vvp" = (
 /obj/machinery/light{
 	dir = 8
@@ -30073,12 +30522,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/ms13/white/dirty,
 /area/ms13/sunny_dale)
-"vEY" = (
-/obj/effect/decal/cleanable/blood/footprints{
-	dir = 4
+"vEW" = (
+/obj/machinery/light/small{
+	dir = 1
 	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/turf/open/floor/wood/ms13/broken/right,
+/turf/open/floor/plasteel/ms13/teal/white/whitetealchess/whitetealchess2,
+/area/ms13/sunny_dale)
+"vEY" = (
+/obj/structure/chair/ms13/metal/broken,
+/turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "vFj" = (
 /obj/effect/decal/cleanable/dirt,
@@ -30151,6 +30603,14 @@
 /obj/structure/chair/stool/bar,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13/broken/left,
+/area/ms13/sunny_dale)
+"vIn" = (
+/obj/structure/chair/ms13/wood/padded{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet/broken/left4,
 /area/ms13/sunny_dale)
 "vIJ" = (
 /obj/structure/railing{
@@ -30337,6 +30797,12 @@
 /obj/structure/closet/crate/ms13/vault_tec/long,
 /turf/open/floor/plasteel/ms13/dark/dirty,
 /area/ms13/underground/tunnel/maintenance)
+"vMZ" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/table/low_wall/brick/alt,
+/obj/structure/window/fulltile/ms13/glass,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "vNa" = (
 /obj/structure/stairs/north,
 /turf/open/floor/plasteel/ms13,
@@ -30596,6 +31062,11 @@
 	pixel_x = 3;
 	pixel_y = 12
 	},
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"vYe" = (
+/obj/structure/table/low_wall/brick/alt,
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "vYy" = (
@@ -31973,6 +32444,13 @@
 /obj/effect/spawner/lootdrop/food_packaging,
 /turf/open/floor/plasteel/ms13/dark/full/rusty,
 /area/ms13/sunny_dale)
+"wYj" = (
+/obj/structure/railing{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/carpet,
+/area/ms13/sunny_dale)
 "wYp" = (
 /obj/structure/closet{
 	pixel_x = -7;
@@ -32556,6 +33034,14 @@
 /obj/machinery/door/unpowered/wooddoor,
 /turf/closed/wall/ms13/wood,
 /area/ms13/sunny_dale)
+"xwL" = (
+/obj/machinery/door/unpowered/wooddoor{
+	state_open = 1
+	},
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "xwS" = (
 /obj/item/trash/candy,
 /turf/open/floor/plasteel/ms13/dark/dirty,
@@ -32791,11 +33277,12 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "xHe" = (
-/obj/structure/railing{
-	dir = 8
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 4
 	},
-/turf/open/openspace/ms13_no_build,
-/area/ms13)
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "xHi" = (
 /obj/structure/chair/ms13/wood{
 	dir = 4
@@ -32883,6 +33370,14 @@
 /area/ms13/sunny_dale)
 "xLx" = (
 /obj/structure/table/low_wall/brick/alt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"xLF" = (
+/obj/machinery/light/dim{
+	dir = 8
+	},
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "xLQ" = (
@@ -33181,13 +33676,10 @@
 /turf/open/floor/plasteel/ms13,
 /area/ms13/sunny_dale)
 "xYi" = (
-/obj/structure/closet/crate/ms13/footlocker,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
-/area/ms13/sunny_dale)
+/area/ms13)
 "xYM" = (
 /obj/structure/railing{
 	dir = 5
@@ -33252,6 +33744,12 @@
 /turf/open/floor/plasteel/ms13/blue/corner/dirty{
 	dir = 8
 	},
+/area/ms13/sunny_dale)
+"yaU" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13/broken/slightlybroken1,
 /area/ms13/sunny_dale)
 "ybb" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
@@ -33395,6 +33893,13 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/ms13/mattress/stale,
 /turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"yeB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "yeD" = (
 /obj/structure/sink/kitchen{
@@ -142835,7 +143340,7 @@ jIO
 mSP
 nlo
 wzC
-nVQ
+nBe
 bgO
 hrU
 bgO
@@ -145272,16 +145777,16 @@ uya
 uya
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
+kRw
+fKQ
+kSd
+wQN
+jmz
+jmz
+pWp
+sFS
+cKF
+pWp
 jIO
 uya
 aDo
@@ -145574,16 +146079,16 @@ uya
 uya
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
+tjn
+vvf
+vKC
+nXh
+qKK
+tRy
+mtw
+cjj
+uJP
+oOz
 jIO
 uya
 aDo
@@ -145876,16 +146381,16 @@ uya
 uya
 rGX
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
+oKp
+bFj
+qVF
+nfb
+ndr
+evM
+ndr
+ndr
+vFO
+ndr
 jIO
 uya
 aDo
@@ -146178,16 +146683,16 @@ uya
 uya
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
+ndr
+nfb
+sxT
+sDY
+nfb
+ndr
+nfb
+iZj
+nfb
+ndr
 jIO
 uya
 aDo
@@ -146480,16 +146985,16 @@ uya
 uya
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
+ndr
+sxT
+qKK
+tRy
+pcY
+sfR
+lGW
+uDD
+vIn
+ndr
 jIO
 uya
 aDo
@@ -146777,20 +147282,20 @@ aDo
 aDo
 uya
 uya
+lOp
+lOp
 uya
 uya
-uya
-uya
-fKL
-bgO
-bgO
-bgO
-bgO
+kOt
+ule
+nfb
+ndr
+ndr
 jIO
 jIO
-vsG
-vsG
-vsG
+xqo
+pmO
+kkh
 jIO
 jIO
 uya
@@ -147081,17 +147586,17 @@ uya
 jIO
 jIO
 jIO
+sCh
 jIO
 jIO
-jIO
-bgO
-bgO
-bgO
-bgO
+yeB
+ibk
+ndr
+ndr
 jIO
 uya
 uya
-lMX
+uya
 uya
 uya
 uya
@@ -147381,16 +147886,16 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
+bdJ
+ldd
+sHj
+bdJ
 jIO
-bgO
-bgO
-bgO
-bgO
-vsG
+fLx
+tDu
+ndr
+ndr
+kkh
 uya
 aDo
 aDo
@@ -147683,16 +148188,16 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
+brs
+lMX
+mrQ
+lMX
 jIO
-bgO
-bgO
-bgO
-bgO
-vsG
+vKC
+evM
+nfb
+ndr
+kkh
 uya
 aDo
 aDo
@@ -147985,16 +148490,16 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
-jIO
-bgO
-bgO
-bgO
-bgO
-vsG
+bdJ
+lMX
+bdJ
+lMX
+mai
+qVF
+ndr
+ndr
+ule
+lUP
 uya
 aDo
 aDo
@@ -148287,15 +148792,15 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
+coY
+mrQ
+sLa
+mrQ
 jIO
-bgO
-bgO
-bgO
-bgO
+nfb
+ndr
+nfb
+nfb
 jIO
 uya
 aDo
@@ -148589,16 +149094,16 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
+dkG
+lMX
+bdJ
+lMX
 jIO
-bgO
-bgO
-bgO
-bgO
-fKL
+ndr
+txh
+ndr
+wYj
+kOt
 uya
 aDo
 aDo
@@ -148891,15 +149396,15 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
+bdJ
+mrQ
+bdJ
+mrQ
 jIO
-bgO
-bgO
-bgO
-bgO
+yeB
+txh
+nfb
+kPd
 jIO
 uya
 aDo
@@ -149193,16 +149698,16 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
+efl
+mMS
+lMX
+mrQ
 jIO
-bgO
-bgO
-bgO
-bgO
-vsG
+nfb
+eOW
+ndr
+rro
+kkh
 uya
 aDo
 aDo
@@ -149495,16 +150000,16 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-vsG
+jIO
+jIO
+ptI
+jIO
+jIO
+oMn
+mJz
+nfb
+fgP
+rmu
 uya
 aDo
 aDo
@@ -149797,16 +150302,16 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
+fAf
+sHC
+sHC
+hLp
 jIO
-bgO
-bgO
-bgO
-bgO
-vsG
+wQN
+nwO
+nfb
+kPd
+kkh
 uya
 aDo
 aDo
@@ -150099,15 +150604,15 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
+hpn
+nVQ
+dMg
+hLp
 jIO
-bgO
-bgO
-bgO
-bgO
+ndr
+txh
+ndr
+ony
 jIO
 uya
 aDo
@@ -150708,8 +151213,8 @@ uya
 rwo
 rwo
 yhy
-uya
 lOp
+uya
 yhy
 syI
 syI
@@ -151610,7 +152115,7 @@ aDo
 uya
 uya
 uya
-uya
+yhy
 jIO
 jIO
 jIO
@@ -151912,14 +152417,14 @@ aDo
 uya
 uya
 uya
-uya
+yhy
+hrU
+vBx
+vBx
+hkx
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
+jmY
+fvh
 jIO
 sEO
 aDo
@@ -152214,14 +152719,14 @@ aDo
 uya
 uya
 uya
-uya
+yhy
+tab
+weR
+xNO
+vBx
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
+vEW
+gVA
 jIO
 sEO
 aDo
@@ -152516,14 +153021,14 @@ aDo
 uya
 uya
 uya
-uya
+yhy
+uzf
+vBx
+uzf
+xNO
 jIO
 jIO
-jIO
-bgO
-bgO
-bgO
-bgO
+pWI
 jIO
 sEO
 aDo
@@ -152816,16 +153321,16 @@ kwJ
 aDo
 aDo
 uya
+rGX
 uya
-uya
-uya
-uya
-uya
-jIO
-bgO
-bgO
-bgO
-bgO
+yhy
+uXn
+xYi
+hXg
+vBx
+uZA
+xNO
+vBx
 jIO
 kjT
 sLE
@@ -153121,13 +153626,13 @@ uya
 jIO
 jIO
 jIO
+dyL
+dyL
+dyL
 jIO
 jIO
-jIO
-bgO
-bgO
-bgO
-bgO
+sHA
+vBx
 jIO
 sFU
 aDo
@@ -153421,15 +153926,15 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
+vBx
+srk
+vBx
+xNO
+oQW
+jIO
+ycj
+vBx
+vBx
 jIO
 sGL
 aDo
@@ -153723,15 +154228,15 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
+iAH
+xNO
+xNO
+vBx
+pWp
+jIO
+ycj
+bto
+oQW
 jIO
 uya
 aDo
@@ -154025,17 +154530,17 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-fKL
-sHj
+jby
+hkx
+xHe
+vBx
+aOB
+uZA
+vBx
+kRw
+kRw
+ugp
+uya
 aDo
 aDo
 kwJ
@@ -154327,15 +154832,15 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
+dyL
+dyL
+jIO
+dyL
+dyL
+jIO
+sHA
+xNO
+qmi
 jIO
 uya
 aDo
@@ -154629,15 +155134,15 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
+ech
+vBx
+jIO
+rQz
+xNO
+uZA
+vBx
+vBx
+djS
 jIO
 uya
 aDo
@@ -154931,15 +155436,15 @@ aDo
 aDo
 uya
 jIO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
-bgO
+lbH
+vBx
+uZA
+vBx
+vBx
+jIO
+gOh
+goD
+hrU
 jIO
 uya
 aDo
@@ -218056,8 +218561,8 @@ stG
 itm
 llJ
 llJ
-llJ
-llJ
+vMZ
+vMZ
 llJ
 llJ
 llJ
@@ -218357,14 +218862,14 @@ aab
 stG
 eft
 llJ
-jYT
+kyd
 lpX
-jYT
-uRa
-jYT
-uRa
-wIq
-wMU
+jTn
+xIC
+xRF
+xIC
+xLF
+xIC
 llJ
 yiW
 aab
@@ -218659,15 +219164,15 @@ aab
 stG
 itm
 llJ
-jYT
-fGC
-jYT
-uRa
-jYT
-fmN
+mDS
+opr
+uyP
+xIC
+llJ
+fAQ
 bjd
-tFE
-qMR
+xIC
+iyt
 yiW
 aab
 aab
@@ -218953,22 +219458,22 @@ aab
 aab
 aab
 aab
-oGx
-wvM
-wvM
-wvM
-wvM
-lbH
+aab
+aab
+aab
+aab
+aab
+stG
 itm
 llJ
-jYT
-uRa
-uRa
-uRa
-jeF
-fGC
+lhW
+uyP
+uyP
+xIC
+llJ
+jAD
 epY
-tFE
+uOM
 llJ
 yiW
 aab
@@ -219255,18 +219760,18 @@ aab
 aab
 aab
 aab
+aab
+aab
+aab
+aab
+aab
 stG
 itm
-itm
-itm
-itm
-itm
-itm
 llJ
-jYT
-uRa
-uRa
-wMU
+hoV
+xIC
+tVD
+qST
 llJ
 llJ
 ilK
@@ -219557,16 +220062,16 @@ aab
 aab
 aab
 aab
-stG
-itm
+aab
+aab
+xLx
+xLx
+xLx
+xLx
+xLx
 llJ
 llJ
-llJ
-llJ
-llJ
-llJ
-llJ
-uRa
+xRF
 llJ
 llJ
 llJ
@@ -219859,19 +220364,19 @@ aab
 aab
 aab
 aab
-stG
-itm
-llJ
-jYT
-wIq
-efl
-uRa
-uRa
-uRa
-uRa
-wIq
-brs
-qMR
+aab
+aab
+xLx
+bgO
+bgO
+bgO
+bgO
+jlf
+xIC
+xIC
+fDU
+xIC
+vYe
 aab
 aab
 aab
@@ -220161,19 +220666,19 @@ aab
 aab
 aab
 aab
-stG
-itm
-qMR
-jYT
-uRa
-uRa
-uRa
-tFE
-uRa
-uRa
-uRa
-uRa
-qMR
+aab
+aab
+xLx
+bgO
+sVF
+bgO
+bgO
+llJ
+xIC
+uyP
+uyP
+xIC
+vYe
 aab
 aab
 aab
@@ -220463,18 +220968,18 @@ aab
 aab
 aab
 aab
-stG
-itm
-yhN
-hpn
-uRa
-fAf
-uRa
-tFE
-tFE
-eKA
+aab
+aab
+xLx
+bgO
+lMH
+bgO
+bgO
+llJ
+gRd
 rOL
-tFE
+rOL
+rOL
 llJ
 aab
 aab
@@ -220765,19 +221270,19 @@ aab
 aab
 aab
 aab
-stG
-itm
-llJ
-jYT
-uRa
-oEQ
-uRa
-uRa
-wMU
-wMU
-uRa
-sCh
-yhN
+aab
+aab
+xLx
+bgO
+jHE
+bSg
+bgO
+kql
+bgO
+fsn
+pup
+fsn
+xLx
 aab
 aab
 aab
@@ -221067,19 +221572,19 @@ aab
 aab
 aab
 aab
-stG
-itm
-llJ
-jYT
-uRa
-fGC
-uRa
-uRa
-uRa
-uRa
-uRa
-dkG
-yhN
+aab
+aab
+xLx
+bgO
+bgO
+bgO
+bgO
+bgO
+bgO
+bgO
+bgO
+bgO
+xLx
 aab
 aab
 aab
@@ -221369,19 +221874,19 @@ aab
 aab
 aab
 aab
-stG
-itm
-llJ
-xYi
-uRa
-uRa
-uRa
-uRa
-tab
-uRa
-uRa
-sLa
-llJ
+aab
+aab
+xLx
+bgO
+bgO
+bgO
+vEY
+lMH
+sZB
+bgO
+bgO
+bgO
+xLx
 aab
 aab
 aab
@@ -221671,19 +222176,19 @@ aab
 aab
 aab
 aab
-stG
-itm
-qMR
-jYT
-uRa
-uRa
-bNX
-uRa
-fmN
-aWn
-uRa
-jYT
-qMR
+aab
+aab
+xLx
+bgO
+bgO
+bgO
+bgO
+jHE
+bgO
+bgO
+rty
+rty
+xLx
 aab
 aab
 aab
@@ -221973,19 +222478,19 @@ aab
 aab
 aab
 aab
-stG
-itm
-qMR
-jYT
-aWn
-uRa
-aWn
-uRa
-fGC
-uXn
-uRa
-jYT
-qMR
+aab
+aab
+xLx
+bgO
+vEY
+lMH
+bgO
+bgO
+bgO
+bgO
+jTy
+jTy
+xLx
 aab
 aab
 aab
@@ -222275,19 +222780,19 @@ aab
 aab
 aab
 aab
-stG
-itm
-llJ
-mMS
-jby
-bdJ
-uRa
-uRa
-uRa
+aab
+aab
+xLx
+bgO
+bgO
+jHE
+bgO
+bgO
+bgO
 vEY
-uRa
-jYT
-llJ
+lMH
+sZB
+xLx
 aab
 aab
 aab
@@ -222577,19 +223082,19 @@ aab
 aab
 aab
 aab
-stG
-itm
-llJ
-uRa
-uRa
-uRa
-mrQ
-uRa
-uRa
-srk
-uRa
-uRa
-llJ
+aab
+aab
+xLx
+bgO
+bgO
+bgO
+bgO
+bgO
+bSg
+bgO
+bgO
+bgO
+xLx
 aab
 aab
 aab
@@ -222879,19 +223384,19 @@ aab
 aab
 aab
 aab
-coY
-xHe
-ldd
+aab
+aab
+xLx
+xLx
+xLx
+xLx
+xLx
 llJ
-llJ
-llJ
-llJ
-qMR
-lya
+dAv
 cKE
-qMR
 llJ
-llJ
+xLx
+xLx
 aab
 aab
 aab
@@ -223788,8 +224293,8 @@ aab
 aab
 aab
 aab
-aab
 oGx
+wvM
 wvM
 tuv
 efn
@@ -224090,9 +224595,9 @@ aab
 aab
 aab
 aab
-aab
 stG
 qrb
+qyJ
 qrb
 qrb
 qrb
@@ -224392,10 +224897,10 @@ aab
 aab
 aab
 aab
-aab
 stG
-qrb
-qrb
+hFU
+iXU
+phc
 qrb
 qrb
 qrb
@@ -224694,10 +225199,10 @@ aab
 aab
 aab
 aab
-aab
 stG
 qrb
-qyJ
+nGI
+qrb
 qrb
 tYs
 qyJ
@@ -224996,10 +225501,10 @@ aab
 aab
 aab
 aab
-aab
 stG
-iAH
-iXU
+qrb
+qrb
+qrb
 qrb
 qrb
 iXU
@@ -225297,12 +225802,12 @@ aab
 aab
 aab
 aab
-aab
-aab
-stG
-jET
-nGI
+oqH
+grl
 qrb
+jET
+qrb
+jfg
 qrb
 nGI
 qrb
@@ -225603,11 +226108,11 @@ yiW
 yiW
 rPV
 llJ
+kyd
+kyd
 llJ
-tFE
 llJ
-llJ
-qrb
+ubb
 qrb
 tWn
 aab
@@ -225903,14 +226408,14 @@ aab
 aab
 yiW
 yiW
-yiW
+yhy
+mXi
+xIC
+xIC
+uOM
 llJ
-uzf
-uRa
-uRa
 llJ
-llJ
-lya
+xwL
 llJ
 rqo
 aab
@@ -226205,14 +226710,14 @@ aab
 aab
 yiW
 yiW
-yiW
-llJ
-uoL
-uRa
-uRa
+yhy
+uOM
+hWu
+uOM
+xIC
 aHK
-uRa
-uRa
+uOM
+uOM
 llJ
 aab
 aab
@@ -226507,14 +227012,14 @@ aab
 aab
 yiW
 yiW
-yiW
+yhy
 llJ
 llJ
 llJ
-uRa
-fGC
-bNX
-tsE
+uOM
+opr
+yaU
+uOM
 llJ
 aab
 aab
@@ -226814,9 +227319,9 @@ yiW
 yiW
 llJ
 ipK
-uRa
-uRa
-tFE
+uOM
+uOM
+gBd
 qMR
 aab
 aab
@@ -227116,9 +227621,9 @@ yiW
 yiW
 llJ
 tNc
-uRa
-uRa
-tFE
+xIC
+xIC
+rOL
 llJ
 aab
 aab
@@ -227420,7 +227925,7 @@ llJ
 ngg
 jAP
 tsE
-tFE
+rOL
 llJ
 aab
 aab
