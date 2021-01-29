@@ -185,7 +185,6 @@
 /obj/structure/chair/ms13/metal/broken{
 	dir = 1
 	},
-/obj/effect/landmark/start/ms13/radioman,
 /turf/open/floor/wood/ms13/broken/right,
 /area/ms13/ncr_main)
 "adg" = (
@@ -4926,6 +4925,7 @@
 "dhS" = (
 /obj/structure/bed/ms13/bedframe/wood,
 /obj/structure/bed/ms13/mattress/dirty,
+/obj/effect/landmark/start/ms13/engineer,
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "diH" = (
@@ -7295,6 +7295,10 @@
 /obj/effect/spawner/lootdrop/ms13/gun/tier1,
 /turf/open/floor/wood/ms13,
 /area/ms13/underground/mountain)
+"eUi" = (
+/obj/effect/landmark/start/ms13/radioman,
+/turf/open/floor/plating/ground/sidewalk,
+/area/ms13)
 "eUo" = (
 /turf/open/floor/plasteel/ms13/misc/rarewhite/rarecyan,
 /area/ms13/sunny_dale)
@@ -8135,6 +8139,7 @@
 /obj/structure/chair/comfy/ms13/armchair{
 	dir = 4
 	},
+/obj/effect/landmark/start/ms13/radioman,
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "fxL" = (
@@ -10002,6 +10007,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"gIR" = (
+/obj/effect/landmark/start/ms13/engineer,
+/turf/open/floor/wood/ms13,
+/area/ms13/ncr_main)
 "gIY" = (
 /obj/structure/table/ms13,
 /turf/open/floor/plasteel/ms13/_full/dirty,
@@ -11587,6 +11596,13 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/ms13)
+"hLL" = (
+/obj/structure/chair/ms13/metal/broken{
+	dir = 1
+	},
+/obj/effect/landmark/start/ms13/trooper,
+/turf/open/floor/wood/ms13,
+/area/ms13/ncr_main)
 "hLV" = (
 /obj/structure/closet/crate/freezer,
 /obj/item/organ/liver,
@@ -18740,6 +18756,11 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
 /turf/open/floor/plasteel/ms13/_rusty,
 /area/ms13/underground/megabunker/upper)
+"nbw" = (
+/obj/structure/bed/ms13/bedframe/cot,
+/obj/effect/landmark/start/ms13/radioman,
+/turf/open/floor/wood/ms13/broken,
+/area/ms13/ncr_main)
 "nci" = (
 /turf/open/floor/plasteel/ms13/yellow/corner/dirty{
 	dir = 4
@@ -19740,7 +19761,6 @@
 "nRv" = (
 /obj/structure/bed/ms13/bedframe/wood,
 /obj/structure/bed/ms13/mattress/dirty,
-/obj/effect/landmark/start/ms13/radioman,
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "nRC" = (
@@ -121570,7 +121590,7 @@ uya
 uya
 uya
 uya
-uya
+eUi
 mzo
 fVf
 sSJ
@@ -131241,7 +131261,7 @@ kwJ
 aDo
 aDo
 tsG
-cxo
+hLL
 ocg
 tJx
 aDo
@@ -190424,7 +190444,7 @@ aab
 aab
 nKL
 nJJ
-ocg
+gIR
 ocg
 nKL
 nJJ
@@ -195882,7 +195902,7 @@ ocg
 nKL
 ouu
 rHQ
-ouu
+nbw
 rHQ
 iAh
 rHQ
