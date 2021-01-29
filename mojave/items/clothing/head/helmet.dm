@@ -339,7 +339,7 @@
 	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/ms13/ncr
-	name = "/improper NCR infantry helmet"
+	name = "\improper NCR infantry helmet"
 	desc = "A standard issue NCR infantry helmet adapted for arctic environments."
 	icon_state = "ncr_infantry_helmet"
 	inhand_icon_state = "ncr_infantry_helmet"
@@ -349,13 +349,13 @@
 	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/ms13/ncr/goggles
-	name = "/improper NCR goggles helmet"
+	name = "\improper NCR goggles helmet"
 	desc = "An NCR helmet with added goggles and additional protective padding."
 	icon_state = "ncr_goggles_helmet"
 	inhand_icon_state = "ncr_goggles_helmet"
 	can_toggle = 1
-	toggle_message = "You pull the goggles down"
-	alt_toggle_message = "You push the goggles up"
+	toggle_message = "You pull the goggles down on"
+	alt_toggle_message = "You push the goggles up on"
 	actions_types = list(/datum/action/item_action/toggle)
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 
