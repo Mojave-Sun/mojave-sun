@@ -3795,6 +3795,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/ms13/blue/white/whitebluechess/dirty,
 /area/ms13/sunny_dale)
+"csu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "csA" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/machinery/door/airlock/hatch,
@@ -11814,6 +11821,13 @@
 "hSI" = (
 /obj/machinery/light/small/broken,
 /obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"hSP" = (
+/obj/structure/closet/crate/bin,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "hSR" = (
@@ -21553,6 +21567,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/ms13/misc/rarewhite,
 /area/ms13/sunny_dale)
+"pkA" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/road,
+/area/ms13/sunny_dale)
 "pkL" = (
 /obj/structure/rack,
 /obj/item/flashlight,
@@ -28674,6 +28694,12 @@
 	dir = 8
 	},
 /area/ms13/underground/tunnel/maintenance)
+"uyC" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
 "uyF" = (
 /obj/structure/toilet{
 	dir = 4
@@ -30414,6 +30440,12 @@
 	pixel_y = 12
 	},
 /turf/open/floor/wood/ms13,
+/area/ms13/sunny_dale)
+"vYo" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/road,
 /area/ms13/sunny_dale)
 "vYy" = (
 /obj/effect/decal/cleanable/blood/tracks{
@@ -160502,7 +160534,7 @@ jIO
 bfZ
 egI
 bfZ
-lwZ
+pkA
 lwZ
 hPm
 lwZ
@@ -160797,7 +160829,7 @@ uya
 uya
 uya
 jIO
-vBx
+csu
 qcW
 vBx
 fKL
@@ -161701,7 +161733,7 @@ ome
 ome
 ome
 jIO
-vBx
+csu
 qcW
 vBx
 qVK
@@ -163220,7 +163252,7 @@ jIO
 bfZ
 bfZ
 oBE
-lwZ
+vYo
 lwZ
 hPm
 lwZ
@@ -163815,7 +163847,7 @@ afK
 afK
 ome
 jIO
-bgO
+uyC
 bgO
 vBx
 bgO
@@ -163824,7 +163856,7 @@ jIO
 cRH
 fek
 qfZ
-vBx
+boA
 qVK
 vBx
 qcW
@@ -165023,11 +165055,11 @@ ome
 ome
 ome
 jIO
-wzC
+nig
 xkE
 vUl
 jIO
-iot
+hSP
 vBx
 vBx
 vBx
@@ -166240,7 +166272,7 @@ qcW
 qVK
 qcW
 qVK
-bgO
+ipR
 qVK
 vBx
 qVK
