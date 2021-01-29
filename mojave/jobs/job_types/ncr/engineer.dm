@@ -1,8 +1,8 @@
 /datum/job/ms13/ncr/engineer
 	title = "NCR Engineer"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the Lieutenant, Sergeants, and Corporals.  In that order."
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "The Lieutenant, Staff Sergeants, and Sergeants.  In that order."
 	description = "You are in charge of fortifying and building for NCR strategic locations throughout the region."
 
 	outfit = /datum/outfit/job/ms13/ncr/engineer
@@ -13,7 +13,7 @@
 	name = "_NCR Engineer"
 	jobtype = /datum/job/ms13/ncr/engineer
 	id = 		 /obj/item/card/id/ms13/ncrtrooper
-	uniform =    /obj/item/clothing/under/ms13/ncr/fatigues/winter
+	uniform =    /obj/item/clothing/under/ms13/ncr/fatigues
 	head = 	     /obj/item/clothing/head/hardhat
 	suit =       /obj/item/clothing/suit/armor/ms13/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/ms13/m9mm

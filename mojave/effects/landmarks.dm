@@ -58,17 +58,17 @@
 /obj/effect/landmark/start/ms13/radioman
 	name = "Radioman"
 
-/obj/effect/landmark/start/ms13/corporal
-	name = "Corporal"
+/obj/effect/landmark/start/ms13/sergeant
+	name = "Sergeant"
 
 /obj/effect/landmark/start/ms13/engineer
 	name = "Engineer"
 
-/obj/effect/landmark/start/ms13/sergeant
-	name = "Sergeant"
+/obj/effect/landmark/start/ms13/staffsergeant
+	name = "Staff Sergeant"
 
 /obj/effect/landmark/start/ms13/medicalofficer
-	name = "Medical Officer"
+	name = "Medic"
 
 /obj/effect/landmark/start/ms13/lieutenant
 	name = "Lieutenant"
@@ -93,6 +93,9 @@
 
 /obj/effect/landmark/start/ms13/raider
 	name = "Raider"
+
+/obj/effect/landmark/start/ms13/sawbone
+	name = "Sawbone"
 
 /obj/effect/landmark/start/ms13/enforcer
 	name = "Enforcer"

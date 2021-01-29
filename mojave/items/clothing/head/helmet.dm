@@ -282,6 +282,18 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+/obj/item/clothing/head/helmet/ms13/military/raider
+	name = "hooded mask"
+	desc = "A shabbily put together hooded mask. The hood was clearly roughly torn from a jacket. Looks like your face could survive a punch or two though, not to mention the windchill is cut down."
+	icon_state = "hoodraider"
+	inhand_icon_state = "bulletproof"
+
+/obj/item/clothing/head/helmet/ms13/military/raider/ushanka
+	name = "trappers mask"
+	desc = "A sturdy mask sewn straight into a thick fur hat. Nice and cozy. "
+	icon_state = "ushankaraider"
+	inhand_icon_state = "bulletproof"
+
 /obj/item/clothing/head/helmet/ms13/combat
 	name = "combat helmet"
 	desc = "A standard pre-war combat helmet. Good overall protection."
@@ -327,30 +339,36 @@
 	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/ms13/ncr
-	name = "NCR infantry helmet"
+	name = "/improper NCR infantry helmet"
 	desc = "A standard issue NCR infantry helmet adapted for arctic environments."
-	icon_state = "ncr_infantry_helmet_w"
-	inhand_icon_state = "ncr_infantry_helmet_w"
+	icon_state = "ncr_infantry_helmet"
+	inhand_icon_state = "ncr_infantry_helmet"
 	armor = list(melee = 35, bullet = 35, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 	flags_cover = NONE
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/ms13/ncr/goggles
-	name = "NCR goggles helmet"
+	name = "/improper NCR goggles helmet"
 	desc = "An NCR helmet with added goggles and additional protective padding."
-	icon_state = "ncr_goggles_helmet_w"
-	inhand_icon_state = "ncr_goggles_helmet_w"
+	icon_state = "ncr_goggles_helmet"
+	inhand_icon_state = "ncr_goggles_helmet"
 	can_toggle = 1
-	toggle_message = "You pull the goggles down on"
-	alt_toggle_message = "You push the goggles up on"
+	toggle_message = "You pull the goggles down"
+	alt_toggle_message = "You push the goggles up"
 	actions_types = list(/datum/action/item_action/toggle)
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /obj/item/clothing/head/helmet/ms13/ncr/beret
 	name = "NCR officer beret"
 	desc = "An NCR officer's beret. Minimal protection, maximum style and authority."
-	icon_state = "ncr_officer_beret_w"
-	inhand_icon_state = "ncr_officer_beret_w"
+	icon_state = "ncr_officer_beret"
+	inhand_icon_state = "ncr_officer_beret"
 	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
+
+/obj/item/clothing/head/helmet/ms13/ncr/beret/brown
+	icon_state = "ncr_officer_brberet"
+	inhand_icon_state = "ncr_officer_brberet"
 
 /obj/item/clothing/head/helmet/ms13/legion/vexillarius
 	name = "vexillarius headdress"

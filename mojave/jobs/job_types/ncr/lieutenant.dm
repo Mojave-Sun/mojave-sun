@@ -13,12 +13,11 @@
 	name = "_NCR Lieutenant"
 	jobtype = /datum/job/ms13/ncr/lieutenant
 	id = 		 /obj/item/card/id/ms13/ncrlieutenant
-	uniform =    /obj/item/clothing/under/ms13/ncr/fatigues/winter
-	head = 	     /obj/item/clothing/head/helmet/ms13/ncr/beret
+	uniform =    /obj/item/clothing/under/ms13/ncr/fatigues
+	head = 	     /obj/item/clothing/head/helmet/ms13/ncr/beret/brown
 	suit =       /obj/item/clothing/suit/armor/ms13/ncr/mantle/reinforced
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/ms13/deagle
-	belt = 		 /obj/item/storage/belt/military/army
-	shoes = 	 /obj/item/clothing/shoes/ms13/military/ncr_officer/winter
+	shoes = 	 /obj/item/clothing/shoes/ms13/military/ncr/officer
 	glasses =	 /obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/ms13/deagle=2, \
