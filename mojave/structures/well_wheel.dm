@@ -42,8 +42,9 @@ GLOBAL_LIST_EMPTY(water_wells_in_world)
 			continue
 		alive_humans++
 
-	//Account for the 2 second delay between process(), 1/24u of water is consumed per second
-	reagents.add_reagent(/datum/reagent/water, (((1 / 12) * water_ratio * alive_humans) / (length(GLOB.water_wells_in_world))))
+	//Each human will consume about (1 / SECONDS_OF_LIFE_PER_WATER_U) per second, because this is process(), we need to * 2 the amount of water generated as process() is per 2 seconds
+	//but water consumption is per second
+	reagents.add_reagent(/datum/reagent/water, (((1 / SECONDS_OF_LIFE_PER_WATER_U) * 2 * water_ratio * alive_humans) / length(GLOB.water_wells_in_world)))
 
 /obj/structure/well/proc/UpdateAllWells()
 	for(var/obj/structure/well/well in GLOB.water_wells_in_world)

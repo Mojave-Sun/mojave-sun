@@ -1,5 +1,9 @@
 //Makes you request water or die, this could be made more generic with support of more reagents but that's going into "refactor addiction" territory
 
+//Amount of seconds a unit of water will provide life for, modify this for balancing purposes
+//Influences amount of units consumed by this component alongside how much
+#define SECONDS_OF_LIFE_PER_WATER_U 24
+
 //List of stage of dehydration => examine/warning text
 GLOBAL_LIST_INIT(dehydration_stage_examine, list("<font color='green'>not dehydrated",
 												 "<font color='orange'>very slightly dehydrated",
@@ -52,7 +56,7 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 	if(the_parent.has_reagent(/datum/reagent/water))
 		var/datum/reagent/water/water = the_parent.reagents.get_reagent(/datum/reagent/water) //Modify metabolism rate here so don't need to edit base files
 		water.metabolization_rate = 0 // Stop water metabolization, we'll take it from here
-		modify_thirst(modify_by = min(the_parent.reagents.get_reagent_amount() * 24, 120)) //NO MICRODOSING, "metabolizes" 5 units of water per 1 second for +25 thirst
+		modify_thirst(modify_by = min(the_parent.reagents.get_reagent_amount() * SECONDS_OF_LIFE_PER_WATER_U, SECONDS_OF_LIFE_PER_WATER_U * 5)) //NO MICRODOSING, "metabolizes" 5 units of water per 1 second for +25 thirst
 		the_parent.reagents.remove_reagent(water, 5)
 
 ///Modifies thirst by modify_by VIA = curr_thirst + modify_by, clamps value to max_thirst or 0
