@@ -102,6 +102,12 @@
 	icon_state = "ncr_officer_boots"
 	inhand_icon_state = "ncr_boots"
 
+/obj/item/clothing/shoes/ms13/military/ncr/scout
+	name = "\improper NCR scout boots"
+	desc = "A nice flexible pair of boots, often associated with the more mobile units of the NCR."
+	icon_state = "ncr_scout_boots"
+	inhand_icon_state = "ncr_boots"
+
 /obj/item/clothing/shoes/ms13/military/legion
 	name = "generic Legion boots"
 	desc = "Generic boots worn by Legionaries."
