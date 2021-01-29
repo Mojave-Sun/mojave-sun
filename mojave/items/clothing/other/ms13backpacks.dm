@@ -34,7 +34,7 @@
 	slot_flags = ITEM_SLOT_BELT
 
 /obj/item/storage/ms13/ncr
-	name = "/improper NCR backpack"
+	name = "\improper NCR backpack"
 	desc = "A sturdy pack used by members of the NCR. It looks like it can hold a fair bit while still keeping a low profile."
 	icon_state = "ncr_pack"
 	inhand_icon_state = "ncr_pack"
