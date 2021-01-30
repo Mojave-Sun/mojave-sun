@@ -18,7 +18,7 @@
 		return
 	RegisterSignal(current_area, COMSIG_AREA_POWER_CHANGE, .proc/AreaPowerCheck)
 
-/obj/item/radio/intercom/examine(mob/user)
+/obj/item/radio/ms13/ham/examine(mob/user)
 	. = ..()
 	. += "<span class='notice'>Use [MODE_TOKEN_INTERCOM] when nearby to speak into it.</span>"
 
@@ -76,7 +76,7 @@
 	if(on)
 		icon_state = initial(icon_state)
 	else
-		icon_state = "radio_on"
+		icon_state = "radio_off"
 
 /**
  * Proc called whenever the intercom's area loses or gains power. Responsible for setting the `on` variable and calling `update_icon()`.
