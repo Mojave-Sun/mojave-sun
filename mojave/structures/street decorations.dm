@@ -1,31 +1,35 @@
-/obj/structure/ms13/streetpole
-	name = "\improper streel pole"
-	desc = "A street pole with nothing on it. What's this for? Aesthetic? Not that it matters anymore."
+/obj/machinery/power/ms13/streetlamp
+	name = "\improper street lamp"
+	desc = "A pre-war street lamp, what more is there to say?"
 	icon = 'mojave/icons/structure/streetpoles.dmi'
-	icon_state = "base"
+	icon_state = "streetlight"
 	anchored = TRUE
 	max_integrity = 2000
 	pixel_x = -32
 
-/obj/structure/ms13/streetpole/lamp
+/obj/machinery/power/ms13/streetlamp
 	name = "\improper street lamp"
 	desc = "A pre-war street lamp, what more is there to say?"
 	icon_state = "streetlight"
 
-/obj/structure/ms13/streetpole/lamp/corner
+/obj/machinery/power/ms13/streetlamp/corner
 	name = "\improper street lamp"
 	desc = "A pre-war street lamp, what more is there to say?"
 	icon_state = "streetlightcorner"
 
-/obj/structure/ms13/streetpole/lamp/double
+/obj/machinery/power/ms13/streetlamp/double
 	name = "\improper street lamp"
 	desc = "A pre-war street lamp, what more is there to say?"
 	icon_state = "streetlightduo"
 
-/obj/structure/ms13/streetpole/traffic
+/obj/machinery/power/ms13/trafficlight
 	name = "\improper traffic light"
 	desc = "A relic of a more civilized time, where people for some reason weren't alright with plowing over a family while going ninety down a road."
+	icon = 'mojave/icons/structure/streetpoles.dmi'
+	anchored = TRUE
+	max_integrity = 2000
+	pixel_x = -32
 	icon_state = "trafficlightright"
 
-/obj/structure/ms13/streetpole/traffic/alt
+/obj/machinery/power/ms13/trafficlight/alt
 	icon_state = "trafficlightleft"
