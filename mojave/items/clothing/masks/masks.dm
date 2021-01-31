@@ -45,7 +45,7 @@
 	flags_inv = HIDEFACE
 
 /obj/item/clothing/mask/ms13/ncr
-	name = "/improper NCR cowl"
+	name = "\improper NCR cowl"
 	desc = "A universal NCR cowl. Suitable for any region for an assortment of purposes. Great to keep weak shrapnel away from your face."
 	icon_state = "ncr_cowl"
 	inhand_icon_state = "ncr_standard_gloves"

@@ -219,28 +219,28 @@
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 
 /obj/item/clothing/suit/armor/ms13/ncr
-	name = "NCR infantry vest"
+	name = "\improper NCR infantry vest"
 	desc = "A standard issue NCR infantry vest specialized for arctic environments."
 	icon_state = "ncr_infantry_vest"
 	inhand_icon_state = "ncr_infantry_vest"
 	armor = list(melee = 35, bullet = 35, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/suit/armor/ms13/ncr/reinforced
-	name = "NCR reinforced infantry vest"
+	name = "\improper NCR reinforced infantry vest"
 	desc = "An NCR infantry vest with extra protective reinforcements."
 	icon_state = "ncr_reinforced_vest"
 	inhand_icon_state = "ncr_reinforced_vest"
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /obj/item/clothing/suit/armor/ms13/ncr/mantle
-	name = "/improper NCR mantle vest"
+	name = "\improper NCR mantle vest"
 	desc = "An NCR vest with a mantle on the shoulder, normally indicating some form of authority or command position."
 	icon_state = "ncr_standard_mantle"
 	inhand_icon_state = "ncr_standard_mantle"
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /obj/item/clothing/suit/armor/ms13/ncr/mantle/reinforced
-	name = "/improper NCR reinforced mantle vest"
+	name = "\improper NCR reinforced mantle vest"
 	desc = "An NCR mantle vest with additional protective reinforcements."
 	icon_state = "ncr_reinforced_mantle"
 	inhand_icon_state = "ncr_reinforced_mantle"
