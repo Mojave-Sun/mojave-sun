@@ -2,7 +2,7 @@
 	title = "NCR Radioman"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Lieutenant, Sergeants, and Corporals. In that order."
+	supervisors = "The Lieutenant, Staff Sergeants, and Sergeants.  In that order."
 	description = "Relay messages, obey orders and relay changes in situations to keep command up to date. Your radiopack functions as a backpack, and should be worn as such."
 
 	outfit = /datum/outfit/job/ms13/ncr/radioman
@@ -13,11 +13,10 @@
 	name = "_NCR Radioman"
 	jobtype = 	 /datum/job/ms13/ncr/radioman
 	id = 		 /obj/item/card/id/ms13/ncrtrooper
-	uniform = 	 /obj/item/clothing/under/ms13/ncr/fatigues/winter
+	uniform = 	 /obj/item/clothing/under/ms13/ncr/fatigues
 	head = 		 /obj/item/clothing/head/helmet/ms13/ncr
 	suit = 		 /obj/item/clothing/suit/armor/ms13/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/ms13/m9mm
-	belt = 		 /obj/item/storage/belt/military/army
 	ears = 		 null
 	glasses = 	 /obj/item/clothing/glasses/sunglasses/big
 	back = 		 /obj/item/ms13/storage/backpack/radiopack

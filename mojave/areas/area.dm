@@ -60,7 +60,7 @@
 /area/ms13/ncr_main
 	name = "NCR Mainbase"
 	icon_state = "ncr_main"
-	requires_power = TRUE
+	requires_power = FALSE
 
 /area/ms13/raider_mall
 	name = "Raider Mall"

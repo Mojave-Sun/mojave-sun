@@ -100,3 +100,23 @@
 	name = "centurion medallion"
 	desc = "A golden disc awarded to the most fierce men in the entire Legion. If you are close enough to read the insignia you won't be alive much longer."
 	icon_state = "legionmedallioncent"
+
+/obj/item/card/id/ms13/raider
+	name = "raider's necklace"
+	desc = "A necklace composed of random bits of teeth. If someone's wearing this, you know they could only be part of ONE gang..."
+	icon_state = "raider"
+
+/obj/item/card/id/ms13/sawbone
+	name = "sawbone's patch"
+	desc = "A nice rectangular patch with a little hole to loop a string through if you really wanted to. It's a bit bloody."
+	icon_state = "sawbone"
+
+/obj/item/card/id/ms13/enforcer
+	name = "enforcer's necklace"
+	desc = "A necklace composed of random bits of teeth, along with bullets of varying caliber strung up. Truly a symbol of authority"
+	icon_state = "enforcer"
+
+/obj/item/card/id/ms13/boss
+	name = "boss's collar"
+	desc = "A brave fashion statement. This is a seemingly non-functional bomb collar. The person wearing this must truly be an alpha."
+	icon_state = "boss"
