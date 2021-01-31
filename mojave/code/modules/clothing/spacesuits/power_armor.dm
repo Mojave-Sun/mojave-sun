@@ -3,14 +3,17 @@
 	name = "Generic Power Armor Helmet"
 	desc = "Don't ever use this in the video game please."
 	icon = 'mojave/icons/mob/clothing/head.dmi'
-	icon_state = "advhelmet2old"
-	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
-	worn_icon_state = "advhelmet2old"
+	icon_state = "t45_pa"
+	worn_icon = 'mojave/icons/mob/large-worn-icons/64x64/head.dmi'
+	worn_icon_state = "t45_pa"
 	strip_delay = 200
 	max_integrity = 500
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 80, BOMB = 80, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
 	actions_types = null //No lights my dude, sorry
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	clothing_flags = LARGE_WORN_ICON
 
 //No touchy
 /obj/item/clothing/head/helmet/space/hardsuit/power_armor/Initialize()
@@ -22,13 +25,12 @@
 	name = "Generic Power Armor"
 	desc = "Don't ever use this in the video game please."
 	icon = 'mojave/icons/mob/clothing/suit.dmi'
-	icon_state = "advancedold"
+	icon_state = "t45-pa"
 	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
-	worn_icon_state = "advancedold"
+	worn_icon_state = "t45-pa"
 	density = TRUE //It's a suit of armor man
 	anchored = TRUE
 	strip_delay = 200
-	var/obj/vehicle/sealed/power_armor/linked_vehicle //The vehicle instance this is linked to for regenerating back to it
 	max_integrity = 500
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 80, BOMB = 80, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
@@ -50,8 +52,6 @@
 		guy.transform = M
 		//guy.dna.species.offset_features = list(OFFSET_UNIFORM = list(0,-6), OFFSET_ID = list(0,0), OFFSET_GLOVES = list(0,0), OFFSET_GLASSES = list(0,0), OFFSET_EARS = list(0,0), OFFSET_SHOES = list(0,0), OFFSET_S_STORE = list(0,0), OFFSET_FACEMASK = list(0,0), OFFSET_HEAD = list(0,3), OFFSET_FACE = list(0,0), OFFSET_BELT = list(0,3), OFFSET_BACK = list(0,0), OFFSET_SUIT = list(0,-6), OFFSET_NECK = list(0,0))
 		guy.regenerate_icons()
-
-
 
 /obj/item/clothing/suit/space/hardsuit/power_armor/dropped(mob/user)
 	. = ..()
@@ -116,3 +116,29 @@
 		var/datum/effect_system/spark_spread/spark_system = new /datum/effect_system/spark_spread
 		spark_system.start()
 	..()
+
+
+//For now the t45 is just a new subtype
+/obj/item/clothing/head/helmet/space/hardsuit/power_armor/t45
+	name = "T45 Power Armor Helmet"
+	desc = "A beefy helmet attached to a suit of power armor."
+
+/obj/item/clothing/suit/space/hardsuit/power_armor/t45
+	name = "T45 Power Armor Suit"
+	desc = "Supposedly the first power armor to be deployed in the Great War. While it does have it's flaws, it still represents a very robust piece of armor that can withstand great punishment."
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/power_armor/t45
+
+/obj/item/clothing/head/helmet/space/hardsuit/power_armor/t51b
+	name = "T51 Power Armor Helmet"
+	desc = "A more advanced helmet for a more advanced piece of power armor."
+	armor = list(MELEE = 90, BULLET = 90, LASER = 90, ENERGY = 90, BOMB = 90, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
+	icon_state = "t51_pa"
+	worn_icon_state = "t51_pa"
+
+/obj/item/clothing/suit/space/hardsuit/power_armor/t51b
+	name = "T51B Power Armor Suit"
+	desc = "The last widely developed and distributed power armor prior to the nuclear winter, even after all of these years it still outperforms it's previous model iteration."
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/power_armor/t51b
+	armor = list(MELEE = 90, BULLET = 90, LASER = 90, ENERGY = 90, BOMB = 90, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
+	icon_state = "t51b-pa"
+	worn_icon_state = "t51b-pa"
