@@ -6,6 +6,7 @@
 	anchored = TRUE
 	max_integrity = 2000
 	pixel_x = -32
+	layer = ABOVE_ALL_MOB_LAYER
 
 /obj/machinery/power/ms13/streetlamp
 	name = "\improper street lamp"
@@ -30,6 +31,7 @@
 	max_integrity = 2000
 	pixel_x = -32
 	icon_state = "trafficlightright"
+	layer = ABOVE_ALL_MOB_LAYER
 
 /obj/machinery/power/ms13/trafficlight/alt
 	icon_state = "trafficlightleft"
