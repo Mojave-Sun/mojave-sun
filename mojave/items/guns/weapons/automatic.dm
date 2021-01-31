@@ -128,10 +128,11 @@
 
 /obj/item/gun/ballistic/automatic/ms13/assaultrifle/chinese/xuanlong
 	name = "\improper Xuanlong assault rifle"
-	desc = "A modified Chinese assault rifle sporting a more stable stock and a scope. Fires an accurate three round burst, intended for long range engagements."
+	desc = "A modified Chinese assault rifle sporting a more stable stock and a scope. Fires a three round burst, intended for long range engagements."
 	icon_state = "xuanlong"
 	inhand_icon_state = "xuanlong"
 	extra_damage = 25
+	extra_penetration = 5
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
@@ -191,7 +192,7 @@
 	icon_state = "maquis"
 	inhand_icon_state = "maquis"
 	fire_delay = 5
-	extra_damage = 35
+	extra_damage = 30
 	extra_penetration = 10
 	
 /obj/item/gun/ballistic/automatic/ms13/marksman/sniper

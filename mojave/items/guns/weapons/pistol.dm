@@ -34,8 +34,8 @@
 	desc = "A prototype Chinese pistol with a slower fire rate but much higher damage, also sporting some much better looks."
 	icon_state = "420pistol"
 	inhand_icon_state = "420pistol"
-	extra_damage = 35
-	extra_penetration = 10
+	extra_damage = 30
+	extra_penetration = 5
 	fire_delay = 5
 
 /obj/item/gun/ballistic/automatic/pistol/ms13/m9mm
@@ -50,22 +50,6 @@
 	extra_damage = 20
 	extra_penetration = 5
 
-/obj/item/gun/ballistic/automatic/pistol/ms13/m9mm/maria
-	name = "\improper Maria"
-	desc = "A custom and improved model of the 9mm pistol with improved rate of fire, damage, and style. Does look a bit like an 18-karat run of bad luck though."
-	icon_state = "maria"
-	inhand_icon_state = "maria"
-	fire_delay = 3	
-	extra_damage = 25
-	extra_penetration = 10
-
-/obj/item/gun/ballistic/automatic/pistol/ms13/m9mm/handmade
-	name = "handmade pistol"
-	desc = "A crudely made pistol chambered for 9mm rounds. Fires more slowly than it's manufactured brother."
-	icon_state = "hpistol"
-	inhand_icon_state = "hpistol"
-	fire_delay = 5
-
 /obj/item/gun/ballistic/automatic/pistol/ms13/m12mm
 	name = "12.7mm pistol"
 	desc = "A pre-war, heavy duty European pistol chambered in 12.7mm. Might not look like it, but it can do some real damage."
@@ -77,17 +61,6 @@
 	fire_delay = 4
 	extra_damage = 35
 	extra_penetration = 15
-
-/obj/item/gun/ballistic/automatic/pistol/ms13/m12mm/devil
-	name = "\improper Li'l Devil"
-	desc = "A unique and modified version of the 12.7mm pistol with a higher fire rate, improved damage, and a suppressor attached."
-	icon_state = "devil"
-	inhand_icon_state = "devil"
-	suppressed = 1
-	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
-	fire_delay = 3
-	extra_damage = 35
-	extra_penetration = 20
 
 /obj/item/gun/ballistic/automatic/pistol/ms13/pistol45
 	name = ".45 pistol"
@@ -101,6 +74,13 @@
 	fire_delay = 4
 	extra_damage = 30
 	extra_penetration = 5
+
+/obj/item/gun/ballistic/automatic/pistol/ms13/pistol45/stallion
+	name = "\improper Stallion"
+	desc = "A fancy, well kept, and improved .45 pistol. An even better version of the classic."
+	icon_state = "stallion"
+	inhand_icon_state = "stallion"
+	extra_penetration = 10
 
 /obj/item/gun/ballistic/automatic/pistol/ms13/deagle
 	name = "desert eagle"
