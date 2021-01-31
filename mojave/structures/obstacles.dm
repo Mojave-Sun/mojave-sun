@@ -24,9 +24,10 @@
 	icon_state = "bars"
 	density = TRUE
 	anchored = TRUE
-	max_integrity = 2000
-	layer = ABOVE_MOB_LAYER //wallening here we come baybeeee
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
+	layer = ABOVE_MOB_LAYER
+	max_integrity = 500
+	armor = list(MELEE = 80, BULLET = 80, LASER = 0, ENERGY = 0, BOMB = 25, BIO = 100, RAD = 100, FIRE = 80, ACID = 100)
+	damage_deflection = 40
 	CanAtmosPass = ATMOS_PASS_YES
 	flags_1 = ON_BORDER_1 | RAD_PROTECT_CONTENTS_1
 	var/barpasschance = 33
@@ -41,6 +42,7 @@
 	icon_state = "barscorner_rust"
 
 /obj/structure/ms13/bars/corner/CanAllowThrough(atom/movable/mover, turf/target)
+	. = ..()
 	if(istype(mover) && (mover.pass_flags & PASSGLASS))
 		return TRUE
 	if(istype(mover, /obj/projectile))
@@ -60,6 +62,7 @@
 	return TRUE
 
 /obj/structure/ms13/bars/CanAllowThrough(atom/movable/mover, turf/target)
+	. = ..()
 	var/attempted_dir = get_dir(loc, target)
 	if(istype(mover, /obj/projectile/bullet))
 		return TRUE
@@ -105,8 +108,9 @@
 	anchored = TRUE
 	opacity = FALSE
 	layer = ABOVE_MOB_LAYER
-	max_integrity = 2000
-	armor = list(MELEE = 10, BULLET = 0, LASER = 0, ENERGY = 100, BOMB = 10, BIO = 100, RAD = 100, FIRE = 50, ACID = 50)
+	max_integrity = 500
+	armor = list(MELEE = 80, BULLET = 80, LASER = 0, ENERGY = 0, BOMB = 25, BIO = 100, RAD = 100, FIRE = 80, ACID = 100)
+	damage_deflection = 40
 	flags_1 = RAD_PROTECT_CONTENTS_1 | RAD_NO_CONTAMINATE_1
 	var/locked = FALSE
 
