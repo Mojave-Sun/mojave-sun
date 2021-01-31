@@ -3,6 +3,8 @@
 	desc = "A street pole with nothing on it. What's this for? Aesthetic? Not that it matters anymore."
 	icon = 'mojave/icons/structure/streetpoles.dmi'
 	icon_state = "base"
+	anchored = TRUE
+	max_integrity = 2000
 	pixel_x = -32
 
 /obj/structure/ms13/streetpole/lamp
