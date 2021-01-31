@@ -360,7 +360,7 @@
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /obj/item/clothing/head/helmet/ms13/ncr/beret
-	name = "NCR officer beret"
+	name = "\improper NCR officer beret"
 	desc = "An NCR officer's beret. Minimal protection, maximum style and authority."
 	icon_state = "ncr_officer_beret"
 	inhand_icon_state = "ncr_officer_beret"
