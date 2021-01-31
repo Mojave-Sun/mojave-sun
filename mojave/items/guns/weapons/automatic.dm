@@ -63,15 +63,6 @@
 	spread = 12
 	force = 10
 
-/obj/item/gun/ballistic/automatic/ms13/smg9mm/handmade
-	name = "handmade submachine gun"
-	desc = "A submachine gun made from scratch that fires from a standard 9mm SMG magazine. It's poor design makes it rather hard to control."
-	icon_state = "hsmg"
-	inhand_icon_state = "hsmg"
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
-	spread = 16
-
 /obj/item/gun/ballistic/automatic/ms13/smg12mm
 	name = "12.7mm submachine gun"
 	desc = "A heavy duty submachine gun chambered in 12.7mm, can't hold a lot of rounds, but they sure do pack a punch."
@@ -105,17 +96,18 @@
 
 /obj/item/gun/ballistic/automatic/ms13/assaultrifle/infiltrator
 	name = "\improper Infiltrator"
-	desc = "A heavily modified and customized assault rifle with a scope and suppressor as it's most notable additions. Sacrifices a little bit of damage for a little more control."
+	desc = "A heavily modified and customized assault rifle with a scope and suppressor as it's most notable additions. Fires a three round burst with very good accuracy."
 	icon_state = "infiltrator"
 	inhand_icon_state = "infiltrator"
 	suppressed = 1
-	extra_damage = 20
+	extra_damage = 25
 	extra_penetration = 0
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
 	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
-	spread = 6
+	spread = 4
+	automatic = null
 	
 /obj/item/gun/ballistic/automatic/ms13/assaultrifle/chinese
 	name = "\improper Chinese assault rifle"
@@ -133,6 +125,18 @@
 	icon_state = "handmadear"
 	inhand_icon_state = "handmadear"
 	extra_penetration = 0
+
+/obj/item/gun/ballistic/automatic/ms13/assaultrifle/chinese/xuanlong
+	name = "\improper Xuanlong assault rifle"
+	desc = "A modified Chinese assault rifle sporting a more stable stock and a scope. Fires an accurate three round burst, intended for long range engagements."
+	icon_state = "xuanlong"
+	inhand_icon_state = "xuanlong"
+	extra_damage = 25
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
+	spread = 6
+	automatic = null
 
 /obj/item/gun/ballistic/automatic/ms13/marksman
 	name = "marksman carbine"
@@ -170,26 +174,25 @@
 	extra_damage = 25
 	extra_penetration = 5
 	zoomable = FALSE
+
+/obj/item/gun/ballistic/automatic/ms13/marksman/service/prototype
+	name = "prototype service rifle"
+	desc = "A relatively new and improved modern service rifle sporting three round burst capabilities and a generally improved rate of fire at the cost of some accuracy and penetration."
+	icon_state = "protoservice"
+	inhand_icon_state = "protoservice"
+	fire_delay = 3
+	spread = 3
+	burst_size = 3
+	extra_penetration = 0
 	
-/obj/item/gun/ballistic/automatic/ms13/marksman/service/survival
-	name = "survivalist rifle"
-	desc = "A unique, heavy duty service rifle. Fires slower but packs a much heavier punch. Has definitely seen it's fair share of battle."
-	icon_state = "survivalist"
-	inhand_icon_state = "survivalist"
+/obj/item/gun/ballistic/automatic/ms13/marksman/service/maquis
+	name = "\improper Maquis"
+	desc = "A unique, heavy duty service rifle. Fires slower but packs a much heavier punch. Has a flag supporting a different kind of patriotism than most are used to."
+	icon_state = "maquis"
+	inhand_icon_state = "maquis"
 	fire_delay = 5
 	extra_damage = 35
 	extra_penetration = 10
-	
-/obj/item/gun/ballistic/automatic/ms13/marksman/service/police22
-	name = ".22 police rifle"
-	desc = "A semi-automatic .22 caliber rifle mostly used by pre-war police forces."
-	icon_state = "rugerpolice"
-	inhand_icon_state = "rugerpolice"
-	mag_type = /obj/item/ammo_box/magazine/ms13/r22
-	fire_sound = 'mojave/sound/ms13weapons/varmint_rifle.ogg'
-	fire_delay = 4
-	extra_damage = 20
-	extra_penetration = 0
 	
 /obj/item/gun/ballistic/automatic/ms13/marksman/sniper
 	name = "sniper rifle"
@@ -201,6 +204,36 @@
 	extra_damage = 45
 	extra_penetration = 10
 	mag_type = /obj/item/ammo_box/magazine/ms13/r308
+
+/obj/item/gun/ballistic/automatic/ms13/marksman/sniper/silencer
+	name = "\improper Silencer"
+	desc = "A modified sniper rifle with an integrated suppressor and an improved fire rate. Whether it's called the Silencer because of it's modification or it's intended purpose is yet to be known."
+	icon_state = "silentsniper"
+	inhand_icon_state = "silent sniper"
+	suppressed = 1
+	fire_delay = 5
+	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
+
+/obj/item/gun/ballistic/automatic/ms13/marksman/battle
+	name = "battle rifle"
+	desc = "A very old but also very reliable semi-automatic rifle chambered for .308. From long before the war, but still packs a very heavy punch."
+	icon_state = "battler"
+	inhand_icon_state = "battler"
+	fire_sound = 'mojave/sound/ms13weapons/battlerifle.ogg'
+	fire_delay = 5
+	extra_damage = 40
+	extra_penetration = 15
+	mag_type = /obj/item/ammo_box/magazine/ms13/r308_10
+
+/obj/item/gun/ballistic/automatic/ms13/marksman/battle/rangemaster
+	name = "\improper Rangemaster"
+	desc = "A heavy duty semi-automatic .308 rifle with a scope attached. Has built up a reputation amongst the wastes of being a formidable weapon at any range."
+	icon_state = "rangemaster"
+	inhand_icon_state = "rangemaster"
+	extra_penetration = 20
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
 
 //Magazines
 /obj/item/ammo_box/magazine/ms13/r20
@@ -269,3 +302,11 @@
 	ammo_type = /obj/item/ammo_casing/ms13/m12mm
 	caliber = "12.7mm"
 	max_ammo = 21
+
+/obj/item/ammo_box/magazine/ms13/r308_10
+	name = "10 round magazine (.308)"
+	icon_state = "556r20"
+	ammo_type = /obj/item/ammo_casing/ms13/a308
+	caliber = "a308"
+	max_ammo = 10
+	multiple_sprites = 2

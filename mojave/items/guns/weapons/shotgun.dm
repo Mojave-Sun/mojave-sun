@@ -65,31 +65,21 @@
 	extra_penetration = 10
 	force = 15
 
-/obj/item/gun/ballistic/shotgun/automatic/ms13/battle
-	name = "battle rifle"
-	desc = "A very old but very reliable semi-automatic, clip fed rifle from long before the war. Chambered for .308."
-	icon_state = "battler"
-	inhand_icon_state = "battler"
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/battler
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
-	fire_sound = 'mojave/sound/ms13weapons/battlerifle.ogg'
-	fire_delay = 5
-	extra_damage = 40
-	extra_penetration = 15
-
-/obj/item/gun/ballistic/shotgun/automatic/ms13/battle/sks
+/obj/item/gun/ballistic/shotgun/automatic/ms13/sks
 	name = "\improper SKS"
 	desc = "An old European semi-automatic rifle chambered for 7.62 rounds and normally fed from 10 round stripper clips."
 	icon_state = "sks"
 	inhand_icon_state = "sks"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/sks
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/sks/sks1.ogg'
+	fire_delay = 5
 	extra_damage = 30
 	extra_penetration = 10
 
 
-/obj/item/gun/ballistic/shotgun/automatic/ms13/battle/sks/scoped
+/obj/item/gun/ballistic/shotgun/automatic/ms13/sks/scoped
 	name = "scoped SKS"
 	desc = "An SKS with a scope attached and some improved rifling for better penetration."
 	icon_state = "scoped_sks"
