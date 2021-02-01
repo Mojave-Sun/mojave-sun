@@ -100,7 +100,8 @@
 	icon_state = "infiltrator"
 	inhand_icon_state = "infiltrator"
 	suppressed = 1
-	extra_penetration = 10
+	extra_damage = 25
+	extra_penetration = 0
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
