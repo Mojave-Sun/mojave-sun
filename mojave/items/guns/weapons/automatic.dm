@@ -230,7 +230,6 @@
 	desc = "A heavy duty semi-automatic .308 rifle with a scope attached. Has built up a reputation amongst the wastes of being a formidable weapon at any range."
 	icon_state = "rangemaster"
 	inhand_icon_state = "rangemaster"
-	extra_penetration = 20
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
