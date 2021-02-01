@@ -3,7 +3,7 @@
 /obj/item/gun/energy/ms13
 	name = "generic ms13 gun"
 	desc = "complain when seeing this"
-	icon = 'mojave/icons/objects/guns/energy.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
 
@@ -19,7 +19,7 @@
 /obj/item/gun/energy/ms13/laser/pistol
 	name = "AEP7 laser pistol"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
-	icon = 'mojave/icons/objects/guns/energy.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
 	icon_state = "AEP7"
 	inhand_icon_state = "laser-pistol"
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
@@ -32,7 +32,7 @@
 /obj/item/gun/energy/ms13/laser/scatter
 	name = "Tri-beam Laser Rifle"
 	desc = "A modified AER9 equipped with a refraction kit that spreads its bolts."
-	icon = 'mojave/icons/objects/guns/energy.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
 	inhand_icon_state = "laser-rifle9"
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
@@ -42,7 +42,7 @@
 
 /obj/item/gun/energy/ms13/laser/plasma
 	name ="A3-20 Plasma Rifle"
-	icon = 'mojave/icons/objects/guns/energy.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
 	inhand_icon_state = "plasma"
 	icon_state = "plasma"
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
@@ -54,7 +54,7 @@
 
 /obj/item/gun/energy/ms13/laser/plasma/scatter
 	name = "A3e-20b Multiplas Rifle"
-	icon = 'mojave/icons/objects/guns/energy.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
 	inhand_icon_state = "multiplas"
 	icon_state = "multiplas"
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
@@ -65,7 +65,7 @@
 
 /obj/item/gun/energy/ms13/laser/plasma/pistol
 	name ="MPL-A Plasma Pistol"
-	icon = 'mojave/icons/objects/guns/energy.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
 	inhand_icon_state = "plasma-pistol"
 	icon_state = "plasma-pistol"
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
