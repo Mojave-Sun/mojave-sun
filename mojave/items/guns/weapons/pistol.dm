@@ -23,7 +23,7 @@
 	desc = "A mass produced pre-war Chinese pistol chambered for 10mm rounds."
 	icon_state = "cpistol"
 	inhand_icon_state = "cpistol"
-	mag_type = /obj/item/ammo_box/magazine/internal/cpistol
+	mag_type = /obj/item/ammo_box/magazine/internal/ms13/cpistol
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/chinese/chinese1.ogg'
 	extra_damage = 25
 	extra_penetration = 0
