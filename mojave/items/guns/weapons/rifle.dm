@@ -105,7 +105,7 @@
 //Loaders
 
 /obj/item/ammo_box/ms13/chinese_rifle
-	name = "\improper Chinese rifle stripper clip (7.62)"
+	name = "\improper Chinese hunting rifle stripper clip (7.62)"
 	icon = 'mojave/icons/objects/ammo.dmi'
 	icon_state = "cpistol"
 	ammo_type = /obj/item/ammo_casing/ms13/a762

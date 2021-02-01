@@ -285,14 +285,6 @@
 	caliber = ".22"
 	max_ammo = 60
 	multiple_sprites = 2
-	
-/obj/item/ammo_box/magazine/ms13/r22
-	name = "15 round magazine (.22)"
-	icon_state = "r22"
-	ammo_type = /obj/item/ammo_casing/ms13/c22
-	caliber = ".22"
-	max_ammo = 15
-	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/ms13/smg12mm
 	name = "21 round magazine (12.7mm)"
