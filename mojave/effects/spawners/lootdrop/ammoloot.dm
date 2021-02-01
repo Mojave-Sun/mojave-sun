@@ -57,7 +57,7 @@
 			/obj/item/ammo_box/magazine/ms13/r20,
 			/obj/item/ammo_box/magazine/ms13/r308,
 			/obj/item/ammo_box/magazine/ms13/smg12mm,
-			/obj/item/ammo_box/magazine/ms13/r308_10
+			/obj/item/ammo_box/magazine/ms13/r308_10,
 			/obj/item/ammo_box/magazine/ms13/deagle,
 			/obj/item/ammo_box/magazine/ms13/m12mm,
 			/obj/item/ammo_box/magazine/ms13/ar762
