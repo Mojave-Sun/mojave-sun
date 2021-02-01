@@ -157,16 +157,15 @@
 	caliber = "12.7mm"
 	max_ammo = 7
 
-/obj/item/ammo_box/magazine/internal/cpistol
+/obj/item/ammo_box/magazine/internal/ms13/cpistol
 	name = "Chinese pistol internal magazine"
 	ammo_type = /obj/item/ammo_casing/ms13/c10mm
 	caliber = "10mm"
 	max_ammo = 10
-	multiple_sprites = 2
 
 //Loaders
 /obj/item/ammo_box/ms13/cpistol
-	name = "Chinese pistol stripper clip (10mm)"
+	name = "\improper Chinese pistol stripper clip (10mm)"
 	icon = 'mojave/icons/objects/ammo.dmi'
 	icon_state = "cpistol"
 	ammo_type = /obj/item/ammo_casing/ms13/c10mm

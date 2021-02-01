@@ -10,6 +10,15 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 
+/obj/item/gun/ballistic/revolver/ms13/caravan/sawed
+	name = "sawed-off shotgun"
+	desc = "A double barrel sawed-off shotgun. Can be used and fired with only one hand, making it a deadly weapon in a pinch."
+	icon_state = "sawedoff"
+	inhand_icon_state = "sawedoff"
+	force = 15
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
+
 /obj/item/gun/ballistic/revolver/ms13/single
 	name = "single shotgun"
 	desc = "A very cheap and very common shotgun with only a single round, better make it count."
@@ -49,7 +58,6 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
 	extra_damage = 45
-	extra_penetration = 10
 
 /obj/item/gun/ballistic/revolver/ms13/rev357
 	name = ".357 magnum revolver"
@@ -79,7 +87,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	fire_delay = 5
 	extra_damage = 25
-	extra_penetration = 10
 
 /obj/item/gun/ballistic/revolver/ms13/rev10mm
 	name = "10mm revolver"

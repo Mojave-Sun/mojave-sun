@@ -132,7 +132,6 @@
 	icon_state = "xuanlong"
 	inhand_icon_state = "xuanlong"
 	extra_damage = 25
-	extra_penetration = 5
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13

@@ -37,10 +37,9 @@
 	
 /obj/item/gun/ballistic/rifle/ms13/varmint/ratslayer
 	name = "\improper Ratslayer"
-	desc = "A uniquely modified varmint rifle with greatly improved rifling, a scope, and supressor attached."
+	desc = "A uniquely modified varmint rifle with improved rifling, a scope, and supressor attached."
 	icon_state = "ratslayer"
 	inhand_icon_state = "ratslayer"
-	extra_damage = 35
 	extra_penetration = 10
 	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
 	zoomable = TRUE
@@ -57,6 +56,16 @@
 	fire_sound = 'mojave/sound/ms13weapons/amrfire.ogg'
 	fire_delay = 8
 	extra_damage = 60
+
+/obj/item/gun/ballistic/rifle/ms13/hunting/chinese
+	name = "\improper Chinese hunting rifle"
+	desc = "A Chinese bolt action hunting rifle, chambered in 7.62 with an internal magazine."
+	icon_state = "chinesehunting"
+	inhand_icon_state = "chinesehunting"
+	internal_magazine = TRUE
+	mag_type = /obj/item/ammo_box/magazine/internal/ms13/chinese_rifle
+	fire_sound = 'mojave/sound/ms13weapons/hunting_rifle.ogg'
+	extra_damage = 35
 	
 //Magazines
 /obj/item/ammo_box/magazine/ms13/r10
@@ -85,3 +94,20 @@
 	caliber = "a50MG"
 	max_ammo = 6
 	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/internal/ms13/chinese_rifle
+	name = "Chinese rifle internal magazine (7.62)"
+	icon_state = "r308"
+	ammo_type = /obj/item/ammo_casing/ms13/a762
+	caliber = "a762"
+	max_ammo = 5
+
+//Loaders
+
+/obj/item/ammo_box/ms13/chinese_rifle
+	name = "\improper Chinese rifle stripper clip (7.62)"
+	icon = 'mojave/icons/objects/ammo.dmi'
+	icon_state = "cpistol"
+	ammo_type = /obj/item/ammo_casing/ms13/a762
+	caliber = "a762"
+	max_ammo = 5

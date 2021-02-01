@@ -66,7 +66,7 @@
 	force = 15
 
 /obj/item/gun/ballistic/shotgun/automatic/ms13/sks
-	name = "\improper SKS"
+	name = "\improper European battle rifle"
 	desc = "An old European semi-automatic rifle chambered for 7.62 rounds and normally fed from 10 round stripper clips."
 	icon_state = "sks"
 	inhand_icon_state = "sks"
@@ -80,8 +80,8 @@
 
 
 /obj/item/gun/ballistic/shotgun/automatic/ms13/sks/scoped
-	name = "scoped SKS"
-	desc = "An SKS with a scope attached and some improved rifling for better penetration."
+	name = "scoped European battle rifle"
+	desc = "A European battle rifle with a scope attached and some improved rifling for better penetration."
 	icon_state = "scoped_sks"
 	inhand_icon_state = "scoped_sks"
 	extra_penetration = 15
@@ -107,12 +107,6 @@
 	ammo_type = /obj/item/ammo_casing/ms13/a357
 	caliber = "357"
 	max_ammo = 7
-
-/obj/item/ammo_box/magazine/internal/shot/battler
-	name = "battle rifle internal magazine (.308)"
-	ammo_type = /obj/item/ammo_casing/ms13/a308
-	caliber = "a308"
-	max_ammo = 8
 
 /obj/item/ammo_box/magazine/internal/shot/sks
 	name = "SKS internal magazine (7.62)"
@@ -154,14 +148,6 @@
 	ammo_type = /obj/item/ammo_casing/ms13/a357
 	caliber = "357"
 	max_ammo = 7
-
-/obj/item/ammo_box/ms13/battler
-	name = "battle rifle stripper clip (.308)"
-	icon = 'mojave/icons/objects/ammo.dmi'
-	icon_state = "battler"
-	ammo_type = /obj/item/ammo_casing/ms13/a308
-	caliber = "a308"
-	max_ammo = 8
 
 /obj/item/ammo_box/ms13/sks
 	name = "SKS stripper clip (7.62)"
