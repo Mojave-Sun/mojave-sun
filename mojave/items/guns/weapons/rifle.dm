@@ -65,7 +65,7 @@
 	internal_magazine = TRUE
 	mag_type = /obj/item/ammo_box/magazine/internal/ms13/chinese_rifle
 	fire_sound = 'mojave/sound/ms13weapons/hunting_rifle.ogg'
-	extra_damage = 35
+	extra_damage = 30
 	
 //Magazines
 /obj/item/ammo_box/magazine/ms13/r10
