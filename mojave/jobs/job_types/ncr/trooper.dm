@@ -2,7 +2,7 @@
 	title = "NCR Trooper"
 	total_positions = 10
 	spawn_positions = 10
-	supervisors = "the Lieutenant, Sergeants, and Corporals, in that order."
+	supervisors = "The Lieutenant, Staff Sergeants, and Sergeants.  In that order."
 	description = "Hold the line, and do as ordered."
 
 	outfit = /datum/outfit/job/ms13/ncr/trooper
@@ -13,11 +13,11 @@
 	name = "_NCR Trooper"
 	jobtype = 	 /datum/job/ms13/ncr/trooper
 	id = 		 /obj/item/card/id/ms13/ncrtrooper
-	uniform =    /obj/item/clothing/under/ms13/ncr/fatigues/winter
+	uniform =    /obj/item/clothing/under/ms13/ncr/fatigues
 	head = 	     /obj/item/clothing/head/helmet/ms13/ncr
+	mask = 		 /obj/item/clothing/mask/ms13/ncr
 	suit =       /obj/item/clothing/suit/armor/ms13/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/ms13/marksman/service
-	belt = 		 /obj/item/storage/belt/military/army
 	ears = 		 null
 	glasses =	 null
 	backpack_contents = list(
