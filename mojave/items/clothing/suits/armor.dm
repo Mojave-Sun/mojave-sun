@@ -108,6 +108,45 @@
 	dog_fashion = /datum/dog_fashion/back
 	armor = list(melee = 20, bullet = 40, laser = 10, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 20, acid = 5)
 
+/obj/item/clothing/suit/ms13/trench/bossduster
+	name = "boss' duster"
+	desc = "A duster with a rather thick vest under it. This just SCREAMS authority. Could probably stop a few bullets."
+	icon_state = "armouredcourier"
+	inhand_icon_state = "det_suit"
+	blood_overlay_type = "armor"
+	armor = list(melee = 30, bullet = 30, laser = 10, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 20, acid = 5)
+
+/obj/item/clothing/suit/ms13/trench/enforcercoat
+	name = "enforcers overcoat"
+	desc = "A duster with a rather thick vest under it. This just SCREAMS authority. Could probably stop a few bullets."
+	icon_state = "enforcercoat"
+	inhand_icon_state = "det_suit"
+	blood_overlay_type = "armor"
+	armor = list(melee = 40, bullet = 45, laser = 15, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 30, acid = 5)
+
+/obj/item/clothing/suit/ms13/vest/raider
+	name = "lightly armored jacket"
+	desc = "A jacket with some basic armor attached to it. Better than nothing."
+	icon_state = "winterjacketraider"
+	inhand_icon_state = "det_suit"
+	blood_overlay_type = "armor"
+	armor = list(melee = 25, bullet = 35, laser = 10, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 20, acid = 5)
+
+/obj/item/clothing/suit/ms13/vest/raider/plated
+	name = "plate reinforced coat"
+	desc = "A nice thick coat. The torso has a bit of padding under it while it's also got some rough scrapped together metal plates to protect the shoulders and thighs."
+	icon_state = "knightlyraider"
+
+/obj/item/clothing/suit/ms13/vest/raider/kevlar
+	name = "reinforced coat"
+	desc = "A cozy coat with some leather straps tieing some metal bits to the wearer. It's got a seemingly trustworthy vest over it. Could it take a shot?"
+	icon_state = "dapperraider"
+
+/obj/item/clothing/suit/ms13/vest/raider/scrappy
+	name = "scrap reinforced coat"
+	desc = "A duster with a rather thick vest under it. This just SCREAMS authority. Could probably stop a few bullets."
+	icon_state = "veteranraider"
+
 /obj/item/clothing/suit/armor/ms13/vest/vault
 	name = "vault security vest"
 	desc = "A thick padded vest worn by vault security officers. Makes you want to yell, 'Hit me, I can hardly feel it!'"
@@ -172,12 +211,6 @@
 	inhand_icon_state = "enclave_armor"
 	armor = list("melee" = 50, "bullet" = 40, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 
-/obj/item/clothing/suit/armor/ms13/combat/black/brotherhood
-	name = "brotherhood combat armor"
-	desc = "Armor made personally by and for the Brotherhood of Steel. Specialized for protecting against laser and energy weapons."
-	icon_state = "brotherhood_armor"
-	inhand_icon_state = "brotherhood_armor"
-
 /obj/item/clothing/suit/armor/ms13/eliteriot
 	name = "elite riot gear"
 	desc = "A highly specialized and advanced suit of armor oringinally in use by elite riot control units before the war."
@@ -186,31 +219,31 @@
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 
 /obj/item/clothing/suit/armor/ms13/ncr
-	name = "NCR infantry vest"
+	name = "\improper NCR infantry vest"
 	desc = "A standard issue NCR infantry vest specialized for arctic environments."
-	icon_state = "ncr_infantry_vest_w"
-	inhand_icon_state = "ncr_infantry_vest_w"
+	icon_state = "ncr_infantry_vest"
+	inhand_icon_state = "ncr_infantry_vest"
 	armor = list(melee = 35, bullet = 35, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/suit/armor/ms13/ncr/reinforced
-	name = "NCR reinforced infantry vest"
+	name = "\improper NCR reinforced infantry vest"
 	desc = "An NCR infantry vest with extra protective reinforcements."
-	icon_state = "ncr_reinforced_vest_w"
-	inhand_icon_state = "ncr_reinforced_vest_w"
+	icon_state = "ncr_reinforced_vest"
+	inhand_icon_state = "ncr_reinforced_vest"
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /obj/item/clothing/suit/armor/ms13/ncr/mantle
-	name = "NCR mantle vest"
+	name = "\improper NCR mantle vest"
 	desc = "An NCR vest with a mantle on the shoulder, normally indicating some form of authority or command position."
-	icon_state = "ncr_standard_mantle_w"
-	inhand_icon_state = "ncr_standard_mantle_w"
+	icon_state = "ncr_standard_mantle"
+	inhand_icon_state = "ncr_standard_mantle"
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /obj/item/clothing/suit/armor/ms13/ncr/mantle/reinforced
-	name = "NCR reinforced mantle vest"
+	name = "\improper NCR reinforced mantle vest"
 	desc = "An NCR mantle vest with additional protective reinforcements."
-	icon_state = "ncr_reinforced_mantle_w"
-	inhand_icon_state = "ncr_reinforced_mantle_w"
+	icon_state = "ncr_reinforced_mantle"
+	inhand_icon_state = "ncr_reinforced_mantle"
 	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 30, "acid" = 25)
 
 /obj/item/clothing/suit/armor/ms13/legion
@@ -275,22 +308,26 @@
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 30, "energy" = 30, "bomb" = 45, "bio" = 30, "rad" = 30, "fire" = 50, "acid" = 30)
 
 /obj/item/clothing/suit/armor/ms13/scribe
-	name = "brotherhood scribe robe"
-	desc = "A red cloth robe worn by Brotherhood of Steel Scribes."
+	name = "scribe's robe"
+	desc = "A finely made, comfortable cloth robe worn by Brotherhood scribes."
 	icon_state = "scribe"
 	inhand_icon_state = "scribe"
 	armor = list(melee = 20, bullet = 15, laser = 10, energy = 10, bomb = 10, bio = 15, rad = 15, fire = 15, acid = 15)
 
 /obj/item/clothing/suit/armor/ms13/scribe/head
-	name = "brotherhood head scribe robe"
-	desc = "A red cloth robe with gold trimmings typically worn by Brotherhood of Steel Head Scribes."
-	icon_state = "headscribe"
-	inhand_icon_state = "headscribe"
+	name = "head scribe's robe"
+	desc = "A finely made, comfortable cloth robe worn by Brotherhood scribes. This one is navy blue, denoting that it's for a head scribe."
+	icon_state = "head_scribe"
+	inhand_icon_state = "head_scribe"
 	armor = list(melee = 25, bullet = 20, laser = 20, energy = 20, bomb = 20, bio = 20, rad = 20, fire = 20, acid = 20)
 
-/obj/item/clothing/suit/armor/ms13/recon
-	name = "brotherhood recon armor"
-	desc = "A reinforced and armored jumpsuit typically given to Brotherhood Initiates."
-	icon_state = "recon"
-	inhand_icon_state = "recon"
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 20, "energy" = 20, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
+/obj/item/clothing/suit/armor/ms13/head_paladin
+	name = "head paladin's battlecoat"
+	desc = "A masterwork of Brotherhood tailoring, featuring remarkable reinforcement and armoring while not compromising on style or weight."
+	icon_state = "battlecoat"
+	inhand_icon_state = "battlecoat"
+
+/obj/item/clothing/suit/armor/ms13/combat/bos
+	name = "\improper BoS combat armor"
+	desc = "A custom built suit of combat armor, designed to hold up to the rigors of the wasteland by the Brotherhood."
+	icon_state = "bos_combat"

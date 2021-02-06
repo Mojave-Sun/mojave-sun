@@ -42,3 +42,15 @@
 	desc = "A pair of leather gloves. They've seen better days but they'll keep your hands protected."
 	icon_state = "leather"
 	inhand_icon_state = "bgloves"
+
+/obj/item/clothing/gloves/ms13/bos
+	name = "\improper BoS combat gloves"
+	desc = "A pair of hardwearing combat gloves, issued to Brotherhood soldiers."
+	icon_state = "bos_gloves"
+	inhand_icon_state = "bos_gloves"
+
+/obj/item/clothing/gloves/ms13/ncr
+	name = "\improper NCR gloves"
+	desc = "A pair of standard issue NCR gloves, the palm of it offers great grip."
+	icon_state = "ncr_standard_gloves"
+	inhand_icon_state = "ncr_standard_gloves"

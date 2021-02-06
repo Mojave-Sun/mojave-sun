@@ -44,33 +44,49 @@
 
 
 	uniform = pick(
-		/obj/item/clothing/under/ms13/wasteland/petrochico,\
-		/obj/item/clothing/under/ms13/wasteland/roving,\
-		/obj/item/clothing/under/ms13/wasteland/mechanic,\
+		/obj/item/clothing/under/ms13/wasteland/caravanpants,\
+		/obj/item/clothing/under/ms13/wasteland/pants,\
+		/obj/item/clothing/under/ms13/wasteland/ghoulpants,\
+		/obj/item/clothing/under/ms13/wasteland/warboypants,\
+		/obj/item/clothing/under/ms13/wasteland/rag,\
+		/obj/item/clothing/under/ms13/wasteland/worn,\
 		/obj/item/clothing/under/ms13/wasteland/doctor,\
-		/obj/item/clothing/under/ms13/wasteland/combat,\
+		/obj/item/clothing/under/ms13/wasteland/cowboy,\
+		/obj/item/clothing/under/ms13/wasteland/cowboy/grey,\
+		/obj/item/clothing/under/ms13/wasteland/cowboy/tan,\
+		/obj/item/clothing/under/ms13/wasteland/manager,\
+		/obj/item/clothing/under/ms13/wasteland/followers,\
+		/obj/item/clothing/under/ms13/wasteland/guard,\
+		/obj/item/clothing/under/ms13/wasteland/mammoth,\
+		/obj/item/clothing/under/ms13/wasteland/wanderer,\
+		/obj/item/clothing/under/ms13/wasteland/rancher,\
+		/obj/item/clothing/under/ms13/wasteland/vestslacks,\
+		/obj/item/clothing/under/ms13/wasteland/merchant,\
+		/obj/item/clothing/under/ms13/wasteland/ranger,\
 		/obj/item/clothing/under/ms13/wasteland/merca,\
-		/obj/item/clothing/under/ms13/wasteland/brownvest,\
-        /obj/item/clothing/under/ms13/wasteland/stripeblue,\
-        /obj/item/clothing/under/ms13/wasteland/stripered,\
-        /obj/item/clothing/under/ms13/wasteland/checkeredgreen,\
-        /obj/item/clothing/under/ms13/wasteland/checkeredblue,\
-        /obj/item/clothing/under/ms13/wasteland/plaid_r,\
-        /obj/item/clothing/under/ms13/wasteland/plaid_g,\
-        /obj/item/clothing/under/ms13/wasteland/plaid_b)
-	suit = pick(
-        /obj/item/clothing/suit/ms13/vest/cowboy,\
-		/obj/item/clothing/suit/ms13/vest/denim,\
-        /obj/item/clothing/suit/ms13/vest/grey,\
-        /obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat,\
-		/obj/item/clothing/suit/ms13/vest/puffer,\
-        /obj/item/clothing/suit/ms13/ljacket/bomber,\
-        /obj/item/clothing/suit/armor/ms13/kit/light,\
-        /obj/item/clothing/suit/ms13/ljacket/biker,\
-		/obj/item/clothing/suit/ms13/trench,\
-		/obj/item/clothing/suit/ms13/trench/dapper,\
-		/obj/item/clothing/suit/ms13/ljacket/veteran,\
-        /obj/item/clothing/suit/armor/ms13/leatherarmor/light)
+		/obj/item/clothing/under/ms13/wasteland/caravaneer,\
+		/obj/item/clothing/under/ms13/wasteland/machinist,\
+		/obj/item/clothing/under/ms13/wasteland/lumberjack,\
+		/obj/item/clothing/under/ms13/wasteland/mercc,\
+		/obj/item/clothing/under/ms13/wasteland/roving,\
+		/obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgrey,\
+		/obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgreen,\
+		/obj/item/clothing/under/ms13/wasteland/prewar/relaxedwear,\
+		/obj/item/clothing/under/ms13/wasteland/prewar/spring)
+	if(prob(50))
+		suit = pick(
+			/obj/item/clothing/suit/ms13/vest/cowboy,\
+			/obj/item/clothing/suit/ms13/vest/denim,\
+			/obj/item/clothing/suit/ms13/vest/grey,\
+			/obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat,\
+			/obj/item/clothing/suit/ms13/vest/puffer,\
+			/obj/item/clothing/suit/ms13/ljacket/bomber,\
+			/obj/item/clothing/suit/armor/ms13/kit/light,\
+			/obj/item/clothing/suit/ms13/ljacket/biker,\
+			/obj/item/clothing/suit/ms13/trench,\
+			/obj/item/clothing/suit/ms13/trench/dapper,\
+			/obj/item/clothing/suit/ms13/ljacket/veteran,\
+			/obj/item/clothing/suit/armor/ms13/leatherarmor/light)
 	r_hand = pick(
 		/obj/item/claymore/ms13/machete/pipe,\
 		/obj/item/claymore/ms13/machete/pipe/tireiron)
