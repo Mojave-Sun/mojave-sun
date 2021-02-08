@@ -277,7 +277,7 @@
 
 /obj/item/clothing/suit/ms13/regal
 	name = "regal oversuit"
-	desc = "A marvellous oversuit. Not something you'd often see in the wasteland, with the finest of seam work. Whoever made this is truly a treasure. In the collar you see an extremely faded sticker labled '50$'"
+	desc = "A marvellous oversuit. Not something you'd often see in the wasteland, with the finest of seam work. Whoever made this is truly a treasure. In the collar you see an extremely faded sticker labled '$50'"
 	icon_state = "regal"
 	inhand_icon_state = "regal"
 
