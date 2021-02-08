@@ -50,6 +50,19 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+/obj/item/clothing/head/helmet/ms13/deputycap
+	name = "deputy's cap"
+	desc = "A formal refurbished pre-war cap. It's got a faded logo in the inner rim."
+	icon_state = "deputycap"
+	inhand_icon_state = "deputycap"
+
+/obj/item/clothing/head/helmet/ms13/sheriffhat
+	name = "sheriff's hat"
+	desc = "A wide brimmed sheriff hat. There's better smelling things in the wasteland, perhaps you could give it a wash some time. Upon further examination, you can see there is a metal rim inside of it with some rather thick leather in the dome. "
+	icon_state = "sheriffhat"
+	inhand_icon_state = "sheriffhat"
+	armor = list(melee = 20, bullet = 15, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 10)
+
 /obj/item/clothing/head/helmet/ms13/wastehound
 	name = "wastehound raider helmet"
 	desc = "Raider helmet with a bit of kevlar padding. Good for stopping bullets, but not much else."
@@ -142,9 +155,9 @@
 	icon_state = "blackcowboy"
 	inhand_icon_state = "blackcowboy"
 
-/obj/item/clothing/head/helmet/ms13/cowboy/mayor
-	name = "mayor's hat"
-	desc = "A fancy hat, typically worn by mayors and other corrupt politicians."
+/obj/item/clothing/head/helmet/ms13/cowboy/gambler
+	name = "gambler's hat"
+	desc = "A fancy hat, allegedly worn by true high rollers. Not that you'd personally know."
 	icon_state = "gambler"
 	inhand_icon_state = "gambler"
 
@@ -197,12 +210,11 @@
 	icon_state = "deputy"
 	inhand_icon_state = "deputy"
 
-/obj/item/clothing/head/helmet/ms13/cowboy/sheriff
-	name = "mammoth sheriff's hat"
+/obj/item/clothing/head/helmet/ms13/cowboy/ranger
+	name = "park ranger hat"
 	desc = "An old park ranger hat heavily reinforced and belonging to the sheriff of the town of Mammoth."
-	icon_state = "sheriff"
-	inhand_icon_state = "sheriff"
-	armor = list(melee = 50, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 25, acid = 10)
+	icon_state = "parkranger"
+	inhand_icon_state = "det_hat"
 
 /obj/item/clothing/head/helmet/ms13/cowboy/padded/black
 	name = "padded black cowboy hat"
