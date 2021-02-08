@@ -26,3 +26,4 @@
 		if(seed.icon_harvest) // mushrooms have no grown sprites, same for items with no product
 			if(!(seed.icon_harvest in states))
 				Fail("[seed.name] ([seed.type]) lacks the [seed.icon_harvest] icon!")
+*/
