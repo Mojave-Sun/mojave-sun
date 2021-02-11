@@ -36,6 +36,7 @@
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 80, BOMB = 80, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
 	actions_types = null //No helmet toggle, sorry dude
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/power_armor
+	var/original_pilot_footstep //Footsteps that the equipping pilot used to have, so we can replace the component's footsteps with a mecha move
 
 /obj/item/clothing/suit/space/hardsuit/power_armor/Initialize()
 	. = ..()
@@ -46,20 +47,17 @@
 	. = ..()
 	ADD_TRAIT(user, TRAIT_FORCED_STANDING, "power_armor")
 	if(slot == ITEM_SLOT_OCLOTHING)
-		var/mob/living/carbon/human/guy = user
-		var/matrix/M = matrix(guy.transform)
-		M.Translate(0,6)
-		guy.transform = M
-		//guy.dna.species.offset_features = list(OFFSET_UNIFORM = list(0,-6), OFFSET_ID = list(0,0), OFFSET_GLOVES = list(0,0), OFFSET_GLASSES = list(0,0), OFFSET_EARS = list(0,0), OFFSET_SHOES = list(0,0), OFFSET_S_STORE = list(0,0), OFFSET_FACEMASK = list(0,0), OFFSET_HEAD = list(0,3), OFFSET_FACE = list(0,0), OFFSET_BELT = list(0,3), OFFSET_BACK = list(0,0), OFFSET_SUIT = list(0,-6), OFFSET_NECK = list(0,0))
-		guy.regenerate_icons()
+		var/datum/component/footstep/C = user?.GetComponent(/datum/component/footstep)
+		if(C)
+			original_pilot_footstep = C.footstep_sounds //Yes, this means light_step quirk will somewhat silence power armor, go figure
+			C.footstep_sounds = 'sound/mecha/mechstep.ogg'
 
 /obj/item/clothing/suit/space/hardsuit/power_armor/dropped(mob/user)
 	. = ..()
 	REMOVE_TRAIT(user, TRAIT_FORCED_STANDING, "power_armor")
-	var/mob/living/carbon/human/guy = user
-	//guy.dna.species.offset_features = initial(guy.dna.species.offset_features)
-	guy.regenerate_icons()
-	guy.transform = initial(guy.transform)
+		var/datum/component/footstep/C = user?.GetComponent(/datum/component/footstep)
+		if(C)
+			C.footstep_sounds = original_pilot_footstep
 
 //No helmet toggles for now when helmet is up
 /obj/item/clothing/suit/space/hardsuit/power_armor/ToggleHelmet()
