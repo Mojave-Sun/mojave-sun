@@ -54,3 +54,31 @@
 	desc = "A pair of standard issue NCR gloves, the palm of it offers great grip."
 	icon_state = "ncr_standard_gloves"
 	inhand_icon_state = "ncr_standard_gloves"
+
+// Stealthboy
+
+/obj/item/clothing/gloves/ms13/stealthboy/proc/toggle(mob/user)
+	if(!ishuman(user))
+		return
+	if(!COOLDOWN_FINISHED(src, stealthboy_cooldown))
+		return
+	playsound(get_turf(src), 'sound/effects/pop.ogg', 25, 1, 3)
+	stealthboy_on = !stealthboy_on
+	if(stealthboy_on)
+		user.alpha = 25
+		to_chat(user, "<span class='notice'>You activate the [src].</span>")
+		addtimer(CALLBACK(src, .proc/disrupt, user), 20 SECONDS)
+		user.add_filter("stealthboy_ripple", 2, list("type" = "ripple", "flags" = WAVE_BOUNDED, "radius" = 0, "size" = 2))
+		var/filter = user.get_filter("stealthboy_ripple")
+		animate(filter, radius = 32, time = 15, size = 0, loop = 1)
+	else
+		user.alpha = initial(user.alpha)
+		to_chat(user, "<span class='notice'>You deactivate the [src].</span>")
+		COOLDOWN_START(src, stealthboy_cooldown, 180 SECONDS)
+
+/obj/item/clothing/gloves/ms13/stealthboy/proc/disrupt(mob/user)
+	if(stealthboy_on)
+		user.alpha = initial(user.alpha)
+		stealthboy_on = FALSE
+	COOLDOWN_START(src, stealthboy_cooldown, 180 SECONDS)
+	to_chat(user, "<span class='notice'>[src] deactivates.</span>")
