@@ -7,10 +7,10 @@
 /datum/outfit/job/ms13/ncr
 	name = "NCRDatums"
 	jobtype = /datum/job/ms13/ncr/
-	back = /obj/item/storage/backpack/explorer
-	shoes = /obj/item/clothing/shoes/ms13/military/ncr/winter
-	uniform = /obj/item/clothing/under/ms13/ncr/fatigues/winter
-	gloves = /obj/item/clothing/gloves/fingerless
+	back = /obj/item/storage/ms13/ncr
+	shoes = /obj/item/clothing/shoes/ms13/military/ncr
+	uniform = /obj/item/clothing/under/ms13/ncr/fatigues
+	gloves = /obj/item/clothing/gloves/ms13/ncr
 
 /datum/outfit/job/ms13/ncr/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -44,6 +44,13 @@
 	armor = list("melee" = 10, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 20)
 	flags_inv = HIDEFACE
 
+/obj/item/clothing/mask/ms13/ncr
+	name = "\improper NCR cowl"
+	desc = "A universal NCR cowl. Suitable for any region for an assortment of purposes. Great to keep weak shrapnel away from your face."
+	icon_state = "ncr_cowl"
+	inhand_icon_state = "ncr_standard_gloves"
+	flags_inv = HIDEFACE
+
 /obj/item/clothing/mask/ms13/bos
 	name = "\improper BoS hood"
 	desc = "A heavy hood originally designed to wear under power armor."

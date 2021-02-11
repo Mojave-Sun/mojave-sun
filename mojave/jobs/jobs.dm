@@ -40,6 +40,7 @@ GLOBAL_LIST_INIT(bos_positions, list(
 GLOBAL_LIST_INIT(raiders_positions, list(
 	"Raider",
 	"Raider Enforcer",
+	"Raider Sawbone",
 	"Raider Boss"))
 
 GLOBAL_LIST_INIT(legion_positions, list(

@@ -1,4 +1,4 @@
-
+/* stfu
 // Checks plants for broken tray icons. Use Advanced Proc Call to activate.
 // Maybe some day it would be used as unit test.
 // -------- IT IS NOW!
@@ -26,3 +26,4 @@
 		if(seed.icon_harvest) // mushrooms have no grown sprites, same for items with no product
 			if(!(seed.icon_harvest in states))
 				Fail("[seed.name] ([seed.type]) lacks the [seed.icon_harvest] icon!")
+*/

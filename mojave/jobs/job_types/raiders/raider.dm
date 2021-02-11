@@ -1,9 +1,9 @@
 /datum/job/ms13/raiders/raider
 	title = "Raider"
-	total_positions = 6
-	spawn_positions = 6
-	supervisors = ""
-	description = ""
+	total_positions = 10
+	spawn_positions = 10
+	supervisors = "Enforcer, and the Boss"
+	description = "Follow the Boss' orders and listen to the Enforcer. Do whatever he says with questionable proficiency."
 	forbid = ""
 	enforce = ""
 
@@ -15,7 +15,26 @@
 	name = "_Raider"
 	jobtype = /datum/job/ms13/raiders/raider
 
-	head = /obj/item/clothing/head/collectable/petehat
+	id = 		/obj/item/card/id/ms13/raider
+	shoes = 	/obj/item/clothing/shoes/ms13/military/diesel
 
 /datum/outfit/job/ms13/raiders/raider/pre_equip(mob/living/carbon/human/H)
 	..()
+
+	head = pick(/obj/item/clothing/head/helmet/ms13/military/raider/ushanka,\
+		/obj/item/clothing/head/helmet/ms13/military/raider)
+
+	uniform = pick(
+		/obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgrey,\
+		/obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgreen,\
+		/obj/item/clothing/under/ms13/wasteland/peasant)
+
+	suit = pick(
+		/obj/item/clothing/suit/ms13/vest/raider/plated,\
+		/obj/item/clothing/suit/ms13/vest/raider/kevlar,\
+		/obj/item/clothing/suit/ms13/vest/raider/scrappy,\
+		/obj/item/clothing/suit/ms13/vest/raider)
+
+	back = pick(
+		/obj/item/storage/backpack/satchel/leather,\
+		/obj/item/storage/backpack)
