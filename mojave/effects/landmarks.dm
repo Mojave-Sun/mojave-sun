@@ -19,9 +19,6 @@
 /obj/effect/landmark/start/ms13/settler
 	name = "Settler"
 
-/obj/effect/landmark/start/ms13/shopkeep
-	name = "Shopkeep"
-
 /obj/effect/landmark/start/ms13/bartender
 	name = "Bartender"
 
@@ -30,6 +27,9 @@
 
 /obj/effect/landmark/start/ms13/doctor
 	name = "Doctor"
+
+/obj/effect/landmark/start/ms13/nurse
+	name = "Nurse"
 
 /obj/effect/landmark/start/ms13/deputy
 	name = "Deputy"
@@ -58,35 +58,44 @@
 /obj/effect/landmark/start/ms13/radioman
 	name = "Radioman"
 
-/obj/effect/landmark/start/ms13/corporal
-	name = "Corporal"
-
 /obj/effect/landmark/start/ms13/sergeant
 	name = "Sergeant"
+
+/obj/effect/landmark/start/ms13/engineer
+	name = "Engineer"
+
+/obj/effect/landmark/start/ms13/staffsergeant
+	name = "Staff Sergeant"
+
+/obj/effect/landmark/start/ms13/medic
+	name = "Medic"
 
 /obj/effect/landmark/start/ms13/lieutenant
 	name = "Lieutenant"
 
 /obj/effect/landmark/start/ms13/initiate
-	name = "Initiate"
+	name = "BoS Initiate"
 
 /obj/effect/landmark/start/ms13/knight
-	name = "Knight"
+	name = "BoS Knight"
 
 /obj/effect/landmark/start/ms13/scribe
-	name = "Scribe"
+	name = "BoS Scribe"
 
 /obj/effect/landmark/start/ms13/paladin
-	name = "Paladin"
+	name = "BoS Paladin"
 
 /obj/effect/landmark/start/ms13/head_paladin
-	name = "Head Paladin"
+	name = "BoS Head Paladin"
 
 /obj/effect/landmark/start/ms13/head_scribe
-	name = "Head Scribe"
+	name = "BoS Head Scribe"
 
 /obj/effect/landmark/start/ms13/raider
 	name = "Raider"
+
+/obj/effect/landmark/start/ms13/sawbone
+	name = "Sawbone"
 
 /obj/effect/landmark/start/ms13/enforcer
 	name = "Enforcer"
