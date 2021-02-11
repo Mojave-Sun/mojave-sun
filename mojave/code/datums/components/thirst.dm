@@ -59,6 +59,16 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 		modify_thirst(modify_by = min(the_parent.reagents.get_reagent_amount() * SECONDS_OF_LIFE_PER_WATER_U, SECONDS_OF_LIFE_PER_WATER_U * 5)) //NO MICRODOSING, "metabolizes" 5 units of water per 1 second for +25 thirst
 		the_parent.reagents.remove_reagent(water, 5)
 
+	//Last stage of dehydration, you're basicall going to die now
+	if(stage_of_dehydration == length(dehydration_stage_alerts))
+		the_parent.blur_eyes(1)
+		the_parent.adjustOxyLoss(3)
+		for(var/i in the_parent.internal_organs)
+			var/obj/item/organ/O = i
+			if(O.organ_flags & ORGAN_SYNTHETIC)
+				continue
+			O.applyOrganDamage(2)
+
 ///Modifies thirst by modify_by VIA = curr_thirst + modify_by, clamps value to max_thirst or 0
 /datum/component/thirst/proc/modify_thirst(modify_by = 0)
 	curr_thirst = clamp(curr_thirst + modify_by, 0, max_thirst)
