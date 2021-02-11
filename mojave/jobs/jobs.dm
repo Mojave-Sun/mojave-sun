@@ -6,10 +6,10 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 GLOBAL_LIST_INIT(town_positions, list(
 	"Town Mayor",
 	"Town Settler",
-	"Town Shopkeep",
 	"Town Farmer",
 	"Town Bartender",
 	"Town Doctor",
+	"Town Nurse",
 	"Town Deputy",
 	"Town Sheriff"))
 
@@ -24,7 +24,9 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Trooper",
 	"NCR Radioman",
 	"NCR Corporal",
+  "NCR Engineer",
 	"NCR Sergeant",
+  "NCR Medical Officer",
 	"NCR Lieutenant"))
 
 GLOBAL_LIST_INIT(bos_positions, list(
@@ -38,6 +40,7 @@ GLOBAL_LIST_INIT(bos_positions, list(
 GLOBAL_LIST_INIT(raiders_positions, list(
 	"Raider",
 	"Raider Enforcer",
+	"Raider Sawbone",
 	"Raider Boss"))
 
 GLOBAL_LIST_INIT(legion_positions, list(
