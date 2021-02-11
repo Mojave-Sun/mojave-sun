@@ -57,6 +57,25 @@
 
 // Stealthboy
 
+/obj/item/clothing/gloves/ms13/stealthboy
+	name = "stealthboy"
+	desc = "A wrist-mounted cloaking device. When activated, renders the user nearly transparent."
+	icon_state = "stealthboy_placeholder"
+	throwforce = 5.0
+	throw_speed = 1
+	throw_range = 5
+	w_class = WEIGHT_CLASS_SMALL
+	var/stealthboy_on = FALSE
+	COOLDOWN_DECLARE(stealthboy_cooldown)
+	actions_types = list(/datum/action/item_action/toggle)
+
+/obj/item/clothing/gloves/ms13/stealthboy/dropped(mob/user)
+	if(stealthboy_on)
+		disrupt(user)
+
+/obj/item/clothing/gloves/ms13/stealthboy/attack_self(mob/user)
+	toggle(user)
+
 /obj/item/clothing/gloves/ms13/stealthboy/proc/toggle(mob/user)
 	if(!ishuman(user))
 		return
