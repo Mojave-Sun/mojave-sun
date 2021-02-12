@@ -2,7 +2,7 @@
 #define ACCESS_SECURITY 1
 /// Brig cells+timers, permabrig, gulag+gulag shuttle, prisoner management console
 #define ACCESS_BRIG 2
- /// Armory, gulag teleporter, execution chamber
+/// Armory, gulag teleporter, execution chamber
 #define ACCESS_ARMORY 3
 ///Detective's office, forensics lockers, security+medical records
 #define ACCESS_FORENSICS_LOCKERS 4
@@ -10,10 +10,10 @@
 #define ACCESS_MEDICAL 5
 /// Morgue access
 #define ACCESS_MORGUE 6
-/// R&D department, R&D console, burn chamber on some maps
-#define ACCESS_TOX 7
-/// Toxins storage, burn chamber on some maps
-#define ACCESS_TOX_STORAGE 8
+/// R&D department and R&D console
+#define ACCESS_RND 7
+/// Toxins lab and burn chamber
+#define ACCESS_TOXINS 8
 /// Genetics access
 #define ACCESS_GENETICS 9
 /// Engineering area, power monitor, power flow control console
@@ -80,6 +80,10 @@
 /// Pharmacy access (Chemistry room in Medbay)
 #define ACCESS_PHARMACY 69 ///Nice.
 #define ACCESS_PSYCHOLOGY 70
+/// Toxins tank storage room access
+#define ACCESS_TOXINS_STORAGE 71
+/// Room and launching.
+#define ACCESS_AUX_BASE 72
 
 	//BEGIN CENTCOM ACCESS
 	/*Should leave plenty of room if we need to add more access levels.

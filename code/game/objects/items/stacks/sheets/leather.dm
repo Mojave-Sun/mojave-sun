@@ -2,14 +2,16 @@
 	name = "hide"
 	desc = "Something went wrong."
 	icon_state = "sheet-hide"
-	item_state = "sheet-hide"
+	inhand_icon_state = "sheet-hide"
 	novariants = TRUE
+	merge_type = /obj/item/stack/sheet/animalhide
 
 /obj/item/stack/sheet/animalhide/human
 	name = "human skin"
 	desc = "The by-product of human farming."
 	singular_name = "human skin piece"
 	novariants = FALSE
+	merge_type = /obj/item/stack/sheet/animalhide/human
 
 GLOBAL_LIST_INIT(human_recipes, list( \
 	new/datum/stack_recipe("bloated human costume", /obj/item/clothing/suit/hooded/bloated_human, 5), \
@@ -24,14 +26,15 @@ GLOBAL_LIST_INIT(human_recipes, list( \
 	desc = "A piece of skin."
 	singular_name = "skin piece"
 	novariants = FALSE
+	merge_type = /obj/item/stack/sheet/animalhide/generic
 
 /obj/item/stack/sheet/animalhide/corgi
 	name = "corgi hide"
 	desc = "The by-product of corgi farming."
 	singular_name = "corgi hide piece"
 	icon_state = "sheet-corgi"
-	item_state = "sheet-corgi"
-
+	inhand_icon_state = "sheet-corgi"
+	merge_type = /obj/item/stack/sheet/animalhide/corgi
 
 GLOBAL_LIST_INIT(gondola_recipes, list ( \
 	new/datum/stack_recipe("gondola mask", /obj/item/clothing/mask/gondola, 1), \
@@ -43,7 +46,8 @@ GLOBAL_LIST_INIT(gondola_recipes, list ( \
 	desc = "The extremely valuable product of gondola hunting."
 	singular_name = "gondola hide piece"
 	icon_state = "sheet-gondola"
-	item_state = "sheet-gondola"
+	inhand_icon_state = "sheet-gondola"
+	merge_type = /obj/item/stack/sheet/animalhide/gondola
 
 /obj/item/stack/sheet/animalhide/gondola/get_main_recipes()
 	. = ..()
@@ -62,14 +66,16 @@ GLOBAL_LIST_INIT(corgi_recipes, list ( \
 	desc = "The by-product of cat farming."
 	singular_name = "cat hide piece"
 	icon_state = "sheet-cat"
-	item_state = "sheet-cat"
+	inhand_icon_state = "sheet-cat"
+	merge_type = /obj/item/stack/sheet/animalhide/cat
 
 /obj/item/stack/sheet/animalhide/monkey
 	name = "monkey hide"
 	desc = "The by-product of monkey farming."
 	singular_name = "monkey hide piece"
 	icon_state = "sheet-monkey"
-	item_state = "sheet-monkey"
+	inhand_icon_state = "sheet-monkey"
+	merge_type = /obj/item/stack/sheet/animalhide/monkey
 
 GLOBAL_LIST_INIT(monkey_recipes, list ( \
 	new/datum/stack_recipe("monkey mask", /obj/item/clothing/mask/gas/monkeymask, 1), \
@@ -85,14 +91,16 @@ GLOBAL_LIST_INIT(monkey_recipes, list ( \
 	desc = "Sssssss..."
 	singular_name = "lizard skin piece"
 	icon_state = "sheet-lizard"
-	item_state = "sheet-lizard"
+	inhand_icon_state = "sheet-lizard"
+	merge_type = /obj/item/stack/sheet/animalhide/lizard
 
 /obj/item/stack/sheet/animalhide/xeno
 	name = "alien hide"
 	desc = "The skin of a terrible creature."
 	singular_name = "alien hide piece"
 	icon_state = "sheet-xeno"
-	item_state = "sheet-xeno"
+	inhand_icon_state = "sheet-xeno"
+	merge_type = /obj/item/stack/sheet/animalhide/xeno
 
 GLOBAL_LIST_INIT(xeno_recipes, list ( \
 	new/datum/stack_recipe("alien helmet", /obj/item/clothing/head/xenos, 1), \
@@ -111,6 +119,7 @@ GLOBAL_LIST_INIT(xeno_recipes, list ( \
 	icon = 'icons/mob/alien.dmi'
 	icon_state = "chitin"
 	novariants = TRUE
+	merge_type = /obj/item/stack/sheet/xenochitin
 
 /obj/item/xenos_claw
 	name = "alien claw"
@@ -129,16 +138,24 @@ GLOBAL_LIST_INIT(xeno_recipes, list ( \
 	desc = "This hide was stripped of its hair, but still needs washing and tanning."
 	singular_name = "hairless hide piece"
 	icon_state = "sheet-hairlesshide"
-	item_state = "sheet-hairlesshide"
+	inhand_icon_state = "sheet-hairlesshide"
+	merge_type = /obj/item/stack/sheet/hairlesshide
 
 /obj/item/stack/sheet/wethide
 	name = "wet hide"
 	desc = "This hide has been cleaned but still needs to be dried."
 	singular_name = "wet hide piece"
 	icon_state = "sheet-wetleather"
-	item_state = "sheet-wetleather"
-	var/wetness = 30 //Reduced when exposed to high temperautres
-	var/drying_threshold_temperature = 500 //Kelvin to start drying
+	inhand_icon_state = "sheet-wetleather"
+	merge_type = /obj/item/stack/sheet/wethide
+	/// Reduced when exposed to high temperatures
+	var/wetness = 30
+	/// Kelvin to start drying
+	var/drying_threshold_temperature = 500
+
+/obj/item/stack/sheet/wethide/Initialize(mapload, new_amount, merge)
+	. = ..()
+	AddElement(/datum/element/dryable, /obj/item/stack/sheet/leather)
 
 /*
  * Leather SHeet
@@ -148,7 +165,8 @@ GLOBAL_LIST_INIT(xeno_recipes, list ( \
 	desc = "The by-product of mob grinding."
 	singular_name = "leather piece"
 	icon_state = "sheet-leather"
-	item_state = "sheet-leather"
+	inhand_icon_state = "sheet-leather"
+	merge_type = /obj/item/stack/sheet/leather
 
 GLOBAL_LIST_INIT(leather_recipes, list ( \
 	new/datum/stack_recipe("wallet", /obj/item/storage/wallet, 1), \
@@ -176,7 +194,13 @@ GLOBAL_LIST_INIT(leather_recipes, list ( \
 	singular_name = "watcher sinew"
 	icon_state = "sinew"
 	novariants = TRUE
+	merge_type = /obj/item/stack/sheet/sinew
 
+/obj/item/stack/sheet/sinew/wolf
+	name = "wolf sinew"
+	desc = "Long stringy filaments which came from the insides of a wolf."
+	singular_name = "wolf sinew"
+	merge_type = /obj/item/stack/sheet/sinew/wolf
 
 GLOBAL_LIST_INIT(sinew_recipes, list ( \
 	new/datum/stack_recipe("sinew restraints", /obj/item/restraints/handcuffs/cable/sinew, 1), \
@@ -186,9 +210,8 @@ GLOBAL_LIST_INIT(sinew_recipes, list ( \
 	. = ..()
 	. += GLOB.sinew_recipes
 
-		/*
- * Plates
- 		*/
+
+/*Plates*/
 /obj/item/stack/sheet/animalhide/goliath_hide
 	name = "goliath hide plates"
 	desc = "Pieces of a goliath's rocky hide, these might be able to make your suit a bit more durable to attack from the local fauna."
@@ -200,7 +223,14 @@ GLOBAL_LIST_INIT(sinew_recipes, list ( \
 	item_flags = NOBLUDGEON
 	w_class = WEIGHT_CLASS_NORMAL
 	layer = MOB_LAYER
+	merge_type = /obj/item/stack/sheet/animalhide/goliath_hide
 
+/obj/item/stack/sheet/animalhide/goliath_hide/polar_bear_hide
+	name = "polar bear hides"
+	desc = "Pieces of a polar bear's fur, these might be able to make your suit a bit more durable to attack from the local fauna."
+	icon_state = "polar_bear_hide"
+	singular_name = "polar bear hide"
+	merge_type = /obj/item/stack/sheet/animalhide/goliath_hide/polar_bear_hide
 
 /obj/item/stack/sheet/animalhide/ashdrake
 	name = "ash drake hide"
@@ -213,7 +243,7 @@ GLOBAL_LIST_INIT(sinew_recipes, list ( \
 	item_flags = NOBLUDGEON
 	w_class = WEIGHT_CLASS_NORMAL
 	layer = MOB_LAYER
-
+	merge_type = /obj/item/stack/sheet/animalhide/ashdrake
 
 //Step one - dehairing.
 

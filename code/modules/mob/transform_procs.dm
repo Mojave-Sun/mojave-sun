@@ -1,6 +1,6 @@
 #define TRANSFORMATION_DURATION 22
 
-/mob/living/carbon/proc/monkeyize(tr_flags = (TR_KEEPITEMS | TR_KEEPVIRUS | TR_KEEPSTUNS | TR_KEEPREAGENTS | TR_DEFAULTMSG))
+/mob/living/carbon/proc/monkeyize(tr_flags = (TR_KEEPITEMS | TR_KEEPVIRUS | TR_KEEPSTUNS | TR_KEEPREAGENTS | TR_DEFAULTMSG | TR_KEEPSTAMINADAMAGE))
 	if (notransform || transformation_timer)
 		return
 
@@ -25,7 +25,6 @@
 	transformation_timer = null
 
 	var/list/missing_bodyparts_zones = get_missing_limbs()
-
 	var/list/stored_implants = list()
 
 	if (tr_flags & TR_KEEPIMPLANTS)
@@ -60,8 +59,6 @@
 
 	if(suiciding)
 		O.set_suicide(suiciding)
-	if(hellbound)
-		O.hellbound = hellbound
 	O.a_intent = INTENT_HARM
 
 	//keep viruses?
@@ -124,7 +121,7 @@
 			for(var/X in O.internal_organs)
 				var/obj/item/organ/G = X
 				if(BP.body_zone == check_zone(G.zone))
-					if(mind && mind.has_antag_datum(/datum/antagonist/changeling) && istype(G, /obj/item/organ/brain))
+					if(mind?.has_antag_datum(/datum/antagonist/changeling) && istype(G, /obj/item/organ/brain))
 						continue //so headless changelings don't lose their brain when transforming
 					qdel(G) //we lose the organs in the missing limbs
 		qdel(BP)
@@ -136,7 +133,7 @@
 		O.Immobilize(AmountImmobilized(), ignore_canstun = TRUE)
 		O.Paralyze(AmountParalyzed(), ignore_canstun = TRUE)
 		O.Unconscious(AmountUnconscious(), ignore_canstun = TRUE)
-		O.Sleeping(AmountSleeping(), ignore_canstun = TRUE)
+		O.Sleeping(AmountSleeping())
 
 	//transfer reagents
 	if(tr_flags & TR_KEEPREAGENTS)
@@ -150,7 +147,9 @@
 			var/datum/action/changeling/humanform/hf = new
 			changeling.purchasedpowers += hf
 			changeling.regain_powers()
-
+	//transfer stamina damage
+	if(tr_flags & TR_KEEPSTAMINADAMAGE)
+		O.adjustStaminaLoss(getStaminaLoss())
 
 	if (tr_flags & TR_DEFAULTMSG)
 		to_chat(O, "<B>You are now a monkey.</B>")
@@ -237,13 +236,11 @@
 
 	if(suiciding)
 		O.set_suicide(suiciding)
-	if(hellbound)
-		O.hellbound = hellbound
 
 	//keep viruses?
 	if (tr_flags & TR_KEEPVIRUS)
 		O.diseases = diseases
-		diseases = list()
+		diseases = null	//null the old diseases, bye bye!
 		for(var/thing in O.diseases)
 			var/datum/disease/D = thing
 			D.affected_mob = O
@@ -301,7 +298,7 @@
 			for(var/X in O.internal_organs)
 				var/obj/item/organ/G = X
 				if(BP.body_zone == check_zone(G.zone))
-					if(mind && mind.has_antag_datum(/datum/antagonist/changeling) && istype(G, /obj/item/organ/brain))
+					if(mind?.has_antag_datum(/datum/antagonist/changeling) && istype(G, /obj/item/organ/brain))
 						continue //so headless changelings don't lose their brain when transforming
 					qdel(G) //we lose the organs in the missing limbs
 		qdel(BP)
@@ -313,7 +310,7 @@
 		O.Immobilize(AmountImmobilized(), ignore_canstun = TRUE)
 		O.Paralyze(AmountParalyzed(), ignore_canstun = TRUE)
 		O.Unconscious(AmountUnconscious(), ignore_canstun = TRUE)
-		O.Sleeping(AmountSleeping(), ignore_canstun = TRUE)
+		O.Sleeping(AmountSleeping())
 
 	//transfer reagents
 	if(tr_flags & TR_KEEPREAGENTS)
@@ -418,7 +415,7 @@
 	if(client)
 		R.updatename(client)
 
-	if(mind)		//TODO
+	if(mind)		//TODO //TODO WHAT
 		if(!transfer_after)
 			mind.active = FALSE
 		mind.transfer_to(R)
@@ -444,7 +441,8 @@
 	if (notransform)
 		return
 	notransform = TRUE
-	mobility_flags = NONE
+	ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, TRAIT_GENERIC)
 	for(var/obj/item/W in src)
 		dropItemToGround(W)
 	regenerate_icons()
@@ -475,7 +473,8 @@
 	if (notransform)
 		return
 	notransform = TRUE
-	mobility_flags = NONE
+	ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, TRAIT_GENERIC)
 	for(var/obj/item/W in src)
 		dropItemToGround(W)
 	regenerate_icons()
@@ -612,40 +611,40 @@
 /* Certain mob types have problems and should not be allowed to be controlled by players.
  *
  * This proc is here to force coders to manually place their mob in this list, hopefully tested.
- * This also gives a place to explain -why- players shouldnt be turn into certain mobs and hopefully someone can fix them.
+ * This also gives a place to explain -why- players shouldn't be turn into certain mobs and hopefully someone can fix them.
  */
 /mob/proc/safe_animal(MP)
 
 //Bad mobs! - Remember to add a comment explaining what's wrong with the mob
 	if(!MP)
-		return 0	//Sanity, this should never happen.
+		return FALSE	//Sanity, this should never happen.
 
 	if(ispath(MP, /mob/living/simple_animal/hostile/construct))
-		return 0 //Verbs do not appear for players.
+		return FALSE //Verbs do not appear for players.
 
 //Good mobs!
 	if(ispath(MP, /mob/living/simple_animal/pet/cat))
-		return 1
+		return TRUE
 	if(ispath(MP, /mob/living/simple_animal/pet/dog/corgi))
-		return 1
+		return TRUE
 	if(ispath(MP, /mob/living/simple_animal/crab))
-		return 1
+		return TRUE
 	if(ispath(MP, /mob/living/simple_animal/hostile/carp))
-		return 1
+		return TRUE
 	if(ispath(MP, /mob/living/simple_animal/hostile/mushroom))
-		return 1
+		return TRUE
 	if(ispath(MP, /mob/living/simple_animal/shade))
-		return 1
+		return TRUE
 	if(ispath(MP, /mob/living/simple_animal/hostile/killertomato))
-		return 1
+		return TRUE
 	if(ispath(MP, /mob/living/simple_animal/mouse))
-		return 1 //It is impossible to pull up the player panel for mice (Fixed! - Nodrak)
+		return TRUE
 	if(ispath(MP, /mob/living/simple_animal/hostile/bear))
-		return 1 //Bears will auto-attack mobs, even if they're player controlled (Fixed! - Nodrak)
+		return TRUE
 	if(ispath(MP, /mob/living/simple_animal/parrot))
-		return 1 //Parrots are no longer unfinished! -Nodrak
+		return TRUE //Parrots are no longer unfinished! -Nodrak
 
 	//Not in here? Must be untested!
-	return 0
+	return FALSE
 
 #undef TRANSFORMATION_DURATION

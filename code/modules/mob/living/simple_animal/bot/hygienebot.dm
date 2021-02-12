@@ -2,8 +2,8 @@
 /mob/living/simple_animal/bot/hygienebot
 	name = "\improper Hygienebot"
 	desc = "A flying cleaning robot, he'll chase down people who can't shower properly!"
-	icon = 'icons/obj/watercloset.dmi'
-	icon_state = "drone"
+	icon = 'icons/mob/aibots.dmi'
+	icon_state = "hygienebot"
 	density = FALSE
 	anchored = FALSE
 	health = 100
@@ -20,14 +20,21 @@
 	allow_pai = FALSE
 	layer = ABOVE_MOB_LAYER
 
+	///The human target the bot is trying to wash.
 	var/mob/living/carbon/human/target
+	///The mob's current speed, which varies based on how long the bot chases it's target.
 	var/currentspeed = 5
+	///Is the bot currently washing it's target/everything else that crosses it?
 	var/washing = FALSE
+	///Have the target evaded the bot for long enough that it will swear at it like kirk did to kahn?
 	var/mad = FALSE
+	///The last time that the previous/current target was found.
 	var/last_found
+	///Name of the previous target the bot was pursuing.
 	var/oldtarget_name
-
+	///Visual overlay of the bot spraying water.
 	var/mutable_appearance/water_overlay
+	///Visual overlay of the bot commiting warcrimes.
 	var/mutable_appearance/fire_overlay
 
 /mob/living/simple_animal/bot/hygienebot/Initialize()
@@ -59,20 +66,20 @@
 /mob/living/simple_animal/bot/hygienebot/update_icon_state()
 	. = ..()
 	if(on)
-		icon_state = "drone-on"
+		icon_state = "hygienebot-on"
 	else
-		icon_state = "drone"
+		icon_state = "hygienebot"
 
 
 /mob/living/simple_animal/bot/hygienebot/update_overlays()
 	. = ..()
 	if(on)
-		var/mutable_appearance/fire_overlay = mutable_appearance(icon,"flame")
+		var/mutable_appearance/fire_overlay = mutable_appearance(icon, "hygienebot-flame")
 		. +=fire_overlay
 
 
 	if(washing)
-		var/mutable_appearance/water_overlay = mutable_appearance(icon, emagged ? "dronefire" : "dronewater")
+		var/mutable_appearance/water_overlay = mutable_appearance(icon, emagged ? "hygienebot-fire" : "hygienebot-water")
 		. += water_overlay
 
 
@@ -86,18 +93,6 @@
 	oldtarget_name = null
 	walk_to(src,0)
 	last_found = world.time
-
-
-/mob/living/simple_animal/bot/hygienebot/Crossed(atom/movable/AM)
-	. = ..()
-	if(washing)
-		do_wash(AM)
-
-/mob/living/simple_animal/bot/hygienebot/Moved()
-	. = ..()
-	if(washing && isturf(loc) && !emagged)
-		var/turf/open/OT = loc
-		OT.MakeSlippery(TURF_WET_WATER, min_wet_time = 10 SECONDS, wet_time_to_add = 5 SECONDS)
 
 /mob/living/simple_animal/bot/hygienebot/handle_automated_action()
 	if(!..())
@@ -119,36 +114,37 @@
 				mode = BOT_START_PATROL	// switch to patrol mode
 
 		if(BOT_HUNT)		// hunting for stinkman
-			// if can't reach stinkman for long enough, don't give up, try harder.
 			if(emagged) //lol fuck em up
-				currentspeed = 8
+				currentspeed = 3.5
 				start_washing()
 				mad = TRUE
 			else
 				switch(frustration)
 					if(0 to 4)
 						currentspeed = 5
-						stop_washing()
 						mad = FALSE
-					if(4 to INFINITY)
+					if(5 to INFINITY)
 						currentspeed = 2.5
-						start_washing()
 						mad = TRUE
-			if(target)
+			if(target && !check_purity(target))
 				if(target.loc == loc && isturf(target.loc)) //LADIES AND GENTLEMAN WE GOTEM PREPARE TO DUMP
 					start_washing()
 					if(mad)
-						speak("Well about fucking time you degenerate", "Fucking finally", "Thank god, you finally stopped")
+						speak("Well about fucking time you degenerate.", "Fucking finally.", "Thank god, you finally stopped.")
 						playsound(loc, 'sound/effects/hygienebot_angry.ogg', 60, 1)
 						mad = FALSE
 					mode = BOT_SHOWERSTANCE
 				else
-					var/turf/olddist = get_dist(src, target)
+					stop_washing()
+					var/olddist = get_dist(src, target)
+					if(olddist > 20 || frustration > 100) // Focus on something else
+						back_to_idle()
+						return
 					walk_to(src, target,0, currentspeed)
-					if(mad && prob(60))
+					if(mad && prob(min(frustration * 2, 60)))
 						playsound(loc, 'sound/effects/hygienebot_angry.ogg', 60, 1)
-						speak(pick("Get back here you foul smelling fucker.", "If you don't get back here right now I'm going to give you a fucking vasectomy.", "STOP RUNNING OR I WILL CUT YOUR ARTERIES!", "Just fucking let me clean you you arsehole!", "STOP. RUNNING.", "Either you stop running or I will fucking drag you out of an airlock.", "I just want to fucking clean you you troglodyte.", "If you don't come back here I'll put a green cloud around you cunt."))
-					if((get_dist(src, target)) >= (olddist))
+						speak(pick("Get back here you foul smelling fucker.", "STOP RUNNING OR I WILL CUT YOUR ARTERIES!", "Just fucking let me clean you you arsehole!", "STOP. RUNNING.", "Either you stop running or I will fucking drag you out of an airlock.", "I just want to fucking clean you you troglodyte.", "If you don't come back here I'll put a green cloud around you cunt."))
+					if((get_dist(src, target)) >= olddist)
 						frustration++
 					else
 						frustration = 0
@@ -163,7 +159,7 @@
 				return
 			if(!target)
 				last_found = world.time
-			if(target.loc != loc && !isturf(target.loc))
+			if(target.loc != loc || !isturf(target.loc))
 				back_to_hunt()
 
 		if(BOT_START_PATROL)
@@ -225,13 +221,13 @@ Status: ["<A href='?src=[REF(src)];power=[TRUE]'>[on ? "On" : "Off"]</A>"]<BR>
 Behaviour controls are [locked ? "locked" : "unlocked"]<BR>
 Maintenance panel is [open ? "opened" : "closed"]"}
 
-	if(!locked || issilicon(user) || IsAdminGhost(user))
+	if(!locked || issilicon(user) || isAdminGhostAI(user))
 		dat += {"<BR> Auto Patrol: ["<A href='?src=[REF(src)];operation=patrol'>[auto_patrol ? "On" : "Off"]</A>"]"}
 
 	return	dat.Join("")
 
 /mob/living/simple_animal/bot/hygienebot/proc/check_purity(mob/living/L)
-	if(emagged && L.stat != DEAD)
+	if((emagged == 2) && L.stat != DEAD)
 		return FALSE
 
 	for(var/X in list(ITEM_SLOT_HEAD, ITEM_SLOT_MASK, ITEM_SLOT_ICLOTHING, ITEM_SLOT_OCLOTHING, ITEM_SLOT_FEET))
@@ -243,10 +239,9 @@ Maintenance panel is [open ? "opened" : "closed"]"}
 
 /mob/living/simple_animal/bot/hygienebot/proc/do_wash(atom/A)
 	if(emagged)
-		A.fire_act()
-		return //lol pranked no cleaning besides that
+		A.fire_act()  //lol pranked no cleaning besides that
 	else
-		A.washed(src)
+		A.wash(CLEAN_WASH)
 
 
 

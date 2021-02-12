@@ -3,7 +3,7 @@
 	desc = "An experimental device that can temporarily desynchronize the user from spacetime, effectively making them disappear while it's active."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "desynchronizer"
-	item_state = "electronic"
+	inhand_icon_state = "electronic"
 	w_class = WEIGHT_CLASS_SMALL
 	item_flags = NOBLUDGEON
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
@@ -33,7 +33,7 @@
 	. += "<span class='notice'>Can be used again to interrupt the effect early. The recharge time is the same as the time spent in desync.</span>"
 
 /obj/item/desynchronizer/AltClick(mob/living/user)
-	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+	if(!user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, !iscyborg(user)))
 		return
 	var/new_duration = input(user, "Set the duration (5-300):", "Desynchronizer", duration / 10) as null|num
 	if(new_duration)

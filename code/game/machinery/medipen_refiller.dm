@@ -69,7 +69,7 @@
 	to_chat(user, "<span class='notice'>You start furiously plunging [name].</span>")
 	if(do_after(user, 30, target = src))
 		to_chat(user, "<span class='notice'>You finish plunging the [name].</span>")
-		reagents.reaction(get_turf(src), TOUCH)
+		reagents.expose(get_turf(src), TOUCH)
 		reagents.clear_reagents()
 
 /obj/machinery/medipen_refiller/wrench_act(mob/living/user, obj/item/I)
@@ -83,9 +83,9 @@
 	return TRUE
 
 /obj/machinery/medipen_refiller/screwdriver_act(mob/living/user, obj/item/I)
-    . = ..()
-    if(!.)
-        return default_deconstruction_screwdriver(user, "medipen_refiller_open", "medipen_refiller", I)
+	. = ..()
+	if(!.)
+		return default_deconstruction_screwdriver(user, "medipen_refiller_open", "medipen_refiller", I)
 
 /// refills the medipen
 /obj/machinery/medipen_refiller/proc/refill(obj/item/reagent_containers/hypospray/medipen/P, mob/user)

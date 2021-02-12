@@ -1,8 +1,8 @@
 /obj/item/assembly_holder
 	name = "Assembly"
 	icon = 'icons/obj/assemblies/new_assemblies.dmi'
-	icon_state = "holder"
-	item_state = "assembly"
+	icon_state = "assembly_holder"
+	inhand_icon_state = "assembly"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'
 	flags_1 = CONDUCT_1

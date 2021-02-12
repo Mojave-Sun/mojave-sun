@@ -13,7 +13,7 @@
 	obj_flags = UNIQUE_RENAME
 	drop_sound = 'sound/items/handling/drinkglass_drop.ogg'
 	pickup_sound =  'sound/items/handling/drinkglass_pickup.ogg'
-	custom_price = 25
+	custom_price = PAYCHECK_PRISONER
 
 /obj/item/reagent_containers/food/drinks/drinkingglass/on_reagent_change(changetype)
 	cut_overlays()
@@ -49,7 +49,7 @@
 	possible_transfer_amounts = list()
 	volume = 15
 	custom_materials = list(/datum/material/glass=100)
-	custom_price = 20
+	custom_price = PAYCHECK_ASSISTANT * 0.4
 
 /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass/on_reagent_change(changetype)
 	cut_overlays()
@@ -93,8 +93,8 @@
 	list_reagents = list(/datum/reagent/consumable/nuka_cola = 50)
 
 /obj/item/reagent_containers/food/drinks/drinkingglass/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/reagent_containers/food/snacks/egg)) //breaking eggs
-		var/obj/item/reagent_containers/food/snacks/egg/E = I
+	if(istype(I, /obj/item/food/egg)) //breaking eggs
+		var/obj/item/food/egg/E = I
 		if(reagents)
 			if(reagents.total_volume >= reagents.maximum_volume)
 				to_chat(user, "<span class='notice'>[src] is full.</span>")
@@ -111,7 +111,7 @@
 		target.visible_message("<span class='danger'>[user] splashes the contents of [src] onto [target]!</span>", \
 						"<span class='userdanger'>[user] splashes the contents of [src] onto you!</span>")
 		log_combat(user, target, "splashed", src)
-		reagents.reaction(target, TOUCH)
+		reagents.expose(target, TOUCH)
 		reagents.clear_reagents()
 		return
 	..()
@@ -124,6 +124,6 @@
 	else if(reagents.total_volume && user.a_intent == INTENT_HARM)
 		user.visible_message("<span class='danger'>[user] splashes the contents of [src] onto [target]!</span>", \
 							"<span class='notice'>You splash the contents of [src] onto [target].</span>")
-		reagents.reaction(target, TOUCH)
+		reagents.expose(target, TOUCH)
 		reagents.clear_reagents()
 		return

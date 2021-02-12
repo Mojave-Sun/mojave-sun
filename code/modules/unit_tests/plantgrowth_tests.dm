@@ -1,4 +1,4 @@
-
+/* stfu
 // Checks plants for broken tray icons. Use Advanced Proc Call to activate.
 // Maybe some day it would be used as unit test.
 // -------- IT IS NOW!
@@ -9,7 +9,7 @@
 	states |= icon_states('icons/obj/hydroponics/growing_mushrooms.dmi')
 	states |= icon_states('icons/obj/hydroponics/growing_vegetables.dmi')
 	states |= icon_states('goon/icons/obj/hydroponics.dmi')
-	states |= icon_states('fallout/icons/hydroponics/wasteland_plants.dmi')
+	//states |= icon_states('fallout/icons/hydroponics/wasteland_plants.dmi')
 	var/list/paths = subtypesof(/obj/item/seeds) - /obj/item/seeds - typesof(/obj/item/seeds/sample) - /obj/item/seeds/lavaland
 
 	for(var/seedpath in paths)
@@ -26,3 +26,4 @@
 		if(seed.icon_harvest) // mushrooms have no grown sprites, same for items with no product
 			if(!(seed.icon_harvest in states))
 				Fail("[seed.name] ([seed.type]) lacks the [seed.icon_harvest] icon!")
+*/

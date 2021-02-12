@@ -2,7 +2,7 @@
 	name = "soulstone shard"
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "soulstone"
-	item_state = "electronic"
+	inhand_icon_state = "electronic"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'
 	layer = HIGH_OBJ_LAYER
@@ -41,7 +41,7 @@
 /obj/item/soulstone/pickup(mob/living/user)
 	..()
 	if(!iscultist(user) && !iswizard(user) && !usability)
-		to_chat(user, "<span class='danger'>An overwhelming feeling of dread comes over you as you pick up the soulstone. It would be wise to be rid of this quickly.</span>")
+		to_chat(user, "<span class='danger'>An overwhelming feeling of dread comes over you as you pick up [src]. It would be wise to be rid of this quickly.</span>")
 
 /obj/item/soulstone/examine(mob/user)
 	. = ..()
@@ -75,13 +75,10 @@
 		to_chat(user, "<span class='userdanger'>Your body is wracked with debilitating pain!</span>")
 		return
 	if(spent)
-		to_chat(user, "<span class='warning'>There is no power left in the shard.</span>")
+		to_chat(user, "<span class='warning'>There is no power left in [src].</span>")
 		return
 	if(!ishuman(M))//If target is not a human.
 		return ..()
-	if((M.mind && !M.mind.hasSoul) || is_devil(M))
-		to_chat(user, "<span class='warning'>This... thing has no soul! It's filled with evil!</span>")
-		return
 	if(iscultist(M))
 		if(iscultist(user))
 			to_chat(user, "<span class='cultlarge'>\"Come now, do not capture your bretheren's soul.\"</span>")
@@ -143,7 +140,7 @@
 	if(istype(O, /obj/item/soulstone))
 		var/obj/item/soulstone/SS = O
 		if(!iscultist(user) && !iswizard(user) && !SS.purified)
-			to_chat(user, "<span class='danger'>An overwhelming feeling of dread comes over you as you attempt to place the soulstone into the shell. It would be wise to be rid of this quickly.</span>")
+			to_chat(user, "<span class='danger'>An overwhelming feeling of dread comes over you as you attempt to place [SS] into the shell. It would be wise to be rid of this quickly.</span>")
 			user.Dizzy(30)
 			return
 		if(SS.purified && iscultist(user))
@@ -177,14 +174,14 @@
 		if("VICTIM")
 			var/mob/living/carbon/human/T = target
 			var/datum/antagonist/cult/C = user.mind.has_antag_datum(/datum/antagonist/cult,TRUE)
-			if(C && C.cult_team.is_sacrifice_target(T.mind))
+			if(C?.cult_team.is_sacrifice_target(T.mind))
 				if(iscultist(user))
 					to_chat(user, "<span class='cult'><b>\"This soul is mine.</b></span> <span class='cultlarge'>SACRIFICE THEM!\"</span>")
 				else
-					to_chat(user, "<span class='danger'>The soulstone seems to reject this soul.</span>")
+					to_chat(user, "<span class='danger'>[src] seems to reject this soul.</span>")
 				return FALSE
 			if(contents.len)
-				to_chat(user, "<span class='userdanger'>Capture failed!</span>: The soulstone is full! Free an existing soul to make room.")
+				to_chat(user, "<span class='userdanger'>Capture failed!</span>: [src] is full! Free an existing soul to make room.")
 			else
 				if((!old_shard && T.stat != CONSCIOUS) || (old_shard && T.stat == DEAD))
 					if(T.client == null)
@@ -201,7 +198,7 @@
 		if("SHADE")
 			var/mob/living/simple_animal/shade/T = target
 			if(contents.len)
-				to_chat(user, "<span class='userdanger'>Capture failed!</span>: The soulstone is full! Free an existing soul to make room.")
+				to_chat(user, "<span class='userdanger'>Capture failed!</span>: [src] is full! Free an existing soul to make room.")
 			else
 				T.AddComponent(/datum/component/soulstoned, src)
 				if(purified)
@@ -211,9 +208,9 @@
 				else
 					icon_state = "soulstone2"
 				name = "soulstone: Shade of [T.real_name]"
-				to_chat(T, "<span class='notice'>Your soul has been captured by the soulstone. Its arcane energies are reknitting your ethereal form.</span>")
+				to_chat(T, "<span class='notice'>Your soul has been captured by [src]. Its arcane energies are reknitting your ethereal form.</span>")
 				if(user != T)
-					to_chat(user, "<span class='info'><b>Capture successful!</b>:</span> [T.real_name]'s soul has been captured and stored within the soulstone.")
+					to_chat(user, "<span class='info'><b>Capture successful!</b>:</span> [T.real_name]'s soul has been captured and stored within [src].")
 
 		if("CONSTRUCT")
 			var/obj/structure/constructshell/T = target
@@ -260,7 +257,7 @@
 				qdel(T)
 				qdel(src)
 			else
-				to_chat(user, "<span class='userdanger'>Creation failed!</span>: The soul stone is empty! Go kill someone!")
+				to_chat(user, "<span class='userdanger'>Creation failed!</span>: [src] is empty! Go kill someone!")
 
 /obj/item/soulstone/proc/check_menu(mob/user)
 	if(!istype(user))
@@ -283,21 +280,21 @@
 		var/datum/action/innate/seek_master/SM = new()
 		SM.Grant(newstruct)
 	newstruct.key = target.key
-	var/obj/screen/alert/bloodsense/BS
-	if(newstruct.mind && ((stoner && iscultist(stoner)) || cultoverride) && SSticker && SSticker.mode)
+	var/atom/movable/screen/alert/bloodsense/BS
+	if(newstruct.mind && ((stoner && iscultist(stoner)) || cultoverride) && SSticker?.mode)
 		SSticker.mode.add_cultist(newstruct.mind, 0)
 	if(iscultist(stoner) || cultoverride)
 		to_chat(newstruct, "<b>You are still bound to serve the cult[stoner ? " and [stoner]":""], follow [stoner ? stoner.p_their() : "their"] orders and help [stoner ? stoner.p_them() : "them"] complete [stoner ? stoner.p_their() : "their"] goals at all costs.</b>")
 	else if(stoner)
 		to_chat(newstruct, "<b>You are still bound to serve your creator, [stoner], follow [stoner.p_their()] orders and help [stoner.p_them()] complete [stoner.p_their()] goals at all costs.</b>")
 	newstruct.clear_alert("bloodsense")
-	BS = newstruct.throw_alert("bloodsense", /obj/screen/alert/bloodsense)
+	BS = newstruct.throw_alert("bloodsense", /atom/movable/screen/alert/bloodsense)
 	if(BS)
 		BS.Cviewer = newstruct
 	newstruct.cancel_camera()
 
 
-/obj/item/soulstone/proc/init_shade(mob/living/carbon/human/T, mob/user, message_user = 0 , mob/shade_controller)
+/obj/item/soulstone/proc/init_shade(mob/living/carbon/human/T, mob/user, message_user = FALSE, mob/shade_controller)
 	if(!shade_controller)
 		shade_controller = T
 	new /obj/effect/decal/remains/human(T.loc) //Spawns a skeleton
@@ -310,7 +307,8 @@
 	S.real_name = "Shade of [T.real_name]"
 	S.key = shade_controller.key
 	S.copy_languages(T, LANGUAGE_MIND)//Copies the old mobs languages into the new mob holder.
-	S.copy_languages(user, LANGUAGE_MASTER)
+	if(user)
+		S.copy_languages(user, LANGUAGE_MASTER)
 	S.update_atom_languages()
 	grant_all_languages(FALSE, FALSE, TRUE)	//Grants omnitongue
 	if(user)
@@ -328,7 +326,7 @@
 	else if(user && iscultist(user))
 		to_chat(S, "Your soul has been captured! You are now bound to the cult's will. Help them succeed in their goals at all costs.")
 	if(message_user && user)
-		to_chat(user, "<span class='info'><b>Capture successful!</b>:</span> [T.real_name]'s soul has been ripped from [T.p_their()] body and stored within the soul stone.")
+		to_chat(user, "<span class='info'><b>Capture successful!</b>:</span> [T.real_name]'s soul has been ripped from [T.p_their()] body and stored within [src].")
 
 
 /obj/item/soulstone/proc/getCultGhost(mob/living/carbon/human/T, mob/user)

@@ -54,8 +54,7 @@ Sunlight System
 	var/turf/source_turf
 	var/list/datum/lighting_corner/affectingCorners
 
-
-/atom/movable/sunlight_object/Destroy(var/force)
+/atom/movable/sunlight_object/Destroy(force)
 	if (force)
 		var/turf/badTurf = get_turf(source_turf)
 		stack_trace("A sunlighting object has been deleted [COORD(badTurf)]")
@@ -75,18 +74,14 @@ Sunlight System
 	neighbourTurfs = GetNeighbours()
 
 /atom/movable/sunlight_object/proc/GetState()
-	var/oldState = state
-	if(!(source_turf.has_opaque_atom || HasRoof() ))
+	if(!(IS_OPAQUE_TURF(source_turf) || HasRoof() ))
 		state = SUNLIGHT_OUTDOOR
 		for(var/turf/CT in neighbourTurfs)
-			if(CT.has_opaque_atom  || (CT.sunlight_object && CT.sunlight_object.HasRoof())) /* update our unroofed, unlighty friends */
+			if(IS_OPAQUE_TURF(CT) || (CT.sunlight_object && CT.sunlight_object.HasRoof())) /* update our unroofed, unlighty friends */
 				state = SUNLIGHT_BORDER
 				break
 	else /* roofed, so turn off the lights*/
 		state = SUNLIGHT_INDOOR
-
-	if(oldState != state)
-		DisableSunlight()
 
 
 
@@ -107,20 +102,23 @@ Sunlight System
 	else
 		var/turf/ceiling = get_step_multiz(src, UP)
 		if(ceiling)
-			roofType = !isopenspace(ceiling) ? ceiling : ceiling.GetCeilingTurf()
+			roofType = !istransparentturf(ceiling) ? ceiling : ceiling.GetCeilingTurf()
 	return roofType
 
 /atom/movable/sunlight_object/proc/DisableSunlight()
+	var/turf/T = list()
 	for(var/datum/lighting_corner/C in affectingCorners)
 		LAZYREMOVE(C.globAffect, src)
 		C.getSunFalloff()
-		GLOB.SUNLIGHT_QUEUE_CORNER += C.masters
+		T |= C.masters
+	T |= source_turf /* get our calculated indoor lighting */
+	GLOB.SUNLIGHT_QUEUE_CORNER += T
 
 /atom/movable/sunlight_object/proc/ProcessState()
 	switch(state)
 		if(SUNLIGHT_INDOOR)
-			color = SUNLIGHT_DARK_MATRIX //get the dark thing
 			luminosity = 0
+			DisableSunlight() /* Do our indoor processing */
 		if(SUNLIGHT_OUTDOOR)
 			color = SSsunlight.color //transparent
 			luminosity = 1
@@ -143,10 +141,11 @@ Sunlight System
 	var/datum/lighting_corner/cb = dummy_lighting_corner
 	var/datum/lighting_corner/ca = dummy_lighting_corner
 
-	cr = source_turf.corners[3] || dummy_lighting_corner
-	cg = source_turf.corners[2] || dummy_lighting_corner
-	cb = source_turf.corners[4] || dummy_lighting_corner
-	ca = source_turf.corners[1] || dummy_lighting_corner
+	if(source_turf.corners)
+		cr = source_turf.corners[3] || dummy_lighting_corner
+		cg = source_turf.corners[2] || dummy_lighting_corner
+		cb = source_turf.corners[4] || dummy_lighting_corner
+		ca = source_turf.corners[1] || dummy_lighting_corner
 
 	var/fr = cr.sunFalloff
 	var/fg = cg.sunFalloff
@@ -186,7 +185,11 @@ Sunlight System
 	var/list/corners  = list() /* corners we are currently affecting */
 
 	for(T in view(CEILING(GLOB.GLOBAL_LIGHT_RANGE, 1), source_turf))
-		for(C in T.get_corners())
+		if(IS_OPAQUE_TURF(T)) /* get_corners used to do opacity checks for arse */
+			continue
+		if (!T.lighting_corners_initialised)
+			T.generate_missing_corners()
+		for(C in T.corners)
 			corners |= C
 			/* temp master? */
 		turfs += T
@@ -230,15 +233,24 @@ Sunlight System
 	if(roofType && !ispath(roofType))
 		roofType = null
 
-	/* update sunlight */
-	if(sunlight_object)
-		GLOB.SUNLIGHT_QUEUE_WORK += sunlight_object
 
 	var/datum/lighting_corner/C
 	var/atom/movable/sunlight_object/S
-	for(C in corners)
+	var/turf/T
+	var/list/SunlightUpdates = list()
+
+	/* update sunlight */
+	if(sunlight_object)
+		SunlightUpdates += sunlight_object
+
+
+	for(C in corners) /* This should be faster than processing duplicate turfs */
+		for(T in C.masters)
+			SunlightUpdates |= T.sunlight_object
 		for(S in C.globAffect)
-			GLOB.SUNLIGHT_QUEUE_WORK += S
+			SunlightUpdates |= S
+
+	GLOB.SUNLIGHT_QUEUE_WORK += SunlightUpdates
 
 /* corner fuckery */
 /datum/lighting_corner/var/list/globAffect = list() /* list of sunlight objects affecting this corner */
@@ -260,12 +272,14 @@ Sunlight System
 /obj/effect/mapping_helpers/sunlight/roofSetter
 	icon_state = "roof"
 	var/turf/roofType
-	mountain
-		roofType = /turf/closed/indestructible/rock
-		icon_state = "roof_rock"
-	wood
-		roofType = /turf/open/floor/wood/f13
-		icon_state = "roof_wood"
+
+/obj/effect/mapping_helpers/sunlight/roofSetter/mountain
+	roofType = /turf/closed/indestructible/rock
+	icon_state = "roof_rock"
+
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood
+	roofType = /turf/open/floor/wood/ms13
+	icon_state = "roof_wood"
 
 
 /obj/effect/mapping_helpers/sunlight/roofSetter/Initialize(mapload)

@@ -46,13 +46,13 @@ GLOBAL_LIST_EMPTY(sunlight_objects)
 
 
 SUBSYSTEM_DEF(sunlight)
-	name = "sunlight"
+	name = "Sunlight"
 	wait = LIGHTING_INTERVAL
 	flags = SS_TICKER
 	init_order = INIT_ORDER_SUNLIGHT
 
 
-	var/list/obj/screen/fullscreen/lighting_backdrop/Sunlight/sunlighting_planes = list()
+	var/list/atom/movable/screen/fullscreen/lighting_backdrop/Sunlight/sunlighting_planes = list()
 
 	/* thanks ruskis */
 	var/datum/time_of_day/current_step_datum
@@ -67,20 +67,14 @@ SUBSYSTEM_DEF(sunlight)
 	var/list/cornerColour = list()
 
 	var/currentTime
-	var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/morning(), new /datum/time_of_day/day(),  \
-                                 new /datum/time_of_day/evening(), new /datum/time_of_day/night())
+	var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/morning(), new /datum/time_of_day/day(), \
+														new /datum/time_of_day/evening(), new /datum/time_of_day/night())
 
-datum/controller/subsystem/sunlight/stat_entry()
+/datum/controller/subsystem/sunlight/stat_entry()
 	..("W:[GLOB.SUNLIGHT_QUEUE_WORK.len]|C:[GLOB.SUNLIGHT_QUEUE_CORNER.len]|U:[GLOB.SUNLIGHT_QUEUE_UPDATE.len]")
 
-datum/controller/subsystem/sunlight/proc/fullPlonk()
-	var/msg = "b4 wq [GLOB.SUNLIGHT_QUEUE_WORK.len]"
-	to_chat(world, "<span class='boldannounce'>[msg]</span>")
-	log_world(msg)
+/datum/controller/subsystem/sunlight/proc/fullPlonk()
 	GLOB.SUNLIGHT_QUEUE_WORK = GLOB.sunlight_objects
-	msg = "af wq [GLOB.SUNLIGHT_QUEUE_WORK.len]"
-	to_chat(world, "<span class='boldannounce'>[msg]</span>")
-	log_world(msg)
 
 /datum/controller/subsystem/sunlight/Initialize(timeofday)
 	if(!initialized)
@@ -89,10 +83,6 @@ datum/controller/subsystem/sunlight/proc/fullPlonk()
 		fullPlonk()
 		initialized = TRUE
 	fire(FALSE, TRUE)
-
-	// l_sunPlane = new()
-	// l_sun = new()
-	// sunlight_objects_initialised = TRUE
 	..()
 
 // It's safe to pass a list of non-turfs to this list - it'll only check turfs.
@@ -105,16 +95,13 @@ datum/controller/subsystem/sunlight/proc/fullPlonk()
 			if (T.dynamic_lighting && T.loc:dynamic_lighting)
 				// SSvis_overlays.add_vis_overlay(src, icon, overlay_state, layer, EMISSIVE_PLANE, dir)
 				T.sunlight_object = new /atom/movable/sunlight_object(T)
-	var/msg = "af loop [GLOB.SUNLIGHT_QUEUE_WORK.len]"
-	to_chat(world, "<span class='boldannounce'>[msg]</span>")
-	log_world(msg)
 
 
 /datum/controller/subsystem/sunlight/proc/check_cycle()
 	if(world.time > step_finish)
 		set_time_of_day(current_step + 1)
 
-/datum/controller/subsystem/sunlight/proc/set_time_of_day(var/step)
+/datum/controller/subsystem/sunlight/proc/set_time_of_day(step)
 	if(step > time_cycle_steps.len)
 		step = STEP_DAY
 	step_started = world.time
@@ -130,18 +117,15 @@ datum/controller/subsystem/sunlight/proc/fullPlonk()
 /* set sunlight colour */
 
 /datum/controller/subsystem/sunlight/fire(resumed, init_tick_checks)
-	check_cycle()
-	nextBracket()
-
 	MC_SPLIT_TICK_INIT(3)
 	if(!init_tick_checks)
 		MC_SPLIT_TICK
 	var/i = 0
 	for (i in 1 to GLOB.SUNLIGHT_QUEUE_WORK.len)
 		var/atom/movable/sunlight_object/W = GLOB.SUNLIGHT_QUEUE_WORK[i]
-
-		W.GetState()
-		GLOB.SUNLIGHT_QUEUE_UPDATE += W
+		if(W)
+			W.GetState()
+			GLOB.SUNLIGHT_QUEUE_UPDATE += W
 
 		if(init_tick_checks)
 			CHECK_TICK
@@ -157,8 +141,8 @@ datum/controller/subsystem/sunlight/proc/fullPlonk()
 
 	for (i in 1 to GLOB.SUNLIGHT_QUEUE_UPDATE.len)
 		var/atom/movable/sunlight_object/U = GLOB.SUNLIGHT_QUEUE_UPDATE[i]
-
-		U.ProcessState()
+		if(U)
+			U.ProcessState()
 		if(init_tick_checks)
 			CHECK_TICK
 		else if (MC_TICK_CHECK)
@@ -192,6 +176,10 @@ datum/controller/subsystem/sunlight/proc/fullPlonk()
 		i = 0
 
 
+	check_cycle()
+	nextBracket()
+
+
 
 /datum/controller/subsystem/sunlight/proc/nextBracket()
 	// current_color = current_step_datum.color //todo: remove this when no longer defuckulating
@@ -199,7 +187,7 @@ datum/controller/subsystem/sunlight/proc/fullPlonk()
 	current_color = BlendRGB(current_step_datum.color, next_step_datum.color, blend_amount)
 
 	/* for each thing, update the colour */
-	for (var/obj/screen/fullscreen/lighting_backdrop/Sunlight/SP in sunlighting_planes)
+	for (var/atom/movable/screen/fullscreen/lighting_backdrop/Sunlight/SP in sunlighting_planes)
 		SP.color = current_color
 
 
