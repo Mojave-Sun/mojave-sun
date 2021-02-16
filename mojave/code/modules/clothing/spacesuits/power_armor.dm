@@ -55,9 +55,9 @@
 /obj/item/clothing/suit/space/hardsuit/power_armor/dropped(mob/user)
 	. = ..()
 	REMOVE_TRAIT(user, TRAIT_FORCED_STANDING, "power_armor")
-		var/datum/component/footstep/C = user?.GetComponent(/datum/component/footstep)
-		if(C)
-			C.footstep_sounds = original_pilot_footstep
+	var/datum/component/footstep/C = user?.GetComponent(/datum/component/footstep)
+	if(C)
+		C.footstep_sounds = original_pilot_footstep
 
 //No helmet toggles for now when helmet is up
 /obj/item/clothing/suit/space/hardsuit/power_armor/ToggleHelmet()
@@ -130,8 +130,8 @@
 	name = "T51 Power Armor Helmet"
 	desc = "A more advanced helmet for a more advanced piece of power armor."
 	armor = list(MELEE = 90, BULLET = 90, LASER = 90, ENERGY = 90, BOMB = 90, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
-	icon_state = "t51_pa"
-	worn_icon_state = "t51_pa"
+	icon_state = "t51b_pa"
+	worn_icon_state = "t51b_pa"
 
 /obj/item/clothing/suit/space/hardsuit/power_armor/t51b
 	name = "T51B Power Armor Suit"
