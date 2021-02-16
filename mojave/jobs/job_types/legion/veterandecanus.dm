@@ -22,7 +22,7 @@
 	gloves = /obj/item/clothing/gloves/ms13/legion/tanwraps
 	mask = /obj/item/clothing/mask/ms13/legion/clothmask
 	suit_store = /obj/item/gun/ballistic/revolver/ms13/rev44
-	l_pocket = /obj/item/ammo_box/magazine/internal/cylinder/rev44
+	l_pocket = /obj/item/ammo_box/ms13/rev44
 
 /datum/outfit/job/ms13/legion/veterandecanus/pre_equip(mob/living/carbon/human/H)
 	..()
