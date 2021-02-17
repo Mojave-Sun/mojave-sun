@@ -5,7 +5,7 @@
 	icon_state = "caravan"
 	inhand_icon_state = "caravan"
 	force = 20
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/caravan
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/ms13/caravan
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/caravan/caravan.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -25,7 +25,7 @@
 	icon_state = "singleshot"
 	inhand_icon_state = "singleshot"
 	force = 20
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/single
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/ms13/single
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/caravan/caravan2.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
@@ -35,7 +35,7 @@
 	desc = "A double action revolver chambered for .44 Magnum rounds. Decently fast and damaging at the same time."
 	icon_state = "44magnum"
 	inhand_icon_state = "44magnum"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/ms13/rev44
 	fire_sound = 'mojave/sound/ms13weapons/44mag.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
@@ -65,7 +65,7 @@
 	icon_state = "rev357"
 	inhand_icon_state = "rev357"
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/357/357fire3.ogg'
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/ms13/rev357
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 6
 	extra_damage = 30
@@ -93,7 +93,7 @@
 	desc = "A bulky revolver chambered for 10mm rounds with a five round capacity."
 	icon_state = "rev10mm"
 	inhand_icon_state = "rev10mm"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev10mm
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/ms13/rev10mm
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/10mm/10mmfire2.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 5
@@ -105,7 +105,7 @@
 	desc = "A double action revolver chambered for heavy .45-70 rounds and only carrying five at a time. Make every shot count."
 	icon_state = "huntingrev"
 	inhand_icon_state = "huntingrev"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/ms13/rev4570
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/huntingrev/huntingrev5.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 6
@@ -123,7 +123,7 @@
 	desc = "A modern and fast firing revolver firing 5.56 rifle rounds."
 	icon_state = "556rev"
 	inhand_icon_state = "556rev"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/ms13/rev556
 	fire_sound = 'mojave/sound/ms13weapons/that_gun.ogg'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
@@ -131,44 +131,44 @@
 	extra_penetration = 10
 
 //Magazines
-/obj/item/ammo_box/magazine/internal/shot/caravan
+/obj/item/ammo_box/magazine/internal/shot/ms13/caravan
 	name = "caravan shotgun internal tube"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/ms13/buckshot
 	max_ammo = 2
 
-/obj/item/ammo_box/magazine/internal/shot/single
+/obj/item/ammo_box/magazine/internal/shot/ms13/single
 	name = "single shotgun internal tube"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/ms13/buckshot
 	max_ammo = 1
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev44
+/obj/item/ammo_box/magazine/internal/cylinder/ms13/rev44
 	name = ".44 magnum cylinder"
 	ammo_type = /obj/item/ammo_casing/ms13/m44
 	icon = 'mojave/icons/objects/ammo.dmi'
 	caliber = "44"
 	max_ammo = 6
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev357
+/obj/item/ammo_box/magazine/internal/cylinder/ms13/rev357
 	name = ".357 magnum cylinder"
 	ammo_type = /obj/item/ammo_casing/ms13/a357
 	caliber = "357"
 	max_ammo = 6
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev10mm
+/obj/item/ammo_box/magazine/internal/cylinder/ms13/rev10mm
 	name = "10mm revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/ms13/c10mm
 	icon = 'mojave/icons/objects/ammo.dmi'
 	caliber = "10mm"
 	max_ammo = 5
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev4570
+/obj/item/ammo_box/magazine/internal/cylinder/ms13/rev4570
 	name = ".45-70 cylinder"
 	ammo_type = /obj/item/ammo_casing/ms13/c4570
 	icon = 'mojave/icons/objects/ammo.dmi'
 	caliber = "4570"
 	max_ammo = 5
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev556
+/obj/item/ammo_box/magazine/internal/cylinder/ms13/rev556
 	name = "5.56 revolver cylinder"
 	icon = 'mojave/icons/objects/ammo.dmi'
 	ammo_type = /obj/item/ammo_casing/ms13/a556

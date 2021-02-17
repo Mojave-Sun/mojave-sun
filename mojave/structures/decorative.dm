@@ -62,3 +62,11 @@
 	icon = 'mojave/icons/objects/flags32x64.dmi'
 	icon_state = "ncrflag"
 	layer = EDGED_TURF_LAYER
+
+/obj/structure/fluff/ms13/ncrflag
+	name = "\improper NCR flagpole"
+	desc = "A very tall flag pole, You can almost see the NCR's flag up there!"
+	icon = 'mojave/icons/structure/largeflags.dmi'
+	icon_state = "ncrflag"
+	pixel_x = -32
+	layer = ABOVE_ALL_MOB_LAYER
