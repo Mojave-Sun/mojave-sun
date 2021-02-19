@@ -56,14 +56,18 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 	if(the_parent.has_reagent(/datum/reagent/water))
 		var/datum/reagent/water/water = the_parent.reagents.get_reagent(/datum/reagent/water) //Modify metabolism rate here so don't need to edit base files
 		water.metabolization_rate = 0 // Stop water metabolization, we'll take it from here
-		modify_thirst(modify_by = min(the_parent.reagents.get_reagent_amount() * SECONDS_OF_LIFE_PER_WATER_U, SECONDS_OF_LIFE_PER_WATER_U * 5)) //NO MICRODOSING, "metabolizes" 5 units of water per 1 second for +25 thirst
-		the_parent.reagents.remove_reagent(water, 5)
+		modify_thirst(modify_by = min(the_parent.reagents.get_reagent_amount(/datum/reagent/water) * SECONDS_OF_LIFE_PER_WATER_U, SECONDS_OF_LIFE_PER_WATER_U * 5)) //NO MICRODOSING, "metabolizes" 5 units of water per 1 second for +25 thirst
+		the_parent.reagents.remove_reagent(/datum/reagent/water, 5)
 
 	//Last stage of dehydration, you're basicall going to die now
-	if(stage_of_dehydration == length(dehydration_stage_alerts))
-		the_parent.blur_eyes(1)
+	if(stage_of_dehydration == length(GLOB.dehydration_stage_alerts))
+		if(prob(20))
+			the_parent.blur_eyes(1)
 		the_parent.adjustOxyLoss(3)
-		for(var/i in the_parent.internal_organs)
+		var/mob/living/carbon/the_carbon = the_parent
+		if(!istype(the_carbon))
+			return
+		for(var/i in the_carbon.internal_organs)
 			var/obj/item/organ/O = i
 			if(O.organ_flags & ORGAN_SYNTHETIC)
 				continue
@@ -72,10 +76,11 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 ///Modifies thirst by modify_by VIA = curr_thirst + modify_by, clamps value to max_thirst or 0
 /datum/component/thirst/proc/modify_thirst(modify_by = 0)
 	curr_thirst = clamp(curr_thirst + modify_by, 0, max_thirst)
-	if ((stage_of_dehydration != 5) && curr_thirst < (max_thirst / (stage_of_dehydration + 1)))
+	//If thirst_limit is 2400, then 5 stages of dehydration means stage 2 is triggered at 1440; stage 3 at 960; stage 4 at 600 etc. aiming for last stage to be at 0
+	if ((stage_of_dehydration != 5) && (curr_thirst < ((length(GLOB.dehydration_stage_examine) - (stage_of_dehydration + 1)) * (max_thirst / length(GLOB.dehydration_stage_examine)))))
 		modify_stage(modify_by = 1)
 	else
-		if(curr_thirst > (max_thirst / (stage_of_dehydration)))
+		if(curr_thirst > ((length(GLOB.dehydration_stage_examine) - (stage_of_dehydration + 1)) * (max_thirst / length(GLOB.dehydration_stage_examine))))
 			modify_stage(modify_by = -1)
 
 ///Modifies stage of dehydration VIA += while also displaying a message and a popup alert to the parent
