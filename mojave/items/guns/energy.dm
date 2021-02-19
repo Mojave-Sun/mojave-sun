@@ -4,8 +4,8 @@
 	name = "generic ms13 gun"
 	desc = "complain when seeing this"
 	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 
 /obj/item/gun/energy/ms13/laser/aer9
 	name = "AER9 Laser Rifle"
@@ -22,8 +22,8 @@
 	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
 	icon_state = "AEP7"
 	inhand_icon_state = "laser-pistol"
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 0
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/laser/pistol)
@@ -34,8 +34,8 @@
 	desc = "A modified AER9 equipped with a refraction kit that spreads its bolts."
 	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
 	inhand_icon_state = "laser-rifle9"
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/laser/scatter)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	w_class = WEIGHT_CLASS_HUGE
@@ -45,8 +45,8 @@
 	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
 	inhand_icon_state = "plasma"
 	icon_state = "plasma"
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	desc = "A top of line miniaturized plasma caster built by REPCONN in the wake of the Z43-521P failure. It is supperior to all previous rifles to enter service in the USCC."
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/plasma)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
@@ -57,8 +57,8 @@
 	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
 	inhand_icon_state = "multiplas"
 	icon_state = "multiplas"
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	desc = "A modified A3-20 plasma caster built by REPCONN equipped with a multicasting kit that creates multiple weaker clots."
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/plasma/scatter)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
@@ -68,8 +68,8 @@
 	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
 	inhand_icon_state = "plasma-pistol"
 	icon_state = "plasma-pistol"
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires heavy low penetration plasma clots."
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/plasma/pistol)
 	w_class = WEIGHT_CLASS_NORMAL
