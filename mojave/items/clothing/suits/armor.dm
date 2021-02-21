@@ -6,6 +6,13 @@
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 	body_parts_covered = CHEST|ARMS|LEGS|GROIN
 
+/obj/item/clothing/suit/hooded/ms13/
+	name = "generic ms13 hooded clothing"
+	desc = "BASE CLASE BASE CLASS. AAAAAAAAAAAAAAA"
+	icon = 'mojave/icons/objects/clothing/suits.dmi'
+	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
+	hoodtype = null
+
 /obj/item/clothing/suit/armor/ms13/kit
 	name = "armor kit"
 	desc = "Various armor parts and pieces worn over clothing. Good at stopping knives and bullets, but not much else."
@@ -23,8 +30,8 @@
 /obj/item/clothing/suit/armor/ms13/tire
 	name = "tire armor"
 	desc = "Sections of tire, roughly cut apart and bound together. Getting into a firefight isn't advised, but you'll never feel a punch in this."
-	icon_state = "leatherarmor"
-	inhand_icon_state = "leatherarmor"
+	icon_state = "tirearmor"
+	inhand_icon_state = "tirearmor"
 	armor = list(melee = 40, bullet = 10, laser = 5, energy = 10, bomb = 10, bio = 10, rad = 5, fire = 0, acid = 0)
 
 /obj/item/clothing/suit/armor/ms13/leatherarmor
@@ -92,12 +99,12 @@
 	armor = list("melee" = 35, "bullet" = 25, "laser" = 5, "energy" = 5, "bomb" = 15, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 20)
 
 /obj/item/clothing/suit/armor/ms13/metal/reinforced
-	name = "lightweight metal armor"
+	name = "reinforced metal armor"
 	desc = "Sturdy metal armor, slows you down but offers solid protection. A full suit of metal armor is, however, very conductive."
 	icon_state = "reinforcedmetal"
 	inhand_icon_state = "reinforcedmetal"
 	armor = list("melee" = 45, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 5, "fire" = 20, "acid" = 20)
-	slowdown = 0.15
+	slowdown = 0.10
 
 /obj/item/clothing/suit/armor/ms13/metal/heavy
 	name = "heavy metal armor"
@@ -105,7 +112,7 @@
 	icon_state = "heavymetal"
 	inhand_icon_state = "heavymetal"
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 15, "energy" = 15, "bomb" = 40, "bio" = 10, "rad" = 20, "fire" = 20, "acid" = 25)
-	slowdown = 0.25
+	slowdown = 0.20
 
 /obj/item/clothing/suit/armor/ms13/vest
 	name = "police vest"
@@ -212,7 +219,7 @@
 	icon_state = "stealthsuit"
 	inhand_icon_state = "stealthsuit"
 	armor = list("melee" = 25, "bullet" = 15, "laser" = 15, "energy" = 10, "bomb" = 5, "bio" = 25, "rad" = 25, "fire" = 30, "acid" = 25)
-// Should probably get some sort of cloaking once the Stealthboys are in.//
+// Should probably get some sort of cloaking once the Stealthboys are in.
 
 /obj/item/clothing/suit/armor/ms13/stealth/assassin
 	name = "assassin armor"
@@ -221,7 +228,7 @@
 	inhand_icon_state = "assassin"
 	armor = list("melee" = 30, "bullet" = 20, "laser" = 15, "energy" = 10, "bomb" = 10, "bio" = 25, "rad" = 25, "fire" = 20, "acid" = 25)
 	slowdown = 0.05
-// Should probably get some sort of cloaking once the Stealthboys are in.//
+// Should probably get some sort of cloaking once the Stealthboys are in.
 
 /obj/item/clothing/suit/armor/ms13/eliteriot
 	name = "elite riot gear"
@@ -235,7 +242,8 @@
 	desc = "Thick fibers woven together, into the ultimate fire-proof suit. There's a few stiches missing here and there, but it'll be fine."
 	icon_state = "firesuit"
 	inhand_icon_state = "firesuit"
-	armor = list(melee = 25, bullet = 5, laser = 35, energy = 35, bomb = 10, bio = 5, rad = 10, fire = 75, acid = 10)
+	armor = list(melee = 25, bullet = 5, laser = 35, energy = 35, bomb = 10, bio = 5, rad = 10, fire = 100, acid = 10)
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	slowdown = 0.05
 
 /obj/item/clothing/suit/armor/ms13/radsuit
@@ -248,11 +256,9 @@
 /obj/item/clothing/suit/hooded/ms13/hazmat
 	name = "hazmat suit"
 	desc = "A relatively thin but sturdy suit. You're not quite sure what it's made from, only that there's not a chance any liquids are getting on your hardly pristine skin. "
-	icon = 'mojave/icons/objects/clothing/suits.dmi'
-	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
-	icon_state = "hazmatsuit"
-	inhand_icon_state = "hazmatsuit"
-	hoodtype = /obj/item/clothing/head/helmet/ms13/hazmat
+	icon_state = "hazmat"
+	inhand_icon_state = "hazmat"
+	hoodtype = /obj/item/clothing/suit/hooded/ms13/hazmat
 	armor = list(melee = 15, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 75, rad = 10, fire = 5, acid = 75)
 
 /obj/item/clothing/suit/space/ms13

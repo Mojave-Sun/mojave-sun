@@ -61,5 +61,7 @@
 /obj/item/clothing/mask/gas/ms13
 	name = "gas Mask"
 	desc = "An old gas mask. Hypothetically speaking, breathing through it is safer than breathing out of it. The filters are questionable at best."
+	icon = 'mojave/icons/objects/clothing/masks.dmi'
+	worn_icon = 'mojave/icons/mob/clothing/mask.dmi'
 	icon_state = "gasmask"
 	inhand_icon_state = "gasmask"

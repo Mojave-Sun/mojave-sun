@@ -5,6 +5,15 @@
 	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
 	flags_inv = HIDEHAIR
 
+/obj/item/clothing/head/hooded/ms13
+	name = "generic ms13 hood"
+	desc = "Gamer phone home. Something is wrong."
+	icon = 'mojave/icons/objects/clothing/hats.dmi'
+	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
+	flags_inv = HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
 /obj/item/clothing/head/helmet/ms13/baseball
 	name = "baseball cap"
 	desc = "A classic baseball cap. A relic from pre-nuclear America."
@@ -314,54 +323,61 @@
 /obj/item/clothing/head/helmet/ms13/combat/reinforced
 	name = "reinforced combat helmet"
 	desc = "A combat helmet reinforced with lots of metal plating. Added weight slows the user down a bit, but the extra protection makes it worth it."
-	icon_state = "reinfcombat"
-	inhand_icon_state = "reinfcombat"
+	icon_state = "reinfcombathelm"
+	inhand_icon_state = "reinfcombathelm"
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 10, "energy" = 10, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 80, "acid" = 25)
 	slowdown = 0.2
 
 /obj/item/clothing/head/helmet/ms13/stealth
 	name = "stealth suit helmet"
 	desc = "A stealth suit's helmet. With a menacing orange visor, the victim will never have the pleasure of locking eye contact."
-	icon_state = "enclave_helmet"
-	inhand_icon_state = "enclave_helmet"
+	icon_state = "stealthhelmet"
+	inhand_icon_state = "stealthhelmet"
 	armor = list("melee" = 25, "bullet" = 15, "laser" = 15, "energy" = 10, "bomb" = 5, "bio" = 25, "rad" = 25, "fire" = 30, "acid" = 25)
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/ms13/eliteriot
 	name = "elite riot helmet"
 	desc = "An advanced helmet originally used by elite pre-war riot control units."
-	icon_state = "riothelmet"
-	inhand_icon_state = "riothelmet"
+	icon_state = "riotgearhelmet"
+	inhand_icon_state = "riotgearhelmet"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
-/obj/item/clothing/head/helmet/ms13/fire
+/obj/item/clothing/head/helmet/ms13/firehood
 	name = "fireproof hood"
 	desc = "The hood to a near completely fire resistent suit. Pretty heavy, but not so bad once it's on."
 	icon_state = "firehood"
 	inhand_icon_state = "firehood"
-	armor = list(melee = 25, bullet = 5, laser = 35, energy = 35, bomb = 10, bio = 5, rad = 10, fire = 75, acid = 10)
+	armor = list(melee = 25, bullet = 5, laser = 35, energy = 35, bomb = 10, bio = 5, rad = 10, fire = 100, acid = 10)
 	slowdown = 0.05
-	flags_inv = HIDEHAIR
+	heat_protection = HEAD
+	resistance_flags = FIRE_PROOF
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 
-/obj/item/clothing/head/helmet/ms13/radiation
+/obj/item/clothing/head/hooded/ms13/radiationhood
 	name = "radiation suit hood"
 	desc = "A hood to go along with your radiation suit. It's got a geiger counter mounted near the breathing filter, but it doesn't seem functional."
 	icon_state = "radsuithood"
 	inhand_icon_state = "radsuithood"
 	armor = list(melee = 20, bullet = 5, laser = 10, energy = 10, bomb = 10, bio = 5, rad = 75, fire = 15, acid = 10)
-	flags_inv = HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 
-/obj/item/clothing/head/helmet/ms13/hazmat
+/obj/item/clothing/head/hooded/ms13/hazmat
 	name = "hazmat hood"
 	desc = "The hood to a hazmat suit. You'll want to keep this close if you want the suit to actually do anything for you."
 	icon_state = "hazmathood"
 	inhand_icon_state = "hazmathood"
 	armor = list(melee = 15, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 75, rad = 10, fire = 5, acid = 75)
-	flags_inv = HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/space/ms13
 	name = "space helmet"
@@ -372,6 +388,8 @@
 	inhand_icon_state = "spacehelmet"
 	armor = list(melee = 15, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 75, rad = 10, fire = 5, acid = 75)
 	flags_inv = HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/ms13/ncr
 	name = "\improper NCR infantry helmet"
@@ -489,6 +507,16 @@
 	icon_state = "leg_exp"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 20, "bomb" = 15, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
+
+/obj/item/clothing/head/hooded/ms13/legion
+	name = "speculatore hood"
+	desc = "The hood to a speculatore's cloak. It's rather thick with leather padding in it."
+	icon_state = "leg_spec"
+	inhand_icon_state = "owl_mask"
+	flags_inv = HIDEHAIR
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 20, "bomb" = 15, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/ms13/manny
 	name = "\improper Manny Mammoth head"

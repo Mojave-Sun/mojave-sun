@@ -81,12 +81,12 @@
 			/obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat,\
 			/obj/item/clothing/suit/ms13/vest/puffer,\
 			/obj/item/clothing/suit/ms13/ljacket/bomber,\
-			/obj/item/clothing/suit/armor/ms13/kit/light,\
-			/obj/item/clothing/suit/ms13/ljacket/biker,\
+			/obj/item/clothing/suit/armor/ms13/kit,\
+			/obj/item/clothing/suit/ms13/ljacket,\
 			/obj/item/clothing/suit/ms13/trench,\
 			/obj/item/clothing/suit/ms13/trench/dapper,\
 			/obj/item/clothing/suit/ms13/ljacket/veteran,\
-			/obj/item/clothing/suit/armor/ms13/leatherarmor/light)
+			/obj/item/clothing/suit/armor/ms13/leatherarmor)
 	r_hand = pick(
 		/obj/item/claymore/ms13/machete/pipe,\
 		/obj/item/claymore/ms13/machete/pipe/tireiron)
