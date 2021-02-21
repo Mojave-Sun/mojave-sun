@@ -118,11 +118,11 @@
 	name = "tier 2 armor spawner"
 	lootcount = 2
 	var/loot1 = list(
-				/obj/item/clothing/suit/ms13/ljacket/reinforced/deputy/blue,
+				/obj/item/clothing/suit/ms13/ljacket/blue/reinforced,
 				""
 				)
 	var/loot2 = list(
-				/obj/item/clothing/suit/ms13/ljacket/reinforced/deputy/black,
+				/obj/item/clothing/suit/ms13/ljacket/brown/reinforced,
 				""
 				)
 	var/loot3 = list(
