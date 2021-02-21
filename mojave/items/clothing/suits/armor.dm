@@ -244,6 +244,7 @@
 	inhand_icon_state = "firesuit"
 	armor = list(melee = 25, bullet = 5, laser = 35, energy = 35, bomb = 10, bio = 5, rad = 10, fire = 100, acid = 10)
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	resistance_flags = FIRE_PROOF
 	slowdown = 0.05
 
 /obj/item/clothing/suit/armor/ms13/radsuit

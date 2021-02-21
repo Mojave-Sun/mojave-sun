@@ -113,8 +113,6 @@
 	icon_state = "riot"
 	inhand_icon_state = "helmet"
 	strip_delay = 60
-	icon = 'mojave/icons/objects/clothing/hats.dmi'
-	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
 	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 35, bio = 10, rad = 10, fire = 30, acid = 10)
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
@@ -151,9 +149,9 @@
 	icon_state = "blackcowboy"
 	inhand_icon_state = "blackcowboy"
 
-/obj/item/clothing/head/helmet/ms13/cowboy/mayor
-	name = "mayor's hat"
-	desc = "A fancy hat, typically worn by mayors and other corrupt politicians."
+/obj/item/clothing/head/helmet/ms13/cowboy/gambler
+	name = "gambler's hat"
+	desc = "A fancy hat, allegedly worn by true high rollers. Not that you'd personally know."
 	icon_state = "gambler"
 	inhand_icon_state = "gambler"
 
@@ -206,12 +204,24 @@
 	icon_state = "deputy"
 	inhand_icon_state = "deputy"
 
+/obj/item/clothing/head/helmet/ms13/cowboy/ranger
+	name = "park ranger hat"
+	desc = "An old park ranger hat. It's seen better days and the interior of it is frayed to hell."
+	icon_state = "parkranger"
+	inhand_icon_state = "det_hat"
+
+/obj/item/clothing/head/helmet/ms13/utilitycap/deputy
+	name = "deputy's cap"
+	desc = "A formal refurbished pre-war cap. It's got a faded logo in the inner rim."
+	icon_state = "deputycap"
+	inhand_icon_state = "deputycap"
+
 /obj/item/clothing/head/helmet/ms13/cowboy/sheriff
-	name = "mammoth sheriff's hat"
-	desc = "An old park ranger hat heavily reinforced and belonging to the sheriff of the town of Mammoth."
-	icon_state = "sheriff"
-	inhand_icon_state = "sheriff"
-	armor = list(melee = 50, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 25, acid = 10)
+	name = "sheriff's hat"
+	desc = "A wide brimmed sheriff hat. There's better smelling things in the wasteland, perhaps you could give it a wash some time. Upon further examination, you can see there is a metal rim inside of it with some rather thick leather in the dome. "
+	icon_state = "sheriffhat"
+	inhand_icon_state = "sheriffhat"
+	armor = list(melee = 20, bullet = 15, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 10)
 
 /obj/item/clothing/head/helmet/ms13/cowboy/padded/black
 	name = "padded black cowboy hat"
@@ -374,7 +384,7 @@
 	name = "hazmat hood"
 	desc = "The hood to a hazmat suit. You'll want to keep this close if you want the suit to actually do anything for you."
 	icon_state = "hazmathood"
-	inhand_icon_state = "hazmathood"
+	inhand_icon_state = "hazmat"
 	armor = list(melee = 15, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 75, rad = 10, fire = 5, acid = 75)
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
@@ -507,16 +517,6 @@
 	icon_state = "leg_exp"
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 20, "bomb" = 15, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
-
-/obj/item/clothing/head/hooded/ms13/legion
-	name = "speculatore hood"
-	desc = "The hood to a speculatore's cloak. It's rather thick with leather padding in it."
-	icon_state = "leg_spec"
-	inhand_icon_state = "owl_mask"
-	flags_inv = HIDEHAIR
-	armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 20, "bomb" = 15, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/ms13/manny
 	name = "\improper Manny Mammoth head"

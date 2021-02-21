@@ -29,11 +29,11 @@
 				/obj/item/clothing/head/helmet/ms13/cowboy/padded/black
 				)
 	var/loot7 = list(
-				/obj/item/clothing/suit/ms13/ljacket/mayor/blue,
+				/obj/item/clothing/suit/ms13/ljacket/brown,
 				""
 				)
 	var/loot8 = list(
-				/obj/item/clothing/suit/ms13/ljacket/mayor/black,
+				/obj/item/clothing/suit/ms13/ljacket/black,
 				""
 				)
 	var/loot9 = list(
@@ -196,11 +196,11 @@
 	name = "tier 3 armor spawner"
 	lootcount = 2
 	var/loot1 = list(
-				/obj/item/clothing/suit/ms13/ljacket/sheriff/blue,
+				/obj/item/clothing/suit/ms13/ljacket/blue/armored,
 				""
 				)
 	var/loot2 = list(
-				/obj/item/clothing/suit/ms13/ljacket/sheriff/black,
+				/obj/item/clothing/suit/ms13/ljacket/black/armored,
 				""
 				)
 	var/loot3 = list(

@@ -17,7 +17,7 @@
 
 	id = 		 /obj/item/card/id/ms13/sheriff
 	head = 	     /obj/item/clothing/head/helmet/ms13/cowboy/sheriff
-	suit =       /obj/item/clothing/suit/ms13/ljacket/sheriff
+	suit =       /obj/item/clothing/suit/ms13/ljacket/brown/armored
 	uniform =    /obj/item/clothing/under/ms13/vaultsuit
 	gloves = 	 /obj/item/clothing/gloves/ms13/vault
 	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault

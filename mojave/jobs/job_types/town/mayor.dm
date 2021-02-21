@@ -15,7 +15,7 @@
 	name = "_Town Mayor"
 	jobtype = /datum/job/ms13/town/mayor
 
-	suit =       /obj/item/clothing/suit/ms13/ljacket/mayor
+	suit =       /obj/item/clothing/suit/ms13/regal
 	uniform =    /obj/item/clothing/under/ms13/vaultsuit
 	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
 	back =	 	 /obj/item/storage/backpack/
