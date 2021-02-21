@@ -103,16 +103,14 @@
 	desc = "Sturdy metal armor, slows you down but offers solid protection. A full suit of metal armor is, however, very conductive."
 	icon_state = "reinforcedmetal"
 	inhand_icon_state = "reinforcedmetal"
-	armor = list("melee" = 45, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 5, "fire" = 20, "acid" = 20)
-	slowdown = 0.10
+	armor = list("melee" = 45, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 5, "fire" = 20, "acid" = 20)
 
 /obj/item/clothing/suit/armor/ms13/metal/heavy
 	name = "heavy metal armor"
 	desc = "A full suit of metal plated armor. It'll stop a bullet, it'll break a hand that punches. Hell, it might even shatter a bat. Good luck getting to the fight on time."
 	icon_state = "heavymetal"
 	inhand_icon_state = "heavymetal"
-	armor = list("melee" = 55, "bullet" = 40, "laser" = 15, "energy" = 15, "bomb" = 40, "bio" = 10, "rad" = 20, "fire" = 20, "acid" = 25)
-	slowdown = 0.20
+	armor = list("melee" = 55, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 40, "bio" = 10, "rad" = 20, "fire" = 20, "acid" = 25)
 
 /obj/item/clothing/suit/armor/ms13/vest
 	name = "police vest"
@@ -184,11 +182,11 @@
 
 /obj/item/clothing/suit/armor/ms13/tesla
 	name = "tesla armor"
-	desc = "Pre-war armor designed to expressly limit damage from laser and energy weapons. Provides decent overall protection as well."
+	desc = "Pre-war armor designed to expressly limit damage from laser and energy weapons. Due to materials used, it's rather brittle and can be penetrated by even small arms fire."
 	icon_state = "tesla_armor"
 	inhand_icon_state = "tesla_armor"
 	blood_overlay_type = "armor"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 45, "energy" = 45, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+	armor = list("melee" = 35, "bullet" = 15, "laser" = 45, "energy" = 45, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 
 /obj/item/clothing/suit/armor/ms13/combat
 	name = "combat armor"
@@ -225,7 +223,6 @@
 	icon_state = "assassin"
 	inhand_icon_state = "assassin"
 	armor = list("melee" = 30, "bullet" = 20, "laser" = 15, "energy" = 10, "bomb" = 10, "bio" = 25, "rad" = 25, "fire" = 20, "acid" = 25)
-	slowdown = 0.05
 // Should probably get some sort of cloaking once the Stealthboys are in.
 
 /obj/item/clothing/suit/armor/ms13/eliteriot
@@ -243,7 +240,6 @@
 	armor = list(melee = 25, bullet = 5, laser = 35, energy = 35, bomb = 10, bio = 5, rad = 10, fire = 100, acid = 10)
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	resistance_flags = FIRE_PROOF
-	slowdown = 0.05
 
 /obj/item/clothing/suit/armor/ms13/radsuit
 	name = "radiation suit"
