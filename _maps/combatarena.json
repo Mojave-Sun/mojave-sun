@@ -1,9 +1,32 @@
 {
-    "map_name": "CombatArena",
+   	"version": 1,
+   "map_name": "CombatArena",
     "map_path": "map_files/CombatArena",
     "map_file": "CombatArena.dmm",
     "shuttles": {
 	    "cargo": "cargo_delta"
 	},
-	"traits": [{"Up" : 1, "Linkage" : "Cross"}, {"Up" : 1, "Down" : -1, "Baseturf" : "/turf/open/transparent/openspace", "Linkage" : "Cross"}, {"Up" : 1, "Down" : -1, "Baseturf" : "/turf/open/transparent/openspace", "Linkage" : "Cross"}, {"Up" : 1, "Down" : -1, "Baseturf" : "/turf/open/transparent/openspace", "Linkage" : "Cross"}, {"Down" : -1, "Baseturf" : "/turf/open/transparent/openspace", "Linkage" : "Cross"}]
-	}
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"traits": [
+		{
+			"Up": 1,
+			"Linkage": "Cross",
+			"Baseturf": "/turf/open/floor/plating/ground/mountain",
+			"Gravity": true
+		},
+		{
+			"Up": 1,
+			"Down": -1,
+			"Baseturf": "/turf/open/floor/plating/ground/mountain",
+			"Linkage": "Cross",
+			"Gravity": true
+		},
+		{
+			"Down": -1,
+			"Baseturf": "/turf/open/openspace",
+			"Linkage": "Cross",
+			"Gravity": true
+		}
+	]
+}
