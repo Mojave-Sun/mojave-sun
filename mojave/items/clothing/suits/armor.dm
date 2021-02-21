@@ -195,23 +195,21 @@
 	desc = "Pre-war military grade combat armor. Offers great all around protection."
 	icon_state = "combatarmor"
 	inhand_icon_state = "combatarmor"
-	armor = list("melee" = 45, "bullet" = 40, "laser" = 15, "energy" = 15, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 40, "acid" = 20)
+	armor = list("melee" = 45, "bullet" = 35, "laser" = 25, "energy" = 15, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 40, "acid" = 20)
 
 /obj/item/clothing/suit/armor/ms13/combat/reinforced
 	name = "reinforced combat armor"
 	desc = "Standard combat armor reinforced with lots of metal plating. The added weight from the plating slows the user down, but the protection is well worth it."
 	icon_state = "reinfcombat"
 	inhand_icon_state = "reinfcombat"
-	armor = list("melee" = 55, "bullet" = 15, "laser" = 25, "energy" = 25, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
-	slowdown = 0.5
+	armor = list("melee" = 45, "bullet" = 40, "laser" = 30, "energy" = 25, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 
 /obj/item/clothing/suit/armor/ms13/combat/advanced
 	name = "advanced combat armor"
 	desc = "An advanced and more protective model of combat armor. Excellent overall protection. Pretty bulky."
 	icon_state = "combat_armor_mk2"
 	inhand_icon_state = "combat_armor_mk2"
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 25, "energy" = 10, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 80, "acid" = 25)
-	slowdown = 0.10
+	armor = list("melee" = 55, "bullet" = 45, "laser" = 30, "energy" = 10, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 80, "acid" = 25)
 
 /obj/item/clothing/suit/armor/ms13/stealth
 	name = "stealth suit"
