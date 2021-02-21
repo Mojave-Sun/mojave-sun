@@ -26,22 +26,20 @@
 	icon_state = "leatherarmor"
 	inhand_icon_state = "leatherarmor"
 	armor = list(melee = 40, bullet = 10, laser = 5, energy = 10, bomb = 10, bio = 10, rad = 5, fire = 0, acid = 0)
-	flags_inv = HIDEJUMPSUIT
 
 /obj/item/clothing/suit/armor/ms13/leatherarmor
 	name = "leather armor"
 	desc = "A standard suit of leather armor, worn by wastelanders everywhere."
 	icon_state = "leatherarmor"
 	inhand_icon_state = "leatherarmor"
-	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
-	flags_inv = HIDEJUMPSUIT
+	armor = list(melee = 25, bullet = 20, laser = 5, energy = 10, bomb = 10, bio = 10, rad = 10, fire = 5, acid = 5)
 
-/obj/item/clothing/suit/armor/ms13/leatherarmor/light
-	name = "lightweight leather armor"
-	desc = "A light suit of leather armor, stripped of almost all of it's metal pieces, reducing it's overall protective value."
-	icon_state = "lightleather"
-	inhand_icon_state = "lightleather"
-	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
+/obj/item/clothing/suit/armor/ms13/leatherarmor/reinforced
+	name = "reinforced leather armor"
+	desc = "A suit of leather armor reinforced with extra padding, tougher leather, and heavier metal."
+	icon_state = "reinforcedleather"
+	inhand_icon_state = "reinforcedleather"
+	armor = list(melee = 35, bullet = 25, laser = 10, energy = 25, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/suit/armor/ms13/blastmaster
 	name = "blastmaster raider armor"
@@ -99,7 +97,7 @@
 	icon_state = "reinforcedmetal"
 	inhand_icon_state = "reinforcedmetal"
 	armor = list("melee" = 45, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 5, "fire" = 20, "acid" = 20)
-	slowdown = 0.25
+	slowdown = 0.15
 
 /obj/item/clothing/suit/armor/ms13/metal/heavy
 	name = "heavy metal armor"
@@ -107,7 +105,7 @@
 	icon_state = "heavymetal"
 	inhand_icon_state = "heavymetal"
 	armor = list("melee" = 55, "bullet" = 40, "laser" = 15, "energy" = 15, "bomb" = 40, "bio" = 10, "rad" = 20, "fire" = 20, "acid" = 25)
-	slowdown = 0.35
+	slowdown = 0.25
 
 /obj/item/clothing/suit/armor/ms13/vest
 	name = "police vest"
@@ -121,8 +119,8 @@
 /obj/item/clothing/suit/armor/ms13/vest/military
 	name = "military vest"
 	desc = "A bulletproof military vest that is excellent at stopping almost any bullets, but does not provide great all around protection."
-	icon_state = "bulletproof"
-	inhand_icon_state = "bulletproof"
+	icon_state = "militarykevlar"
+	inhand_icon_state = "militarykevlar"
 	armor = list(melee = 30, bullet = 50, laser = 15, energy = 15, bomb = 40, bio = 20, rad = 20, fire = 40, acid = 20)
 
 /obj/item/clothing/suit/armor/ms13/vest/vault
@@ -185,41 +183,86 @@
 	blood_overlay_type = "armor"
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 45, "energy" = 45, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 
-/obj/item/clothing/suit/armor/ms13/leatherarmor/reinforced
-	name = "reinforced leather armor"
-	desc = "A suit of leather armor reinforced with extra padding, tougher leather, and heavier metal."
-	icon_state = "reinforcedleather"
-	inhand_icon_state = "reinforcedleather"
-	armor = list(melee = 50, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 25, acid = 10)
-
 /obj/item/clothing/suit/armor/ms13/combat
 	name = "combat armor"
 	desc = "Pre-war military grade combat armor. Offers great all around protection."
-	icon_state = "combat_armor"
-	inhand_icon_state = "combat_armor"
+	icon_state = "combatarmor"
+	inhand_icon_state = "combatarmor"
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 15, "energy" = 15, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 40, "acid" = 20)
-
-/obj/item/clothing/suit/armor/ms13/combat/advanced
-	name = "advanced combat armor"
-	desc = "An advanced and more protective model of combat armor. Excellent overall protection."
-	icon_state = "combat_armor_mk2"
-	inhand_icon_state = "combat_armor_mk2"
-	armor = list("melee" = 55, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 
 /obj/item/clothing/suit/armor/ms13/combat/reinforced
 	name = "reinforced combat armor"
 	desc = "Standard combat armor reinforced with lots of metal plating. The added weight from the plating slows the user down, but the protection is well worth it."
 	icon_state = "reinfcombat"
 	inhand_icon_state = "reinfcombat"
+	armor = list("melee" = 55, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+	slowdown = 0.15
+
+/obj/item/clothing/suit/armor/ms13/combat/advanced
+	name = "advanced combat armor"
+	desc = "An advanced and more protective model of combat armor. Excellent overall protection. Pretty bulky."
+	icon_state = "combat_armor_mk2"
+	inhand_icon_state = "combat_armor_mk2"
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 10, "energy" = 10, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 80, "acid" = 25)
-	slowdown = 0.3
+	slowdown = 0.20
+
+/obj/item/clothing/suit/armor/ms13/stealth
+	name = "stealth suit"
+	desc = "An advanced chinese stealth suit. You'll never see communism coming until it's far too late."
+	icon_state = "stealthsuit"
+	inhand_icon_state = "stealthsuit"
+	armor = list("melee" = 25, "bullet" = 15, "laser" = 15, "energy" = 10, "bomb" = 5, "bio" = 25, "rad" = 25, "fire" = 30, "acid" = 25)
+// Should probably get some sort of cloaking once the Stealthboys are in.//
+
+/obj/item/clothing/suit/armor/ms13/stealth/assassin
+	name = "assassin armor"
+	desc = "An 'advanced' replication of a chinese stealth suit. It has a way of making people seemingly ignore you. Or does it?"
+	icon_state = "assassin"
+	inhand_icon_state = "assassin"
+	armor = list("melee" = 30, "bullet" = 20, "laser" = 15, "energy" = 10, "bomb" = 10, "bio" = 25, "rad" = 25, "fire" = 20, "acid" = 25)
+	slowdown = 0.05
+// Should probably get some sort of cloaking once the Stealthboys are in.//
 
 /obj/item/clothing/suit/armor/ms13/eliteriot
 	name = "elite riot gear"
 	desc = "A highly specialized and advanced suit of armor oringinally in use by elite riot control units before the war."
-	icon_state = "elite_riot"
-	inhand_icon_state = "elite_riot"
+	icon_state = "riotgear"
+	inhand_icon_state = "riotgear"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+
+/obj/item/clothing/suit/armor/ms13/firesuit
+	name = "fire suit"
+	desc = "Thick fibers woven together, into the ultimate fire-proof suit. There's a few stiches missing here and there, but it'll be fine."
+	icon_state = "firesuit"
+	inhand_icon_state = "firesuit"
+	armor = list(melee = 25, bullet = 5, laser = 35, energy = 35, bomb = 10, bio = 5, rad = 10, fire = 75, acid = 10)
+	slowdown = 0.05
+
+/obj/item/clothing/suit/armor/ms13/radsuit
+	name = "radiation suit"
+	desc = "A lead lined suit, designed with the sole purpose of blocking radiation from the human body. It's pretty thick, and while it could protect you from more than rads, why would you waste such a thing like this in combat?"
+	icon_state = "radsuit"
+	inhand_icon_state = "radsuit"
+	armor = list(melee = 20, bullet = 5, laser = 10, energy = 10, bomb = 10, bio = 5, rad = 75, fire = 15, acid = 10)
+
+/obj/item/clothing/suit/hooded/ms13/hazmat
+	name = "hazmat suit"
+	desc = "A relatively thin but sturdy suit. You're not quite sure what it's made from, only that there's not a chance any liquids are getting on your hardly pristine skin. "
+	icon = 'mojave/icons/objects/clothing/suits.dmi'
+	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
+	icon_state = "hazmatsuit"
+	inhand_icon_state = "hazmatsuit"
+	hoodtype = /obj/item/clothing/head/helmet/ms13/hazmat
+	armor = list(melee = 15, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 75, rad = 10, fire = 5, acid = 75)
+
+/obj/item/clothing/suit/space/ms13
+	name = "\improper Space suit"
+	desc = "A state of the art genuine space suit. I hope you didn't go into orbit to get this. Built to last, is up to standard for the harsh climate of space itself."
+	icon = 'mojave/icons/objects/clothing/suits.dmi'
+	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
+	icon_state = "spacesuit"
+	inhand_icon_state = "spacesuit"
+	armor = list(melee = 25, bullet = 15, laser = 25, energy = 25, bomb = 5, bio = 50, rad = 40, fire = 60, acid = 50)
 
 /obj/item/clothing/suit/armor/ms13/ncr
 	name = "\improper NCR infantry vest"

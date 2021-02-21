@@ -297,8 +297,8 @@
 /obj/item/clothing/head/helmet/ms13/combat
 	name = "combat helmet"
 	desc = "A standard pre-war combat helmet. Good overall protection."
-	icon_state = "combat_helmet"
-	inhand_icon_state = "combat_helmet"
+	icon_state = "combathelmet"
+	inhand_icon_state = "combathelmet"
 	armor = list("melee" = 45, "bullet" = 40, "laser" = 15, "energy" = 15, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 40, "acid" = 20)
 	flags_cover = NONE
 	dynamic_hair_suffix = ""
@@ -307,8 +307,8 @@
 /obj/item/clothing/head/helmet/ms13/combat/advanced
 	name = "advanced combat helmet"
 	desc = "A more advanced combat helmet, added protection and some gadgets."
-	icon_state = "combat_helmet_mk2"
-	inhand_icon_state = "combat_helmet_mk2"
+	icon_state = "combathelmet_mk2"
+	inhand_icon_state = "combathelmet_mk2"
 	armor = list("melee" = 55, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 
 /obj/item/clothing/head/helmet/ms13/combat/reinforced
@@ -319,24 +319,59 @@
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 10, "energy" = 10, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 80, "acid" = 25)
 	slowdown = 0.2
 
-/obj/item/clothing/head/helmet/ms13/combat/black
-	name = "black combat helmet"
-	desc = "A combat helmet protected mostly against laser and energy weapons with a black recolor and some fancy additions."
+/obj/item/clothing/head/helmet/ms13/stealth
+	name = "stealth suit helmet"
+	desc = "A stealth suit's helmet. With a menacing orange visor, the victim will never have the pleasure of locking eye contact."
 	icon_state = "enclave_helmet"
 	inhand_icon_state = "enclave_helmet"
-	armor = list("melee" = 50, "bullet" = 40, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+	armor = list("melee" = 25, "bullet" = 15, "laser" = 15, "energy" = 10, "bomb" = 5, "bio" = 25, "rad" = 25, "fire" = 30, "acid" = 25)
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 
 /obj/item/clothing/head/helmet/ms13/eliteriot
 	name = "elite riot helmet"
 	desc = "An advanced helmet originally used by elite pre-war riot control units."
-	icon_state = "elite_riot"
-	inhand_icon_state = "elite_riot"
+	icon_state = "riothelmet"
+	inhand_icon_state = "riothelmet"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/ms13/fire
+	name = "fireproof hood"
+	desc = "The hood to a near completely fire resistent suit. Pretty heavy, but not so bad once it's on."
+	icon_state = "firehood"
+	inhand_icon_state = "firehood"
+	armor = list(melee = 25, bullet = 5, laser = 35, energy = 35, bomb = 10, bio = 5, rad = 10, fire = 75, acid = 10)
+	slowdown = 0.05
+	flags_inv = HIDEHAIR
+
+/obj/item/clothing/head/helmet/ms13/radiation
+	name = "radiation suit hood"
+	desc = "A hood to go along with your radiation suit. It's got a geiger counter mounted near the breathing filter, but it doesn't seem functional."
+	icon_state = "radsuithood"
+	inhand_icon_state = "radsuithood"
+	armor = list(melee = 20, bullet = 5, laser = 10, energy = 10, bomb = 10, bio = 5, rad = 75, fire = 15, acid = 10)
+	flags_inv = HIDEHAIR
+
+/obj/item/clothing/head/helmet/ms13/hazmat
+	name = "hazmat hood"
+	desc = "The hood to a hazmat suit. You'll want to keep this close if you want the suit to actually do anything for you."
+	icon_state = "hazmathood"
+	inhand_icon_state = "hazmathood"
+	armor = list(melee = 15, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 75, rad = 10, fire = 5, acid = 75)
+	flags_inv = HIDEHAIR
+
+/obj/item/clothing/head/helmet/space/ms13
+	name = "space helmet"
+	desc = "A near pristine space helmet. Not a single crack in the glass found. It's probably still good to go!"
+	icon = 'mojave/icons/objects/clothing/hats.dmi'
+	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
+	icon_state = "spacehelmet"
+	inhand_icon_state = "spacehelmet"
+	armor = list(melee = 15, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 75, rad = 10, fire = 5, acid = 75)
+	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/helmet/ms13/ncr
 	name = "\improper NCR infantry helmet"

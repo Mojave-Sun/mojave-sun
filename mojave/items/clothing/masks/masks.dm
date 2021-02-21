@@ -57,3 +57,9 @@
 	icon_state = "bos_hood"
 	inhand_icon_state = "bos_hood"
 	flags_inv = HIDEHAIR
+
+/obj/item/clothing/mask/gas/ms13
+	name = "gas Mask"
+	desc = "An old gas mask. Hypothetically speaking, breathing through it is safer than breathing out of it. The filters are questionable at best."
+	icon_state = "gasmask"
+	inhand_icon_state = "gasmask"
