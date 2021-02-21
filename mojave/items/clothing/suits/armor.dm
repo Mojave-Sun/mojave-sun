@@ -204,13 +204,6 @@
 	armor = list("melee" = 60, "bullet" = 50, "laser" = 10, "energy" = 10, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 80, "acid" = 25)
 	slowdown = 0.3
 
-/obj/item/clothing/suit/armor/ms13/combat/black
-	name = "black combat armor"
-	desc = "A specialized set of combat armor, painted black and modified for resistance against laser and energy weapons. Though this comes at the cost of some protection against other attacks."
-	icon_state = "enclave_armor"
-	inhand_icon_state = "enclave_armor"
-	armor = list("melee" = 50, "bullet" = 40, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
-
 /obj/item/clothing/suit/armor/ms13/eliteriot
 	name = "elite riot gear"
 	desc = "A highly specialized and advanced suit of armor oringinally in use by elite riot control units before the war."
