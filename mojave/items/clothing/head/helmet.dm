@@ -257,8 +257,8 @@
 	desc = "A robust but cumbersome metal helmet. Bogs you down a bit in exchange for it's good all around protection. Metal is known to be conductive however."
 	icon_state = "metalhelmet"
 	inhand_icon_state = "metalhelmet"
-	armor = list("melee" = 55, "bullet" = 40, "laser" = 0, "energy" = 0, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 80, "acid" = 20)
-	slowdown = 0.2
+	armor = list("melee" = 55, "bullet" = 40, "laser" = 10, "energy" = 5, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 80, "acid" = 20)
+	slowdown = 0.15
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""

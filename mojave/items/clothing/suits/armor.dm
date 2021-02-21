@@ -11,14 +11,22 @@
 	desc = "Various armor parts and pieces worn over clothing. Good at stopping knives and bullets, but not much else."
 	icon_state = "armorkit"
 	inhand_icon_state = "armorkit"
-	armor = list(melee = 30, bullet = 30, laser = 0, energy = 0, bomb = 15, bio = 5, rad = 5, fire = 5, acid = 5)
+	armor = list(melee = 25, bullet = 25, laser = 5, energy = 0, bomb = 15, bio = 5, rad = 5, fire = 5, acid = 5)
 
-/obj/item/clothing/suit/armor/ms13/kit/light
-	name = "light armor kit"
-	desc = "Some padded cloth, leather, and metal fastened over clothing.  Limited protection, but could save your life."
-	icon_state = "lightarmorkit"
-	inhand_icon_state = "lightarmorkit"
-	armor = list(melee = 15, bullet = 15, laser = 0, energy = 0, bomb = 5, bio = 0, rad = 0, fire = 0, acid = 0)
+/obj/item/clothing/suit/armor/ms13/kit/heavy
+	name = "heavy armor kit"
+	desc = "Padded cloth and leather bound to metal plates. If you want decent protection while remaining mobile, this is about as good as it'll get."
+	icon_state = "harmorkit"
+	inhand_icon_state = "harmorkit"
+	armor = list(melee = 25, bullet = 25, laser = 10, energy = 0, bomb = 20, bio = 5, rad = 5, fire = 5, acid = 5)
+
+/obj/item/clothing/suit/armor/ms13/tire
+	name = "tire armor"
+	desc = "Sections of tire, roughly cut apart and bound together. Getting into a firefight isn't advised, but you'll never feel a punch in this."
+	icon_state = "leatherarmor"
+	inhand_icon_state = "leatherarmor"
+	armor = list(melee = 40, bullet = 10, laser = 5, energy = 10, bomb = 10, bio = 10, rad = 5, fire = 0, acid = 0)
+	flags_inv = HIDEJUMPSUIT
 
 /obj/item/clothing/suit/armor/ms13/leatherarmor
 	name = "leather armor"
@@ -57,12 +65,6 @@
 	inhand_icon_state = "sadist"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 
-/obj/item/clothing/suit/armor/ms13/sadist/tribal
-	name = "tribal raider armor"
-	desc = "Raider armor made mostly of padded cloth and leather, with an added tire for emergencies."
-	icon_state = "tribalraider"
-	inhand_icon_state = "tribalraider"
-
 /obj/item/clothing/suit/armor/ms13/badlands
 	name = "badlands raider armor"
 	desc = "Raider armor for the badlands, complete with a fancy bandolier and light kevlar padding. Overall protection does leave something to be desired, however."
@@ -86,27 +88,55 @@
 
 /obj/item/clothing/suit/armor/ms13/metal
 	name = "metal armor"
-	desc = "Sturdy and heavy metal armor, slows you down but offers solid protection. A full suit of metal armor is, however, very conductive."
-	icon_state = "bmetalarmor"
-	inhand_icon_state = "bmetalarmor"
-	armor = list("melee" = 55, "bullet" = 40, "laser" = 0, "energy" = 0, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 80, "acid" = 20)
-	slowdown = 0.3
+	desc = "Metal armor with primarily just the chestplate, making it much lighter while only sacrificing some protective qualities."
+	icon_state = "metalarmor"
+	inhand_icon_state = "metalarmor"
+	armor = list("melee" = 35, "bullet" = 25, "laser" = 5, "energy" = 5, "bomb" = 15, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 20)
 
-/obj/item/clothing/suit/armor/ms13/metal/light
+/obj/item/clothing/suit/armor/ms13/metal/reinforced
 	name = "lightweight metal armor"
-	desc = "Metal armor with primarily just the chestplate, making it much lighter while only sacrificing some protective qualities.."
-	icon_state = "lightmetal"
-	inhand_icon_state = "lightmetal"
-	armor = list("melee" = 50, "bullet" = 35, "laser" = 5, "energy" = 5, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 10)
+	desc = "Sturdy metal armor, slows you down but offers solid protection. A full suit of metal armor is, however, very conductive."
+	icon_state = "reinforcedmetal"
+	inhand_icon_state = "reinforcedmetal"
+	armor = list("melee" = 45, "bullet" = 35, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 5, "fire" = 20, "acid" = 20)
+	slowdown = 0.25
+
+/obj/item/clothing/suit/armor/ms13/metal/heavy
+	name = "heavy metal armor"
+	desc = "A full suit of metal plated armor. It'll stop a bullet, it'll break a hand that punches. Hell, it might even shatter a bat. Good luck getting to the fight on time."
+	icon_state = "heavymetal"
+	inhand_icon_state = "heavymetal"
+	armor = list("melee" = 55, "bullet" = 40, "laser" = 15, "energy" = 15, "bomb" = 40, "bio" = 10, "rad" = 20, "fire" = 20, "acid" = 25)
+	slowdown = 0.35
 
 /obj/item/clothing/suit/armor/ms13/vest
 	name = "police vest"
 	desc = "A bulletproof police vest meant primarily for stopping small caliber guns."
-	icon_state = "armoralt"
-	inhand_icon_state = "armoralt"
+	icon_state = "policekevlar"
+	inhand_icon_state = "policekevlar"
 	blood_overlay_type = "armor"
 	dog_fashion = /datum/dog_fashion/back
 	armor = list(melee = 20, bullet = 40, laser = 10, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 20, acid = 5)
+
+/obj/item/clothing/suit/armor/ms13/vest/military
+	name = "military vest"
+	desc = "A bulletproof military vest that is excellent at stopping almost any bullets, but does not provide great all around protection."
+	icon_state = "bulletproof"
+	inhand_icon_state = "bulletproof"
+	armor = list(melee = 30, bullet = 50, laser = 15, energy = 15, bomb = 40, bio = 20, rad = 20, fire = 40, acid = 20)
+
+/obj/item/clothing/suit/armor/ms13/vest/vault
+	name = "vault security vest"
+	desc = "A thick padded vest worn by vault security officers. Makes you want to yell, 'Hit me, I can hardly feel it!'"
+	icon_state = "vaultarmor"
+	armor = list(melee = 40, bullet = 10, laser = 15, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 20, acid = 5)
+
+/obj/item/clothing/suit/armor/ms13/vest/detective
+	name = "detective vest"
+	desc = "A bulletproof vest specifically meant for pre-war police detectives."
+	icon_state = "detective-armor"
+	inhand_icon_state = "detective-armor"
+	dog_fashion = null
 
 /obj/item/clothing/suit/ms13/trench/bossduster
 	name = "boss' duster"
@@ -146,26 +176,6 @@
 	name = "scrap reinforced coat"
 	desc = "A duster with a rather thick vest under it. This just SCREAMS authority. Could probably stop a few bullets."
 	icon_state = "veteranraider"
-
-/obj/item/clothing/suit/armor/ms13/vest/vault
-	name = "vault security vest"
-	desc = "A thick padded vest worn by vault security officers. Makes you want to yell, 'Hit me, I can hardly feel it!'"
-	icon_state = "vaultarmor"
-	armor = list(melee = 40, bullet = 10, laser = 15, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 20, acid = 5)
-
-/obj/item/clothing/suit/armor/ms13/vest/military
-	name = "military vest"
-	desc = "A bulletproof military vest that is excellent at stopping almost any bullets, but does not provide great all around protection."
-	icon_state = "bulletproof"
-	inhand_icon_state = "bulletproof"
-	armor = list(melee = 30, bullet = 50, laser = 15, energy = 15, bomb = 40, bio = 20, rad = 20, fire = 40, acid = 20)
-
-/obj/item/clothing/suit/armor/ms13/vest/detective
-	name = "detective vest"
-	desc = "A bulletproof vest specifically meant for pre-war police detectives."
-	icon_state = "detective-armor"
-	inhand_icon_state = "detective-armor"
-	dog_fashion = null
 
 /obj/item/clothing/suit/armor/ms13/tesla
 	name = "tesla armor"

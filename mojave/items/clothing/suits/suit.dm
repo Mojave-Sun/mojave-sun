@@ -45,9 +45,17 @@
 
 /obj/item/clothing/suit/ms13/ljacket
 	name = "leather jacket"
-	desc = "A typical leather jacket."
-	icon_state = "mfp"
-	inhand_icon_state = "mfp"
+	desc = "A typical leather jacket. It's pretty thick, originally designed to protect from road rash."
+	icon_state = "leatherjacket"
+	inhand_icon_state = "leatherjacket"
+	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
+	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
+
+/obj/item/clothing/suit/ms13/ljacket/reinforced
+	name = "reinforced leather jacket"
+	desc = "A atypical leather jacket. Someone decided to strap more leather onto the already existing leather. A genious approach of becoming more resilient to hostile forces."
+	icon_state = "leatherjacket"
+	inhand_icon_state = "leatherjacket"
 	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
@@ -107,13 +115,6 @@
 	icon_state = "armoredwinterblack"
 	inhand_icon_state = "armoredwinterblack"
 
-/obj/item/clothing/suit/ms13/ljacket/reinforced
-	name = "reinforced leather jacket"
-	desc = "A leather jacket reinforced with a thick shoulder pad."
-	icon_state = "mfp_raider"
-	inhand_icon_state = "mfp_raider"
-	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
-
 /obj/item/clothing/suit/ms13/ljacket/veteran
 	name = "merc veteran coat"
 	desc = "A blue leather coat adorned with war medals. Commonly used by mercenaries."
@@ -131,7 +132,7 @@
 	desc = "A long brown leather overcoat."
 	icon_state = "duster"
 	inhand_icon_state = "duster"
-	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
+	armor = list(melee = 20, bullet = 15, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
 /obj/item/clothing/suit/ms13/duster/reinf
@@ -185,11 +186,6 @@
 	desc = "A dark trenchcoat normally worn by pre-war detectives."
 	icon_state = "jensencoat"
 	inhand_icon_state = "jensencoat"
-
-/obj/item/clothing/suit/ms13/ljacket/biker
-	name = "biker jacket"
-	desc = "A leather jacket most suited for biker gangs."
-	icon_state = "biker_jacket"
 
 /obj/item/clothing/suit/ms13/ljacket/bomber
 	name = "bomber jacket"
