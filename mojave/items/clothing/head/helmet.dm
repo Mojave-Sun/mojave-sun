@@ -198,18 +198,6 @@
 	inhand_icon_state = "reinfcowboy"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 
-/obj/item/clothing/head/helmet/ms13/cowboy/reinf/deputy
-	name = "mammoth deputy hat"
-	desc = "An old park ranger hat repurposed and padded by the town of Mammoth to be used by their lawmen."
-	icon_state = "deputy"
-	inhand_icon_state = "deputy"
-
-/obj/item/clothing/head/helmet/ms13/cowboy/ranger
-	name = "park ranger hat"
-	desc = "An old park ranger hat. It's seen better days and the interior of it is frayed to hell."
-	icon_state = "parkranger"
-	inhand_icon_state = "det_hat"
-
 /obj/item/clothing/head/helmet/ms13/utilitycap/deputy
 	name = "deputy's cap"
 	desc = "A formal refurbished pre-war cap. It's got a faded logo in the inner rim."
@@ -371,9 +359,9 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
-/obj/item/clothing/head/hooded/ms13/radiationhood
+/obj/item/clothing/head/helmet/ms13/radiationhood
 	name = "radiation suit hood"
-	desc = "A hood to go along with your radiation suit. It's got a geiger counter mounted near the breathing filter, but it doesn't seem functional."
+	desc = "A hood to go along with your radiation suit. It's got a geiger counter mounted near the filter, but it doesn't seem functional."
 	icon_state = "radsuithood"
 	inhand_icon_state = "radsuithood"
 	armor = list(melee = 20, bullet = 5, laser = 10, energy = 10, bomb = 10, bio = 5, rad = 75, fire = 15, acid = 10)

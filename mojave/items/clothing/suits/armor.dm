@@ -259,7 +259,7 @@
 	desc = "A relatively thin but sturdy suit. You're not quite sure what it's made from, only that there's not a chance any liquids are getting on your hardly pristine skin. "
 	icon_state = "hazmat"
 	inhand_icon_state = "hazmat"
-	hoodtype = /obj/item/clothing/suit/hooded/ms13/hazmat
+	hoodtype = /obj/item/clothing/head/hooded/ms13/hazmat
 	armor = list(melee = 15, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 75, rad = 10, fire = 5, acid = 75)
 
 /obj/item/clothing/suit/space/ms13

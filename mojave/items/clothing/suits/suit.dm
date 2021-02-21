@@ -272,12 +272,6 @@
 	icon_state = "vaultlabcoat"
 	inhand_icon_state = "labcoat"
 
-/obj/item/clothing/suit/ms13/regal
-	name = "regal oversuit"
-	desc = "Not something you'd often see in the wasteland, with the finest of seam work. In the collar you see an extremely faded sticker, it's labeled: '$50'"
-	icon_state = "regal"
-	inhand_icon_state = "regal"
-
 /obj/item/clothing/suit/ms13/snazzyleather
 	name = "snazzy leather jacket"
 	desc = "A leather jacket of remarkable quality. It's got a strange serpent-like symbol on the back. There's no telling where it came from."
