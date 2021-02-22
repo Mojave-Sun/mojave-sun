@@ -65,3 +65,4 @@
 	worn_icon = 'mojave/icons/mob/clothing/mask.dmi'
 	icon_state = "gasmask"
 	inhand_icon_state = "gasmask"
+	alternate_worn_layer = ABOVE_BODY_FRONT_LAYER

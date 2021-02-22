@@ -254,6 +254,7 @@
 	icon_state = "hazmat"
 	inhand_icon_state = "hazmat"
 	hoodtype = /obj/item/clothing/head/hooded/ms13/hazmat
+	resistance_flags = ACID_PROOF
 	armor = list(melee = 15, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 75, rad = 10, fire = 5, acid = 75)
 
 /obj/item/clothing/suit/space/ms13

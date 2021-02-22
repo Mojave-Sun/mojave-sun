@@ -371,6 +371,7 @@
 	icon_state = "hazmathood"
 	inhand_icon_state = "hazmat"
 	armor = list(melee = 15, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 75, rad = 10, fire = 5, acid = 75)
+	resistance_flags = ACID_PROOF
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
