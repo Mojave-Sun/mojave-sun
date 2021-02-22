@@ -251,7 +251,7 @@
 
 /obj/item/clothing/head/helmet/ms13/metal
 	name = "metal helmet"
-	desc = "A robust but cumbersome metal helmet. Bogs you down a bit in exchange for it's good all around protection. Metal is known to be conductive however."
+	desc = "A robust metal helmet offering good all around protection. Metal is known to be very conductive however."
 	icon_state = "metalhelmet"
 	inhand_icon_state = "metalhelmet"
 	armor = list("melee" = 35, "bullet" = 25, "laser" = 5, "energy" = 5, "bomb" = 15, "bio" = 10, "rad" = 0, "fire" = 10, "acid" = 20)
