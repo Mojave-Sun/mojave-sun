@@ -5,12 +5,18 @@
 	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 	body_parts_covered = CHEST|ARMS|LEGS|GROIN
+	///Icon file for left hand inhand overlays
+	lefthand_file = 'mojave/icons/mob/inhands/clothing_lefthand.dmi'
+	///Icon file for right inhand overlays
+	righthand_file = 'mojave/icons/mob/inhands/clothing_righthand.dmi'
 
 /obj/item/clothing/suit/hooded/ms13/
 	name = "generic ms13 hooded clothing"
 	desc = "BASE CLASE BASE CLASS. AAAAAAAAAAAAAAA"
 	icon = 'mojave/icons/objects/clothing/suits.dmi'
 	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/clothing_lefthand.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/clothing_righthand.dmi'
 	hoodtype = null
 
 /obj/item/clothing/suit/armor/ms13/kit
@@ -32,7 +38,7 @@
 	desc = "Sections of tire, roughly cut apart and bound together. Getting into a firefight isn't advised, but you'll never feel a punch in this."
 	icon_state = "tirearmor"
 	inhand_icon_state = "tirearmor"
-	armor = list(melee = 40, bullet = 10, laser = 5, energy = 10, bomb = 10, bio = 10, rad = 5, fire = 0, acid = 0)
+	armor = list(melee = 50, bullet = 20, laser = 5, energy = 10, bomb = 10, bio = 10, rad = 5, fire = 0, acid = 0)
 
 /obj/item/clothing/suit/armor/ms13/leatherarmor
 	name = "leather armor"

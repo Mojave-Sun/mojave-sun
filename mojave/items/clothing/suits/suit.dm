@@ -5,6 +5,10 @@
 	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/melee,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/scalpel,/obj/item/surgical_drapes,/obj/item/cautery,/obj/item/hemostat,/obj/item/retractor,/obj/item/storage/pill_bottle/dice,/obj/item/dice)
 	body_parts_covered = CHEST|ARMS|LEGS|GROIN
+	///Icon file for left hand inhand overlays
+	lefthand_file = 'mojave/icons/mob/inhands/clothing_lefthand.dmi'
+	///Icon file for right inhand overlays
+	righthand_file = 'mojave/icons/mob/inhands/clothing_righthand.dmi'
 
 /obj/item/clothing/suit/ms13/vest
 	name = "leather vest"
