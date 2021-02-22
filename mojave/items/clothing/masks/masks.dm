@@ -65,4 +65,30 @@
 	worn_icon = 'mojave/icons/mob/clothing/mask.dmi'
 	icon_state = "gasmask"
 	inhand_icon_state = "gasmask"
-	alternate_worn_layer = ABOVE_BODY_FRONT_LAYER
+	var/adjusted = TRUE
+
+/obj/item/clothing/mask/gas/ms13/Initialize(mob/user)
+	if(!adjusted)
+		alternate_worn_layer = ABOVE_BODY_FRONT_LAYER
+		desc = "[initial(desc)] It will go over your headwear."
+		..()
+	else
+		alternate_worn_layer = UNDER_HEAD_LAYER
+		desc = "[initial(desc)] It will go under your headwear."
+		..()
+
+/obj/item/clothing/mask/gas/ms13/AltClick(mob/user)
+	if(!adjusted)
+		alternate_worn_layer = ABOVE_BODY_FRONT_LAYER
+		to_chat(user, "<span class='notice'>You adjust the [src] to go over your headwear.</span>")
+		desc = "[initial(desc)] It will go over your headwear."
+		adjusted = TRUE
+		update_icon()
+		..()
+	else
+		alternate_worn_layer = UNDER_HEAD_LAYER
+		to_chat(user, "<span class='notice'>You adjust the [src] to go under your headwear.</span>")
+		desc = "[initial(desc)] It will go under your headwear."
+		adjusted = FALSE
+		update_icon()
+		..()
