@@ -68,6 +68,7 @@
 	var/adjusted = FALSE
 
 /obj/item/clothing/mask/gas/ms13/Initialize(mob/user)
+	. = ..()
 	if(!adjusted)
 		alternate_worn_layer = ABOVE_BODY_FRONT_LAYER
 		desc = "[initial(desc)] It will go over your headwear."
@@ -78,6 +79,7 @@
 		..()
 
 /obj/item/clothing/mask/gas/ms13/AltClick(mob/user)
+	. = ..()
 	if(get_dist(user, src) <= 1)
 		if(!adjusted)
 			alternate_worn_layer = ABOVE_BODY_FRONT_LAYER
