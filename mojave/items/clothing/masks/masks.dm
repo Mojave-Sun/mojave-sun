@@ -60,12 +60,12 @@
 
 /obj/item/clothing/mask/gas/ms13
 	name = "gas mask"
-	desc = "An old gas mask. Hypothetically speaking, breathing through it is safer than breathing out of it. The filters are questionable at best."
+	desc = "An old gas mask. Hypothetically speaking, breathing through it is safer than breathing out of it. The filters are questionable at best. <strong><em>Alt Click</em></strong> to adjust it."
 	icon = 'mojave/icons/objects/clothing/masks.dmi'
 	worn_icon = 'mojave/icons/mob/clothing/mask.dmi'
 	icon_state = "gasmask"
 	inhand_icon_state = "gasmask"
-	var/adjusted = TRUE
+	var/adjusted = FALSE
 
 /obj/item/clothing/mask/gas/ms13/Initialize(mob/user)
 	if(!adjusted)
