@@ -297,6 +297,12 @@
 	desc = "The classic jumpsuit of vault 76, how it ended up here is beyond you."
 	icon_state = "vault76"
 
+/obj/item/clothing/under/ms13/regal
+	name = "regal oversuit"
+	desc = "Not something you'd often see in the wasteland, with the finest of seam work. In the collar you see an extremely faded sticker, it's labeled: '$50'"
+	icon_state = "regal"
+	inhand_icon_state = "regal"
+
 // pre-war // other //
 
 /obj/item/clothing/under/ms13/wasteland/prewar/relaxedwear
