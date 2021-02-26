@@ -95,6 +95,7 @@
 	//changes the players sprite adjustment when riding
 	var/offsetx = 0
 	var/offsety = 0
+	///Whenever or not this uses nodes to patrol around
 
 /mob/living/simple_animal/ms13/Initialize()
 	. = ..()
@@ -340,6 +341,11 @@
 	var/maxhunger = 200
 	var/offsetx = 0
 	var/offsety = 0
+	var/utilizes_node_pathing = FALSE
+	///Preferred weights to use for the node pathing above if necessary
+	var/list/preferred_path_weights = list()
+	///Identifier to be used with the above path weights
+	var/mob_identifier
 
 /mob/living/simple_animal/hostile/ms13/Initialize()
 	. = ..()
@@ -357,6 +363,8 @@
 			chems = new()
 		if(eggable == TRUE)
 			eggsleft = 0
+	if(utilizes_node_pathing)
+		AddElement(/datum/element/node_pathing, weighted_values = preferred_path_weights, identifier = mob_identifier)
 
 /mob/living/simple_animal/hostile/ms13/Destroy()
 	if(milkable == TRUE)

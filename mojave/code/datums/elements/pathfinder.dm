@@ -1,6 +1,3 @@
-//Moves to an atom, sends signals if a distance is maintained with the atom being walked to
-//Will path to adjacent nodes with optional weighted values to encourage the parent to move to a specific node via get_best_adj_node()
-
 // Action state signal that's sent whenever the action state has a distance maintained with the target being walked to
 #define COMSIG_STATE_MAINTAINED_DISTANCE "action_state_maintained_dist_with_target"
 #define COMSIG_OBSTRUCTED_MOVE "unable_to_step_towards_thing" //Tried to step in a direction and there was a obstruction
@@ -22,7 +19,6 @@
 	var/list/stutter_step_prob = list() //The prob() chance of a mob going left or right when distance is maintained with the target
 	var/list/weighted_value_list = list() //List to send with get_best_adj_node() when it's used
 	var/list/patrols_node_network = list() //If the parent wants to patrol the node network or not
-
 
 /datum/element/pathfinder/New()
 	. = ..()
@@ -70,6 +66,9 @@ patrol_node_network: When true, instead of sending a signal that this thing main
 		if(world.time <= mob_to_process.last_move_time + mob_to_process.cached_multiplicative_slowdown)
 			continue
 
+		if(!atoms_to_walk_to[mob_to_process] && AIStatus == AI_IDLE) //No target? let's get a node to move towards
+
+
 		//Figure out what kind of SEND_SIGNAL() we should do if possible
 		if(get_dist(mob_to_process, atoms_to_walk_to[mob_to_process]) == distances_to_maintain[mob_to_process])
 			SEND_SIGNAL(mob_to_process, COMSIG_STATE_MAINTAINED_DISTANCE)
@@ -105,6 +104,8 @@ patrol_node_network: When true, instead of sending a signal that this thing main
 //Sample usage for showing off
 /mob/living/carbon/human/node_pathing
 	var/obj/effect/ai_node/current_node
+
+/mob/living/simple_animal/hostile/ms13/molerat
 
 /mob/living/carbon/human/node_pathing/Initialize()
 	. = ..()
