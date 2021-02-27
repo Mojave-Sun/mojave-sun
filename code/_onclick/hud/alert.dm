@@ -166,6 +166,7 @@
 	desc = "You're severely malnourished. The hunger pains make moving around a chore."
 	icon_state = "starving"
 
+// MS13 Edit Start - thirst HUD
 /atom/movable/screen/alert/not_thirsty
 	name = "Not Thirsty"
 	desc = "A rarity in the wasteland, not being thirstful is a sign of a good life so far."
@@ -190,6 +191,7 @@
 	name = "Substantially Dehydrated"
 	desc = "You're practically going to die because of the lack of purified water, get some now!"
 	icon_state = "water5"
+// MS13 Edit End - thirst HUD
 
 /atom/movable/screen/alert/gross
 	name = "Grossed out."
