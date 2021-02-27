@@ -2,16 +2,16 @@
 
 /obj/item/gun/ballistic/ms13
 	name = "generic ms13 gun"
-	icon = 'mojave/icons/objects/guns/ballistics.dmi'
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 
 //Mojave Sun version for shotguns
 /obj/item/gun/ballistic/shotgun/ms13
 	name = "generic ms13 gun"
-	icon = 'mojave/icons/objects/guns/ballistics.dmi'
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	force = 20
@@ -19,9 +19,9 @@
 //Automatic shotguns
 /obj/item/gun/ballistic/shotgun/automatic/ms13
 	name = "generic ms13 gun"
-	icon = 'mojave/icons/objects/guns/ballistics.dmi'
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	force = 15
@@ -29,17 +29,17 @@
 //Revolvers
 /obj/item/gun/ballistic/revolver/ms13
 	name = "generic ms13 gun"
-	icon = 'mojave/icons/objects/guns/ballistics.dmi'
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	force = 10
 
 //Automatics
 /obj/item/gun/ballistic/automatic/ms13
 	name = "generic ms13 gun"
-	icon = 'mojave/icons/objects/guns/ballistics.dmi'
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	automatic = 2 //2 decisecond delay
 	force = 15
 	
@@ -47,17 +47,17 @@
 /obj/item/gun/ballistic/automatic/pistol/ms13
 	name = "generic ms13 gun"
 	desc = "complain when seeing this"
-	icon = 'mojave/icons/objects/guns/ballistics.dmi'
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	force = 10
 	
 //Bolt-actions
 /obj/item/gun/ballistic/rifle/ms13
 	name = "generic ms13 gun"
-	icon = 'mojave/icons/objects/guns/ballistics.dmi'
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_righthand.dmi'
+	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	internal_magazine = FALSE
 	tac_reloads = TRUE
 	force = 15

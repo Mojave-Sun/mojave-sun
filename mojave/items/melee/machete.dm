@@ -5,8 +5,8 @@
 	desc = "A makeshift machete made of a lawn mower blade."
 	icon = 'mojave/icons/objects/items_and_weapons.dmi'
 	icon_state = "imp_machete"
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_righthand.dmi'
+	lefthand_file = null
+	righthand_file = null
 	inhand_icon_state = "salvagedmachete"
 	slot_flags = ITEM_SLOT_BELT
 	block_chance = 0
