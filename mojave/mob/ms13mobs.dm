@@ -117,7 +117,7 @@
 	if(milkable == TRUE)
 		qdel(chems)
 		chems = null
-		return ..()
+	return ..()
 
 //hunger and baby grow/birth/speed shitcode
 /mob/living/simple_animal/ms13/Life()
@@ -358,12 +358,6 @@
 		if(eggable == TRUE)
 			eggsleft = 0
 
-/mob/living/simple_animal/hostile/ms13/Destroy()
-	if(milkable == TRUE)
-		qdel(chems)
-		chems = null
-		return ..()
-
 //hunger and baby grow/birth/speed shitcode
 /mob/living/simple_animal/hostile/ms13/Life()
 	. =..()
@@ -570,12 +564,6 @@
 			chems = new()
 		if(eggable == TRUE)
 			eggsleft = 0
-
-/mob/living/simple_animal/hostile/retaliate/ms13/Destroy()
-	if(milkable == TRUE)
-		qdel(chems)
-		chems = null
-		return ..()
 
 //hunger and baby grow/birth/speed shitcode
 /mob/living/simple_animal/hostile/retaliate/ms13/Life()
