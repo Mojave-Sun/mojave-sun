@@ -166,7 +166,7 @@
 	desc = "You're severely malnourished. The hunger pains make moving around a chore."
 	icon_state = "starving"
 
-// MS13 Edit Start - thirst HUD
+// MS13 Edit Start - thirst HUD - sprites in icons/hud/screen_alert.dmi
 /atom/movable/screen/alert/not_thirsty
 	name = "Not Thirsty"
 	desc = "A rarity in the wasteland, not being thirstful is a sign of a good life so far."
