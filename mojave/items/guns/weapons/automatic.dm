@@ -1,4 +1,26 @@
 //Guns
+/obj/item/gun/ballistic/automatic/ms13
+	name = "this shouldn't exist"
+	desc = "what dum dum spawned this?"
+	icon_state = ""
+	inhand_icon_state = ""
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+	slot_flags = 0
+/obj/item/gun/ballistic/automatic/ms13/update_icon_state()
+	if(current_skin)
+		icon_state = "[unique_reskin[current_skin]][sawn_off ? "_sawn" : ""]"
+	else
+		icon_state = "[initial(icon_state)][sawn_off ? "_sawn" : ""]"
+	if(!chambered && magazine) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
+		. += "[initial(icon_state)]_mag_empty"
+	else if(!chambered && !magazine) //this makes all our rifles empty, the state with nothing
+		. += "[initial(icon_state)]_empty"
+	else if(chambered && !magazine) //this makes all our rifles chamberedy, the state with no magazine
+		. += "[initial(icon_state)]_cham_empty"
+	else if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
+		. += "[initial(icon_state)]"
+
 /obj/item/gun/ballistic/automatic/ms13/smg45
 	name = ".45 submachine gun"
 	desc = "A classic .45 submachine gun that takes an expansive 50 round drum magazine."
@@ -15,7 +37,7 @@
 	extra_damage = 15
 	extra_penetration = 5
 	spread = 12
-	
+
 /obj/item/gun/ballistic/automatic/ms13/smg22
 	name = ".22 submachine gun"
 	desc = "A suppressed .22 submachine gun that feeds from a large pan magazine placed on top of the gun. An interesting weapon for interesting people."
@@ -107,7 +129,7 @@
 	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
 	spread = 4
 	automatic = null
-	
+
 /obj/item/gun/ballistic/automatic/ms13/assaultrifle/chinese
 	name = "\improper Chinese assault rifle"
 	desc = "A Chinese made assault rifle chambered in the heavier 7.62 round, packs a bigger punch in exchange for reduced accuracy."
@@ -117,7 +139,7 @@
 	fire_sound = 'mojave/sound/ms13weapons/chinesearfire.ogg'
 	extra_penetration = 10
 	spread = 10
-	
+
 /obj/item/gun/ballistic/automatic/ms13/assaultrifle/chinese/handmade
 	name = "handmade assault rifle"
 	desc = "A decent quality handmade assault rifle chambered in 7.62."
@@ -155,7 +177,7 @@
 	zoom_out_amt = 13
 	weapon_weight = WEAPON_HEAVY
 	automatic = null
-	
+
 /obj/item/gun/ballistic/automatic/ms13/marksman/american
 	name = "\improper All-American"
 	desc = "A unique and customized marksman carbine. Improved rifling and similar modifications allow for higher damage and an improved paint job allows for higher patriotism."
@@ -183,7 +205,7 @@
 	spread = 3
 	burst_size = 3
 	extra_penetration = 0
-	
+
 /obj/item/gun/ballistic/automatic/ms13/marksman/service/maquis
 	name = "\improper Maquis"
 	desc = "A unique, heavy duty service rifle. Fires slower but packs a much heavier punch. Has a flag supporting a different kind of patriotism than most are used to."
@@ -192,7 +214,7 @@
 	fire_delay = 5
 	extra_damage = 30
 	extra_penetration = 10
-	
+
 /obj/item/gun/ballistic/automatic/ms13/marksman/sniper
 	name = "sniper rifle"
 	desc = "A semi-automatic, high powered .308 sniper rifle. Perfect weapon for a determined assassin."
@@ -277,7 +299,7 @@
 	caliber = "a762"
 	max_ammo = 24
 	multiple_sprites = 2
-	
+
 /obj/item/ammo_box/magazine/ms13/smgm22
 	name = "60 round magazine (.22)"
 	icon_state = "smg22"

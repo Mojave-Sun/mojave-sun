@@ -1,4 +1,15 @@
 //Guns
+/obj/item/gun/ballistic/automatic/pistol/ms13/update_icon_state()
+	if(!chambered && magazine) //this makes all our pistols empty, the state with a magazine, rifle not necassarily empty just not chambered
+		. += "[initial(icon_state)]_mag_empty"
+	else if(!chambered && !magazine) //this makes all our pistols empty, the state with nothing
+		. += "[initial(icon_state)]_empty"
+	else if(chambered && !magazine) //this makes all our pistols chambered, the state with no magazine
+		. += "[initial(icon_state)]_cham_empty"
+	else if(chambered && magazine) //this makes all our pistols full state when chambered and they have a magazine
+		. += "[initial(icon_state)]"
+	else if(!chambered && magazine && (magazine.ammo_count() == 0)) //this makes the pistol have the bolt/slide back if it shot all it's rounds
+		. += "[initial(icon_state)]_mag_empty"
 /obj/item/gun/ballistic/automatic/pistol/ms13/m10mm
 	name = "police 10mm pistol"
 	desc = "A pre-war 10mm pistol normally seen in the hands of law enforcement."
@@ -49,7 +60,17 @@
 	fire_delay = 4
 	extra_damage = 20
 	extra_penetration = 5
-
+/obj/item/gun/ballistic/automatic/pistol/ms13/m9mm/nambu
+	name = "Nambu type 14"
+	desc = "An unreliable ancient pre-war pistol chambered in 9mm nambu."
+	icon_state = "nambu"
+	inhand_icon_state = "nambu"
+	mag_type = /obj/item/ammo_box/magazine/ms13/m9mm
+	fire_sound = 'mojave/sound/ms13weapons/gunsounds/9mm/9mm1.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	fire_delay = 3
+	extra_damage = 25
+	extra_penetration = 5
 /obj/item/gun/ballistic/automatic/pistol/ms13/m12mm
 	name = "12.7mm pistol"
 	desc = "A pre-war, heavy duty European pistol chambered in 12.7mm. Might not look like it, but it can do some real damage."

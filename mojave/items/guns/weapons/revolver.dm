@@ -1,4 +1,17 @@
 //Guns
+/obj/item/gun/ballistic/revolver/ms13/update_icon_state()
+	if((magazine.ammo_count() == 0)) //this makes all our revolvers empty, as long as it has no ammo in it
+		. += "[initial(icon_state)]_empty"
+/obj/item/gun/ballistic/revolver/ms13/caravan
+	name = "caravan shotgun"
+	desc = "A well worn but reliable double barrel shotgun."
+	icon_state = "caravan"
+	inhand_icon_state = "caravan"
+	force = 20
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/ms13/caravan
+	fire_sound = 'mojave/sound/ms13weapons/gunsounds/caravan/caravan.ogg'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
 /obj/item/gun/ballistic/revolver/ms13/caravan
 	name = "caravan shotgun"
 	desc = "A well worn but reliable double barrel shotgun."
