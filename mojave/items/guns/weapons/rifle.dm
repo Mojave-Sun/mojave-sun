@@ -1,11 +1,4 @@
 //Guns
-/obj/item/gun/ballistic/rifle/ms13/update_icon_state()
-	if(!chambered && (magazine.ammo_count() == 0)) //if its not chambered and the magazine ammo_count is 0, its empty
-		. += "[initial(icon_state)]_empty"
-	if(!chambered) //if its not chambered bolt sprite open, cuz it may have bullets in but it's somehow not racked
-		. += "[initial(icon_state)]_empty"
-	else if(chambered) //round in the chamber and ready to fire, normal state
-		. += "[initial(icon_state)]"
 /obj/item/gun/ballistic/rifle/ms13/hunting
 	name = "hunting rifle"
 	desc = "A sturdy bolt action hunting rifle, chambered in 308. and in use before the war."

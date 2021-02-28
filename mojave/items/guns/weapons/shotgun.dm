@@ -12,11 +12,11 @@
 	fire_delay = 5
 /obj/item/gun/ballistic/shotgun/ms13/lever/update_icon_state()
 	if(!chambered && (magazine.ammo_count() == 0)) //if its not chambered and the magazine ammo_count is 0, its empty
-		. += "[initial(icon_state)]_empty"
+		icon_state = "[initial(icon_state)]_empty"
 	if(!chambered) //if its not chambered lever sprite open, cuz it may have bullets in but it's somehow not racked
-		. += "[initial(icon_state)]_empty"
+		icon_state = "[initial(icon_state)]_empty"
 	else if(chambered) //round in the chamber and ready to fire, normal state
-		. += "[initial(icon_state)]"
+		icon_state = "[initial(icon_state)]"
 
 /obj/item/gun/ballistic/shotgun/ms13/huntingshot
 	name = "hunting shotgun"
@@ -91,11 +91,11 @@
 	empty_indicator = TRUE
 /obj/item/gun/ballistic/shotgun/automatic/ms13/sks/update_icon_state()
 	if(!chambered && get_ammo() == 0) //if its not chambered and the magazine ammo_count is 0, its empty
-		. += "[initial(icon_state)]_empty"
+		icon_state = "[initial(icon_state)]_empty"
 	if(!chambered) //if its not chambered bolt sprite open, cuz it may have bullets in but it's somehow not racked
-		. += "[initial(icon_state)]_empty"
+		icon_state = "[initial(icon_state)]_empty"
 	else if(chambered) //round in the chamber and ready to fire, normal state
-		. += "[initial(icon_state)]"
+		icon_state = "[initial(icon_state)]"
 /obj/item/gun/ballistic/shotgun/automatic/ms13/sks/scoped
 	name = "scoped European battle rifle"
 	desc = "A European battle rifle with a scope attached and some improved rifling for better penetration."
