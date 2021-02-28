@@ -1318,7 +1318,6 @@
 /area/ms13/underground/vault_atrium_Lower)
 "aMv" = (
 /obj/structure/closet,
-/obj/item/gun/ballistic/automatic/ms13/marksman/service/police22,
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "aNn" = (
@@ -2611,8 +2610,8 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "bFx" = (
-/mob/living/simple_animal/hostile/ms13/molerat,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/ms13/molerat,
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
 "bFy" = (
@@ -5059,7 +5058,6 @@
 "djU" = (
 /obj/structure/closet/crate/ms13/footlocker,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/suit/armor/ms13/combat/black,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /turf/open/floor/wood/ms13/broken/right,
 /area/ms13/sunny_dale)
@@ -13653,10 +13651,10 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "iZk" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /mob/living/simple_animal/hostile/ms13/nightstalker{
 	dir = 4
 	},
-/obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "iZQ" = (
@@ -14216,7 +14214,7 @@
 /area/ms13/underground/megabunker/upper)
 "jsb" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/ms13/ljacket/mayor/black,
+/obj/item/clothing/suit/ms13/ljacket/black,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "jsl" = (
@@ -14281,7 +14279,7 @@
 /area/ms13/sunny_dale)
 "jvf" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/ms13/ljacket/mayor/blue,
+/obj/item/clothing/suit/ms13/ljacket/blue,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "jvn" = (
@@ -14499,7 +14497,6 @@
 /area/ms13/underground/tunnel/maintenance)
 "jBt" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/ms13/gun/unique,
 /obj/machinery/light/dim{
 	dir = 1
 	},
@@ -14662,9 +14659,9 @@
 /turf/open/floor/plasteel/ms13/blue/white/whitebluechess,
 /area/ms13/sunny_dale)
 "jGo" = (
-/mob/living/simple_animal/mouse,
 /obj/item/reagent_containers/food/drinks/waterbottle/empty,
 /obj/structure/chair/wood,
+/mob/living/simple_animal/mouse,
 /turf/open/floor/carpet/red,
 /area/ms13/underground/mountain)
 "jGG" = (
@@ -15164,8 +15161,8 @@
 /turf/open/floor/plasteel/ms13/_dirty,
 /area/ms13/underground/megabunker/upper)
 "jZU" = (
-/mob/living/simple_animal/hostile/ms13/mongrel,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/ms13/mongrel,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "kaa" = (
@@ -16361,7 +16358,7 @@
 /area/ms13/sunny_dale)
 "kVT" = (
 /obj/structure/closet,
-/obj/item/clothing/suit/ms13/ljacket/mayor/blue,
+/obj/item/clothing/suit/ms13/ljacket/blue,
 /turf/open/floor/plating/ground/sidewalk,
 /area/ms13/sunny_dale)
 "kWi" = (
@@ -19054,7 +19051,7 @@
 /area/ms13/sunny_dale)
 "mZA" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/armor/ms13/kit/light,
+/obj/item/clothing/suit/armor/ms13/kit,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "mZS" = (
@@ -19168,7 +19165,7 @@
 "neG" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/suit/ms13/ljacket/biker,
+/obj/item/clothing/suit/ms13/ljacket,
 /turf/open/floor/wood/ms13/broken/left,
 /area/ms13/sunny_dale)
 "neH" = (
@@ -21854,6 +21851,10 @@
 /obj/structure/stairs/east,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"pds" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/plating/ground/road,
+/area/ms13)
 "pdZ" = (
 /obj/structure/closet/crate/ms13/footlocker{
 	dir = 1
@@ -23514,9 +23515,9 @@
 	},
 /area/ms13/sunny_dale)
 "qmE" = (
-/mob/living/simple_animal/hostile/ms13/nightstalker,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
+/mob/living/simple_animal/hostile/ms13/nightstalker,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "qmL" = (
@@ -24016,11 +24017,6 @@
 "qGQ" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/ms13,
-/area/ms13/sunny_dale)
-"qHH" = (
-/obj/item/gun/ballistic/revolver/ms13/rev357/handmade/rifle,
-/obj/structure/table/low_wall/brick/alt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "qHZ" = (
@@ -26203,9 +26199,9 @@
 /turf/open/floor/wood,
 /area/ms13/underground/vault_atrium_upper)
 "sdU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/ms13/mongrelyoung,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "seh" = (
@@ -29355,7 +29351,7 @@
 /area/ms13/sunny_dale)
 "uut" = (
 /obj/structure/closet,
-/obj/item/clothing/suit/armor/ms13/metal/light,
+/obj/item/clothing/suit/armor/ms13/metal,
 /turf/open/floor/plasteel/ms13/dark/full/dirty,
 /area/ms13/sunny_dale)
 "uuz" = (
@@ -32274,7 +32270,6 @@
 /obj/effect/mob_spawn/human/skeleton,
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
-/obj/item/gun/ballistic/automatic/pistol/ms13/m9mm/handmade,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "wGO" = (
@@ -32609,7 +32604,7 @@
 /area/ms13/sunny_dale)
 "wTT" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/suit/armor/ms13/leatherarmor/light,
+/obj/item/clothing/suit/armor/ms13/leatherarmor,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
@@ -149316,7 +149311,7 @@ uya
 uya
 aDo
 aDo
-aDo
+pds
 aDo
 aDo
 lqB
@@ -230562,7 +230557,7 @@ aab
 yiW
 jIO
 jIO
-qHH
+xLx
 xLx
 fwy
 llJ

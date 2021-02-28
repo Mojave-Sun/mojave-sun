@@ -166,6 +166,33 @@
 	desc = "You're severely malnourished. The hunger pains make moving around a chore."
 	icon_state = "starving"
 
+// MS13 Edit Start - thirst HUD - sprites in icons/hud/screen_alert.dmi
+/atom/movable/screen/alert/not_thirsty
+	name = "Not Thirsty"
+	desc = "A rarity in the wasteland, not being thirstful is a sign of a good life so far."
+	icon_state = "water1"
+
+/atom/movable/screen/alert/slight_thirst
+	name = "Slightly Thirsty"
+	desc = "Your mouth feels a bit dry, could solve that problem by applying some purified water to it."
+	icon_state = "water2"
+
+/atom/movable/screen/alert/thirsty
+	name = "Thirsty"
+	desc = "You definitely have a somewhat bad feeling of thirst, you would obviously like some purified water."
+	icon_state = "water3"
+
+/atom/movable/screen/alert/very_thirsty
+	name = "Very Thirsty"
+	desc = "Your mouth barely feels wet, you're afraid if you don't get your hands on purified water, your future looks bleak."
+	icon_state = "water4"
+
+/atom/movable/screen/alert/dehydrated
+	name = "Substantially Dehydrated"
+	desc = "You're practically going to die because of the lack of purified water, get some now!"
+	icon_state = "water5"
+// MS13 Edit End - thirst HUD
+
 /atom/movable/screen/alert/gross
 	name = "Grossed out."
 	desc = "That was kind of gross..."
