@@ -15,7 +15,7 @@
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	force = 20
-	
+
 //Automatic shotguns
 /obj/item/gun/ballistic/shotgun/automatic/ms13
 	name = "generic ms13 gun"
@@ -25,7 +25,6 @@
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	force = 15
-
 //Revolvers
 /obj/item/gun/ballistic/revolver/ms13
 	name = "generic ms13 gun"
@@ -33,7 +32,9 @@
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	force = 10
-
+/obj/item/gun/ballistic/revolver/ms13/update_icon_state()
+	if((magazine.ammo_count() == 0)) //this makes all our revolvers empty, as long as it has no ammo in it
+		. += "[initial(icon_state)]_empty"
 //Automatics
 /obj/item/gun/ballistic/automatic/ms13
 	name = "generic ms13 gun"
@@ -42,7 +43,19 @@
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	automatic = 2 //2 decisecond delay
 	force = 15
-	
+/obj/item/gun/ballistic/automatic/ms13/update_icon_state()
+	if(current_skin)
+		icon_state = "[unique_reskin[current_skin]][sawn_off ? "_sawn" : ""]"
+	else
+		icon_state = "[initial(icon_state)][sawn_off ? "_sawn" : ""]"
+	if(!chambered && magazine) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
+		. += "[initial(icon_state)]_mag_empty"
+	else if(!chambered && !magazine) //this makes all our rifles empty, the state with nothing
+		. += "[initial(icon_state)]_empty"
+	else if(chambered && !magazine) //this makes all our rifles chamberedy, the state with no magazine
+		. += "[initial(icon_state)]_cham_empty"
+	else if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
+		. += "[initial(icon_state)]"
 //Pistols
 /obj/item/gun/ballistic/automatic/pistol/ms13
 	name = "generic ms13 gun"
@@ -51,7 +64,17 @@
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	force = 10
-	
+/obj/item/gun/ballistic/automatic/pistol/ms13/update_icon_state()
+	if(!chambered && magazine) //this makes all our pistols empty, the state with a magazine, rifle not necassarily empty just not chambered
+		. += "[initial(icon_state)]_mag_empty"
+	else if(!chambered && !magazine) //this makes all our pistols empty, the state with nothing
+		. += "[initial(icon_state)]_empty"
+	else if(chambered && !magazine) //this makes all our pistols chambered, the state with no magazine
+		. += "[initial(icon_state)]_cham_empty"
+	else if(chambered && magazine) //this makes all our pistols full state when chambered and they have a magazine
+		. += "[initial(icon_state)]"
+	else if(!chambered && magazine && (magazine.ammo_count() == 0)) //this makes the pistol have the bolt/slide back if it shot all it's rounds
+		. += "[initial(icon_state)]_mag_empty"
 //Bolt-actions
 /obj/item/gun/ballistic/rifle/ms13
 	name = "generic ms13 gun"
@@ -61,7 +84,13 @@
 	internal_magazine = FALSE
 	tac_reloads = TRUE
 	force = 15
-
+/obj/item/gun/ballistic/rifle/ms13/update_icon_state()
+	if(!chambered && (magazine.ammo_count() == 0)) //if its not chambered and the magazine ammo_count is 0, its empty
+		. += "[initial(icon_state)]_empty"
+	if(!chambered) //if its not chambered bolt sprite open, cuz it may have bullets in but it's somehow not racked
+		. += "[initial(icon_state)]_empty"
+	else if(chambered) //round in the chamber and ready to fire, normal state
+		. += "[initial(icon_state)]"
 //Loaders/Ammo boxes
 /obj/item/ammo_box/ms13
 	name = "generic ms13 ammo box"

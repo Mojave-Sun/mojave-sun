@@ -1,16 +1,4 @@
 //Guns
-/obj/item/gun/ballistic/rifle/ms13
-	name = "mojave sun rifle"
-	desc = "A sturdy bolt action rifle, chambered in 308. and in use before... how the fuck are you seeing this?."
-	icon_state = "hunting"
-	inhand_icon_state = "hunting"
-	mag_type = /obj/item/ammo_box/magazine/ms13/r308
-	fire_sound = 'mojave/sound/ms13weapons/hunting_rifle.ogg'
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
-	extra_damage = 0
-	extra_penetration = 0
-	fire_delay = 0
 /obj/item/gun/ballistic/rifle/ms13/update_icon_state()
 	if(!chambered && (magazine.ammo_count() == 0)) //if its not chambered and the magazine ammo_count is 0, its empty
 		. += "[initial(icon_state)]_empty"

@@ -1,15 +1,4 @@
 //Guns
-/obj/item/gun/ballistic/automatic/pistol/ms13/update_icon_state()
-	if(!chambered && magazine) //this makes all our pistols empty, the state with a magazine, rifle not necassarily empty just not chambered
-		. += "[initial(icon_state)]_mag_empty"
-	else if(!chambered && !magazine) //this makes all our pistols empty, the state with nothing
-		. += "[initial(icon_state)]_empty"
-	else if(chambered && !magazine) //this makes all our pistols chambered, the state with no magazine
-		. += "[initial(icon_state)]_cham_empty"
-	else if(chambered && magazine) //this makes all our pistols full state when chambered and they have a magazine
-		. += "[initial(icon_state)]"
-	else if(!chambered && magazine && (magazine.ammo_count() == 0)) //this makes the pistol have the bolt/slide back if it shot all it's rounds
-		. += "[initial(icon_state)]_mag_empty"
 /obj/item/gun/ballistic/automatic/pistol/ms13/m10mm
 	name = "police 10mm pistol"
 	desc = "A pre-war 10mm pistol normally seen in the hands of law enforcement."

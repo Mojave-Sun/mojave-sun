@@ -1,26 +1,4 @@
 //Guns
-/obj/item/gun/ballistic/automatic/ms13
-	name = "this shouldn't exist"
-	desc = "what dum dum spawned this?"
-	icon_state = ""
-	inhand_icon_state = ""
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
-	slot_flags = 0
-/obj/item/gun/ballistic/automatic/ms13/update_icon_state()
-	if(current_skin)
-		icon_state = "[unique_reskin[current_skin]][sawn_off ? "_sawn" : ""]"
-	else
-		icon_state = "[initial(icon_state)][sawn_off ? "_sawn" : ""]"
-	if(!chambered && magazine) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
-		. += "[initial(icon_state)]_mag_empty"
-	else if(!chambered && !magazine) //this makes all our rifles empty, the state with nothing
-		. += "[initial(icon_state)]_empty"
-	else if(chambered && !magazine) //this makes all our rifles chamberedy, the state with no magazine
-		. += "[initial(icon_state)]_cham_empty"
-	else if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
-		. += "[initial(icon_state)]"
-
 /obj/item/gun/ballistic/automatic/ms13/smg45
 	name = ".45 submachine gun"
 	desc = "A classic .45 submachine gun that takes an expansive 50 round drum magazine."
