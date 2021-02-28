@@ -147,5 +147,4 @@
 
 /obj/item/ms13/crafting/gunpart/MakeCraftable()
 	AddElement(/datum/element/craftable, /obj/item/ms13/crafting/gunpart/other, /obj/item/gun/ballistic/shotgun/ms13/lever, 1, surface_type = /obj/structure/table/ms13/no_smooth/workbench)
-	AddElement(/datum/element/craftable, /obj/item/ms13/crafting/gunpart/other, /obj/item/gun/ballistic/shotgun/automatic/ms13/battle, 1, surface_type = /obj/structure/table/ms13/no_smooth/workbench)
 	AddElement(/datum/element/craftable, /obj/item/ms13/crafting/gunpart/other, /obj/item/gun/ballistic/shotgun/doublebarrel/improvised, 1)
