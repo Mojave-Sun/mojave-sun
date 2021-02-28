@@ -1,27 +1,27 @@
 /datum/element/craftable
 	element_flags = ELEMENT_BESPOKE
 	id_arg_index = 2
-	///The type of atom this creates when the processing recipe is used.
+	///The type of atom this creates when the crafting recipe is used.
 	var/result_atom_type
-	///The tool behaviour for this processing recipe
+	///The object used when attacked onto another.
 	var/crafting_object
-	///Time to process the atom
-	var/time_to_process
-	///Amount of the resulting actor this will create
+	///Time to craft the atom.
+	var/time_to_craft
+	///Amount of the resulting actor this will create.
 	var/amount_created
-	///The crafting noise the process will make
+	///The crafting noise the procedure will make.
 	var/crafting_sound
-	///If the atom requires a specific surface to be on to craft
+	///If the atom requires a specific surface to be on to craft.
 	var/surface_type ///obj/structure/table etc.
 
-/datum/element/craftable/Attach(datum/target, crafting_object, result_atom_type, amount_created = 1, time_to_process = 8 SECONDS, crafting_sound = "mojave/sound/ms13effects/crafting/ducttape.ogg", surface_type = null)
+/datum/element/craftable/Attach(datum/target, crafting_object, result_atom_type, amount_created = 1, time_to_craft = 8 SECONDS, crafting_sound = "mojave/sound/ms13effects/crafting/ducttape.ogg", surface_type = null)
 	. = ..()
 	if(!isatom(target))
 		return ELEMENT_INCOMPATIBLE
 
 	src.crafting_object = crafting_object
 	src.amount_created = amount_created
-	src.time_to_process = time_to_process
+	src.time_to_craft = time_to_craft
 	src.result_atom_type = result_atom_type
 	src.crafting_sound = crafting_sound
 	src.surface_type = surface_type
@@ -35,7 +35,7 @@
 /datum/element/craftable/proc/try_craft(datum/source, mob/living/user, obj/item/I, list/mutable_recipes)
 	SIGNAL_HANDLER
 
-	mutable_recipes += list(list(CRAFTING_RESULT = result_atom_type, CRAFTING_AMOUNT = amount_created, CRAFTING_TIME = time_to_process, CRAFTING_ITEM = source, CRAFTING_SOUND = crafting_sound, CRAFTING_SURFACE = surface_type))
+	mutable_recipes += list(list(CRAFTING_RESULT = result_atom_type, CRAFTING_AMOUNT = amount_created, CRAFTING_TIME = time_to_craft, CRAFTING_ITEM = source, CRAFTING_SOUND = crafting_sound, CRAFTING_SURFACE = surface_type))
 	return COMPONENT_NO_AFTERATTACK
 
 /atom/proc/craft(obj/item/I, mob/living/user)
@@ -56,9 +56,9 @@
 	//Otherwise, select one with a radial
 	ShowCraftingGui(user, I, crafting_recipes)
 
-///Creates the radial and processes the selected option
+///Creates the radial and crafts the selected option
 /atom/proc/ShowCraftingGui(mob/living/user, obj/item/I, list/crafting_options)
-	var/list/choices_to_options = list() //Dict of object name | dict of object processing settings
+	var/list/choices_to_options = list() //Crafting option names
 	var/list/choices = list()
 
 	for(var/b in crafting_options)
