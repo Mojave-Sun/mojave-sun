@@ -64,12 +64,16 @@
 /obj/item/gun/ballistic/rifle/ms13/hunting/scoped/amr/update_icon_state()
 	if(!chambered && magazine) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
 		icon_state = "[initial(icon_state)]_mag_empty"
-	else if(!chambered && !magazine) //this makes all our rifles empty, the state with nothing
+
+	if(!chambered && !magazine) //this makes all our rifles empty, the state with nothing
 		icon_state = "[initial(icon_state)]_empty"
-	else if(chambered && !magazine) //this makes all our rifles chamberedy, the state with no magazine
+
+	if(chambered && !magazine) //this makes all our rifles chamberedy, the state with no magazine
 		icon_state = "[initial(icon_state)]_cham_empty"
-	else if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
+
+	if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
 		icon_state = "[initial(icon_state)]"
+
 /obj/item/gun/ballistic/rifle/ms13/hunting/chinese
 	name = "\improper Chinese hunting rifle"
 	desc = "A Chinese bolt action hunting rifle, chambered in 7.62 with an internal magazine."

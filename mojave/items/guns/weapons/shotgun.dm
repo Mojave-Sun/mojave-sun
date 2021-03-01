@@ -15,7 +15,7 @@
 		icon_state = "[initial(icon_state)]_empty"
 	if(!chambered) //if its not chambered lever sprite open, cuz it may have bullets in but it's somehow not racked
 		icon_state = "[initial(icon_state)]_empty"
-	else if(chambered) //round in the chamber and ready to fire, normal state
+	if(chambered) //round in the chamber and ready to fire, normal state
 		icon_state = "[initial(icon_state)]"
 
 /obj/item/gun/ballistic/shotgun/ms13/huntingshot
@@ -34,7 +34,7 @@
 		icon_state = "[initial(icon_state)]_empty"
 	if(!chambered) //if its not chambered lever sprite open, cuz it may have bullets in but it's somehow not racked
 		icon_state = "[initial(icon_state)]_empty"
-	else if(chambered) //round in the chamber and ready to fire, normal state
+	if(chambered) //round in the chamber and ready to fire, normal state
 		icon_state = "[initial(icon_state)]"
 /obj/item/gun/ballistic/shotgun/ms13/lever/trail
 	name = "trail carbine"
@@ -100,7 +100,7 @@
 		icon_state = "[initial(icon_state)]_empty"
 	if(!chambered) //if its not chambered bolt sprite open, cuz it may have bullets in but it's somehow not racked
 		icon_state = "[initial(icon_state)]_empty"
-	else if(chambered) //round in the chamber and ready to fire, normal state
+	if(chambered) //round in the chamber and ready to fire, normal state
 		icon_state = "[initial(icon_state)]"
 /obj/item/gun/ballistic/shotgun/automatic/ms13/sks/scoped
 	name = "scoped European battle rifle"
