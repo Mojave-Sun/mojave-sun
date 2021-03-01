@@ -33,7 +33,7 @@
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	force = 10
 /obj/item/gun/ballistic/revolver/ms13/update_icon_state()
-	if((magazine.ammo_count() == 0)) //this makes all our revolvers empty, as long as it has no ammo in it
+	if(!get_ammo) //this makes all our revolvers empty, as long as it has no ammo in it
 		. += "[initial(icon_state)]_empty"
 //Automatics
 /obj/item/gun/ballistic/automatic/ms13
@@ -56,7 +56,6 @@
 		icon_state = "[initial(icon_state)]_cham_empty"
 	else if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
 		icon_state = "[initial(icon_state)]"
-//Pistols
 /obj/item/gun/ballistic/automatic/pistol/ms13
 	name = "generic ms13 gun"
 	desc = "complain when seeing this"
@@ -75,6 +74,12 @@
 		icon_state = "[initial(icon_state)]"
 	else if(!chambered && magazine && (magazine.ammo_count() == 0)) //this makes the pistol have the bolt/slide back if it shot all it's rounds
 		icon_state = "[initial(icon_state)]_mag_empty"
+	else if(!chambered && internal_magazine == TRUE && !get_ammo) //this makes the pistol have the chinese pistols update properly
+		icon_state = "[initial(icon_state)]_empty"
+	else if(chambered && internal_magazine == TRUE) //this makes the chinese pistol or similar appear loaded as long as it's chambered
+		icon_state = "[initial(icon_state)]"
+	else if(!chambered && !magazine && bolt_locked == FALSE) //this makes all our rifles chamberedy, the state with no magazine
+		icon_state = "[initial(icon_state)]_cham_empty"
 //Bolt-actions
 /obj/item/gun/ballistic/rifle/ms13
 	name = "generic ms13 gun"
@@ -85,9 +90,9 @@
 	tac_reloads = TRUE
 	force = 15
 /obj/item/gun/ballistic/rifle/ms13/update_icon_state()
-	if(!chambered && (magazine.ammo_count() == 0)) //if its not chambered and the magazine ammo_count is 0, its empty
+	if(!chambered && !get_ammo || bolt_locked == TRUE) //if its not chambered and the magazine ammo_count is 0, its empty
 		icon_state = "[initial(icon_state)]_empty"
-	if(!chambered) //if its not chambered bolt sprite open, cuz it may have bullets in but it's somehow not racked
+	if(!chambered || bolt_locked == TRUE) //if its not chambered bolt sprite open, cuz it may have bullets in but it's somehow not racked
 		icon_state = "[initial(icon_state)]_empty"
 	else if(chambered) //round in the chamber and ready to fire, normal state
 		icon_state = "[initial(icon_state)]"

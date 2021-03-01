@@ -32,6 +32,15 @@
 	extra_damage = 30
 	extra_penetration = 5
 	mag_type = /obj/item/ammo_box/magazine/ms13/r10
+/obj/item/gun/ballistic/rifle/ms13/varmint/ms13/update_icon_state()
+	if(!chambered && magazine) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
+		icon_state = "[initial(icon_state)]_mag_empty"
+	else if(!chambered && !magazine) //this makes all our rifles empty, the state with nothing
+		icon_state = "[initial(icon_state)]_empty"
+	else if(chambered && !magazine) //this makes all our rifles chamberedy, the state with no magazine
+		icon_state = "[initial(icon_state)]_cham_empty"
+	else if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
+		icon_state = "[initial(icon_state)]"
 /obj/item/gun/ballistic/rifle/ms13/varmint/ratslayer
 	name = "\improper Ratslayer"
 	desc = "A uniquely modified varmint rifle with improved rifling, a scope, and supressor attached."
@@ -52,6 +61,15 @@
 	fire_sound = 'mojave/sound/ms13weapons/amrfire.ogg'
 	fire_delay = 8
 	extra_damage = 60
+/obj/item/gun/ballistic/rifle/ms13/hunting/scoped/amr/update_icon_state()
+	if(!chambered && magazine) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
+		icon_state = "[initial(icon_state)]_mag_empty"
+	else if(!chambered && !magazine) //this makes all our rifles empty, the state with nothing
+		icon_state = "[initial(icon_state)]_empty"
+	else if(chambered && !magazine) //this makes all our rifles chamberedy, the state with no magazine
+		icon_state = "[initial(icon_state)]_cham_empty"
+	else if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
+		icon_state = "[initial(icon_state)]"
 /obj/item/gun/ballistic/rifle/ms13/hunting/chinese
 	name = "\improper Chinese hunting rifle"
 	desc = "A Chinese bolt action hunting rifle, chambered in 7.62 with an internal magazine."
@@ -63,14 +81,15 @@
 	extra_damage = 30
 /obj/item/gun/ballistic/rifle/ms13/hunting/arisaka
 	name = "Arisaka Type 99"
-	desc = "A really old pre-war rifle, chambered in .308 with an internal 5 round magazine."
+	desc = "An ancient pre-war rifle, chambered in .308 with an internal 5 round magazine."
 	icon_state = "arisaka"
 	inhand_icon_state = "arisaka"
 	internal_magazine = TRUE
 	mag_type = /obj/item/ammo_box/magazine/internal/ms13/arisaka
 	extra_damage = 45
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/sks/sks1.ogg'
-	rack_sound = 'mojave/sound/ms13weapons/gunsounds/arisaka/arisaka_bolt.ogg' ///proof kenobi is a hecking weeb
+	rack_sound = 'mojave/sound/ms13weapons/gunsounds/arisaka/ArisakaOpen.ogg' ///proof kenobi is a hecking weeb
+	bolt_drop_sound = 'mojave/sound/ms13weapons/gunsounds/arisaka/ArisakaClose.ogg'
 /obj/item/gun/ballistic/rifle/ms13/hunting/arisaka/scoped //not likely to ever be seen in game, more of an admin thing, dont map it in, it'd be slightly OP
 	name = "Scoped Arisaka Type 99"
 	desc = "A really old pre-war rifle, chambered in .308 with an internal 5 round magazine. This one has a scoped mounted to it."

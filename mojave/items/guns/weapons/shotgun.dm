@@ -29,7 +29,13 @@
 	weapon_weight = WEAPON_HEAVY
 	force = 30
 	fire_delay = 5
-
+/obj/item/gun/ballistic/shotgun/ms13/huntingshot/update_icon_state()
+	if(!chambered && (magazine.ammo_count() == 0)) //if its not chambered and the magazine ammo_count is 0, its empty
+		icon_state = "[initial(icon_state)]_empty"
+	if(!chambered) //if its not chambered lever sprite open, cuz it may have bullets in but it's somehow not racked
+		icon_state = "[initial(icon_state)]_empty"
+	else if(chambered) //round in the chamber and ready to fire, normal state
+		icon_state = "[initial(icon_state)]"
 /obj/item/gun/ballistic/shotgun/ms13/lever/trail
 	name = "trail carbine"
 	desc = "A lever action repeater chambered for .44 Magnum with a solid capacity."
