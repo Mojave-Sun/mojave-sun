@@ -32,15 +32,33 @@
 	extra_damage = 30
 	extra_penetration = 5
 	mag_type = /obj/item/ammo_box/magazine/ms13/r10
-/obj/item/gun/ballistic/rifle/ms13/varmint/ms13/update_icon_state()
+/obj/item/gun/ballistic/rifle/ms13/varmint/update_icon_state()
 	if(!chambered && magazine) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
 		icon_state = "[initial(icon_state)]_mag_empty"
-	else if(!chambered && !magazine) //this makes all our rifles empty, the state with nothing
+
+	if(!chambered && magazine && bolt_locked == TRUE) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
+		icon_state = "[initial(icon_state)]_mag_empty"
+
+	if(!chambered && !magazine && bolt_locked == TRUE) //this makes all our rifles empty, the state with nothing
 		icon_state = "[initial(icon_state)]_empty"
-	else if(chambered && !magazine) //this makes all our rifles chamberedy, the state with no magazine
+
+	if(!chambered && !magazine && bolt_locked == FALSE)
 		icon_state = "[initial(icon_state)]_cham_empty"
-	else if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
+
+	if(!chambered && !magazine && bolt_locked == FALSE)
+		icon_state = "[initial(icon_state)]_cham_empty"
+
+	if(chambered && !magazine && bolt_locked == FALSE) //this makes all our rifles chamberedy, the state with no magazine
+		icon_state = "[initial(icon_state)]_cham_empty"
+
+	if(chambered && !magazine && bolt_locked == TRUE) //this makes all our rifles chamberedy, the state with no magazine
+		icon_state = "[initial(icon_state)]_empty"
+
+	if(chambered && magazine && bolt_locked == FALSE) //this makes all our rifles full state when chambered and they have a magazine
 		icon_state = "[initial(icon_state)]"
+
+	if(chambered && magazine && bolt_locked == TRUE) //this makes all our rifles full state when chambered and they have a magazine
+		icon_state = "[initial(icon_state)]_mag_empty"
 /obj/item/gun/ballistic/rifle/ms13/varmint/ratslayer
 	name = "\improper Ratslayer"
 	desc = "A uniquely modified varmint rifle with improved rifling, a scope, and supressor attached."
@@ -65,14 +83,29 @@
 	if(!chambered && magazine) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
 		icon_state = "[initial(icon_state)]_mag_empty"
 
-	if(!chambered && !magazine) //this makes all our rifles empty, the state with nothing
+	if(!chambered && magazine && bolt_locked == TRUE) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
+		icon_state = "[initial(icon_state)]_mag_empty"
+
+	if(!chambered && !magazine && bolt_locked == TRUE) //this makes all our rifles empty, the state with nothing
 		icon_state = "[initial(icon_state)]_empty"
 
-	if(chambered && !magazine) //this makes all our rifles chamberedy, the state with no magazine
+	if(!chambered && !magazine && bolt_locked == FALSE)
 		icon_state = "[initial(icon_state)]_cham_empty"
 
-	if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
+	if(!chambered && !magazine && bolt_locked == FALSE)
+		icon_state = "[initial(icon_state)]_cham_empty"
+
+	if(chambered && !magazine && bolt_locked == FALSE) //this makes all our rifles chamberedy, the state with no magazine
+		icon_state = "[initial(icon_state)]_cham_empty"
+
+	if(chambered && !magazine && bolt_locked == TRUE) //this makes all our rifles chamberedy, the state with no magazine
+		icon_state = "[initial(icon_state)]_empty"
+
+	if(chambered && magazine && bolt_locked == FALSE) //this makes all our rifles full state when chambered and they have a magazine
 		icon_state = "[initial(icon_state)]"
+
+	if(chambered && magazine && bolt_locked == TRUE) //this makes all our rifles full state when chambered and they have a magazine
+		icon_state = "[initial(icon_state)]_mag_empty"
 
 /obj/item/gun/ballistic/rifle/ms13/hunting/chinese
 	name = "\improper Chinese hunting rifle"

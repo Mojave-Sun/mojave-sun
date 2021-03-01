@@ -11,7 +11,7 @@
 	force = 25
 	fire_delay = 5
 /obj/item/gun/ballistic/shotgun/ms13/lever/update_icon_state()
-	if(!chambered && (magazine.ammo_count() == 0)) //if its not chambered and the magazine ammo_count is 0, its empty
+	if(!chambered && magazine.stored_ammo == 0) //if its not chambered and the magazine ammo_count is 0, its empty
 		icon_state = "[initial(icon_state)]_empty"
 	if(!chambered) //if its not chambered lever sprite open, cuz it may have bullets in but it's somehow not racked
 		icon_state = "[initial(icon_state)]_empty"
@@ -30,7 +30,7 @@
 	force = 30
 	fire_delay = 5
 /obj/item/gun/ballistic/shotgun/ms13/huntingshot/update_icon_state()
-	if(!chambered && (magazine.ammo_count() == 0)) //if its not chambered and the magazine ammo_count is 0, its empty
+	if(!chambered && magazine.stored_ammo == 0) //if its not chambered and the magazine ammo_count is 0, its empty
 		icon_state = "[initial(icon_state)]_empty"
 	if(!chambered) //if its not chambered lever sprite open, cuz it may have bullets in but it's somehow not racked
 		icon_state = "[initial(icon_state)]_empty"
@@ -96,7 +96,7 @@
 	extra_penetration = 10
 	empty_indicator = TRUE
 /obj/item/gun/ballistic/shotgun/automatic/ms13/sks/update_icon_state()
-	if(!chambered && get_ammo() == 0) //if its not chambered and the magazine ammo_count is 0, its empty
+	if(!chambered && magazine.stored_ammo == 0) //if its not chambered and the magazine ammo_count is 0, its empty
 		icon_state = "[initial(icon_state)]_empty"
 	if(!chambered) //if its not chambered bolt sprite open, cuz it may have bullets in but it's somehow not racked
 		icon_state = "[initial(icon_state)]_empty"
