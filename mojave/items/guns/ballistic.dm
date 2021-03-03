@@ -83,12 +83,6 @@
 	if(!chambered && magazine && magazine.stored_ammo == 0) //this makes the pistol have the bolt/slide back if it shot all it's rounds
 		icon_state = "[initial(icon_state)]_mag_empty"
 
-	if(!chambered && internal_magazine == TRUE && (magazine.ammo_count() == 0)) //this makes the pistol have the chinese pistols update properly
-		icon_state = "[initial(icon_state)]_empty"
-
-	if(chambered && internal_magazine == TRUE) //this makes the chinese pistol or similar appear loaded as long as it's chambered
-		icon_state = "[initial(icon_state)]"
-
 	if(!chambered && !magazine && bolt_locked == FALSE) //this makes all our rifles chambered, the state with no magazine
 		icon_state = "[initial(icon_state)]_cham_empty"
 //Bolt-actions

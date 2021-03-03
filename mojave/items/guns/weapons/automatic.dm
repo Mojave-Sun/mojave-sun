@@ -223,6 +223,18 @@
 	extra_damage = 40
 	extra_penetration = 15
 	mag_type = /obj/item/ammo_box/magazine/ms13/r308_10
+/obj/item/gun/ballistic/automatic/ms13/marksman/battle/update_icon_state()
+	if(!chambered && magazine) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
+		icon_state = "[initial(icon_state)]_mag_empty"
+
+	if(!chambered && !magazine) //this makes all our rifles empty, the state with nothing
+		icon_state = "[initial(icon_state)]_empty"
+
+	if(chambered && !magazine) //this makes all our rifles chamberedy, the state with no magazine
+		icon_state = "[initial(icon_state)]_cham_empty"
+
+	if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
+		icon_state = "[initial(icon_state)]"
 
 /obj/item/gun/ballistic/automatic/ms13/marksman/battle/rangemaster
 	name = "\improper Rangemaster"
