@@ -29,7 +29,7 @@
 	extra_penetration = 0
 	internal_magazine = TRUE
 /obj/item/gun/ballistic/automatic/pistol/ms13/m10mm/chinese/update_icon_state()
-	if(!chambered && internal_magazine == TRUE && (magazine.stored_ammo() == 0)) //this makes the pistol have the chinese pistols update properly
+	if(!chambered && internal_magazine == TRUE && magazine.stored_ammo == 0) //this makes the pistol have the chinese pistols update properly
 		icon_state = "[initial(icon_state)]_empty"
 
 	if(chambered && internal_magazine == TRUE) //this makes the chinese pistol or similar appear loaded as long as it's chambered
