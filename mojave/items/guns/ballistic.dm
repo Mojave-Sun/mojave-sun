@@ -33,7 +33,11 @@
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	force = 10
 /obj/item/gun/ballistic/revolver/ms13/update_icon_state()
-	if(magazine.stored_ammo == 0) //this makes all our revolvers empty, as long as it has no ammo in it
+	if(!chambered && magazine.stored_ammo == 0) //this makes all our revolvers empty, as long as it has no ammo in it
+		icon_state = "[initial(icon_state)]_empty"
+	else
+		icon_state = "[initial(icon_state)]"
+	if(!chambered) //this makes all our revolvers empty, as long as it has no ammo in it
 		icon_state = "[initial(icon_state)]_empty"
 	else
 		icon_state = "[initial(icon_state)]"
