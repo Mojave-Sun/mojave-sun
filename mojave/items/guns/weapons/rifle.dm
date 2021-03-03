@@ -83,28 +83,25 @@
 	if(!chambered && magazine) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
 		icon_state = "[initial(icon_state)]_mag_empty"
 
-	if(!chambered && magazine && bolt_locked == TRUE) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered
+	if(!chambered && magazine && bolt_locked == TRUE) //this makes all our rifles empty, the state with a magazine, rifle bolt open
 		icon_state = "[initial(icon_state)]_mag_empty"
 
-	if(!chambered && !magazine && bolt_locked == TRUE) //this makes all our rifles empty, the state with nothing
+	if(!chambered && !magazine && bolt_locked == TRUE) //this makes all our rifles empty, the state with nothing, bolt open
 		icon_state = "[initial(icon_state)]_empty"
 
-	if(!chambered && !magazine && bolt_locked == FALSE)
+	if(!chambered && !magazine && bolt_locked == FALSE) //no mag bolt closed
 		icon_state = "[initial(icon_state)]_cham_empty"
 
-	if(!chambered && !magazine && bolt_locked == FALSE)
+	if(chambered && !magazine && bolt_locked == FALSE) //this makes all our rifles chambered, the state with no magazine, bolt closed
 		icon_state = "[initial(icon_state)]_cham_empty"
 
-	if(chambered && !magazine && bolt_locked == FALSE) //this makes all our rifles chamberedy, the state with no magazine
-		icon_state = "[initial(icon_state)]_cham_empty"
-
-	if(chambered && !magazine && bolt_locked == TRUE) //this makes all our rifles chamberedy, the state with no magazine
+	if(chambered && !magazine && bolt_locked == TRUE) //this makes all our rifles chambered, the state with no magazine, bolt open
 		icon_state = "[initial(icon_state)]_empty"
 
-	if(chambered && magazine && bolt_locked == FALSE) //this makes all our rifles full state when chambered and they have a magazine
+	if(chambered && magazine && bolt_locked == FALSE) //this makes all our rifles full state when chambered and they have a magazine, bolt closed
 		icon_state = "[initial(icon_state)]"
 
-	if(chambered && magazine && bolt_locked == TRUE) //this makes all our rifles full state when chambered and they have a magazine
+	if(chambered && magazine && bolt_locked == TRUE) //this makes all our rifles full state when chambered and they have a magazine, bolt open
 		icon_state = "[initial(icon_state)]_mag_empty"
 
 /obj/item/gun/ballistic/rifle/ms13/hunting/chinese

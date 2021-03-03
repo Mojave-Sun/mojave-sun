@@ -101,17 +101,17 @@
 	tac_reloads = TRUE
 	force = 15
 /obj/item/gun/ballistic/rifle/ms13/update_icon_state()
-	if(!chambered && magazine.stored_ammo == 0 && bolt_locked == TRUE) //if its not chambered and the magazine ammo_count is 0, its empty
+	if(!chambered && bolt_locked == TRUE) //this makes all our rifles empty, rifle bolt open
 		icon_state = "[initial(icon_state)]_empty"
 
-	if(!chambered && bolt_locked == TRUE) //if its not chambered bolt sprite open, cuz it may have bullets in but it's somehow not racked
-		icon_state = "[initial(icon_state)]_empty"
-
-	if(chambered && bolt_locked == TRUE) //round in the chamber but bolt open, normal state
-		icon_state = "[initial(icon_state)]_empty"
-
-	if(chambered && bolt_locked == FALSE) //round in the chamber and ready to fire, normal state
+	if(!chambered && bolt_locked == FALSE) //bolt closed
 		icon_state = "[initial(icon_state)]"
+
+	if(chambered && bolt_locked == FALSE) //this makes all our rifles chambered, bolt closed
+		icon_state = "[initial(icon_state)]"
+
+	if(chambered && bolt_locked == TRUE) //this makes all our rifles chambered, bolt open
+		icon_state = "[initial(icon_state)]_empty"
 //Loaders/Ammo boxes
 /obj/item/ammo_box/ms13
 	name = "generic ms13 ammo box"
