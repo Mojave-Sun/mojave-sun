@@ -112,7 +112,6 @@
 	return
 
 /obj/structure/chair/ms13/overlaypickup/proc/GetArmrest()
-	. = ..()
 	return mutable_appearance(icon, armrest_icon)
 
 /obj/structure/chair/ms13/overlaypickup/Destroy()
@@ -125,7 +124,6 @@
 	update_armrest()
 
 /obj/structure/chair/ms13/overlaypickup/proc/update_armrest()
-	. = ..()
 	if(has_buckled_mobs())
 		add_overlay(armrest)
 	else
