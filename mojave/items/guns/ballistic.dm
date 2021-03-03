@@ -34,7 +34,9 @@
 	force = 10
 /obj/item/gun/ballistic/revolver/ms13/update_icon_state()
 	if(magazine.stored_ammo == 0) //this makes all our revolvers empty, as long as it has no ammo in it
-		. += "[initial(icon_state)]_empty"
+		icon_state = "[initial(icon_state)]_empty"
+	else
+		icon_state = "[initial(icon_state)]"
 //Automatics
 /obj/item/gun/ballistic/automatic/ms13
 	name = "generic ms13 gun"
