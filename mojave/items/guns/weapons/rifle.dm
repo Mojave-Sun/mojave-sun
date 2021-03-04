@@ -103,6 +103,7 @@
 
 	if(chambered && magazine && bolt_locked == TRUE) //this makes all our rifles full state when chambered and they have a magazine, bolt open
 		icon_state = "[initial(icon_state)]_mag_empty"
+		////yes this has extensive ammounts, some might be unecassary but are in place as a failsafe
 
 /obj/item/gun/ballistic/rifle/ms13/hunting/chinese
 	name = "\improper Chinese hunting rifle"
@@ -113,24 +114,46 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/ms13/chinese_rifle
 	fire_sound = 'mojave/sound/ms13weapons/hunting_rifle.ogg'
 	extra_damage = 30
+
 /obj/item/gun/ballistic/rifle/ms13/hunting/arisaka
-	name = "Arisaka Type 99"
+	name = "arisaka type 99"
 	desc = "An ancient pre-war rifle, chambered in .308 with an internal 5 round magazine."
 	icon_state = "arisaka"
 	inhand_icon_state = "arisaka"
 	internal_magazine = TRUE
 	mag_type = /obj/item/ammo_box/magazine/internal/ms13/arisaka
 	extra_damage = 45
-	fire_sound = 'mojave/sound/ms13weapons/gunsounds/sks/sks1.ogg'
+	fire_sound = 'mojave/sound/ms13weapons/hunting_rifle.ogg'
 	rack_sound = 'mojave/sound/ms13weapons/gunsounds/arisaka/ArisakaOpen.ogg' ///proof kenobi is a hecking weeb
 	bolt_drop_sound = 'mojave/sound/ms13weapons/gunsounds/arisaka/ArisakaClose.ogg'
+
 /obj/item/gun/ballistic/rifle/ms13/hunting/arisaka/scoped //not likely to ever be seen in game, more of an admin thing, dont map it in, it'd be slightly OP
-	name = "Scoped Arisaka Type 99"
+	name = "scoped arisaka type 99"
 	desc = "A really old pre-war rifle, chambered in .308 with an internal 5 round magazine. This one has a scoped mounted to it."
 	icon_state = "scoped_arisaka"
 	inhand_icon_state = "scoped_arisaka"
 	zoom_amt = 10
 	zoom_out_amt = 14
+
+/obj/item/gun/ballistic/rifle/ms13/hunting/battlerifle
+	name = "\improper Chinese hunting rifle"
+	desc = "A Chinese bolt action hunting rifle, chambered in 7.62 with an internal magazine."
+	icon_state = "battlerifle"
+	inhand_icon_state = "battlerifle"
+	bolt_type == BOLT_TYPE_NO_BOLT
+	empty_alarm = TRUE
+	semi_auto = TRUE
+	internal_magazine = FALSE
+	mag_type = /obj/item/ammo_box/magazine/ms13/r308/battlerifle
+	fire_sound = 'mojave/sound/ms13weapons/battlerifle.ogg'
+	empty_alarm_sound = 'mojave/sound/ms13weapons/battlerifleunload.ogg'
+	extra_damage = 20
+/obj/item/gun/ballistic/rifle/ms13/hunting/battlerifle/proc/postfire_empty_checks(last_shot_succeeded)
+	if (!chambered && !get_ammo())
+		if (empty_alarm && last_shot_succeeded)
+			playsound(src, empty_alarm_sound, empty_alarm_volume, empty_alarm_vary)
+			eject_magazine()
+			update_icon()
 //Magazines
 /obj/item/ammo_box/magazine/ms13/r10
 	name = "10 round magazine (5.56mm)"
@@ -172,6 +195,14 @@
 	ammo_type = /obj/item/ammo_casing/ms13/a308
 	caliber = "a308"
 	max_ammo = 5
+
+/obj/item/ammo_box/magazine/ms13/r308/battlerifle
+	name = "8 round enbloc magazine (.308)"
+	icon_state = "battler"
+	ammo_type = /obj/item/ammo_casing/ms13/a308
+	caliber = "a308"
+	max_ammo = 8
+	multiple_sprites = 8
 
 //Loaders
 

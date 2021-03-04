@@ -29,10 +29,10 @@
 	extra_penetration = 0
 	internal_magazine = TRUE
 /obj/item/gun/ballistic/automatic/pistol/ms13/m10mm/chinese/update_icon_state()
-	if(!chambered && internal_magazine == TRUE && magazine.stored_ammo == 0) //this makes the pistol have the chinese pistols update properly
+	if(!chambered && internal_magazine == TRUE && magazine.stored_ammo == 0) //this makes the pistol have the chinese pistol update when empty, code can be copied to similar pistols
 		icon_state = "[initial(icon_state)]_empty"
 
-	if(chambered && internal_magazine == TRUE) //this makes the chinese pistol or similar appear loaded as long as it's chambered
+	if(chambered && internal_magazine == TRUE) //this makes the chinese pistol or subtypes appear loaded as long as it's chambered
 		icon_state = "[initial(icon_state)]"
 /obj/item/gun/ballistic/automatic/pistol/ms13/m10mm/chinese/v420
 	name = "v420 Chinese pistol"
@@ -54,6 +54,7 @@
 	fire_delay = 4
 	extra_damage = 20
 	extra_penetration = 5
+
 /obj/item/gun/ballistic/automatic/pistol/ms13/m9mm/nambu
 	name = "Nambu type 14"
 	desc = "An unreliable ancient pre-war pistol chambered in 9mm nambu."
@@ -65,6 +66,7 @@
 	fire_delay = 3
 	extra_damage = 25
 	extra_penetration = 5
+
 /obj/item/gun/ballistic/automatic/pistol/ms13/m12mm
 	name = "12.7mm pistol"
 	desc = "A pre-war, heavy duty European pistol chambered in 12.7mm. Might not look like it, but it can do some real damage."

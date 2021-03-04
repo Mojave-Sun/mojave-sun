@@ -37,7 +37,7 @@
 		icon_state = "[initial(icon_state)]_empty"
 	else
 		icon_state = "[initial(icon_state)]"
-	if(!chambered) //this makes all our revolvers empty, as long as it has no ammo in it
+	if(!chambered) //this makes all our revolvers empty, as long as it has no ammo in it, this is a failsafe in case stored_ammo decided not to work
 		icon_state = "[initial(icon_state)]_empty"
 	else
 		icon_state = "[initial(icon_state)]"
@@ -65,7 +65,7 @@
 
 	if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
 		icon_state = "[initial(icon_state)]"
-
+		//note this also applies to the SMG's
 /obj/item/gun/ballistic/automatic/pistol/ms13
 	name = "generic ms13 gun"
 	desc = "complain when seeing this"
@@ -74,22 +74,22 @@
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	force = 10
 /obj/item/gun/ballistic/automatic/pistol/ms13/update_icon_state()
-	if(!chambered && magazine) //this makes all our pistols empty, the state with a magazine, rifle not necassarily empty just not chambered
+	if(!chambered && magazine) //this makes all our pistols empty, the state with a magazine, not necassarily empty just not chambered
 		icon_state = "[initial(icon_state)]_mag_empty"
 
-	if(!chambered && !magazine) //this makes all our pistols empty, the state with nothing
+	if(!chambered && !magazine) //this makes all our pistols empty, the state with nothing, no mag no bullets
 		icon_state = "[initial(icon_state)]_empty"
 
-	if(chambered && !magazine) //this makes all our pistols chambered, the state with no magazine
+	if(chambered && !magazine) //this makes all our pistols chambered, the state with no magazine, but still a round in the chamber
 		icon_state = "[initial(icon_state)]_cham_empty"
 
 	if(chambered && magazine) //this makes all our pistols full state when chambered and they have a magazine
 		icon_state = "[initial(icon_state)]"
 
-	if(!chambered && magazine && magazine.stored_ammo == 0) //this makes the pistol have the bolt/slide back if it shot all it's rounds
+	if(!chambered && magazine && magazine.stored_ammo == 0) //this makes the pistol have the bolt/slide back if it shot all it's rounds, semi-auto go brrrr
 		icon_state = "[initial(icon_state)]_mag_empty"
 
-	if(!chambered && !magazine && bolt_locked == FALSE) //this makes all our rifles chambered, the state with no magazine
+	if(!chambered && !magazine && bolt_locked == FALSE) //this makes the pistol bolt be back when you unchamber a round, the state with no magazine
 		icon_state = "[initial(icon_state)]_cham_empty"
 //Bolt-actions
 /obj/item/gun/ballistic/rifle/ms13
