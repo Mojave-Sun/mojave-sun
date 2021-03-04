@@ -140,7 +140,7 @@
 	desc = "A Chinese bolt action hunting rifle, chambered in 7.62 with an internal magazine."
 	icon_state = "battlerifle"
 	inhand_icon_state = "battlerifle"
-	bolt_type == BOLT_TYPE_NO_BOLT
+	bolt_type = BOLT_TYPE_NO_BOLT
 	empty_alarm = TRUE
 	semi_auto = TRUE
 	internal_magazine = FALSE
@@ -148,12 +148,6 @@
 	fire_sound = 'mojave/sound/ms13weapons/battlerifle.ogg'
 	empty_alarm_sound = 'mojave/sound/ms13weapons/battlerifleunload.ogg'
 	extra_damage = 20
-/obj/item/gun/ballistic/rifle/ms13/hunting/battlerifle/proc/postfire_empty_checks(last_shot_succeeded)
-	if (!chambered && !get_ammo())
-		if (empty_alarm && last_shot_succeeded)
-			playsound(src, empty_alarm_sound, empty_alarm_volume, empty_alarm_vary)
-			eject_magazine()
-			update_icon()
 //Magazines
 /obj/item/ammo_box/magazine/ms13/r10
 	name = "10 round magazine (5.56mm)"
