@@ -136,8 +136,8 @@
 	zoom_out_amt = 14
 
 /obj/item/gun/ballistic/rifle/ms13/hunting/battlerifle
-	name = "\improper Chinese hunting rifle"
-	desc = "A Chinese bolt action hunting rifle, chambered in 7.62 with an internal magazine."
+	name = "This Machine"
+	desc = "An ancient pre-war rifle design thats still reliable, using an 8 round enbloc magazine chambered in .308."
 	icon_state = "battlerifle"
 	inhand_icon_state = "battlerifle"
 	bolt_type = BOLT_TYPE_NO_BOLT
@@ -147,7 +147,7 @@
 	mag_type = /obj/item/ammo_box/magazine/ms13/r308/battlerifle
 	fire_sound = 'mojave/sound/ms13weapons/battlerifle.ogg'
 	empty_alarm_sound = 'mojave/sound/ms13weapons/battlerifleunload.ogg'
-	extra_damage = 20
+	extra_damage = 45
 //Magazines
 /obj/item/ammo_box/magazine/ms13/r10
 	name = "10 round magazine (5.56mm)"
