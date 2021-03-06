@@ -53,7 +53,7 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 	modify_thirst(modify_by = rate_of_thirst)
 	//Nice and hardcoded for now, probably
 	var/mob/living/the_parent = parent
-	if(the_parent.has_reagent(/datum/reagent/water))
+	if(the_parent.has_reagent(/datum/reagent/water) && the_parent.reagents.get_reagent(/datum/reagent/water))
 		var/datum/reagent/water/water = the_parent.reagents.get_reagent(/datum/reagent/water) //Modify metabolism rate here so don't need to edit base files
 		water.metabolization_rate = 0 // Stop water metabolization, we'll take it from here
 		modify_thirst(modify_by = min(the_parent.reagents.get_reagent_amount(/datum/reagent/water) * SECONDS_OF_LIFE_PER_WATER_U, SECONDS_OF_LIFE_PER_WATER_U * 5)) //NO MICRODOSING, "metabolizes" 5 units of water per 1 second for +25 thirst
@@ -80,7 +80,7 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 	if ((stage_of_dehydration != 5) && (curr_thirst < ((length(GLOB.dehydration_stage_examine) - (stage_of_dehydration)) * ((max_thirst / 2) / length(GLOB.dehydration_stage_examine)))))
 		modify_stage(modify_by = 1)
 	else
-		if((stage_of_dehydration != 1) && curr_thirst > ((length(GLOB.dehydration_stage_examine) - (stage_of_dehydration)) * ((max_thirst / 2) / length(GLOB.dehydration_stage_examine))) + 1)
+		if((stage_of_dehydration != 1) && (curr_thirst > ((length(GLOB.dehydration_stage_examine) - (stage_of_dehydration + 1)) * ((max_thirst / 2) / length(GLOB.dehydration_stage_examine)))))
 			modify_stage(modify_by = -1)
 
 ///Modifies stage of dehydration VIA += while also displaying a message and a popup alert to the parent
