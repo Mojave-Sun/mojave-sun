@@ -34,20 +34,23 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 	if(iscyborg(parent) || !isliving(parent))
 		return COMPONENT_INCOMPATIBLE
 	max_thirst = thirst_limit
-	curr_thirst = start_thirst
 	rate_of_thirst = thirst_rate
 	stage_to_text = stage_flavor_text
 	stage_to_alert = stages_to_alerts
 	stage_of_dehydration = 1
 	var/mob/the_parent = parent
-	the_parent.throw_alert("thirst", stage_to_alert[stage_of_dehydration]) //Not thirsty at all
-
+	modify_thirst(modify_by = start_thirst)
 	RegisterSignal(parent, COMSIG_PARENT_EXAMINE, .proc/on_examine)
 	START_PROCESSING(SSdcs, src)
+	if(stage_of_dehydration == 1) //Still the same after modifying thirst? throw the alert
+		the_parent.throw_alert("thirst", stage_to_alert[stage_of_dehydration])
+
 
 /datum/element/thirst/Detach(datum/target)
 	. = ..()
 	UnregisterSignal(target, COMSIG_PARENT_EXAMINE)
+	var/mob/living/carbon/the_target = target
+	the_target.clear_alert("thirst")
 
 /datum/component/thirst/process()
 	modify_thirst(modify_by = rate_of_thirst)
@@ -77,17 +80,17 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 /datum/component/thirst/proc/modify_thirst(modify_by = 0)
 	curr_thirst = clamp(curr_thirst + modify_by, 0, max_thirst)
 	//If thirst_limit is 2400, then 5 stages of dehydration means stage 2 is triggered at 720; stage 3 at 480; stage 4 at 240 etc. aiming for last stage to be at 0
-	if ((stage_of_dehydration != 5) && (curr_thirst < ((length(GLOB.dehydration_stage_examine) - (stage_of_dehydration)) * ((max_thirst / 2) / length(GLOB.dehydration_stage_examine)))))
+	if ((stage_of_dehydration != length(stage_to_text)) && ((curr_thirst <= ((length(stage_to_text) - (stage_of_dehydration)) * ((max_thirst / 2) / length(stage_to_text))))))
 		modify_stage(modify_by = 1)
 	else
-		if((stage_of_dehydration != 1) && (curr_thirst > ((length(GLOB.dehydration_stage_examine) - (stage_of_dehydration + 1)) * ((max_thirst / 2) / length(GLOB.dehydration_stage_examine)))))
+		if((stage_of_dehydration != 1) && ((curr_thirst > ((length(stage_to_text) - (stage_of_dehydration + 1)) * ((max_thirst / 2) / length(stage_to_text))))))
 			modify_stage(modify_by = -1)
 
 ///Modifies stage of dehydration VIA += while also displaying a message and a popup alert to the parent
 /datum/component/thirst/proc/modify_stage(modify_by = 0)
 	if(!modify_by)
 		return
-	stage_of_dehydration = clamp(stage_of_dehydration + modify_by, 1, length(GLOB.dehydration_stage_examine))
+	stage_of_dehydration = clamp(stage_of_dehydration + modify_by, 1, length(stage_to_text))
 	to_chat(parent, "You feel [stage_to_text[stage_of_dehydration]].")
 	var/mob/the_parent = parent
 	the_parent.clear_alert("thirst")
