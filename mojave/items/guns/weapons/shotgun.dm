@@ -10,6 +10,13 @@
 	weapon_weight = WEAPON_HEAVY
 	force = 25
 	fire_delay = 5
+/obj/item/gun/ballistic/shotgun/ms13/lever/update_icon_state()
+	if(!chambered && magazine.stored_ammo == 0) //if its not chambered and the magazine ammo_count is 0, its empty
+		icon_state = "[initial(icon_state)]_empty"
+	if(!chambered) //if its not chambered lever sprite open, cuz it may have bullets in but it's somehow not racked
+		icon_state = "[initial(icon_state)]_empty"
+	if(chambered) //round in the chamber and ready to fire, normal state
+		icon_state = "[initial(icon_state)]"
 
 /obj/item/gun/ballistic/shotgun/ms13/huntingshot
 	name = "hunting shotgun"
@@ -22,8 +29,14 @@
 	weapon_weight = WEAPON_HEAVY
 	force = 30
 	fire_delay = 5
-
-/obj/item/gun/ballistic/shotgun/ms13/trail
+/obj/item/gun/ballistic/shotgun/ms13/huntingshot/update_icon_state()
+	if(!chambered && magazine.stored_ammo == 0) //if its not chambered and the magazine ammo_count is 0, its empty
+		icon_state = "[initial(icon_state)]_empty"
+	if(!chambered) //if its not chambered lever sprite open, cuz it may have bullets in but it's somehow not racked
+		icon_state = "[initial(icon_state)]_empty"
+	if(chambered) //round in the chamber and ready to fire, normal state
+		icon_state = "[initial(icon_state)]"
+/obj/item/gun/ballistic/shotgun/ms13/lever/trail
 	name = "trail carbine"
 	desc = "A lever action repeater chambered for .44 Magnum with a solid capacity."
 	icon_state = "trail"
@@ -36,8 +49,9 @@
 	extra_damage = 40
 	extra_penetration = 10
 	force = 15
+	empty_indicator = TRUE
 
-/obj/item/gun/ballistic/shotgun/ms13/cowboy
+/obj/item/gun/ballistic/shotgun/ms13/lever/cowboy
 	name = "cowboy repeater"
 	desc = "A classic lever action repeater chambered for .357."
 	icon_state = "cowboy"
@@ -50,8 +64,9 @@
 	extra_damage = 35
 	extra_penetration = 10
 	force = 15
+	empty_indicator = TRUE
 
-/obj/item/gun/ballistic/shotgun/ms13/brush
+/obj/item/gun/ballistic/shotgun/ms13/lever/brush
 	name = "brush gun"
 	desc = "A lever action repeater chambered for the deadly .45-70 cartridge. Can't carry a lot of rounds and doesn't fire very fast, but with so much damage does that really matter?"
 	icon_state = "brush"
@@ -64,6 +79,7 @@
 	extra_damage = 55
 	extra_penetration = 10
 	force = 15
+	empty_indicator = TRUE
 
 
 /obj/item/gun/ballistic/shotgun/automatic/ms13/sks
@@ -78,8 +94,14 @@
 	fire_delay = 5
 	extra_damage = 30
 	extra_penetration = 10
-
-
+	empty_indicator = TRUE
+/obj/item/gun/ballistic/shotgun/automatic/ms13/sks/update_icon_state()
+	if(!chambered && magazine.stored_ammo == 0) //if its not chambered and the magazine ammo_count is 0, its empty
+		icon_state = "[initial(icon_state)]_empty"
+	if(!chambered) //if its not chambered bolt sprite open, cuz it may have bullets in but it's somehow not racked
+		icon_state = "[initial(icon_state)]_empty"
+	if(chambered) //round in the chamber and ready to fire, normal state
+		icon_state = "[initial(icon_state)]"
 /obj/item/gun/ballistic/shotgun/automatic/ms13/sks/scoped
 	name = "scoped European battle rifle"
 	desc = "A European battle rifle with a scope attached and some improved rifling for better penetration."
@@ -89,7 +111,7 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
-
+	empty_indicator = TRUE
 //Magazines
 /obj/item/ammo_box/magazine/internal/shot/ms13/tube4570
 	name = "4570 internal tube magazine"
