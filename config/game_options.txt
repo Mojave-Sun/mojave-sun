@@ -89,7 +89,7 @@ ALERT_DELTA Destruction of the station is imminent. All crew are instructed to o
 ## Default probablity is 1, increase to make that mode more likely to be picked.
 ## Set to 0 to disable that mode.
 
-PROBABILITY TRAITOR 0
+PROBABILITY TRAITOR 0 //MS EDIT START
 PROBABILITY TRAITORBRO 0
 PROBABILITY TRAITORCHAN 0
 PROBABILITY INTERNAL_AFFAIRS 0
@@ -101,7 +101,7 @@ PROBABILITY WIZARD 0
 PROBABILITY MONKEY 0
 PROBABILITY METEOR 0
 PROBABILITY EXTENDED 0
-PROBABILITY SECRET_EXTENDED 1000000 #MOJAVE SUN EDIT
+PROBABILITY SECRET_EXTENDED 1000000 //MS EDIT END
 PROBABILITY CLOWNOPS 0
 
 ## You probably want to keep sandbox off by default for secret and random.
