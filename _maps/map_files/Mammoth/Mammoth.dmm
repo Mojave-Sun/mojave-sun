@@ -15804,6 +15804,9 @@
 	dir = 6
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/railing/corner{
+	dir = 1
+	},
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "jTI" = (
@@ -17030,6 +17033,13 @@
 /obj/structure/window/reinforced/fulltile/ms13/glass,
 /turf/open/floor/plasteel/ms13/_full/dirty,
 /area/ms13/underground/vault_atrium_upper)
+"kNP" = (
+/obj/structure/railing/corner{
+	dir = 8
+	},
+/obj/structure/railing/corner,
+/turf/open/floor/wood/ms13,
+/area/ms13/ncr_main)
 "kNV" = (
 /obj/item/flashlight/lantern{
 	pixel_x = 8
@@ -20654,6 +20664,12 @@
 	},
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"nrp" = (
+/obj/structure/ms13/storage/large/shelf/rust{
+	dir = 1
+	},
+/turf/open/floor/wood/ms13,
+/area/ms13/ncr_main)
 "nrv" = (
 /obj/structure/table/ms13/metal,
 /obj/structure/table/ms13/metal,
@@ -20944,6 +20960,9 @@
 	},
 /obj/structure/railing{
 	dir = 4
+	},
+/obj/structure/railing/corner{
+	dir = 8
 	},
 /turf/open/floor/wood/ms13/broken/right,
 /area/ms13/ncr_main)
@@ -25869,6 +25888,10 @@
 "qUq" = (
 /turf/open/floor/carpet/black,
 /area/ms13/sunny_dale)
+"qUE" = (
+/obj/structure/railing/corner,
+/turf/open/floor/wood/ms13,
+/area/ms13/ncr_main)
 "qUF" = (
 /obj/structure/flora/grass/jungle/b,
 /obj/effect/decal/cleanable/blood/bubblegum,
@@ -27436,6 +27459,9 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/railing/corner{
+	dir = 4
+	},
 /turf/open/floor/wood/ms13,
 /area/ms13/ncr_main)
 "rTj" = (
@@ -47298,7 +47324,7 @@ hcX
 mrW
 ocg
 mhZ
-mhZ
+nrp
 dDv
 ocg
 ocg
@@ -122198,7 +122224,7 @@ gIB
 gIB
 gIB
 vEm
-bvX
+nKL
 nKL
 rxf
 rxf
@@ -124317,7 +124343,7 @@ uya
 uya
 uya
 uya
-fVP
+nKL
 ocg
 kck
 kck
@@ -124624,7 +124650,7 @@ myG
 kck
 kck
 ocg
-ocg
+qUE
 nRN
 nCq
 rLR
@@ -124921,12 +124947,12 @@ uya
 uya
 uya
 uya
-nKL
+fVP
 kck
 ocg
 ocg
 ocg
-ocg
+kNP
 cJu
 hmj
 tzq
