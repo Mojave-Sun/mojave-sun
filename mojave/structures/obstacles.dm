@@ -445,170 +445,46 @@
 		return 1
 	return !density
 
-//Industrial handrails
 
-//Blue
-/obj/structure/handrail/b_central
-	name = "handrail"
-	desc = "Heavy-duty metal handrail. It's painted blue.<br>You shall not pass!"
-	icon = 'mojave/icons/obstacles/obstacles.dmi'
-	icon_state = "b_handrail"
-	density = 1
-	anchored = 1
-	pixel_y = -9
+/obj/structure/handrail/ms13
+	name = "base class railing"
+	desc = "Don't use this shit, champ... Move along."
+	icon = 'mojave/icons/obstacles/railings.dmi'
 
-/obj/structure/handrail/b_central/Initialize()
-	. = ..()
-	layer = 4.2
+/obj/structure/handrail/ms13/civilian
+	name = "hand rail"
+	desc = "A simple hand rail. Careful to not flip over it. It's there for a reason."
+	icon_state = "civ_solo"
 
-/obj/structure/handrail/b_central/CanPass(atom/movable/mover, turf/target, height=0)
-	..()
-	if (dir!=SOUTH)
-		return 0
-	if(istype(mover) && (mover.pass_flags & PASSTABLE))
-		return 1
-	if(get_dir(loc, target) != SOUTH)
-		return 1
-	else
-		return 0
+/obj/structure/handrail/ms13/civilian/full
+	name = "hand rail section"
+	icon_state = "civ_full"
 
-/obj/structure/handrail/b_central/CheckExit(atom/movable/O as mob|obj, target)
-	if (dir!=SOUTH)
-		return 0
-	if(istype(O) && (O.pass_flags & PASSTABLE))
-		return 1
-	if(get_dir(O.loc, target) != SOUTH)
-		return 1
-	else
-		return 0
+/obj/structure/handrail/ms13/civilian/end
+	name = "hand rail end"
+	desc = "The end piece to a hand rail. All things have to come to an end eventually."
+	icon_state = "civ_end"
 
-/obj/structure/handrail/b_intersect
-	name = "handrails"
-	desc = "Heavy-duty metal handrails. They are painted blue."
-	icon = 'mojave/icons/obstacles/obstacles.dmi'
-	icon_state = "b_handrail_intersect"
-	density = 1
-	anchored = 1
-	pixel_y = -9
+/obj/structure/handrail/ms13/civilian/broke
+	name = "broken hand rail"
+	desc = "Just another testament to the many shortcomings of the once intact world around you. At least you don't have to climb over to fall and break your neck."
+	icon_state = "civ_end_b"
 
-/obj/structure/handrail/b_intersect/Initialize()
-	. = ..()
-	layer = 4.2
+/obj/structure/handrail/ms13/industrial
+	name = "hand rail"
+	desc = "A simple hand rail. It's thick and sturdy, you can tell it's sturdy by the yellow paint coating it."
+	icon_state = "indus_solo"
 
-/obj/structure/handrail/b_intersect/CanPass(atom/movable/mover, turf/target, height=0)
-	..()
-	if (dir!=SOUTH)
-		return 0
-	if(istype(mover) && (mover.pass_flags & PASSTABLE))
-		return 1
-	if(get_dir(loc, target) != SOUTH)
-		return 1
-	else
-		return 0
+/obj/structure/handrail/ms13/industrial/full
+	name = "hand rail section"
+	icon_state = "indus_full"
 
-/obj/structure/handrail/b_intersect/CheckExit(atom/movable/O as mob|obj, target)
-	if (dir!=SOUTH)
-		return 0
-	if(istype(O) && (O.pass_flags & PASSTABLE))
-		return 1
-	if(get_dir(O.loc, target) != SOUTH)
-		return 1
-	else
-		return 0
+/obj/structure/handrail/ms13/industrial/end
+	name = "hand rail end"
+	desc = "The end piece to a hand rail. All things have to come to an end eventually."
+	icon_state = "indus_end"
 
-/obj/structure/handrail/b_end
-	name = "handrail end"
-	desc = "Heavy-duty metal handrail ends here.<br>You can pass now!"
-	icon = 'mojave/icons/obstacles/obstacles.dmi'
-	icon_state = "b_handrail_end"
-	density = 0
-	anchored = 1
-	pixel_y = -9
-
-/obj/structure/handrail/b_end/Initialize()
-	. = ..()
-	if (dir>2)
-		layer = 4.2
-
-//Yellow
-/obj/structure/handrail/y_central
-	name = "handrail"
-	desc = "Heavy-duty metal handrail. It's painted yellow.<br>You shall not pass!"
-	icon = 'mojave/icons/obstacles/obstacles.dmi'
-	icon_state = "y_handrail"
-	density = 1
-	anchored = 1
-	pixel_y = -9
-
-/obj/structure/handrail/y_central/Initialize()
-	. = ..()
-	layer = 4.2
-
-/obj/structure/handrail/y_central/CanPass(atom/movable/mover, turf/target, height=0)
-	..()
-	if (dir!=SOUTH)
-		return 0
-	if(istype(mover) && (mover.pass_flags & PASSTABLE))
-		return 1
-	if(get_dir(loc, target) != SOUTH)
-		return 1
-	else
-		return 0
-
-/obj/structure/handrail/y_central/CheckExit(atom/movable/O as mob|obj, target)
-	if (dir!=SOUTH)
-		return 0
-	if(istype(O) && (O.pass_flags & PASSTABLE))
-		return 1
-	if(get_dir(O.loc, target) != SOUTH)
-		return 1
-	else
-		return 0
-
-/obj/structure/handrail/y_intersect
-	name = "handrails"
-	desc = "Heavy-duty metal handrails. They are painted yellow."
-	icon = 'mojave/icons/obstacles/obstacles.dmi'
-	icon_state = "y_handrail_intersect"
-	density = 1
-	anchored = 1
-	pixel_y = -9
-
-/obj/structure/handrail/y_intersect/Initialize()
-	. = ..()
-	layer = 4.2
-
-/obj/structure/handrail/y_intersect/CanPass(atom/movable/mover, turf/target, height=0)
-	..()
-	if (dir!=SOUTH)
-		return 0
-	if(istype(mover) && (mover.pass_flags & PASSTABLE))
-		return 1
-	if(get_dir(loc, target) != SOUTH)
-		return 1
-	else
-		return 0
-
-/obj/structure/handrail/y_intersect/CheckExit(atom/movable/O as mob|obj, target)
-	if (dir!=SOUTH)
-		return 0
-	if(istype(O) && (O.pass_flags & PASSTABLE))
-		return 1
-	if(get_dir(O.loc, target) != SOUTH)
-		return 1
-	else
-		return 0
-
-/obj/structure/handrail/y_end
-	name = "handrail end"
-	desc = "Heavy-duty metal handrail ends here.<br>You can pass now!"
-	icon = 'mojave/icons/obstacles/obstacles.dmi'
-	icon_state = "y_handrail_end"
-	density = 0
-	anchored = 1
-	pixel_y = -9
-
-/obj/structure/handrail/y_end/Initialize()
-	. = ..()
-	if (dir>2)
-		layer = 4.2
+/obj/structure/handrail/ms13/industrial/broke
+	name = "broken hand rail"
+	desc = "A broken industrial grade hand railing. Whatever broke this must have been heavy. What's heavier than the sands of time..? Probably a vehicle. Or anything else."
+	icon_state = "indus_end_b"
