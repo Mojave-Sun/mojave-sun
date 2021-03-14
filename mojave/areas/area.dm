@@ -164,6 +164,11 @@
 	icon_state = "cave"
 	outdoors = TRUE
 
+/area/ms13/underground/sewer
+	name = "Sewers"
+	icon_state = "tunnels"
+	outdoors = FALSE
+
 /area/ms13/underground/tunnel
 	name = "Tunnel"
 	outdoors = FALSE
