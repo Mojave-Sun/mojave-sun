@@ -180,3 +180,11 @@
 /area/ms13/underground/megabunker/upper
 	name = "Pre-War bunker entrance"
 	icon_state = "bunkerentrance"
+
+/area/ms13/supermarket
+	name = "Supermarket"
+	icon_state = "supermarket"
+
+/area/ms13/supermarket/basement
+	name = "Supermarket Basement"
+	icon_state = "supermarket_basement"

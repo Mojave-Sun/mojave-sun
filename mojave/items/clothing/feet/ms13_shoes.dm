@@ -29,6 +29,18 @@
 	icon_state = "fancy"
 	inhand_icon_state = "fancy"
 
+/obj/item/clothing/shoes/ms13/winter
+	name = "brown winter boots"
+	desc = "A pair of brown winter boots. The treads are durable with a fair amount of grip, hopefully enough to prevent ice mishaps."
+	icon_state = "winterbootsbrown"
+	inhand_icon_state = "winterbootsbrown"
+
+/obj/item/clothing/shoes/ms13/winter/black
+	name = "black winter boots"
+	desc = "A pair of black winter boots. The treads are durable with a fair amount of grip, hopefully enough to prevent ice mishaps."
+	icon_state = "winterbootsblack"
+	inhand_icon_state = "winterbootsblack"
+
 /obj/item/clothing/shoes/ms13/cowboy
 	name = "cowboy boots"
 	desc = "A pair of cowhide boots with spurs.<br>They have a Cuban heel, rounded to pointed toe, high shaft, and, traditionally, no lacing."

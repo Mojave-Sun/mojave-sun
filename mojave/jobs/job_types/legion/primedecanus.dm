@@ -21,7 +21,7 @@
 	suit = /obj/item/clothing/suit/armor/ms13/legion/prime
 	gloves = /obj/item/clothing/gloves/ms13/legion/tanwraps
 	mask = /obj/item/clothing/mask/ms13/legion/clothmask
-	suit_store = /obj/item/gun/ballistic/shotgun/ms13/cowboy
+	suit_store = /obj/item/gun/ballistic/shotgun/ms13/lever/cowboy
 	l_pocket = /obj/item/ammo_box/ms13/tube357
 
 /datum/outfit/job/ms13/legion/primedecanus/pre_equip(mob/living/carbon/human/H)

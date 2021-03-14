@@ -1,6 +1,6 @@
 /obj/effect/spawner/lootdrop/ms13/armor
 	name = "DO NOT USE ME - Mojave Sun armor spawners"
-	
+
 /obj/effect/spawner/lootdrop/ms13/armor/tier1
 	name = "tier 1 armor spawner"
 	lootcount = 2
@@ -29,11 +29,11 @@
 				/obj/item/clothing/head/helmet/ms13/cowboy/padded/black
 				)
 	var/loot7 = list(
-				/obj/item/clothing/suit/ms13/ljacket/mayor/blue,
+				/obj/item/clothing/suit/ms13/ljacket/brown,
 				""
 				)
 	var/loot8 = list(
-				/obj/item/clothing/suit/ms13/ljacket/mayor/black,
+				/obj/item/clothing/suit/ms13/ljacket/black,
 				""
 				)
 	var/loot9 = list(
@@ -57,7 +57,7 @@
 				/obj/item/clothing/head/helmet/ms13/cowboy/padded/detective/grey
 				)
 	var/loot14 = list(
-				/obj/item/clothing/suit/ms13/ljacket/biker,
+				/obj/item/clothing/suit/ms13/ljacket,
 				""
 				)
 	var/loot15 = list(
@@ -85,11 +85,11 @@
 				""
 				)
 	var/loot21 = list(
-				/obj/item/clothing/suit/armor/ms13/leatherarmor/light,
+				/obj/item/clothing/suit/armor/ms13/leatherarmor,
 				/obj/item/clothing/head/helmet/ms13/cowboy/stormchaser
 				)
 	var/loot22 = list(
-				/obj/item/clothing/suit/armor/ms13/kit/light,
+				/obj/item/clothing/suit/armor/ms13/kit,
 				""
 				)
 	var/loot23 = list(
@@ -108,8 +108,8 @@
 				/obj/item/clothing/suit/ms13/trench/brown,
 				""
 				)
-				
-				
+
+
 /obj/effect/spawner/lootdrop/ms13/armor/tier1/Initialize() //on mapload, pick what to spawn
 	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13, loot14, loot15, loot16, loot17, loot18, loot19, loot20, loot21, loot22, loot23, loot24, loot25, loot26)
 	. = ..()
@@ -118,11 +118,11 @@
 	name = "tier 2 armor spawner"
 	lootcount = 2
 	var/loot1 = list(
-				/obj/item/clothing/suit/ms13/ljacket/reinforced/deputy/blue,
+				/obj/item/clothing/suit/ms13/ljacket/blue/reinforced,
 				""
 				)
 	var/loot2 = list(
-				/obj/item/clothing/suit/ms13/ljacket/reinforced/deputy/black,
+				/obj/item/clothing/suit/ms13/ljacket/brown/reinforced,
 				""
 				)
 	var/loot3 = list(
@@ -146,7 +146,7 @@
 				""
 				)
 	var/loot8 = list(
-				/obj/item/clothing/suit/armor/ms13/kit,
+				/obj/item/clothing/suit/armor/ms13/kit/heavy,
 				""
 				)
 	var/loot9 = list(
@@ -166,8 +166,7 @@
 				/obj/item/clothing/head/helmet/ms13/psychotic
 				)
 	var/loot13 = list(
-				/obj/item/clothing/suit/armor/ms13/sadist/tribal,
-				""
+				/obj/item/clothing/suit/armor/ms13/tire,
 				)
 	var/loot14 = list(
 				/obj/item/clothing/suit/armor/ms13/badlands,
@@ -185,20 +184,23 @@
 				/obj/item/clothing/suit/armor/ms13/vest/detective,
 				/obj/item/clothing/head/helmet/ms13/cowboy/padded/detective
 				)
-				
+	var/loot18 = list(
+				/obj/item/clothing/suit/armor/ms13/metal,
+				)
+
 /obj/effect/spawner/lootdrop/ms13/armor/tier2/Initialize()
-	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13, loot14, loot15, loot16, loot17)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9, loot10, loot11, loot12, loot13, loot14, loot15, loot16, loot17, loot18)
 	. = ..()
-	
+
 /obj/effect/spawner/lootdrop/ms13/armor/tier3
 	name = "tier 3 armor spawner"
 	lootcount = 2
 	var/loot1 = list(
-				/obj/item/clothing/suit/ms13/ljacket/sheriff/blue,
+				/obj/item/clothing/suit/ms13/ljacket/blue/armored,
 				""
 				)
 	var/loot2 = list(
-				/obj/item/clothing/suit/ms13/ljacket/sheriff/black,
+				/obj/item/clothing/suit/ms13/ljacket/black/armored,
 				""
 				)
 	var/loot3 = list(
@@ -210,11 +212,11 @@
 				/obj/item/clothing/head/helmet/ms13/reinfhard
 				)
 	var/loot5 = list(
-				/obj/item/clothing/suit/armor/ms13/metal/light,
+				/obj/item/clothing/suit/armor/ms13/metal/heavy,
 				/obj/item/clothing/head/helmet/ms13/eyebot
 				)
 	var/loot6 = list(
-				/obj/item/clothing/suit/armor/ms13/metal,
+				/obj/item/clothing/suit/armor/ms13/metal/reinforced,
 				/obj/item/clothing/head/helmet/ms13/metal
 				)
 	var/loot7 = list(
@@ -229,7 +231,7 @@
 				/obj/item/clothing/suit/armor/ms13/combat,
 				/obj/item/clothing/head/helmet/ms13/combat
 				)
-				
+
 /obj/effect/spawner/lootdrop/ms13/armor/tier3/Initialize()
 	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6, loot7, loot8, loot9)
 	. = ..()
@@ -250,31 +252,34 @@
 				/obj/item/clothing/head/helmet/ms13/tesla
 				)
 	var/loot4 = list(
-				/obj/item/clothing/suit/armor/ms13/combat/black,
-				/obj/item/clothing/head/helmet/ms13/combat/black
-				)
-	var/loot5 = list(
 				/obj/item/clothing/suit/armor/ms13/eliteriot,
 				/obj/item/clothing/head/helmet/ms13/eliteriot
 				)
-				
+	var/loot5 = list(
+				/obj/item/clothing/suit/armor/ms13/stealth/assassin,
+				)
+	var/loot6 = list(
+				/obj/item/clothing/suit/armor/ms13/stealth,
+				/obj/item/clothing/head/helmet/ms13/stealth
+				)
+
 /obj/effect/spawner/lootdrop/ms13/armor/tier4/Initialize()
-	loot = pick(loot1, loot2, loot3, loot4, loot5)
+	loot = pick(loot1, loot2, loot3, loot4, loot5, loot6)
 	. = ..()
-	
+
 /obj/effect/spawner/lootdrop/ms13/armor/lowrandom
 	name = "low tier random armor spawner"
-	lootcount = 1 
-	
+	lootcount = 1
+
 	loot = list(
 			/obj/effect/spawner/lootdrop/ms13/armor/tier1 = 60,
 			/obj/effect/spawner/lootdrop/ms13/armor/tier2 = 40,
 			)
-			
+
 /obj/effect/spawner/lootdrop/ms13/armor/highrandom
 	name = "high tier random armor spawner"
 	lootcount = 1
-	
+
 	loot = list(
 			/obj/effect/spawner/lootdrop/ms13/armor/tier2 = 10,
 			/obj/effect/spawner/lootdrop/ms13/armor/tier3 = 60,
