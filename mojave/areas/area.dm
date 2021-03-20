@@ -164,10 +164,25 @@
 	icon_state = "cave"
 	outdoors = TRUE
 
+/area/ms13/underground/sewer
+	name = "Sewers"
+	icon_state = "sewer"
+	outdoors = FALSE
+
+/area/ms13/underground/underground_town
+	name = "Lower Town"
+	icon_state = "underground_town"
+	outdoors = FALSE
+
 /area/ms13/underground/tunnel
 	name = "Tunnel"
 	outdoors = FALSE
 	icon_state = "tunnels"
+
+/area/ms13/underground/subway
+	name = "Subway"
+	outdoors = FALSE
+	icon_state = "subway"
 
 /area/ms13/underground/tunnel/maintenance
 	name = "Maintenance Passages"
