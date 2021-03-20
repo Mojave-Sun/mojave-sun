@@ -17,11 +17,6 @@
 /obj/item/stack/medical/suture/ms13/half
     amount = 6
 
-/obj/item/stack/medical/suture/ms13/prewar
-    desc = "A shockingly well kept suture. Odds are it's as good as it can be."
-    heal_brute = 15
-    stop_bleeding = 0.75
-
 /obj/item/stack/medical/ointment/ms13
     name = "ointment"
     desc = "A bottle of cream meant to be applied to burn wounds. Sanitizes and aids in the healing process of burn related injuries."
