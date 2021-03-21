@@ -3,72 +3,38 @@
 	desc = "You shouldn't be seeing this. It do be lookin' kinda clean doe."
 	icon = 'mojave/icons/objects/clothing/suits.dmi'
 	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
-	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/melee,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/scalpel,/obj/item/surgical_drapes,/obj/item/cautery,/obj/item/hemostat,/obj/item/retractor,/obj/item/storage/pill_bottle/dice,/obj/item/dice)
+	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/melee,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/scalpel,/obj/item/surgical_drapes,/obj/item/cautery,/obj/item/hemostat,/obj/item/retractor,/obj/item/storage/pill_bottle/dice,/obj/item/dice,/obj/item/gun)
 	body_parts_covered = CHEST|ARMS|LEGS|GROIN
 	///Icon file for left hand inhand overlays
 	lefthand_file = 'mojave/icons/mob/inhands/clothing_lefthand.dmi'
 	///Icon file for right inhand overlays
 	righthand_file = 'mojave/icons/mob/inhands/clothing_righthand.dmi'
 
-/obj/item/clothing/suit/ms13/vest
-	name = "leather vest"
-	desc = "A vest made of tanned leather."
-	icon_state = "tanleather"
-	inhand_icon_state = "tanleather"
-	armor = list(melee = 15, bullet = 10, laser = 5, energy = 5, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
-
-/obj/item/clothing/suit/ms13/vest/puffer
-	name = "puffer vest"
-	desc = "A thick vest with a rubbery water-resistant shell."
-	icon_state = "puffervest"
-	inhand_icon_state = "puffervest"
-
-/obj/item/clothing/suit/ms13/vest/cowboy
-	name = "cowboy vest"
-	desc = "A brown vest, typically worn by wannabe cowboys and prospectors."
-	icon_state = "cowboybvest"
-	inhand_icon_state = "cowboybvest"
-
-/obj/item/clothing/suit/ms13/vest/grey
-	name = "grey vest"
-	desc = "A grey, fancy looking vest."
-	icon_state = "cowboygvest"
-	inhand_icon_state = "cowboygvest"
-
-/obj/item/clothing/suit/ms13/vest/letterman
-	name = "letterman jacket"
-	desc = "A high school letterman jacket. For showing off your achievements in the post apocalypse."
-	icon_state = "letterman"
-	inhand_icon_state = "letterman"
-
-/obj/item/clothing/suit/ms13/vest/denim
+/obj/item/clothing/suit/ms13/ljacket/denim
 	name = "denim vest"
-	desc = "A comfortable vest made of denim. Might not save your life, but atleast it will save your style."
+	desc = "A thick denim vest."
 	icon_state = "denim"
 	inhand_icon_state = "denim"
 
 /obj/item/clothing/suit/ms13/ljacket
 	name = "leather jacket"
-	desc = "A typical leather jacket. It's pretty thick, originally designed to protect from road rash."
+	desc = "A standard leather jacket, decent protection in a pinch."
 	icon_state = "leatherjacket"
 	inhand_icon_state = "leatherjacket"
-	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
-	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
+	armor = list(melee = 20, bullet = 15, laser = 5, energy = 5, bomb = 5, bio = 5, rad = 5, fire = 5, acid = 5)
 
 /obj/item/clothing/suit/ms13/ljacket/reinforced
 	name = "reinforced leather jacket"
-	desc = "An atypical leather jacket. Someone decided to strap more leather onto the already existing leather. A genious approach of becoming more resilient to hostile forces."
-	icon_state = "reinforcedjacket"
-	inhand_icon_state = "reinforcedjacket"
-	armor = list(melee = 35, bullet = 25, laser = 10, energy = 5, bomb = 15, bio = 5, rad = 10, fire = 10, acid = 5)
-	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
+	desc = "A leather jacket reinforced with lots of extra leather padding and straps."
+	icon_state = "reinfljacket"
+	inhand_icon_state = "reinfljacket"
+	armor = list(melee = 30, bullet = 25, laser = 15, energy = 15, bomb = 15, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/suit/ms13/ljacket/brown
 	name = "brown jacket"
-	desc = "A light, plain brown winter jacket. Nice and warm."
+	desc = "A plain brown winter jacket."
 	icon_state = "winterjacketbrown"
 	inhand_icon_state = "winterjacketbrown"
-	armor = list(melee = 10, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 5, rad = 5, fire = 5, acid = 10)
 
 /obj/item/clothing/suit/ms13/ljacket/brown/reinforced
 	name = "reinforced brown jacket"
@@ -86,10 +52,9 @@
 
 /obj/item/clothing/suit/ms13/ljacket/blue
 	name = "blue winter jacket"
-	desc = "A light, blue winter jacket."
+	desc = "A blue winter jacket."
 	icon_state = "winterjacketblue"
 	inhand_icon_state = "winterjacketblue"
-	armor = list(melee = 10, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 5, rad = 5, fire = 5, acid = 10)
 
 /obj/item/clothing/suit/ms13/ljacket/blue/reinforced
 	name = "reinforced blue winter jacket"
@@ -107,10 +72,9 @@
 
 /obj/item/clothing/suit/ms13/ljacket/black
 	name = "black winter jacket"
-	desc = "A light, black winter jacket."
+	desc = "A black winter jacket."
 	icon_state = "winterjacketblack"
 	inhand_icon_state = "winterjacketblack"
-	armor = list(melee = 10, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 5, rad = 5, fire = 5, acid = 10)
 
 /obj/item/clothing/suit/ms13/ljacket/black/reinforced
 	name = "reinforced black winter jacket"
@@ -185,34 +149,6 @@
 	icon_state = "armoredblacktrench"
 	inhand_icon_state = "armoredblacktrench"
 	armor = list(melee = 50, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 25, acid = 10)
-
-/obj/item/clothing/suit/ms13/trench/detective
-	name = "detective's trenchcoat"
-	desc = "A trenchcoat normally worn by pre-war detectives."
-	icon_state = "detective"
-	inhand_icon_state = "detective"
-
-/obj/item/clothing/suit/ms13/trench/detective/dark
-	name = "dark detective's trenchcoat"
-	desc = "A dark trenchcoat normally worn by pre-war detectives."
-	icon_state = "jensencoat"
-	inhand_icon_state = "jensencoat"
-
-/obj/item/clothing/suit/ms13/ljacket/bomber
-	name = "bomber jacket"
-	desc = "A fur-lined bomber jacket. Warm and stylish."
-	icon_state = "bomberjacket"
-
-/obj/item/clothing/suit/ms13/ljacket/military
-	name = "military jacket"
-	desc = "An old school military jacket."
-	icon_state = "militaryjacket"
-
-/obj/item/clothing/suit/ms13/ljacket/wanderer
-	name = "wanderer jacket"
-	desc = "A jacket made from tanned leather."
-	icon_state = "wanderer"
-	inhand_icon_state = "wanderer"
 
 /obj/item/clothing/suit/toggle/labcoat/ms13
 	name = "doctor's coat"
