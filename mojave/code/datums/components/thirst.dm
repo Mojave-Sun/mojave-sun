@@ -2,7 +2,7 @@
 
 //Amount of seconds a unit of water will provide life for, modify this for balancing purposes
 //Influences amount of units consumed by this component alongside how much
-#define SECONDS_OF_LIFE_PER_WATER_U 24
+#define SECONDS_OF_LIFE_PER_WATER_U 60
 
 //List of stage of dehydration => examine/warning text
 GLOBAL_LIST_INIT(dehydration_stage_examine, list("<font color='green'>not dehydrated",
@@ -29,8 +29,8 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 	var/list/stage_to_text //A list of messages to show on examine and when entering a new stage
 	var/list/stage_to_alert //What alert to pop up when reaching a certain stage, data stored as typepaths
 
-//900 being 15 minutes/900 seconds of starting water, thirst limit at 2400 is 40 minutes of living, 1u of water = 24 seconds of life, 1200 seconds/20 minutes = 50u or a flask
-/datum/component/thirst/Initialize(thirst_rate = -1, start_thirst = 900, thirst_limit = 2400, list/stage_flavor_text, list/stages_to_alerts)
+//3000 being 50 minutes/3000 seconds of starting water, thirst limit being the same thing
+/datum/component/thirst/Initialize(thirst_rate = -1, start_thirst = 3000, thirst_limit = 3000, list/stage_flavor_text, list/stages_to_alerts)
 	if(iscyborg(parent) || !isliving(parent))
 		return COMPONENT_INCOMPATIBLE
 	max_thirst = thirst_limit
@@ -88,7 +88,8 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 	if(!modify_by)
 		return
 	stage_of_dehydration = clamp(stage_of_dehydration + modify_by, 1, length(GLOB.dehydration_stage_examine))
-	to_chat(parent, "You feel [stage_to_text[stage_of_dehydration]].")
+	to_chat(parent, "You feel [stage_to_text[stage_of_dehydration]], you estimate you have about [curr_thirst / 60] minutes left before you start dying of thirst.")
+	to_chat(parent, "You'll need about [((max_thirst - curr_thirst) / SECONDS_OF_LIFE_PER_WATER_U)] units of water to get back to max thirst.")
 	var/mob/the_parent = parent
 	the_parent.clear_alert("thirst")
 	the_parent.throw_alert("thirst", stage_to_alert[stage_of_dehydration])
