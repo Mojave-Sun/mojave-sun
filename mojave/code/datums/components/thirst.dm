@@ -7,7 +7,7 @@
 //List of stage of dehydration => examine/warning text
 GLOBAL_LIST_INIT(dehydration_stage_examine, list("<font color='green'>not dehydrated",
 												 "<font color='orange'>very slightly dehydrated",
-												 "<font color='red'>dehydrated",
+												 "<font color='orange'>dehydrated",
 												 "<font color='red'>very dehydrated",
 												 "<font color='red'>close to death from a lack of water"
 												))
