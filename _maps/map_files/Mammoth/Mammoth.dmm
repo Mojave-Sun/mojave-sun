@@ -3705,10 +3705,7 @@
 /area/ms13/sunny_dale)
 "cgk" = (
 /obj/structure/table/ms13/metal,
-/obj/item/stack/sticky_tape/surgical{
-	pixel_x = 7;
-	pixel_y = 7
-	},
+/obj/item/surgical_drapes,
 /turf/open/floor/wood/ms13,
 /area/ms13/underground/vault_atrium_upper)
 "cgt" = (
@@ -3751,6 +3748,8 @@
 /area/ms13/ncr_main)
 "cgT" = (
 /obj/structure/closet/crate/ms13/vault_tec/long,
+/obj/item/stack/medical/gauze/ms13,
+/obj/item/stack/medical/gauze/ms13,
 /turf/open/floor/wood/ms13,
 /area/ms13/underground/vault_atrium_upper)
 "cha" = (
@@ -4253,6 +4252,7 @@
 /obj/effect/decal/cleanable/glass,
 /obj/structure/table/ms13/metal,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/firstaid/ms13/bag/filled,
 /turf/open/floor/wood/ms13/broken/slightlybroken1,
 /area/ms13/ncr_main)
 "ctS" = (
@@ -6292,6 +6292,11 @@
 	},
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
+"dEP" = (
+/obj/structure/table/ms13/metal,
+/obj/item/stack/medical/ointment/ms13/cream,
+/turf/open/floor/wood/ms13,
+/area/ms13/underground/vault_atrium_upper)
 "dFb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table_frame/wood,
@@ -11791,6 +11796,7 @@
 	brightness = 3;
 	dir = 4
 	},
+/obj/item/storage/firstaid/ms13/quality,
 /turf/open/floor/wood/ms13,
 /area/ms13/underground/vault_atrium_upper)
 "gOG" = (
@@ -14131,6 +14137,11 @@
 	},
 /turf/open/floor/plating/ground/road,
 /area/ms13)
+"iit" = (
+/obj/structure/table/ms13/metal,
+/obj/item/stack/medical/suture/ms13/half,
+/turf/open/floor/plasteel/ms13/white,
+/area/ms13/underground/vault_atrium_upper)
 "iiv" = (
 /turf/open/floor/plasteel/ms13/blue/side/dirty,
 /area/ms13/underground/vault_atrium_upper)
@@ -20008,7 +20019,7 @@
 /area/ms13/sunny_dale)
 "lJf" = (
 /obj/structure/rack,
-/obj/item/stack/medical/gauze/ms13/prewar,
+/obj/item/stack/medical/gauze/ms13/military,
 /turf/open/floor/plasteel/ms13/green/_rusty,
 /area/ms13/sunny_dale)
 "lJi" = (
@@ -29348,6 +29359,9 @@
 /area/ms13/sunny_dale)
 "rrf" = (
 /obj/structure/closet/crate/ms13/vault_tec/big,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
 /turf/open/floor/wood/ms13,
 /area/ms13/underground/vault_atrium_upper)
 "rrk" = (
@@ -38501,6 +38515,11 @@
 /obj/effect/spawner/lootdrop/food_packaging,
 /turf/open/floor/plasteel/ms13/dark/full/rusty,
 /area/ms13/sunny_dale)
+"wYj" = (
+/obj/structure/table/ms13/metal,
+/obj/item/storage/firstaid/ms13/bag/filled,
+/turf/open/floor/wood/ms13,
+/area/ms13/underground/vault_atrium_upper)
 "wYp" = (
 /obj/structure/closet{
 	pixel_x = -7;
@@ -39928,7 +39947,6 @@
 /area/ms13/sunny_dale)
 "xSD" = (
 /obj/structure/bed/roller,
-/obj/item/surgical_drapes,
 /turf/open/floor/wood/ms13,
 /area/ms13/underground/vault_atrium_upper)
 "xSI" = (
@@ -122321,8 +122339,8 @@ afK
 lox
 lox
 lox
-fPe
-fPe
+cgk
+dEP
 fPe
 lox
 bTB
@@ -123225,7 +123243,7 @@ afK
 afK
 afK
 lox
-cgk
+fPe
 uss
 uss
 uss
@@ -123235,7 +123253,7 @@ cgT
 uss
 gUD
 sKG
-rvG
+iit
 jHh
 jDk
 vyL
@@ -123831,7 +123849,7 @@ afK
 afK
 afK
 lox
-fPe
+wYj
 gOF
 fPe
 lox
