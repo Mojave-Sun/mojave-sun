@@ -206,14 +206,14 @@
 				return FALSE
 			if(HAS_TRAIT(mute, TRAIT_HANDS_BLOCKED) || HAS_TRAIT(mute, TRAIT_EMOTEMUTE))
 				return FALSE
-				if(length(empty_indexes) == 1)
+			if(length(empty_indexes) == 1)
 					message = stars(message)
 
 	if (radio_broadcast >= 0)
 		if (radio_broadcast == 0)
 			return FALSE
 		if (radio_broadcast == 1)
-			message = stars(message, 12)
+			message = stars(message, 14)
 		if (radio_broadcast == 2)
 			message = stars(message, 7)
 		if (radio_broadcast == 3)
