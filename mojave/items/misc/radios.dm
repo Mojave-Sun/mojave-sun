@@ -1,13 +1,50 @@
+/obj/item/radio/ms13
+	icon = 'mojave/icons/objects/hamradio.dmi'
+	name = "hand Radio"
+	icon_state = "handradio"
+	inhand_icon_state = "handradio_"
+	desc = "A basic handheld radio that recieves over a relatively long range, unfortunately this one can't broadcast."
+
+	w_class = WEIGHT_CLASS_SMALL
+	custom_materials = list(/datum/material/iron=75, /datum/material/glass=25)
+	radio_broadcast = 0
+
+/obj/item/radio/ms13/can_receive(freq, level, AIuser)
+	if(ishuman(src.loc))
+		var/mob/living/carbon/human/H = src.loc
+		if(H.is_holding(src))
+			return ..(freq, level)
+	else if(AIuser)
+		return ..(freq, level)
+	return FALSE
+
+/obj/item/radio/ms13/broadcast
+	icon = 'mojave/icons/objects/hamradio.dmi'
+	name = "broadcast hand radio"
+	icon_state = "handradio"
+	inhand_icon_state = "handradio_"
+	desc = "A rare handheld radio that can send as well as recieve signals. The poor quality of broadcasts makes it unpleasent to listen to, and doing so too often is a good way to get lynched."
+	radio_broadcast = 1
+
+/obj/item/radio/ms13/broadcast/prewar
+	icon = 'mojave/icons/objects/hamradio.dmi'
+	name = "pre-War hand radio"
+	icon_state = "handradio"
+	inhand_icon_state = "handradio_"
+	desc = "The best a handheld gets, this extremely rare radio can broadcast at reasonably high quality while remaining lightweight and portable."
+	radio_broadcast = 2
+
 /obj/item/radio/ms13/ham
 	name = "ham radio"
-	desc = "An amateur radio setup. The sound quality could be better, but it's better than screaming into the horizon."
+	desc = "An amateur radio setup. The sound quality could be better, but it beats listening to brahmin all day."
 	icon = 'mojave/icons/objects/hamradio.dmi'
 	icon_state = "radio_on"
-	canhear_range = 1
+	canhear_range = 7
 	pixel_y = 5
 	freerange = TRUE
 	anonymize = TRUE
 	anchored = TRUE
+	radio_broadcast = 0
 
 /obj/item/radio/ms13/ham/Initialize(mapload, ndir, building)
 	. = ..()
@@ -17,11 +54,33 @@
 	if(!current_area)
 		return
 	RegisterSignal(current_area, COMSIG_AREA_POWER_CHANGE, .proc/AreaPowerCheck)
+/obj/item/radio/ms13/ham/broadcast
+	name = "broadcast ham radio"
+	desc = "An amateur radio setup. This one is set up to broadcast over local frequencies."
+	icon = 'mojave/icons/objects/hamradio.dmi'
+	icon_state = "radio_on"
+	canhear_range = 7
+	pixel_y = 5
+	freerange = TRUE
+	anonymize = TRUE
+	anchored = TRUE
+	radio_broadcast = 2
 
-/obj/item/radio/ms13/ham/examine(mob/user)
+/obj/item/radio/ms13/ham/broadcast/examine(mob/user)
 	. = ..()
 	. += "<span class='notice'>Use [MODE_TOKEN_INTERCOM] when nearby to speak into it.</span>"
 
+/obj/item/radio/ms13/ham/broadcast
+	name = "high power broadcasting set"
+	desc = "A high end broadcasting set used by professional radio studios. Legend has it that Mr. New Vegas himself uses this model."
+	icon = 'mojave/icons/objects/hamradio.dmi'
+	icon_state = "radio_on"
+	canhear_range = 7
+	pixel_y = 5
+	freerange = TRUE
+	anonymize = TRUE
+	anchored = TRUE
+	radio_broadcast = 3
 /**
  * Override attack_tk_grab instead of attack_tk because we actually want attack_tk's
  * functionality. What we DON'T want is attack_tk_grab attempting to pick up the
@@ -92,3 +151,4 @@
 	else
 		on = current_area.powered(AREA_USAGE_EQUIP) // set "on" to the equipment power status of our area.
 	update_icon()
+

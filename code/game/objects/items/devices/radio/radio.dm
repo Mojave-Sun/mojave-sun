@@ -32,7 +32,7 @@
 	var/freqlock = FALSE  // Frequency lock to stop the user from untuning specialist radios.
 	var/use_command = FALSE  // If true, broadcasts will be large and BOLD.
 	var/command = FALSE  // If true, use_command can be toggled at will.
-
+	var/radio_broadcast = 3 //determines how badly a broadcasting radio suffers from interference. Goes from 1 to 3, higher is better.
 	///makes anyone who is talking through this anonymous.
 	var/anonymize = FALSE
 
@@ -43,6 +43,9 @@
 	var/syndie = FALSE  // If true, hears all well-known channels automatically, and can say/hear on the Syndicate channel.
 	var/list/channels = list()  // Map from name (see communications.dm) to on/off. First entry is current department (:h)
 	var/list/secure_radio_connections
+
+
+
 
 /obj/item/radio/suicide_act(mob/living/user)
 	user.visible_message("<span class='suicide'>[user] starts bouncing [src] off [user.p_their()] head! It looks like [user.p_theyre()] trying to commit suicide!</span>")
@@ -197,14 +200,25 @@
 			var/obj/item/clothing/gloves/radio/G = mute.get_item_by_slot(ITEM_SLOT_GLOVES)
 			if(!istype(G))
 				return FALSE
-			if(length(empty_indexes) == 1)
-				message = stars(message)
 			if(length(empty_indexes) == 0) //Due to the requirement of gloves, the arm check for normal speech would be redundant here.
 				return FALSE
 			if(mute.handcuffed)//Would be weird if they couldn't sign but their words still went over the radio
 				return FALSE
 			if(HAS_TRAIT(mute, TRAIT_HANDS_BLOCKED) || HAS_TRAIT(mute, TRAIT_EMOTEMUTE))
 				return FALSE
+				if(length(empty_indexes) == 1)
+					message = stars(message)
+
+	if (radio_broadcast >= 0)
+		if (radio_broadcast == 0)
+			return FALSE
+		if (radio_broadcast == 1)
+			message = stars(message, 12)
+		if (radio_broadcast == 2)
+			message = stars(message, 7)
+		if (radio_broadcast == 3)
+			message = stars(message, 1)
+
 	if(!spans)
 		spans = list(M.speech_span)
 	if(!language)
@@ -267,6 +281,9 @@
 		signal.levels = list(0)  // reaches all Z-levels
 		signal.broadcast()
 		return
+
+	//adds radio interference
+
 
 	// All radios make an attempt to use the subspace system first
 	signal.send_to_receivers()
