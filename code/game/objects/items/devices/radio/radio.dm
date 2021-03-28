@@ -32,7 +32,7 @@
 	var/freqlock = FALSE  // Frequency lock to stop the user from untuning specialist radios.
 	var/use_command = FALSE  // If true, broadcasts will be large and BOLD.
 	var/command = FALSE  // If true, use_command can be toggled at will.
-	var/radio_broadcast = 3 //determines how badly a broadcasting radio suffers from interference. Goes from 1 to 3, higher is better.
+	var/radio_broadcast = 1 //determines how badly a broadcasting radio suffers from interference. Goes from 1 to 3, higher is better.
 	///makes anyone who is talking through this anonymous.
 	var/anonymize = FALSE
 
@@ -207,7 +207,7 @@
 			if(HAS_TRAIT(mute, TRAIT_HANDS_BLOCKED) || HAS_TRAIT(mute, TRAIT_EMOTEMUTE))
 				return FALSE
 			if(length(empty_indexes) == 1)
-					message = stars(message)
+				message = stars(message)
 
 	if (radio_broadcast >= 0)
 		if (radio_broadcast == 0)
