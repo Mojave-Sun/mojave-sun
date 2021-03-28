@@ -394,6 +394,19 @@
 	reqs = list(/obj/item/organ/tail/cat = 1,
 				/obj/item/organ/ears/cat = 1)
 	category = CAT_CLOTHING
+/*MOJAVE SUN EDIT BEGIN
+
+/datum/crafting_recipe/radiogloves
+	name = "Radio Gloves"
+	result = /obj/item/clothing/gloves/radio
+	time = 15
+	reqs = list(/obj/item/clothing/gloves/color/black = 1,
+				/obj/item/stack/cable_coil = 2,
+				/obj/item/radio = 1)
+	tools = list(TOOL_WIRECUTTER)
+	category = CAT_CLOTHING
+
+MOJAVE SUN EDIT END*/
 
 /datum/crafting_recipe/mixedbouquet
 	name = "Mixed bouquet"
@@ -922,35 +935,3 @@
 				)
 	category = CAT_MISC
 
-/datum/crafting_recipe/radio
-	name = "handheld radio"
-	result = /obj/item/radio/ms13
-	time = 15
-	reqs = list(/obj/item/stack/cable_coil = 2,
-				/obj/item/stack/sheet/metal = 5)
-	tools = list(TOOL_WIRECUTTER, TOOL_SCREWDRIVER)
-	category = CAT_MISC
-
-/datum/crafting_recipe/hamradio
-	name = "ham radio"
-	result = /obj/item/radio/ms13/ham
-	time = 15
-	reqs = list(/obj/item/stack/cable_coil = 3,
-				/obj/item/stack/sheet/metal = 5,
-				/obj/item/stack/sheet/mineral/wood = 10)
-	tools = list(TOOL_WIRECUTTER, TOOL_SCREWDRIVER)
-	category = CAT_MISC
-
-/datum/crafting_recipe/broadcastradio
-	name = "broadcast hand radio"
-	result = /obj/item/radio/ms13/broadcast
-	time = 15
-	reqs = list(/obj/item/stack/cable_coil = 5,
-				/obj/item/stack/sheet/metal = 10,
-				/obj/item/stock_parts/capacitor = 1,
-				/obj/item/stock_parts/cell = 1,
-				/obj/item/stack/sheet/plasteel = 3,
-				/obj/item/assembly/igniter = 1,
-				/obj/item/radio/ms13 = 1)
-	tools = list(TOOL_WIRECUTTER, TOOL_SCREWDRIVER, TOOL_WELDER)
-	category = CAT_MISC

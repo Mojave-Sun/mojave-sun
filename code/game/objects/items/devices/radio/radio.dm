@@ -32,7 +32,10 @@
 	var/freqlock = FALSE  // Frequency lock to stop the user from untuning specialist radios.
 	var/use_command = FALSE  // If true, broadcasts will be large and BOLD.
 	var/command = FALSE  // If true, use_command can be toggled at will.
+
+	//Mojave Sun broadcast variable
 	var/radio_broadcast = 1 //determines how badly a broadcasting radio suffers from interference. Goes from 1 to 3, higher is better.
+
 	///makes anyone who is talking through this anonymous.
 	var/anonymize = FALSE
 
@@ -209,6 +212,7 @@
 			if(length(empty_indexes) == 1)
 				message = stars(message)
 
+//Start of Mojave Sun edit
 	if (radio_broadcast >= 0)
 		if (radio_broadcast == 0)
 			return FALSE
@@ -218,7 +222,7 @@
 			message = stars(message, 7)
 		if (radio_broadcast == 3)
 			message = stars(message, 1)
-
+//End of Mojave Sun edit
 	if(!spans)
 		spans = list(M.speech_span)
 	if(!language)
