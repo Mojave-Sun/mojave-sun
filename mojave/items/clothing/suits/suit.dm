@@ -30,65 +30,61 @@
 	inhand_icon_state = "reinfljacket"
 	armor = list(melee = 30, bullet = 25, laser = 15, energy = 15, bomb = 15, bio = 10, rad = 10, fire = 10, acid = 10)
 
-/obj/item/clothing/suit/ms13/ljacket/brown
-	name = "brown jacket"
+/obj/item/clothing/suit/ms13/ljacket/winter
+	name = "brown winter jacket"
 	desc = "A plain brown winter jacket."
-	icon_state = "winterjacketbrown"
+	icon_state = "winterbrown"
 	inhand_icon_state = "winterjacketbrown"
 
-/obj/item/clothing/suit/ms13/ljacket/brown/reinforced
-	name = "reinforced brown jacket"
-	desc = "A reinforced brown jacket. Kevlar. Cloth, leather? Don't know! It'll eat an impact."
-	icon_state = "reinforcedwinterjacketbrown"
+/obj/item/clothing/suit/ms13/ljacket/winter/reinforced
+	name = "reinforced brown winter jacket"
+	desc = "A brown winter jacket reinforced with lots of leather padding."
+	icon_state = "reinfwinterbrown"
 	inhand_icon_state = "reinforcedwinterjacketbrown"
-	armor = list(melee = 25, bullet = 10, laser = 5, energy = 5, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
+	armor = list(melee = 30, bullet = 25, laser = 15, energy = 15, bomb = 15, bio = 10, rad = 10, fire = 10, acid = 10)
 
-/obj/item/clothing/suit/ms13/ljacket/brown/armored
-	name = "armored brown jacket"
-	desc = "An armored and heavily reinforced brown winter jacket."
-	icon_state = "armoredwinterjacketbrown"
+/obj/item/clothing/suit/ms13/ljacket/winter/armored
+	name = "armored brown winter jacket"
+	desc = "A brown winter jacket heavily reinforced with protective armor plating."
+	icon_state = "armorwinterbrown"
 	inhand_icon_state = "armoredwinterjacketbrown"
-	armor = list(melee = 35, bullet = 25, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 20, acid = 10)
+	armor = list(melee = 40, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 25, acid = 10)
 
-/obj/item/clothing/suit/ms13/ljacket/blue
+/obj/item/clothing/suit/ms13/ljacket/winter/blue
 	name = "blue winter jacket"
 	desc = "A blue winter jacket."
-	icon_state = "winterjacketblue"
+	icon_state = "winterblue"
 	inhand_icon_state = "winterjacketblue"
 
-/obj/item/clothing/suit/ms13/ljacket/blue/reinforced
+/obj/item/clothing/suit/ms13/ljacket/winter/reinforced/blue
 	name = "reinforced blue winter jacket"
-	desc = "A reinforced and padded blue winter jacket."
-	icon_state = "reinforcedwinterblue"
+	desc = "A blue winter jacket reinforced with lots of leather padding."
+	icon_state = "reinfwinterblue"
 	inhand_icon_state = "reinforcedwinterblue"
-	armor = list(melee = 25, bullet = 10, laser = 5, energy = 5, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
 
-/obj/item/clothing/suit/ms13/ljacket/blue/armored
+/obj/item/clothing/suit/ms13/ljacket/winter/armored/blue
 	name = "armored blue winter jacket"
-	desc = "An armored and heavily reinforced blue winter jacket."
-	icon_state = "armoredwinterblue"
+	desc = "A blue winter jacket heavily reinforced with protective armor plating."
+	icon_state = "armorwinterblue"
 	inhand_icon_state = "armoredwinterblue"
-	armor = list(melee = 35, bullet = 25, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 20, acid = 10)
 
 /obj/item/clothing/suit/ms13/ljacket/black
 	name = "black winter jacket"
 	desc = "A black winter jacket."
-	icon_state = "winterjacketblack"
+	icon_state = "winterblack"
 	inhand_icon_state = "winterjacketblack"
 
-/obj/item/clothing/suit/ms13/ljacket/black/reinforced
+/obj/item/clothing/suit/ms13/ljacket/winter/reinforced/black
 	name = "reinforced black winter jacket"
-	desc = "A reinforced and padded black winter jacket."
-	icon_state = "reinforcedwinterblack"
+	desc = "A black winter jacket reinforced with lots of leather padding."
+	icon_state = "reinfwinterblack"
 	inhand_icon_state = "reinforcedwinterblack"
-	armor = list(melee = 25, bullet = 10, laser = 5, energy = 5, bomb = 10, bio = 10, rad = 10, fire = 10, acid = 10)
 
-/obj/item/clothing/suit/ms13/ljacket/black/armored
+/obj/item/clothing/suit/ms13/ljacket/winter/armored/black
 	name = "armored black winter jacket"
-	desc = "An armored and heavily reinforced black winter jacket."
-	icon_state = "armoredwinterblack"
+	desc = "A black winter jacket heavily reinforced with protective armor plating."
+	icon_state = "armorwinterblack"
 	inhand_icon_state = "armoredwinterblack"
-	armor = list(melee = 35, bullet = 25, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 20, acid = 10)
 
 /obj/item/clothing/suit/ms13/ljacket/veteran
 	name = "merc veteran coat"
@@ -102,91 +98,17 @@
 	icon_state = "moleskin"
 	inhand_icon_state = "det_suit"
 
-/obj/item/clothing/suit/ms13/duster
+/obj/item/clothing/suit/ms13/ljacket/duster
 	name = "duster"
-	desc = "A long brown leather overcoat."
+	desc = "A thick leather duster."
 	icon_state = "duster"
 	inhand_icon_state = "duster"
-	armor = list(melee = 20, bullet = 15, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
-	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
 
-/obj/item/clothing/suit/ms13/duster/reinf
-	name = "reinforced duster"
-	desc = "A long brown leather overcoat reinforced and padded for additional protection."
-	icon_state = "reinfduster"
-	inhand_icon_state = "reinfduster"
-	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
-
-/obj/item/clothing/suit/ms13/trench
-	name = "tan trenchcoat"
-	desc = "A heavy tan trenchcoat."
-	icon_state = "tantrench"
-	inhand_icon_state = "tantrench"
-	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
-	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
-
-/obj/item/clothing/suit/ms13/trench/brown
-	name = "brown overcoat"
-	desc = "A slightly dirty brown overcoat."
-	icon_state = "brownover"
-	inhand_icon_state = "brownover"
-
-/obj/item/clothing/suit/ms13/trench/black
-	name = "black trenchcoat"
-	desc = "An imposing black trenchcoat."
-	icon_state = "blacktrench"
-	inhand_icon_state = "blacktrench"
-
-/obj/item/clothing/suit/ms13/trench/battle/black
-	name = "reinforced black trenchcoat"
-	desc = "A black trenchcoat with some minor additional armorings for added protection."
-	icon_state = "reinforcedblacktrench"
-	inhand_icon_state = "reinforcedblacktrench"
-
-/obj/item/clothing/suit/ms13/trench/black/armored
-	name = "armored black trenchcoat"
-	desc = "An intimidating black trenchcoat with a lot of armor, padding, and a spiked pauldron for making sure that fear is instilled."
-	icon_state = "armoredblacktrench"
-	inhand_icon_state = "armoredblacktrench"
-	armor = list(melee = 50, bullet = 35, laser = 25, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 25, acid = 10)
-
-/obj/item/clothing/suit/toggle/labcoat/ms13
-	name = "doctor's coat"
-	desc = "The medical coat of a typical wasteland doctor."
-	icon = 'mojave/icons/objects/clothing/suits.dmi'
-	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
-	icon_state = "followers"
-	inhand_icon_state = "followers"
-	armor = list(melee = 10, bullet = 5, laser = 5, energy = 5, bomb = 5, bio = 15, rad = 15, fire = 15, acid = 15)
-	body_parts_covered = CHEST|ARMS|LEGS|GROIN
-	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/ammo_box,/obj/item/ammo_casing,/obj/item/scalpel,/obj/item/surgical_drapes,/obj/item/cautery,/obj/item/hemostat,/obj/item/retractor,/obj/item/storage/pill_bottle/dice,/obj/item/dice)
-
-/obj/item/clothing/suit/ms13/trench/battle
-	name = "battle trenchcoat"
-	desc = "A trenchcoat with extra padding and lined with fur for extra style. Perfect for a mix of battle ready and charming."
-	icon_state = "battlecoat"
-	inhand_icon_state = "battlecoat"
-	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
-
-/obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat
-	name = "blue winter coat"
-	desc = "A blue, warm winter coat. Perfect for a ski trip. Can button open and closed."
-	icon_state = "coatwinterblue"
-	inhand_icon_state = "coatwinterblue"
-	armor = list(melee = 15, bullet = 10, laser = 5, energy = 5, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
-
-/obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat/grey
-	name = "grey winter coat"
-	desc = "A grey, warm winter coat. For those who prefer less brightness in their life. Can button open and closed."
-	icon_state = "coatwinter"
-	inhand_icon_state = "coatwinter"
-
-/obj/item/clothing/suit/ms13/duster/ghost
+/obj/item/clothing/suit/ms13/ljacket/duster/ghost
 	name = "ghostly duster"
 	desc = "A tattered and old, but still decently protective duster with a crude peace sign on the back. Reminds you of ghosts echoing in the past."
 	icon_state = "ghostechoe"
 	inhand_icon_state = "ghostechoe"
-	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 
 /obj/item/clothing/suit/ms13/trench/hubologist
 	name = "hubologist robes"

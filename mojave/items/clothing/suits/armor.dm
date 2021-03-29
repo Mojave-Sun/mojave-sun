@@ -35,10 +35,10 @@
 
 /obj/item/clothing/suit/armor/ms13/tire
 	name = "tire armor"
-	desc = "A very crude set of armor made from pieces of tire. Can save your life in a pinch, but is overall not very protective."
+	desc = "A very crude set of armor made from pieces of tire. Won't do much to stop a bullet but might save your ribs from being caved in by a baseball bat."
 	icon_state = "tirearmor"
 	inhand_icon_state = "tirearmor"
-	armor = list(melee = 20, bullet = 15, laser = 5, energy = 5, bomb = 5, bio = 5, rad = 5, fire = 5, acid = 5)
+	armor = list(melee = 30, bullet = 10, laser = 5, energy = 5, bomb = 5, bio = 5, rad = 5, fire = 5, acid = 5)
 
 /obj/item/clothing/suit/armor/ms13/leatherarmor
 	name = "leather armor"
@@ -79,7 +79,7 @@
 	desc = "A heavy suit of plated metal armor. Best in class protection against conventional weapons, melee attacks especially, but still won't be much help against lasers."
 	icon_state = "heavymetal"
 	inhand_icon_state = "heavymetal"
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 5, "energy" = 5, "bomb" = 50, "bio" = 20, "rad" = 20, "fire" = 60, "acid" = 20)
+	armor = list("melee" = 60, "bullet" = 45, "laser" = 10, "energy" = 5, "bomb" = 50, "bio" = 20, "rad" = 20, "fire" = 60, "acid" = 20)
 
 /obj/item/clothing/suit/armor/ms13/vest
 	name = "police vest"
