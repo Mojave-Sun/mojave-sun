@@ -7,7 +7,7 @@
 
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron=75, /datum/material/glass=25)
-	radio_broadcast = 0
+	radio_broadcast = FALSE
 
 /obj/item/radio/ms13/can_receive(freq, level, AIuser)
 	if(ishuman(src.loc))
@@ -24,7 +24,7 @@
 	icon_state = "handradio"
 	inhand_icon_state = "handradio_"
 	desc = "A rare handheld radio that can send as well as recieve signals. The poor quality of broadcasts makes it unpleasent to listen to, and doing so too often is a good way to get lynched."
-	radio_broadcast = 1
+	radio_broadcast = RADIOSTATIC_HEAVY
 
 /obj/item/radio/ms13/broadcast/prewar
 	icon = 'mojave/icons/objects/hamradio.dmi'
@@ -32,7 +32,7 @@
 	icon_state = "handradio"
 	inhand_icon_state = "handradio_"
 	desc = "The best a handheld gets, this extremely rare radio can broadcast at reasonably high quality while remaining lightweight and portable."
-	radio_broadcast = 2
+	radio_broadcast = RADIOSTATIC_MEDIUM
 
 /obj/item/radio/ms13/ham
 	name = "ham radio"
@@ -44,7 +44,7 @@
 	freerange = TRUE
 	anonymize = TRUE
 	anchored = TRUE
-	radio_broadcast = 0
+	radio_broadcast = FALSE
 
 /obj/item/radio/ms13/ham/Initialize(mapload, ndir, building)
 	. = ..()
@@ -64,7 +64,7 @@
 	freerange = TRUE
 	anonymize = TRUE
 	anchored = TRUE
-	radio_broadcast = 2
+	radio_broadcast = RADIOSTATIC_MEDIUM
 
 /obj/item/radio/ms13/ham/broadcast/examine(mob/user)
 	. = ..()
@@ -80,7 +80,7 @@
 	freerange = TRUE
 	anonymize = TRUE
 	anchored = TRUE
-	radio_broadcast = 3
+	radio_broadcast = RADIOSATTIC_LIGHT
 /**
  * Override attack_tk_grab instead of attack_tk because we actually want attack_tk's
  * functionality. What we DON'T want is attack_tk_grab attempting to pick up the

@@ -93,7 +93,7 @@
 	canhear_range = 3
 	freerange = TRUE
 	w_class = WEIGHT_CLASS_SMALL
-	radio_broadcast = 2
+	radio_broadcast = RADIOSTATIC_MEDIUM
 	var/req_radio = TRUE
 	var/obj/item/ms13/storage/backpack/radiopack/radiopack
 

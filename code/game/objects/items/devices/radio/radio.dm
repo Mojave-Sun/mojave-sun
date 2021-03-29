@@ -1,4 +1,9 @@
 #define FREQ_LISTENING (1<<0)
+//Mojave Sun static defines
+#define RADIOSATTIC_LIGHT 1
+#define RADIOSTATIC_MEDIUM 10
+#define RADIOSTATIC_HEAVY 16
+//end of Mojave Sun defines
 
 /obj/item/radio
 	icon = 'icons/obj/radio.dmi'
@@ -34,7 +39,9 @@
 	var/command = FALSE  // If true, use_command can be toggled at will.
 
 	//Mojave Sun broadcast variable
-	var/radio_broadcast = 1 //determines how badly a broadcasting radio suffers from interference. Goes from 1 to 3, higher is better.
+	var/radio_broadcast = RADIOSTATIC_HEAVY //determines how badly a broadcasting radio suffers from static. The defines are at the top.
+	//The number refers to the odds that each character in a message is replaced with a star.
+
 
 	///makes anyone who is talking through this anonymous.
 	var/anonymize = FALSE
@@ -213,15 +220,9 @@
 				message = stars(message)
 
 //Start of Mojave Sun edit
-	if (radio_broadcast >= 0)
-		if (radio_broadcast == 0)
-			return FALSE
-		if (radio_broadcast == 1)
-			message = stars(message, 14)
-		if (radio_broadcast == 2)
-			message = stars(message, 7)
-		if (radio_broadcast == 3)
-			message = stars(message, 1)
+	if (radio_broadcast)
+		message = stars(message, radio_broadcast)
+
 //End of Mojave Sun edit
 	if(!spans)
 		spans = list(M.speech_span)
