@@ -1,6 +1,6 @@
 #define FREQ_LISTENING (1<<0)
 //Mojave Sun static defines
-#define RADIOSATTIC_LIGHT 1
+#define RADIOSTATIC_LIGHT 1
 #define RADIOSTATIC_MEDIUM 10
 #define RADIOSTATIC_HEAVY 16
 //end of Mojave Sun defines
