@@ -80,7 +80,7 @@
 	freerange = TRUE
 	anonymize = TRUE
 	anchored = TRUE
-	radio_broadcast = RADIOSATTIC_LIGHT
+	radio_broadcast = RADIOSTATIC_LIGHT
 /**
  * Override attack_tk_grab instead of attack_tk because we actually want attack_tk's
  * functionality. What we DON'T want is attack_tk_grab attempting to pick up the
