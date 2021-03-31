@@ -36,27 +36,7 @@
 
 /obj/item/radio/ms13/ham
 	name = "ham radio"
-	desc = "An amateur radio setup. The sound quality could be better, but it beats listening to brahmin all day."
-	icon = 'mojave/icons/objects/hamradio.dmi'
-	icon_state = "radio_on"
-	canhear_range = 7
-	pixel_y = 5
-	freerange = TRUE
-	anonymize = TRUE
-	anchored = TRUE
-	radio_broadcast = FALSE
-
-/obj/item/radio/ms13/ham/Initialize(mapload, ndir, building)
-	. = ..()
-	if(building)
-		setDir(ndir)
-	var/area/current_area = get_area(src)
-	if(!current_area)
-		return
-	RegisterSignal(current_area, COMSIG_AREA_POWER_CHANGE, .proc/AreaPowerCheck)
-/obj/item/radio/ms13/ham/broadcast
-	name = "broadcast ham radio"
-	desc = "An amateur radio setup. This one is set up to broadcast over local frequencies."
+	desc = "An amateur radio setup. The sound quality could be better, but it beats listening to brahmin all day. Has a working microphone, though the quality isn't great."
 	icon = 'mojave/icons/objects/hamradio.dmi'
 	icon_state = "radio_on"
 	canhear_range = 7
@@ -66,9 +46,18 @@
 	anchored = TRUE
 	radio_broadcast = RADIOSTATIC_MEDIUM
 
-/obj/item/radio/ms13/ham/broadcast/examine(mob/user)
+/obj/item/radio/ms13/ham/examine(mob/user)
 	. = ..()
 	. += "<span class='notice'>Use [MODE_TOKEN_INTERCOM] when nearby to speak into it.</span>"
+
+/obj/item/radio/ms13/ham/Initialize(mapload, ndir, building)
+	. = ..()
+	if(building)
+		setDir(ndir)
+	var/area/current_area = get_area(src)
+	if(!current_area)
+		return
+	RegisterSignal(current_area, COMSIG_AREA_POWER_CHANGE, .proc/AreaPowerCheck)
 
 /obj/item/radio/ms13/ham/broadcast
 	name = "high power broadcasting set"

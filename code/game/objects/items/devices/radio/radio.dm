@@ -39,7 +39,7 @@
 	var/command = FALSE  // If true, use_command can be toggled at will.
 
 	//Mojave Sun broadcast variable
-	var/radio_broadcast = RADIOSTATIC_HEAVY //determines how badly a broadcasting radio suffers from static. The defines are at the top.
+	var/radio_broadcast = FALSE //determines how badly a broadcasting radio suffers from static. The defines are at the top.
 	//The number refers to the odds that each character in a message is replaced with a star.
 
 
@@ -178,9 +178,19 @@
 		if("listen")
 			listening = !listening
 			. = TRUE
+		/*
 		if("broadcast")
 			broadcasting = !broadcasting
 			. = TRUE
+		*/
+		//original broadcast handling code
+
+		if("broadcast") //MOJAVE SUN EDIT START
+			if (radio_broadcast == FALSE)
+				. = FALSE
+			else
+				broadcasting = !broadcasting
+				. = TRUE // MOJAVE SUN EDIT END
 		if("channel")
 			var/channel = params["channel"]
 			if(!(channel in channels))
@@ -221,7 +231,10 @@
 
 //Start of Mojave Sun edit
 	if (radio_broadcast)
-		message = stars(message, radio_broadcast)
+		if (radio_broadcast == FALSE)
+			return FALSE
+		if (radio_broadcast > 0)
+			message = stars(message, radio_broadcast)
 
 //End of Mojave Sun edit
 	if(!spans)
