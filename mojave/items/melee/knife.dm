@@ -3,6 +3,10 @@
 /obj/item/kitchen/knife/ms13
 	name = "kitchen knife"
 	desc = "A standard kitchen knife. A decent improvised weapon."
+	icon = 'mojave/icons/objects/melee/melee_world.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
+	icon_state = "knife_kitchen"
 	force = 15
 	throwforce = 15
 	wound_bonus = 0
@@ -11,29 +15,73 @@
 
 /obj/item/kitchen/knife/ms13/combat
 	name = "combat knife"
-	desc = "A well made, serrated combat knife. Very effective at wounding."
-	force = 30
+	desc = "A well made, serrated combat knife. Very effective at wounding. It's got a light frame, with a rifle lug to potentiall attach to a matching rifle."
+	icon_state = "knife_bayonet"
+	force = 25
 	armour_penetration = 10
 	wound_bonus = 4
 	throwforce = 30
 
-/obj/item/kitchen/knife/ms13/combat/bayonet
-	name = "combat bayonet"
-	desc = "A smaller, lighter combat knife with an attached rifle lug. Intended to be used as a bayonet, but makes a fine knife all the same."
-	armour_penetration = 5
-	wound_bonus = -2
+/obj/item/kitchen/knife/ms13/combat/soviet
+	desc = "A slick, straight back combat knife, with a pleasant wrapped leather handle, and faint engraving labeled NKVD."
+	icon_state = "knife_soviet"
+	force = 30
+	armour_penetration = 15
+	wound_bonus = 5
+	throwforce = 35
 
 /obj/item/kitchen/knife/ms13/combat/bowie
 	name = "bowie knife"
 	desc = "A heavy duty bowie knife. Not as good at wounding as it's serrated counterparts, but can kill just as well."
+	icon_state = "knife_bowie"
 	force = 35
 	armour_penetration = 5
 	wound_bonus = -4
 	throwforce = 35
 
+/obj/item/switchblade/ms13
+	name = "switchblade"
+	desc = "A slick and concealable switchblade."
+	icon = 'mojave/icons/objects/melee/melee_world.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
+	icon_state = "knife_switch"
+	wound_bonus = -2
+	extended = 0
+
+/obj/item/switchblade/ms13/attack_self(mob/user)
+	extended = !extended
+	playsound(src.loc, 'sound/weapons/batonextend.ogg', 50, TRUE)
+	if(extended)
+		attack_verb_continuous = list("slashes", "slices", "tears", "lacerates", "rips", "dices", "cuts")
+		attack_verb_simple = list("slash", "slice", "tear", "lacerate", "rip", "dice", "cut")
+		icon_state = "[initial(icon_state)]_open"
+		hitsound = 'sound/weapons/bladeslice.ogg'
+		force = 25
+		throwforce = 15
+		sharpness = SHARP_EDGED
+
+	else
+		attack_verb_continuous = list("stubs", "pokes")
+		attack_verb_simple = list("stub", "poke")
+		icon_state = "[initial(icon_state)]"
+		hitsound = 'sound/weapons/genhit.ogg'
+		force = 5
+		throwforce = 2
+		sharpness = SHARP_NONE
+
+/obj/item/switchblade/ms13/razor
+	name = "razor knife"
+	desc = "A slick and concealable switchblade."
+	icon_state = "knife_razor"
+
 /obj/item/kitchen/knife/butcher/ms13
 	name = "cleaver"
 	desc = "A large butcher's cleaver normally used for chopping limbs and meat off of animals. But it was later discovered this works just as well on other humans."
+	icon = 'mojave/icons/objects/melee/melee_world.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
+	icon_state = "knife_cleaver"
 	force = 25
 	armour_penetration = 5
 	wound_bonus = 3
@@ -44,5 +92,8 @@
 /obj/item/kitchen/knife/butcher/ms13/unique
 	name = "\improper Chopper"
 	desc = "A cleaver that has definitely seen a lot of use and is heavily rusted. Though it still looks like it could chop off a limb, or give a case of tetanus while trying."
+	icon_state = "knife_cleaver_rust"
 	force = 30
 	wound_bonus = 6
+
+/obj/item/chainsaw
