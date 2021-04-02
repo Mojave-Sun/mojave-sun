@@ -20,6 +20,6 @@
 	gloves = 	 /obj/item/clothing/gloves/color/white
 	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
 	back =	 	 /obj/item/storage/backpack/
-
+	suit_store = /obj/item/gun/ballistic/revolver/ms13/caravan/sawed
 /datum/outfit/job/ms13/town/bartender/pre_equip(mob/living/carbon/human/H)
 	..()
