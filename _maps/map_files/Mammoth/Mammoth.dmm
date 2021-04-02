@@ -5805,6 +5805,12 @@
 /obj/structure/table/ms13/metal,
 /turf/open/floor/plating/ground/sidewalk,
 /area/ms13/sunny_dale)
+"cYm" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/wood/ms13,
+/area/ms13/ncr_main)
 "cYp" = (
 /obj/item/pet_carrier,
 /turf/open/floor/plasteel/ms13/_rusty,
@@ -11352,6 +11358,11 @@
 /obj/machinery/door/airlock/alarmlock,
 /turf/open/floor/plasteel/ms13/white/full/dirty,
 /area/ms13/underground/vault_atrium_upper)
+"fXY" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
+/obj/machinery/light/dim,
+/turf/open/floor/wood/ms13/broken/right,
+/area/ms13/ncr_main)
 "fYc" = (
 /obj/structure/fence/fencenormal,
 /obj/effect/decal/cleanable/dirt,
@@ -16718,7 +16729,7 @@
 /area/ms13/underground/bos)
 "iMm" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small/broken{
+/obj/machinery/light/small{
 	dir = 1
 	},
 /turf/open/floor/wood/ms13,
@@ -17847,6 +17858,13 @@
 /obj/structure/closet/crate/trashcart,
 /turf/open/floor/plating/ground/snow,
 /area/ms13)
+"jrw" = (
+/obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
+/obj/machinery/light/broken{
+	dir = 8
+	},
+/turf/open/floor/wood/ms13,
+/area/ms13/ncr_main)
 "jrC" = (
 /obj/structure/bed/ms13/bedframe/wood,
 /obj/structure/bed/ms13/mattress/stained,
@@ -22864,6 +22882,15 @@
 /obj/effect/spawner/lootdrop/ms13/gun/tier3,
 /turf/open/floor/plasteel/ms13/_rusty,
 /area/ms13/sunny_dale)
+"mmk" = (
+/obj/structure/ms13/bars/rusty{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/wood/ms13,
+/area/ms13/ncr_main)
 "mmu" = (
 /turf/open/floor/plasteel/ms13/dark/rusty,
 /area/ms13/supermarket/basement)
@@ -29118,9 +29145,6 @@
 /obj/structure/bed/ms13/bedframe/cot,
 /obj/effect/landmark/start/ms13/trooper,
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
-/obj/machinery/light/dim{
-	dir = 1
-	},
 /turf/open/floor/wood/ms13/broken/right,
 /area/ms13/ncr_main)
 "pGK" = (
@@ -29418,6 +29442,11 @@
 /obj/structure/table/ms13/metal,
 /turf/open/floor/plating/ground/sidewalk,
 /area/ms13/underground/subway)
+"pOv" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small,
+/turf/open/floor/wood/ms13,
+/area/ms13/ncr_main)
 "pOC" = (
 /obj/item/ammo_casing/spent,
 /obj/item/ammo_casing/spent,
@@ -41286,13 +41315,6 @@
 /obj/item/soap/homemade,
 /turf/open/floor/plasteel/ms13/white/rusty,
 /area/ms13/sunny_dale)
-"wsa" = (
-/obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
-/obj/machinery/light/dim{
-	dir = 8
-	},
-/turf/open/floor/wood/ms13,
-/area/ms13/ncr_main)
 "wse" = (
 /turf/open/floor/plasteel/ms13/_full,
 /area/ms13/underground/bos)
@@ -62085,7 +62107,7 @@ nKL
 erd
 ocg
 ocg
-ocg
+cYm
 dDv
 nKL
 afK
@@ -63593,7 +63615,7 @@ cdx
 ocg
 tfs
 ocg
-ocg
+ixK
 nKL
 nKL
 afK
@@ -64495,7 +64517,7 @@ afK
 afK
 afK
 nKL
-mry
+mmk
 mry
 fLk
 ocg
@@ -64801,7 +64823,7 @@ cdx
 kck
 tfs
 ocg
-ocg
+ixK
 nKL
 nKL
 afK
@@ -134561,7 +134583,7 @@ kck
 kck
 ocg
 ocg
-kck
+pOv
 nKL
 sSJ
 sSJ
@@ -201626,7 +201648,7 @@ xrl
 xrl
 lfD
 jvv
-hdq
+jrw
 hhf
 rhC
 lfD
@@ -203747,7 +203769,7 @@ oVX
 hdq
 hdq
 hdq
-wsa
+hdq
 hdq
 hdq
 lfD
@@ -204957,7 +204979,7 @@ hdq
 caW
 xrl
 ozd
-hdq
+eFX
 lfD
 afK
 "}
@@ -205259,7 +205281,7 @@ xrl
 vGT
 hdq
 pFZ
-eFX
+hdq
 lfD
 afK
 "}
@@ -206467,7 +206489,7 @@ hdq
 hdq
 hdq
 hdq
-eFX
+hdq
 lfD
 afK
 "}
@@ -207373,7 +207395,7 @@ sZh
 sZh
 tVH
 sZh
-sZh
+fXY
 lfD
 afK
 "}
@@ -207675,7 +207697,7 @@ xrl
 caW
 xrl
 caW
-eFX
+hdq
 lfD
 afK
 "}
