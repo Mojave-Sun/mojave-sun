@@ -1,7 +1,10 @@
 /obj/item/storage/belt/holster/ms13
 	name = "holster"
 	desc = "A holster able to carry revolvers and other handguns along with some ammo."
-
+	icon = 'mojave/icons/objects/clothing/belts.dmi'
+	worn_icon = 'mojave/icons/mob/clothing/belt.dmi'
+	icon_state = "cowboy"
+	worn_icon_state = "cowboy"
 /obj/item/storage/belt/holster/ms13/equipped(mob/user, slot)
 	. = ..()
 
