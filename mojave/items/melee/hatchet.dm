@@ -9,9 +9,9 @@
 	icon_state = "hatchet"
 	force = 30
 	throwforce = 30
-	w_class = WEIGHT_CLASS_NORMAL
 	wound_bonus = 0
 	bare_wound_bonus = 5
+	w_class = WEIGHT_CLASS_NORMAL
 	sharpness = IS_SHARP_AXE
 	log_pickup_and_drop = TRUE
 
@@ -19,12 +19,28 @@
 	name = "hatchet"
 	desc = "A broad headed hatchet. Nice and hefty, could cleave just about anything in two."
 	icon_state = "hatchet_broad"
+	force = 25
 	bare_wound_bonus = 10
-	armour_penetration = 5
 
 /obj/item/hatchet/ms13/icepick
 	name = "ice pick"
 	desc = "A standard ice pick that is as good at breaking up ice as it is at breaking skulls."
 	icon_state = "ice_pick"
-	sharpness = SHARP_POINTY
+	force = 25
+	throwforce = 20
+	bare_wound_bonus = 0
 	armour_penetration = 10
+	sharpness = SHARP_POINTY
+
+/obj/item/hatchet/ms13/tomahawk
+	name = "tomahawk"
+	desc = "A makeshift tomahawk, primarily used for throwing. Two long spikes protrude, used for digging into the target."
+	icon_state = "tomahawk"
+	inhand_icon_state = "tomahawk"
+	force = 20
+	throwforce = 35
+	armour_penetration = 5
+	wound_bonus = 0
+	embedding = list("embedded_pain_multiplier" = 3, "embed_chance" = 25, "embedded_fall_chance" = 10)
+	sharpness = SHARP_POINTY
+	log_pickup_and_drop = TRUE

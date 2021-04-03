@@ -7,6 +7,7 @@
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
 	icon_state = "fire_axe"
+	log_pickup_and_drop = TRUE
 
 /obj/item/fireaxe/ms13/sword
 	name = "bumper sword"

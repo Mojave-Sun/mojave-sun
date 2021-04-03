@@ -7,8 +7,6 @@
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
 	icon_state = "machete_scrap"
-	lefthand_file = null
-	righthand_file = null
 	inhand_icon_state = "salvagedmachete"
 	slot_flags = ITEM_SLOT_BELT
 	block_chance = 0
@@ -21,11 +19,11 @@
 	name = "machete gladius"
 	desc = "A forged steel machete, the blade has been laborously sharpened and the weight has been evenly distributed for maximum killing power. An image of a bull is burned into the wooden handle."
 	icon_state = "machete_gladius"
-	inhand_icon_state = "machete"
-	slot_flags = ITEM_SLOT_BELT
+	inhand_icon_state = "machete_gladius"
 	force = 35
 	armour_penetration = 5
 	wound_bonus = 5
+	bare_wound_bonus = 5
 
 /obj/item/claymore/ms13/machete/pipe
 	name = "lead pipe"
@@ -38,7 +36,6 @@
 	sharpness = SHARP_NONE
 	armour_penetration = 5
 	wound_bonus = 6
-
 
 /obj/item/claymore/ms13/machete/pipe/tireiron
 	name = "tire iron"

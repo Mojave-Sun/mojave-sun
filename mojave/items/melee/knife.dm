@@ -39,6 +39,22 @@
 	wound_bonus = -4
 	throwforce = 35
 
+/obj/item/kitchen/knife/ms13/hunting
+	name = "hunting"
+	desc = "A standard hunting knife, often used to skin animals but can be used for virtually anything. A useful tool, may even save your life."
+	icon_state = "knife_hunting"
+	force = 25
+	armour_penetration = 0
+	wound_bonus = -4
+	throwforce = 25
+
+/obj/item/kitchen/knife/ms13/hunting/unique
+	desc = "A gold rimmed hunting knife. It's got a single finger loop to assist in grip. The blade seems to be extra sharp."
+	icon_state = "knife_hunting_u"
+	force = 30
+	wound_bonus = -2
+	throwforce = 30
+
 /obj/item/switchblade/ms13
 	name = "switchblade"
 	desc = "A slick and concealable switchblade."
@@ -48,6 +64,7 @@
 	icon_state = "knife_switch"
 	wound_bonus = -2
 	extended = 0
+	log_pickup_and_drop = TRUE
 
 /obj/item/switchblade/ms13/attack_self(mob/user)
 	extended = !extended
@@ -95,5 +112,3 @@
 	icon_state = "knife_cleaver_rust"
 	force = 30
 	wound_bonus = 6
-
-/obj/item/chainsaw
