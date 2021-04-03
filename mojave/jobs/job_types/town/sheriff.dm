@@ -24,7 +24,7 @@
 	back =	 	 /obj/item/storage/backpack/satchel/leather
 
 	belt =	 /obj/item/storage/belt/holster/ms13/sheriff/full_357
-	r_hand = /obj/item/gun/ballistic/shotgun/ms13/lever/trail
+	suit_store = /obj/item/gun/ballistic/shotgun/ms13/lever/trail
 	r_pocket = /obj/item/ammo_box/ms13/tube44
 	l_pocket = /obj/item/ammo_box/ms13/tube44
 /datum/outfit/job/ms13/town/sheriff/pre_equip(mob/living/carbon/human/H)

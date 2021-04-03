@@ -164,8 +164,9 @@
 	max_ammo = 1
 
 /obj/item/ammo_box/magazine/internal/shot/ms13/derringer
-	name = "derringer internal tube"
+	name = ".22 derringer internal tube"
 	ammo_type = /obj/item/ammo_casing/ms13/c22
+	caliber = ".22"
 	max_ammo = 2
 
 /obj/item/ammo_box/magazine/internal/cylinder/ms13/rev44
@@ -208,7 +209,7 @@
 	icon = 'mojave/icons/objects/ammo.dmi'
 	icon_state = "derringer"
 	ammo_type = /obj/item/ammo_casing/ms13/c22
-	caliber = "22"
+	caliber = ".22"
 	max_ammo = 4
 
 /obj/item/ammo_box/ms13/rev4570

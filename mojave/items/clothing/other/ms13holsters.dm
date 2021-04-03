@@ -2,6 +2,9 @@
 	name = "holster"
 	desc = "A holster able to carry revolvers and other handguns along with some ammo."
 
+/obj/item/storage/belt/holster/ms13/equipped(mob/user, slot)
+	. = ..()
+
 /obj/item/storage/belt/holster/ms13/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
