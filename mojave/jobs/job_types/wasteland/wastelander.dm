@@ -17,31 +17,9 @@
 
 /datum/outfit/job/ms13/wasteland/wastelander/pre_equip(mob/living/carbon/human/H)
 	..()
-	if(prob(50))
-		head = pick(
-		/obj/item/clothing/head/helmet/ms13/cowboy/black,\
-		/obj/item/clothing/head/helmet/ms13/utilitycap,\
-		/obj/item/clothing/head/helmet/ms13/baseball,\
-		/obj/item/clothing/head/helmet/ms13/cowboy/padded/ushanka)
-	else
-		head = null
-
-	if(prob(25))
-		mask = pick(
-		/obj/item/clothing/mask/ms13/facewrap,\
-		/obj/item/clothing/mask/ms13/facewrap/red,\
-		/obj/item/clothing/mask/ms13/facewrap/black,\
-		/obj/item/clothing/mask/ms13/facewrap/blue,\
-        /obj/item/clothing/mask/gas,\
-        /obj/item/clothing/mask/bandana/black,\
-        /obj/item/clothing/mask/balaclava)
-	else
-		mask = null
-
 	back = pick(
 		/obj/item/storage/backpack/satchel/leather,\
 		/obj/item/storage/backpack)
-
 
 	uniform = pick(
 		/obj/item/clothing/under/ms13/wasteland/caravanpants,\
@@ -73,23 +51,17 @@
 		/obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgreen,\
 		/obj/item/clothing/under/ms13/wasteland/prewar/relaxedwear,\
 		/obj/item/clothing/under/ms13/wasteland/prewar/spring)
-	if(prob(50))
-		suit = pick(
-			/obj/item/clothing/suit/ms13/vest/cowboy,\
-			/obj/item/clothing/suit/ms13/vest/denim,\
-			/obj/item/clothing/suit/ms13/vest/grey,\
-			/obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat,\
-			/obj/item/clothing/suit/ms13/vest/puffer,\
-			/obj/item/clothing/suit/ms13/ljacket/bomber,\
-			/obj/item/clothing/suit/armor/ms13/kit,\
+
+	suit = pick(
 			/obj/item/clothing/suit/ms13/ljacket,\
-			/obj/item/clothing/suit/ms13/trench,\
-			/obj/item/clothing/suit/ms13/trench/dapper,\
-			/obj/item/clothing/suit/ms13/ljacket/veteran,\
-			/obj/item/clothing/suit/armor/ms13/leatherarmor)
+			/obj/item/clothing/suit/ms13/ljacket/denim,\
+			/obj/item/clothing/suit/ms13/ljacket/moleskin,\
+			/obj/item/clothing/suit/ms13/ljacket/duster)
+
 	r_hand = pick(
 		/obj/item/claymore/ms13/machete/pipe,\
 		/obj/item/claymore/ms13/machete/pipe/tireiron)
+		
 	shoes = pick(
         /obj/item/clothing/shoes/ms13/tan,\
 		/obj/item/clothing/shoes/winterboots,\
