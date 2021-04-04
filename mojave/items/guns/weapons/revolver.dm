@@ -49,7 +49,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/ms13/derringer
 	fire_sound = 'mojave/sound/ms13weapons/22pistol.ogg'
 	w_class = WEIGHT_CLASS_SMALL
-	extra_damage = 30
+	extra_damage = 25
 	extra_penetration = 5
 
 /obj/item/gun/ballistic/revolver/ms13/rev44
