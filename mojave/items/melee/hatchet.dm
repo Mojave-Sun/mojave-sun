@@ -41,6 +41,6 @@
 	throwforce = 35
 	armour_penetration = 5
 	wound_bonus = 0
-	embedding = list("embedded_pain_multiplier" = 3, "embed_chance" = 25, "embedded_fall_chance" = 10)
+	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 50, "embedded_fall_chance" = 10)
 	sharpness = SHARP_POINTY
 	log_pickup_and_drop = TRUE
