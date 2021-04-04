@@ -78,44 +78,24 @@
 	held = 0
 	if(user)
 		to_chat(user, "<span class='notice'>You attach the [radio.name] to the [name].</span>")
-	else
-		src.visible_message("<span class='warning'>The [radio.name] snaps back onto the [name]!</span>")
 	update_icon()
 	user.update_inv_back()
 
-/obj/item/radio/ms13
-	icon = 'mojave/icons/objects/hamradio.dmi'
-	name = "walkie-talkie"
-	icon_state = "handradio"
-	inhand_icon_state = "handradio_"
-	desc = "A basic handheld radio that communicates over a relatively long range, and is proven to be 254% better than yelling loudly."
-	dog_fashion = /datum/dog_fashion/back
-
-	flags_1 = CONDUCT_1 | HEAR_1
-	throw_speed = 3
-	throw_range = 7
-	w_class = WEIGHT_CLASS_SMALL
-	custom_materials = list(/datum/material/iron=75, /datum/material/glass=25)
-	obj_flags = USES_TGUI
 
 /obj/item/radio/ms13/NCR
-	obj_flags = USES_TGUI
-	broadcasting = TRUE
-	freerange = TRUE
-	frequency = 1359
-	keyslot = new /obj/item/encryptionkey/headset_sec
-	subspace_transmission = TRUE
-	var/obj/item/ms13/storage/backpack/radiopack/radiopack
-	var/req_radio = TRUE
+	icon = 'mojave/icons/objects/hamradio.dmi'
+	name = "Walkie-Talkie"
+	icon_state = "handradio"
+	inhand_icon_state = "handradio_"
+	desc = "The important bit of the radiopack, this broadcasts and recieves radio messages in decent quality."
 
-/obj/item/radio/can_receive(freq, level, AIuser)
-	if(ishuman(src.loc))
-		var/mob/living/carbon/human/H = src.loc
-		if(H.is_holding(src))
-			return ..(freq, level)
-	else if(AIuser)
-		return ..(freq, level)
-	return FALSE
+	flags_1 = CONDUCT_1 | HEAR_1
+	canhear_range = 3
+	freerange = TRUE
+	w_class = WEIGHT_CLASS_SMALL
+	radio_broadcast = RADIOSTATIC_MEDIUM
+	var/req_radio = TRUE
+	var/obj/item/ms13/storage/backpack/radiopack/radiopack
 
 /obj/item/radio/ms13/NCR/Initialize()
 	if(istype(loc, /obj/item/ms13/storage/backpack/radiopack))
@@ -126,16 +106,12 @@
 
 	return ..()
 
-/obj/item/radio/ms13/NCR/attack_self(mob/living/user)
-	return
 
 /obj/item/radio/ms13/NCR/dropped(mob/user)
 	. = ..()
 	if(user)
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED)
 	if(req_radio)
-		if(user)
-			to_chat(user, "<span class='notice'>The walkie talkie snaps back into place on the radiopack.</span>")
 		snap_back()
 
 /obj/item/radio/ms13/NCR/proc/snap_back()
@@ -143,9 +119,3 @@
 		return
 	forceMove(radiopack)
 
-/obj/item/radio/ms13/NCR/doMove(atom/destination)
-	if(destination && (destination != radiopack.loc || !ismob(destination)))
-		if (loc != radiopack)
-			to_chat(radiopack.loc, "<span class='notice'>The walkie talkie snaps back into place on the radiopack.</span>")
-		destination = radiopack
-	..()
