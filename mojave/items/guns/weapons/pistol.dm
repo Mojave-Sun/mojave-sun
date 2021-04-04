@@ -28,7 +28,12 @@
 	extra_damage = 25
 	extra_penetration = 0
 	internal_magazine = TRUE
+/obj/item/gun/ballistic/automatic/pistol/ms13/m10mm/chinese/update_icon_state()
+	if(!chambered && internal_magazine == TRUE && magazine.stored_ammo == 0) //this makes the pistol have the chinese pistol update when empty, code can be copied to similar pistols
+		icon_state = "[initial(icon_state)]_empty"
 
+	if(chambered && internal_magazine == TRUE) //this makes the chinese pistol or subtypes appear loaded as long as it's chambered
+		icon_state = "[initial(icon_state)]"
 /obj/item/gun/ballistic/automatic/pistol/ms13/m10mm/chinese/v420
 	name = "v420 Chinese pistol"
 	desc = "A prototype Chinese pistol with a slower fire rate but much higher damage, also sporting some much better looks."
@@ -48,6 +53,18 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	fire_delay = 4
 	extra_damage = 20
+	extra_penetration = 5
+
+/obj/item/gun/ballistic/automatic/pistol/ms13/m9mm/nambu
+	name = "Nambu type 14"
+	desc = "An unreliable ancient pre-war pistol chambered in 9mm nambu."
+	icon_state = "nambu"
+	inhand_icon_state = "nambu"
+	mag_type = /obj/item/ammo_box/magazine/ms13/m9mm
+	fire_sound = 'mojave/sound/ms13weapons/gunsounds/9mm/9mm1.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	fire_delay = 3
+	extra_damage = 25
 	extra_penetration = 5
 
 /obj/item/gun/ballistic/automatic/pistol/ms13/m12mm

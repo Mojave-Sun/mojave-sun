@@ -73,7 +73,7 @@
 				/obj/item/ammo_box/ms13/sks
 				)
 	var/loot6 = list(
-				/obj/item/gun/ballistic/shotgun/ms13/cowboy,
+				/obj/item/gun/ballistic/shotgun/ms13/lever/cowboy,
 				/obj/item/ammo_box/ms13/tube357,
 				/obj/item/ammo_box/ms13/tube357
 				)
@@ -116,7 +116,7 @@
 				/obj/item/ammo_box/ms13/rev556
 				)
 	var/loot5 = list(
-				/obj/item/gun/ballistic/shotgun/ms13/trail,
+				/obj/item/gun/ballistic/shotgun/ms13/lever/trail,
 				/obj/item/ammo_box/ms13/tube44,
 				/obj/item/ammo_box/ms13/tube44
 				)
@@ -214,7 +214,7 @@
 				/obj/item/ammo_box/magazine/ms13/r308_10
 				)
 	var/loot11 = list(
-				/obj/item/gun/ballistic/shotgun/ms13/brush,
+				/obj/item/gun/ballistic/shotgun/ms13/lever/brush,
 				/obj/item/ammo_box/ms13/tube4570,
 				/obj/item/ammo_box/ms13/tube4570
 				)
@@ -301,17 +301,17 @@
 
 /obj/effect/spawner/lootdrop/ms13/gun/lowrandom
 	name = "low tier random gun spawner"
-	lootcount = 1 
-	
+	lootcount = 1
+
 	loot = list(
 			/obj/effect/spawner/lootdrop/ms13/gun/tier1 = 70,
 			/obj/effect/spawner/lootdrop/ms13/gun/tier2 = 30,
 			)
-			
+
 /obj/effect/spawner/lootdrop/ms13/gun/highrandom
 	name = "high tier random gun spawner"
 	lootcount = 1
-	
+
 	loot = list(
 			/obj/effect/spawner/lootdrop/ms13/gun/tier2 = 10,
 			/obj/effect/spawner/lootdrop/ms13/gun/tier3 = 60,
