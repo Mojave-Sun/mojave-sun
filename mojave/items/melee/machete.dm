@@ -44,3 +44,30 @@
 	inhand_icon_state = "tire_iron"
 	force = 20
 	wound_bonus = 4
+
+/obj/item/claymore/ms13/machete/katana
+	name = "katana"
+	desc = "A katana is a japanese sword. However it ended up here is another story. Great legends surround this blade, such as being able to take a limb clean off in a single swipe"
+	icon_state = "katana_red"
+	inhand_icon_state = "katana_red"
+	force = 35
+	armour_penetration = 10
+	wound_bonus = 5
+	bare_wound_bonus = 20
+
+/obj/item/katana/ms13
+	name = "katana"
+	desc = "A katana is a japanese sword. However it ended up here is another story. Great legends surround this blade, such as being able to take a limb clean off in a single swipe"
+	icon = 'mojave/icons/objects/melee/melee_world.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
+	icon_state = "katana_red"
+	inhand_icon_state = "katana_red"
+	force = 35
+	armour_penetration = 10
+	wound_bonus = 5
+	bare_wound_bonus = 20
+
+/obj/item/katana/ms13/alt
+	icon_state = "katana_black"
+	inhand_icon_state = "katana_black"

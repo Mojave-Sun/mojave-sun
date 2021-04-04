@@ -15,7 +15,7 @@
 
 /obj/item/kitchen/knife/ms13/combat
 	name = "combat knife"
-	desc = "A well made, serrated combat knife. Very effective at wounding. It's got a light frame, with a rifle lug to potentiall attach to a matching rifle."
+	desc = "A well made, serrated combat knife. Very effective at wounding. It's got a light frame, with a rifle lug to potentially attach to a matching rifle."
 	icon_state = "knife_bayonet"
 	force = 25
 	armour_penetration = 10
@@ -40,7 +40,7 @@
 	throwforce = 35
 
 /obj/item/kitchen/knife/ms13/hunting
-	name = "hunting"
+	name = "hunting knife"
 	desc = "A standard hunting knife, often used to skin animals but can be used for virtually anything. A useful tool, may even save your life."
 	icon_state = "knife_hunting"
 	force = 25
