@@ -68,7 +68,7 @@
 	icon_state = "armorwinterblue"
 	inhand_icon_state = "armoredwinterblue"
 
-/obj/item/clothing/suit/ms13/ljacket/black
+/obj/item/clothing/suit/ms13/ljacket/winter/black
 	name = "black winter jacket"
 	desc = "A black winter jacket."
 	icon_state = "winterblack"
