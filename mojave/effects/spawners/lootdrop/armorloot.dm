@@ -17,7 +17,7 @@
 				/obj/item/clothing/head/helmet/ms13/cowboy/black
 				)
 	var/loot4 = list(
-				/obj/item/clothing/suit/ms13/vest/puffer,
+				/obj/item/clothing/suit/ms13/shawl,
 				""
 				)
 	var/loot5 = list(
@@ -53,7 +53,7 @@
 				/obj/item/clothing/head/helmet/ms13/cowboy/padded/black
 				)
 	var/loot13 = list(
-				/obj/item/clothing/suit/ms13/trench/detective/dark,
+				/obj/item/clothing/suit/ms13/trench/detective,
 				/obj/item/clothing/head/helmet/ms13/cowboy/padded/detective/grey
 				)
 	var/loot14 = list(
@@ -97,11 +97,11 @@
 				""
 				)
 	var/loot24 = list(
-				/obj/item/clothing/suit/ms13/trench/detective,
+				/obj/item/clothing/suit/ms13/duster/alt,
 				/obj/item/clothing/head/helmet/ms13/cowboy/padded/detective
 				)
 	var/loot25 = list(
-				/obj/item/clothing/suit/ms13/vest/denim,
+				/obj/item/clothing/suit/ms13/ljacket/musty,
 				""
 				)
 	var/loot26 = list(
@@ -154,34 +154,29 @@
 				/obj/item/clothing/head/helmet/ms13/cowboy/reinf/motorcycle
 				)
 	var/loot10 = list(
-				/obj/item/clothing/suit/armor/ms13/blastmaster,
-				/obj/item/clothing/head/helmet/ms13/blastmaster
+				/obj/item/clothing/suit/ms13/vest/raider,
 				)
 	var/loot11 = list(
-				/obj/item/clothing/suit/armor/ms13/yankee,
-				/obj/item/clothing/head/helmet/ms13/yankee
+				/obj/item/clothing/suit/ms13/vest/raider/plated,
 				)
 	var/loot12 = list(
-				/obj/item/clothing/suit/armor/ms13/sadist,
-				/obj/item/clothing/head/helmet/ms13/psychotic
+				/obj/item/clothing/suit/ms13/vest/raider/kevlar,
 				)
 	var/loot13 = list(
 				/obj/item/clothing/suit/armor/ms13/tire,
 				)
 	var/loot14 = list(
-				/obj/item/clothing/suit/armor/ms13/badlands,
-				/obj/item/clothing/head/helmet/ms13/wastehound
+				/obj/item/clothing/suit/ms13/vest/raider/scrappy,
 				)
 	var/loot15 = list(
-				/obj/item/clothing/suit/armor/ms13/painspike,
-				/obj/item/clothing/head/helmet/ms13/arclight
+				/obj/item/clothing/suit/ms13/duster/reinf,
 				)
 	var/loot16 = list(
 				/obj/item/clothing/suit/armor/ms13/vest,
 				/obj/item/clothing/head/helmet/ms13/cowboy/padded/police
 				)
 	var/loot17 = list(
-				/obj/item/clothing/suit/armor/ms13/vest/detective,
+				/obj/item/clothing/suit/armor/ms13/vest,
 				/obj/item/clothing/head/helmet/ms13/cowboy/padded/detective
 				)
 	var/loot18 = list(
