@@ -10,6 +10,10 @@
 /obj/item/proc/melee_attack_chain(mob/user, atom/target, params)
 	if(tool_behaviour && target.tool_act(user, src, tool_behaviour))
 		return TRUE
+	// MS13 Edit Start - craftable element
+	if(target.craft(user, src))
+		return TRUE
+	// MS13 Edit End - craftable element
 	if(pre_attack(target, user, params))
 		return TRUE
 	if(target.attackby(src,user, params))

@@ -23,19 +23,24 @@
 	desc = "A mass produced pre-war Chinese pistol chambered for 10mm rounds."
 	icon_state = "cpistol"
 	inhand_icon_state = "cpistol"
-	mag_type = /obj/item/ammo_box/magazine/internal/cpistol
+	mag_type = /obj/item/ammo_box/magazine/internal/ms13/cpistol
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/chinese/chinese1.ogg'
 	extra_damage = 25
 	extra_penetration = 0
 	internal_magazine = TRUE
+/obj/item/gun/ballistic/automatic/pistol/ms13/m10mm/chinese/update_icon_state()
+	if(!chambered && internal_magazine == TRUE && magazine.stored_ammo == 0) //this makes the pistol have the chinese pistol update when empty, code can be copied to similar pistols
+		icon_state = "[initial(icon_state)]_empty"
 
+	if(chambered && internal_magazine == TRUE) //this makes the chinese pistol or subtypes appear loaded as long as it's chambered
+		icon_state = "[initial(icon_state)]"
 /obj/item/gun/ballistic/automatic/pistol/ms13/m10mm/chinese/v420
 	name = "v420 Chinese pistol"
 	desc = "A prototype Chinese pistol with a slower fire rate but much higher damage, also sporting some much better looks."
 	icon_state = "420pistol"
 	inhand_icon_state = "420pistol"
-	extra_damage = 35
-	extra_penetration = 10
+	extra_damage = 30
+	extra_penetration = 5
 	fire_delay = 5
 
 /obj/item/gun/ballistic/automatic/pistol/ms13/m9mm
@@ -50,21 +55,17 @@
 	extra_damage = 20
 	extra_penetration = 5
 
-/obj/item/gun/ballistic/automatic/pistol/ms13/m9mm/maria
-	name = "\improper Maria"
-	desc = "A custom and improved model of the 9mm pistol with improved rate of fire, damage, and style. Does look a bit like an 18-karat run of bad luck though."
-	icon_state = "maria"
-	inhand_icon_state = "maria"
-	fire_delay = 3	
+/obj/item/gun/ballistic/automatic/pistol/ms13/m9mm/nambu
+	name = "Nambu type 14"
+	desc = "An unreliable ancient pre-war pistol chambered in 9mm nambu."
+	icon_state = "nambu"
+	inhand_icon_state = "nambu"
+	mag_type = /obj/item/ammo_box/magazine/ms13/m9mm
+	fire_sound = 'mojave/sound/ms13weapons/gunsounds/9mm/9mm1.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	fire_delay = 3
 	extra_damage = 25
-	extra_penetration = 10
-
-/obj/item/gun/ballistic/automatic/pistol/ms13/m9mm/handmade
-	name = "handmade pistol"
-	desc = "A crudely made pistol chambered for 9mm rounds. Fires more slowly than it's manufactured brother."
-	icon_state = "hpistol"
-	inhand_icon_state = "hpistol"
-	fire_delay = 5
+	extra_penetration = 5
 
 /obj/item/gun/ballistic/automatic/pistol/ms13/m12mm
 	name = "12.7mm pistol"
@@ -78,17 +79,6 @@
 	extra_damage = 35
 	extra_penetration = 15
 
-/obj/item/gun/ballistic/automatic/pistol/ms13/m12mm/devil
-	name = "\improper Li'l Devil"
-	desc = "A unique and modified version of the 12.7mm pistol with a higher fire rate, improved damage, and a suppressor attached."
-	icon_state = "devil"
-	inhand_icon_state = "devil"
-	suppressed = 1
-	fire_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
-	fire_delay = 3
-	extra_damage = 35
-	extra_penetration = 20
-
 /obj/item/gun/ballistic/automatic/pistol/ms13/pistol45
 	name = ".45 pistol"
 	desc = "A classic handgun chambered in .45 caliber. What's not to love?"
@@ -101,6 +91,13 @@
 	fire_delay = 4
 	extra_damage = 30
 	extra_penetration = 5
+
+/obj/item/gun/ballistic/automatic/pistol/ms13/pistol45/stallion
+	name = "\improper Stallion"
+	desc = "A fancy, well kept, and improved .45 pistol. An even better version of the classic."
+	icon_state = "stallion"
+	inhand_icon_state = "stallion"
+	extra_penetration = 10
 
 /obj/item/gun/ballistic/automatic/pistol/ms13/deagle
 	name = "desert eagle"
@@ -177,16 +174,15 @@
 	caliber = "12.7mm"
 	max_ammo = 7
 
-/obj/item/ammo_box/magazine/internal/cpistol
+/obj/item/ammo_box/magazine/internal/ms13/cpistol
 	name = "Chinese pistol internal magazine"
 	ammo_type = /obj/item/ammo_casing/ms13/c10mm
 	caliber = "10mm"
 	max_ammo = 10
-	multiple_sprites = 2
 
 //Loaders
 /obj/item/ammo_box/ms13/cpistol
-	name = "Chinese pistol stripper clip (10mm)"
+	name = "\improper Chinese pistol stripper clip (10mm)"
 	icon = 'mojave/icons/objects/ammo.dmi'
 	icon_state = "cpistol"
 	ammo_type = /obj/item/ammo_casing/ms13/c10mm

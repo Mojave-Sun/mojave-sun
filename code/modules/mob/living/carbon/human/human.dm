@@ -23,6 +23,9 @@
 	AddComponent(/datum/component/footstep, FOOTSTEP_MOB_HUMAN, 1, -6)
 	AddComponent(/datum/component/bloodysoles/feet)
 	ADD_TRAIT(src, TRAIT_ADVANCEDTOOLUSER, ROUNDSTART_TRAIT)
+	// MS13 Edit Start - thirst component
+	AddComponent(/datum/component/thirst, thirst_rate = -1, start_thirst = 900, thirst_limit = 2400, stage_flavor_text = GLOB.dehydration_stage_examine, stages_to_alerts = GLOB.dehydration_stage_alerts)
+	// MS13 Edit End - thirst HUD
 	GLOB.human_list += src
 
 /mob/living/carbon/human/proc/setup_human_dna()

@@ -94,6 +94,45 @@
     desc = "Hardly spins."
     icon_state = "office_chair_broken"
 
+/obj/structure/chair/ms13/overlaypickup/plastic
+    name = "plastic chair"
+    desc = "The most generic chair known to pre-war man."
+    icon_state = "plastic_chair"
+    armrest_icon = "plastic_chair_armrest"
+    item_chair = /obj/item/chair/ms13/plastic
+
+/obj/structure/chair/ms13/overlaypickup //overlay chairs you can pick up
+	var/mutable_appearance/armrest
+	var/armrest_icon = "comfychair_armrest"
+
+/obj/structure/chair/ms13/overlaypickup/Initialize()
+	. = ..()
+	armrest = GetArmrest()
+	armrest.layer = ABOVE_MOB_LAYER
+	return
+
+/obj/structure/chair/ms13/overlaypickup/proc/GetArmrest()
+	return mutable_appearance(icon, armrest_icon)
+
+/obj/structure/chair/ms13/overlaypickup/Destroy()
+	. = ..()
+	QDEL_NULL(armrest)
+	return
+
+/obj/structure/chair/ms13/overlaypickup/post_buckle_mob(mob/living/M)
+	. = ..()
+	update_armrest()
+
+/obj/structure/chair/ms13/overlaypickup/proc/update_armrest()
+	if(has_buckled_mobs())
+		add_overlay(armrest)
+	else
+		cut_overlay(armrest)
+
+/obj/structure/chair/ms13/overlaypickup/post_unbuckle_mob()
+	. = ..()
+	update_armrest()
+
 ////ITEM VARIANTS////
 
 /obj/item/chair/ms13
@@ -175,3 +214,15 @@
 	icon_state = "wood_chair_padded_toppled"
 	inhand_icon_state = "wood_chair_padded"
 	origin_type = /obj/structure/chair/ms13/wood/padded
+
+/obj/item/chair/ms13/plastic
+	name = "plastic chair"
+	desc = "The most generic chair known to pre-war man."
+	hitsound = "mojave/sound/ms13weapons/meleesounds/plastic_slam.ogg"
+	w_class = WEIGHT_CLASS_NORMAL
+	force = 7
+	throw_range = 5
+	break_chance = 5
+	icon_state = "plastic_chair_toppled"
+	inhand_icon_state = "plastic_chair"
+	origin_type = /obj/structure/chair/ms13/overlaypickup/plastic

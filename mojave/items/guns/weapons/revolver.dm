@@ -9,6 +9,25 @@
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/caravan/caravan.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+/obj/item/gun/ballistic/revolver/ms13/caravan
+	name = "caravan shotgun"
+	desc = "A well worn but reliable double barrel shotgun."
+	icon_state = "caravan"
+	inhand_icon_state = "caravan"
+	force = 20
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/ms13/caravan
+	fire_sound = 'mojave/sound/ms13weapons/gunsounds/caravan/caravan.ogg'
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_HEAVY
+
+/obj/item/gun/ballistic/revolver/ms13/caravan/sawed
+	name = "sawed-off shotgun"
+	desc = "A double barrel sawed-off shotgun. Can be used and fired with only one hand, making it a deadly weapon in a pinch."
+	icon_state = "sawedoff"
+	inhand_icon_state = "sawedoff"
+	force = 15
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
 
 /obj/item/gun/ballistic/revolver/ms13/single
 	name = "single shotgun"
@@ -20,11 +39,6 @@
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/caravan/caravan2.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-
-/obj/item/gun/ballistic/revolver/ms13/single/handmade
-	name = "handmade shotgun"
-	desc = "A single shotgun fashioned by hand, about as powerful as it's cleaner brother. But maybe not as reliable."
-	icon_state = "hshot"
 
 /obj/item/gun/ballistic/revolver/ms13/rev44
 	name = ".44 magnum revolver"
@@ -40,10 +54,9 @@
 
 /obj/item/gun/ballistic/revolver/ms13/rev44/mysterious
 	name = "\improper Mysterious Magnum"
-	desc = "A unique .44 Magnum with a silver finish for style, and a higher rate of fire and damage for killing. Something sure is mysterious about this gun though."
+	desc = "A unique .44 Magnum with a silver finish for style, and even better stopping power. Something sure is mysterious about this gun though."
 	icon_state = "mysterious"
 	inhand_icon_state = "mysterious"
-	fire_delay = 4
 	extra_damage = 40
 
 /obj/item/gun/ballistic/revolver/ms13/rev44/rifle
@@ -55,7 +68,6 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 6
 	extra_damage = 45
-	extra_penetration = 10
 
 /obj/item/gun/ballistic/revolver/ms13/rev357
 	name = ".357 magnum revolver"
@@ -71,21 +83,10 @@
 
 /obj/item/gun/ballistic/revolver/ms13/rev357/lucky
 	name = "\improper Lucky"
-	desc = "A unique .357 Magnum with fancy engravings and a nice finish, fires faster and hits harder than it's lamer brother too."
+	desc = "A unique .357 Magnum with fancy engravings and a nice finish, hits harder than it's lamer brother too."
 	icon_state = "lucky"
 	inhand_icon_state = "lucky"
-	fire_delay = 4
 	extra_damage = 35
-
-/obj/item/gun/ballistic/revolver/ms13/rev357/heavy
-	name = "heavy .357 revolver"
-	desc = "A modern, heavy duty .357 revolver with much more damage."
-	icon_state = "heavy357"
-	inhand_icon_state = "heavy357"
-	fire_sound = 'mojave/sound/ms13weapons/magnum_fire.ogg'
-	fire_delay = 6
-	extra_damage = 40
-	extra_penetration = 15
 
 /obj/item/gun/ballistic/revolver/ms13/rev357/police
 	name = "police pistol"
@@ -96,25 +97,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	fire_delay = 5
 	extra_damage = 25
-	extra_penetration = 10
-
-/obj/item/gun/ballistic/revolver/ms13/rev357/handmade
-	name = "handmade revolver"
-	desc = "A revolver made from scratch that fires .357 magnum rounds at a slow rate of fire and without as much penetration."
-	icon_state = "hrev"
-	inhand_icon_state = "hrev"
-	extra_penetration = 0
-
-/obj/item/gun/ballistic/revolver/ms13/rev357/handmade/rifle
-	name = "handmade revolver rifle"
-	desc = "A handmade rifle with a revolver cylinder that fires .357 magnum rounds. Not too slow, decent damage, and with a handmade sight attached."
-	icon_state = "hrifle"
-	inhand_icon_state = "hrifle"
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
-	fire_delay = 5
-	extra_damage = 25
-	extra_penetration = 10
 
 /obj/item/gun/ballistic/revolver/ms13/rev10mm
 	name = "10mm revolver"
@@ -145,7 +127,6 @@
 	icon_state = "sequoia"
 	inhand_icon_state = "sequoia"
 	extra_damage = 50
-	extra_penetration = 5
 
 /obj/item/gun/ballistic/revolver/ms13/rev556
 	name = "5.56 revolver"
