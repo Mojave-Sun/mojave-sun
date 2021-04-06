@@ -42,7 +42,7 @@
 	name = "\proper desert"
 	desc = "A stretch of desert."
 	baseturfs = /turf/open/floor/plating/ground/desert
-	icon_state = "wasteland1"
+	icon_state = "desert1"
 	icon = 'mojave/icons/turf/ground.dmi'
 	slowdown = 1
 	var/obj/structure/flora/turfPlant = null
@@ -51,7 +51,7 @@
 
 /turf/open/floor/plating/ground/desert/Initialize()
 	. = ..()
-	icon_state = "wasteland[rand(1,31)]"
+	icon_state = "desert[rand(1,4)]"
 	//If no fences, machines (soil patches are machines), etc. try to plant grass
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
