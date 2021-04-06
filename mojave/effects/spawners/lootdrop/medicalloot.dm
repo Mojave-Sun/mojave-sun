@@ -8,7 +8,6 @@
 
 	loot = list(
 			/obj/item/stack/medical/suture/ms13/half,
-			/obj/item/stack/medical/ointment/ms13,
 			/obj/item/stack/medical/gauze/ms13/half
 			)
 
@@ -17,7 +16,7 @@
 
 	loot = list(
 			/obj/item/stack/medical/suture/ms13,
-			/obj/item/stack/medical/mesh/ms13,
+			/obj/item/stack/medical/ointment/ms13/cream,
 			/obj/item/stack/medical/gauze/ms13
 			)
 
@@ -25,9 +24,9 @@
 	name = "tier 3 medical spawner"
 
 	loot = list(
-			/obj/item/stack/medical/suture/ms13/prewar,
-			/obj/item/stack/medical/mesh/ms13/prewar,
-			/obj/item/stack/medical/gauze/ms13/prewar
+			/obj/item/stack/medical/gauze/ms13/military,
+			/obj/item/stack/medical/ointment/ms13,
+			/obj/item/reagent_containers/hypospray/medipen/stimpak
 			)
 
 /obj/effect/spawner/lootdrop/ms13/medical/lowrandom
