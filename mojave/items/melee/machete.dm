@@ -7,11 +7,11 @@
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
 	icon_state = "machete_scrap"
-	inhand_icon_state = "salvagedmachete"
+	inhand_icon_state = "machete_scrap"
 	slot_flags = ITEM_SLOT_BELT
 	block_chance = 0
 	force = 30
-	wound_bonus = 3
+	wound_bonus = 5
 	sharpness = SHARP_EDGED
 	log_pickup_and_drop = TRUE
 
@@ -22,20 +22,20 @@
 	inhand_icon_state = "machete_gladius"
 	force = 35
 	armour_penetration = 5
-	wound_bonus = 5
-	bare_wound_bonus = 5
+	wound_bonus = 10
+	bare_wound_bonus = 10
 
 /obj/item/claymore/ms13/machete/pipe
 	name = "lead pipe"
 	desc = "A heavy rusted pipe, good for smashing heads. "
 	icon_state = "lead_pipe"
 	inhand_icon_state = "lead_pipe"
-	attack_verb_continuous = list("mashes", "bashes", "pipes", "hits", "bludgeons", "whacks", "bonks") /* wtf is piped */
-	attack_verb_simple = list("mashed", "bashed", "piped", "hit", "bludgeoned", "whacked", "bonked")
+	attack_verb_continuous = list("mashes", "bashes", "pipes", "hits", "bludgeons", "whacks", "bonks")
+	attack_verb_simple = list("mash", "bash", "pip", "hit", "bludgeon", "whack", "bonk")
 	force = 25
 	sharpness = SHARP_NONE
 	armour_penetration = 5
-	wound_bonus = 6
+	wound_bonus = 5
 
 /obj/item/claymore/ms13/machete/pipe/tireiron
 	name = "tire iron"
@@ -43,7 +43,6 @@
 	icon_state = "tire_iron"
 	inhand_icon_state = "tire_iron"
 	force = 20
-	wound_bonus = 4
 
 /obj/item/claymore/ms13/machete/katana
 	name = "katana"

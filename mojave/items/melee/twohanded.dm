@@ -1,4 +1,4 @@
-//This file contains all axes and their subtypes, like Sledgehammers.
+//This file contains the twohanded weapons and the base for them.
 
 /obj/item/ms13/twohanded
 	name = "wieldable weapon"
@@ -11,15 +11,11 @@
 	hitsound = 'sound/effects/hit_punch.ogg'
 	attack_verb_continuous = list("attacks", "stabs", "pokes")
 	attack_verb_simple = list("attack", "stab", "poke")
-	force = 20
-	armour_penetration = 5
-	wound_bonus = 10
-	throwforce = 25
-	wound_bonus = 10
-	bare_wound_bonus = 20
 	sharpness = SHARP_EDGED
 	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
 	log_pickup_and_drop = TRUE
+	var/wielded = FALSE
 
 /obj/item/ms13/twohanded/Initialize()
 	. = ..()
@@ -28,22 +24,35 @@
 
 /obj/item/ms13/twohanded/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, require_twohands=FALSE,)
+	AddComponent(/datum/component/two_handed, require_twohands=FALSE, force_multiplier=2)
 
+// triggered on wielding of a two handed item.
 /obj/item/ms13/twohanded/proc/on_wield(obj/item/source, mob/user)
 	SIGNAL_HANDLER
-	inhand_icon_state = "[initial(inhand_icon_state)]_wielded"
+	inhand_icon_state = "[initial(inhand_icon_state)]_wielded" // subtype compatability ftw
+	playsound(src.loc, 'mojave/sound/ms13effects/weapon_wield.ogg', 25, TRUE)
+	wielded = TRUE
 
-/// triggered on unwield of two handed item
+// triggered on unwielding of two handed item.
 /obj/item/ms13/twohanded/proc/on_unwield(obj/item/source, mob/user)
 	SIGNAL_HANDLER
 	inhand_icon_state = "[initial(inhand_icon_state)]"
+	playsound(src.loc, 'mojave/sound/ms13effects/weapon_wield.ogg', 10, TRUE)
+	wielded = FALSE
 
 /obj/item/ms13/twohanded/fireaxe
 	name = "fire axe"
 	desc = "A pre-war fire axe, once used by firemen, now used by maniacs."
 	icon_state = "fire_axe"
 	inhand_icon_state = "fire_axe"
+	attack_verb_continuous = list("cleaves", "whacks", "chops", "cuts")
+	attack_verb_simple = list("cleave", "whack", "chop", "cut")
+	force = 25
+	armour_penetration = 10
+	wound_bonus = 5
+	throwforce = 5
+	throw_range = 3
+	bare_wound_bonus = 10
 	sharpness = IS_SHARP_AXE
 
 /obj/item/ms13/twohanded/sword
@@ -51,6 +60,14 @@
 	desc = "A sword, made from the bumper of a car. It's got a rough edge, but it will work just fine."
 	icon_state = "bumper_sword"
 	inhand_icon_state = "bumper_sword"
+	attack_verb_continuous = list("cleaves", "whacks", "chops", "lacerates", "stabs")
+	attack_verb_simple = list("cleave", "whack", "chop", "lacerate", "stab")
+	force = 25
+	armour_penetration = 5
+	wound_bonus = 10
+	throwforce = 10
+	throw_range = 5
+	bare_wound_bonus = 20
 	sharpness = SHARP_EDGED
 
 /obj/item/ms13/twohanded/hammer
@@ -58,6 +75,13 @@
 	desc = "An incredibly heavy sledge hammer. Hard to swing with one hand, It'd take your full power to be able to weild it."
 	icon_state = "hammer_power"
 	inhand_icon_state = "hammer_sledge"
+	attack_verb_continuous = list("slams", "beats", "hammers", "pummels", "impacts")
+	attack_verb_simple = list("slam", "beat", "hammer", "pummel", "impact")
+	force = 25
+	armour_penetration = 20
+	wound_bonus = 10
+	throwforce = 5
+	throw_range = 2
 	sharpness = SHARP_NONE
 
 /obj/item/ms13/twohanded/hammer/rebar
@@ -65,9 +89,15 @@
 	desc = "A piece of rebar with concrete still stuck to it. Might as well use it for something."
 	icon_state = "rebar_club"
 	inhand_icon_state = "rebar_club"
+	force = 20
+	armour_penetration = 15
+	wound_bonus = 15
 
 /obj/item/ms13/twohanded/hammer/super
 	name = "super sledge"
 	desc = "Using the power of science and engineering, They packed 66% more sledge in this hammer. It's a pain to use unless you're built heavily or in power armor."
 	icon_state = "hammer_power"
 	inhand_icon_state = "hammer_power"
+	force = 35
+	armour_penetration = 35
+	wound_bonus = 35
