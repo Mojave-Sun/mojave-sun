@@ -56,3 +56,19 @@
 	hitsound = 'sound/weapons/genhit.ogg'
 	sharpness = SHARP_POINTY
 	w_class = WEIGHT_CLASS_BULKY
+
+/obj/item/ms13/brick
+	name = "brick"
+	desc = "A literal brick. Nothing more. State of the art clay brick, in the typical pale red colour."
+	icon = 'mojave/icons/objects/melee/melee_world.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
+	icon_state = "brick"
+	inhand_icon_state = "brick"
+	attack_verb_continuous = list("clonks", "smacks", "clocks", "nails", "bludgeons", "whacks", "bonks")
+	attack_verb_simple = list("clonk", "smack", "clock", "nail", "bludgeon", "whack", "bonk")
+	force = 15
+	armour_penetration = 5
+	wound_bonus = 5
+	sharpness = SHARP_NONE
+	throwforce = 20 //brick

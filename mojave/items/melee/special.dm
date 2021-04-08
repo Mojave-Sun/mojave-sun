@@ -1,3 +1,4 @@
+// rippers and whatnot //
 /obj/item/chainsaw/ms13
 	name = "auto axe"
 	desc = "A modified steel saw, converted into a tool of destruction. You could use it for trees, But why stop there?"
@@ -62,4 +63,28 @@
 /obj/item/ms13/knuckles/weighted/spiked
 	name = "spiked knuckles"
 	desc = "Brass knuckles, but better. It has five spikes going along it, used to concentrate kinetic energy to a smaller area. In thug terms- Pack more heat. Cut a fool."
+	icon_state = "knuckles_spike"
+	inhand_icon_state = "knuckles_spike"
 	sharpness = SHARP_POINTY
+
+/obj/item/melee/powerfist/ms13
+	name = "power fist"
+	desc = "A pneumatic glove that acts as a powered ram in order to hit harder with a punch. Can send your foe flying! Must have a pressurized tank inserted to work properly."
+	icon = 'mojave/icons/objects/melee/melee_world.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
+	icon_state = "powerfist"
+	inhand_icon_state = "powerfist"
+	wound_bonus = 10
+
+// misc stuff that doesn't fit anywhere else here //
+
+/obj/item/flashlight/flare/ms13
+	name = "flare"
+	desc = "A red Nanotrasen issued flare. There are instructions on the side, it reads 'pull cord, make light'."
+	icon = 'mojave/icons/objects/melee/melee_world.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
+	icon_state = "flare"
+	inhand_icon_state = "flare"
+	light_range = 5 // Somewhat bright.

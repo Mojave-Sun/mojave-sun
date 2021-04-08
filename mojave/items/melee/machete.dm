@@ -31,7 +31,7 @@
 	icon_state = "lead_pipe"
 	inhand_icon_state = "lead_pipe"
 	attack_verb_continuous = list("mashes", "bashes", "pipes", "hits", "bludgeons", "whacks", "bonks")
-	attack_verb_simple = list("mash", "bash", "pip", "hit", "bludgeon", "whack", "bonk")
+	attack_verb_simple = list("mash", "bash", "pipe", "hit", "bludgeon", "whack", "bonk")
 	force = 25
 	sharpness = SHARP_NONE
 	armour_penetration = 5
