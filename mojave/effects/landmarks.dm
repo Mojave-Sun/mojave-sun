@@ -37,41 +37,26 @@
 /obj/effect/landmark/start/ms13/sheriff
 	name = "Sheriff"
 
-/obj/effect/landmark/start/ms13/tribal
-	name = "Tribal"
-
-/obj/effect/landmark/start/ms13/warrior
-	name = "Warrior"
-
-/obj/effect/landmark/start/ms13/berserker
-	name = "Berserker"
-
-/obj/effect/landmark/start/ms13/shaman
-	name = "Shaman"
-
-/obj/effect/landmark/start/ms13/chieftain
-	name = "Chieftain"
-
 /obj/effect/landmark/start/ms13/trooper
-	name = "Trooper"
+	name = "NCR Trooper"
 
 /obj/effect/landmark/start/ms13/radioman
-	name = "Radioman"
+	name = "NCR Radioman"
 
 /obj/effect/landmark/start/ms13/sergeant
-	name = "Sergeant"
+	name = "NCR Sergeant"
 
 /obj/effect/landmark/start/ms13/engineer
-	name = "Engineer"
+	name = "NCR Engineer"
 
 /obj/effect/landmark/start/ms13/staffsergeant
-	name = "Staff Sergeant"
+	name = "NCR Staff Sergeant"
 
 /obj/effect/landmark/start/ms13/medic
-	name = "Medic"
+	name = "NCR Medic"
 
 /obj/effect/landmark/start/ms13/lieutenant
-	name = "Lieutenant"
+	name = "NCR Lieutenant"
 
 /obj/effect/landmark/start/ms13/initiate
 	name = "BoS Initiate"

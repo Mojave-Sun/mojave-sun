@@ -9,7 +9,7 @@
 
 	display_order = JOB_DISPLAY_ORDER_MS13_SERGEANT
 
-/datum/outfit/job/ms13/ncr/Sergeant
+/datum/outfit/job/ms13/ncr/sergeant
 	name = "_NCR Sergeant"
 	jobtype = /datum/job/ms13/ncr/sergeant
 	id = 		 /obj/item/card/id/ms13/ncrtrooper

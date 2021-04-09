@@ -15,7 +15,9 @@
 	name = "_New Canaanite"
 	jobtype = /datum/job/ms13/wasteland/canaanite
 
-	head = /obj/item/clothing/head/collectable/petehat
+	head = /obj/item/clothing/head/helmet/ms13/cowboy/canaan
+	uniform = /obj/item/clothing/under/ms13/wasteland/canaan
+	shoes = /obj/item/clothing/shoes/ms13/fancy
 
 /datum/outfit/job/ms13/wasteland/canaanite/pre_equip(mob/living/carbon/human/H)
 	..()
