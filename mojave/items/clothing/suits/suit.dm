@@ -326,14 +326,14 @@
 	body_parts_covered = CHEST|GROIN|LEGS
 	permeability_coefficient = 0.5
 
-/obj/item/clothing/suit/hooded/ms13/trench/hubologist
+/obj/item/clothing/suit/hooded/ms13/hubologist
 	name = "hubologist robes"
 	desc = "Long, dark, and imposing robes worn by Hubologists."
 	icon_state = "hubologist"
-	inhand_icon_state = "leatherjacket"
+	inhand_icon_state = "hostrench"
 	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
 	allowed = list(/obj/item/pen,/obj/item/paper,/obj/item/stamp,/obj/item/reagent_containers/food/drinks/flask,/obj/item/storage/box/matches,/obj/item/lighter,/obj/item/clothing/mask/cigarette,/obj/item/storage/fancy/cigarettes,/obj/item/flashlight,/obj/item/gun,/obj/item/ammo_box,/obj/item/ammo_casing)
-	hoodtype = /obj/item/clothing/head/helmet/ms13/cowboy/padded/hubologist
+	hoodtype = /obj/item/clothing/head/hooded/ms13/hubologist
 
 /obj/item/clothing/suit/ms13/manny
 	name = "\improper Manny Mammoth suit"

@@ -15,7 +15,7 @@
 	name = "_Hubologist"
 	jobtype = /datum/job/ms13/wasteland/hubologist
 
-	suit = /obj/item/clothing/suit/ms13/trench/hubologist
+	suit = /obj/item/clothing/suit/hooded/ms13/hubologist
 	uniform = /obj/item/clothing/under/ms13/wasteland/hubologist
 	shoes = /obj/item/clothing/shoes/ms13/fancy
 
