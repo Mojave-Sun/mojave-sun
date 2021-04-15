@@ -47,6 +47,7 @@
 	inhand_icon_state = "fire_axe"
 	attack_verb_continuous = list("cleaves", "whacks", "chops", "cuts")
 	attack_verb_simple = list("cleave", "whack", "chop", "cut")
+	hitsound = 'sound/weapons/bladeslice.ogg'
 	force = 25
 	armour_penetration = 10
 	wound_bonus = 5
@@ -62,6 +63,7 @@
 	inhand_icon_state = "bumper_sword"
 	attack_verb_continuous = list("cleaves", "whacks", "chops", "lacerates", "stabs")
 	attack_verb_simple = list("cleave", "whack", "chop", "lacerate", "stab")
+	hitsound = 'sound/weapons/bladeslice.ogg'
 	force = 25
 	armour_penetration = 5
 	wound_bonus = 10

@@ -55,6 +55,22 @@
 	wound_bonus = -2
 	throwforce = 30
 
+/obj/item/throwing_star/ms13/throwingknife
+	name = "throwing knife"
+	desc = "A knife, weighted and designed to be thrown. Looks pretty sharp."
+	icon = 'mojave/icons/objects/melee/melee_world.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
+	icon_state = "knife_throwing"
+	inhand_icon_state = "knife_throwing"
+	force = 15
+	throwforce = 25
+	embedding = list("embedded_pain_multiplier" = 3, "embed_chance" = 25, "embedded_fall_chance" = 10)
+	w_class = WEIGHT_CLASS_SMALL
+	sharpness = SHARP_POINTY
+	wound_bonus = 0
+	log_pickup_and_drop = TRUE
+
 /obj/item/switchblade/ms13
 	name = "switchblade"
 	desc = "A slick and concealable switchblade."

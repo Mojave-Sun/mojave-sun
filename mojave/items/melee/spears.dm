@@ -1,6 +1,6 @@
 //This file contains all throwing weapons
 
-/obj/item/spear/ms13/spear
+/obj/item/spear/ms13/
 	name = "throwing spear"
 	desc = "An heavy hefty ancient weapon used to this day, due to its ease of lodging itself into its victim's body parts."
 	icon = 'mojave/icons/objects/melee/melee_world.dmi'
@@ -18,7 +18,7 @@
 	wound_bonus = 0
 	log_pickup_and_drop = TRUE
 
-/obj/item/spear/ms13/spear/knife
+/obj/item/spear/ms13/knife
 	name = "knife spear"
 	desc = "A rough spear, made from a knife and a pole. Don't look past it, it can still kill, wether it be by jab or throw."
 	icon_state = "spear_knife"
@@ -36,18 +36,6 @@
 	icon_state = "spear_thunder"
 	icon_prefix = "spear_thunder"
 
-/obj/item/throwing_star/ms13/throwingknife
-	name = "throwing knife"
-	desc = "A knife, weighted and designed to be thrown. Looks pretty sharp."
-	icon = 'mojave/icons/objects/melee/melee_world.dmi'
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
-	icon_state = "knife_throwing"
-	inhand_icon_state = "knife_throwing"
-	force = 15
-	throwforce = 25
-	embedding = list("embedded_pain_multiplier" = 3, "embed_chance" = 25, "embedded_fall_chance" = 10)
-	w_class = WEIGHT_CLASS_SMALL
-	sharpness = SHARP_POINTY
-	wound_bonus = 0
-	log_pickup_and_drop = TRUE
+/obj/item/spear/explosive/ms13/Initialize(mapload)
+	. = ..()
+	set_explosive(new /obj/item/grenade/frag/ms13/charge)
