@@ -99,6 +99,6 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 	SIGNAL_HANDLER
 
 	if(source == M)
-		to_chat(M, "You appear to be [stage_to_text[stage_of_dehydration]] with about [round(curr_thirst / (-1 * rate_of_thirst), 1)] minutes left before you start dying of thirst.")
+		to_chat(M, "You appear to be [stage_to_text[stage_of_dehydration]].")
 	else
 		to_chat(M, "[source] appears to be [stage_to_text[stage_of_dehydration]].")
