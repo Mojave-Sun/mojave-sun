@@ -77,12 +77,11 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 ///Modifies thirst by modify_by VIA = curr_thirst + modify_by, clamps value to max_thirst or 0
 /datum/component/thirst/proc/modify_thirst(modify_by = 0)
 	curr_thirst = clamp(curr_thirst + modify_by, 0, max_thirst)
-	//If thirst_limit is 2400, then 5 stages of dehydration means stage 2 is triggered at 720; stage 3 at 480; stage 4 at 240 etc. aiming for last stage to be at 0
-	if ((stage_of_dehydration != length(stage_to_text)) && ((curr_thirst <= ((length(stage_to_text) - (stage_of_dehydration + 1)) * ((max_thirst / 2) / length(stage_to_text))))))
+	if ((stage_of_dehydration != 5) && (curr_thirst < ((length(GLOB.dehydration_stage_examine) - (stage_of_dehydration)) * ((max_thirst / 2) / length(GLOB.dehydration_stage_examine)))))
 		modify_stage(modify_by = 1)
 
 	else
-		if((stage_of_dehydration != 1) && ((curr_thirst > ((length(stage_to_text) - (stage_of_dehydration)) * ((max_thirst / 2) / length(stage_to_text))))))
+		if((stage_of_dehydration != 1) && curr_thirst > ((length(GLOB.dehydration_stage_examine) - (stage_of_dehydration) + 1) * ((max_thirst / 2) / length(GLOB.dehydration_stage_examine))))
 			modify_stage(modify_by = -1)
 
 ///Modifies stage of dehydration VIA += while also displaying a message and a popup alert to the parent
