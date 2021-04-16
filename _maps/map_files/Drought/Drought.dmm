@@ -2939,6 +2939,10 @@
 	},
 /turf/open/floor/plasteel/ms13/white,
 /area/ms13/sunny_dale)
+"frC" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plasteel/ms13/_full/dirty,
+/area/ms13/sunny_dale)
 "frN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/ms13/no_smooth/counter/wood/end{
@@ -3179,7 +3183,7 @@
 "fPx" = (
 /obj/item/shard,
 /turf/open/floor/plating/ground/mountain,
-/area/ms13)
+/area/ms13/sunny_dale)
 "fPI" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/structure/bed/ms13/mattress/stained,
@@ -4139,7 +4143,7 @@
 "hBG" = (
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/ground/mountain,
-/area/ms13)
+/area/ms13/sunny_dale)
 "hBP" = (
 /obj/structure/chair/stool,
 /obj/machinery/light/small{
@@ -5189,10 +5193,6 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
-"jsI" = (
-/obj/item/storage/trash_stack,
-/turf/open/floor/wood/ms13,
-/area/ms13)
 "jsZ" = (
 /obj/structure/chair/ms13/wood/padded{
 	dir = 8
@@ -8923,9 +8923,7 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "qbW" = (
-/obj/structure/stairs/north{
-	dir = 4
-	},
+/obj/structure/stairs/east,
 /turf/open/floor/plating/ground/sidewalk,
 /area/ms13)
 "qbY" = (
@@ -9357,6 +9355,9 @@
 	},
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
+"qEB" = (
+/turf/open/floor/plating/ground/mountain,
+/area/ms13/sunny_dale)
 "qEI" = (
 /obj/machinery/shower{
 	dir = 4
@@ -9421,9 +9422,7 @@
 /turf/open/floor/wood/ms13,
 /area/ms13/sunny_dale)
 "qJR" = (
-/obj/structure/stairs/north{
-	dir = 2
-	},
+/obj/structure/stairs/south,
 /turf/open/floor/plasteel/ms13/dark/full/dirty,
 /area/ms13/sunny_dale)
 "qKd" = (
@@ -10281,7 +10280,7 @@
 	},
 /obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/wood/ms13,
-/area/ms13)
+/area/ms13/sunny_dale)
 "sgu" = (
 /obj/structure/filingcabinet/filingcabinet{
 	pixel_x = -10
@@ -83227,9 +83226,9 @@ bLu
 oNR
 iMK
 iMK
-dTj
-vDB
-vDB
+azf
+qEB
+qEB
 lxJ
 lxJ
 mXJ
@@ -83416,7 +83415,7 @@ iMK
 iMK
 wfW
 sfV
-jsI
+sUh
 hBG
 wXU
 azf
@@ -83601,9 +83600,9 @@ bLu
 oNR
 iMK
 iMK
-dTj
+azf
 rqO
-vDB
+qEB
 oDi
 uSi
 iqr
@@ -89966,7 +89965,7 @@ tfu
 tfu
 tfu
 tfu
-tfu
+pzW
 tfu
 iMK
 bCt
@@ -90153,7 +90152,7 @@ jjs
 jjs
 tfu
 oLV
-bWP
+gfT
 tfu
 iMK
 bCt
@@ -90340,7 +90339,7 @@ jjs
 jjs
 tfu
 bWP
-bWP
+sQT
 tfu
 iMK
 bCt
@@ -90526,7 +90525,7 @@ tfu
 tfu
 tfu
 tfu
-bWP
+frC
 bco
 tfu
 iMK
