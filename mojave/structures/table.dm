@@ -15,7 +15,7 @@
 	name = "round table"
 	desc = "A table, masterfully designed with high-tech to become... round."
 	icon_state = "roundtable"
-	icon = 'mojave/icons/objects/structures.dmi'
+	icon = 'mojave/icons/structure/standalone_tables.dmi'
 	smoothing_flags = NONE
 	canSmoothWith = null
 
