@@ -67,15 +67,25 @@
 	inhand_icon_state = "knuckles_spike"
 	sharpness = SHARP_POINTY
 
-/obj/item/melee/powerfist/ms13
+/obj/item/ms13/knuckles/powerfist
 	name = "power fist"
-	desc = "A pneumatic glove that acts as a powered ram in order to hit harder with a punch. Can send your foe flying! Must have a pressurized tank inserted to work properly."
+	desc = "A pneumatic glove that acts as a powered ram in order to hit harder with a punch. Can send your foe flying!"
 	icon = 'mojave/icons/objects/melee/melee_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
 	icon_state = "powerfist"
 	inhand_icon_state = "powerfist"
+	force = 25
+	armour_penetration = 5
 	wound_bonus = 10
+
+/obj/item/ms13/knuckles/powerfist/attack(mob/living/target, mob/living/user)
+	. = ..()
+	var/atom/throw_target = get_edge_target_turf(target, user.dir)
+	target.throw_at(throw_target, rand(1,3), 2, user)
+	SSexplosions.medturf += throw_target
+	playsound(loc, 'mojave/sound/ms13effects/airhiss.ogg', 50, TRUE)
+	playsound(loc, 'sound/weapons/genhit2.ogg', 50, TRUE)
 
 // misc stuff that doesn't fit anywhere else here //
 

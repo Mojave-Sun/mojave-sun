@@ -97,9 +97,22 @@
 
 /obj/item/ms13/twohanded/hammer/super
 	name = "super sledge"
-	desc = "Using the power of science and engineering, They packed 66% more sledge in this hammer. It's a pain to use unless you're built heavily or in power armor."
+	desc = "Using the power of science and engineering, They packed 66% more sledge in this hammer. It's a pain to use in general."
 	icon_state = "hammer_power"
 	inhand_icon_state = "hammer_power"
 	force = 35
 	armour_penetration = 35
 	wound_bonus = 35
+
+/obj/item/ms13/twohanded/hammer/super/attack(mob/living/target, mob/living/user)
+	. = ..()
+
+	if(wielded)
+		var/atom/throw_target = get_edge_target_turf(target, user.dir)
+		target.throw_at(throw_target, rand(2,5), 3, user)
+		SSexplosions.medturf += throw_target
+		playsound(loc, 'sound/weapons/resonator_blast.ogg', 50, TRUE)
+		playsound(loc, 'sound/weapons/genhit2.ogg', 50, TRUE)
+
+	else
+		return

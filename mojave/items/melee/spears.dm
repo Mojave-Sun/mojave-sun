@@ -17,6 +17,30 @@
 	armour_penetration = 5
 	wound_bonus = 0
 	log_pickup_and_drop = TRUE
+	var/wielded = FALSE
+
+/obj/item/spear/ms13/Initialize()
+	. = ..()
+	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
+	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/on_unwield)
+
+/obj/item/spear/ms13/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/two_handed, require_twohands=FALSE, force_multiplier=2)
+
+// triggered on wielding of a two handed item.
+/obj/item/spear/ms13/proc/on_wield(obj/item/source, mob/user)
+	SIGNAL_HANDLER
+	inhand_icon_state = "[initial(inhand_icon_state)]_wielded" // subtype compatability ftw
+	playsound(src.loc, 'mojave/sound/ms13effects/weapon_wield.ogg', 25, TRUE)
+	wielded = TRUE
+
+// triggered on unwielding of two handed item.
+/obj/item/spear/ms13/proc/on_unwield(obj/item/source, mob/user)
+	SIGNAL_HANDLER
+	inhand_icon_state = "[initial(inhand_icon_state)]"
+	playsound(src.loc, 'mojave/sound/ms13effects/weapon_wield.ogg', 10, TRUE)
+	wielded = FALSE
 
 /obj/item/spear/ms13/knife
 	name = "knife spear"
@@ -39,3 +63,15 @@
 /obj/item/spear/explosive/ms13/Initialize(mapload)
 	. = ..()
 	set_explosive(new /obj/item/grenade/frag/ms13/charge)
+
+/obj/item/spear/explosive/ms13/update_icon_state()
+	. = ..()
+
+	icon_state = "spear_thunder"
+	if(wielded)
+		icon_state = "spear_thunder"
+		inhand_icon_state = "spear_thunder_wielded"
+
+	else
+		icon_state = "spear_thunder"
+		inhand_icon_state = "spear_thunder"
