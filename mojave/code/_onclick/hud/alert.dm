@@ -1,7 +1,3 @@
-//Amount of seconds a unit of water will provide life for, modify this for balancing purposes
-//Influences amount of units consumed by this component alongside how much
-#define SECONDS_OF_LIFE_PER_WATER_U 60
-
 /atom/movable/screen/alert/thirst
 	icon = 'mojave/icons/hud/screen_alert.dmi'
 
