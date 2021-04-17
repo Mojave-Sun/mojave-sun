@@ -53,25 +53,33 @@
 
 /obj/item/spear/explosive/ms13
 	name = "thunderstick"
-	desc = "A long stick, with an explosive charge stuck on the end. You could probably pull the cord on the front to activate the timer."
 	icon = 'mojave/icons/objects/melee/melee_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
+	attack_verb_continuous = list("whacks", "jabs", "smacks", "pokes")
+	attack_verb_simple = list("whack", "jab", "smack", "poke")
 	icon_state = "spear_thunder"
 	icon_prefix = "spear_thunder"
+	sharpness = SHARP_NONE // the end is a god damn explosive charge
 
 /obj/item/spear/explosive/ms13/Initialize(mapload)
 	. = ..()
 	set_explosive(new /obj/item/grenade/frag/ms13/charge)
+	desc = "A long stick, with an explosive charge stuck on the end. You could probably pull the cord on the front to activate the timer." // Overwrites the TG one that would otherwise be here due to initialization.
 
 /obj/item/spear/explosive/ms13/update_icon_state()
 	. = ..()
-
 	icon_state = "spear_thunder"
+	inhand_icon_state = "spear_thunder"
+
+/obj/item/spear/explosive/ms13/attack_self(mob/user)
+	. = ..()
 	if(wielded)
 		icon_state = "spear_thunder"
 		inhand_icon_state = "spear_thunder_wielded"
+		wielded = TRUE
 
 	else
 		icon_state = "spear_thunder"
 		inhand_icon_state = "spear_thunder"
+		wielded = FALSE
