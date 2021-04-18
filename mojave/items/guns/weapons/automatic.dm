@@ -223,7 +223,9 @@
 	extra_damage = 40
 	extra_penetration = 15
 	mag_type = /obj/item/ammo_box/magazine/ms13/r308_10
+
 /obj/item/gun/ballistic/automatic/ms13/marksman/battle/update_icon_state()
+	worn_icon_state = "[initial(icon_state)]"
 	if(!chambered && magazine) //this makes the sks empty, the state with a magazine, not necassarily empty just not chambered
 		icon_state = "[initial(icon_state)]_mag_empty"
 

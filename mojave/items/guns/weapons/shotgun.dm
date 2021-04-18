@@ -10,7 +10,9 @@
 	weapon_weight = WEAPON_HEAVY
 	force = 25
 	fire_delay = 5
+
 /obj/item/gun/ballistic/shotgun/ms13/lever/update_icon_state()
+	worn_icon_state = "[initial(icon_state)]"
 	if(!chambered && magazine.stored_ammo == 0) //if its not chambered and the magazine ammo_count is 0, its empty
 		icon_state = "[initial(icon_state)]_empty"
 	if(!chambered) //if its not chambered lever sprite open, cuz it may have bullets in but it's somehow not racked
@@ -29,13 +31,16 @@
 	weapon_weight = WEAPON_HEAVY
 	force = 30
 	fire_delay = 5
+
 /obj/item/gun/ballistic/shotgun/ms13/huntingshot/update_icon_state()
+	worn_icon_state = "[initial(icon_state)]"
 	if(!chambered && magazine.stored_ammo == 0) //if its not chambered and the magazine ammo_count is 0, its empty
 		icon_state = "[initial(icon_state)]_empty"
 	if(!chambered) //if its not chambered lever sprite open, cuz it may have bullets in but it's somehow not racked
 		icon_state = "[initial(icon_state)]_empty"
 	if(chambered) //round in the chamber and ready to fire, normal state
 		icon_state = "[initial(icon_state)]"
+
 /obj/item/gun/ballistic/shotgun/ms13/lever/trail
 	name = "trail carbine"
 	desc = "A lever action repeater chambered for .44 Magnum with a solid capacity."
@@ -95,13 +100,16 @@
 	extra_damage = 30
 	extra_penetration = 10
 	empty_indicator = TRUE
+
 /obj/item/gun/ballistic/shotgun/automatic/ms13/sks/update_icon_state()
+	worn_icon_state = "[initial(icon_state)]"
 	if(!chambered && magazine.stored_ammo == 0) //if its not chambered and the magazine ammo_count is 0, its empty
 		icon_state = "[initial(icon_state)]_empty"
 	if(!chambered) //if its not chambered bolt sprite open, cuz it may have bullets in but it's somehow not racked
 		icon_state = "[initial(icon_state)]_empty"
 	if(chambered) //round in the chamber and ready to fire, normal state
 		icon_state = "[initial(icon_state)]"
+
 /obj/item/gun/ballistic/shotgun/automatic/ms13/sks/scoped
 	name = "scoped European battle rifle"
 	desc = "A European battle rifle with a scope attached and some improved rifling for better penetration."
