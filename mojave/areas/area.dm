@@ -113,6 +113,10 @@
 	requires_power = TRUE
 	ambientsounds = ENGINEERING
 
+/area/ms13/factory
+	name = "Factory"
+	icon_state = "factory"
+
 /area/ms13/underground/enclave_base
 	name = "Enclave Base"
 	icon_state = "enclave_base"
