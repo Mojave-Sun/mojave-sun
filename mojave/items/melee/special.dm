@@ -50,6 +50,7 @@
 	icon_state = "knuckles"
 	inhand_icon_state = "knuckles"
 	hitsound = "sound/weapons/cqchit1.ogg"
+	w_class = WEIGHT_CLASS_TINY
 	force = 10 // Way better than just punching, a consistent 10 vs 1-10
 
 /obj/item/ms13/knuckles/weighted

@@ -68,7 +68,6 @@
 	attack_verb_continuous = list("clonks", "smacks", "clocks", "nails", "bludgeons", "whacks", "bonks")
 	attack_verb_simple = list("clonk", "smack", "clock", "nail", "bludgeon", "whack", "bonk")
 	force = 15
-	armour_penetration = 5
-	wound_bonus = 5
 	sharpness = SHARP_NONE
+	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 20 //brick
