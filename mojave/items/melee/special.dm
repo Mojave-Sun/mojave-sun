@@ -1,4 +1,4 @@
-// rippers and whatnot //
+// heavy weaponry //
 /obj/item/chainsaw/ms13
 	name = "auto axe"
 	desc = "A modified steel saw, converted into a tool of destruction. You could use it for trees, But why stop there?"
@@ -30,6 +30,45 @@
 		wound_bonus = 0
 		bare_wound_bonus = 5
 		sharpness = SHARP_EDGED
+
+	if(src == user.get_active_held_item()) //update inhands
+		user.update_inv_hands()
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
+/obj/item/ms13/twohanded/heavy/lance
+	name = "thermic lance"
+	desc = "A heavy duty thermic lance, used primarily for cutting steel beams with superheated gas. Scarily efficient."
+	icon_state = "thermiclance_off"
+	inhand_icon_state = "thermiclance_off"
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = NONE
+	throw_speed = 1
+	throw_range = 2
+	hitsound = "swing_hit"
+	var/on = FALSE
+
+/obj/item/ms13/twohanded/heavy/lance/attack_self(mob/user)
+	on = !on
+	icon_state = "thermiclance_[on ? "on" : "off"]"
+	inhand_icon_state = "thermiclance_[on ? "on" : "off"]"
+
+	if(on)
+		attack_verb_continuous = list("burned", "welded", "cauterized", "melted", "charred")
+		attack_verb_simple = list("burn", "weld", "cauterize", "melt", "char")
+		to_chat(user, "<span class='notice'>As you flip the lever and hit the ignition on [src], it begins to sputter flames out.")
+		hitsound = 'sound/items/welder2.ogg'
+		damtype = "burn"
+		force = 60
+
+	else
+		attack_verb_continuous = list("pokes", "jabs", "smacks", "whacks",)
+		attack_verb_simple = list("poke", "jab", "smack", "whack",)
+		to_chat(user, "<span class='notice'>You flip the lever up on [src], the flame goes out.")
+		hitsound = "swing_hit"
+		damtype = "brute"
+		force = 15
 
 	if(src == user.get_active_held_item()) //update inhands
 		user.update_inv_hands()
@@ -87,15 +126,3 @@
 	SSexplosions.medturf += throw_target
 	playsound(loc, 'mojave/sound/ms13effects/airhiss.ogg', 50, TRUE)
 	playsound(loc, 'sound/weapons/genhit2.ogg', 50, TRUE)
-
-// misc stuff that doesn't fit anywhere else here //
-
-/obj/item/flashlight/flare/ms13
-	name = "flare"
-	desc = "A red Nanotrasen issued flare. There are instructions on the side, it reads 'pull cord, make light'."
-	icon = 'mojave/icons/objects/melee/melee_world.dmi'
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
-	icon_state = "flare"
-	inhand_icon_state = "flare"
-	light_range = 5 // Somewhat bright.

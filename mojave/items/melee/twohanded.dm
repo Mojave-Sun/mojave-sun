@@ -122,30 +122,11 @@
 /obj/item/ms13/twohanded/heavy
 	name = "heavy weapon"
 	desc = "Generic heavy weapon go haha BRRR"
-	icon = 'mojave/icons/objects/melee/melee_world.dmi'
-	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
-	var/toggled = FALSE
 
 /obj/item/ms13/twohanded/heavy/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE)
 
-/obj/item/ms13/twohanded/heavy/attack_self(mob/user)
-	. = ..()
-	if(toggled)
-		icon_state = "[initial(icon_state)]_on"
-		inhand_icon_state = "[initial(inhand_icon_state)]_on"
-		toggled = TRUE
-
-	else
-		icon_state = "[initial(icon_state)]"
-		inhand_icon_state = "[initial(inhand_icon_state)]"
-		toggled = FALSE
-
-
-/obj/item/ms13/twohanded/heavy/lance
-	name = "thermic lance"
-	desc = "A large metal working tool. It uses incredibly high temperatures to cut through strong metals at ease. Quite heavy to wield, and would require your entire body's effort."
-	icon_state = "thermiclance"
-	inhand_icon_state = "thermiclance"
+/obj/item/ms13/twohanded/heavy/on_wield(obj/item/source, mob/user)
+	playsound(src.loc, 'mojave/sound/ms13effects/weapon_wield.ogg', 25, TRUE)
+	wielded = TRUE
