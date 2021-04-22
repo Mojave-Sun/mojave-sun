@@ -1,9 +1,12 @@
 /obj/item/ms13/hammer
 	name = "claw hammer"
 	desc = "A standard claw hammer. While it is a simple tool, the uses are limitless."
-	hitsound = 'mojave/sound/ms13items/axe_1.ogg'
+	icon = 'mojave/icons/objects/melee/melee_world.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
 	icon_state = "hammer"
 	inhand_icon_state = "hammer"
+	hitsound = 'mojave/sound/ms13items/axe_1.ogg'
 	force = 20
 	armour_penetration = 5
 	wound_bonus = 10
@@ -12,12 +15,15 @@
 	sharpness = SHARP_NONE
 	w_class = WEIGHT_CLASS_NORMAL
 
-/obj/item/ms13/shovel
+/obj/item/shovel/ms13
 	name = "shovel"
 	desc = "A shovel for digging up the ground, commonly used for farming or gravedigging."
-	hitsound = 'sound/weapons/genhit.ogg'
+	icon = 'mojave/icons/objects/melee/melee_world.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
 	icon_state = "shovel"
 	inhand_icon_state = "shovel"
+	hitsound = 'sound/weapons/genhit.ogg'
 	force = 20
 	armour_penetration = 5
 	attack_verb_continuous = list("smacks", "slashes", "jabs", "slaps", "pounds", "beats", "bonks", "digs", "buries")
@@ -25,17 +31,18 @@
 	sharpness = SHARP_NONE
 	w_class = WEIGHT_CLASS_BULKY
 
-/obj/item/ms13/shovel/spade
+/obj/item/shovel/ms13/spade
 	name = "spade"
 	desc = "A small spade for digging up the ground. It's easily transportable, due to its size"
 	icon_state = "spade"
 	inhand_icon_state = "spade"
 	force = 15
 	armour_penetration = 5
+	toolspeed = 0.5
 	sharpness = SHARP_NONE
 	w_class = WEIGHT_CLASS_NORMAL
 
-/obj/item/ms13/shovel/snow
+/obj/item/shovel/ms13/snow
 	name = "snow shovel"
 	desc = "A shovel used primarily for cleaning paths of any snow obstructions. Could probably be applied to other things as well."
 	icon_state = "shovel_snow"
@@ -43,14 +50,15 @@
 	force = 20
 	armour_penetration = 0
 
-/obj/item/ms13/rake
+/obj/item/shovel/ms13/rake
 	name = "rake"
-	desc = "A rake. Used for raking. Go figure."
+	desc = "A rake. Used for raking. Go figure. You could try to dig with it, but it won't do you much good."
 	icon_state = "rake"
 	inhand_icon_state = "rake"
 	force = 15
 	bare_wound_bonus = 5
 	armour_penetration = -5
+	toolspeed = 0.2
 	attack_verb_continuous = list("smacks", "slashes", "jabs", "slaps", "pounds", "beats", "bonks", "rakes", "assaults")
 	attack_verb_simple = list("smacked", "slashed", "jabbed", "slapped", "pounded", "beat", "bonked", "raked", "assaulted")
 	hitsound = 'sound/weapons/genhit.ogg'

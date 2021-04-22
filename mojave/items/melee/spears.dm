@@ -1,7 +1,7 @@
 //This file contains all throwing weapons
 
 /obj/item/spear/ms13/
-	name = "throwing spear"
+	name = "spear"
 	desc = "An heavy hefty ancient weapon used to this day, due to its ease of lodging itself into its victim's body parts."
 	icon = 'mojave/icons/objects/melee/melee_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
@@ -50,6 +50,17 @@
 	icon_prefix = "spear_knife"
 	force = 25
 	throwforce = 20
+
+/obj/item/spear/ms13/legion
+	name = "throwing spear"
+	desc = "A throwing spear, one of many signature weapons of Caesar's Legion. Swift, agile, deadly."
+	icon_state = "spear_legion"
+	inhand_icon_state = "spear_legion"
+	icon_prefix = "spear_legion"
+	force = 35
+	throwforce = 35
+	throw_range = 6
+	throw_speed = 3
 
 /obj/item/spear/explosive/ms13
 	name = "thunderstick"
