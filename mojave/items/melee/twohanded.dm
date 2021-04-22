@@ -74,8 +74,8 @@
 
 /obj/item/ms13/twohanded/hammer
 	name = "sledge hammer"
-	desc = "An incredibly heavy sledge hammer. Hard to swing with one hand, It'd take your full power to be able to weild it."
-	icon_state = "hammer_power"
+	desc = "A heavy sledge hammer. Hard to swing with one hand, It'd take your full power to be able to weild it."
+	icon_state = "hammer_sledge"
 	inhand_icon_state = "hammer_sledge"
 	attack_verb_continuous = list("slams", "beats", "hammers", "pummels", "impacts")
 	attack_verb_simple = list("slam", "beat", "hammer", "pummel", "impact")
