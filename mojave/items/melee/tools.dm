@@ -10,8 +10,8 @@
 	force = 20
 	armour_penetration = 5
 	wound_bonus = 10
-	attack_verb_continuous = list("smacks", "slashes", "deconstructs", "slaps", "pounds", "beats", "bonks", "hammers", "nails")
-	attack_verb_simple = list("smacked", "slashed", "deconstructed", "slapped", "pounded", "beat", "bonked", "hammered", "nailed")
+	attack_verb_continuous = list("smacks", "deconstructs", "pounds", "beats", "bonks", "hammers", "nails")
+	attack_verb_simple = list("smack", "deconstruct", "pound", "beat", "bonk", "hammer", "nail")
 	sharpness = SHARP_NONE
 	w_class = WEIGHT_CLASS_NORMAL
 
@@ -26,8 +26,8 @@
 	hitsound = 'sound/weapons/genhit.ogg'
 	force = 20
 	armour_penetration = 5
-	attack_verb_continuous = list("smacks", "slashes", "jabs", "slaps", "pounds", "beats", "bonks", "digs", "buries")
-	attack_verb_simple = list("smacked", "slased", "jabed", "slapped", "pounded", "beat", "bonked", "dug", "buried")
+	attack_verb_continuous = list("smacks", "slashes", "jabs", "slaps", "pounds", "beats", "bonks", "digs")
+	attack_verb_simple = list("smack", "slash", "jab", "slap", "pound", "beat", "bonk", "dig")
 	sharpness = SHARP_NONE
 	w_class = WEIGHT_CLASS_BULKY
 
@@ -60,7 +60,7 @@
 	armour_penetration = -5
 	toolspeed = 0.2
 	attack_verb_continuous = list("smacks", "slashes", "jabs", "slaps", "pounds", "beats", "bonks", "rakes", "assaults")
-	attack_verb_simple = list("smacked", "slashed", "jabbed", "slapped", "pounded", "beat", "bonked", "raked", "assaulted")
+	attack_verb_simple = list("smack", "slash", "jabb", "slap", "pound", "beat", "bonk", "rake", "assault")
 	hitsound = 'sound/weapons/genhit.ogg'
 	sharpness = SHARP_POINTY
 	w_class = WEIGHT_CLASS_BULKY
