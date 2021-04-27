@@ -394,7 +394,7 @@
 	reqs = list(/obj/item/organ/tail/cat = 1,
 				/obj/item/organ/ears/cat = 1)
 	category = CAT_CLOTHING
-
+/*MOJAVE SUN EDIT BEGIN
 
 /datum/crafting_recipe/radiogloves
 	name = "Radio Gloves"
@@ -405,6 +405,8 @@
 				/obj/item/radio = 1)
 	tools = list(TOOL_WIRECUTTER)
 	category = CAT_CLOTHING
+
+MOJAVE SUN EDIT END*/
 
 /datum/crafting_recipe/mixedbouquet
 	name = "Mixed bouquet"
@@ -932,3 +934,4 @@
 				/obj/item/grenade/gas_crystal/zauker_crystal = 1
 				)
 	category = CAT_MISC
+

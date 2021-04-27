@@ -182,14 +182,12 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
-/obj/item/clothing/head/helmet/ms13/cowboy/padded/hubologist
+/obj/item/clothing/head/hooded/ms13/hubologist
 	name = "hubologist hood"
 	desc = "A mysterious hood worn by Hubologists."
 	icon_state = "hubologist"
 	inhand_icon_state = "hubologist"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
 
 /obj/item/clothing/head/helmet/ms13/cowboy/reinf
 	name = "reinforced cowboy hat"

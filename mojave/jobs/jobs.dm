@@ -13,13 +13,6 @@ GLOBAL_LIST_INIT(town_positions, list(
 	"Town Deputy",
 	"Town Sheriff"))
 
-GLOBAL_LIST_INIT(tribe_positions, list(
-	"Tribal",
-	"Tribal Warrior",
-	"Tribal Berserker",
-	"Tribal Shaman",
-	"Tribal Chieftain"))
-
 GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Trooper",
 	"NCR Radioman",
@@ -61,7 +54,6 @@ GLOBAL_LIST_INIT(legion_positions, list(
 GLOBAL_LIST_INIT(ms13_position_categories, list(
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#eec66f"),
 	EXP_TYPE_TOWN= list("jobs" = town_positions, "color" = "#4feb64"),
-	EXP_TYPE_TRIBE = list("jobs" = tribe_positions, "color" = "#eb544f"),
 	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#cfd1ba"),
 	EXP_TYPE_BOS = list("jobs" = bos_positions, "color" = "#737592"),
 	EXP_TYPE_RAIDERS = list("jobs" = raiders_positions, "color" = "#30389c")
@@ -70,7 +62,6 @@ GLOBAL_LIST_INIT(ms13_position_categories, list(
 GLOBAL_LIST_INIT(ms13_exp_jobsmap, list(
 	EXP_TYPE_WASTELAND = list("titles" = wasteland_positions),
 	EXP_TYPE_TOWN = list("titles" = town_positions),
-	EXP_TYPE_TRIBE = list("titles" = tribe_positions),
 	EXP_TYPE_NCR = list("titles" = ncr_positions),
 	EXP_TYPE_BOS = list("titles" = bos_positions),
 	EXP_TYPE_RAIDERS = list("titles" = raiders_positions)

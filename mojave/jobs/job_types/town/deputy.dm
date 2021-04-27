@@ -23,6 +23,7 @@
 	gloves = 	 /obj/item/clothing/gloves/ms13/vault
 	shoes =  	 /obj/item/clothing/shoes/ms13/military/vault
 	back =	 	 /obj/item/storage/backpack/satchel/leather
+	belt = 	 /obj/item/storage/belt/holster/ms13/sheriff/full_357
 
 /datum/outfit/job/ms13/town/deputy/pre_equip(mob/living/carbon/human/H)
 	..()
