@@ -173,7 +173,7 @@
 
 ////Carpet floors////
 
-/turf/open/floor/wood/ms13/carpet
+/turf/open/floor/wood/ms13/carpet //remove this shitty old one on new repo
 	icon_state = "carpet"
 	footstep = FOOTSTEP_CARPET
 	barefootstep = FOOTSTEP_CARPET_BAREFOOT
@@ -181,6 +181,36 @@
 	desc = "Carpeted wooden flooring."
 	has_alternate_states = FALSE
 	has_base_states = FALSE
+
+/turf/open/floor/wood/ms13/carpet/infra
+	name = "carpet"
+	desc = "Carpeted wooden flooring."
+	icon_state = "carpet-255"
+	base_icon_state = "carpet"
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_CARPET)
+	canSmoothWith = list(SMOOTH_GROUP_CARPET)
+	flags_1 = NONE
+	bullet_bounce_sound = null
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	tiled_dirt = FALSE
+	has_alternate_states = FALSE
+	has_base_states = FALSE
+
+/turf/open/floor/wood/ms13/carpet/infra/red
+	icon = 'mojave/icons/turf/carpet_red.dmi'
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_MS13_CARPET_RED)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_RED)
+
+/turf/open/floor/wood/ms13/carpet/infra/blue
+	icon = 'mojave/icons/turf/carpet_blue.dmi'
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_MS13_CARPET_BLUE)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_BLUE)
+
+/turf/open/floor/wood/ms13/carpet/infra/green
+	icon = 'mojave/icons/turf/carpet_green.dmi'
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN,SMOOTH_GROUP_MS13_CARPET_GREEN)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_GREEN)
 
 ////Tiled Floors////
 
