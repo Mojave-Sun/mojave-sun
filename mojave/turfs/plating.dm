@@ -325,16 +325,10 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_MS13_ROOF_NORMAL)
 	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_NORMAL)
 
-/turf/open/floor/plating/roof/border
-	icon = 'mojave/icons/turf/roof_asphalt_border.dmi'
-
 /turf/open/floor/plating/roof/sheet
 	icon = 'mojave/icons/turf/roof_sheet.dmi'
 	smoothing_groups = list(SMOOTH_GROUP_MS13_ROOF_SHEET, SMOOTH_GROUP_MS13_ROOF_SHEET)
 	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_SHEET)
-
-/turf/open/floor/plating/roof/sheet/border
-	icon = 'mojave/icons/turf/roof_sheet_border.dmi'
 
 /turf/open/floor/plating/roof/metal
 	icon = 'mojave/icons/turf/roof_metal.dmi'
