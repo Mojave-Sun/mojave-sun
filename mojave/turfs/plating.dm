@@ -304,7 +304,7 @@
 	icon_state = "crack_[rand(1,11)]"
 
 /turf/open/floor/plating/roof
-	icon = 'mojave/icons/turf/floors_1.dmi'
+	icon = 'mojave/icons/turf/floors.dmi'
 	icon_state = "roof"
 	name = "roof"
 	desc = "Some metal roofing."
