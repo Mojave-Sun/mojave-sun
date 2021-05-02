@@ -1905,6 +1905,10 @@
 /obj/item/ammo_casing/ms13/a357/hv,
 /turf/open/floor/plating/ground/snow,
 /area/ms13/sunny_dale)
+"blC" = (
+/obj/machinery/door/unpowered/wooddoor,
+/turf/open/floor/plasteel/ms13/metal/grate,
+/area/ms13/sunny_dale)
 "blS" = (
 /obj/structure/bed/ms13/bedframe/wood,
 /obj/structure/bed/ms13/mattress/stale,
@@ -2697,9 +2701,7 @@
 /turf/open/floor/plasteel/ms13/tile,
 /area/ms13/sunny_dale)
 "bRJ" = (
-/obj/item/shard,
-/obj/structure/table/low_wall/brick,
-/turf/open/floor/wood/ms13/common,
+/turf/open/floor/plasteel/ms13/metal/grate/border,
 /area/ms13/sunny_dale)
 "bRR" = (
 /obj/structure/chair/pew/left,
@@ -4424,6 +4426,10 @@
 	},
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
+"dfD" = (
+/obj/machinery/light/small,
+/turf/open/floor/plasteel/ms13/metal/grate,
+/area/ms13/sunny_dale)
 "dfH" = (
 /obj/machinery/space_heater,
 /turf/open/floor/wood/ms13/wide,
@@ -4727,7 +4733,7 @@
 /area/ms13/sunny_dale)
 "dre" = (
 /obj/item/toy/beach_ball,
-/turf/open/floor/plasteel/ms13/tile,
+/turf/open/floor/plasteel/ms13/metal/grate/border,
 /area/ms13/sunny_dale)
 "dru" = (
 /obj/machinery/light/small,
@@ -5384,11 +5390,8 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "dQa" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
-	dir = 4;
-	name = "water pump"
-	},
-/turf/open/floor/plasteel/ms13/tile,
+/obj/structure/window/fulltile/ms13/glass,
+/turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "dQe" = (
 /obj/structure/closet,
@@ -5982,6 +5985,12 @@
 	dir = 8
 	},
 /turf/open/floor/wood/ms13/common,
+/area/ms13/sunny_dale)
+"emT" = (
+/obj/structure/chair/ms13/wood{
+	dir = 8
+	},
+/turf/open/floor/wood/ms13/mosaic,
 /area/ms13/sunny_dale)
 "enJ" = (
 /obj/structure/table/ms13/metal,
@@ -7918,7 +7927,7 @@
 /area/ms13/underground/vault_atrium_Lower)
 "fNq" = (
 /obj/structure/stairs/south,
-/turf/open/floor/plasteel/ms13/tile,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/sunny_dale)
 "fNr" = (
 /obj/structure/toilet{
@@ -8272,6 +8281,10 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
 /obj/structure/table/ms13/metal,
 /turf/open/floor/plasteel/ms13/tile,
+/area/ms13/sunny_dale)
+"fZq" = (
+/obj/machinery/light/dim,
+/turf/open/floor/plasteel/ms13/tile/blue,
 /area/ms13/sunny_dale)
 "fZU" = (
 /obj/machinery/washing_machine{
@@ -9758,6 +9771,12 @@
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /turf/open/floor/wood/ms13/common,
 /area/ms13/underground/underground_town)
+"gZl" = (
+/obj/machinery/light/dim{
+	dir = 1
+	},
+/turf/open/floor/plasteel/ms13/tile/brown,
+/area/ms13/sunny_dale)
 "gZq" = (
 /obj/structure/closet/crate/secure/weapon,
 /obj/machinery/light/small,
@@ -10334,6 +10353,10 @@
 	dir = 4
 	},
 /turf/open/floor/wood/ms13/wide,
+/area/ms13/sunny_dale)
+"hwr" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/plasteel/ms13/tile/blue,
 /area/ms13/sunny_dale)
 "hws" = (
 /obj/machinery/door/unpowered/wooddoor,
@@ -12246,6 +12269,12 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
 /turf/open/openspace/ms13_no_build,
 /area/ms13/underground/bos)
+"iKI" = (
+/obj/machinery/light/dim{
+	dir = 1
+	},
+/turf/open/floor/plasteel/ms13/tile/blue,
+/area/ms13/sunny_dale)
 "iKM" = (
 /obj/structure/chair/sofa/left{
 	dir = 8
@@ -13293,7 +13322,7 @@
 /obj/machinery/light/dim{
 	dir = 4
 	},
-/turf/open/floor/wood/ms13/common,
+/turf/open/floor/wood/ms13/mosaic,
 /area/ms13/sunny_dale)
 "jwr" = (
 /obj/structure/filingcabinet/filingcabinet{
@@ -13806,6 +13835,12 @@
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/wood/ms13/carpet,
+/area/ms13/sunny_dale)
+"jPB" = (
+/obj/machinery/light/dim{
+	dir = 4
+	},
+/turf/open/floor/plasteel/ms13/tile/blue,
 /area/ms13/sunny_dale)
 "jPK" = (
 /obj/machinery/door/airlock/centcom,
@@ -15123,7 +15158,7 @@
 "kOx" = (
 /obj/structure/closet,
 /obj/machinery/light/dim,
-/turf/open/floor/plasteel/ms13/tile,
+/turf/open/floor/plasteel/ms13/tile/brown,
 /area/ms13/sunny_dale)
 "kON" = (
 /obj/structure/closet/crate/ms13/footlocker,
@@ -15630,7 +15665,7 @@
 /area/ms13/sunny_dale)
 "lfQ" = (
 /obj/machinery/washing_machine,
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/ms13/metal/grate,
 /area/ms13/sunny_dale)
 "lge" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -15667,7 +15702,7 @@
 "lhF" = (
 /obj/structure/table/ms13/metal,
 /obj/structure/bedsheetbin,
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/ms13/metal/grate,
 /area/ms13/sunny_dale)
 "lig" = (
 /obj/item/ammo_casing/spent,
@@ -15698,7 +15733,7 @@
 /area/ms13/sunny_dale)
 "ljl" = (
 /obj/structure/closet/crate/trashcart/laundry,
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/ms13/metal/grate,
 /area/ms13/sunny_dale)
 "ljm" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
@@ -16094,7 +16129,7 @@
 	desc = "Some kind of machine. It looks broken.";
 	name = "pool filter"
 	},
-/turf/open/floor/plasteel/ms13/tile,
+/turf/open/floor/plasteel/ms13/tile/blue,
 /area/ms13/sunny_dale)
 "lxD" = (
 /obj/effect/turf_decal/stripes/line{
@@ -16381,7 +16416,7 @@
 /area/ms13/supermarket)
 "lHN" = (
 /obj/structure/fluff/beach_umbrella/engine,
-/turf/open/floor/carpet/green,
+/turf/open/floor/wood/ms13/carpet/green,
 /area/ms13/sunny_dale)
 "lJf" = (
 /obj/structure/rack,
@@ -18895,6 +18930,9 @@
 	},
 /turf/open/floor/plasteel/ms13/tile,
 /area/ms13/underground/underground_town)
+"nMa" = (
+/turf/open/floor/plasteel/ms13/metal/grate,
+/area/ms13/sunny_dale)
 "nMf" = (
 /obj/structure/chair/ms13/metal/broken{
 	dir = 4
@@ -26801,6 +26839,10 @@
 	},
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
+"tnX" = (
+/obj/effect/spawner/lootdrop/food_packaging,
+/turf/open/floor/wood/ms13/mosaic,
+/area/ms13/sunny_dale)
 "tod" = (
 /obj/effect/mob_spawn/human/skeleton,
 /obj/effect/decal/cleanable/blood/old,
@@ -30393,6 +30435,10 @@
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/plasteel/ms13/tile,
 /area/ms13/supermarket)
+"vXD" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/wood/ms13/mosaic,
+/area/ms13/sunny_dale)
 "vXE" = (
 /obj/structure/table/ms13/metal,
 /obj/item/trash/can/food/beans,
@@ -33129,6 +33175,12 @@
 	dir = 8
 	},
 /turf/open/floor/wood/ms13/common,
+/area/ms13/sunny_dale)
+"xPY" = (
+/obj/structure/chair/ms13/wood{
+	dir = 4
+	},
+/turf/open/floor/wood/ms13/mosaic,
 /area/ms13/sunny_dale)
 "xQc" = (
 /obj/structure/table/wood/bar,
@@ -72147,13 +72199,13 @@ afK
 vsM
 vFt
 vsM
-jIO
-jIO
-jIO
-jIO
-jIO
-jIO
-jIO
+jfc
+jfc
+jfc
+jfc
+jfc
+jfc
+jfc
 afK
 afK
 afK
@@ -72449,13 +72501,13 @@ afK
 vsM
 vFt
 vsM
-jIO
-xcw
-xcw
-xcw
-xcw
-xcw
-jIO
+jfc
+xNO
+bRJ
+xNO
+bRJ
+xNO
+jfc
 afK
 afK
 afK
@@ -72751,13 +72803,13 @@ afK
 vsM
 vFt
 vsM
-jIO
-xcw
-xcw
-xcw
-xcw
-xcw
-jIO
+jfc
+xNO
+bRJ
+xNO
+bRJ
+xNO
+jfc
 afK
 afK
 afK
@@ -73053,13 +73105,13 @@ afK
 vsM
 vFt
 vsM
-jIO
-xcw
+jfc
+xNO
 dre
-xcw
-xcw
-xcw
-jIO
+xNO
+bRJ
+xNO
+jfc
 afK
 afK
 afK
@@ -73355,13 +73407,13 @@ afK
 vsM
 vFt
 vsM
-jIO
-xcw
-xcw
-xcw
-xcw
-xcw
-jIO
+jfc
+xNO
+bRJ
+xNO
+bRJ
+xNO
+jfc
 afK
 afK
 afK
@@ -73657,13 +73709,13 @@ afK
 vsM
 vFt
 vsM
-jIO
-xcw
-xcw
-xcw
-xcw
-xcw
-jIO
+jfc
+xNO
+bRJ
+xNO
+bRJ
+xNO
+jfc
 afK
 afK
 afK
@@ -73959,13 +74011,13 @@ afK
 vsM
 vFt
 vsM
-jIO
-xcw
-xcw
-xcw
-xcw
-xcw
-jIO
+jfc
+xNO
+bRJ
+xNO
+bRJ
+xNO
+jfc
 afK
 afK
 afK
@@ -74261,13 +74313,13 @@ afK
 vsM
 vFt
 vsM
-jIO
-xcw
-xcw
-xcw
-xcw
-xcw
-jIO
+jfc
+xNO
+bRJ
+xNO
+bRJ
+xNO
+jfc
 afK
 afK
 afK
@@ -74563,13 +74615,13 @@ afK
 vsM
 vFt
 vsM
-jIO
-xcw
-xcw
-dQa
-xcw
-xcw
-jIO
+jfc
+xNO
+bRJ
+xNO
+bRJ
+xNO
+jfc
 afK
 afK
 afK
@@ -74865,13 +74917,13 @@ afK
 vsM
 vFt
 vsM
-jIO
-jIO
-jIO
-jIO
-xcw
+jfc
+jfc
+jfc
+jfc
+bRJ
 fNq
-jIO
+jfc
 afK
 afK
 afK
@@ -75170,10 +75222,10 @@ vsM
 afK
 afK
 afK
-jIO
-jIO
-jIO
-jIO
+jfc
+jfc
+jfc
+jfc
 afK
 afK
 afK
@@ -134345,20 +134397,20 @@ uya
 uya
 uya
 jIO
-oGf
-oGf
-oGf
-oGf
+hmv
+hmv
+hmv
+hmv
 jIO
-oGf
-oGf
-oGf
-oGf
+hmv
+hmv
+hmv
+hmv
 jIO
-oGf
-oGf
-oGf
-oGf
+hmv
+hmv
+hmv
+hmv
 jIO
 jIO
 jIO
@@ -134646,21 +134698,21 @@ uya
 uya
 uya
 uya
-oGf
-rty
-vZX
-vZX
-vZX
-vZX
-rty
-rty
-rty
-rty
-vZX
-vZX
-vZX
-vZX
-rty
+hmv
+hkg
+xPY
+xPY
+xPY
+xPY
+hkg
+hkg
+hkg
+hkg
+xPY
+xPY
+xPY
+xPY
+hkg
 jIO
 xrA
 xcw
@@ -134924,7 +134976,7 @@ aDo
 kwJ
 aDo
 aDo
-uya
+aDo
 lwZ
 lwZ
 lwZ
@@ -134948,21 +135000,21 @@ uya
 uya
 uya
 uya
-oGf
-rty
-pFE
-pFE
-pFE
-pFE
-rty
-rty
-rty
-rty
-pFE
-pFE
-pFE
-pFE
-rty
+hmv
+hkg
+sxD
+sxD
+sxD
+sxD
+hkg
+hkg
+hkg
+hkg
+sxD
+sxD
+sxD
+sxD
+hkg
 jIO
 kXT
 xcw
@@ -135226,7 +135278,7 @@ aDo
 kwJ
 aDo
 aDo
-uya
+aDo
 lwZ
 bZY
 lwZ
@@ -135250,21 +135302,21 @@ uya
 uya
 uya
 uya
-oGf
-rty
-pFE
-pFE
-pFE
-pFE
-rty
-iSn
-rty
-rty
-pFE
-pFE
-pFE
-pFE
-rty
+hmv
+hkg
+sxD
+sxD
+sxD
+sxD
+hkg
+vXD
+hkg
+hkg
+sxD
+sxD
+sxD
+sxD
+hkg
 jIO
 wyG
 xcw
@@ -135528,7 +135580,7 @@ aDo
 kwJ
 aDo
 aDo
-uya
+aDo
 lwZ
 lwZ
 lwZ
@@ -135552,21 +135604,21 @@ uya
 uya
 uya
 uya
-oGf
-rty
+hmv
+hkg
 jwm
-jcB
-jcB
+emT
+emT
 jwm
-rty
-rty
-uxn
-rty
+hkg
+hkg
+tnX
+hkg
 jwm
-jcB
-jcB
+emT
+emT
 jwm
-rty
+hkg
 jIO
 kYv
 xcw
@@ -135861,8 +135913,8 @@ jIO
 jIO
 jIO
 jIO
-rty
-rty
+hkg
+hkg
 jIO
 jIO
 jIO
@@ -136434,7 +136486,7 @@ aDo
 kwJ
 aDo
 aDo
-uya
+aDo
 lwZ
 lwZ
 lwZ
@@ -136736,7 +136788,7 @@ aDo
 kwJ
 aDo
 aDo
-uya
+aDo
 lwZ
 lwZ
 lwZ
@@ -137038,7 +137090,7 @@ aDo
 kwJ
 aDo
 aDo
-uya
+aDo
 lwZ
 lwZ
 lwZ
@@ -137948,7 +138000,7 @@ uya
 jIO
 jIO
 jIO
-szF
+kkh
 wSc
 szF
 jIO
@@ -138247,7 +138299,7 @@ kwJ
 aDo
 aDo
 uya
-jqa
+kkh
 cbe
 qVK
 qVK
@@ -138549,7 +138601,7 @@ kwJ
 aDo
 aDo
 uya
-bRJ
+xqo
 rty
 rty
 rty
@@ -138851,7 +138903,7 @@ kwJ
 aDo
 aDo
 uya
-bRJ
+xqo
 qVK
 qVK
 qVK
@@ -139460,9 +139512,9 @@ rty
 rty
 rty
 rty
-wOw
-szF
-szF
+jIO
+dQa
+dQa
 jIO
 rty
 rty
@@ -140059,7 +140111,7 @@ kwJ
 aDo
 aDo
 uya
-jqa
+kkh
 cfl
 cEh
 qVK
@@ -140361,7 +140413,7 @@ kwJ
 aDo
 aDo
 uya
-bRJ
+xqo
 rty
 rty
 rty
@@ -140663,7 +140715,7 @@ kwJ
 aDo
 aDo
 uya
-hjv
+kkh
 cgz
 qVK
 qVK
@@ -142516,7 +142568,7 @@ kAk
 pFE
 jIO
 jIO
-uVJ
+blC
 jIO
 rty
 iSn
@@ -142818,7 +142870,7 @@ jIO
 jIO
 jIO
 lfQ
-lqU
+nMa
 jIO
 rty
 iSn
@@ -143120,7 +143172,7 @@ kOg
 kwl
 jIO
 lhF
-lrE
+dfD
 jIO
 rty
 rty
@@ -143422,7 +143474,7 @@ kwl
 kwl
 jIO
 ljl
-lqU
+nMa
 jIO
 rty
 rty
@@ -143724,7 +143776,7 @@ kwl
 kwl
 jIO
 ljl
-lqU
+nMa
 jIO
 rty
 rty
@@ -144026,7 +144078,7 @@ jIO
 jIO
 jIO
 jIO
-uVJ
+blC
 jIO
 xeh
 jIO
@@ -144323,17 +144375,17 @@ rty
 rty
 koN
 jIO
-xcw
-xcw
+ads
+ads
 jIO
-xcw
-xcw
-xcw
-xcw
-xcw
-xcw
-xcw
-xcw
+ycr
+ycr
+ycr
+ycr
+ycr
+ycr
+ycr
+ycr
 jIO
 uya
 uya
@@ -144624,18 +144676,18 @@ rty
 rty
 rty
 rty
-xeh
-xcw
-xcw
-xeh
-xcw
-xcw
-xcw
-xcw
-xcw
-nZE
-xcw
-xcw
+vvF
+ads
+ads
+wyd
+ycr
+ycr
+ycr
+ycr
+ycr
+hwr
+ycr
+ycr
 jIO
 uya
 uya
@@ -144927,17 +144979,17 @@ jQp
 rty
 rty
 jIO
-xcw
-xcw
+ads
+ads
 jIO
-xvx
+iKI
 eAl
 eAl
 eAl
 eAl
 eAl
 wIZ
-pcP
+fZq
 jIO
 uya
 uya
@@ -145229,17 +145281,17 @@ rty
 rty
 sEJ
 jIO
-xcw
-uwe
+ads
+uwy
 jIO
-xcw
+ycr
 eAl
 eAl
 eAl
 eAl
 eAl
-xcw
-xcw
+ycr
+ycr
 jIO
 uya
 uya
@@ -145531,17 +145583,17 @@ rty
 rty
 rty
 jIO
-xcw
-uwe
+ads
+uwy
 jIO
-xcw
+ycr
 eAl
 eAl
 eAl
 eAl
 eAl
-xcw
-xcw
+ycr
+ycr
 jIO
 uya
 uya
@@ -145829,21 +145881,21 @@ jIO
 jIO
 jIO
 jIO
-xeh
+vvF
 jIO
 jIO
 jIO
-xcw
-xcw
+ads
+ads
 jIO
-xcw
+ycr
 eAl
 eAl
 eAl
 eAl
 eAl
 lGS
-xcw
+ycr
 jIO
 wAA
 uya
@@ -146130,22 +146182,22 @@ uya
 uya
 uya
 jIO
-xcw
-xcw
-xcw
-xcw
-xcw
-xcw
-uwe
+ads
+ads
+ads
+ads
+ads
+ads
+uwy
 jIO
-nZE
+hwr
 eAl
 eAl
 eAl
 eAl
 eAl
-xcw
-xcw
+ycr
+ycr
 jIO
 uya
 wAA
@@ -146432,22 +146484,22 @@ uya
 uya
 uya
 jIO
-xvx
-uwe
-uwe
-uwe
-uwe
-xcw
+gZl
+uwy
+uwy
+uwy
+uwy
+ads
 kOx
 jIO
-xcw
+ycr
 eAl
 eAl
 eAl
 eAl
 eAl
-xcw
-xcw
+ycr
+ycr
 jIO
 uya
 uya
@@ -146734,22 +146786,22 @@ uya
 uya
 uya
 jIO
-xcw
-xcw
-xcw
-xcw
-xcw
-xcw
-xcw
+ads
+ads
+ads
+ads
+ads
+ads
+ads
 jIO
-xcw
+ycr
 eAl
 eAl
 eAl
 eAl
 eAl
 lHN
-xcw
+ycr
 jIO
 uya
 uya
@@ -147036,22 +147088,22 @@ uya
 uya
 uya
 jIO
-xcw
-uwe
-uwe
-uwe
-uwe
-xcw
-uwe
+ads
+uwy
+uwy
+uwy
+uwy
+ads
+uwy
 jIO
-xcw
+ycr
 eAl
 eAl
 eAl
 eAl
 eAl
-xcw
-xcw
+ycr
+ycr
 jIO
 uya
 uya
@@ -147338,22 +147390,22 @@ uya
 uya
 uya
 jIO
-xcw
-xcw
-xcw
-xcw
-xcw
-xcw
-uwe
+ads
+ads
+ads
+ads
+ads
+ads
+uwy
 jIO
-xcw
-xcw
-xcw
+ycr
+ycr
+ycr
 lxg
 eAl
 eAl
-lLb
-xcw
+jPB
+ycr
 jIO
 uya
 uya
@@ -153662,7 +153714,7 @@ sSJ
 haY
 uya
 uya
-lma
+uya
 aDo
 aDo
 kwJ

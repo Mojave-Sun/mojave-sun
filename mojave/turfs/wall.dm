@@ -70,13 +70,6 @@
 	desc = ""
 	icon = 'mojave/icons/turf/walls/rrustmetal.dmi'
 
-/turf/closed/wall/r_wall/ms13/bunker //need
-	name = "bunker wall"
-	desc = ""
-	icon = 'mojave/icons/turf/walls/bunker.dmi'
-	icon_state = "bunker-0"
-	base_icon_state = "bunker"
-
 /turf/closed/wall/r_wall/ms13/concrete
 	name = "concrete wall"
 	icon = 'mojave/icons/turf/walls/concrete.dmi'
