@@ -326,7 +326,7 @@
 	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_NORMAL, WALL_SMOOTHING)
 
 /turf/open/floor/plating/roof/noborder //for holes and stuff
-	icon = 'roof_asphalt_noborder.dmi'
+	icon = 'mojave/icons/turf/roof_asphalt_noborder.dmi'
 
 /turf/open/floor/plating/roof/sheet
 	icon = 'mojave/icons/turf/roof_sheet.dmi'
@@ -334,7 +334,7 @@
 	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_SHEET, WALL_SMOOTHING)
 
 /turf/open/floor/plating/roof/sheet/noborder //for holes and stuff
-	icon = 'roof_sheet_noborder.dmi'
+	icon = 'mojave/icons/turf/roof_sheet_noborder.dmi'
 
 /turf/open/floor/plating/roof/metal
 	icon = 'mojave/icons/turf/roof_metal.dmi'
