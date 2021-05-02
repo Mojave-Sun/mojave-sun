@@ -4,7 +4,14 @@
 #define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/ms13/tree/tallpine = 7, /obj/structure/flora/ms13/tree/deadsnow = 5, /obj/structure/flora/ms13/tree/pine = 5, /obj/structure/flora/ms13/shrub = 5, /obj/structure/flora/bush = 5, /obj/structure/flora/ms13/forage = 1, /obj/structure/flora/ms13/forage/blackberry = 1, /obj/structure/flora/ms13/forage/mutfruit = 1, /obj/structure/flora/ms13/forage/ashrose = 1, /obj/structure/flora/ms13/forage/wildcarrot = 1, /obj/structure/flora/ms13/forage/aster = 1)
 #define DESOLATE_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland/snow = 10, /obj/structure/flora/bush = 1)
 #define MUSHROOM_SPAWN_LIST list(/obj/structure/flora/ms13/forage/mushroom = 5, /obj/structure/flora/ms13/forage/mushroom/glowing = 1)
+
+/////////////////////////////////////////////////////////////
+/////////////////// MOJAVE SUN PLATINGS /////////////////////
+/////////////////////////////////////////////////////////////
+
 //A plating that can't be destroyed but can have stuff like floor tiles slapped on for construction
+
+////Ground Turfs////
 
 /turf/open/floor/plating/ground
 	name = "ground"
@@ -37,7 +44,6 @@
 /turf/open/floor/plating/ground/ex_act(severity, target)
 	return
 
-//Some desert
 /turf/open/floor/plating/ground/desert
 	name = "\proper desert"
 	desc = "A stretch of desert."
@@ -255,6 +261,8 @@
 	icon_state = "dirt"
 	slowdown = 1
 
+////Roads////
+
 /turf/open/floor/plating/ground/road
 	name = "\proper road"
 	desc = "A stretch of road."
@@ -275,6 +283,8 @@
 	var/direction_randomiser = "rand(0,8)"
 	if(prob(20))
 		add_overlay(image('mojave/icons/turf/road.dmi', crack_randomiser, FLOAT_LAYER, direction_randomiser, road_randomiser, road_randomiser))
+
+////Sidewalks////
 
 /turf/open/floor/plating/ground/sidewalk
 	name = "sidewalk"
@@ -303,11 +313,43 @@
 	. = ..()
 	icon_state = "crack_[rand(1,11)]"
 
+////Roofing////
+
 /turf/open/floor/plating/roof
-	icon = 'mojave/icons/turf/floors.dmi'
-	icon_state = "roof"
 	name = "roof"
-	desc = "Some metal roofing."
+	desc = "Old roofing."
+	icon = 'mojave/icons/turf/roof_asphalt.dmi'
+	icon_state = "roof-255"
+	base_icon_state = "roof"
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_MS13_ROOF_NORMAL)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_NORMAL)
+
+/turf/open/floor/plating/roof/border
+	icon = 'mojave/icons/turf/roof_asphalt_border.dmi'
+
+/turf/open/floor/plating/roof/sheet
+	icon = 'mojave/icons/turf/roof_sheet.dmi'
+	smoothing_groups = list(SMOOTH_GROUP_MS13_ROOF_SHEET, SMOOTH_GROUP_MS13_ROOF_SHEET)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_SHEET)
+
+/turf/open/floor/plating/roof/sheet/border
+	icon = 'mojave/icons/turf/roof_sheet_border.dmi'
+
+/turf/open/floor/plating/roof/metal
+	icon = 'mojave/icons/turf/roof_metal.dmi'
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_MS13_ROOF_METAL)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_METAL)
+
+/turf/open/floor/plating/roof/metal/rusty
+	icon = 'mojave/icons/turf/roof_rusty.dmi'
+
+/turf/open/floor/plating/roof/wood
+	icon = 'mojave/icons/turf/roof_wood.dmi'
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_MS13_ROOF_WOOD)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_WOOD)
+
+////Ice////
 
 /turf/open/floor/plating/ms13/ice
 	name = "ice sheet"
@@ -423,3 +465,4 @@
 	. = ..()
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "transparent" //Reset to original icon so it doesn't darken things when viewed in game.
+
