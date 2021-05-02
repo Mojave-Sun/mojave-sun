@@ -1,4 +1,4 @@
-#define CURB_SMOOTHING list(SMOOTH_GROUP_MS13_SIDEWALK, SMOOTH_GROUP_MS13_WALL, SMOOTH_GROUP_MS13_WALL_METAL, SMOOTH_GROUP_MS13_WALL_WOOD, SMOOTH_GROUP_MS13_WALL_SCRAP, SMOOTH_GROUP_MS13_WALL_ADOBE, SMOOTH_GROUP_MS13_WALL_BRICK, SMOOTH_GROUP_MS13_WALL_REINFORCED, SMOOTH_GROUP_MS13_WINDOW, SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_MS13_MINERALS)
+#define WALL_SMOOTHING SMOOTH_GROUP_MS13_SIDEWALK, SMOOTH_GROUP_MS13_WALL, SMOOTH_GROUP_MS13_WALL_METAL, SMOOTH_GROUP_MS13_WALL_WOOD, SMOOTH_GROUP_MS13_WALL_SCRAP, SMOOTH_GROUP_MS13_LOW_WALL,SMOOTH_GROUP_MS13_WALL_ADOBE, SMOOTH_GROUP_MS13_WALL_BRICK, SMOOTH_GROUP_MS13_WALL_REINFORCED, SMOOTH_GROUP_MS13_WINDOW, SMOOTH_GROUP_MS13_MINERALS
 #define GRASS_SPONTANEOUS 		2
 #define GRASS_WEIGHT 			2
 #define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/ms13/tree/tallpine = 7, /obj/structure/flora/ms13/tree/deadsnow = 5, /obj/structure/flora/ms13/tree/pine = 5, /obj/structure/flora/ms13/shrub = 5, /obj/structure/flora/bush = 5, /obj/structure/flora/ms13/forage = 1, /obj/structure/flora/ms13/forage/blackberry = 1, /obj/structure/flora/ms13/forage/mutfruit = 1, /obj/structure/flora/ms13/forage/ashrose = 1, /obj/structure/flora/ms13/forage/wildcarrot = 1, /obj/structure/flora/ms13/forage/aster = 1)
@@ -294,7 +294,7 @@
 	base_icon_state = "sidewalk"
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_MS13_SIDEWALK)
-	canSmoothWith = CURB_SMOOTHING
+	canSmoothWith = list(SMOOTH_GROUP_MS13_SIDEWALK, WALL_SMOOTHING, SMOOTH_GROUP_TURF_OPEN)
 
 /turf/open/floor/plating/ground/sidewalk/Initialize()
 	. = ..()
@@ -323,17 +323,23 @@
 	base_icon_state = "roof"
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_MS13_ROOF_NORMAL)
-	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_NORMAL)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_NORMAL, WALL_SMOOTHING)
+
+/turf/open/floor/plating/roof/noborder //for holes and stuff
+	icon = 'roof_asphalt_noborder.dmi'
 
 /turf/open/floor/plating/roof/sheet
 	icon = 'mojave/icons/turf/roof_sheet.dmi'
 	smoothing_groups = list(SMOOTH_GROUP_MS13_ROOF_SHEET, SMOOTH_GROUP_MS13_ROOF_SHEET)
-	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_SHEET)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_SHEET, WALL_SMOOTHING)
+
+/turf/open/floor/plating/roof/sheet/noborder //for holes and stuff
+	icon = 'roof_sheet_noborder.dmi'
 
 /turf/open/floor/plating/roof/metal
 	icon = 'mojave/icons/turf/roof_metal.dmi'
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_MS13_ROOF_METAL)
-	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_METAL)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_METAL, WALL_SMOOTHING)
 
 /turf/open/floor/plating/roof/metal/rusty
 	icon = 'mojave/icons/turf/roof_rusty.dmi'
@@ -341,7 +347,7 @@
 /turf/open/floor/plating/roof/wood
 	icon = 'mojave/icons/turf/roof_wood.dmi'
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_MS13_ROOF_WOOD)
-	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_WOOD)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_ROOF_WOOD, WALL_SMOOTHING)
 
 ////Ice////
 
