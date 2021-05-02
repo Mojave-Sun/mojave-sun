@@ -97,6 +97,16 @@
 	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL)
 	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL)
 
+/turf/closed/indestructible/ms13/comb
+	name = "comb wall"
+	desc = "honeybeast comb, lining the walls. They subtly drip a substance."
+	icon = 'mojave/icons/turf/walls/comb.dmi'
+	icon_state = "wall-0"
+	base_icon_state = "wall"
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL)
+
 /turf/closed/indestructible/ms13/matrix
 	name = "the matrix"
 	desc = "Looking at this gives you the feeling the physical world is very limited... (Click and drag yourself on this to remove your current character from the round.)"
