@@ -16,7 +16,7 @@
 /turf/open/floor/wood/ms13/Initialize()
 	. = ..()
 	if(has_alternate_states)
-		if(prob(50))
+		if(prob(25))
 			icon_state = "[icon_state]_[rand(1,(alternate_states))]"
 		else if(has_base_states && prob(80))
 			icon_state = "[icon_state][rand(1,(base_states))]"
@@ -252,7 +252,23 @@
 	icon_state = "fancy"
 	alternate_states = 7
 
-/turf/open/floor/plasteel/ms13/tile/cafeteria
+/turf/open/floor/plasteel/ms13/tile/large
+	icon_state = "grey_large"
+	alternate_states = 3
+
+/turf/open/floor/plasteel/ms13/tile/large/navy
+	icon_state = "navy_large"
+	alternate_states = 3
+
+/turf/open/floor/plasteel/ms13/tile/large/black
+	icon_state = "black_large"
+	alternate_states = 3
+
+/turf/open/floor/plasteel/ms13/tile/large/checkered
+	icon_state = "checkered_large"
+	alternate_states = 3
+
+/turf/open/floor/plasteel/ms13/tile/large/cafeteria
 	icon_state = "cafeteria"
 	alternate_states = 3
 
@@ -339,6 +355,11 @@
 	has_alternate_states = TRUE
 	alternate_states = 5
 
+/turf/open/floor/plasteel/ms13/concrete/pavers
+	icon_state = "concrete_walk"
+	has_alternate_states = TRUE
+	alternate_states = 3
+
 ////Ceramic Floors////
 
 /turf/open/floor/plasteel/ms13/ceramic
@@ -354,3 +375,10 @@
 /turf/open/floor/plasteel/ms13/ceramic/sierra
 	icon_state = "sierra"
 	alternate_states = 3
+
+///Brick Floors///
+
+/turf/open/floor/plasteel/ms13/brick
+	icon_state = "brick_walk"
+	has_alternate_states = TRUE
+	alternate_states = 8
