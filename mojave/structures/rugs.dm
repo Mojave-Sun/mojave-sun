@@ -10,6 +10,7 @@
 	layer = BELOW_OPEN_DOOR_LAYER
 	var/item_rug = /obj/item/ms13/rug
 	COOLDOWN_DECLARE(rug_cooldown)
+	var/rolltime = 15 SECONDS
 	var/list/remarks = list(
 	"Why won't it stay straight..?",
 	"Come on you piece of...",
@@ -26,7 +27,7 @@
 	. = ..()
 	if(get_dist(src, user)<2)
 		to_chat(usr, "<span class='warning'>[pick(remarks)]</span>")
-		if(do_after(user, 20 SECONDS, target = src))
+		if(do_after(user, (rolltime), target = src))
 			usr.visible_message("<span class='notice'>[usr] rolls and grabs \the [src.name].</span>", "<span class='notice'>You grab \the [src.name].</span>")
 			var/obj/item/C = new item_rug(loc)
 			usr.put_in_hands(C)
@@ -44,6 +45,7 @@
 	desc = "A large rubber mat, usually used in industrial areas to keep traction in slick conditions."
 	icon_state = "rug_rubber"
 	item_rug = /obj/item/ms13/rug/rubber
+	rolltime = 20 SECONDS
 	remarks = list(
 	"You'd have been better off as a damn tire.",
 	"Just- Roll already!",
@@ -53,7 +55,29 @@
 	"For the love of...",
 	"Do I even want this thing anymore..?")
 
-//The object versions, used for picking up//
+/obj/structure/ms13/rug/mat
+	name = "door mat"
+	desc = "A small door mat, it's got nothing on it, but it's still good for wiping your feet off before entering."
+	icon = 'mojave/icons/structure/32x32_rugs.dmi'
+	icon_state = "mat_blank"
+	item_rug = /obj/item/ms13/mat
+	rolltime = 5 SECONDS
+	remarks = null
+
+/obj/structure/ms13/rug/mat/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/simple_rotation,ROTATION_ALTCLICK | ROTATION_CLOCKWISE,CALLBACK(src, .proc/can_be_rotated),null)
+
+/obj/structure/ms13/rug/mat/proc/can_be_rotated(mob/user)
+	return TRUE
+
+/obj/structure/ms13/rug/mat/welcome
+	name = "door mat"
+	desc = "A small door mat, it's got the word WELCOME across it for the complete cozy home experience."
+	icon_state = "mat_welcome"
+	item_rug = /obj/item/ms13/mat/welcome
+
+//The object versions, used for transport of the rug itself//
 
 /obj/item/ms13/rug
 	name = "rug"
@@ -93,3 +117,19 @@
 	icon_state = "rug_rubber"
 	inhand_icon_state = "rug_rubber"
 	origin_type = /obj/structure/ms13/rug/rubber
+
+/obj/item/ms13/mat
+	name = "door mat"
+	desc = "A small door mat, it's got nothing on it, but it's still good for wiping your feet off before entering. It's rolled and ready for transport."
+	icon_state = "rug_blank"
+	inhand_icon_state = "mat"
+	var/obj/structure/ms13/rug/origin_type = /obj/structure/ms13/rug/mat
+	throw_range = 6
+	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ms13/mat/welcome
+	name = "door mat"
+	desc = "A small door mat, it's got the word WELCOME across it for the complete cozy home experience."
+	icon_state = "mat_welcome"
+	inhand_icon_state = "mat"
+	origin_type = /obj/structure/ms13/rug/mat/welcome
