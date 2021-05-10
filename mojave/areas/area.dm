@@ -207,3 +207,61 @@
 /area/ms13/supermarket/basement
 	name = "Supermarket Basement"
 	icon_state = "supermarket_basement"
+
+//Mall/Eagle Lakes Areas
+
+/area/ms13/mall
+	name = "Mall"
+	icon_state = "mall"
+
+/area/ms13/mall/convenience
+	name = "Convenience Store"
+	icon_state = "convenience"
+
+/area/ms13/mall/clothing
+	name = "Clothing Store"
+	icon_state = "clothing"
+
+/area/ms13/mall/pawnshop
+	name = "Pawn Shop"
+	icon_state = "pawn"
+
+/area/ms13/mall/food
+	name = "Eatery/Takeout"
+	icon_state = "food"
+
+/area/ms13/mall/hardware
+	name = "Hardware Store"
+	icon_state = "hardware"
+
+/area/ms13/mall/trinket
+	name = "Trinket/Other Store"
+	icon_state = "trinket"
+
+/area/ms13/mall/furniture
+	name = "Furniture/Appliance Store"
+	icon_state = "furniture"
+
+/area/ms13/mall/cosmetic
+	name = "Cosmetic/Health Store"
+	icon_state = "health"
+
+/area/ms13/mall/storage
+	name = "Storage/Utility"
+	icon_state = "storage"
+
+/area/ms13/mall/office
+	name = "Office"
+	icon_state = "office"
+
+/area/ms13/mall/restroom
+	name = "Restroom"
+	icon_state = "restroom"
+
+/area/ms13/mall/bank
+	name = "Bank"
+	icon_state = "bank"
+
+/area/ms13/mall/entertainment
+	name = "Entertainment"
+	icon_state = "entertainment"
