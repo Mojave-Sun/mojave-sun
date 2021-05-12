@@ -50,6 +50,9 @@
 /turf/closed/wall/ms13/brick/alt
 	icon = 'mojave/icons/turf/walls/brickalt.dmi'
 
+/turf/closed/wall/ms13/brick/gray
+	icon = 'mojave/icons/turf/walls/brickgray.dmi'
+
 /turf/closed/wall/r_wall/ms13
 	name = "base class wall"
 	desc = "AHHH FUCK A BASE CLASS WALL"
