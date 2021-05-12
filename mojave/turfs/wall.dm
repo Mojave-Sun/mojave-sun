@@ -80,6 +80,11 @@
 /turf/closed/wall/r_wall/ms13/concrete/alt
 	icon = 'mojave/icons/turf/walls/concretealt.dmi'
 
+/turf/closed/wall/r_wall/ms13/bunker
+	name = "bunker wall"
+	desc = ""
+	icon = 'mojave/icons/turf/walls/bunker.dmi'
+
 /turf/closed/indestructible/ms13
 	layer = EDGED_TURF_LAYER
 
