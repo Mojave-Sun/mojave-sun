@@ -60,7 +60,7 @@
 	desc = "A small door mat, it's got nothing on it, but it's still good for wiping your feet off before entering."
 	icon = 'mojave/icons/structure/32x32_rugs.dmi'
 	icon_state = "mat_blank"
-	item_rug = /obj/item/ms13/mat
+	item_rug = /obj/item/ms13/rug/mat
 	rolltime = 5 SECONDS
 	remarks = null
 
@@ -87,7 +87,7 @@
 	name = "door mat"
 	desc = "A small door mat, it's got the word WELCOME across it for the complete cozy home experience."
 	icon_state = "mat_welcome"
-	item_rug = /obj/item/ms13/mat/welcome
+	item_rug = /obj/item/ms13/rug/mat/welcome
 
 //The object versions, used for transport of the rug itself//
 
@@ -130,21 +130,17 @@
 	inhand_icon_state = "rug_rubber"
 	origin_type = /obj/structure/ms13/rug/rubber
 
-/obj/item/ms13/mat
+/obj/item/ms13/rug/mat
 	name = "door mat"
-	desc = "A small door mat, it's got nothing on it, but it's still good for wiping your feet off before entering. It's rolled and ready for transport."
+	desc = "A small door mat, It's rolled and ready for transport."
 	icon = 'mojave/icons/objects/decorative.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/items_righthand.dmi'
-	icon_state = "rug_blank"
+	icon_state = "rug"
 	inhand_icon_state = "mat"
-	var/obj/structure/ms13/rug/origin_type = /obj/structure/ms13/rug/mat
 	throw_range = 6
+	origin_type = /obj/structure/ms13/rug/mat
 	w_class = WEIGHT_CLASS_NORMAL
 
-/obj/item/ms13/mat/welcome
-	name = "door mat"
-	desc = "A small door mat, it's got the word WELCOME across it for the complete cozy home experience."
-	icon_state = "mat_welcome"
-	inhand_icon_state = "mat"
+/obj/item/ms13/rug/mat/welcome
 	origin_type = /obj/structure/ms13/rug/mat/welcome
