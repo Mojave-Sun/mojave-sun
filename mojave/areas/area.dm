@@ -60,7 +60,7 @@
 /area/ms13/ncr_main
 	name = "NCR Mainbase"
 	icon_state = "ncr_main"
-	requires_power = TRUE
+	requires_power = FALSE
 
 /area/ms13/raider_mall
 	name = "Raider Mall"
@@ -113,6 +113,10 @@
 	requires_power = TRUE
 	ambientsounds = ENGINEERING
 
+/area/ms13/factory
+	name = "Factory"
+	icon_state = "factory"
+
 /area/ms13/underground/enclave_base
 	name = "Enclave Base"
 	icon_state = "enclave_base"
@@ -164,3 +168,100 @@
 	icon_state = "cave"
 	outdoors = TRUE
 
+/area/ms13/underground/sewer
+	name = "Sewers"
+	icon_state = "sewer"
+	outdoors = FALSE
+
+/area/ms13/underground/underground_town
+	name = "Lower Town"
+	icon_state = "underground_town"
+	outdoors = FALSE
+
+/area/ms13/underground/tunnel
+	name = "Tunnel"
+	outdoors = FALSE
+	icon_state = "tunnels"
+
+/area/ms13/underground/subway
+	name = "Subway"
+	outdoors = FALSE
+	icon_state = "subway"
+
+/area/ms13/underground/tunnel/maintenance
+	name = "Maintenance Passages"
+	icon_state = "maintenance"
+
+/area/ms13/underground/megabunker
+	name = "Major Pre-war bunker"
+	icon_state = "bunker"
+
+/area/ms13/underground/megabunker/upper
+	name = "Pre-War bunker entrance"
+	icon_state = "bunkerentrance"
+
+/area/ms13/supermarket
+	name = "Supermarket"
+	icon_state = "supermarket"
+
+/area/ms13/supermarket/basement
+	name = "Supermarket Basement"
+	icon_state = "supermarket_basement"
+
+//Mall/Eagle Lakes Areas
+
+/area/ms13/mall
+	name = "Mall"
+	icon_state = "mall"
+
+/area/ms13/mall/convenience
+	name = "Convenience Store"
+	icon_state = "convenience"
+
+/area/ms13/mall/clothing
+	name = "Clothing Store"
+	icon_state = "clothing"
+
+/area/ms13/mall/pawnshop
+	name = "Pawn Shop"
+	icon_state = "pawn"
+
+/area/ms13/mall/food
+	name = "Eatery/Takeout"
+	icon_state = "food"
+
+/area/ms13/mall/hardware
+	name = "Hardware Store"
+	icon_state = "hardware"
+
+/area/ms13/mall/trinket
+	name = "Trinket/Other Store"
+	icon_state = "trinket"
+
+/area/ms13/mall/furniture
+	name = "Furniture/Appliance Store"
+	icon_state = "furniture"
+
+/area/ms13/mall/cosmetic
+	name = "Cosmetic/Health Store"
+	icon_state = "health"
+
+/area/ms13/mall/storage
+	name = "Storage/Utility"
+	icon_state = "storage"
+
+/area/ms13/mall/office
+	name = "Office"
+	icon_state = "office"
+
+/area/ms13/mall/restroom
+	name = "Restroom"
+	icon_state = "restroom"
+
+/area/ms13/mall/bank
+	name = "Bank"
+	icon_state = "bank"
+
+/area/ms13/mall/entertainment
+	name = "Entertainment"
+	icon_state = "entertainment"

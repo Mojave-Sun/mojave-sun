@@ -29,6 +29,18 @@
 	icon_state = "fancy"
 	inhand_icon_state = "fancy"
 
+/obj/item/clothing/shoes/ms13/winter
+	name = "brown winter boots"
+	desc = "A pair of brown winter boots. The treads are durable with a fair amount of grip, hopefully enough to prevent ice mishaps."
+	icon_state = "winterbootsbrown"
+	inhand_icon_state = "winterbootsbrown"
+
+/obj/item/clothing/shoes/ms13/winter/black
+	name = "black winter boots"
+	desc = "A pair of black winter boots. The treads are durable with a fair amount of grip, hopefully enough to prevent ice mishaps."
+	icon_state = "winterbootsblack"
+	inhand_icon_state = "winterbootsblack"
+
 /obj/item/clothing/shoes/ms13/cowboy
 	name = "cowboy boots"
 	desc = "A pair of cowhide boots with spurs.<br>They have a Cuban heel, rounded to pointed toe, high shaft, and, traditionally, no lacing."
@@ -91,28 +103,22 @@
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 
 /obj/item/clothing/shoes/ms13/military/ncr
-	name = "NCR boots"
-	desc = "A pair of standard issue NCR brown boots, with a puttee."
+	name = "\improper NCR boots"
+	desc = "A pair of standard issue NCR black boots."
 	icon_state = "ncr_boots"
-	inhand_icon_state = "ncr"
+	inhand_icon_state = "ncr_boots"
 
-/obj/item/clothing/shoes/ms13/military/ncr/winter
-	name = "NCR winter boots"
-	desc = "A pair of NCR boots intended for winter operations."
-	icon_state = "ncr_boots_w"
-	inhand_icon_state = "ncr_boots_w"
-
-/obj/item/clothing/shoes/ms13/military/ncr_officer
-	name = "NCR officer boots"
-	desc = "A pair of brown leather boots, issued to NCR Officers."
+/obj/item/clothing/shoes/ms13/military/ncr/officer
+	name = "\improper NCR officer boots"
+	desc = "A pair of brown NCR boots issued to officers. Quite stylish."
 	icon_state = "ncr_officer_boots"
-	inhand_icon_state = "ncr_officer_boots"
+	inhand_icon_state = "ncr_boots"
 
-/obj/item/clothing/shoes/ms13/military/ncr_officer/winter
-	name = "NCR officer winter Boots"
-	desc = "A pair of boots issued to NCR officers for winter operations."
-	icon_state = "ncr_officer_boots_w"
-	inhand_icon_state = "ncr_officer_boots_w"
+/obj/item/clothing/shoes/ms13/military/ncr/scout
+	name = "\improper NCR scout boots"
+	desc = "A nice flexible pair of boots, often associated with the more mobile units of the NCR."
+	icon_state = "ncr_scout_boots"
+	inhand_icon_state = "ncr_boots"
 
 /obj/item/clothing/shoes/ms13/military/legion
 	name = "generic Legion boots"
@@ -143,12 +149,11 @@
 	clothing_flags = NOSLIP
 	armor = list(melee = 5, bullet = 10, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 0)
 
-/obj/item/clothing/shoes/ms13/military/legion/legate
-	name = "legate boots"
-	desc = "A pair of heavy boots worn by the Caesar's Legion Legate."
-	icon_state = "legionlegate"
-	inhand_icon_state = "legionlegate"
-	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 30, bio = 0, rad = 10, fire = 30, acid = 10)
+/obj/item/clothing/shoes/ms13/military/bos
+	name = "\improper BoS combat boots"
+	desc = "A pair of heavy military boots favored by the Brotherhood of Steel."
+	icon_state = "bos_boots"
+	inhand_icon_state = "bos_boots"
 
 //Fluff
 

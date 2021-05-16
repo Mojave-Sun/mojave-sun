@@ -70,13 +70,6 @@
 	desc = ""
 	icon = 'mojave/icons/turf/walls/rrustmetal.dmi'
 
-/turf/closed/wall/r_wall/ms13/bunker //need
-	name = "bunker wall"
-	desc = ""
-	icon = 'mojave/icons/turf/walls/bunker.dmi'
-	icon_state = "bunker-0"
-	base_icon_state = "bunker"
-
 /turf/closed/wall/r_wall/ms13/concrete
 	name = "concrete wall"
 	icon = 'mojave/icons/turf/walls/concrete.dmi'
@@ -91,6 +84,16 @@
 	name = "metal wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/metal.dmi'
+	icon_state = "wall-0"
+	base_icon_state = "wall"
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL)
+
+/turf/closed/indestructible/ms13/comb
+	name = "comb wall"
+	desc = "honeybeast comb, lining the walls. They subtly drip a substance."
+	icon = 'mojave/icons/turf/walls/comb.dmi'
 	icon_state = "wall-0"
 	base_icon_state = "wall"
 	smoothing_flags = SMOOTH_BITMASK
