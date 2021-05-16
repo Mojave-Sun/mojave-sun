@@ -743,7 +743,7 @@
 	icon_state = "Gib";
 	pixel_y = 32
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "arl" = (
 /obj/machinery/light/small{
@@ -924,7 +924,7 @@
 	dir = 4
 	},
 /obj/structure/railing,
-/turf/open/space/basic,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "axn" = (
 /obj/effect/decal/cleanable/blood/tracks{
@@ -1469,8 +1469,7 @@
 /turf/open/floor/wood/ms13/wide,
 /area/ms13/sunny_dale)
 "aOW" = (
-/obj/machinery/door/unpowered/wooddoor,
-/turf/open/floor/plasteel/ms13/tile,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "aPa" = (
 /obj/machinery/shower{
@@ -1784,7 +1783,7 @@
 	pixel_y = -8
 	},
 /obj/item/flashlight/flare,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "aYz" = (
 /obj/machinery/light/small,
@@ -1864,7 +1863,7 @@
 /obj/structure/chair/sofa/corp/left{
 	dir = 4
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "aZQ" = (
 /obj/structure/curtain/cloth/fancy,
@@ -2290,6 +2289,15 @@
 	},
 /turf/open/floor/wood/ms13/common,
 /area/ms13/underground/underground_town)
+"bqn" = (
+/obj/structure/table/ms13/no_smooth/workbench,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 5
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust{
+	dir = 1
+	},
+/area/ms13/underground/sewer)
 "bqt" = (
 /obj/machinery/door/poddoor/shutters/preopen,
 /turf/open/floor/plasteel/ms13/tile,
@@ -2896,7 +2904,7 @@
 /area/ms13/underground/sewer)
 "bJm" = (
 /obj/machinery/door/airlock/maintenance,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "bJp" = (
 /obj/structure/stairs/east,
@@ -3157,7 +3165,7 @@
 /area/ms13/sunny_dale)
 "bRR" = (
 /obj/structure/chair/pew/left,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "bSh" = (
 /obj/structure/table/ms13/metal,
@@ -3522,7 +3530,7 @@
 "cei" = (
 /obj/structure/table/ms13/metal,
 /obj/item/rollingpaper,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "cen" = (
 /obj/structure/window/reinforced{
@@ -3636,7 +3644,7 @@
 /obj/structure/filingcabinet/filingcabinet{
 	pixel_x = -5
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "chq" = (
 /obj/structure/table/ms13/metal,
@@ -3648,7 +3656,7 @@
 	dir = 8;
 	pixel_x = 12
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "chF" = (
 /obj/machinery/hydroponics/ms13/soil,
@@ -3857,7 +3865,7 @@
 /area/ms13/sunny_dale)
 "cmT" = (
 /obj/machinery/door/unpowered/wooddoor,
-/turf/open/space/basic,
+/turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/underground_town)
 "cnh" = (
 /obj/structure/sink/kitchen{
@@ -3968,7 +3976,7 @@
 "cqO" = (
 /obj/structure/table/ms13/metal,
 /obj/structure/closet/crate/ms13/vault_tec/compact,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "cqW" = (
 /obj/structure/rack,
@@ -4397,7 +4405,12 @@
 /obj/structure/ms13/storage/large/shelf{
 	dir = 8
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 5
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust{
+	dir = 1
+	},
 /area/ms13/underground/sewer)
 "cFq" = (
 /obj/structure/chair/ms13/wood/padded,
@@ -4788,7 +4801,7 @@
 /area/ms13/underground/sewer)
 "cSo" = (
 /obj/structure/stairs/north,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "cSz" = (
 /obj/item/paper/pamphlet,
@@ -5271,7 +5284,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "dkF" = (
 /obj/structure/table/low_wall/brick,
@@ -5612,7 +5625,10 @@
 /obj/machinery/computer/libraryconsole{
 	name = "pretend this is a fallout terminal"
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 9
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust,
 /area/ms13/underground/sewer)
 "dwV" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
@@ -6288,7 +6304,7 @@
 /area/ms13/sunny_dale)
 "dSb" = (
 /obj/structure/table/ms13/no_smooth/workbench,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "dSe" = (
 /obj/structure/chair/ms13/wood,
@@ -6520,7 +6536,7 @@
 "dXo" = (
 /obj/structure/table/ms13/metal,
 /obj/item/radio/ms13/ham,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "dXD" = (
 /obj/machinery/light/small{
@@ -6593,7 +6609,10 @@
 /turf/open/floor/carpet/red,
 /area/ms13/sunny_dale)
 "ebB" = (
-/turf/open/floor/plasteel/ms13/metal,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 9
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust,
 /area/ms13/underground/sewer)
 "ebY" = (
 /obj/structure/rack,
@@ -6798,10 +6817,12 @@
 /turf/open/floor/wood/ms13/carpet/blue,
 /area/ms13/underground/megabunker/upper)
 "ehZ" = (
-/obj/structure/ms13/storage/shelf{
-	pixel_y = -8
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 10
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust{
+	dir = 4
+	},
 /area/ms13/underground/sewer)
 "eik" = (
 /obj/structure/chair/sofa/corp{
@@ -7082,7 +7103,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "erh" = (
 /obj/structure/table/ms13/metal,
@@ -7206,7 +7227,7 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "evZ" = (
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "ewf" = (
 /obj/machinery/door/airlock,
@@ -7512,9 +7533,13 @@
 /turf/open/floor/plasteel/ms13/tile/fancy,
 /area/ms13/underground/megabunker/upper)
 "eHd" = (
-/obj/machinery/door/unpowered/wooddoor,
-/turf/open/space/basic,
-/area/ms13/supermarket/basement)
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 6
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust{
+	dir = 8
+	},
+/area/ms13/underground/sewer)
 "eHr" = (
 /obj/effect/landmark/start/ms13/farmer,
 /turf/open/floor/plating/ground/mountain,
@@ -7608,10 +7633,6 @@
 /obj/structure/table/low_wall/brick/alt,
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/sunny_dale)
-"eKQ" = (
-/obj/machinery/door/unpowered/wooddoor,
-/turf/open/floor/plasteel/ms13/metal,
-/area/ms13/underground/sewer)
 "eKT" = (
 /obj/structure/table/ms13/metal,
 /obj/machinery/microwave{
@@ -7888,7 +7909,7 @@
 /area/ms13)
 "eTD" = (
 /obj/machinery/door/unpowered/wooddoor,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "eTQ" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -8052,6 +8073,11 @@
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/plating/ground/road,
 /area/ms13)
+"eZG" = (
+/obj/structure/table/ms13,
+/obj/item/phone,
+/turf/open/floor/wood/ms13/carpet/green,
+/area/ms13/sunny_dale)
 "eZJ" = (
 /obj/effect/turf_decal/trimline/yellow/line{
 	dir = 1
@@ -8430,7 +8456,10 @@
 /obj/structure/fluff/paper/stack{
 	dir = 5
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/rust,
 /area/ms13/underground/sewer)
 "fnk" = (
 /obj/structure/chair/sofa/corner{
@@ -8788,9 +8817,9 @@
 /turf/open/floor/wood/ms13/wide,
 /area/ms13/sunny_dale)
 "fyR" = (
-/obj/machinery/door/airlock/hatch,
-/turf/open/space/basic,
-/area/ms13/underground/sewer)
+/obj/machinery/door/unpowered/wooddoor,
+/turf/open/floor/plasteel/ms13/tile,
+/area/ms13/underground/subway)
 "fzp" = (
 /obj/machinery/grill,
 /turf/open/floor/plasteel/ms13/tile/long,
@@ -8932,7 +8961,7 @@
 /obj/structure/ms13/celldoor/rusty{
 	dir = 1
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "fDm" = (
 /obj/structure/table/ms13/round,
@@ -8994,8 +9023,13 @@
 /turf/open/floor/wood/ms13/mosaic,
 /area/ms13/klamat)
 "fEZ" = (
-/obj/structure/table/ms13/metal,
-/turf/open/floor/plasteel/ms13/metal,
+/obj/structure/table/ms13/no_smooth/workbench,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/rust{
+	dir = 4
+	},
 /area/ms13/underground/sewer)
 "fFm" = (
 /turf/open/floor/wood/ms13/mosaic,
@@ -9375,7 +9409,7 @@
 /obj/structure/stairs{
 	dir = 8
 	},
-/turf/open/floor/wood/ms13,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "fQy" = (
 /obj/structure/table_frame/wood,
@@ -9914,7 +9948,7 @@
 /area/ms13/sunny_dale)
 "gfH" = (
 /obj/structure/chair/pew/right,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "gfS" = (
 /obj/structure/railing/corner{
@@ -10109,7 +10143,7 @@
 /obj/effect/decal/cleanable/crayon{
 	icon_state = "Tunnel"
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "glX" = (
 /obj/structure/table/ms13/no_smooth/workbench,
@@ -11745,7 +11779,7 @@
 /obj/structure/chair/ms13/metal/unfinished{
 	dir = 1
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "hna" = (
 /obj/structure/chair/ms13/metal/broken{
@@ -11870,6 +11904,15 @@
 /obj/effect/decal/cleanable/ash,
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
+"hrs" = (
+/obj/structure/chair/ms13/metal/broken{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/rust,
+/area/ms13/underground/sewer)
 "hrD" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -12358,7 +12401,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "hFw" = (
 /obj/structure/table_frame,
@@ -12867,6 +12910,13 @@
 "hUy" = (
 /obj/item/cigbutt/cigarbutt,
 /turf/open/floor/wood/ms13/common,
+/area/ms13/sunny_dale)
+"hUz" = (
+/obj/machinery/light/small{
+	brightness = 3;
+	dir = 8
+	},
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "hUE" = (
 /obj/structure/table/ms13/no_smooth/pool,
@@ -13620,7 +13670,7 @@
 "iwe" = (
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/crude,
-/turf/open/space/basic,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "iww" = (
 /obj/structure/table/ms13/metal,
@@ -13743,7 +13793,7 @@
 /obj/item/clothing/under/rank/prisoner,
 /obj/item/clothing/shoes/sneakers/orange,
 /obj/item/restraints/handcuffs,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "iAH" = (
 /obj/effect/decal/cleanable/glass,
@@ -13760,20 +13810,11 @@
 /turf/open/floor/holofloor/dark,
 /area/ms13/sunny_dale)
 "iBb" = (
-/obj/effect/decal/remains/human,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/under/ms13/wasteland/combat,
-/obj/item/clothing/suit/ms13/ljacket/military,
-/obj/item/clothing/head/bandana,
-/obj/item/kitchen/knife/hunting,
-/obj/item/paper{
-	info = "Keep you waiting, huh?";
-	name = "Codec print"
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 9
 	},
-/obj/structure/closet/cardboard,
-/obj/item/taperecorder/empty,
-/turf/open/floor/plasteel/ms13/metal/rust/alt,
-/area/ms13/supermarket/basement)
+/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust,
+/area/ms13/underground/subway)
 "iBg" = (
 /obj/structure/chair/ms13/wood/padded,
 /obj/effect/decal/cleanable/vomit/old{
@@ -13917,9 +13958,13 @@
 /turf/open/floor/plasteel/ms13/tile/brown,
 /area/ms13/ncr_main)
 "iGm" = (
-/obj/structure/rack,
-/turf/open/floor/plasteel/ms13/metal,
-/area/ms13/underground/sewer)
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/rust{
+	dir = 4
+	},
+/area/ms13/underground/subway)
 "iGz" = (
 /obj/structure/toilet,
 /turf/open/floor/plasteel/ms13/tile/brown,
@@ -14073,7 +14118,7 @@
 	},
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/crude,
-/turf/open/space/basic,
+/turf/open/floor/plasteel/ms13/metal/rust/alt,
 /area/ms13/underground/sewer)
 "iKv" = (
 /obj/structure/table/ms13/metal,
@@ -14150,7 +14195,10 @@
 /obj/structure/fluff/paper/stack{
 	dir = 10
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/rust,
 /area/ms13/underground/sewer)
 "iMr" = (
 /obj/structure/bed/ms13/mattress/filthy,
@@ -14728,7 +14776,7 @@
 /obj/structure/ms13/storage/shelf{
 	pixel_y = -8
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust/alt,
 /area/ms13/underground/mountain)
 "jfq" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
@@ -15055,7 +15103,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/mountain)
 "jpw" = (
 /obj/structure/ms13/storage/shelf{
@@ -15152,11 +15200,6 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/plating/roof,
 /area/ms13/sunny_dale)
-"jrR" = (
-/obj/structure/rack,
-/obj/item/wrench,
-/turf/open/floor/plasteel/ms13/metal,
-/area/ms13/underground/subway)
 "jsl" = (
 /obj/item/flashlight/flare{
 	pixel_y = 4
@@ -15245,7 +15288,7 @@
 /obj/structure/chair/ms13/metal/broken{
 	dir = 4
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "juR" = (
 /obj/structure/table/ms13/metal,
@@ -15254,7 +15297,7 @@
 "juT" = (
 /obj/structure/table/ms13/metal,
 /obj/item/storage/toolbox/emergency,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "jvm" = (
 /obj/machinery/light{
@@ -15528,7 +15571,7 @@
 /area/ms13/sunny_dale)
 "jAP" = (
 /obj/structure/closet/crate/secure/weapon,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/mountain)
 "jAT" = (
 /obj/machinery/door/airlock/hatch,
@@ -15618,7 +15661,7 @@
 /area/ms13/sunny_dale)
 "jDV" = (
 /obj/structure/closet/cardboard,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/mountain)
 "jDY" = (
 /obj/item/storage/trash_stack,
@@ -15801,7 +15844,7 @@
 /area/ms13/underground/mountain)
 "jKk" = (
 /obj/effect/spawner/lootdrop/food_packaging,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "jKr" = (
 /obj/item/ammo_casing/c9mm,
@@ -16076,8 +16119,13 @@
 /turf/open/floor/plating/rust,
 /area/ms13/underground/sewer)
 "jVK" = (
-/turf/open/floor/plasteel/ms13/metal,
-/area/ms13/underground/mountain)
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 5
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust{
+	dir = 1
+	},
+/area/ms13/underground/subway)
 "jVN" = (
 /obj/machinery/light/small/broken{
 	dir = 1
@@ -16251,7 +16299,7 @@
 /obj/item/storage/toolbox/mechanical{
 	pixel_y = 6
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "kaa" = (
 /obj/effect/decal/cleanable/glass,
@@ -16479,7 +16527,7 @@
 "kjT" = (
 /obj/structure/table/ms13/metal,
 /obj/item/wrench,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust/alt,
 /area/ms13/underground/mountain)
 "kjV" = (
 /obj/structure/bed/ms13/bedframe/cot,
@@ -16888,7 +16936,7 @@
 /area/ms13/sunny_dale)
 "kwl" = (
 /obj/structure/ms13/bars,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/mountain)
 "kwq" = (
 /obj/effect/decal/cleanable/blood/gibs/core,
@@ -17008,7 +17056,7 @@
 	dir = 8
 	},
 /obj/structure/table/ms13/metal,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "kAG" = (
 /obj/structure/curtain,
@@ -17244,6 +17292,15 @@
 	dir = 4
 	},
 /area/ms13/underground/tunnel/maintenance)
+"kHr" = (
+/obj/structure/closet,
+/obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgreen,
+/obj/item/storage/belt,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 9
+	},
+/turf/open/floor/plasteel/ms13/metal/rust,
+/area/ms13/underground/sewer)
 "kHv" = (
 /obj/structure/table/ms13/metal,
 /obj/item/radio/ms13/ham,
@@ -17461,7 +17518,7 @@
 /obj/structure/chair/office/ms13/standard{
 	dir = 8
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "kOo" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -17474,7 +17531,7 @@
 /obj/structure/table/low_wall/brick/alt,
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/crude,
-/turf/open/space/basic,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/mountain)
 "kON" = (
 /obj/structure/closet/crate/ms13/footlocker,
@@ -17482,7 +17539,7 @@
 /area/ms13/sunny_dale)
 "kOO" = (
 /obj/structure/ms13/celldoor,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust/alt,
 /area/ms13/underground/mountain)
 "kOX" = (
 /obj/effect/decal/cleanable/blood/drip{
@@ -17768,9 +17825,11 @@
 /turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/tunnel/maintenance)
 "kXT" = (
-/obj/structure/closet/crate/ms13/woodcrate,
-/turf/open/space/basic,
-/area/ms13/sunny_dale)
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/rust,
+/area/ms13/underground/subway)
 "kYb" = (
 /obj/structure/closet/crate/ms13/vault_tec/compact,
 /obj/item/reagent_containers/hypospray/medipen/stimpack,
@@ -17785,7 +17844,7 @@
 /area/ms13/supermarket)
 "kYv" = (
 /obj/machinery/door/unpowered/wooddoor,
-/turf/open/space/basic,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "kZd" = (
 /obj/item/clothing/suit/armor/ms13/kit,
@@ -18024,7 +18083,7 @@
 /obj/structure/closet,
 /obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgreen,
 /obj/item/storage/belt,
-/turf/open/floor/plasteel/ms13/metal/warning,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "lfQ" = (
 /obj/structure/table/low_wall/brick/alt,
@@ -18088,7 +18147,7 @@
 /obj/structure/stairs{
 	dir = 8
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/mountain)
 "lij" = (
 /obj/effect/decal/cleanable/glass,
@@ -18308,7 +18367,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/mountain)
 "loF" = (
 /obj/structure/ms13/foundation/mosaic/variantthree,
@@ -18354,6 +18413,10 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /obj/structure/table_frame,
 /turf/open/floor/wood/ms13/common,
+/area/ms13/sunny_dale)
+"lqe" = (
+/obj/structure/table/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "lqi" = (
 /obj/structure/table/low_wall/brick/alt,
@@ -18436,7 +18499,7 @@
 /area/ms13/sunny_dale)
 "lsl" = (
 /obj/structure/stairs/south,
-/turf/open/floor/wood/ms13,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "lso" = (
 /obj/structure/chair/sofa/corp/corner,
@@ -18571,7 +18634,7 @@
 /obj/structure/ms13/bars/rusty{
 	dir = 1
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "lwI" = (
 /obj/machinery/light/small{
@@ -18804,7 +18867,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "lEj" = (
 /obj/structure/chair/sofa/right{
@@ -18879,7 +18942,10 @@
 /area/ms13/underground/tunnel/maintenance)
 "lGx" = (
 /obj/structure/closet,
-/turf/open/floor/plasteel/ms13/metal/warning,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "lGJ" = (
 /obj/structure/ms13/foundation/mosaic/variantthree{
@@ -18953,7 +19019,7 @@
 "lJx" = (
 /obj/structure/table/ms13/metal,
 /obj/item/weldingtool,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "lJS" = (
 /obj/structure/table/ms13,
@@ -19011,12 +19077,6 @@
 	},
 /turf/open/floor/wood/ms13/common,
 /area/ms13/ncr_main)
-"lLR" = (
-/obj/structure/ms13/storage/large/shelf{
-	dir = 8
-	},
-/turf/open/floor/plasteel/ms13/metal,
-/area/ms13/underground/subway)
 "lMc" = (
 /obj/structure/table/ms13/metal,
 /obj/structure/closet/crate/ms13/cash_register{
@@ -19772,7 +19832,9 @@
 "mmW" = (
 /obj/structure/table/ms13/metal,
 /obj/item/storage/toolbox/mechanical,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/grate/border{
+	dir = 8
+	},
 /area/ms13/underground/sewer)
 "mmX" = (
 /obj/item/trash/can/food/peaches,
@@ -19865,7 +19927,7 @@
 /area/ms13/sunny_dale)
 "mqy" = (
 /obj/structure/table/ms13/metal,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "mqE" = (
 /obj/structure/mopbucket,
@@ -20216,7 +20278,7 @@
 /obj/machinery/computer/libraryconsole{
 	name = "pretend this is a fallout terminal"
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "mDA" = (
 /obj/machinery/light/small,
@@ -20460,7 +20522,7 @@
 "mNe" = (
 /obj/structure/closet,
 /obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgreen,
-/turf/open/floor/plasteel/ms13/metal/warning,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "mNg" = (
 /obj/structure/chair/comfy/ms13/ergo{
@@ -20967,7 +21029,7 @@
 	pixel_y = 8
 	},
 /obj/item/clothing/head/helmet/ms13/utilitycap/deputy,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "nhJ" = (
 /obj/structure/table_frame,
@@ -21073,7 +21135,7 @@
 /obj/structure/filingcabinet/filingcabinet{
 	pixel_x = 8
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "nmh" = (
 /obj/structure/closet/cardboard,
@@ -21364,7 +21426,7 @@
 "nwn" = (
 /obj/structure/table/ms13/metal,
 /obj/item/phone,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "nwv" = (
 /obj/structure/railing{
@@ -21702,7 +21764,7 @@
 	pixel_y = 4
 	},
 /obj/item/restraints/handcuffs,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "nGJ" = (
 /mob/living/simple_animal/hostile/ms13/molerat,
@@ -21716,7 +21778,7 @@
 /area/ms13/underground/sewer)
 "nGY" = (
 /obj/machinery/vending/sustenance,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "nHn" = (
 /obj/machinery/light/small{
@@ -21802,9 +21864,10 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "nJZ" = (
-/obj/structure/reagent_dispensers/water_cooler,
-/turf/open/floor/plasteel/ms13/metal,
-/area/ms13/sunny_dale)
+/turf/open/floor/plasteel/ms13/metal/grate/border{
+	dir = 8
+	},
+/area/ms13/underground/subway)
 "nKb" = (
 /obj/machinery/blackbox_recorder,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
@@ -22083,7 +22146,7 @@
 /area/ms13/sunny_dale)
 "nTk" = (
 /obj/structure/reagent_dispensers/water_cooler,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "nTn" = (
 /obj/structure/chair/ms13/metal,
@@ -22177,7 +22240,7 @@
 "nZh" = (
 /obj/structure/closet,
 /obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgrey,
-/turf/open/floor/plasteel/ms13/metal/warning,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "nZi" = (
 /obj/structure/chair/ms13/metal/folding{
@@ -22301,7 +22364,7 @@
 /obj/item/restraints/handcuffs,
 /obj/item/weldingtool,
 /obj/item/wirecutters,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust/alt,
 /area/ms13/sunny_dale)
 "ocF" = (
 /obj/item/shard,
@@ -22780,7 +22843,7 @@
 /obj/structure/chair/sofa/corp/right{
 	dir = 4
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "otO" = (
 /obj/structure/table/ms13/metal,
@@ -22817,14 +22880,14 @@
 	pixel_x = 5;
 	pixel_y = 16
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "ovv" = (
 /obj/structure/table/ms13/metal,
 /obj/item/melee/classic_baton/telescopic{
 	pixel_y = 10
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust/alt,
 /area/ms13/sunny_dale)
 "ovA" = (
 /obj/effect/decal/cleanable/wrapping,
@@ -23089,7 +23152,10 @@
 /obj/structure/table/ms13/metal,
 /obj/item/wrench,
 /obj/item/crowbar/red,
-/turf/open/floor/plasteel/ms13/metal,
+/obj/effect/turf_decal/trimline/yellow/line,
+/turf/open/floor/plasteel/ms13/metal/walkway/rust{
+	dir = 4
+	},
 /area/ms13/underground/sewer)
 "oFZ" = (
 /obj/structure/safe,
@@ -23227,7 +23293,7 @@
 /obj/structure/chair/ms13/metal/broken{
 	dir = 8
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "oJl" = (
 /obj/structure/holohoop{
@@ -23465,7 +23531,7 @@
 	pixel_x = 6;
 	pixel_y = 8
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "oPu" = (
 /obj/structure/fermenting_barrel/ms13,
@@ -23888,6 +23954,21 @@
 	},
 /turf/open/floor/plasteel/ms13/metal/plate,
 /area/ms13/underground/sewer)
+"pbR" = (
+/obj/effect/decal/remains/human,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/under/ms13/wasteland/combat,
+/obj/item/clothing/suit/ms13/ljacket/military,
+/obj/item/clothing/head/bandana,
+/obj/item/kitchen/knife/hunting,
+/obj/item/paper{
+	info = "Keep you waiting, huh?";
+	name = "Codec print"
+	},
+/obj/structure/closet/cardboard,
+/obj/item/taperecorder/empty,
+/turf/open/floor/plasteel/ms13/metal/rust/alt,
+/area/ms13/sunny_dale)
 "pbZ" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/openspace/ms13_no_build,
@@ -24047,7 +24128,7 @@
 /area/ms13/sunny_dale)
 "pfD" = (
 /obj/structure/ms13/storage/large/shelf,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "pfS" = (
 /obj/effect/decal/cleanable/ash,
@@ -24424,9 +24505,11 @@
 /turf/open/floor/plasteel/ms13/tile,
 /area/ms13/underground/megabunker/upper)
 "psI" = (
-/obj/structure/chair/ms13/metal/broken,
-/turf/open/floor/plasteel/ms13/metal,
-/area/ms13/underground/sewer)
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/rust,
+/area/ms13/underground/subway)
 "pta" = (
 /obj/structure/noticeboard,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
@@ -24474,7 +24557,7 @@
 	dir = 5
 	},
 /obj/structure/table/ms13/metal,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "puz" = (
 /obj/structure/table/wood,
@@ -24504,7 +24587,7 @@
 "puJ" = (
 /obj/structure/fence/fencenormal,
 /obj/structure/cable,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "puP" = (
 /obj/effect/turf_decal/stripes/line{
@@ -24588,6 +24671,13 @@
 /obj/structure/chair/sofa/corp/right,
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/underground/underground_town)
+"pxo" = (
+/obj/structure/table/ms13/metal,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 9
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust,
+/area/ms13/underground/sewer)
 "pxp" = (
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/roof,
@@ -24608,7 +24698,7 @@
 	pixel_x = 6;
 	pixel_y = 14
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "pxQ" = (
 /turf/open/floor/plasteel/ms13/metal/border/corner{
@@ -24730,7 +24820,7 @@
 /obj/effect/decal/cleanable/blood/drip{
 	pixel_y = 21
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "pBV" = (
 /obj/machinery/door/unpowered/wooddoor,
@@ -24755,6 +24845,10 @@
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/plasteel/vaporwave,
 /area/ms13/sunny_dale)
+"pCp" = (
+/obj/machinery/door/unpowered/wooddoor,
+/turf/open/floor/plasteel/ms13/metal,
+/area/ms13/underground/sewer)
 "pCy" = (
 /obj/item/storage/toolbox/mechanical,
 /obj/structure/table/ms13,
@@ -24845,7 +24939,12 @@
 /area/ms13/ncr_main)
 "pGK" = (
 /obj/machinery/blackbox_recorder,
-/turf/open/floor/plasteel/ms13/metal,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/rust{
+	dir = 4
+	},
 /area/ms13/underground/sewer)
 "pGQ" = (
 /obj/structure/chair/ms13/wood/padded{
@@ -24886,7 +24985,7 @@
 "pHV" = (
 /obj/structure/rack,
 /obj/item/weldingtool,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "pIb" = (
 /obj/structure/bed/ms13/sleepingbag/red,
@@ -25126,7 +25225,7 @@
 	dir = 9
 	},
 /obj/structure/table/ms13/metal,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "pOC" = (
 /obj/item/ammo_casing/spent,
@@ -25607,7 +25706,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "qeg" = (
 /obj/structure/table/wood,
@@ -25720,7 +25819,7 @@
 /obj/structure/rack,
 /obj/item/wrench,
 /obj/item/crowbar/red,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "qhG" = (
 /obj/structure/railing{
@@ -26141,7 +26240,7 @@
 /obj/effect/decal/cleanable/blood/old{
 	pixel_x = 10
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "qwk" = (
 /obj/structure/chair/pew/left{
@@ -26217,7 +26316,7 @@
 /area/ms13)
 "qzg" = (
 /obj/structure/closet/secure_closet/freezer/fridge/open,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "qzn" = (
 /obj/structure/lattice/catwalk,
@@ -27377,7 +27476,7 @@
 /area/ms13/ncr_main)
 "red" = (
 /obj/structure/rack,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "rej" = (
 /obj/structure/railing{
@@ -28119,7 +28218,7 @@
 	pixel_x = 9;
 	pixel_y = 14
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "rwo" = (
 /obj/structure/stairs/south,
@@ -28186,7 +28285,7 @@
 /area/ms13/sunny_dale)
 "ryb" = (
 /obj/structure/janitorialcart,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "ryu" = (
 /obj/machinery/light/small{
@@ -28222,7 +28321,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "rzx" = (
 /obj/machinery/light/small/broken{
@@ -28488,7 +28587,7 @@
 /area/ms13)
 "rJv" = (
 /obj/structure/closet/crate/ms13/vault_tec/long,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "rJx" = (
 /obj/effect/turf_decal/stripes/white/end{
@@ -28516,6 +28615,12 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
+"rKz" = (
+/obj/structure/chair/ms13/metal{
+	dir = 1
+	},
+/turf/open/floor/plasteel/ms13/metal/rust,
+/area/ms13/sunny_dale)
 "rKJ" = (
 /obj/effect/landmark/start/ms13/trooper,
 /turf/open/floor/wood/ms13/carpet/blue,
@@ -28927,7 +29032,7 @@
 /area/ms13/underground/tunnel/maintenance)
 "rXP" = (
 /obj/structure/closet/wardrobe,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "rXU" = (
 /obj/structure/bed/ms13/bedframe/metal,
@@ -30376,7 +30481,7 @@
 "sTd" = (
 /obj/structure/table/ms13/metal,
 /obj/item/papercutter,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "sTl" = (
 /obj/machinery/light/small{
@@ -30397,7 +30502,7 @@
 /area/ms13/supermarket/basement)
 "sTE" = (
 /obj/structure/table/ms13/metal,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "sUj" = (
 /obj/structure/chair/sofa/left{
@@ -30715,7 +30820,10 @@
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "teN" = (
-/turf/open/floor/plasteel/ms13/metal,
+/obj/structure/ms13/storage/large/shelf{
+	dir = 8
+	},
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "teU" = (
 /obj/structure/table/wood,
@@ -31246,7 +31354,9 @@
 /obj/structure/fluff/paper/stack{
 	dir = 1
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/grate/border{
+	dir = 8
+	},
 /area/ms13/underground/sewer)
 "twu" = (
 /obj/structure/bed/ms13/sleepingbag/green,
@@ -31269,7 +31379,7 @@
 /obj/item/paper_bin{
 	pixel_y = 4
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "txm" = (
 /obj/structure/barricade/sandbags,
@@ -32883,7 +32993,7 @@
 "uvL" = (
 /obj/structure/table/ms13/metal,
 /obj/item/book,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "uvT" = (
 /obj/machinery/light/dim{
@@ -33115,7 +33225,7 @@
 /area/ms13/ncr_main)
 "uDb" = (
 /obj/structure/stairs/east,
-/turf/open/space/basic,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "uDf" = (
 /obj/structure/table/low_wall/brick,
@@ -34004,7 +34114,7 @@
 	dir = 4
 	},
 /obj/structure/table/ms13/metal,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "vjO" = (
 /obj/structure/curtain,
@@ -34311,7 +34421,7 @@
 /area/ms13/sunny_dale)
 "vvk" = (
 /obj/structure/chair/pew,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "vvp" = (
 /obj/machinery/light{
@@ -34392,7 +34502,7 @@
 /area/ms13/sunny_dale)
 "vyN" = (
 /obj/item/trash/can/food/beans,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "vzm" = (
 /obj/machinery/light/small/broken{
@@ -34475,7 +34585,7 @@
 /area/ms13)
 "vCi" = (
 /obj/item/reagent_containers/glass/bucket/wooden,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "vCk" = (
 /obj/effect/turf_decal/mining,
@@ -35015,7 +35125,7 @@
 	pixel_x = -3;
 	pixel_y = 5
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "vSQ" = (
 /obj/structure/fence/fencedoorside,
@@ -35309,9 +35419,13 @@
 /turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/tunnel/maintenance)
 "wbC" = (
-/obj/structure/ms13/storage/large/shelf,
-/turf/open/floor/plasteel/ms13/metal,
-/area/ms13/underground/sewer)
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 10
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust{
+	dir = 4
+	},
+/area/ms13/underground/subway)
 "wbP" = (
 /obj/structure/closet/crate/ms13/footlocker,
 /obj/item/clothing/shoes/winterboots,
@@ -35457,7 +35571,7 @@
 /obj/item/paper_bin{
 	pixel_y = 7
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "wgf" = (
 /obj/structure/toilet{
@@ -35711,7 +35825,7 @@
 /obj/structure/chair/ms13/metal/broken{
 	dir = 1
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "wny" = (
 /obj/structure/chair/ms13/metal/folding,
@@ -35729,7 +35843,12 @@
 /obj/structure/closet,
 /obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgrey,
 /obj/item/storage/belt/utility,
-/turf/open/floor/plasteel/ms13/metal/warning,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/rust{
+	dir = 4
+	},
 /area/ms13/underground/sewer)
 "wnK" = (
 /obj/structure/lattice/catwalk,
@@ -35851,7 +35970,9 @@
 "wsh" = (
 /obj/structure/table/ms13/metal,
 /obj/item/stack/cable_coil/five,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/grate/border{
+	dir = 8
+	},
 /area/ms13/underground/sewer)
 "wsi" = (
 /obj/structure/railing{
@@ -35925,7 +36046,7 @@
 /obj/structure/ms13/bars/rusty{
 	dir = 8
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "wui" = (
 /obj/structure/toilet{
@@ -35986,7 +36107,12 @@
 /area/ms13/sunny_dale)
 "wvu" = (
 /obj/structure/filingcabinet/chestdrawer,
-/turf/open/floor/plasteel/ms13/metal/warning,
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 10
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust{
+	dir = 4
+	},
 /area/ms13/underground/sewer)
 "wvA" = (
 /obj/machinery/vending/robotics,
@@ -36073,7 +36199,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/whiskey{
 	pixel_y = 10
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/sewer)
 "wxd" = (
 /obj/structure/table/ms13/metal,
@@ -36243,10 +36369,11 @@
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
 "wBD" = (
-/obj/structure/window/fulltile/ms13/glass,
-/obj/structure/table/low_wall/brick/alt,
-/turf/open/floor/wood/ms13,
-/area/ms13/sunny_dale)
+/obj/effect/turf_decal/trimline/yellow/line,
+/turf/open/floor/plasteel/ms13/metal/walkway/rust{
+	dir = 4
+	},
+/area/ms13/underground/subway)
 "wBP" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -36300,7 +36427,7 @@
 "wDO" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/mechanical,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "wEc" = (
 /obj/structure/railing/corner{
@@ -36310,12 +36437,16 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "wEq" = (
-/obj/machinery/door/unpowered/wooddoor,
-/turf/open/floor/wood/ms13,
-/area/ms13/sunny_dale)
+/obj/effect/turf_decal/trimline/yellow/line{
+	dir = 6
+	},
+/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust{
+	dir = 8
+	},
+/area/ms13/underground/subway)
 "wEs" = (
 /obj/structure/stairs/east,
-/turf/open/space/basic,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/supermarket/basement)
 "wEx" = (
 /obj/structure/chair/ms13/wood/padded{
@@ -36569,7 +36700,7 @@
 	pixel_x = -7;
 	pixel_y = 11
 	},
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "wMu" = (
 /obj/structure/stairs/south,
@@ -36881,7 +37012,10 @@
 "wWo" = (
 /obj/structure/table/ms13/metal,
 /obj/item/folder/yellow,
-/turf/open/floor/plasteel/ms13/metal,
+/obj/effect/turf_decal/trimline/yellow/line,
+/turf/open/floor/plasteel/ms13/metal/walkway/rust{
+	dir = 4
+	},
 /area/ms13/underground/sewer)
 "wWt" = (
 /obj/structure/dresser/ms13/orange,
@@ -36993,7 +37127,7 @@
 "wYP" = (
 /obj/structure/table/ms13/metal,
 /obj/item/clothing/head/collectable/welding,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "wZd" = (
 /obj/effect/turf_decal/stripes{
@@ -37461,7 +37595,7 @@
 "xoN" = (
 /obj/structure/table/ms13/metal,
 /obj/item/storage/box/handcuffs,
-/turf/open/floor/plasteel/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "xoO" = (
 /obj/structure/chair/stool,
@@ -37502,6 +37636,11 @@
 "xpF" = (
 /turf/open/floor/wood/ms13/wide,
 /area/ms13/supermarket)
+"xpS" = (
+/obj/structure/rack,
+/obj/item/wrench,
+/turf/open/floor/plasteel/ms13/metal/rust,
+/area/ms13/underground/subway)
 "xpX" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -37909,6 +38048,12 @@
 /obj/structure/bed/ms13/sleepingbag/green,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/wood/ms13/common,
+/area/ms13/sunny_dale)
+"xCr" = (
+/obj/structure/table/ms13/metal,
+/obj/item/paper_bin,
+/obj/item/pen,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/sunny_dale)
 "xCE" = (
 /obj/structure/closet/crate/ms13/footlocker{
@@ -38598,7 +38743,7 @@
 "xXy" = (
 /obj/structure/closet,
 /obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgrey,
-/turf/open/floor/plasteel/ms13/metal/warning,
+/turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "xXC" = (
 /obj/structure/toilet{
@@ -39036,7 +39181,7 @@
 /area/ms13/sunny_dale)
 "yiH" = (
 /obj/structure/closet/crate/bin,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/subway)
 "yiO" = (
 /obj/machinery/door/unpowered/wooddoor,
@@ -54947,7 +55092,7 @@ afK
 afK
 afK
 afK
-eFc
+bdZ
 wVR
 afK
 afK
@@ -55247,7 +55392,7 @@ abK
 abK
 afK
 afK
-eFc
+bdZ
 gri
 abE
 abK
@@ -55851,7 +55996,7 @@ abK
 abK
 wVR
 afK
-eFc
+bdZ
 ulT
 ulT
 wVR
@@ -62224,7 +62369,7 @@ yfE
 ftw
 bUt
 bUt
-fyR
+jAT
 bUt
 bUt
 gnh
@@ -67687,7 +67832,7 @@ bDk
 fXE
 hex
 rbd
-opG
+jAT
 aBw
 aBw
 tJn
@@ -68892,7 +69037,7 @@ bUt
 bUt
 bUt
 bUt
-fyR
+cPp
 bUt
 bUt
 bUt
@@ -69405,8 +69550,8 @@ bUt
 bUt
 bUt
 bUt
-ebB
-cFp
+aBw
+fjv
 bUt
 hCG
 fXE
@@ -69704,11 +69849,11 @@ afK
 afK
 afK
 bUt
+gld
+ebB
+fvv
+fvv
 ehZ
-ebB
-ebB
-ebB
-ebB
 bUt
 hCG
 fXE
@@ -70007,10 +70152,10 @@ afK
 afK
 bUt
 dSb
-ebB
+eZJ
 mmW
 wsh
-ebB
+jys
 xXa
 hCG
 fXE
@@ -70031,7 +70176,7 @@ txz
 txz
 txz
 txz
-afK
+txz
 afK
 afK
 afK
@@ -70309,10 +70454,10 @@ afK
 afK
 bUt
 aYi
-ebB
-ebB
-ebB
-ebB
+gvO
+fKH
+fKH
+eHd
 bUt
 hCG
 fXE
@@ -70326,13 +70471,13 @@ cjD
 cjD
 cjD
 aLq
-aLq
 txz
+aOW
 teN
-lLR
+xXy
 mNe
 xXy
-teN
+xpS
 txz
 afK
 afK
@@ -70612,8 +70757,8 @@ afK
 bUt
 bUt
 qhF
-ebB
-ebB
+aBw
+aBw
 nZh
 bUt
 hCG
@@ -70628,13 +70773,13 @@ cjD
 cjD
 cjD
 aLq
-aLq
 txz
-teN
-teN
-teN
-teN
-jrR
+aOW
+iBb
+kXT
+kXT
+wbC
+mqy
 txz
 afK
 afK
@@ -70914,8 +71059,8 @@ afK
 afK
 bUt
 pHV
-ebB
-ebB
+aBw
+aBw
 lfO
 bUt
 hCG
@@ -70930,12 +71075,12 @@ cjD
 cjD
 cjD
 aLq
-aLq
+fyR
 aOW
-teN
-teN
-teN
-teN
+iGm
+nJZ
+nJZ
+wBD
 wYP
 txz
 txz
@@ -71217,7 +71362,7 @@ afK
 bUt
 bUt
 bUt
-eKQ
+kYv
 bUt
 bUt
 hCG
@@ -71232,12 +71377,12 @@ cjD
 cjD
 cjD
 aLq
-aLq
 txz
-teN
-teN
-teN
-teN
+aOW
+jVK
+psI
+psI
+wEq
 lJx
 txz
 vCi
@@ -71518,9 +71663,9 @@ afK
 afK
 afK
 bUt
-ebB
-ebB
-ebB
+aBw
+aBw
+aBw
 bUt
 hCG
 fXE
@@ -71534,19 +71679,19 @@ cjD
 cjD
 cjD
 aLq
-aLq
 txz
+aOW
 teN
-lLR
-teN
-teN
+aOW
+aOW
+aOW
 wDO
 txz
 chs
-teN
+aOW
 eTD
-teN
-teN
+aOW
+aOW
 rJv
 cqO
 txz
@@ -71820,7 +71965,7 @@ afK
 afK
 afK
 bUt
-psI
+gsk
 oPs
 wno
 bUt
@@ -71841,14 +71986,14 @@ txz
 txz
 txz
 wud
-teN
+aOW
 txz
 txz
 txz
 txz
 txz
 pfD
-teN
+aOW
 vyN
 mqy
 txz
@@ -72142,15 +72287,15 @@ afK
 afK
 afK
 txz
-teN
-teN
+aOW
+aOW
 lwC
-teN
-teN
-teN
+aOW
+aOW
+aOW
 txz
-teN
-teN
+aOW
+aOW
 ark
 red
 txz
@@ -72444,16 +72589,16 @@ afK
 afK
 wVR
 txz
-teN
-teN
+aOW
+aOW
 fDl
-teN
+aOW
 glK
-teN
+aOW
 etj
-teN
-teN
-teN
+aOW
+aOW
+aOW
 vyN
 txz
 afK
@@ -72746,15 +72891,15 @@ afK
 afK
 wVR
 kuP
-teN
-teN
+aOW
+aOW
 txz
 txz
 txz
 txz
 txz
 wMq
-teN
+aOW
 juQ
 red
 txz
@@ -73048,8 +73193,8 @@ afK
 afK
 wVR
 kuP
-teN
-teN
+aOW
+aOW
 txz
 afK
 afK
@@ -73350,8 +73495,8 @@ afK
 afK
 wVR
 kuP
-teN
-teN
+aOW
+aOW
 txz
 afK
 afK
@@ -73652,8 +73797,8 @@ afK
 afK
 wVR
 txz
-teN
-teN
+aOW
+aOW
 txz
 afK
 afK
@@ -73954,8 +74099,8 @@ afK
 afK
 afK
 txz
-teN
-teN
+aOW
+aOW
 txz
 afK
 afK
@@ -74113,8 +74258,8 @@ vsM
 afK
 vwV
 joV
-jVK
-jVK
+iIA
+iIA
 kwl
 lig
 vwV
@@ -74257,7 +74402,7 @@ txz
 txz
 txz
 wud
-teN
+aOW
 txz
 afK
 afK
@@ -74415,8 +74560,8 @@ vsM
 afK
 vwV
 jAP
-jVK
-jVK
+iIA
+iIA
 kwl
 lig
 vwV
@@ -74558,8 +74703,8 @@ afK
 txz
 lkr
 bgn
-teN
-teN
+aOW
+aOW
 txz
 afK
 afK
@@ -74860,8 +75005,8 @@ afK
 txz
 ejW
 wsB
-teN
-teN
+aOW
+aOW
 txz
 afK
 afK
@@ -75162,7 +75307,7 @@ afK
 txz
 lkr
 bgn
-teN
+aOW
 red
 txz
 afK
@@ -77447,7 +77592,7 @@ vsM
 vsM
 vsM
 vsM
-xXa
+kYv
 vsM
 vsM
 vsM
@@ -78047,13 +78192,13 @@ afK
 afK
 vsM
 oJk
-ebB
-eKQ
-ebB
-ebB
+aBw
+kYv
+aBw
+eZJ
 jhO
-ebB
-ebB
+jys
+aBw
 vsM
 afK
 afK
@@ -78351,11 +78496,11 @@ vsM
 vsM
 vsM
 vsM
-ebB
-ebB
+aBw
+eZJ
 jhO
-ebB
-ebB
+jys
+aBw
 vsM
 afK
 afK
@@ -78653,11 +78798,11 @@ afK
 afK
 afK
 vsM
-ebB
+aBw
 cFp
-jhO
-ebB
-cFp
+fKH
+eHd
+fjv
 vsM
 afK
 afK
@@ -78680,10 +78825,10 @@ afK
 afK
 jIO
 nGY
-nJZ
+oAN
 jIO
-nzu
-tzj
+aEV
+iGU
 pMV
 qJs
 jIO
@@ -78981,11 +79126,11 @@ jIO
 jIO
 jIO
 jIO
-nzu
-nzu
-oXT
-nzu
-qSe
+aEV
+aEV
+uVJ
+aEV
+iHR
 pOg
 qWN
 jIO
@@ -79283,10 +79428,10 @@ tXn
 kST
 lSQ
 jIO
-kTJ
-nzu
+rUd
+aEV
 jIO
-nzu
+aEV
 puJ
 qvo
 rew
@@ -79585,8 +79730,8 @@ koI
 koI
 koI
 jIO
-nzu
-nzu
+aEV
+aEV
 jIO
 jIO
 jIO
@@ -79887,12 +80032,12 @@ mtq
 koI
 mtq
 jIO
-oXT
+uVJ
 jIO
 jIO
 ocC
-aLJ
-nzu
+hUz
+anJ
 jIO
 afK
 afK
@@ -80185,13 +80330,13 @@ jIO
 lSQ
 koI
 rMq
-nzu
-nzu
-nzu
-nzu
-nzu
-nzu
-oXT
+aEV
+aEV
+anJ
+aEV
+aEV
+anJ
+uVJ
 ovt
 pxK
 qwf
@@ -80487,16 +80632,16 @@ jIO
 koI
 koI
 icE
-nzu
-nzu
-nzu
-nzu
-nzu
-nzu
+aEV
+aEV
+aEV
+aEV
+aEV
+aEV
 jIO
 ovv
 pBM
-nzu
+anJ
 jIO
 afK
 afK
@@ -80789,12 +80934,12 @@ jIO
 tXn
 ktM
 rMq
-nzu
-nzu
-nzu
-nzu
-nzu
-kkK
+aEV
+aEV
+aEV
+aEV
+aEV
+ecB
 jIO
 jIO
 jIO
@@ -81091,12 +81236,12 @@ jIO
 jIO
 jIO
 jIO
-nzu
-nzu
-nzu
-nzu
-nzu
-nzu
+aEV
+aEV
+anJ
+aEV
+aEV
+anJ
 obe
 oES
 pKc
@@ -81393,12 +81538,12 @@ jIO
 lSQ
 koI
 rMq
-nzu
-nzu
+aEV
+aEV
 mDx
 nwn
-nzu
-nzu
+aEV
+aEV
 oWc
 peb
 koI
@@ -81695,12 +81840,12 @@ jIO
 hTz
 koI
 icE
-nzu
-nzu
+aEV
+aEV
 nho
-gJy
-nzu
-nzu
+rKz
+aEV
+aEV
 obe
 koI
 koI
@@ -81997,12 +82142,12 @@ jIO
 tXn
 koI
 rMq
-nzu
-nzu
-vnN
+aEV
+aEV
+xCr
 nGI
-nzu
-nzu
+aEV
+aEV
 oWc
 koI
 peb
@@ -82299,12 +82444,12 @@ jIO
 jIO
 jIO
 jIO
-nzu
-nzu
-nzu
-nzu
-nzu
-nzu
+aEV
+aEV
+anJ
+aEV
+aEV
+anJ
 obe
 pla
 pLs
@@ -82601,12 +82746,12 @@ jIO
 lSQ
 kST
 rMq
-nzu
-nzu
-nzu
-nzu
-nzu
-kkK
+aEV
+aEV
+aEV
+aEV
+aEV
+ecB
 jIO
 jIO
 jIO
@@ -82903,12 +83048,12 @@ jIO
 koI
 koI
 icE
-nzu
-nzu
-nzu
-nzu
-nzu
-nzu
+aEV
+aEV
+aEV
+aEV
+aEV
+aEV
 jIO
 iAB
 iAB
@@ -83205,16 +83350,16 @@ jIO
 tXn
 koI
 rMq
-nzu
-nzu
-nzu
-nzu
-nzu
-nzu
-oXT
-nzu
-nzu
-nzu
+aEV
+aEV
+anJ
+aEV
+aEV
+anJ
+uVJ
+aEV
+aEV
+aEV
 xoN
 jIO
 afK
@@ -83514,10 +83659,10 @@ jIO
 oXT
 jIO
 jIO
-kTJ
-nzu
-nzu
-quB
+rUd
+aEV
+aEV
+lqe
 jIO
 afK
 vsM
@@ -83813,8 +83958,8 @@ koI
 koI
 koI
 jIO
-nzu
-nzu
+aEV
+aEV
 jIO
 iAB
 iAB
@@ -83985,7 +84130,7 @@ afK
 afK
 afK
 jIO
-csH
+sFo
 rty
 oBk
 oPK
@@ -84115,8 +84260,8 @@ tXn
 ktM
 nkg
 jIO
-kTJ
-nzu
+rUd
+aEV
 jIO
 jIO
 jIO
@@ -84891,7 +85036,7 @@ afK
 afK
 afK
 jIO
-csH
+sFo
 rty
 rty
 tCN
@@ -85220,7 +85365,7 @@ kha
 kha
 kha
 aEV
-kXT
+aCA
 jIO
 afK
 afK
@@ -85592,7 +85737,7 @@ vsM
 vsM
 vsM
 dwS
-wno
+hrs
 iMp
 wvu
 vsM
@@ -85888,14 +86033,14 @@ fXE
 fXE
 vFt
 vsM
-ebB
-ebB
-ebB
-ebB
+aBw
+aBw
+aBw
+aBw
 vsM
 pGK
 tws
-ebB
+dKv
 wWo
 vsM
 afK
@@ -86190,15 +86335,15 @@ fXE
 fXE
 vFt
 kYv
-ebB
-ebB
-ebB
-ebB
-eKQ
-ebB
+aBw
+aBw
+aBw
+aBw
+kYv
+gvO
 fna
-ebB
-wvu
+fKH
+jMT
 vsM
 afK
 afK
@@ -86493,7 +86638,7 @@ fXE
 vFt
 vsM
 vsM
-kYv
+pCp
 vsM
 vsM
 vsM
@@ -89815,7 +89960,7 @@ fXE
 vFt
 vsM
 vsM
-kYv
+pCp
 vsM
 vsM
 vsM
@@ -90117,8 +90262,8 @@ fXE
 vFt
 vsM
 aYi
-ebB
-ebB
+aBw
+aBw
 vsM
 afK
 afK
@@ -90419,8 +90564,8 @@ fXE
 vFt
 vsM
 jZZ
-ebB
-ebB
+aBw
+aBw
 vsM
 afK
 afK
@@ -90720,9 +90865,9 @@ fXE
 fXE
 vFt
 vsM
-ehZ
-ebB
-lfO
+gld
+aBw
+kHr
 vsM
 afK
 afK
@@ -98823,11 +98968,11 @@ afK
 afK
 afK
 afK
-abK
 vsM
-wbC
-ebB
-lGx
+vsM
+aBw
+fjv
+tuV
 lGx
 vsM
 vFt
@@ -99126,11 +99271,11 @@ afK
 afK
 afK
 vsM
-vsM
-ebB
-ebB
-ebB
-ebB
+pxo
+fvv
+fvv
+fvv
+fvv
 vsM
 vFt
 fXE
@@ -99433,7 +99578,7 @@ dKv
 dKv
 dKv
 dKv
-xXa
+kYv
 vFt
 fXE
 fXE
@@ -99730,11 +99875,11 @@ afK
 afK
 afK
 vsM
-dSb
-ebB
-ebB
-ebB
-ebB
+bqn
+fKH
+fKH
+fKH
+fKH
 vsM
 vFt
 fXE
@@ -100032,11 +100177,11 @@ afK
 afK
 afK
 vsM
-fEZ
-ebB
-ebB
-ebB
-ebB
+izi
+aBw
+aBw
+aBw
+aBw
 vsM
 vFt
 fXE
@@ -100337,7 +100482,7 @@ vsM
 vsM
 vsM
 vsM
-eKQ
+kYv
 vsM
 vsM
 vFt
@@ -100540,7 +100685,7 @@ tVA
 jfc
 jfc
 pJm
-gpS
+pbR
 aCA
 gpS
 iGU
@@ -100639,8 +100784,8 @@ abK
 abK
 abK
 vsM
-ebB
-ebB
+aBw
+aBw
 vsM
 vFt
 fXE
@@ -100657,7 +100802,7 @@ afK
 xsl
 xsl
 xsl
-eHd
+fUT
 xsl
 xsl
 xsl
@@ -100941,8 +101086,8 @@ abK
 abK
 abK
 vsM
-iGm
-iGm
+cVB
+cVB
 vsM
 vFt
 fXE
@@ -101575,7 +101720,7 @@ kWP
 isB
 ije
 rpQ
-iBb
+isB
 cfr
 xsl
 afK
@@ -143202,7 +143347,7 @@ jIO
 jIO
 jIO
 ftj
-wEq
+wSc
 ftj
 jIO
 jIO
@@ -145322,7 +145467,7 @@ rty
 rty
 jIO
 jIO
-wEq
+wSc
 jIO
 jIO
 uya
@@ -155269,7 +155414,7 @@ rty
 gYJ
 qUq
 tCV
-rUm
+eZG
 gqU
 uya
 aDo
@@ -162526,7 +162671,7 @@ kwJ
 aDo
 aDo
 uya
-wBD
+vjm
 dWR
 osB
 hkg
@@ -162828,7 +162973,7 @@ kwJ
 aDo
 aDo
 uya
-wBD
+vjm
 jSc
 jSc
 hkg
@@ -163130,7 +163275,7 @@ kwJ
 aDo
 aDo
 uya
-wBD
+vjm
 jHB
 kwu
 jIO
@@ -163734,7 +163879,7 @@ kwJ
 aDo
 aDo
 uya
-wBD
+vjm
 hoE
 qQf
 hkg
@@ -164036,7 +164181,7 @@ kwJ
 aDo
 aDo
 uya
-wBD
+vjm
 rKc
 jSc
 jSc
@@ -164338,7 +164483,7 @@ kwJ
 aDo
 aDo
 uya
-wBD
+vjm
 pbj
 jSc
 jSc
@@ -165546,7 +165691,7 @@ kwJ
 aDo
 aDo
 uya
-wEq
+maJ
 hkg
 hkg
 pSL
