@@ -18,10 +18,15 @@
 	desc = ""
 	icon = 'mojave/icons/turf/walls/rustmetal.dmi'
 
-/turf/closed/wall/ms13/wood //need
+/turf/closed/wall/ms13/wood
 	name = "wood wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/wood.dmi'
+
+/turf/closed/wall/ms13/wood/log
+	name = "log wall"
+	desc = ""
+	icon = 'mojave/icons/turf/walls/woodlog.dmi'
 
 /turf/closed/wall/ms13/scrap
 	name = "scrap wall"
