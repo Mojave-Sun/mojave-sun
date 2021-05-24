@@ -81,3 +81,8 @@
 	desc = ""
 	icon = 'mojave/icons/turf/walls/rrustmetal.dmi'
 	base_icon_state = "reinforced_rust_low"
+
+/obj/structure/table/low_wall/reinforced/metal
+	name = "low bunker wall"
+	desc = ""
+	icon = 'mojave/icons/turf/walls/bunker.dmi'
