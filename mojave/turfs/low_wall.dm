@@ -33,6 +33,10 @@
 	desc = ""
 	icon = 'mojave/icons/turf/walls/wood.dmi'
 
+/obj/structure/table/low_wall/wood
+	name = "low log wall"
+	icon = 'mojave/icons/turf/walls/woodlog.dmi'
+
 /obj/structure/table/low_wall/scrap
 	name = "low scrap wall"
 	desc = ""
@@ -81,3 +85,8 @@
 	desc = ""
 	icon = 'mojave/icons/turf/walls/rrustmetal.dmi'
 	base_icon_state = "reinforced_rust_low"
+
+/obj/structure/table/low_wall/reinforced/bunker
+	name = "low bunker wall"
+	desc = ""
+	icon = 'mojave/icons/turf/walls/bunker.dmi'
