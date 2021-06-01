@@ -25,7 +25,7 @@
 	name = "BoS"
 	flags_1 = NONE
 	requires_power = TRUE
-	icon_state = "nuke_storage"
+	icon_state = "brotherhood"
 
 /area/ms13/underground/mountain
 	name = "mountain"

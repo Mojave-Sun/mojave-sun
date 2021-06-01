@@ -14,6 +14,12 @@
 
 //signs/flags//
 
+/obj/structure/fluff/ms13/
+	name = "fluff ms13 basetype"
+	desc = "CALL A CODER. CALL A CODER. But not for me. :reachforthesky:"
+	icon = 'mojave/icons/structure/64x64_misc.dmi'
+	icon_state = "fluff"
+
 /obj/structure/fluff/ms13/mammoth_sign
 	name = "\improper Mammoth Lakes sign"
 	desc = "Welcome to Mammoth Lakes: the town where it's always winter!"
@@ -34,3 +40,17 @@
 	icon_state = "ncrflag"
 	pixel_x = -32
 	layer = ABOVE_ALL_MOB_LAYER
+
+////Interactive Fluff////
+
+/obj/structure/fluff/ms13/wartable
+	name = "holo-table"
+	desc = "A fancy high tech table, used to project plans up above its surface. Perfect for acting like you're a high ranking man who is very busy."
+	icon_state = "wartable_off"
+	var/on = FALSE
+
+/obj/structure/fluff/ms13/wartable/AltClick(mob/user)
+	. = ..()
+	on = !on
+	icon_state = "wartable_[on ? "on" : "off"]"
+

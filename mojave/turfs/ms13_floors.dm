@@ -354,3 +354,29 @@
 /turf/open/floor/plasteel/ms13/ceramic/sierra
 	icon_state = "sierra"
 	alternate_states = 3
+
+////Pipe Floors////
+
+/turf/open/floor/plasteel/ms13/metal/pipe
+	icon_state = "pipe_straight"
+
+/turf/open/floor/plasteel/ms13/metal/pipe/Entered(mob/living/M)
+	. = ..()
+
+	for(var/obj/structure/lattice/catwalk/C in get_turf(M))
+		return
+
+	if(!istype(M))
+		return
+
+	if(prob(30))
+		M.slip(5, M.loc, GALOSHES_DONT_HELP, 0, FALSE)
+		playsound(M, 'sound/effects/bang.ogg', 10, 1)
+		to_chat(usr, "<span class='warning'>You trip on the pipes!</span>")
+		return
+
+/turf/open/floor/plasteel/ms13/metal/pipe/corner
+	icon_state = "pipe_corner"
+
+/turf/open/floor/plasteel/ms13/metal/pipe/intersection
+	icon_state = "pipe_intersection"
