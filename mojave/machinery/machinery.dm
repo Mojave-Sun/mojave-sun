@@ -52,6 +52,7 @@
 /obj/machinery/ms13/wartable
 	name = "holo-table"
 	desc = "A fancy high tech table, used to project plans up above its surface. Perfect for acting like you're a high ranking man who is very busy."
+	icon = 'mojave/icons/structure/64x64_misc.dmi'
 	icon_state = "wartable_off"
 	layer = HIGH_OBJ_LAYER
 	density = 1

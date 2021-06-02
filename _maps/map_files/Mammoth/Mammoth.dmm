@@ -13812,11 +13812,9 @@
 /turf/open/floor/plasteel/ms13/metal,
 /area/ms13/underground/vault_atrium_Lower)
 "iBp" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/power/smes/magical,
-/turf/open/floor/plasteel/ms13/metal/rust,
+/obj/structure/cable,
+/obj/machinery/power/apc/unlocked/ms13/north,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/bos)
 "iBs" = (
 /obj/structure/toilet{
@@ -14588,9 +14586,8 @@
 /turf/open/openspace/ms13_no_build,
 /area/ms13/sunny_dale)
 "jbg" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/unlocked/ms13/north,
-/turf/open/floor/plasteel/ms13/metal/rust,
+/obj/machinery/power/smes/magical,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/bos)
 "jbr" = (
 /obj/effect/decal/cleanable/glass{
@@ -16409,10 +16406,7 @@
 /area/ms13/sunny_dale)
 "kfc" = (
 /obj/structure/cable,
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/turf/open/floor/plasteel/ms13/metal/rust,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/bos)
 "kfk" = (
 /obj/structure/table/ms13/metal,
@@ -17632,8 +17626,11 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/ms13)
 "kRQ" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
 /obj/structure/cable,
-/turf/open/floor/plasteel/ms13/metal/rust,
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/bos)
 "kRU" = (
 /obj/structure/table/ms13/metal,
@@ -99680,8 +99677,8 @@ iLT
 xgp
 xgp
 iLT
-cYp
-wUF
+jbg
+kRQ
 aId
 wUF
 wUF
@@ -100285,7 +100282,7 @@ xgp
 xgp
 iLT
 iLT
-kRQ
+xgp
 eca
 wUF
 wUF
@@ -100585,9 +100582,9 @@ vft
 xgp
 xgp
 iLT
-iLT
-jbg
-kRQ
+wUF
+wUF
+xgp
 aId
 wUF
 wUF
