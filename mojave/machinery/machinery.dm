@@ -46,3 +46,39 @@
 /obj/machinery/power/apc/unlocked/ms13/west
 	dir = WEST
 	pixel_x = -23
+
+////Fluff Machinery////
+
+/obj/machinery/ms13/wartable
+	name = "holo-table"
+	desc = "A fancy high tech table, used to project plans up above its surface. Perfect for acting like you're a high ranking man who is very busy."
+	icon_state = "wartable_off"
+	layer = HIGH_OBJ_LAYER
+	density = 1
+	bound_height = 64
+	bound_width = 64
+	light_color = "#50afee"
+	light_range = 4
+	light_power = 0.3
+	var/active = FALSE
+	var/datum/looping_sound/ms13/holotable/soundloop
+
+/obj/machinery/ms13/wartable/Initialize()
+	. = ..()
+	soundloop = new(list(src), active)
+
+/obj/machinery/ms13/wartable/Destroy()
+	QDEL_NULL(soundloop)
+	return ..()
+
+/obj/machinery/ms13/wartable/AltClick(mob/user)
+	. = ..()
+
+	if(active)
+		active = FALSE
+		icon_state = "wartable_off"
+		soundloop.stop()
+	else
+		active = TRUE
+		icon_state = "wartable_on"
+		soundloop.start()

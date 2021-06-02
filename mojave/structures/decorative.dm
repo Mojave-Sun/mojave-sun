@@ -18,7 +18,7 @@
 	name = "fluff ms13 basetype"
 	desc = "CALL A CODER. CALL A CODER. But not for me. :reachforthesky:"
 	icon = 'mojave/icons/structure/64x64_misc.dmi'
-	icon_state = "fluff"
+	icon_state = "base_class"
 
 /obj/structure/fluff/ms13/mammoth_sign
 	name = "\improper Mammoth Lakes sign"
@@ -40,17 +40,3 @@
 	icon_state = "ncrflag"
 	pixel_x = -32
 	layer = ABOVE_ALL_MOB_LAYER
-
-////Interactive Fluff////
-
-/obj/structure/fluff/ms13/wartable
-	name = "holo-table"
-	desc = "A fancy high tech table, used to project plans up above its surface. Perfect for acting like you're a high ranking man who is very busy."
-	icon_state = "wartable_on"
-	layer = HIGH_OBJ_LAYER
-	density = 1
-	bound_height = 64
-	bound_width = 64
-	light_color = "#50afee"
-	light_range = 4
-	light_power = 0.3
