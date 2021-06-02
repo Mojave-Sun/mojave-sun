@@ -115,7 +115,6 @@
 		spark_system.start()
 	..()
 
-
 //For now the t45 is just a new subtype
 /obj/item/clothing/head/helmet/space/hardsuit/power_armor/t45
 	name = "T45 Power Armor Helmet"
@@ -130,13 +129,17 @@
 	name = "T51 Power Armor Helmet"
 	desc = "A more advanced helmet for a more advanced piece of power armor."
 	armor = list(MELEE = 90, BULLET = 90, LASER = 90, ENERGY = 90, BOMB = 90, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
-	icon_state = "t51b_pa"
-	worn_icon_state = "t51b_pa"
+	icon = 'mojave/icons/mob/clothing/power_armor_5.dmi'
+	worn_icon = 'mojave/icons/mob/clothing/power_armor_5.dmi'
+	icon_state = "t51_helmet"
+	worn_icon_state = "t51_helmet"
 
 /obj/item/clothing/suit/space/hardsuit/power_armor/t51b
 	name = "T51B Power Armor Suit"
 	desc = "The last widely developed and distributed power armor prior to the nuclear winter, even after all of these years it still outperforms it's previous model iteration."
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/power_armor/t51b
 	armor = list(MELEE = 90, BULLET = 90, LASER = 90, ENERGY = 90, BOMB = 90, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
-	icon_state = "t51b-pa"
-	worn_icon_state = "t51b-pa"
+	icon = 'mojave/icons/mob/clothing/power_armor_5.dmi'
+	worn_icon = 'mojave/icons/mob/clothing/power_armor_5.dmi'
+	icon_state = "t51_armor"
+	worn_icon_state = "t51_armor"
