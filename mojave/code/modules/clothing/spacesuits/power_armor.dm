@@ -24,9 +24,9 @@
 /obj/item/clothing/suit/space/hardsuit/power_armor
 	name = "Generic Power Armor"
 	desc = "Don't ever use this in the video game please."
-	worn_icon = 'mojave/icons/mob/large-worn-icons/armor.dmi'
+	worn_icon = 'mojave/icons/mob/large-worn-icons/32x48/armor.dmi'
 	icon_state = "frame"
-	worn_icon = 'mojave/icons/mob/large-worn-icons/armor.dmi'
+	worn_icon = 'mojave/icons/mob/large-worn-icons/32x48/armor.dmi'
 	worn_icon_state = "frame"
 	density = TRUE //It's a suit of armor man
 	anchored = TRUE
@@ -143,7 +143,7 @@
 	desc = "The last widely developed and distributed power armor prior to the nuclear winter, even after all of these years it still outperforms it's previous model iteration."
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/power_armor/t51
 	armor = list(MELEE = 90, BULLET = 90, LASER = 90, ENERGY = 90, BOMB = 90, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
-	icon = 'mojave/icons/mob/large-worn-icons/armor.dmi'
-	worn_icon = 'mojave/icons/mob/large-worn-icons/armor.dmi'
+	icon = 'mojave/icons/mob/large-worn-icons/32x48/armor.dmi'
+	worn_icon = 'mojave/icons/mob/large-worn-icons/32x48/armor.dmi'
 	icon_state = "t51_armor"
 	worn_icon_state = "t51_armor"
