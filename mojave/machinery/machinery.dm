@@ -79,10 +79,8 @@
 		if(active)
 			active = FALSE
 			icon_state = "wartable_off"
-			set_light_on(FALSE)
 			soundloop.stop()
 		else
 			active = TRUE
 			icon_state = "wartable_on"
-			set_light_on(TRUE)
 			soundloop.start()
