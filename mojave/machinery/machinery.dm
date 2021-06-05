@@ -72,14 +72,17 @@
 	QDEL_NULL(soundloop)
 	return ..()
 
-/obj/machinery/ms13/wartable/AltClick(mob/user)
+/obj/machinery/ms13/wartable/attack_hand(mob/living/user)
 	. = ..()
 
-	if(active)
-		active = FALSE
-		icon_state = "wartable_off"
-		soundloop.stop()
-	else
-		active = TRUE
-		icon_state = "wartable_on"
-		soundloop.start()
+	if(user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY))
+		if(active)
+			active = FALSE
+			icon_state = "wartable_off"
+			set_light_on(FALSE)
+			soundloop.stop()
+		else
+			active = TRUE
+			icon_state = "wartable_on"
+			set_light_on(TRUE)
+			soundloop.start()
