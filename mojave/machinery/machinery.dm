@@ -40,7 +40,7 @@
 	pixel_y = -23
 
 /obj/machinery/power/apc/unlocked/ms13/east
-	dir =EAST
+	dir = EAST
 	pixel_x = 23
 
 /obj/machinery/power/apc/unlocked/ms13/west
@@ -75,7 +75,7 @@
 /obj/machinery/ms13/wartable/attack_hand(mob/living/user)
 	. = ..()
 
-	if(user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY))
+	if(user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY)) //Can only actually activate this from the base tile in the bottom left due to the size of it. :Thinking://
 		if(active)
 			active = FALSE
 			icon_state = "wartable_off"
