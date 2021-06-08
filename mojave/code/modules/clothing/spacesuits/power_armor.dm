@@ -11,8 +11,8 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 80, BOMB = 80, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
 	actions_types = null //No lights my dude, sorry
-	worn_x_dimension = 64
-	worn_y_dimension = 64
+	worn_x_dimension = 32
+	worn_y_dimension = 48
 	clothing_flags = LARGE_WORN_ICON
 
 //No touchy
@@ -35,6 +35,8 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 80, BOMB = 80, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
 	actions_types = null //No helmet toggle, sorry dude
+	worn_x_dimension = 32
+	worn_y_dimension = 20
 	helmettype = null //no helmet; default PA is frame = /obj/item/clothing/head/helmet/space/hardsuit/power_armor
 	var/original_pilot_footstep //Footsteps that the equipping pilot used to have, so we can replace the component's footsteps with a mecha move
 
@@ -61,7 +63,7 @@
 
 //No helmet toggles for now when helmet is up
 /obj/item/clothing/suit/space/hardsuit/power_armor/ToggleHelmet()
-	if(suittoggled)
+	if(suittoggled || (helmettype == null))
 		return
 	return ..()
 
