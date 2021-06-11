@@ -54,42 +54,6 @@
 	inhand_icon_state = "reinforcedleather"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 25, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 
-/obj/item/clothing/suit/armor/ms13/blastmaster
-	name = "blastmaster raider armor"
-	desc = "Crude raider armor most notable for utilizing a tire as the shoulder pad. Perhaps not the most effective, but it gets the job done."
-	icon_state = "blastmaster"
-	inhand_icon_state = "blastmaster"
-	armor = list(melee = 30, bullet = 25, laser = 5, energy = 5, bomb = 25, bio = 10, rad = 10, fire = 20, acid = 10)
-	flags_inv = HIDEJUMPSUIT
-
-/obj/item/clothing/suit/armor/ms13/yankee
-	name = "yankee raider armor"
-	desc = "A set of raider armor made from old football gear. Not too good at stopping bullets but great at stopping knives."
-	icon_state = "yankee"
-	inhand_icon_state = "yankee"
-	armor = list("melee" = 40, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
-
-/obj/item/clothing/suit/armor/ms13/sadist
-	name = "sadist raider armor"
-	desc = "Minimalist raider leather armor. Only for the truly sadistic."
-	icon_state = "sadist"
-	inhand_icon_state = "sadist"
-	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
-
-/obj/item/clothing/suit/armor/ms13/badlands
-	name = "badlands raider armor"
-	desc = "Raider armor for the badlands, complete with a fancy bandolier and light kevlar padding. Overall protection does leave something to be desired, however."
-	icon_state = "badlands"
-	inhand_icon_state = "badlands"
-	armor = list(melee = 20, bullet = 35, laser = 5, energy = 5, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
-
-/obj/item/clothing/suit/armor/ms13/painspike
-	name = "painspike raider armor"
-	desc = "Extra spiked and reinforced raider armor. Good for up close fighters and those looking to intimidate."
-	icon_state = "painspike"
-	inhand_icon_state = "painspike"
-	armor = list("melee" = 40, "bullet" = 20, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 15, "acid" = 10)
-
 /obj/item/clothing/suit/armor/ms13/vaultvan
 	name = "\improper Vault-tec van armor"
 	desc = "Makeshift armor scrounged together from, as one may expect, the old remains of a Vault-tec van. Being made almost entirely of metal does make it susceptible to laser and energy weapons, however."
@@ -140,17 +104,10 @@
 	icon_state = "vaultarmor"
 	armor = list(melee = 40, bullet = 10, laser = 15, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 20, acid = 5)
 
-/obj/item/clothing/suit/armor/ms13/vest/detective
-	name = "detective vest"
-	desc = "A bulletproof vest specifically meant for pre-war police detectives."
-	icon_state = "detective-armor"
-	inhand_icon_state = "detective-armor"
-	dog_fashion = null
-
 /obj/item/clothing/suit/ms13/trench/bossduster
 	name = "boss' duster"
 	desc = "A duster with a rather thick vest under it. This just SCREAMS authority. Could probably stop a few bullets."
-	icon_state = "armouredcourier"
+	icon_state = "armoredblacktrench"
 	inhand_icon_state = "det_suit"
 	blood_overlay_type = "armor"
 	armor = list(melee = 30, bullet = 30, laser = 10, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 20, acid = 5)
@@ -385,3 +342,10 @@
 	name = "\improper BoS combat armor"
 	desc = "A custom built suit of combat armor, designed to hold up to the rigors of the wasteland by the Brotherhood."
 	icon_state = "bos_combat"
+
+//new shit
+
+/obj/item/clothing/suit/armor/ms13/vest
+	name = "civilian vest"
+	desc = "A bulletproof civilian issue pre-war vest meant primarily for stopping small caliber guns."
+	icon_state = "armorvest"

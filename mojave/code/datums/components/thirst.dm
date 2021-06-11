@@ -2,23 +2,23 @@
 
 //Amount of seconds a unit of water will provide life for, modify this for balancing purposes
 //Influences amount of units consumed by this component alongside how much
-#define SECONDS_OF_LIFE_PER_WATER_U 24
+#define SECONDS_OF_LIFE_PER_WATER_U 60
 
 //List of stage of dehydration => examine/warning text
 GLOBAL_LIST_INIT(dehydration_stage_examine, list("<font color='green'>not dehydrated",
 												 "<font color='orange'>very slightly dehydrated",
-												 "<font color='red'>dehydrated",
+												 "<font color='orange'>dehydrated",
 												 "<font color='red'>very dehydrated",
-												 "<font color='black'>close to death from a lack of water"
+												 "<font color='red'>close to death from a lack of water"
 												))
 
 //List of stage of dehydration => typepath associated with alert to pop up
 GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
-												/atom/movable/screen/alert/not_thirsty,
-												/atom/movable/screen/alert/slight_thirst,
-												/atom/movable/screen/alert/thirsty,
-												/atom/movable/screen/alert/very_thirsty,
-												/atom/movable/screen/alert/dehydrated
+												/atom/movable/screen/alert/thirst/not_thirsty,
+												/atom/movable/screen/alert/thirst/slight_thirst,
+												/atom/movable/screen/alert/thirst/thirsty,
+												/atom/movable/screen/alert/thirst/very_thirsty,
+												/atom/movable/screen/alert/thirst/dehydrated
 												))
 
 /datum/component/thirst
@@ -29,8 +29,8 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 	var/list/stage_to_text //A list of messages to show on examine and when entering a new stage
 	var/list/stage_to_alert //What alert to pop up when reaching a certain stage, data stored as typepaths
 
-//900 being 15 minutes/900 seconds of starting water, thirst limit at 2400 is 40 minutes of living, 1u of water = 24 seconds of life, 1200 seconds/20 minutes = 50u or a flask
-/datum/component/thirst/Initialize(thirst_rate = -1, start_thirst = 900, thirst_limit = 2400, list/stage_flavor_text, list/stages_to_alerts)
+//3000 being 50 minutes/3000 seconds of starting water, thirst limit being the same thing
+/datum/component/thirst/Initialize(thirst_rate = -1, start_thirst = 3000, thirst_limit = 3000, list/stage_flavor_text, list/stages_to_alerts)
 	if(iscyborg(parent) || !isliving(parent))
 		return COMPONENT_INCOMPATIBLE
 	max_thirst = thirst_limit
@@ -77,12 +77,11 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 ///Modifies thirst by modify_by VIA = curr_thirst + modify_by, clamps value to max_thirst or 0
 /datum/component/thirst/proc/modify_thirst(modify_by = 0)
 	curr_thirst = clamp(curr_thirst + modify_by, 0, max_thirst)
-	//If thirst_limit is 2400, then 5 stages of dehydration means stage 2 is triggered at 720; stage 3 at 480; stage 4 at 240 etc. aiming for last stage to be at 0
-	if ((stage_of_dehydration != length(stage_to_text)) && ((curr_thirst <= ((length(stage_to_text) - (stage_of_dehydration + 1)) * ((max_thirst / 2) / length(stage_to_text))))))
+	if ((stage_of_dehydration != 5) && (curr_thirst < ((length(GLOB.dehydration_stage_examine) - (stage_of_dehydration)) * ((max_thirst / 2) / length(GLOB.dehydration_stage_examine)))))
 		modify_stage(modify_by = 1)
 
 	else
-		if((stage_of_dehydration != 1) && ((curr_thirst > ((length(stage_to_text) - (stage_of_dehydration)) * ((max_thirst / 2) / length(stage_to_text))))))
+		if((stage_of_dehydration != 1) && curr_thirst > ((length(GLOB.dehydration_stage_examine) - (stage_of_dehydration) + 1) * ((max_thirst / 2) / length(GLOB.dehydration_stage_examine))))
 			modify_stage(modify_by = -1)
 
 ///Modifies stage of dehydration VIA += while also displaying a message and a popup alert to the parent

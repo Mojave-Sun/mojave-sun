@@ -135,8 +135,8 @@
 /obj/item/ms13/crafting/gunpart/other
 	name = "shotgun barrel parts"
 	desc = "A set of various barrel parts for the creation of shotguns."
-	icon = 'mojave/icons/objects/items_and_weapons.dmi'
-	icon_state = "pipe"
+	icon = 'mojave/icons/objects/melee/melee_world.dmi'
+	icon_state = "lead_pipe_alt"
 
 /obj/item/ms13/crafting/Initialize()
 	. = ..()

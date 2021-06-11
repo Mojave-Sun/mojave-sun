@@ -39,6 +39,18 @@
 	fire_sound = 'mojave/sound/ms13weapons/gunsounds/caravan/caravan2.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+////////////////////////// revolvers////////////////
+/obj/item/gun/ballistic/revolver/ms13/derringer
+	name = "derringer"
+	desc = "A small and sneaky 2 shot pistol thats often concealed. This one's a bit fancy with some gold trim."
+	icon_state = "derringer"
+	inhand_icon_state = "derringer"
+	force = 5
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/ms13/derringer
+	fire_sound = 'mojave/sound/ms13weapons/22pistol.ogg'
+	w_class = WEIGHT_CLASS_SMALL
+	extra_damage = 25
+	extra_penetration = 5
 
 /obj/item/gun/ballistic/revolver/ms13/rev44
 	name = ".44 magnum revolver"
@@ -151,6 +163,12 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/ms13/buckshot
 	max_ammo = 1
 
+/obj/item/ammo_box/magazine/internal/shot/ms13/derringer
+	name = ".22 derringer internal tube"
+	ammo_type = /obj/item/ammo_casing/ms13/c22
+	caliber = ".22"
+	max_ammo = 2
+
 /obj/item/ammo_box/magazine/internal/cylinder/ms13/rev44
 	name = ".44 magnum cylinder"
 	ammo_type = /obj/item/ammo_casing/ms13/m44
@@ -186,6 +204,14 @@
 	max_ammo = 5
 
 //Loaders
+/obj/item/ammo_box/ms13/derringer22
+	name = ".22 Derringer speed loader"
+	icon = 'mojave/icons/objects/ammo.dmi'
+	icon_state = "derringer"
+	ammo_type = /obj/item/ammo_casing/ms13/c22
+	caliber = ".22"
+	max_ammo = 4
+
 /obj/item/ammo_box/ms13/rev4570
 	name = ".45-70 speed loader"
 	icon = 'mojave/icons/objects/ammo.dmi'

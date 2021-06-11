@@ -18,10 +18,15 @@
 	desc = ""
 	icon = 'mojave/icons/turf/walls/rustmetal.dmi'
 
-/turf/closed/wall/ms13/wood //need
+/turf/closed/wall/ms13/wood
 	name = "wood wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/wood.dmi'
+
+/turf/closed/wall/ms13/wood/log
+	name = "log wall"
+	desc = ""
+	icon = 'mojave/icons/turf/walls/woodlog.dmi'
 
 /turf/closed/wall/ms13/scrap
 	name = "scrap wall"
@@ -50,6 +55,9 @@
 /turf/closed/wall/ms13/brick/alt
 	icon = 'mojave/icons/turf/walls/brickalt.dmi'
 
+/turf/closed/wall/ms13/brick/gray
+	icon = 'mojave/icons/turf/walls/brickgray.dmi'
+
 /turf/closed/wall/r_wall/ms13
 	name = "base class wall"
 	desc = "AHHH FUCK A BASE CLASS WALL"
@@ -70,19 +78,17 @@
 	desc = ""
 	icon = 'mojave/icons/turf/walls/rrustmetal.dmi'
 
-/turf/closed/wall/r_wall/ms13/bunker //need
-	name = "bunker wall"
-	desc = ""
-	icon = 'mojave/icons/turf/walls/bunker.dmi'
-	icon_state = "bunker-0"
-	base_icon_state = "bunker"
-
 /turf/closed/wall/r_wall/ms13/concrete
 	name = "concrete wall"
 	icon = 'mojave/icons/turf/walls/concrete.dmi'
 
 /turf/closed/wall/r_wall/ms13/concrete/alt
 	icon = 'mojave/icons/turf/walls/concretealt.dmi'
+
+/turf/closed/wall/r_wall/ms13/bunker
+	name = "bunker wall"
+	desc = ""
+	icon = 'mojave/icons/turf/walls/bunker.dmi'
 
 /turf/closed/indestructible/ms13
 	layer = EDGED_TURF_LAYER
@@ -91,6 +97,16 @@
 	name = "metal wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/metal.dmi'
+	icon_state = "wall-0"
+	base_icon_state = "wall"
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL)
+	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL)
+
+/turf/closed/indestructible/ms13/comb
+	name = "comb wall"
+	desc = "honeybeast comb, lining the walls. They subtly drip a substance."
+	icon = 'mojave/icons/turf/walls/comb.dmi'
 	icon_state = "wall-0"
 	base_icon_state = "wall"
 	smoothing_flags = SMOOTH_BITMASK

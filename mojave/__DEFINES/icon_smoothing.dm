@@ -12,6 +12,13 @@
 #define SMOOTH_GROUP_MS13_ROAD S_OBJ_FO(9)			///turf/open/floor/plating/ground/road
 #define SMOOTH_GROUP_MS13_SIDEWALK S_OBJ_FO(10)			///turf/open/floor/plating/ground/sidewalk
 #define SMOOTH_GROUP_MS13_LOW_WALL S_OBJ_FO(11)			///obj/structure/table/low_wall
+#define SMOOTH_GROUP_MS13_CARPET_RED S_OBJ_FO(12)			////turf/open/floor/wood/ms13/carpet/infra/red
+#define SMOOTH_GROUP_MS13_CARPET_BLUE S_OBJ_FO(13)			////turf/open/floor/wood/ms13/carpet/infra/blue
+#define SMOOTH_GROUP_MS13_CARPET_GREEN S_OBJ_FO(14)			////turf/open/floor/wood/ms13/carpet/infra/green
+#define SMOOTH_GROUP_MS13_ROOF_NORMAL S_OBJ_FO(15)			////turf/open/floor/plating/roof
+#define SMOOTH_GROUP_MS13_ROOF_SHEET S_OBJ_FO(16)			////turf/open/floor/plating/roof/sheet
+#define SMOOTH_GROUP_MS13_ROOF_METAL S_OBJ_FO(17)			////turf/open/floor/plating/roof/metal
+#define SMOOTH_GROUP_MS13_ROOF_WOOD S_OBJ_FO(18)			////turf/open/floor/plating/roof/wood
 
 #define SMOOTH_GROUP_SOIL S_OBJ_FO(19)					///obj/machinery/hydroponics/ms13/soil
 #define SMOOTH_GROUP_MS13_TABLES S_OBJ_FO(20)			///obj/structure/table/ms13
