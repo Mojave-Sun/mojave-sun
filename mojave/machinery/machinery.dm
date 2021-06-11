@@ -61,26 +61,29 @@
 	light_color = "#50afee"
 	light_range = 4
 	light_power = 0.3
-	var/active = FALSE
+	light_on = FALSE
+	var/on = FALSE
 	var/datum/looping_sound/ms13/holotable/soundloop
 
 /obj/machinery/ms13/wartable/Initialize()
 	. = ..()
-	soundloop = new(list(src), active)
+	soundloop = new(list(src), on)
 
 /obj/machinery/ms13/wartable/Destroy()
+	. = ..()
 	QDEL_NULL(soundloop)
 	return ..()
 
 /obj/machinery/ms13/wartable/attack_hand(mob/living/user)
 	. = ..()
-
 	if(user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY)) //Can only actually activate this from the base tile in the bottom left due to the size of it. :Thinking://
-		if(active)
-			active = FALSE
+		if(on)
+			on = FALSE
 			icon_state = "wartable_off"
 			soundloop.stop()
 		else
-			active = TRUE
+			on = TRUE
 			icon_state = "wartable_on"
 			soundloop.start()
+		set_light_on(on)
+		update_light()
