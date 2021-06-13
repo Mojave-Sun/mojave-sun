@@ -362,10 +362,6 @@
 
 /turf/open/floor/plasteel/ms13/metal/pipe/Entered(mob/living/M)
 	. = ..()
-
-	for(var/obj/structure/lattice/catwalk/C in get_turf(M))
-		return
-
 	if(!istype(M))
 		return
 

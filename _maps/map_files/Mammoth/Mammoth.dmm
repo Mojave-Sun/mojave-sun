@@ -18462,6 +18462,10 @@
 /obj/structure/bed/ms13/mattress/stale,
 /turf/open/floor/plasteel/ms13/tile,
 /area/ms13/underground/megabunker/upper)
+"lrg" = (
+/obj/machinery/door/poddoor/shutters,
+/turf/closed/wall/r_wall/ms13/bunker,
+/area/ms13/underground/bos)
 "lrE" = (
 /obj/machinery/light/small,
 /obj/structure/sink/kitchen{
@@ -19072,7 +19076,9 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "lKX" = (
-/obj/machinery/door/poddoor/shutters,
+/obj/machinery/door/poddoor/shutters{
+	id = "BOSExterior"
+	},
 /turf/open/floor/plasteel/ms13/metal/stayclear,
 /area/ms13/underground/bos)
 "lLb" = (
@@ -23644,7 +23650,9 @@
 /turf/open/floor/wood/ms13/wide,
 /area/ms13/supermarket)
 "oRy" = (
-/obj/machinery/door/poddoor/shutters,
+/obj/machinery/door/poddoor/shutters{
+	id = "BOSExterior"
+	},
 /turf/open/floor/plasteel/ms13/metal/stayclear{
 	dir = 8
 	},
@@ -36300,6 +36308,22 @@
 /obj/structure/chair/comfy/ms13/armchair,
 /turf/open/floor/wood/ms13/common,
 /area/ms13/underground/mountain)
+"wHx" = (
+/obj/machinery/button{
+	id = "BOSExterior";
+	name = "exterior access";
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/obj/machinery/button{
+	id = "BOSInterior";
+	name = "interior access";
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/structure/table/ms13/metal,
+/turf/open/floor/plasteel/ms13/metal,
+/area/ms13/underground/bos)
 "wHz" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/effect/mapping_helpers/sunlight/roofSetter/mountain,
@@ -38960,7 +38984,9 @@
 /turf/open/floor/plating/ground/road,
 /area/ms13)
 "ykd" = (
-/obj/machinery/door/poddoor/shutters,
+/obj/machinery/door/poddoor/shutters{
+	id = "BOSInterior"
+	},
 /turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/bos)
 "ykm" = (
@@ -172951,7 +172977,7 @@ iLT
 xjj
 xjj
 iLT
-xjj
+jjI
 xjj
 xjj
 sQc
@@ -173253,7 +173279,7 @@ uIH
 xjj
 xjj
 iLT
-xjj
+wHx
 uBD
 xjj
 iLT
@@ -176574,7 +176600,7 @@ iLT
 xjj
 xjj
 iLT
-iLT
+lrg
 afK
 afK
 afK
@@ -177766,8 +177792,8 @@ vft
 iLT
 iLT
 iLT
-xjj
-xjj
+vft
+iLT
 iLT
 iLT
 iLT

@@ -58,6 +58,8 @@
 	density = 1
 	bound_height = 64
 	bound_width = 64
+	bound_x = 64
+	bound_y = 64
 	light_color = "#50afee"
 	light_range = 4
 	light_power = 0.3
@@ -70,7 +72,6 @@
 	soundloop = new(list(src), on)
 
 /obj/machinery/ms13/wartable/Destroy()
-	. = ..()
 	QDEL_NULL(soundloop)
 	return ..()
 
