@@ -16,6 +16,7 @@
 	actions_types = list(/datum/action/item_action/toggle)
 
 /obj/item/clothing/ms13/stealthboy/dropped(mob/user)
+	..()
 	if(stealthboy_on)
 		disrupt(user)
 
