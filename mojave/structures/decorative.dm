@@ -14,6 +14,12 @@
 
 //signs/flags//
 
+/obj/structure/fluff/ms13/
+	name = "fluff ms13 basetype"
+	desc = "CALL A CODER. CALL A CODER. But not for me. :reachforthesky:"
+	icon = 'mojave/icons/structure/64x64_misc.dmi'
+	icon_state = "base_class"
+
 /obj/structure/fluff/ms13/mammoth_sign
 	name = "\improper Mammoth Lakes sign"
 	desc = "Welcome to Mammoth Lakes: the town where it's always winter!"

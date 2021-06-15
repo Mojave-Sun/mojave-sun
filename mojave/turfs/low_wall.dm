@@ -33,7 +33,7 @@
 	desc = ""
 	icon = 'mojave/icons/turf/walls/wood.dmi'
 
-/obj/structure/table/low_wall/wood
+/obj/structure/table/low_wall/wood/log
 	name = "low log wall"
 	icon = 'mojave/icons/turf/walls/woodlog.dmi'
 

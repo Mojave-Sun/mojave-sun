@@ -2,17 +2,17 @@
 /obj/item/clothing/head/helmet/space/hardsuit/power_armor
 	name = "Generic Power Armor Helmet"
 	desc = "Don't ever use this in the video game please."
-	icon = 'mojave/icons/mob/clothing/head.dmi'
-	icon_state = "t45_pa"
-	worn_icon = 'mojave/icons/mob/large-worn-icons/64x64/head.dmi'
-	worn_icon_state = "t45_pa"
+	worn_icon = 'mojave/icons/mob/large-worn-icons/32x48/head.dmi'
+	icon_state = "null"
+	worn_icon = 'mojave/icons/mob/large-worn-icons/32x48/head.dmi'
+	worn_icon_state = "null"
 	strip_delay = 200
 	max_integrity = 500
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 80, BOMB = 80, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
 	actions_types = null //No lights my dude, sorry
-	worn_x_dimension = 64
-	worn_y_dimension = 64
+	worn_x_dimension = 32
+	worn_y_dimension = 48
 	clothing_flags = LARGE_WORN_ICON
 
 //No touchy
@@ -24,10 +24,10 @@
 /obj/item/clothing/suit/space/hardsuit/power_armor
 	name = "Generic Power Armor"
 	desc = "Don't ever use this in the video game please."
-	icon = 'mojave/icons/mob/clothing/suit.dmi'
-	icon_state = "t45-pa"
-	worn_icon = 'mojave/icons/mob/clothing/suit.dmi'
-	worn_icon_state = "t45-pa"
+	worn_icon = 'mojave/icons/mob/large-worn-icons/32x48/armor.dmi'
+	icon_state = "frame"
+	worn_icon = 'mojave/icons/mob/large-worn-icons/32x48/armor.dmi'
+	worn_icon_state = "frame"
 	density = TRUE //It's a suit of armor man
 	anchored = TRUE
 	strip_delay = 200
@@ -35,7 +35,9 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 80, BOMB = 80, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
 	actions_types = null //No helmet toggle, sorry dude
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/power_armor
+	worn_x_dimension = 32
+	worn_y_dimension = 20
+	helmettype = null //no helmet; default PA is frame = /obj/item/clothing/head/helmet/space/hardsuit/power_armor
 	var/original_pilot_footstep //Footsteps that the equipping pilot used to have, so we can replace the component's footsteps with a mecha move
 
 /obj/item/clothing/suit/space/hardsuit/power_armor/Initialize()
@@ -61,7 +63,7 @@
 
 //No helmet toggles for now when helmet is up
 /obj/item/clothing/suit/space/hardsuit/power_armor/ToggleHelmet()
-	if(suittoggled)
+	if(suittoggled || (helmettype == null))
 		return
 	return ..()
 
@@ -98,7 +100,8 @@
 	user.visible_message("<span class='warning'>[user] enters the [src]!</span>")
 	user.forceMove(get_turf(src))
 	user.equip_to_slot_if_possible(src, ITEM_SLOT_OCLOTHING)
-	ToggleHelmet()
+	if(helmettype)
+		ToggleHelmet()
 
 //Nevermind let's get out
 /obj/item/clothing/suit/space/hardsuit/power_armor/proc/GetOutside(mob/living/carbon/human/user)
@@ -115,6 +118,7 @@
 		spark_system.start()
 	..()
 
+/* t45 sprite unimpleneted
 
 //For now the t45 is just a new subtype
 /obj/item/clothing/head/helmet/space/hardsuit/power_armor/t45
@@ -125,18 +129,23 @@
 	name = "T45 Power Armor Suit"
 	desc = "Supposedly the first power armor to be deployed in the Great War. While it does have it's flaws, it still represents a very robust piece of armor that can withstand great punishment."
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/power_armor/t45
+*/
 
-/obj/item/clothing/head/helmet/space/hardsuit/power_armor/t51b
+/obj/item/clothing/head/helmet/space/hardsuit/power_armor/t51
 	name = "T51 Power Armor Helmet"
 	desc = "A more advanced helmet for a more advanced piece of power armor."
 	armor = list(MELEE = 90, BULLET = 90, LASER = 90, ENERGY = 90, BOMB = 90, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
-	icon_state = "t51b_pa"
-	worn_icon_state = "t51b_pa"
+	icon = 'mojave/icons/mob/large-worn-icons/32x48/head.dmi'
+	worn_icon = 'mojave/icons/mob/large-worn-icons/32x48/head.dmi'
+	icon_state = "t51_helmet"
+	worn_icon_state = "t51_helmet"
 
-/obj/item/clothing/suit/space/hardsuit/power_armor/t51b
+/obj/item/clothing/suit/space/hardsuit/power_armor/t51
 	name = "T51B Power Armor Suit"
 	desc = "The last widely developed and distributed power armor prior to the nuclear winter, even after all of these years it still outperforms it's previous model iteration."
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/power_armor/t51b
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/power_armor/t51
 	armor = list(MELEE = 90, BULLET = 90, LASER = 90, ENERGY = 90, BOMB = 90, BIO = 100, RAD = 100, FIRE = 100, ACID = 100) //Make the armor the same as the hardsuit one for consistancy
-	icon_state = "t51b-pa"
-	worn_icon_state = "t51b-pa"
+	icon = 'mojave/icons/mob/large-worn-icons/32x48/armor.dmi'
+	worn_icon = 'mojave/icons/mob/large-worn-icons/32x48/armor.dmi'
+	icon_state = "t51_armor"
+	worn_icon_state = "t51_armor"

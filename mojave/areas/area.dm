@@ -19,16 +19,17 @@
 	requires_power = FALSE
 
 /area/ms13/underground
+	requires_power = FALSE
+	outdoors = FALSE
 	roofType = /turf/open/floor/plating/ground/mountain
 
 /area/ms13/underground/bos
 	name = "BoS"
-	flags_1 = NONE
-	requires_power = TRUE
-	icon_state = "nuke_storage"
+	icon_state = "brotherhood"
 
 /area/ms13/underground/mountain
 	name = "mountain"
+	ambientsounds = list('mojave/sound/ms13ambience/cave/cave_idle.ogg', 'mojave/sound/ms13ambience/cave/cave_spooky.ogg')
 	icon_state = "cave"
 	requires_power = TRUE
 
