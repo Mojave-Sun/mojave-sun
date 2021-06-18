@@ -13612,6 +13612,13 @@
 	},
 /turf/open/floor/plasteel/ms13/tile/brown,
 /area/ms13/sunny_dale)
+"hPe" = (
+/obj/machinery/door/unpowered/wooddoor,
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 4
+	},
+/turf/open/floor/plasteel/ms13/tile/long,
+/area/ms13/sunny_dale)
 "hPl" = (
 /obj/structure/table/wood,
 /obj/machinery/computer/libraryconsole{
@@ -16552,6 +16559,12 @@
 /obj/structure/closet/crate/ms13/woodcrate,
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
+"jxA" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 4
+	},
+/turf/open/floor/plasteel/ms13/tile/long,
+/area/ms13/sunny_dale)
 "jxK" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /obj/machinery/light/dim,
@@ -22432,6 +22445,11 @@
 /obj/machinery/chem_dispenser/drinks,
 /turf/open/floor/plasteel/ms13/tile/brown,
 /area/ms13/sunny_dale)
+"mTB" = (
+/obj/structure/table/ms13/metal,
+/obj/item/soap/homemade,
+/turf/open/floor/plasteel/ms13/tile/long,
+/area/ms13/sunny_dale)
 "mTK" = (
 /obj/structure/weightmachine/stacklifter,
 /turf/open/floor/plasteel/ms13/metal,
@@ -22576,11 +22594,6 @@
 /obj/machinery/light/small,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/openspace/ms13_no_build,
-/area/ms13/sunny_dale)
-"mZg" = (
-/obj/structure/table/low_wall/wood,
-/obj/structure/table/low_wall/wood/log,
-/turf/open/floor/plating/ground/snow,
 /area/ms13/sunny_dale)
 "mZi" = (
 /obj/structure/handrail/y_end{
@@ -26679,12 +26692,15 @@
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "ptU" = (
-/obj/structure/table/low_wall/wood,
-/turf/open/floor/plating/ground/snow,
+/obj/structure/table/low_wall/wood/log,
+/turf/open/floor/wood/ms13/wide,
 /area/ms13/sunny_dale)
 "ptZ" = (
 /obj/structure/rack,
 /obj/item/restraints/handcuffs,
+/obj/item/restraints/handcuffs{
+	pixel_y = 6
+	},
 /turf/open/floor/wood/ms13/wide,
 /area/ms13/sunny_dale)
 "puc" = (
@@ -27996,6 +28012,12 @@
 	},
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/sewer)
+"qfg" = (
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 10
+	},
+/turf/open/floor/plasteel/ms13/tile/long,
+/area/ms13/sunny_dale)
 "qfl" = (
 /obj/structure/rack,
 /obj/item/shard,
@@ -31250,6 +31272,12 @@
 	},
 /turf/open/floor/plasteel/ms13/metal,
 /area/ms13/underground/vault_atrium_Lower)
+"rRg" = (
+/obj/item/hatchet/ms13/icepick{
+	pixel_y = -4
+	},
+/turf/open/floor/wood/ms13/wide,
+/area/ms13/sunny_dale)
 "rRs" = (
 /obj/structure/railing,
 /turf/open/openspace/ms13_no_build,
@@ -36109,6 +36137,10 @@
 /obj/machinery/door/unpowered/wooddoor,
 /turf/open/floor/wood/ms13/wide,
 /area/ms13/klamat)
+"uGJ" = (
+/obj/effect/decal/cleanable/blood/tracks,
+/turf/open/floor/plasteel/ms13/tile/long,
+/area/ms13/sunny_dale)
 "uHi" = (
 /obj/structure/closet/crate/ms13/vault_tec/big,
 /turf/open/floor/wood/ms13/common,
@@ -37690,6 +37722,13 @@
 	},
 /turf/open/floor/plasteel/ms13/tile/blue,
 /area/ms13/sunny_dale)
+"vIG" = (
+/obj/structure/table/ms13/metal,
+/obj/item/flashlight{
+	pixel_y = 10
+	},
+/turf/open/floor/wood/ms13/common,
+/area/ms13/sunny_dale)
 "vIJ" = (
 /obj/structure/railing{
 	dir = 4
@@ -38112,6 +38151,13 @@
 /obj/structure/barricade/wooden/snowed,
 /turf/open/floor/wood/ms13/wide,
 /area/ms13/ncr_main)
+"vUO" = (
+/obj/structure/table/ms13/metal,
+/obj/item/stack/sheet/leather,
+/obj/item/wrench,
+/obj/item/crowbar/red,
+/turf/open/floor/wood/ms13/common,
+/area/ms13/sunny_dale)
 "vUW" = (
 /obj/machinery/light/small/broken{
 	dir = 1
@@ -39705,6 +39751,7 @@
 /obj/structure/kitchenspike,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood/gibs,
+/obj/item/ms13/carcass/large/radstag,
 /turf/open/floor/plasteel/ms13/tile/long,
 /area/ms13/sunny_dale)
 "wNP" = (
@@ -39719,6 +39766,14 @@
 	},
 /turf/open/floor/wood/ms13/wide,
 /area/ms13/underground/underground_town)
+"wOl" = (
+/obj/structure/rack,
+/obj/item/hatchet/ms13/icepick{
+	pixel_y = -4
+	},
+/obj/item/hatchet/ms13/icepick,
+/turf/open/floor/wood/ms13/wide,
+/area/ms13/sunny_dale)
 "wOo" = (
 /obj/structure/toilet{
 	pixel_y = 17
@@ -173819,7 +173874,7 @@ afK
 afK
 afK
 pwP
-pFE
+vUO
 rty
 mdy
 wSc
@@ -174121,7 +174176,7 @@ afK
 afK
 afK
 pwP
-pFE
+vIG
 rty
 juX
 pwP
@@ -174456,8 +174511,8 @@ gcZ
 gcZ
 jIO
 wNO
-fQS
-fQS
+uGJ
+qfg
 ppA
 tCX
 jIO
@@ -174759,7 +174814,7 @@ mIZ
 jIO
 jIO
 jIO
-dxP
+hPe
 jIO
 jIO
 jIO
@@ -175061,7 +175116,7 @@ gdI
 jIO
 fQS
 bko
-fQS
+jxA
 fQS
 fVw
 jIO
@@ -175365,7 +175420,7 @@ fQS
 fQS
 fQS
 fQS
-gcZ
+mTB
 jIO
 uya
 afK
@@ -181690,8 +181745,8 @@ afK
 afK
 afK
 jIO
-ptZ
-szX
+wOl
+rRg
 szX
 szX
 oEq
@@ -182001,11 +182056,11 @@ jIO
 uya
 jIL
 mYb
-mZg
-mZg
+ptU
+ptU
 mYb
-mZg
-mZg
+ptU
+ptU
 mYb
 ptU
 jIL
@@ -182304,10 +182359,10 @@ uya
 jIL
 tCw
 tCw
-mZg
+ptU
 tCw
 tCw
-mZg
+ptU
 tCw
 tCw
 jIL
@@ -182606,10 +182661,10 @@ uya
 jIL
 nEE
 tCw
-mZg
+ptU
 nEE
 tCw
-mZg
+ptU
 nEE
 tCw
 jIL
