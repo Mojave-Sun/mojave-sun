@@ -12,6 +12,12 @@
 	desc = "Last pickup, October 22nd, 2077."
 	icon_state = "mailbox"
 
+/obj/structure/filingcabinet/ms13/mail/blank
+	icon_state = "mailbox_blank"
+
+/obj/structure/filingcabinet/ms13/mail/old
+	icon_state = "mailbox_old"
+
 //signs/flags//
 
 /obj/structure/fluff/ms13/
