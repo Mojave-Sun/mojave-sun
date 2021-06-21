@@ -242,10 +242,8 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/underground/underground_town)
 "adn" = (
-/obj/structure/chair/ms13/metal/broken{
-	dir = 8
-	},
-/turf/open/floor/plasteel/ms13/concrete,
+/obj/structure/railing/corner,
+/turf/open/openspace/ms13_no_build,
 /area/ms13/underground/tunnel/maintenance)
 "adp" = (
 /obj/structure/chair/sofa/corner{
@@ -4496,9 +4494,6 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "cza" = (
-/obj/item/electronics/apc{
-	pixel_y = 8
-	},
 /obj/item/weldingtool/mini,
 /obj/structure/table/ms13/metal,
 /turf/open/floor/plasteel/ms13/metal,
@@ -6726,8 +6721,10 @@
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "dOt" = (
-/obj/structure/railing,
-/turf/open/openspace/ms13_no_build,
+/obj/item/chair/ms13/metal/unfinished{
+	dir = 4
+	},
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/tunnel/maintenance)
 "dOD" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
@@ -15858,9 +15855,6 @@
 "iRU" = (
 /obj/structure/table/ms13/metal,
 /obj/item/weldingtool/mini,
-/obj/item/electronics/apc{
-	pixel_y = 8
-	},
 /turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/tunnel/maintenance)
 "iSg" = (
@@ -16517,7 +16511,7 @@
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "jiM" = (
-/obj/structure/railing/corner,
+/obj/structure/railing,
 /turf/open/openspace/ms13_no_build,
 /area/ms13/underground/tunnel/maintenance)
 "jjl" = (
@@ -16842,9 +16836,11 @@
 /turf/open/floor/plating/roof,
 /area/ms13/sunny_dale)
 "jsl" = (
-/obj/item/chair/ms13/metal/unfinished{
-	dir = 4
+/obj/structure/table/ms13/round,
+/obj/item/flashlight/flare{
+	pixel_y = 4
 	},
+/obj/item/flashlight/flare,
 /turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/tunnel/maintenance)
 "jsz" = (
@@ -17812,9 +17808,6 @@
 /turf/open/water,
 /area/ms13/underground/sewer)
 "jSG" = (
-/obj/item/electronics/apc{
-	pixel_y = 8
-	},
 /obj/item/weldingtool/mini,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /obj/structure/table/ms13/metal,
@@ -19693,8 +19686,10 @@
 /turf/open/floor/plasteel/ms13/tile,
 /area/ms13/sunny_dale)
 "kUG" = (
-/obj/structure/lattice/catwalk,
-/turf/open/floor/plasteel/ms13/metal/pipe,
+/obj/machinery/teleport/station{
+	name = "pretend this is a machinery"
+	},
+/turf/open/floor/plasteel/ms13/metal/grate/border/warning,
 /area/ms13/underground/tunnel/maintenance)
 "kUT" = (
 /obj/structure/chair/sofa/left{
@@ -22418,10 +22413,10 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/underground/vault_atrium_Lower)
 "mtT" = (
-/obj/effect/decal/cleanable/glass,
-/obj/machinery/door/poddoor/shutters/preopen/ms13/indestructible,
-/obj/structure/table/low_wall/reinforced/bunker,
-/turf/open/floor/plasteel/ms13/metal,
+/obj/structure/chair/ms13/metal/broken{
+	dir = 8
+	},
+/turf/open/floor/plasteel/ms13/concrete,
 /area/ms13/underground/tunnel/maintenance)
 "mug" = (
 /obj/structure/table/ms13,
@@ -36972,7 +36967,7 @@
 /turf/open/floor/plasteel/ms13/metal/grate/border/warning{
 	dir = 4
 	},
-/area/ms13/underground/tunnel/maintenance)
+/area/ms13/underground/tunnel)
 "uwt" = (
 /obj/structure/closet/secure_closet/freezer/fridge/open,
 /turf/open/floor/plasteel/ms13/tile/brown,
@@ -38248,12 +38243,11 @@
 /turf/open/floor/plating/ground/road,
 /area/ms13)
 "vkz" = (
-/obj/structure/table/ms13/round,
-/obj/item/flashlight/flare{
-	pixel_y = 4
+/obj/structure/table/ms13/metal,
+/obj/machinery/light/small/broken{
+	dir = 1
 	},
-/obj/item/flashlight/flare,
-/turf/open/floor/plasteel/ms13/concrete,
+/turf/open/floor/plasteel/ms13/metal,
 /area/ms13/underground/tunnel/maintenance)
 "vkD" = (
 /obj/structure/cable,
@@ -164179,9 +164173,9 @@ afK
 afK
 afK
 afK
-fUC
-fUC
-fUC
+wVR
+wVR
+wVR
 afK
 afK
 afK
@@ -165074,22 +165068,22 @@ fUC
 sAo
 sAo
 fUC
-fUC
-fUC
+wVR
+wVR
 afK
 afK
 afK
 afK
 afK
 afK
-fUC
-fUC
-fUC
+wVR
+wVR
+wVR
 afK
 afK
 afK
 afK
-fUC
+wVR
 afK
 afK
 afK
@@ -165380,7 +165374,7 @@ afK
 afK
 afK
 afK
-fUC
+wVR
 afK
 afK
 afK
@@ -165682,7 +165676,7 @@ iIA
 afK
 afK
 afK
-fUC
+wVR
 afK
 afK
 afK
@@ -166588,7 +166582,7 @@ raL
 rGv
 afK
 afK
-fUC
+wVR
 afK
 afK
 afK
@@ -167202,7 +167196,7 @@ fUC
 afK
 afK
 afK
-fUC
+wVR
 afK
 afK
 afK
@@ -238152,8 +238146,8 @@ afK
 afK
 fUC
 tXg
-tXg
-jiM
+adn
+piX
 piX
 sAo
 sAo
@@ -238454,13 +238448,13 @@ afK
 afK
 fUC
 tXg
-tXg
+jiM
 dOt
-jsl
 sAo
 sAo
 nQw
-sAo
+nQw
+nQw
 sAo
 fUC
 afK
@@ -238756,12 +238750,12 @@ afK
 afK
 fUC
 tXg
-tXg
-dOt
-vkz
+jiM
+jsl
+sAo
+sAo
 sAo
 oqq
-nQw
 sAo
 sAo
 fUC
@@ -238797,7 +238791,7 @@ tXg
 tXg
 tXg
 fUC
-rmm
+vkz
 kJi
 fUC
 afK
@@ -239058,9 +239052,9 @@ afK
 afK
 fUC
 lCm
-tXg
-dOt
-adn
+jiM
+mtT
+sAo
 sAo
 sAo
 sAo
@@ -239385,7 +239379,7 @@ clu
 fUC
 afK
 afK
-xNd
+fUC
 uwm
 vkD
 vkD
@@ -243281,7 +243275,7 @@ aab
 aab
 kMn
 wQe
-mtT
+pmg
 qxD
 kJi
 jlY
