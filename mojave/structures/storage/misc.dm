@@ -3,12 +3,21 @@
 	desc = "Holds wastelands, while being attatched to a wall, presumably."
 	pixel_y = 32
 	density = FALSE
-	layer = WALL_OBJ_LAYER
+	layer = EDGED_TURF_LAYER
 
-/obj/structure/closet/ms13/wall/firstaid //Using it as a closet subtype was kinda fucked. Potential TGUI moment? We'll see.
+/obj/structure/closet/ms13/wall/firstaid
 	name = "emergency aid kit"
 	desc = "A first aid kit, mounted to the wall. Commonly used for emergencies before the war."
 	icon_state = "firstaid"
+	anchored = TRUE
+	anchorable = FALSE
+	wall_mounted = TRUE
+	max_mob_size = MOB_SIZE_TINY
+	mob_storage_capacity = 1
+
+/obj/structure/closet/ms13/wall/firstaid/update_icon()
+	. = ..()
+	layer = ON_EDGED_TURF_LAYER
 
 ////Sneaky Storage////
 
