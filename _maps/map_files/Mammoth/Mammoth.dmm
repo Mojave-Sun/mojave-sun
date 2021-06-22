@@ -547,7 +547,8 @@
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "akY" = (
-/turf/closed/indestructible/ms13/matrix,
+/obj/structure/ms13/departure,
+/turf/open/floor/plating/ground/road,
 /area/ms13)
 "alc" = (
 /obj/structure/flora/tree/dead,
@@ -1417,7 +1418,8 @@
 /turf/open/floor/plasteel/ms13/metal,
 /area/ms13/underground/vault_atrium_Lower)
 "aNs" = (
-/turf/closed/indestructible/ms13/matrix,
+/obj/structure/ms13/departure,
+/turf/open/floor/plating/ground/road,
 /area/ms13/underground/mountain)
 "aNu" = (
 /obj/machinery/light/small/broken{
@@ -6467,7 +6469,9 @@
 /turf/open/floor/plasteel/ms13/metal/rust,
 /area/ms13/underground/subway)
 "dHG" = (
-/turf/closed/indestructible/ms13/matrix,
+/obj/structure/ms13/departure,
+/obj/structure/table/low_wall/brick,
+/turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/sewer)
 "dHP" = (
 /obj/effect/mob_spawn/human/corpse/ms13/wastelander,
@@ -7745,6 +7749,11 @@
 /obj/item/storage/bag/tray,
 /turf/open/floor/wood/ms13/wide,
 /area/ms13/ncr_main)
+"erp" = (
+/obj/structure/ms13/departure,
+/obj/effect/turf_decal/MS13/road/verticalline,
+/turf/open/floor/plating/ground/road,
+/area/ms13)
 "ert" = (
 /obj/structure/closet/crate/ms13/vault_tec/big/pristine,
 /turf/open/floor/wood/ms13/wide,
@@ -19705,6 +19714,12 @@
 /obj/structure/noticeboard,
 /turf/closed/wall/r_wall/ms13/bunker,
 /area/ms13/underground/bos)
+"kVx" = (
+/obj/structure/ms13/bars/rusty{
+	dir = 8
+	},
+/turf/open/water,
+/area/ms13/underground/sewer)
 "kVQ" = (
 /obj/item/ammo_casing/c10mm{
 	pixel_x = 7
@@ -20726,6 +20741,11 @@
 	},
 /turf/open/floor/plasteel/ms13/metal/grate,
 /area/ms13/underground/tunnel/maintenance)
+"lvv" = (
+/obj/structure/ms13/departure,
+/obj/effect/turf_decal/MS13/road/horizontalline,
+/turf/open/floor/plating/ground/road,
+/area/ms13/underground/mountain)
 "lvz" = (
 /obj/item/clipboard{
 	pixel_y = 6
@@ -23054,6 +23074,10 @@
 	},
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
+"mQa" = (
+/obj/structure/ms13/departure,
+/turf/open/floor/plating/ground/sidewalk,
+/area/ms13/underground/mountain)
 "mQm" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plasteel/ms13/metal/rust,
@@ -23361,6 +23385,10 @@
 /obj/item/hatchet/ms13,
 /turf/open/floor/plasteel/ms13/tile,
 /area/ms13/supermarket)
+"naE" = (
+/obj/structure/ms13/departure,
+/turf/open/water,
+/area/ms13/underground/sewer)
 "naG" = (
 /obj/structure/table/low_wall/brick/alt,
 /turf/open/floor/plasteel/ms13/tile/long,
@@ -24224,6 +24252,10 @@
 /obj/structure/bed/ms13/sleepingbag/green,
 /turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
+"nCx" = (
+/obj/structure/ms13/departure,
+/turf/open/floor/plating/ground/sidewalk,
+/area/ms13)
 "nCy" = (
 /obj/machinery/door/unpowered/wooddoor,
 /obj/structure/barricade/wooden/crude/snow,
@@ -29844,7 +29876,8 @@
 /turf/open/floor/wood/ms13/wide,
 /area/ms13/supermarket)
 "qGU" = (
-/turf/closed/indestructible/ms13/matrix,
+/obj/structure/ms13/departure,
+/turf/open/floor/plating/ground/dirt,
 /area/ms13/underground/subway)
 "qHq" = (
 /obj/machinery/light/broken{
@@ -42078,6 +42111,11 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
+"xqd" = (
+/obj/structure/ms13/departure,
+/obj/effect/turf_decal/MS13/road/horizontalline,
+/turf/open/floor/plating/ground/road,
+/area/ms13)
 "xqh" = (
 /obj/structure/sink{
 	pixel_y = 24
@@ -115937,8 +115975,8 @@ afK
 afK
 vsM
 qfd
-coL
-coL
+kVx
+kVx
 qfd
 vsM
 afK
@@ -116239,8 +116277,8 @@ afK
 afK
 vsM
 dHG
-dHG
-dHG
+naE
+naE
 dHG
 vsM
 afK
@@ -116415,7 +116453,7 @@ afK
 wVR
 akY
 akY
-akY
+xqd
 akY
 akY
 wVR
@@ -151394,7 +151432,7 @@ afK
 afK
 "}
 (117,1,2) = {"
-akY
+erp
 dRg
 dRg
 dRg
@@ -153203,7 +153241,7 @@ uya
 uya
 uya
 uya
-akY
+nCx
 "}
 (123,1,2) = {"
 afK
@@ -154109,7 +154147,7 @@ dRg
 dRg
 dRg
 dRg
-akY
+erp
 "}
 (126,1,2) = {"
 afK
@@ -155015,7 +155053,7 @@ uya
 uya
 uya
 uya
-akY
+nCx
 "}
 (129,1,2) = {"
 afK
@@ -188590,13 +188628,13 @@ afK
 afK
 afK
 afK
-eFc
+mQa
 aNs
 aNs
+lvv
 aNs
 aNs
-aNs
-aNs
+mQa
 wVR
 afK
 afK
@@ -188717,13 +188755,13 @@ afK
 afK
 afK
 fST
+nCx
 akY
 akY
+xqd
 akY
 akY
-akY
-akY
-akY
+nCx
 fST
 afK
 afK

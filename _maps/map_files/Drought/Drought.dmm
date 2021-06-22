@@ -219,7 +219,8 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "aEW" = (
-/turf/closed/indestructible/ms13/matrix,
+/obj/structure/ms13/departure,
+/turf/open/openspace/ms13_no_build,
 /area/ms13)
 "aFQ" = (
 /obj/structure/table/ms13/metal,
@@ -918,7 +919,8 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "cjE" = (
-/turf/closed/indestructible/ms13/matrix,
+/obj/structure/ms13/departure,
+/turf/open/floor/plating/ground/mountain,
 /area/ms13/underground/mountain)
 "cjH" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -2762,6 +2764,13 @@
 	},
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
+"hko" = (
+/obj/structure/ms13/departure,
+/obj/effect/turf_decal/MS13/road/horizontalline{
+	pixel_y = 15
+	},
+/turf/open/floor/plating/ground/road,
+/area/ms13/underground/mountain)
 "hkV" = (
 /obj/structure/closet/crate/ms13/cash_register,
 /obj/structure/table/ms13/no_smooth/counter/metal/rust,
@@ -3126,6 +3135,13 @@
 /area/ms13/sunny_dale)
 "ifW" = (
 /turf/open/floor/plating/ground/sidewalk,
+/area/ms13/underground/mountain)
+"igp" = (
+/obj/structure/ms13/departure,
+/obj/effect/turf_decal/MS13/road/verticalline{
+	pixel_x = 15
+	},
+/turf/open/floor/plating/ground/road,
 /area/ms13/underground/mountain)
 "igY" = (
 /obj/structure/janitorialcart{
@@ -4796,6 +4812,10 @@
 /obj/structure/barricade/sandbags,
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
+"mmk" = (
+/obj/structure/ms13/departure,
+/turf/open/floor/plating/ground/road,
+/area/ms13/underground/mountain)
 "mmG" = (
 /obj/structure/bed/ms13/bedframe/wire,
 /obj/structure/bed/ms13/mattress/filthy,
@@ -8958,6 +8978,10 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
+"vsX" = (
+/obj/structure/ms13/departure,
+/turf/open/floor/plating/ground/sidewalk,
+/area/ms13/underground/mountain)
 "vtr" = (
 /obj/structure/safe,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
@@ -52778,12 +52802,12 @@ bsW
 bsW
 bsW
 bIQ
-cjE
-cjE
-cjE
-cjE
-cjE
-cjE
+vsX
+mmk
+mmk
+hko
+mmk
+vsX
 bIQ
 bsW
 bsW
@@ -81610,7 +81634,7 @@ bIQ
 bIQ
 "}
 (156,1,2) = {"
-cjE
+vsX
 ifW
 ifW
 ifW
@@ -81794,10 +81818,10 @@ ifW
 ifW
 ifW
 ifW
-cjE
+vsX
 "}
 (157,1,2) = {"
-cjE
+mmk
 lqC
 lqC
 lqC
@@ -81981,10 +82005,10 @@ lqC
 lqC
 lqC
 lqC
-cjE
+mmk
 "}
 (158,1,2) = {"
-cjE
+igp
 nDz
 nDz
 nDz
@@ -82168,10 +82192,10 @@ nDz
 nDz
 nDz
 nqC
-cjE
+igp
 "}
 (159,1,2) = {"
-cjE
+mmk
 lqC
 lqC
 lqC
@@ -82355,10 +82379,10 @@ lqC
 lqC
 lqC
 dhM
-cjE
+mmk
 "}
 (160,1,2) = {"
-cjE
+mmk
 lqC
 lqC
 lqC
@@ -82542,10 +82566,10 @@ lqC
 lqC
 lqC
 lqC
-cjE
+mmk
 "}
 (161,1,2) = {"
-cjE
+vsX
 ifW
 ifW
 ifW
@@ -82729,7 +82753,7 @@ ifW
 ifW
 ifW
 ifW
-cjE
+vsX
 "}
 (162,1,2) = {"
 bIQ
