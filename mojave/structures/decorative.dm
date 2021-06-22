@@ -14,9 +14,6 @@
 	pixel_y = 12
 	layer = EDGED_TURF_LAYER
 
-/obj/structure/filingcabinet/ms13/mail/blank
-	icon_state = "mailbox_blank"
-
 /obj/structure/filingcabinet/ms13/mail/old
 	icon_state = "mailbox_old"
 
