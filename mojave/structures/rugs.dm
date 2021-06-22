@@ -134,7 +134,7 @@
 
 /obj/item/ms13/rug
 	name = "rug"
-	desc = "a common rug, used to cover your boring floor. It's currently rolled up, but peeking through you can see it's blue."
+	desc = "A common rug, used to cover your boring floor. It's currently rolled up, but peeking through you can see it's blue."
 	icon = 'mojave/icons/objects/decorative.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/items_righthand.dmi'
@@ -161,7 +161,7 @@
 
 /obj/item/ms13/rug/fancy
 	name = "rug"
-	desc = "a common rug, used to cover your boring floor. It's currently rolled up, but peeking through you can see it's got a pattern on it."
+	desc = "A common rug, used to cover your boring floor. It's currently rolled up, but peeking through you can see it's got a pattern on it."
 	origin_type = /obj/structure/ms13/rug/fancy
 
 /obj/item/ms13/rug/rubber
