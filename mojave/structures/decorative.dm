@@ -11,6 +11,8 @@
 	name = "postbox"
 	desc = "Last pickup, October 22nd, 2077."
 	icon_state = "mailbox"
+	pixel_y = 12
+	layer = EDGED_TURF_LAYER
 
 /obj/structure/filingcabinet/ms13/mail/blank
 	icon_state = "mailbox_blank"
