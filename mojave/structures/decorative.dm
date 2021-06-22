@@ -46,3 +46,71 @@
 	icon_state = "ncrflag"
 	pixel_x = -32
 	layer = ABOVE_ALL_MOB_LAYER
+
+//Decorative Cable, functional WYCI//
+
+/obj/structure/ms13/cable/
+	name = "cable"
+	icon = 'mojave/icons/objects/cables.dmi'
+	density = FALSE
+	layer = WIRE_LAYER
+
+/obj/structure/ms13/cable/red
+	icon_state = "cable_red_straight"
+
+/obj/structure/ms13/cable/red/curve
+	icon_state = "cable_red_curved"
+
+/obj/structure/ms13/cable/red/intersection
+	icon_state = "cable_red_intersect"
+
+/obj/structure/ms13/cable/red/connector
+	icon_state = "cable_red_connector"
+
+/obj/structure/ms13/cable/red/splice
+	icon_state = "cable_red_spliced"
+
+/obj/structure/ms13/cable/blue
+	icon_state = "cable_blue_straight"
+
+/obj/structure/ms13/cable/blue/curve
+	icon_state = "cable_blue_curved"
+
+/obj/structure/ms13/cable/blue/intersection
+	icon_state = "cable_blue_intersect"
+
+/obj/structure/ms13/cable/blue/connector
+	icon_state = "cable_blue_connector"
+
+/obj/structure/ms13/cable/blue/splice
+	icon_state = "cable_blue_spliced"
+
+/obj/structure/ms13/cable/green
+	icon_state = "cable_green_straight"
+
+/obj/structure/ms13/cable/green/curve
+	icon_state = "cable_green_curved"
+
+/obj/structure/ms13/cable/green/intersection
+	icon_state = "cable_green_intersect"
+
+/obj/structure/ms13/cable/green/connector
+	icon_state = "cable_green_connector"
+
+/obj/structure/ms13/cable/green/splice
+	icon_state = "cable_green_spliced"
+
+/obj/structure/ms13/cable/black
+	icon_state = "cable_black_straight"
+
+/obj/structure/ms13/cable/black/curve
+	icon_state = "cable_black_curved"
+
+/obj/structure/ms13/cable/black/intersection
+	icon_state = "cable_black_intersect"
+
+/obj/structure/ms13/cable/black/connector
+	icon_state = "cable_black_connector"
+
+/obj/structure/ms13/cable/black/splice
+	icon_state = "cable_black_spliced"
