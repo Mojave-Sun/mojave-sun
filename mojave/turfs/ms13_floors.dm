@@ -196,6 +196,31 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN,SMOOTH_GROUP_MS13_CARPET_GREEN)
 	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_GREEN)
 
+/turf/open/floor/wood/ms13/carpet/violet
+	icon = 'mojave/icons/turf/carpet_violet.dmi'
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN,SMOOTH_GROUP_MS13_CARPET_VIOLET)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_VIOLET)
+
+/turf/open/floor/wood/ms13/carpet/shaggy/red
+	icon = 'mojave/icons/turf/carpet_shaggy_red.dmi'
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN,SMOOTH_GROUP_MS13_CARPET_SHAGGY_RED)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_SHAGGY_RED)
+
+/turf/open/floor/wood/ms13/carpet/shaggy/blue
+	icon = 'mojave/icons/turf/carpet_shaggy_blue.dmi'
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN,SMOOTH_GROUP_MS13_CARPET_SHAGGY_BLUE)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_SHAGGY_BLUE)
+
+/turf/open/floor/wood/ms13/carpet/shaggy/green
+	icon = 'mojave/icons/turf/carpet_shaggy_green.dmi'
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN,SMOOTH_GROUP_MS13_CARPET_SHAGGY_GREEN)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_SHAGGY_GREEN)
+
+/turf/open/floor/wood/ms13/carpet/shaggy/violet
+	icon = 'mojave/icons/turf/carpet_shaggy_violet.dmi'
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN,SMOOTH_GROUP_MS13_CARPET_SHAGGY_VIOLET)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_SHAGGY_VIOLET)
+
 ////Tiled Floors////
 
 /obj/item/stack/tile/plasteel/ms13 //We need this because upstream turf code is not great.
@@ -245,6 +270,9 @@
 	icon_state = "blue_long"
 	alternate_states = 6
 
+/turf/open/floor/plasteel/ms13/tile/navy
+	icon_state = "navy"
+
 /turf/open/floor/plasteel/ms13/tile/brown
 	icon_state = "brown"
 
@@ -252,9 +280,34 @@
 	icon_state = "fancy"
 	alternate_states = 7
 
-/turf/open/floor/plasteel/ms13/tile/cafeteria
-	icon_state = "cafeteria"
+/turf/open/floor/plasteel/ms13/tile/large
+	icon_state = "tiled tiles"
+
+/turf/open/floor/plasteel/ms13/tile/large/navy
+	icon_state = "navy_large"
 	alternate_states = 3
+
+/turf/open/floor/plasteel/ms13/tile/large/black
+	icon_state = "black_large"
+	alternate_states = 3
+
+/turf/open/floor/plasteel/ms13/tile/large/white
+	icon_state = "white_large"
+	alternate_states = 3
+
+/turf/open/floor/plasteel/ms13/tile/large/checkered
+	icon_state = "checker_large"
+	alternate_states = 3
+
+/turf/open/floor/plasteel/ms13/tile/large/cafeteria
+	icon_state = "cafe_large"
+	alternate_states = 3
+
+/turf/open/floor/plasteel/ms13/tile/full //isn't sprited yet
+	icon_state = "tiled tiles"
+
+/turf/open/floor/plasteel/ms13/tile/full/navy
+	icon_state = "navy_full"
 
 ////Metal Floors////
 
@@ -301,33 +354,6 @@
 /turf/open/floor/plasteel/ms13/metal/stayclear
 	icon_state = "steel_stayclear"
 
-/turf/open/floor/plasteel/ms13/metal/rust
-	icon_state = "rust_industrial"
-
-/turf/open/floor/plasteel/ms13/metal/rust/alt
-	icon_state = "rust_industrial_alt"
-
-/turf/open/floor/plasteel/ms13/metal/rust/split
-	icon_state = "rust_industrial_split"
-
-/turf/open/floor/plasteel/ms13/metal/walkway
-	icon_state = "steel_walkway"
-
-/turf/open/floor/plasteel/ms13/metal/walkway/corner
-	icon_state = "steel_walkway_corner"
-
-/turf/open/floor/plasteel/ms13/metal/walkway/end
-	icon_state = "steel_walkway_end"
-
-/turf/open/floor/plasteel/ms13/metal/walkway/rust
-	icon_state = "rust_walkway"
-
-/turf/open/floor/plasteel/ms13/metal/walkway/corner/rust
-	icon_state = "rust_walkway_corner"
-
-/turf/open/floor/plasteel/ms13/metal/walkway/end/rust
-	icon_state = "rust_walkway_end"
-
 ////Concrete Floors////
 
 /turf/open/floor/plasteel/ms13/concrete
@@ -338,6 +364,53 @@
 	icon_state = "concrete_small"
 	has_alternate_states = TRUE
 	alternate_states = 5
+
+/turf/open/floor/plasteel/ms13/concrete/industrial
+	icon_state = "concrete_industrial"
+
+/turf/open/floor/plasteel/ms13/concrete/industrial/alt
+	icon_state = "concrete_industrial_alt"
+
+/turf/open/floor/plasteel/ms13/concrete/industrial/split
+	icon_state = "concrete_industrial_split"
+
+/turf/open/floor/plasteel/ms13/concrete/industrial/walkway
+	icon_state = "concrete_walkway"
+
+/turf/open/floor/plasteel/ms13/concrete/industrial/walkway/corner
+	icon_state = "concrete_walkway_corner"
+
+/turf/open/floor/plasteel/ms13/concrete/industrial/walkway/end
+	icon_state = "concrete_walkway_end"
+
+/turf/open/floor/plasteel/ms13/concrete/industrial/walkway
+	icon_state = "concrete_walkway"
+
+/turf/open/floor/plasteel/ms13/concrete/industrial/walkway/corner
+	icon_state = "concrete_walkway_corner"
+
+/turf/open/floor/plasteel/ms13/concrete/industrial/walkway/end
+	icon_state = "concrete_walkway_end"
+
+////Hybrid Floors////
+
+/turf/open/floor/plasteel/ms13/concrete/cable
+	icon_state = "concrete_cable_straight"
+
+/turf/open/floor/plasteel/ms13/concrete/cable/curved
+	icon_state = "concrete_cable_curve"
+
+/turf/open/floor/plasteel/ms13/concrete/cable/merge
+	icon_state = "concrete_cable_merge"
+
+/turf/open/floor/plasteel/ms13/concrete/cable/intersection
+	icon_state = "concrete_cable_intersection"
+
+/turf/open/floor/plasteel/ms13/concrete/cable/box
+	icon_state = "concrete_cable_box"
+
+/turf/open/floor/plasteel/ms13/concrete/cable/node
+	icon_state = "concrete_cable_node"
 
 ////Ceramic Floors////
 
@@ -354,6 +427,12 @@
 /turf/open/floor/plasteel/ms13/ceramic/sierra
 	icon_state = "sierra"
 	alternate_states = 3
+
+////Brick Floors////
+
+/turf/open/floor/plasteel/ms13/brick
+	icon_state = "brick"
+	alternate_states = 8
 
 ////Pipe Floors////
 
