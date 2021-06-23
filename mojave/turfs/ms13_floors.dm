@@ -16,7 +16,7 @@
 /turf/open/floor/wood/ms13/Initialize()
 	. = ..()
 	if(has_alternate_states)
-		if(prob(50))
+		if(prob(25))
 			icon_state = "[icon_state]_[rand(1,(alternate_states))]"
 		else if(has_base_states && prob(80))
 			icon_state = "[icon_state][rand(1,(base_states))]"
@@ -201,7 +201,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN,SMOOTH_GROUP_MS13_CARPET_VIOLET)
 	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_VIOLET)
 
-/turf/open/floor/wood/ms13/carpet/shaggy/red
+/turf/open/floor/wood/ms13/carpet/shaggy
 	icon = 'mojave/icons/turf/carpet_shaggy_red.dmi'
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN,SMOOTH_GROUP_MS13_CARPET_SHAGGY_RED)
 	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_SHAGGY_RED)
@@ -251,7 +251,7 @@
 /turf/open/floor/plasteel/ms13/Initialize()
 	. = ..()
 	if(has_alternate_states)
-		if(prob(50))
+		if(prob(45))
 			icon_state = "[icon_state]_[rand(1,(alternate_states))]"
 
 /turf/open/floor/plasteel/ms13/tile
@@ -272,6 +272,7 @@
 
 /turf/open/floor/plasteel/ms13/tile/navy
 	icon_state = "navy"
+	alternate_states = 7
 
 /turf/open/floor/plasteel/ms13/tile/brown
 	icon_state = "brown"
@@ -308,6 +309,7 @@
 
 /turf/open/floor/plasteel/ms13/tile/full/navy
 	icon_state = "navy_full"
+	has_alternate_states = FALSE
 
 ////Metal Floors////
 
@@ -419,6 +421,7 @@
 	desc = "Ceramic tiles."
 	has_alternate_states = TRUE
 	alternate_states = 2
+	footstep = FOOTSTEP_FLOOR
 
 /turf/open/floor/plasteel/ms13/ceramic/ornate
 	icon_state = "ornate"
@@ -432,7 +435,10 @@
 
 /turf/open/floor/plasteel/ms13/brick
 	icon_state = "brick"
+	desc = "Brick flooring."
+	has_alternate_states = TRUE
 	alternate_states = 8
+	footstep = FOOTSTEP_FLOOR
 
 ////Pipe Floors////
 
