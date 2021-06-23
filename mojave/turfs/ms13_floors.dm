@@ -369,6 +369,7 @@
 
 /turf/open/floor/plasteel/ms13/concrete/industrial
 	icon_state = "concrete_industrial"
+	desc = "Heavy duty concrete slabs." //DAS CONCRETE BABY
 
 /turf/open/floor/plasteel/ms13/concrete/industrial/alt
 	icon_state = "concrete_industrial_alt"
