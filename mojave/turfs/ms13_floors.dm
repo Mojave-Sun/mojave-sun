@@ -398,6 +398,7 @@
 
 /turf/open/floor/plasteel/ms13/concrete/cable
 	icon_state = "concrete_cable_straight"
+	desc = "Heavy duty cabling embedded in industrial grade concrete."
 
 /turf/open/floor/plasteel/ms13/concrete/cable/curved
 	icon_state = "concrete_cable_curve"
