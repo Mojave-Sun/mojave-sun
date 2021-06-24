@@ -23,7 +23,7 @@
 		to_chat(user, "<span class='info'>You light [src] on fire.</span>")
 		return
 
-/obj/item/grenade/attack_self(mob/user)
+/obj/item/grenade/ms13/molotov/attack_self(mob/user)
 	return //lighting only
 
 /obj/item/grenade/ms13/molotov/arm_grenade(mob/user, delayoverride, msg = TRUE, volume = 60)
