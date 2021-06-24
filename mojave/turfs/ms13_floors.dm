@@ -196,7 +196,7 @@
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN,SMOOTH_GROUP_MS13_CARPET_GREEN)
 	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_GREEN)
 
-/turf/open/floor/wood/ms13/carpet/violet
+/*turf/open/floor/wood/ms13/carpet/violet
 	icon = 'mojave/icons/turf/carpet_violet.dmi'
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN,SMOOTH_GROUP_MS13_CARPET_VIOLET)
 	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_VIOLET)
@@ -219,7 +219,7 @@
 /turf/open/floor/wood/ms13/carpet/shaggy/violet
 	icon = 'mojave/icons/turf/carpet_shaggy_violet.dmi'
 	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN,SMOOTH_GROUP_MS13_CARPET_SHAGGY_VIOLET)
-	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_SHAGGY_VIOLET)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_CARPET_SHAGGY_VIOLET)*/
 
 ////Tiled Floors////
 
