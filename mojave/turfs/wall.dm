@@ -112,34 +112,3 @@
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_MS13_WALL)
 	canSmoothWith= list(SMOOTH_GROUP_MS13_WALL)
-
-/turf/closed/indestructible/ms13/matrix
-	name = "the matrix"
-	desc = "Looking at this gives you the feeling the physical world is very limited... (Click and drag yourself on this to remove your current character from the round.)"
-	icon = 'mojave/icons/turf/walls/matrix.dmi'
-	icon_state = "matrix"
-
-/turf/closed/indestructible/ms13/matrix/MouseDrop_T(atom/dropping, mob/user)
-	. = ..()
-	if(dropping != user)
-		return //You can only matrix yourself.
-	if(!isliving(user) || user.incapacitated())
-		return //No ghosts or incapacitated folk allowed to do this.
-	var/mob/living/departing_mob = dropping
-	if(alert("Are you sure you want to depart the area for good? Your character will be removed from the current round, if you're playing an important job please adminhelp (F1 button) first to let admins know, or if no admins are available try to promote somebody else in your faction to your job and hand them your gear.", "Departing the Wasteland", "Confirm", "Cancel") != "Confirm")
-		return
-	if(QDELETED(departing_mob) || departing_mob.incapacitated() || !isliving(departing_mob) || get_dist(src, dropping) > 2)
-		return //Things have changed since the alert happened.
-	var/dat = "[key_name(user)] has despawned themselves, job [departing_mob.job], at [AREACOORD(src)]. Contents despawned along:"
-	var/list/stuff = list()
-	for(var/thing in departing_mob.GetAllContents())
-		if(isobj(thing))
-			stuff += "[thing]"
-	dat = "[dat] [stuff.Join(", ")]."
-	message_admins(dat)
-	log_admin(dat)
-	departing_mob.visible_message("<span class='notice'>[departing_mob] crosses the border and departs the wasteland.</span>")
-	if(iscyborg(departing_mob))
-		var/mob/living/silicon/robot/cyborg = departing_mob
-		QDEL_NULL(cyborg.mmi) //When you qdel borgs they drop an MMI, so this is needed.
-	qdel(departing_mob)
