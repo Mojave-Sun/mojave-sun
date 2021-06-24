@@ -1,5 +1,10 @@
 // actual crates //
 
+/obj/structure/closet/crate/ms13
+	name = "wasteland crate"
+	desc = "Holds wastelands, presumably."
+	icon = 'mojave/icons/structure/crates.dmi'
+
 /obj/structure/closet/crate/ms13/woodcrate
 	name = "\improper wooden crate"
 	desc = "A woode storage crate, robust and study to all except a crowbar."
