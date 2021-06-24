@@ -42,7 +42,7 @@
 	SEND_SIGNAL(src, COMSIG_GRENADE_ARMED, det_time, delayoverride)
 	addtimer(CALLBACK(src, .proc/detonate), isnull(delayoverride)? det_time : delayoverride)
 
-/obj/item/grenade/ms13/molotov/detonate()
+/obj/item/grenade/ms13/molotov/detonate(mob/living/lanced_by)
 	playsound(loc, 'sound/effects/hit_on_shattered_glass.ogg', 35, TRUE, 4)
 	flame_radius(1, get_turf(src))
 	playsound(loc, 'mojave/sound/ms13effects/explosion_fire_grenade.ogg', 30, TRUE, 4)
