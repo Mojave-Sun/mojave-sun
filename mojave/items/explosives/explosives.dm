@@ -23,7 +23,7 @@
 		to_chat(user, "<span class='info'>You light [src] on fire.</span>")
 		return
 
-/obj/item/grenade/attack_self(mob/user)
+/obj/item/grenade/ms13/molotov/attack_self(mob/user)
 	return //lighting only
 
 /obj/item/grenade/ms13/molotov/arm_grenade(mob/user, delayoverride, msg = TRUE, volume = 60)
@@ -42,7 +42,7 @@
 	SEND_SIGNAL(src, COMSIG_GRENADE_ARMED, det_time, delayoverride)
 	addtimer(CALLBACK(src, .proc/detonate), isnull(delayoverride)? det_time : delayoverride)
 
-/obj/item/grenade/ms13/molotov/detonate()
+/obj/item/grenade/ms13/molotov/detonate(mob/living/lanced_by)
 	playsound(loc, 'sound/effects/hit_on_shattered_glass.ogg', 35, TRUE, 4)
 	flame_radius(1, get_turf(src))
 	playsound(loc, 'mojave/sound/ms13effects/explosion_fire_grenade.ogg', 30, TRUE, 4)
