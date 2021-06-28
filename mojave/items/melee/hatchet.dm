@@ -15,6 +15,10 @@
 	sharpness = IS_SHARP_AXE
 	log_pickup_and_drop = TRUE
 
+/obj/item/hatchet/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
+
 /obj/item/hatchet/ms13/broad
 	name = "hatchet"
 	desc = "A broad headed hatchet. Nice and hefty, could cleave just about anything in two."
