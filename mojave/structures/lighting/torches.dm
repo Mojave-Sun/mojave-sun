@@ -59,6 +59,7 @@
 	pixel_y = 0
 
 /obj/structure/ms13/torch/wall_mounted/Initialize() //So that no matter what, Mappers aren't messing stuff up. Nice and consistent.
+	. = ..()
 	if(dir == NORTH)
 		return
 	if(dir == SOUTH)
