@@ -50,7 +50,7 @@
 	name = "\proper desert"
 	desc = "A stretch of desert."
 	icon = 'mojave/icons/turf/ground.dmi'
-	icon_state = "desert-1"
+	icon_state = "desert-255"
 	base_icon_state = "desert"
 	slowdown = 0.7 //Hard and very dry ground. Not as hard to walk on as sand
 	baseturfs = /turf/open/floor/plating/ground/desert
@@ -63,14 +63,11 @@
 
 /turf/open/floor/plating/ground/desert/Initialize()
 	. = ..()
-	addtimer(CALLBACK(src, /atom/.proc/update_icon), 1)
-	icon_state = "desert_alt_[rand(1,4)]"
 	//If no fences, machines (soil patches are machines), etc. try to plant grass
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-
-/turf/open/floor/plating/ground/desert/update_icon()
-	add_overlay(image('mojave/icons/turf/drought_border.dmi', icon_state, FLOAT_LAYER))
+	if(prob(35))
+		base_icon_state = "desert_alt_[rand(1,3)]"
 
 /turf/open/floor/plating/ground/desert/attackby(obj/item/W, mob/user, params)
 	. = ..()
@@ -297,6 +294,7 @@
 	addtimer(CALLBACK(src, /atom/.proc/update_icon), 1)
 
 /turf/open/floor/plating/ground/road/update_icon()
+	. = ..() //Inheritance required for road decals
 	var/crack_randomiser = "crack_[rand(1,18)]"
 	var/road_randomiser = "rand(-10,10)"
 	var/direction_randomiser = "rand(0,8)"
@@ -320,6 +318,7 @@
 	addtimer(CALLBACK(src, /atom/.proc/update_icon), 1)
 
 /turf/open/floor/plating/ground/sidewalk/update_icon()
+	. = ..()
 	add_overlay(image('mojave/icons/turf/curb.dmi', icon_state, FLOAT_LAYER))
 	if(prob(20))
 		icon_state = "crack_[rand(1,11)]"
