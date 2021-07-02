@@ -11,11 +11,12 @@
 	icon_prefix = "spear"
 	force = 30
 	throwforce = 35
+	throw_speed = 1.5
+	armour_penetration = 5
+	wound_bonus = 0
 	embedding = list("embedded_pain_multiplier" = 3, "embed_chance" = 40, "embedded_fall_chance" = 20)
 	w_class = WEIGHT_CLASS_NORMAL
 	sharpness = SHARP_POINTY
-	armour_penetration = 5
-	wound_bonus = 0
 	log_pickup_and_drop = TRUE
 	var/wielded = FALSE
 
