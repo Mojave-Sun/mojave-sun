@@ -8,6 +8,7 @@
 	icon_state = "cross"
 	desc = "A makeshift cross, used for inhumane execution over time."
 	anchored = TRUE
+	max_integrity = 750
 	bound_height = 64
 
 /obj/structure/kitchenspike/ms13/cross/crowbar_act(mob/living/user, obj/item/I)
@@ -19,7 +20,7 @@
 	return TRUE
 
 /obj/structure/kitchenspike/ms13/cross/deconstruct()
-	new /obj/item/stack/sheet/mineral/wood(src.loc, 10)
+//	new /obj/item/stack/sheet/mineral/wood(src.loc, 10)
 	qdel(src)
 
 /obj/structure/kitchenspike/ms13/cross/attack_hand(mob/user)

@@ -7,7 +7,7 @@
 	layer = BELOW_MOB_LAYER
 	light_color = LIGHT_COLOR_FIRE
 	light_power = 0.5
-	light_range = 3
+	light_range = 0
 	pixel_y = 10
 	var/burning = FALSE
 
@@ -32,7 +32,7 @@
 			return
 
 /obj/structure/ms13/torch/attackby(obj/item/W, mob/user, params)
-	if(W.open_flame())
+	if(W.ignition_effect())
 		StartBurning()
 		update_icon()
 		user.visible_message("<span class='notice'>[user] lights [src] with [W].</span>", "<span class='notice'>You light [src] with [W].</span>")

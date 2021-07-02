@@ -109,5 +109,12 @@
 		user.visible_message(
 			"<span class='notice'>[user] snuffs [src] out.</span>")
 		on = FALSE
-		update_icon()
 		set_light(0)
+
+/obj/item/flashlight/flare/torch/ms13/attackby(obj/item/W, mob/user, params)
+	. = ..()
+	if(W.ignition_effect())
+		update_brightness()
+		update_icon()
+		user.visible_message("<span class='notice'>[user] lights [src] with [W].</span>", "<span class='notice'>You light [src] with [W].</span>")
+		return
