@@ -2,7 +2,7 @@
 
 /obj/item/spear/ms13/
 	name = "spear"
-	desc = "An heavy hefty ancient weapon used to this day, due to its ease of lodging itself into its victim's body parts."
+	desc = "A swift and ancient weapon used to this day, due to its ease of lodging itself into its victim's body parts."
 	icon = 'mojave/icons/objects/melee/melee_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
@@ -48,7 +48,7 @@
 
 /obj/item/spear/ms13/knife
 	name = "knife spear"
-	desc = "A rough spear, made from a knife and a pole. Don't look past it, it can still kill, wether it be by jab or throw."
+	desc = "A rough spear, made from a knife and a pole. Don't look past it, it can still kill, whether it be by jab or throw."
 	icon_state = "spear_knife"
 	inhand_icon_state = "spear_knife"
 	icon_prefix = "spear_knife"
@@ -67,7 +67,7 @@
 	throw_speed = 3
 
 /obj/item/spear/explosive/ms13
-	name = "thunderstick"
+	name = "thunder stick"
 	icon = 'mojave/icons/objects/melee/melee_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
@@ -79,8 +79,9 @@
 
 /obj/item/spear/explosive/ms13/Initialize(mapload)
 	. = ..()
-	set_explosive(new /obj/item/grenade/frag/ms13/charge)
-	desc = "A long stick, with an explosive charge stuck on the end. You could probably pull the cord on the front to activate the timer." // Overwrites the TG one that would otherwise be here due to initialization.
+	set_explosive(new /obj/item/grenade/ms13/molotov)
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
+	desc = "A long stick, with an explosive charge stuck on the end. Point towards enemy!" // Overwrites the TG one that would otherwise be here due to initialization.
 
 /obj/item/spear/explosive/ms13/update_icon_state()
 	. = ..()
