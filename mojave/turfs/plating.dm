@@ -275,8 +275,7 @@
 	baseturfs = /turf/open/floor/plating/ground/dirt
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "dirt"
-	slowdown = 1
-
+	slowdown = 0.5
 ////Roads////
 
 /turf/open/floor/plating/ground/road
