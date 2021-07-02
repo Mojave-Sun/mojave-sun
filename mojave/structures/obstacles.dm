@@ -456,14 +456,15 @@
 
 /obj/structure/ms13/road_barrier
 	name = "road barrier"
-	desc = "A heavy duty concrete road barrier, used to direct traffic and prevent going off the lane."
+	desc = "A light and portable road barrier, used to direct traffic and stop people from going to dead ends."
 	icon = 'mojave/icons/obstacles/barriers.dmi'
-	icon_state = "concrete_barrier"
+	icon_state = "road_barrier"
 	density = TRUE
-	anchored = TRUE
-	var/hasaltstates = TRUE
-	var/altstates = 5
-	var/proj_pass_rate = 45
+	anchored = FALSE
+	max_integrity = 150
+	var/hasaltstates = FALSE
+	var/altstates = 0
+	var/proj_pass_rate = 85
 
 /obj/structure/ms13/road_barrier/Initialize()
 	. = ..()
@@ -473,14 +474,23 @@
 	if(prob(45))
 		icon_state = "[initial(icon_state)]_[rand(1,(altstates))]"
 
-/obj/structure/ms13/road_barrier/alt
+/obj/structure/ms13/road_barrier/concrete
+	desc = "A heavy duty concrete road barrier, used to direct traffic and prevent going off the lane. Great to take cover behind."
+	icon_state = "concrete_barrier"
+	anchored = TRUE
+	hasaltstates = TRUE
+	max_integrity = 550
+	altstates = 5
+	proj_pass_rate = 45
+
+/obj/structure/ms13/road_barrier/concrete/alt
 	desc = "A heavy duty concrete road barrier featuring a pattern that to this day is still somewhat vibrant. Used to direct traffic and prevent going off the lane."
 	icon_state = "concrete_barrier_alt"
 	altstates = 1
 
-/obj/structure/ms13/road_barrier/CanAllowThrough(atom/movable/mover, turf/target)
+/obj/structure/ms13/road_barrier/concrete/CanAllowThrough(atom/movable/mover, turf/target)
 	. = ..()
-	if(locate(/obj/structure/ms13/road_barrier) in get_turf(mover))
+	if(locate(/obj/structure/ms13/road_barrier/concrete) in get_turf(mover))
 		return TRUE
 	else if(istype(mover, /obj/projectile))
 		if(!anchored)
