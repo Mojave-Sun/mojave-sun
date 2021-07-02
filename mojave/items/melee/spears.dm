@@ -20,12 +20,15 @@
 	var/wielded = FALSE
 
 /obj/item/spear/ms13/Initialize()
+	. = ..()
 	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
 	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/on_unwield)
 	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
 
+/obj/item/spear/update_icon_state()
+	return
+
 /obj/item/spear/ms13/ComponentInitialize()
-	. = ..()
 	AddComponent(/datum/component/two_handed, require_twohands=FALSE, force_multiplier=2)
 
 // triggered on wielding of a two handed item.
