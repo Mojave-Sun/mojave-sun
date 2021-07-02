@@ -14,6 +14,10 @@
 	sharpness = SHARP_EDGED
 	log_pickup_and_drop = TRUE
 
+/obj/item/kitchen/knife/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
+
 /obj/item/kitchen/knife/ms13/combat
 	name = "combat knife"
 	desc = "A well made, serrated combat knife. Very effective at wounding. It's got a light frame, with a rifle lug to potentially attach to a matching rifle."
@@ -77,6 +81,10 @@
 	wound_bonus = 0
 	log_pickup_and_drop = TRUE
 
+/obj/item/throwing_star/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
+
 /obj/item/switchblade/ms13
 	name = "switchblade"
 	desc = "A slick and concealable switchblade."
@@ -88,6 +96,10 @@
 	wound_bonus = -2
 	extended = 0
 	log_pickup_and_drop = TRUE
+
+/obj/item/switchblade/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
 
 /obj/item/switchblade/ms13/attack_self(mob/user)
 	extended = !extended

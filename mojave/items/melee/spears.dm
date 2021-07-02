@@ -20,9 +20,9 @@
 	var/wielded = FALSE
 
 /obj/item/spear/ms13/Initialize()
-	. = ..()
 	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
 	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/on_unwield)
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
 
 /obj/item/spear/ms13/ComponentInitialize()
 	. = ..()
