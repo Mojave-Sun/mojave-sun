@@ -102,24 +102,6 @@
 	qdel(src)
 	user.put_in_active_hand(sec)
 
-//AXES - for muh lumberjacking
-
-/obj/item/hatchet/ms13
-	name = "hatchet"
-	desc = "A very sharp axe blade upon a short fibremetal handle. It has a long history of chopping things, but now it is used for chopping wood."
-	icon = 'mojave/icons/objects/items_and_weapons.dmi'
-	icon_state = "hatchet"
-	inhand_icon_state = "hatchet"
-	lefthand_file = 'mojave/icons/mob/inhands/equipment/hydroponics_lefthand.dmi'
-	righthand_file = 'mojave/icons/mob/inhands/equipment/hydroponics_righthand.dmi'
-	flags_1 = CONDUCT_1
-	force = 12
-	w_class = WEIGHT_CLASS_SMALL
-	throwforce = 15
-	throw_speed = 3
-	throw_range = 4
-	sharpness = IS_SHARP_AXE
-
 //animal mounting items - basic stuff, mainly the saddle and lasso
 
 /obj/item/saddle/ms13

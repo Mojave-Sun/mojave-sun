@@ -76,16 +76,27 @@
 	if(prob(50))
 		suit = pick(
 			/obj/item/clothing/suit/ms13/vest/cowboy,\
-			/obj/item/clothing/suit/ms13/vest/denim,\
 			/obj/item/clothing/suit/ms13/vest/grey,\
-			/obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat,\
-			/obj/item/clothing/suit/ms13/vest/puffer,\
-			/obj/item/clothing/suit/ms13/ljacket/bomber,\
+			/obj/item/clothing/suit/ms13/vest,\
+			/obj/item/clothing/suit/ms13/shawl,\
+			/obj/item/clothing/suit/labcoat/ms13/ljacket/orange,\
+			/obj/item/clothing/suit/labcoat/ms13/ljacket/brown,\
 			/obj/item/clothing/suit/armor/ms13/kit,\
-			/obj/item/clothing/suit/ms13/ljacket,\
+			/obj/item/clothing/suit/labcoat/ms13/ljacket/blue,\
+			/obj/item/clothing/suit/labcoat/ms13/ljacket/black,\
+			/obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat,\
+			/obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat/grey,\
+			/obj/item/clothing/suit/ms13/ljacket/moleskin,\
+			/obj/item/clothing/suit/ms13/ljacket/wanderer,\
+			/obj/item/clothing/suit/ms13/ljacket/military,\
+			/obj/item/clothing/suit/ms13/ljacket/musty,\
+			/obj/item/clothing/suit/ms13/ljacket/biker,\
+			/obj/item/clothing/suit/ms13/ljacket/bomber,\
+			/obj/item/clothing/suit/ms13/trench/bum,\
 			/obj/item/clothing/suit/ms13/trench,\
-			/obj/item/clothing/suit/ms13/trench/dapper,\
-			/obj/item/clothing/suit/ms13/ljacket/veteran,\
+			/obj/item/clothing/suit/ms13/trench/detective,\
+			/obj/item/clothing/suit/ms13/trench/black,\
+			/obj/item/clothing/suit/ms13/duster/alt,\
 			/obj/item/clothing/suit/armor/ms13/leatherarmor)
 	r_hand = pick(
 		/obj/item/claymore/ms13/machete/pipe,\
