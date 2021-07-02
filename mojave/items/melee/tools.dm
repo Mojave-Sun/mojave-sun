@@ -15,6 +15,10 @@
 	sharpness = SHARP_NONE
 	w_class = WEIGHT_CLASS_NORMAL
 
+/obj/item/ms13/hammer/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
+
 /obj/item/shovel/ms13
 	name = "shovel"
 	desc = "A shovel for digging up the ground, commonly used for farming or gravedigging."
@@ -30,6 +34,10 @@
 	attack_verb_simple = list("smack", "slash", "jab", "slap", "pound", "beat", "bonk", "dig")
 	sharpness = SHARP_NONE
 	w_class = WEIGHT_CLASS_BULKY
+
+/obj/item/shovel/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
 
 /obj/item/shovel/ms13/spade
 	name = "spade"
@@ -80,6 +88,10 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 15 //brick
 
+/obj/item/ms13/brick/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
+
 /obj/item/flashlight/flare/ms13
 	name = "flare"
 	desc = "A red Nanotrasen issued flare. There are instructions on the side, it reads 'pull cord, make light'."
@@ -89,3 +101,7 @@
 	icon_state = "flare"
 	inhand_icon_state = "flare"
 	light_range = 5 // Somewhat bright.
+
+/obj/item/flashlight/flare/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
