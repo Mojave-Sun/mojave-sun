@@ -4,7 +4,7 @@
     name = "suture"
     singular_name = "use" //This is so that examine text says "X uses left in the stack" instead of "X SUTURES left in the stack"
     desc = "A medical suture. Safety of usage is not guarenteed for something like this with questionable sterility."
-    icon = 'mojave/icons/objects/medical.dmi'
+    icon = 'mojave/icons/objects/medical/medical_world.dmi'
     icon_state = "suture"
     w_class = WEIGHT_CLASS_SMALL
     full_w_class = WEIGHT_CLASS_SMALL
@@ -14,6 +14,10 @@
     other_delay = 20
     gender = NEUTER //So examine text says "This is a suture" instead of "These are some suture"
 
+/obj/item/stack/medical/suture/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/medical/medical_inventory.dmi')
+
 /obj/item/stack/medical/suture/ms13/half
     amount = 6
 
@@ -21,7 +25,7 @@
     name = "ointment"
     desc = "A bottle of cream meant to be applied to burn wounds. Sanitizes and aids in the healing process of burn related injuries."
     singular_name = "burn cream"
-    icon = 'mojave/icons/objects/medical.dmi'
+    icon = 'mojave/icons/objects/medical/medical_world.dmi'
     lefthand_file = 'mojave/icons/mob/inhands/items_lefthand.dmi'
     righthand_file = 'mojave/icons/mob/inhands/items_righthand.dmi'
     icon_state = "ointment"
@@ -34,6 +38,10 @@
     heal_burn = 15
     flesh_regeneration = 2
     sanitization = 1.25
+
+/obj/item/stack/medical/ointment/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/medical/medical_inventory.dmi')
 
 /obj/item/stack/medical/ointment/ms13/half
 	amount = 5
@@ -62,7 +70,7 @@
     name = "bandage"
     desc = "A roll of cloth intended for soaking up blood from bleeding wounds, or mildly supporting a broken bone."
     singular_name = "rolls of gauze"
-    icon = 'mojave/icons/objects/medical.dmi'
+    icon = 'mojave/icons/objects/medical/medical_world.dmi'
     lefthand_file = 'mojave/icons/mob/inhands/items_lefthand.dmi'
     righthand_file = 'mojave/icons/mob/inhands/items_righthand.dmi'
     icon_state = "bandage"
@@ -74,6 +82,10 @@
     absorption_rate = 0.2
     absorption_capacity = 4
     splint_factor = 0.5
+
+/obj/item/stack/medical/gauze/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/medical/medical_inventory.dmi')
 
 /obj/item/stack/medical/gauze/ms13/half
     amount = 8
