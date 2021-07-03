@@ -479,6 +479,7 @@
 	icon_state = "concrete_barrier"
 	anchored = TRUE
 	hasaltstates = TRUE
+	climbable = TRUE
 	max_integrity = 550
 	altstates = 5
 	proj_pass_rate = 45
