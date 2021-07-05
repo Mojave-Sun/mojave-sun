@@ -35,11 +35,18 @@
 /obj/structure/ms13/bars/corner
 	icon_state = "barscorner"
 
+/obj/structure/ms13/bars/slot
+	icon_state = "barsslot"
+	barpasschance = 90
+
 /obj/structure/ms13/bars/rusty
 	icon_state = "bars_rust"
 
 /obj/structure/ms13/bars/corner/rusty
 	icon_state = "barscorner_rust"
+
+/obj/structure/ms13/bars/slot/rusty
+	icon_state = "barsslot_rust"
 
 /obj/structure/ms13/bars/corner/CanAllowThrough(atom/movable/mover, turf/target)
 	. = ..()
@@ -444,6 +451,57 @@
 	if (O.loc == loc)
 		return 1
 	return !density
+
+//Road Barriers
+
+/obj/structure/ms13/road_barrier
+	name = "road barrier"
+	desc = "A light and portable road barrier, used to direct traffic and stop people from going to dead ends."
+	icon = 'mojave/icons/obstacles/barriers.dmi'
+	icon_state = "road_barrier"
+	density = TRUE
+	anchored = FALSE
+	max_integrity = 150
+	var/hasaltstates = FALSE
+	var/altstates = 0
+	var/proj_pass_rate = 85
+
+/obj/structure/ms13/road_barrier/Initialize()
+	. = ..()
+	if(!hasaltstates)
+		return
+
+	if(prob(45))
+		icon_state = "[initial(icon_state)]_[rand(1,(altstates))]"
+
+/obj/structure/ms13/road_barrier/concrete
+	desc = "A heavy duty concrete road barrier, used to direct traffic and prevent going off the lane. Great to take cover behind."
+	icon_state = "concrete_barrier"
+	anchored = TRUE
+	hasaltstates = TRUE
+	climbable = TRUE
+	max_integrity = 550
+	altstates = 5
+	proj_pass_rate = 45
+
+/obj/structure/ms13/road_barrier/concrete/alt
+	desc = "A heavy duty concrete road barrier featuring a pattern that to this day is still somewhat vibrant. Used to direct traffic and prevent going off the lane."
+	icon_state = "concrete_barrier_alt"
+	altstates = 1
+
+/obj/structure/ms13/road_barrier/concrete/CanAllowThrough(atom/movable/mover, turf/target)
+	. = ..()
+	if(locate(/obj/structure/ms13/road_barrier/concrete) in get_turf(mover))
+		return TRUE
+	else if(istype(mover, /obj/projectile))
+		if(!anchored)
+			return TRUE
+		var/obj/projectile/proj = mover
+		if(proj.firer && Adjacent(proj.firer))
+			return TRUE
+		if(prob(proj_pass_rate))
+			return TRUE
+		return FALSE
 
 //Industrial handrails
 
