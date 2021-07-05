@@ -79,7 +79,7 @@
 
 /obj/item/spear/explosive/ms13/Initialize(mapload)
 	. = ..()
-	set_explosive(new /obj/item/grenade/frag/ms13)
+	set_explosive(new /obj/item/grenade/frag/ms13/charge)
 	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
 	desc = "A long stick, with an explosive charge stuck on the end. Point towards enemy!" // Overwrites the TG one that would otherwise be here due to initialization.
 
