@@ -15,6 +15,10 @@
 	sharpness = SHARP_EDGED
 	log_pickup_and_drop = TRUE
 
+/obj/item/claymore/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
+
 /obj/item/claymore/ms13/machete/gladius
 	name = "machete gladius"
 	desc = "A forged steel machete, the blade has been laborously sharpened and the weight has been evenly distributed for maximum killing power. An image of a bull is burned into the wooden handle."
@@ -37,6 +41,10 @@
 	armour_penetration = 10
 	wound_bonus = 5
 	bare_wound_bonus = 20
+
+/obj/item/katana/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
 
 /obj/item/katana/ms13/alt
 	icon_state = "katana_black"

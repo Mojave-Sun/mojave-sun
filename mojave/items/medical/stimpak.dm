@@ -1,7 +1,7 @@
 /obj/item/reagent_containers/hypospray/medipen/stimpak
 	name = "stimpak"
 	desc = "A basic stimpak. It's a quick and easy way to ensure you continue to live as long as you avoid battle while your wounds mend."
-	icon = 'mojave/icons/objects/medical.dmi'
+	icon = 'mojave/icons/objects/medical/medical_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/items_righthand.dmi'
 	icon_state = "stim"
@@ -10,6 +10,10 @@
 	amount_per_transfer_from_this = 10
 	list_reagents = list(/datum/reagent/medicine/stimpak_fluid = 10)
 	ignore_flags = 0
+
+/obj/item/reagent_containers/hypospray/medipen/stimpak/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/medical/medical_inventory.dmi')
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/update_icon_state()
 	if(reagents.total_volume > 0)
