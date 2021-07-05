@@ -4,6 +4,7 @@
 	icon = 'mojave/icons/structure/streetpoles.dmi'
 	icon_state = "streetlight"
 	anchored = TRUE
+	density = TRUE
 	max_integrity = 2000
 	pixel_x = -32
 	layer = ABOVE_ALL_MOB_LAYER
