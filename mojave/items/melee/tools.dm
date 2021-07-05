@@ -89,3 +89,32 @@
 	icon_state = "flare"
 	inhand_icon_state = "flare"
 	light_range = 5 // Somewhat bright.
+
+/obj/item/flashlight/flare/torch/ms13
+	name = "torch"
+	desc = "A torch fashioned from some leaves and a log."
+	w_class = WEIGHT_CLASS_BULKY
+	light_range = 4
+	light_color = LIGHT_COLOR_FIRE
+
+/obj/item/flashlight/flare/torch/ms13/attack_self(mob/user)
+	if(!src.on)
+		to_chat(user, "<span class='notice'>You start pushing [src] into the ground...</span>")
+		if (do_after(user, 5 SECONDS, target=src))
+			qdel(src)
+			new /obj/structure/ms13/torch(get_turf(user))
+			user.visible_message("<span class='notice'>[user] plants \the [src] firmly in the ground.</span>", "<span class='notice'>You plant \the [src] firmly in the ground.</span>")
+			return
+	else if(on)
+		user.visible_message(
+			"<span class='notice'>[user] snuffs [src] out.</span>")
+		on = FALSE
+		set_light(0)
+
+/obj/item/flashlight/flare/torch/ms13/attackby(obj/item/W, mob/user, params)
+	. = ..()
+	if(W.ignition_effect())
+		update_brightness()
+		update_icon()
+		user.visible_message("<span class='notice'>[user] lights [src] with [W].</span>", "<span class='notice'>You light [src] with [W].</span>")
+		return
