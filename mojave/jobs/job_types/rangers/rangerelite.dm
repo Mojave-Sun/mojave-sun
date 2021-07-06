@@ -1,9 +1,9 @@
 /datum/job/ms13/ranger/elite
-	title = "Ranger"
-	total_positions = 5
-	spawn_positions = 5
-	supervisors = "Elite Rangers, The Deputy-Chief"
-	description = "Ensure peace in the region, Follow the word of the Deputy-Chief."
+	title = "Elite Ranger"
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "The Deputy-Chief"
+	description = "Ensure peace in the region, Collaborate with other Rangers and lead them as need be. Follow the word of the Deputy-Chief."
 
 	outfit = /datum/outfit/job/ms13/ranger/elite
 
