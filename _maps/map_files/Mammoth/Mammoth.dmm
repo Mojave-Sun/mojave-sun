@@ -12074,9 +12074,11 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "gDx" = (
-/obj/structure/table/low_wall/brick/alt,
-/turf/open/floor/plating/ground/mountain,
-/area/ms13)
+/obj/machinery/light/broken{
+	dir = 1
+	},
+/turf/open/floor/plasteel/ms13/tile/blue/long,
+/area/ms13/sunny_dale)
 "gDF" = (
 /obj/structure/ms13/storage/shelf{
 	dir = 4
@@ -13216,8 +13218,7 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "hlw" = (
-/obj/structure/table/low_wall/brick/alt,
-/turf/open/floor/plating,
+/turf/open/floor/wood/ms13/carpet,
 /area/ms13)
 "hlO" = (
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
@@ -19063,11 +19064,7 @@
 /area/ms13/sunny_dale)
 "ktb" = (
 /obj/structure/closet/crate/ms13/vault_tec/compact,
-/obj/item/reagent_containers/hypospray/medipen/stimpack,
-/obj/item/reagent_containers/hypospray/medipen/stimpack,
-/obj/machinery/light/broken{
-	dir = 1
-	},
+/obj/effect/spawner/lootdrop/ms13/medical/tier2,
 /turf/open/floor/plasteel/ms13/tile/blue/long,
 /area/ms13/sunny_dale)
 "kth" = (
@@ -19771,6 +19768,7 @@
 /obj/structure/table/ms13/metal,
 /obj/item/reagent_containers/glass/mortar,
 /obj/item/pestle,
+/obj/structure/safe/ms13/wall,
 /turf/open/floor/plasteel/ms13/tile/blue/long,
 /area/ms13/sunny_dale)
 "kMf" = (
@@ -20260,10 +20258,9 @@
 /turf/open/floor/plasteel/ms13/concrete/industrial/walkway,
 /area/ms13/underground/subway)
 "kYb" = (
-/obj/structure/table/ms13/metal,
-/obj/structure/safe/ms13/wall,
-/turf/open/floor/plasteel/ms13/tile/blue/long,
-/area/ms13/sunny_dale)
+/obj/structure/table_frame,
+/turf/open/floor/wood/ms13/common,
+/area/ms13)
 "kYf" = (
 /obj/structure/closet,
 /obj/item/clothing/under/ms13/wasteland/manager,
@@ -23294,7 +23291,8 @@
 /turf/open/floor/plasteel/ms13/metal,
 /area/ms13/sunny_dale)
 "mHs" = (
-/turf/closed/wall/ms13/brick,
+/obj/effect/decal/cleanable/glass,
+/turf/open/floor/wood/ms13/common,
 /area/ms13)
 "mHy" = (
 /obj/structure/filingcabinet/chestdrawer{
@@ -23748,7 +23746,7 @@
 "mVS" = (
 /obj/structure/table_frame,
 /turf/open/floor/plating/rust,
-/area/ms13)
+/area/ms13/sunny_dale)
 "mWc" = (
 /obj/structure/spacevine{
 	name = "vines"
@@ -28647,7 +28645,7 @@
 /obj/effect/decal/cleanable/ash,
 /obj/structure/ms13/foundation/variantfour,
 /turf/open/openspace/ms13_no_build,
-/area/ms13/sunny_dale)
+/area/ms13)
 "pEF" = (
 /obj/structure/table/ms13/metal,
 /obj/item/phone,
@@ -29280,7 +29278,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood/ms13/carpet,
-/area/ms13/sunny_dale)
+/area/ms13)
 "pWt" = (
 /obj/item/toy/beach_ball/holoball,
 /turf/open/floor/plating/ground/road,
@@ -30004,7 +30002,7 @@
 "qry" = (
 /obj/structure/table_frame,
 /turf/open/floor/wood/ms13/carpet,
-/area/ms13/sunny_dale)
+/area/ms13)
 "qrR" = (
 /obj/structure/chair/comfy/ms13/retro{
 	dir = 8
@@ -32108,7 +32106,7 @@
 /obj/effect/mob_spawn/human/corpse/charredskeleton,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/wood/ms13/carpet,
-/area/ms13/sunny_dale)
+/area/ms13)
 "rrt" = (
 /obj/structure/fence/fencedoor,
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
@@ -32146,7 +32144,7 @@
 "rrQ" = (
 /obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/wood/ms13/common,
-/area/ms13/sunny_dale)
+/area/ms13)
 "rsh" = (
 /obj/structure/closet/cardboard,
 /obj/item/storage/box/lights/mixed,
@@ -38776,6 +38774,10 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
+"uYO" = (
+/obj/effect/decal/cleanable/glass,
+/turf/open/floor/plating/ground/sidewalk,
+/area/ms13/sunny_dale)
 "uYR" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/wood/ms13/common,
@@ -39600,7 +39602,7 @@
 "vzd" = (
 /obj/item/stack/cable_coil/cut,
 /turf/open/floor/wood/ms13/carpet,
-/area/ms13/sunny_dale)
+/area/ms13)
 "vzm" = (
 /turf/open/floor/plasteel/ms13/metal/grate/border/warning,
 /area/ms13/underground/underground_town)
@@ -41421,7 +41423,7 @@
 "wwv" = (
 /obj/effect/decal/cleanable/ash,
 /turf/open/floor/wood/ms13/carpet,
-/area/ms13/sunny_dale)
+/area/ms13)
 "wwx" = (
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plasteel/ms13/tile/long,
@@ -163499,7 +163501,7 @@ pwP
 nEo
 pgo
 rrs
-dZx
+hlw
 vzd
 dZx
 ufd
@@ -163799,10 +163801,10 @@ bfZ
 bfZ
 hJk
 ocF
-dZx
-dZx
-rty
-rty
+hlw
+hlw
+tYs
+tYs
 wwv
 dZx
 dZx
@@ -164105,7 +164107,7 @@ tYs
 rrQ
 sDp
 vII
-rty
+tYs
 pWh
 dZx
 kUy
@@ -164408,7 +164410,7 @@ rNq
 aab
 aab
 pEo
-kAk
+kYb
 qry
 kUy
 uya
@@ -164710,8 +164712,8 @@ aab
 aab
 aab
 wMg
-rty
-dZx
+tYs
+hlw
 qDl
 uya
 aDo
@@ -165003,7 +165005,7 @@ kwJ
 aDo
 aDo
 msS
-raj
+uEy
 gHB
 raj
 olH
@@ -165012,7 +165014,7 @@ aab
 aab
 aab
 wMg
-rty
+tYs
 wwv
 kUy
 uya
@@ -165305,7 +165307,7 @@ kwJ
 aDo
 aDo
 raj
-mHs
+pwP
 mUX
 nmQ
 owj
@@ -165314,7 +165316,7 @@ qqm
 aab
 aab
 tYs
-tvH
+mHs
 dZx
 kUy
 uya
@@ -165607,7 +165609,7 @@ kwJ
 aDo
 aDo
 uya
-mHs
+pwP
 mVR
 nmu
 nFa
@@ -165909,7 +165911,7 @@ kwJ
 aDo
 aDo
 uya
-mHs
+pwP
 mVS
 oJF
 msL
@@ -165917,7 +165919,7 @@ raj
 oJF
 oJF
 pvY
-raj
+uEy
 dZx
 qrR
 pwP
@@ -166211,14 +166213,14 @@ kwJ
 aDo
 aDo
 uya
-gDx
-hlw
-hlw
-yhy
+pwP
+ukT
+ukT
+jIO
 nFa
-yhy
-hlw
-hlw
+jIO
+ukT
+ukT
 pwP
 pwP
 pwP
@@ -166815,7 +166817,7 @@ kwJ
 aDo
 aDo
 uIF
-jIO
+ukT
 ktb
 dDn
 dDn
@@ -166825,7 +166827,7 @@ dDn
 pNo
 dDn
 ukT
-bfZ
+uYO
 bfZ
 uya
 aDo
@@ -167116,9 +167118,9 @@ aDo
 kwJ
 aDo
 aDo
-uya
-jIO
-kYb
+uIF
+ukT
+pzl
 dDn
 nFw
 pzl
@@ -167127,7 +167129,7 @@ dDn
 son
 son
 ukT
-bfZ
+uYO
 bfZ
 uya
 aDo
@@ -167418,8 +167420,8 @@ aDo
 kwJ
 aDo
 aDo
-uIF
-ukT
+uya
+jIO
 kLW
 nGo
 pzl
@@ -167721,7 +167723,7 @@ kwJ
 aDo
 aDo
 uya
-ukT
+gPU
 dDn
 dDn
 dDn
@@ -168023,8 +168025,8 @@ kwJ
 aDo
 aDo
 uya
-gPU
-dDn
+jIO
+gDx
 son
 son
 dDn
@@ -169232,14 +169234,14 @@ aDo
 aDo
 uya
 jIO
-ukT
-ukT
-ukT
 jIO
 jIO
-ukT
-ukT
-ukT
+jIO
+jIO
+jIO
+jIO
+jIO
+jIO
 jIO
 bfZ
 jIO
@@ -169536,12 +169538,12 @@ uya
 uya
 uya
 uya
-uIF
 uya
 uya
 uya
-uIF
-uIF
+uya
+uya
+uya
 uya
 uya
 uya
@@ -175846,7 +175848,7 @@ gpS
 iGU
 aEV
 aEV
-aEV
+ecB
 iKH
 uya
 aDo
@@ -235979,9 +235981,9 @@ yiW
 yiW
 yiW
 yiW
-yiW
-yiW
-yiW
+aab
+aab
+aab
 yiW
 yiW
 yiW
@@ -236283,8 +236285,8 @@ yiW
 aab
 aab
 aab
-yiW
-yiW
+aab
+aab
 yiW
 yiW
 yiW
@@ -236586,8 +236588,8 @@ aab
 aab
 aab
 aab
-yiW
-yiW
+aab
+aab
 yiW
 yiW
 aab
@@ -236888,9 +236890,9 @@ aab
 aab
 aab
 aab
-yiW
-yiW
-yiW
+aab
+aab
+aab
 yiW
 aab
 aab
@@ -237191,8 +237193,8 @@ aab
 aab
 aab
 aab
-yiW
-yiW
+aab
+aab
 yiW
 aab
 aab
@@ -237484,17 +237486,17 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
 yiW
-yiW
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 yiW
 aab
 aab
@@ -237786,16 +237788,16 @@ aab
 aab
 aab
 aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
-aab
 yiW
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
+aab
 yiW
 yiW
 aab
@@ -238088,7 +238090,7 @@ aab
 aab
 aab
 aab
-aab
+yiW
 aab
 aab
 aab
@@ -238390,8 +238392,8 @@ aab
 aab
 aab
 aab
-aab
-aab
+yiW
+yiW
 aab
 aab
 aab
@@ -238692,12 +238694,12 @@ aab
 aab
 aab
 aab
+yiW
+yiW
+yiW
+yiW
 aab
-aab
-aab
-aab
-aab
-aab
+yiW
 yiW
 yiW
 yiW
@@ -238996,8 +238998,8 @@ aab
 aab
 yiW
 yiW
-aab
-aab
+yiW
+yiW
 yiW
 yiW
 yiW
@@ -239601,12 +239603,12 @@ aab
 yiW
 yiW
 yiW
-yiW
-yiW
-yiW
-yiW
-yiW
-yiW
+ixX
+ixX
+ixX
+ixX
+ixX
+ixX
 yiW
 yiW
 yiW
@@ -239903,12 +239905,12 @@ aab
 yiW
 yiW
 yiW
-yiW
-yiW
-yiW
-yiW
-yiW
-yiW
+ixX
+ixX
+ixX
+ixX
+ixX
+ixX
 yiW
 yiW
 yiW
@@ -241111,12 +241113,12 @@ aab
 yiW
 yiW
 yiW
-yiW
-yiW
-yiW
-yiW
-yiW
-yiW
+ixX
+ixX
+ixX
+ixX
+ixX
+ixX
 yiW
 yiW
 yiW
@@ -241413,12 +241415,12 @@ aab
 yiW
 yiW
 yiW
-yiW
-yiW
-yiW
-yiW
-yiW
-yiW
+ixX
+ixX
+ixX
+ixX
+ixX
+ixX
 yiW
 yiW
 yiW
