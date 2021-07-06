@@ -66,6 +66,13 @@
 	icon_state = "gasmask"
 	inhand_icon_state = "gasmask"
 	var/adjusted = FALSE
+	var/adjustable = TRUE
+
+/obj/item/clothing/mask/gas/ms13/ranger
+	desc = "A heavy duty gas mask, perfect for filtering the air of a very tainted world."
+	icon_state = "ranger_mask"
+	worn_icon_state = "ranger_mask"
+	adjustable = FALSE
 
 /obj/item/clothing/mask/gas/ms13/Initialize()
 	. = ..()
@@ -76,6 +83,10 @@
 
 /obj/item/clothing/mask/gas/ms13/proc/toggle_mask_style(mob/living/user)
 	adjusted = !adjusted
+
+	if(!adjustable)
+		return
+
 	if(adjusted)
 		alternate_worn_layer = ABOVE_BODY_FRONT_LAYER
 		to_chat(user, "<span class='notice'>You adjust the [src] to go over your headwear.</span>")

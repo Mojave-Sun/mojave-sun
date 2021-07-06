@@ -22,7 +22,7 @@
 	name = "combat knife"
 	desc = "A well made, serrated combat knife. Very effective at wounding. It's got a light frame, with a rifle lug to potentially attach to a matching rifle."
 	icon_state = "knife_bayonet"
-	inhand_icon_state = "knife_kitchen"
+	inhand_icon_state = "knife_bayonet"
 	force = 25
 	armour_penetration = 10
 	wound_bonus = 4
@@ -31,7 +31,7 @@
 /obj/item/kitchen/knife/ms13/combat/soviet
 	desc = "A slick, straight back combat knife, with a pleasant wrapped leather handle, and faint engraving labeled NKVD."
 	icon_state = "knife_soviet"
-	inhand_icon_state = "knife_kitchen"
+	inhand_icon_state = "knife_soviet"
 	force = 30
 	armour_penetration = 15
 	wound_bonus = 5

@@ -14,6 +14,8 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+// Caps //
+
 /obj/item/clothing/head/helmet/ms13/baseball
 	name = "baseball cap"
 	desc = "A classic baseball cap. A relic from pre-nuclear America."
@@ -41,71 +43,7 @@
 	desc = "An old utility cap. This one's got a nice beige colour to it."
 	icon_state = "utility_tsoft"
 
-/obj/item/clothing/head/helmet/ms13/hockey
-	name = "hockey mask"
-	desc = "A standard hockey mask. Old sports gear is common protective gear in the wastes."
-	icon_state = "hockey_mask"
-	inhand_icon_state = "hockey_mask"
-	armor = list("melee" = 40, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
-
-/obj/item/clothing/head/helmet/ms13/vaulthelmet
-	name = "vault security helmet"
-	desc = "A rather pristine vault-tec officer's helmet. Surprisingly intact."
-	icon_state = "vaulthelmet"
-	inhand_icon_state = "helmet"
-	armor = list(melee = 45, bullet = 15, laser = 20, energy = 20, bomb = 35, bio = 10, rad = 10, fire = 30, acid = 10)
-	flags_inv = HIDEEARS|HIDEHAIR
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-
-/obj/item/clothing/head/helmet/ms13/wastehound
-	name = "wastehound raider helmet"
-	desc = "Raider helmet with a bit of kevlar padding. Good for stopping bullets, but not much else."
-	icon_state = "wastehound"
-	inhand_icon_state = "wastehound"
-	armor = list(melee = 20, bullet = 35, laser = 5, energy = 5, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-
-/obj/item/clothing/head/helmet/ms13/blastmaster
-	name = "blastmaster raider helmet"
-	desc = "An old fireman's helmet repurposed by raiders to be more intimidating and more protective."
-	icon_state = "blastmaster"
-	inhand_icon_state = "blastmaster"
-	armor = list(melee = 30, bullet = 25, laser = 5, energy = 5, bomb = 25, bio = 10, rad = 10, fire = 20, acid = 10)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-
-/obj/item/clothing/head/helmet/ms13/psychotic
-	name = "pyscho-tic raider helmet"
-	desc = "A padded leather raider helmet."
-	icon_state = "psychotic"
-	inhand_icon_state = "psychotic"
-	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-
-/obj/item/clothing/head/helmet/ms13/arclight
-	name = "arclight raider helmet"
-	desc = "A welding mask with added protection, typically used by raiders."
-	icon_state = "arclight"
-	inhand_icon_state = "arclight"
-	armor = list("melee" = 40, "bullet" = 20, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 15, "acid" = 10)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
-
-/obj/item/clothing/head/helmet/ms13/yankee
-	name = "yankee raider helmet"
-	desc = "A sports helmet used by raiders for it's protective qualities, even if it isn't very good at stopping bullets."
-	icon_state = "yankee"
-	inhand_icon_state = "yankee"
-	armor = list("melee" = 40, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
+// Misc Hats/Helmets, idk. //
 
 /obj/item/clothing/head/helmet/riot/ms13
 	name = "riot helmet"
@@ -167,13 +105,6 @@
 	icon_state = "heeledhat"
 	inhand_icon_state = "det_hat"
 
-/obj/item/clothing/head/helmet/ms13/cowboy/padded
-	name = "padded cowboy hat"
-	desc = "A larger cowboy hat with additional padding for more protection."
-	icon_state = "cowboylarge"
-	inhand_icon_state = "cowboylarge"
-	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
-
 /obj/item/clothing/head/helmet/ms13/cowboy/padded/ushanka
 	name = "ushanka hat"
 	desc = "An ushanka hat with additional protective padding. Can protect your head from the cold and from taking some real damage!"
@@ -189,6 +120,14 @@
 	inhand_icon_state = "hubologist"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 
+/obj/item/clothing/head/helmet/ms13/utilitycap/deputy
+	name = "deputy's cap"
+	desc = "A formal refurbished pre-war cap. It's got a faded logo in the inner rim."
+	icon_state = "deputycap"
+	inhand_icon_state = "deputycap"
+
+// Random Hats //
+
 /obj/item/clothing/head/helmet/ms13/cowboy/reinf
 	name = "reinforced cowboy hat"
 	desc = "A black cowboy hat reinforced with even more leather padding and a bit of metal, for good measure."
@@ -196,11 +135,12 @@
 	inhand_icon_state = "reinfcowboy"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 
-/obj/item/clothing/head/helmet/ms13/utilitycap/deputy
-	name = "deputy's cap"
-	desc = "A formal refurbished pre-war cap. It's got a faded logo in the inner rim."
-	icon_state = "deputycap"
-	inhand_icon_state = "deputycap"
+/obj/item/clothing/head/helmet/ms13/cowboy/padded
+	name = "padded cowboy hat"
+	desc = "A larger cowboy hat with additional padding for more protection."
+	icon_state = "cowboylarge"
+	inhand_icon_state = "cowboylarge"
+	armor = list(melee = 25, bullet = 20, laser = 5, energy = 5, bomb = 10, bio = 5, rad = 5, fire = 5, acid = 5)
 
 /obj/item/clothing/head/helmet/ms13/cowboy/sheriff
 	name = "sheriff's hat"
@@ -239,6 +179,8 @@
 	icon_state = "retropolice"
 	inhand_icon_state = "retropolice"
 
+// Random Wasteland helmets //
+
 /obj/item/clothing/head/helmet/ms13/cowboy/reinf/motorcycle
 	name = "motorcycle helmet"
 	desc = "A typical motorcycle helmet. Decent protection overall."
@@ -267,16 +209,6 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
-/obj/item/clothing/head/helmet/ms13/tesla
-	name = "tesla helmet"
-	desc = "A pre-war helmet specialized for going head to head against laser and energy weapons."
-	icon_state = "tesla_helmet"
-	inhand_icon_state = "tesla_helmet"
-	armor = list("melee" = 35, "bullet" = 15, "laser" = 45, "energy" = 45, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
-	dynamic_hair_suffix = ""
-	dynamic_fhair_suffix = ""
-
 /obj/item/clothing/head/helmet/ms13/military
 	name = "military helmet"
 	desc = "A bulletproof helmet used by certain pre-war military forces."
@@ -285,6 +217,14 @@
 	armor = list(melee = 30, bullet = 50, laser = 15, energy = 15, bomb = 40, bio = 20, rad = 20, fire = 40, acid = 20)
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/ms13/manny
+	name = "\improper Manny Mammoth head"
+	desc = "A perfectly preserved pre-war VINTAGE Manny Mammoth head! It smells of crusty pizza."
+	icon_state = "mannyhead"
+	inhand_icon_state = "mannyhead"
+
+// Raider Helmets //
 
 /obj/item/clothing/head/helmet/ms13/military/raider
 	name = "hooded mask"
@@ -297,6 +237,65 @@
 	desc = "A sturdy mask sewn straight into a thick fur hat. Nice and cozy. "
 	icon_state = "ushankaraider"
 	inhand_icon_state = "bulletproof"
+
+/obj/item/clothing/head/helmet/ms13/wastehound
+	name = "wastehound raider helmet"
+	desc = "Raider helmet with a bit of kevlar padding. Good for stopping bullets, but not much else."
+	icon_state = "wastehound"
+	inhand_icon_state = "wastehound"
+	armor = list(melee = 20, bullet = 35, laser = 5, energy = 5, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/ms13/blastmaster
+	name = "blastmaster raider helmet"
+	desc = "An old fireman's helmet repurposed by raiders to be more intimidating and more protective."
+	icon_state = "blastmaster"
+	inhand_icon_state = "blastmaster"
+	armor = list(melee = 30, bullet = 25, laser = 5, energy = 5, bomb = 25, bio = 10, rad = 10, fire = 20, acid = 10)
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/ms13/psychotic
+	name = "pyscho-tic raider helmet"
+	desc = "A padded leather raider helmet."
+	icon_state = "psychotic"
+	inhand_icon_state = "psychotic"
+	armor = list(melee = 35, bullet = 25, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/ms13/hockey
+	name = "hockey mask"
+	desc = "A standard hockey mask. Old sports gear is common protective gear in the wastes."
+	icon_state = "hockey_mask"
+	inhand_icon_state = "hockey_mask"
+	armor = list("melee" = 40, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+
+/obj/item/clothing/head/helmet/ms13/arclight
+	name = "arclight raider helmet"
+	desc = "A welding mask with added protection, typically used by raiders."
+	icon_state = "arclight"
+	inhand_icon_state = "arclight"
+	armor = list("melee" = 40, "bullet" = 20, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 10, "rad" = 10, "fire" = 15, "acid" = 10)
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+
+/obj/item/clothing/head/helmet/ms13/yankee
+	name = "yankee raider helmet"
+	desc = "A sports helmet used by raiders for it's protective qualities, even if it isn't very good at stopping bullets."
+	icon_state = "yankee"
+	inhand_icon_state = "yankee"
+	armor = list("melee" = 40, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 25, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+
+// Combat Helmets //
 
 /obj/item/clothing/head/helmet/ms13/combat
 	name = "combat helmet"
@@ -322,6 +321,8 @@
 	inhand_icon_state = "combathelmet_mk2"
 	armor = list("melee" = 55, "bullet" = 45, "laser" = 30, "energy" = 10, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 80, "acid" = 25)
 
+// Special Helmets //
+
 /obj/item/clothing/head/helmet/ms13/stealth
 	name = "stealth suit helmet"
 	desc = "A stealth suit's helmet. With a menacing orange visor, the victim will never have the pleasure of locking eye contact."
@@ -329,6 +330,16 @@
 	inhand_icon_state = "stealthhelmet"
 	armor = list("melee" = 25, "bullet" = 15, "laser" = 15, "energy" = 10, "bomb" = 5, "bio" = 25, "rad" = 25, "fire" = 30, "acid" = 25)
 	flags_cover = HEADCOVERSEYES
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/ms13/tesla
+	name = "tesla helmet"
+	desc = "A pre-war helmet specialized for going head to head against laser and energy weapons."
+	icon_state = "tesla_helmet"
+	inhand_icon_state = "tesla_helmet"
+	armor = list("melee" = 35, "bullet" = 15, "laser" = 45, "energy" = 45, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
@@ -342,6 +353,18 @@
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/ms13/vaulthelmet
+	name = "vault security helmet"
+	desc = "A rather pristine vault-tec officer's helmet. Surprisingly intact."
+	icon_state = "vaulthelmet"
+	inhand_icon_state = "helmet"
+	armor = list(melee = 45, bullet = 15, laser = 20, energy = 20, bomb = 35, bio = 10, rad = 10, fire = 30, acid = 10)
+	flags_inv = HIDEEARS|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+// Enviro Helmets //
 
 /obj/item/clothing/head/helmet/ms13/firehood
 	name = "fireproof hood"
@@ -385,6 +408,8 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+// NCR Helmets //
+
 /obj/item/clothing/head/helmet/ms13/ncr
 	name = "\improper NCR infantry helmet"
 	desc = "A standard issue NCR infantry helmet adapted for arctic environments."
@@ -416,6 +441,8 @@
 /obj/item/clothing/head/helmet/ms13/ncr/beret/brown
 	icon_state = "ncr_officer_brberet"
 	inhand_icon_state = "ncr_officer_brberet"
+
+// Legion Helmets //
 
 /obj/item/clothing/head/helmet/ms13/legion/vexillarius
 	name = "vexillarius headdress"
@@ -502,14 +529,29 @@
 	inhand_icon_state = "owl_mask"
 	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 20, "bomb" = 15, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 20)
 
-/obj/item/clothing/head/helmet/ms13/manny
-	name = "\improper Manny Mammoth head"
-	desc = "A perfectly preserved pre-war VINTAGE Manny Mammoth head! It smells of crusty pizza."
-	icon_state = "mannyhead"
-	inhand_icon_state = "mannyhead"
+// Brotherhood Helmets //
 
 /obj/item/clothing/head/helmet/ms13/combat/bos
 	name = "\improper BoS combat helmet"
 	desc = "A hard, custom built helmet issued to Brotherhood troops."
 	icon_state = "bos_helmet"
 	inhand_icon_state = "bos_helmet"
+
+// Desert Ranger Helmets/Hats //
+
+/obj/item/clothing/head/helmet/ms13/eliteriot/ranger
+	name = "elite riot helmet"
+	desc = "An advanced helmet originally used by elite pre-war riot control units."
+	icon_state = "riotgearhelmet"
+	inhand_icon_state = "riotgearhelmet"
+	armor = list("melee" = 60, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/ms13/cowboy/ranger
+	name = "Ranger hat"
+	desc = "A sylish hat, often worn by Desert Rangers. Made with some pretty thick leather."
+	icon_state = "ranger_hat"
+	worn_icon_state = "ranger_hat"
+	armor = list(melee = 25, bullet = 15, laser = 10, energy = 10, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
