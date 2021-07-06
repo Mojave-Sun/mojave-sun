@@ -10,9 +10,10 @@
 	display_order = JOB_DISPLAY_ORDER_MS13_RANGERELITE
 
 /datum/outfit/job/ms13/ranger/elite
-	name = "_Ranger"
+	name = "_Ranger Elite"
 	jobtype = 	 /datum/job/ms13/ranger/elite
 	head = 		 /obj/item/clothing/head/helmet/ms13/cowboy/ranger
+	suit = 	  	 /obj/item/clothing/suit/armor/ms13/eliteriot/ranger
 	id = 		 /obj/item/card/id/ms13/ranger
 	backpack_contents = list(
 		/obj/item/ammo_box/ms13/tube44=2, \

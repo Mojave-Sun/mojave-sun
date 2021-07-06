@@ -383,4 +383,4 @@
 	icon_state = "elite_ranger"
 	worn_icon_state = "elite_ranger"
 	inhand_icon_state = "riotgear"
-	armor = list("melee" = 60, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+	armor = list("melee" = 55, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
