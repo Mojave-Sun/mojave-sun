@@ -540,9 +540,9 @@
 // Desert Ranger Helmets/Hats //
 
 /obj/item/clothing/head/helmet/ms13/eliteriot/ranger
-	name = "elite riot helmet"
-	desc = "An advanced helmet originally used by elite pre-war riot control units."
-	icon_state = "riotgearhelmet"
+	name = "Ranger helmet"
+	desc = "An advanced helmet originally used by elite pre-war riot control units, now repurposed for the Desert Rangers"
+	icon_state = "elite_ranger"
 	inhand_icon_state = "riotgearhelmet"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR

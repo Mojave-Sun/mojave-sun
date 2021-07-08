@@ -12,9 +12,9 @@
 /datum/outfit/job/ms13/ranger/recruit
 	name = "_Ranger Recruit"
 	jobtype = 	 /datum/job/ms13/ranger/recruit
-	head = 		 /obj/item/clothing/head/helmet/ms13/cowboy/ranger
 	id = 		 /obj/item/card/id/ms13/ranger_recruit
 	suit_store = /obj/item/gun/ballistic/shotgun/ms13/lever/cowboy
+	belt = 		 /obj/item/gun/ballistic/revolver/ms13/rev357
 	backpack_contents = list(
 		/obj/item/ammo_box/ms13/tube357=2, \
 		/obj/item/kitchen/knife/ms13/hunting=1,\

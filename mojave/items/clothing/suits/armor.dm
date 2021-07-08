@@ -375,7 +375,7 @@
 	desc = "A set of Desert Ranger armor. The thick materials hold up well against attacks, while keeping the wearer agile."
 	icon_state = "patrol_armor"
 	worn_icon_state = "patrol_armor"
-	armor = list(melee = 35, bullet = 30, laser = 45, energy = 15, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 40, "acid" = 20)
 
 /obj/item/clothing/suit/armor/ms13/eliteriot/ranger
 	name = "Elite Ranger armor"
@@ -383,4 +383,4 @@
 	icon_state = "elite_ranger"
 	worn_icon_state = "elite_ranger"
 	inhand_icon_state = "riotgear"
-	armor = list("melee" = 55, "bullet" = 45, "laser" = 35, "energy" = 25, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+	armor = list("melee" = 60, "bullet" = 50, "laser" = 25, "energy" = 25, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)

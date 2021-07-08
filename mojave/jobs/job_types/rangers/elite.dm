@@ -12,13 +12,16 @@
 /datum/outfit/job/ms13/ranger/elite
 	name = "_Ranger Elite"
 	jobtype = 	 /datum/job/ms13/ranger/elite
-	head = 		 /obj/item/clothing/head/helmet/ms13/cowboy/ranger
+	head = 		 /obj/item/clothing/head/helmet/ms13/eliteriot/ranger
 	suit = 	  	 /obj/item/clothing/suit/armor/ms13/eliteriot/ranger
-	id = 		 /obj/item/card/id/ms13/ranger
+	belt =  	 /obj/item/gun/ballistic/revolver/ms13/rev44
+	id = 		 /obj/item/card/id/ms13/ranger_elite
+	r_pocket = 	 /obj/item/ammo_box/ms13/tube4570
+	suit_store = /obj/item/gun/ballistic/shotgun/ms13/lever/brush
 	backpack_contents = list(
-		/obj/item/ammo_box/ms13/tube44=2, \
+		/obj/item/ammo_box/ms13/tube44=2,\
 		/obj/item/kitchen/knife/ms13/combat=1,\
-		/obj/item/stack/medical/gauze=1,\
+		/obj/item/stack/medical/gauze/ms13=1,\
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1)
 
 /datum/outfit/job/ms13/ranger/elite/pre_equip(mob/living/carbon/human/H)

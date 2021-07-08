@@ -14,11 +14,13 @@
 	jobtype = 	 /datum/job/ms13/ranger/standard
 	head = 		 /obj/item/clothing/head/helmet/ms13/cowboy/ranger
 	suit = 	  	 /obj/item/clothing/suit/armor/ms13/combat/ranger
-	id = 		 /obj/item/card/id/ms13/ranger_elite
+	belt = 		 /obj/item/gun/ballistic/revolver/ms13/rev357
+	r_pocket = 	 /obj/item/ammo_box/ms13/tube357
+	id = 		 /obj/item/card/id/ms13/ranger
 	backpack_contents = list(
-		/obj/item/ammo_box/ms13/tube44=2, \
+		/obj/item/ammo_box/ms13/tube44=2,\
 		/obj/item/kitchen/knife/ms13/hunting=1,\
-		/obj/item/stack/medical/gauze=1)
+		/obj/item/stack/medical/gauze/ms13=1)
 
 /datum/outfit/job/ms13/ranger/standard/pre_equip(mob/living/carbon/human/H)
 	..()
