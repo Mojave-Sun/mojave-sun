@@ -1,4 +1,4 @@
-/datum/job/ms13/wasteland/bountyhunter
+/*/datum/job/ms13/wasteland/bountyhunter
 	title = "Bounty Hunter"
 	total_positions = 0
 	spawn_positions = 0
@@ -8,10 +8,11 @@
 	enforce = "Stick to the list."
 
 	outfit = /datum/outfit/job/ms13/wasteland/bountyhunter
+*/ //Uncommented until this fella is made a latespawn or something.//
 
 /datum/outfit/job/ms13/wasteland/bountyhunter
 	name = "_Bounty Hunter"
-	jobtype = /datum/job/ms13/wasteland/bountyhunter
+	//jobtype = /datum/job/ms13/wasteland/bountyhunter
 
 	head = 		 /obj/item/clothing/head/helmet/ms13/eliteriot/bountyhunter
 	suit = 		 /obj/item/clothing/suit/ms13/ljacket/bountyhunter
