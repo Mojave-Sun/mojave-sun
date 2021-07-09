@@ -30,3 +30,7 @@
 
 	suit_store = pick(/obj/item/gun/ballistic/revolver/ms13/rev44/rifle,\
 		/obj/item/gun/ballistic/shotgun/ms13/lever/trail)
+
+	uniform = pick(/obj/item/clothing/under/ms13/ranger,\
+		/obj/item/clothing/under/ms13/ranger/casual,\
+		/obj/item/clothing/under/ms13/ranger/patrol)

@@ -26,3 +26,7 @@
 
 /datum/outfit/job/ms13/ranger/deputychief/pre_equip(mob/living/carbon/human/H)
 	..()
+
+	uniform = pick(/obj/item/clothing/under/ms13/ranger,\
+		/obj/item/clothing/under/ms13/ranger/casual,\
+		/obj/item/clothing/under/ms13/ranger/patrol)

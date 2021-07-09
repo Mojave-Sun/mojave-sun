@@ -26,3 +26,7 @@
 	suit = pick(/obj/item/clothing/suit/ms13/vest,\
 		/obj/item/clothing/suit/ms13/vest/grey,\
 		/obj/item/clothing/suit/ms13/vest/cowboy)
+
+	uniform = pick(/obj/item/clothing/under/ms13/ranger,\
+		/obj/item/clothing/under/ms13/ranger/casual,\
+		/obj/item/clothing/under/ms13/ranger/patrol)
