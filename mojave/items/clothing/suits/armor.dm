@@ -212,6 +212,13 @@
 	inhand_icon_state = "riotgear"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 
+/obj/item/clothing/suit/ms13/ljacket/bountyhunter
+	name = "bounty hunter's jacket"
+	desc = "A unique fur lined leather coat featuring thick ballistic weave fibers through it. Built to hold up to the worse while retaining protection against the elements."
+	icon_state = "bountyhunter"
+	inhand_icon_state = "armoredwinterblack"
+	armor = list(melee = 55, bullet = 45, laser = 35, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 40, acid = 10)
+
 // Enviro Armor //
 
 /obj/item/clothing/suit/armor/ms13/firesuit

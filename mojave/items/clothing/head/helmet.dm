@@ -350,6 +350,7 @@
 	icon_state = "riotgearhelmet"
 	inhand_icon_state = "riotgearhelmet"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+	flags_cover = HEADCOVERSEYES|HEADCOVERSMOUTH
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
@@ -361,6 +362,16 @@
 	inhand_icon_state = "helmet"
 	armor = list(melee = 45, bullet = 15, laser = 20, energy = 20, bomb = 35, bio = 10, rad = 10, fire = 30, acid = 10)
 	flags_inv = HIDEEARS|HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/ms13/eliteriot/bountyhunter
+	name = "bounty hunter's helmet"
+	desc = "A highly customized advanced Riot helmet. Featuring a thick furred hat slipped over the helmet to keep insulation at an all-time high."
+	icon_state = "bountyhunter"
+	inhand_icon_state = "riotgearhelmet"
+	armor = list(melee = 50, bullet = 40, laser = 35, energy = 25, bomb = 50, bio = 25, rad = 30, fire = 50, acid = 25)
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
