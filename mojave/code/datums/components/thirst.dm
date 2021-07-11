@@ -64,7 +64,7 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 
 	//Last stage of dehydration, you're basicall going to die now
 	if(stage_of_dehydration == length(GLOB.dehydration_stage_alerts))
-		the_parent.adjustOxyLoss(3)
+		the_parent.adjustOxyLoss(1)
 		var/mob/living/carbon/the_carbon = the_parent
 		if(!istype(the_carbon))
 			return
@@ -72,7 +72,7 @@ GLOBAL_LIST_INIT(dehydration_stage_alerts, list(
 			var/obj/item/organ/O = i
 			if(O.organ_flags & ORGAN_SYNTHETIC)
 				continue
-			O.applyOrganDamage(2)
+			O.applyOrganDamage(0.5)
 
 ///Modifies thirst by modify_by VIA = curr_thirst + modify_by, clamps value to max_thirst or 0
 /datum/component/thirst/proc/modify_thirst(modify_by = 0)

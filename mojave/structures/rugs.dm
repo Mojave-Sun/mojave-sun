@@ -8,9 +8,13 @@
 	flags_1 = FLAMMABLE
 	anchored = TRUE
 	layer = BELOW_OPEN_DOOR_LAYER
+	bound_height = 64
+	bound_width = 64
 	var/item_rug = /obj/item/ms13/rug
 	COOLDOWN_DECLARE(rug_cooldown)
 	var/rolltime = 15 SECONDS
+	var/has_alt_states = FALSE // Currenlty just rubber rugs. Could be more in the future. dunno.
+	var/alternate_states
 	var/list/remarks = list(
 	"Why won't it stay straight..?",
 	"Come on you piece of...",
@@ -23,6 +27,12 @@
 	"Keep flopping and I'll use you as fuel!",
 	"This is hardly worth it...") //Time to get mad.
 
+/obj/structure/ms13/rug/Initialize()
+	. = ..()
+	if(has_alt_states)
+		if(prob(85))
+			icon_state = "[icon_state]_[rand(1,(alternate_states))]"
+
 /obj/structure/ms13/rug/MouseDrop(mob/user)
 	. = ..()
 	if(get_dist(src, user)<2)
@@ -32,8 +42,6 @@
 			var/obj/item/C = new item_rug(loc)
 			usr.put_in_hands(C)
 			qdel(src)
-
-	return ..()
 
 /obj/structure/ms13/rug/fancy
 	desc = "A common rug, used to cover your boring floor. It's got a nice and simple pattern on it, perfect for the living room."
@@ -89,11 +97,44 @@
 	icon_state = "mat_welcome"
 	item_rug = /obj/item/ms13/rug/mat/welcome
 
+/obj/structure/ms13/rug/mat/rubber
+	name = "rubber mats"
+	desc = "A small assortment of rubber mats. Good for keeping traction in slippery areas."
+	icon_state = "rubber"
+	item_rug = /obj/item/ms13/rug/mat/rubber
+	rolltime = 2 SECONDS // Multiple, easy to stack. :)
+	has_alt_states = TRUE
+	alternate_states = 11
+	remarks = list(
+	"Come to Papa.",
+	"Rubbery, indeed.",
+	"C'mere, you.",
+	"These would look nice in...",
+	"Yep...",
+	"They don't make them like they used to.")
+
+/obj/structure/ms13/rug/mat/rubber/ComponentInitialize()
+	return
+
+/obj/structure/ms13/rug/mat/rubber/single
+	name = "rubber mat"
+	desc = "A medium sized rubber mat. Good traction, good looks."
+	icon_state = "rubber_single"
+	item_rug = /obj/item/ms13/rug/mat/rubber/single
+	rolltime = 8 SECONDS
+	has_alt_states = FALSE
+	remarks = list(
+	"Won't you just fold already?",
+	"If you would kindly...",
+	"Come on, prick. Just...",
+	"Mmmmmhmmm...",
+	"There's gotta be a better way.")
+
 //The object versions, used for transport of the rug itself//
 
 /obj/item/ms13/rug
 	name = "rug"
-	desc = "a common rug, used to cover your boring floor. It's currently rolled up, but peeking through you can see it's blue."
+	desc = "A common rug, used to cover your boring floor. It's currently rolled up, but peeking through you can see it's blue."
 	icon = 'mojave/icons/objects/decorative.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/items_righthand.dmi'
@@ -120,7 +161,7 @@
 
 /obj/item/ms13/rug/fancy
 	name = "rug"
-	desc = "a common rug, used to cover your boring floor. It's currently rolled up, but peeking through you can see it's got a pattern on it."
+	desc = "A common rug, used to cover your boring floor. It's currently rolled up, but peeking through you can see it's got a pattern on it."
 	origin_type = /obj/structure/ms13/rug/fancy
 
 /obj/item/ms13/rug/rubber
@@ -142,5 +183,20 @@
 	origin_type = /obj/structure/ms13/rug/mat
 	w_class = WEIGHT_CLASS_NORMAL
 
+/obj/item/ms13/rug/mat/ComponentInitialize()
+	return
+
 /obj/item/ms13/rug/mat/welcome
 	origin_type = /obj/structure/ms13/rug/mat/welcome
+
+/obj/item/ms13/rug/mat/rubber
+	name = "rubber mats"
+	desc = "A small assortment of rubber mats. Good for keeping traction in slippery areas. Stacked and ready to pack."
+	icon_state = "rug_rubber"
+	inhand_icon_state = "mat"
+	origin_type = /obj/structure/ms13/rug/mat/rubber
+
+/obj/item/ms13/rug/mat/rubber/single
+	name = "rubber mat"
+	desc = "A medium sized rubber mat. Good traction, good looks. Ready to go."
+	origin_type = /obj/structure/ms13/rug/mat/rubber/single

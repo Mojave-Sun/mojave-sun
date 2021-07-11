@@ -2,14 +2,19 @@
 
 /obj/item/gun/ballistic/ms13
 	name = "generic ms13 gun"
-	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	worn_icon = 'mojave/icons/mob/worn_guns.dmi'
+
+/obj/item/gun/ballistic/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/guns/guns_inventory.dmi')
+
 //Mojave Sun version for shotguns
 /obj/item/gun/ballistic/shotgun/ms13
 	name = "generic ms13 gun"
-	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	worn_icon = 'mojave/icons/mob/worn_guns.dmi'
@@ -17,24 +22,38 @@
 	inhand_y_dimension = 32
 	force = 20
 
+/obj/item/gun/ballistic/shotgun/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/guns/guns_inventory.dmi')
+
 //Automatic shotguns
 /obj/item/gun/ballistic/shotgun/automatic/ms13
 	name = "generic ms13 gun"
-	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	worn_icon = 'mojave/icons/mob/worn_guns.dmi'
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
 	force = 15
+
+/obj/item/gun/ballistic/shotgun/automatic/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/guns/guns_inventory.dmi')
+
 //Revolvers
 /obj/item/gun/ballistic/revolver/ms13
 	name = "generic ms13 gun"
-	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	worn_icon = 'mojave/icons/mob/worn_guns.dmi'
 	force = 10
+
+/obj/item/gun/ballistic/revolver/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/guns/guns_inventory.dmi')
+
 /obj/item/gun/ballistic/revolver/ms13/update_icon_state()
 	worn_icon_state = "[initial(icon_state)]"
 	if(!chambered && magazine.stored_ammo == 0) //this makes all our revolvers empty, as long as it has no ammo in it
@@ -48,12 +67,17 @@
 //Automatics
 /obj/item/gun/ballistic/automatic/ms13
 	name = "generic ms13 gun"
-	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	worn_icon = 'mojave/icons/mob/worn_guns.dmi'
 	automatic = 2 //2 decisecond delay
 	force = 15
+
+/obj/item/gun/ballistic/automatic/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/guns/guns_inventory.dmi')
+
 /obj/item/gun/ballistic/automatic/ms13/update_icon_state()
 	worn_icon_state = "[initial(icon_state)]"
 	if(current_skin)
@@ -72,14 +96,20 @@
 	if(chambered && magazine) //this makes all our rifles full state when chambered and they have a magazine
 		icon_state = "[initial(icon_state)]"
 		//note this also applies to the SMG's
+
 /obj/item/gun/ballistic/automatic/pistol/ms13
 	name = "generic ms13 gun"
 	desc = "complain when seeing this"
-	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	worn_icon = 'mojave/icons/mob/worn_guns.dmi'
 	force = 10
+
+/obj/item/gun/ballistic/automatic/pistol/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/guns/guns_inventory.dmi')
+
 /obj/item/gun/ballistic/automatic/pistol/ms13/update_icon_state()
 	worn_icon_state = "[initial(icon_state)]"
 	if(!chambered && magazine) //this makes all our pistols empty, the state with a magazine, not necassarily empty just not chambered
@@ -99,16 +129,22 @@
 
 	if(!chambered && !magazine && bolt_locked == FALSE) //this makes the pistol bolt be back when you unchamber a round, the state with no magazine
 		icon_state = "[initial(icon_state)]_cham_empty"
+
 //Bolt-actions
 /obj/item/gun/ballistic/rifle/ms13
 	name = "generic ms13 gun"
-	icon = 'mojave/icons/objects/guns/guns_inventory.dmi'
+	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	worn_icon = 'mojave/icons/mob/worn_guns.dmi'
 	internal_magazine = FALSE
 	tac_reloads = TRUE
 	force = 15
+
+/obj/item/gun/ballistic/rifle/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/guns/guns_inventory.dmi')
+
 /obj/item/gun/ballistic/rifle/ms13/update_icon_state()
 	worn_icon_state = "[initial(icon_state)]"
 	if(!chambered && bolt_locked == TRUE) //this makes all our rifles empty, rifle bolt open
@@ -122,6 +158,7 @@
 
 	if(chambered && bolt_locked == TRUE) //this makes all our rifles chambered, bolt open
 		icon_state = "[initial(icon_state)]_empty"
+
 //Loaders/Ammo boxes
 /obj/item/ammo_box/ms13
 	name = "generic ms13 ammo box"

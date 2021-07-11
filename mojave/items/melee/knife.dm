@@ -7,16 +7,22 @@
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
 	icon_state = "knife_kitchen"
+	inhand_icon_state = "knife_kitchen"
 	force = 15
 	throwforce = 15
 	wound_bonus = 0
 	sharpness = SHARP_EDGED
 	log_pickup_and_drop = TRUE
 
+/obj/item/kitchen/knife/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
+
 /obj/item/kitchen/knife/ms13/combat
 	name = "combat knife"
 	desc = "A well made, serrated combat knife. Very effective at wounding. It's got a light frame, with a rifle lug to potentially attach to a matching rifle."
 	icon_state = "knife_bayonet"
+	inhand_icon_state = "knife_kitchen"
 	force = 25
 	armour_penetration = 10
 	wound_bonus = 4
@@ -25,6 +31,7 @@
 /obj/item/kitchen/knife/ms13/combat/soviet
 	desc = "A slick, straight back combat knife, with a pleasant wrapped leather handle, and faint engraving labeled NKVD."
 	icon_state = "knife_soviet"
+	inhand_icon_state = "knife_kitchen"
 	force = 30
 	armour_penetration = 15
 	wound_bonus = 5
@@ -34,6 +41,7 @@
 	name = "bowie knife"
 	desc = "A heavy duty bowie knife. Not as good at wounding as it's serrated counterparts, but can kill just as well."
 	icon_state = "knife_bowie"
+	inhand_icon_state = "knife_bowie"
 	force = 35
 	armour_penetration = 5
 	wound_bonus = -4
@@ -43,6 +51,7 @@
 	name = "hunting knife"
 	desc = "A standard hunting knife, often used to skin animals but can be used for virtually anything. A useful tool, may even save your life."
 	icon_state = "knife_hunting"
+	inhand_icon_state = "knife_hunting"
 	force = 25
 	armour_penetration = 0
 	wound_bonus = -4
@@ -51,6 +60,7 @@
 /obj/item/kitchen/knife/ms13/hunting/unique
 	desc = "A gold rimmed hunting knife. It's got a single finger loop to assist in grip. The blade seems to be extra sharp."
 	icon_state = "knife_hunting_u"
+	inhand_icon_state = "knife_hunting_u"
 	force = 30
 	wound_bonus = -2
 	throwforce = 30
@@ -71,6 +81,10 @@
 	wound_bonus = 0
 	log_pickup_and_drop = TRUE
 
+/obj/item/throwing_star/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
+
 /obj/item/switchblade/ms13
 	name = "switchblade"
 	desc = "A slick and concealable switchblade."
@@ -78,9 +92,14 @@
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
 	icon_state = "knife_switch"
+	inhand_icon_state = "knife_switch"
 	wound_bonus = -2
 	extended = 0
 	log_pickup_and_drop = TRUE
+
+/obj/item/switchblade/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
 
 /obj/item/switchblade/ms13/attack_self(mob/user)
 	extended = !extended
@@ -115,6 +134,7 @@
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/melee_inhand_right.dmi'
 	icon_state = "knife_cleaver"
+	inhand_icon_state = "knife_cleaver"
 	force = 25
 	armour_penetration = 5
 	wound_bonus = 3
@@ -126,5 +146,6 @@
 	name = "\improper Chopper"
 	desc = "A cleaver that has definitely seen a lot of use and is heavily rusted. Though it still looks like it could chop off a limb, or give a case of tetanus while trying."
 	icon_state = "knife_cleaver_rust"
+	inhand_icon_state = "knife_cleaver_rust"
 	force = 30
 	wound_bonus = 6
