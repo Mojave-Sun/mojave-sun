@@ -50,13 +50,22 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Explorer",
 	"Legion Scout",))
 
+GLOBAL_LIST_INIT(ranger_positions, list(
+	"Ranger Deputy-Chief",
+	"Ranger Elite",
+	"Ranger",
+	"Ranger Recruit",
+	"Ranger Doctor",))
+
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(ms13_position_categories, list(
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#eec66f"),
 	EXP_TYPE_TOWN= list("jobs" = town_positions, "color" = "#4feb64"),
 	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#cfd1ba"),
 	EXP_TYPE_BOS = list("jobs" = bos_positions, "color" = "#737592"),
-	EXP_TYPE_RAIDERS = list("jobs" = raiders_positions, "color" = "#30389c")
+	EXP_TYPE_RAIDERS = list("jobs" = raiders_positions, "color" = "#30389c"),
+	EXP_TYPE_RANGERS = list("jobs" = ranger_positions, "color" = "#bdbc76")
+
 ))
 
 GLOBAL_LIST_INIT(ms13_exp_jobsmap, list(
@@ -64,7 +73,8 @@ GLOBAL_LIST_INIT(ms13_exp_jobsmap, list(
 	EXP_TYPE_TOWN = list("titles" = town_positions),
 	EXP_TYPE_NCR = list("titles" = ncr_positions),
 	EXP_TYPE_BOS = list("titles" = bos_positions),
-	EXP_TYPE_RAIDERS = list("titles" = raiders_positions)
+	EXP_TYPE_RAIDERS = list("titles" = raiders_positions),
+	EXP_TYPE_RANGERS = list("titles" = ranger_positions)
 ))
 
 GLOBAL_PROTECT(ms13_exp_jobsmap)
