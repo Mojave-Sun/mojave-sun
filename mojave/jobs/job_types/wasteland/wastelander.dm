@@ -62,7 +62,6 @@
 		/obj/item/clothing/under/ms13/wasteland/rancher,\
 		/obj/item/clothing/under/ms13/wasteland/vestslacks,\
 		/obj/item/clothing/under/ms13/wasteland/merchant,\
-		/obj/item/clothing/under/ms13/wasteland/ranger,\
 		/obj/item/clothing/under/ms13/wasteland/merca,\
 		/obj/item/clothing/under/ms13/wasteland/caravaneer,\
 		/obj/item/clothing/under/ms13/wasteland/machinist,\
@@ -96,7 +95,6 @@
 			/obj/item/clothing/suit/ms13/trench,\
 			/obj/item/clothing/suit/ms13/trench/detective,\
 			/obj/item/clothing/suit/ms13/trench/black,\
-			/obj/item/clothing/suit/ms13/duster/alt,\
 			/obj/item/clothing/suit/armor/ms13/leatherarmor)
 	r_hand = pick(
 		/obj/item/claymore/ms13/machete/pipe,\

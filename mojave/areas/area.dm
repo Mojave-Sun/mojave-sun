@@ -218,6 +218,11 @@
 /area/ms13/rangeroutpost
 	name = "Desert Ranger Outpost"
 	icon_state = "ranger_outpost"
+	requires_power = FALSE
+	poweralm = TRUE
+	power_environ = FALSE
+	power_equip = FALSE
+	power_light = TRUE
 	outdoors = FALSE
 
 //Mall/Eagle Lakes Areas
