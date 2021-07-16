@@ -86,11 +86,13 @@
 	desc = "And they say fashion is dead."
 	icon_state = "clothing_rack"
 
+// Dresser Stuff //
+
 /obj/structure/dresser/ms13
 	name = "dresser"
 	desc = "A nicely-crafted steel dresser. It's filled with lots of undies."
-	icon = 'mojave/icons/structure/circular_cabinets.dmi'
-	var/dresser_type = "pristine_circabinet_orange"
+	icon = 'mojave/icons/structure/cabinets.dmi'
+	var/dresser_type = "circabinet_orange"
 
 /obj/structure/dresser/ms13/attack_hand(mob/user)
   icon_state = "[dresser_type]-open"
@@ -108,22 +110,36 @@
 	dresser_type = "circabinet_torquise"
 	icon_state = "circabinet_torquise"
 
-/obj/structure/dresser/ms13/torquise/pristine
-	icon_state = "pristine_circabinet_torquise"
-	dresser_type = "pristine_circabinet_torquise"
+/obj/structure/dresser/ms13/torquise/tall
+	icon_state = "circabinet_torquise_tall"
+	dresser_type = "circabinet_torquise_tall"
 
 /obj/structure/dresser/ms13/orange
 	icon_state = "circabinet_orange"
 	dresser_type = "circabinet_orange"
 
-/obj/structure/dresser/ms13/orange/pristine
-	icon_state = "pristine_circabinet_orange"
-	dresser_type = "pristine_circabinet_orange"
+/obj/structure/dresser/ms13/orange/tall
+	icon_state = "circabinet_orange_tall"
+	dresser_type = "circabinet_orange_tall"
+
+// Filing Cabinets //
 
 /obj/structure/filingcabinet/ms13
-	name = "wasteland filing cabinet"
-	desc = "Perfect for filing your radioactive dust."
-	icon = 'mojave/icons/structure/miscellaneous.dmi'
+	name = "filing cabinet"
+	desc = "Perfect for filing with your radioactive dust."
+	icon = 'mojave/icons/structure/cabinets.dmi'
+	icon_state = "filing_cabinet"
 
-//Structures//
+/obj/structure/filingcabinet/ms13/busted
+	icon_state = "filing_cabinet_busted"
 
+/obj/structure/filingcabinet/ms13/empty
+	desc = "Perfect for loosely filling with radioactive dust."
+	icon_state = "filing_cabinet_empty"
+
+/obj/structure/filingcabinet/ms13/short
+	icon_state = "filing_cabinet_small"
+	pixel_y = -5
+
+/obj/structure/filingcabinet/ms13/short/busted
+	icon_state = "filing_cabinet_small_busted"
