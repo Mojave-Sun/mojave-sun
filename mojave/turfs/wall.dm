@@ -126,6 +126,7 @@
 	name = "base class craftable wall"
 	desc = "God has abandoned us, with functionality"
 	baseturfs = /turf/open/floor/plating/ground/desert
+	weldable = TRUE
 
 /turf/closed/wall/ms13/craftable/scrap
 	name = "rough scrap wall"
@@ -153,7 +154,6 @@
 	icon = 'mojave/icons/turf/walls/girder.dmi'
 	var/list/material_used
 	var/wall_type = /turf/closed/wall/ms13/craftable
-	weldable = TRUE
 
 /obj/structure/girder/ms13/bars
 	name = "rebar supports"
