@@ -153,6 +153,7 @@
 	icon = 'mojave/icons/turf/walls/girder.dmi'
 	var/list/material_used
 	var/wall_type = /turf/closed/wall/ms13/craftable
+	weldable = TRUE
 
 /obj/structure/girder/ms13/bars
 	name = "rebar supports"
