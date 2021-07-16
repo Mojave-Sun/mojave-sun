@@ -6,6 +6,7 @@
 	icon = 'mojave/icons/objects/materials.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/items_righthand.dmi'
+	merge_type = /obj/item/stack/sheet/ms13
 
 //SCRAP//
 
