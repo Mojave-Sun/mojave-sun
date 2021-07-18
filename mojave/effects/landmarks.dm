@@ -4,6 +4,8 @@
 	jobspawn_override = TRUE
 	delete_after_roundstart = FALSE
 
+// Wasteland Spawns //
+
 /obj/effect/landmark/start/ms13/wastelander
 	name = "Wastelander"
 
@@ -12,6 +14,8 @@
 
 /obj/effect/landmark/start/ms13/hubologist
 	name = "Hubologist"
+
+// Mammoth Town Spawns //
 
 /obj/effect/landmark/start/ms13/mayor
 	name = "Mayor"
@@ -37,6 +41,8 @@
 /obj/effect/landmark/start/ms13/sheriff
 	name = "Sheriff"
 
+// NCR Spawns //
+
 /obj/effect/landmark/start/ms13/trooper
 	name = "NCR Trooper"
 
@@ -58,6 +64,8 @@
 /obj/effect/landmark/start/ms13/lieutenant
 	name = "NCR Lieutenant"
 
+// Brotherhood Spawns //
+
 /obj/effect/landmark/start/ms13/initiate
 	name = "BoS Initiate"
 
@@ -76,6 +84,8 @@
 /obj/effect/landmark/start/ms13/head_scribe
 	name = "BoS Head Scribe"
 
+// Mammoth Raider Spawns //
+
 /obj/effect/landmark/start/ms13/raider
 	name = "Raider"
 
@@ -87,6 +97,8 @@
 
 /obj/effect/landmark/start/ms13/boss
 	name = "Boss"
+
+// Legion Spawns //
 
 /obj/effect/landmark/start/ms13/legion_praetorian
 	name = "Legion Praetorian"
@@ -114,3 +126,22 @@
 
 /obj/effect/landmark/start/ms13/legion_scout
 	name = "Legion Scout"
+
+// Desert Ranger Spawns //
+
+/obj/effect/landmark/start/ms13/ranger_deputy_chief
+	name = "Ranger Deputy-Chief"
+
+/obj/effect/landmark/start/ms13/ranger_elite
+	name = "Elite Ranger"
+
+/obj/effect/landmark/start/ms13/ranger
+	name = "Ranger"
+
+/obj/effect/landmark/start/ms13/ranger_recruit
+	name = "Ranger Recruit"
+
+/obj/effect/landmark/start/ms13/ranger_doctor
+	name = "Ranger Doctor"
+
+

@@ -12,6 +12,10 @@
 	throw_speed = 2
 	throw_range = 4
 
+/obj/item/chainsaw/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
+
 /obj/item/chainsaw/ms13/attack_self(mob/user)
 	. = ..()
 	if(on)
@@ -91,6 +95,10 @@
 	hitsound = "sound/weapons/cqchit1.ogg"
 	w_class = WEIGHT_CLASS_TINY
 	force = 10 // Way better than just punching, a consistent 10 vs 1-10
+
+/obj/item/ms13/knuckles/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
 
 /obj/item/ms13/knuckles/weighted
 	name = "lead knuckles"

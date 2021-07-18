@@ -3,10 +3,14 @@
 /obj/item/storage/firstaid/ms13
 	name = "emergency aid kit"
 	desc = "A first aid kit, usually filled with supplies to administer quick assistance to any wounds."
-	icon = 'mojave/icons/objects/medical.dmi'
+	icon = 'mojave/icons/objects/medical/medical_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/items_righthand.dmi'
 	icon_state = "medicalkit"
+
+/obj/item/storage/firstaid/ms13/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/medical/medical_inventory.dmi')
 
 /obj/item/storage/firstaid/ms13/regular
 

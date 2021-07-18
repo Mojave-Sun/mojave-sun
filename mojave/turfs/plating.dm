@@ -4,6 +4,8 @@
 #define LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/ms13/tree/tallpine = 7, /obj/structure/flora/ms13/tree/deadsnow = 5, /obj/structure/flora/ms13/tree/pine = 5, /obj/structure/flora/ms13/shrub = 5, /obj/structure/flora/bush = 5, /obj/structure/flora/ms13/forage = 1, /obj/structure/flora/ms13/forage/blackberry = 1, /obj/structure/flora/ms13/forage/mutfruit = 1, /obj/structure/flora/ms13/forage/ashrose = 1, /obj/structure/flora/ms13/forage/wildcarrot = 1, /obj/structure/flora/ms13/forage/aster = 1)
 #define DESOLATE_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland/snow = 10, /obj/structure/flora/bush = 1)
 #define MUSHROOM_SPAWN_LIST list(/obj/structure/flora/ms13/forage/mushroom = 5, /obj/structure/flora/ms13/forage/mushroom/glowing = 1)
+#define DESERT_LUSH_PLANT_SPAWN_LIST list(/obj/structure/flora/ms13/tree/joshua = 2, /obj/structure/flora/ms13/tree/cactus = 5)
+#define DESERT_DESOLATE_PLANT_SPAWN_LIST list(/obj/structure/flora/grass/wasteland = 8)
 
 /////////////////////////////////////////////////////////////
 /////////////////// MOJAVE SUN PLATINGS /////////////////////
@@ -47,20 +49,25 @@
 /turf/open/floor/plating/ground/desert
 	name = "\proper desert"
 	desc = "A stretch of desert."
-	baseturfs = /turf/open/floor/plating/ground/desert
-	icon_state = "desert1"
 	icon = 'mojave/icons/turf/ground.dmi'
-	slowdown = 1
+	icon_state = "desert-255"
+	base_icon_state = "desert"
+	slowdown = 0.7 //Hard and very dry ground. Not as hard to walk on as sand
+	baseturfs = /turf/open/floor/plating/ground/desert
 	var/obj/structure/flora/turfPlant = null
-	var/digResult = /obj/item/stack/ore/glass
+	var/digResult = /obj/item/stack/ore/glass //Sounds like a whole lot of not my problem at this very second
 	var/dug = FALSE
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_MS13_DESERT)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_DESERT)
 
 /turf/open/floor/plating/ground/desert/Initialize()
 	. = ..()
-	icon_state = "desert[rand(1,4)]"
 	//If no fences, machines (soil patches are machines), etc. try to plant grass
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
+	if(prob(35))
+		base_icon_state = "desert_alt_[rand(1,3)]"
 
 /turf/open/floor/plating/ground/desert/attackby(obj/item/W, mob/user, params)
 	. = ..()
@@ -98,7 +105,7 @@
 
 	//spontaneously spawn grass
 	if(Plantforce || prob(GRASS_SPONTANEOUS))
-		randPlant = pickweight(LUSH_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
+		randPlant = pickweight(DESERT_LUSH_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
 		turfPlant = new randPlant(src)
 		. = TRUE //in case we ever need this to return if we spawned
 		return .
@@ -112,10 +119,10 @@
 	if(prob(Weight))
 
 		//If surrounded on 5+ sides, pick from lush
-		if(Weight == (5 * GRASS_WEIGHT))
-			randPlant = pickweight(LUSH_PLANT_SPAWN_LIST)
+		if(Weight == (2 * GRASS_WEIGHT))
+			randPlant = pickweight(DESERT_LUSH_PLANT_SPAWN_LIST)
 		else
-			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
+			randPlant = pickweight(DESERT_DESOLATE_PLANT_SPAWN_LIST)
 		turfPlant = new randPlant(src)
 		. = TRUE
 
@@ -216,6 +223,15 @@
 				turfPlant = new randPlant(src)
 			. = TRUE
 			return .
+		if(istype(curr_area, /area/ms13/desert))
+			if(prob(5))
+				randPlant = pickweight(DESERT_LUSH_PLANT_SPAWN_LIST)
+				turfPlant = new randPlant(src)
+			else if(prob(10))
+				randPlant = pickweight(DESERT_DESOLATE_PLANT_SPAWN_LIST)
+				turfPlant = new randPlant(src)
+			. = TRUE
+			return .
 		else
 			if(prob(Weight))
 				if(Weight == (20 * GRASS_WEIGHT))
@@ -259,8 +275,7 @@
 	baseturfs = /turf/open/floor/plating/ground/dirt
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "dirt"
-	slowdown = 1
-
+	slowdown = 0.5
 ////Roads////
 
 /turf/open/floor/plating/ground/road
@@ -278,6 +293,7 @@
 	addtimer(CALLBACK(src, /atom/.proc/update_icon), 1)
 
 /turf/open/floor/plating/ground/road/update_icon()
+	. = ..() //Inheritance required for road decals
 	var/crack_randomiser = "crack_[rand(1,18)]"
 	var/road_randomiser = "rand(-10,10)"
 	var/direction_randomiser = "rand(0,8)"
@@ -294,13 +310,14 @@
 	base_icon_state = "sidewalk"
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_MS13_SIDEWALK)
-	canSmoothWith = list(SMOOTH_GROUP_MS13_SIDEWALK, WALL_SMOOTHING, SMOOTH_GROUP_TURF_OPEN)
+	canSmoothWith = list(SMOOTH_GROUP_MS13_SIDEWALK, WALL_SMOOTHING, SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_MS13_DESERT)
 
 /turf/open/floor/plating/ground/sidewalk/Initialize()
 	. = ..()
 	addtimer(CALLBACK(src, /atom/.proc/update_icon), 1)
 
 /turf/open/floor/plating/ground/sidewalk/update_icon()
+	. = ..()
 	add_overlay(image('mojave/icons/turf/curb.dmi', icon_state, FLOAT_LAYER))
 	if(prob(20))
 		icon_state = "crack_[rand(1,11)]"

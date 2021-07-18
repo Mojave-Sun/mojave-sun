@@ -2,13 +2,66 @@
 //CONTAINS MS13 STACKS AND MINERAL/ORES, also sheet crafting for ease :) //
 //////////////////////////////////////////////////////////////////////////////
 
+/obj/item/stack/sheet/ms13
+	icon = 'mojave/icons/objects/materials.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/items_righthand.dmi'
+	merge_type = /obj/item/stack/sheet/ms13
+
+//SCRAP//
+
+/obj/item/stack/sheet/ms13/scrap
+	name = "scrap"
+	desc = "A head of assorted metal junk, pre-war and old, the lifeblood of any scavenger."
+	singular_name = "scrap piece"
+	icon_state = "sheet-scrap"
+	inhand_icon_state = "scrap"
+	force = 2
+	throwforce = 4
+	mats_per_unit = list(/datum/material/ms13/scrap = MINERAL_MATERIAL_AMOUNT * 0.5)
+	custom_materials = list(/datum/material/ms13/scrap = MINERAL_MATERIAL_AMOUNT * 0.5)
+	merge_type = /obj/item/stack/sheet/ms13/scrap
+	matter_amount = 4
+	max_amount = 50
+	walltype = /turf/closed/wall/ms13/craftable/scrap
+
+/obj/item/stack/sheet/ms13/scrap/five
+	amount = 5
+
+/obj/item/stack/sheet/ms13/scrap/ten
+	amount = 10
+
+/obj/item/stack/sheet/ms13/scrap/twentyfive
+	amount = 25
+
+/obj/item/stack/sheet/ms13/scrap/fifty
+	amount = 50
+
+GLOBAL_LIST_INIT(scrap_recipes, list ( \
+	new/datum/stack_recipe("rebar struts", /obj/structure/girder/ms13/bars, 2, time = 10 SECONDS, one_per_turf = TRUE, on_floor = TRUE), \
+))
+
+/obj/item/stack/sheet/ms13/scrap/get_main_recipes()
+	. = ..()
+	. += GLOB.scrap_recipes
+
+/datum/material/ms13/scrap
+	name = "scrap"
+	desc = "Common scrap parts found amongst the wasteland."
+	color = "#967662"
+	sheet_type = /obj/item/stack/sheet/ms13/scrap
+	beauty_modifier = -0.4
+	strength_modifier = 0.5
+
+//Old Stuff Below, Be Warned//
+
 //COTTON//
 
 /obj/item/stack/sheet/cotton/ms13
 	name = "raw cotton bundle"
 	desc = "A bundle of raw cotton ready to be spun on the loom."
 	singular_name = "raw cotton ball"
-	icon = 'mojave/icons/objects/stack_objects.dmi'
+	icon = 'mojave/icons/objects/materials.dmi'
 	icon_state = "sheet-cotton"
 	resistance_flags = FLAMMABLE
 	force = 0
@@ -36,7 +89,7 @@ GLOBAL_LIST_INIT(hay_recipes, list ( \
 	name = "hay"
 	desc = "A bundle of hay. Food for livestock, and useful for weaving. Hail the Wickerman."
 	singular_name = "hay stalk"
-	icon = 'mojave/icons/objects/stack_objects.dmi'
+	icon = 'mojave/icons/objects/materials.dmi'
 	icon_state = "sheet-hay_3" //Holy someone made this sprite so tiny and having to pixel hunt for, i'll just leave it at the big sprite
 	inhand_icon_state = "sheet-hay_3"
 	force = 1

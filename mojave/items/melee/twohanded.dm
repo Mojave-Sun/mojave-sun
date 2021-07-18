@@ -21,7 +21,7 @@
 	. = ..()
 	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
 	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/on_unwield)
-
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/melee/melee_inventory.dmi')
 /obj/item/ms13/twohanded/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/two_handed, require_twohands=FALSE, force_multiplier=2)
@@ -122,6 +122,8 @@
 /obj/item/ms13/twohanded/heavy
 	name = "heavy weapon"
 	desc = "Generic heavy weapon go haha BRRR"
+
+
 
 /obj/item/ms13/twohanded/heavy/ComponentInitialize()
 	. = ..()
