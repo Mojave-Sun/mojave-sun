@@ -95,16 +95,16 @@
 	var/dresser_type = "circabinet_orange"
 
 /obj/structure/dresser/ms13/attack_hand(mob/user)
-  icon_state = "[dresser_type]-open"
-  update_icon()
-  if(!Adjacent(user))//no tele-grooming
-    icon_state = "[dresser_type]"
-    return
-  . = ..()
-  if(.)
-    return
-  icon_state = "[dresser_type]"
-  update_icon()
+	icon_state = "[dresser_type]-open"
+	update_icon()
+	if(!Adjacent(user))//no tele-grooming
+		icon_state = "[dresser_type]"
+		return
+	. = ..()
+	if(.)
+		return
+	icon_state = "[dresser_type]"
+	update_icon()
 
 /obj/structure/dresser/ms13/torquise
 	dresser_type = "circabinet_torquise"
