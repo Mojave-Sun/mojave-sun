@@ -19,6 +19,7 @@
 /obj/item/clothing/head/helmet/space/hardsuit/power_armor/Initialize()
 	. = ..()
 	interaction_flags_item &= ~INTERACT_ITEM_ATTACK_HAND_PICKUP
+	ADD_TRAIT(src, TRAIT_NODROP, STICKY_NODROP) //Somehow it's stuck to your body, no questioning.
 
 //Generic power armor based off of the hardsuit
 /obj/item/clothing/suit/space/hardsuit/power_armor
@@ -43,6 +44,7 @@
 /obj/item/clothing/suit/space/hardsuit/power_armor/Initialize()
 	. = ..()
 	interaction_flags_item &= ~INTERACT_ITEM_ATTACK_HAND_PICKUP
+	ADD_TRAIT(src, TRAIT_NODROP, STICKY_NODROP) //Somehow it's stuck to your body, no questioning.
 
 //It's a suit of armor, it ain't going to fall over just because the pilot is dead
 /obj/item/clothing/suit/space/hardsuit/power_armor/equipped(mob/user, slot)
@@ -82,6 +84,8 @@
 			if(do_after(user, 6 SECONDS, target = user) && user.wear_suit == src)
 				GetOutside(user)
 				return TRUE
+			else
+				return FALSE
 
 	to_chat(user, "You begin entering the [src].")
 	if(do_after(user, 6 SECONDS, target = user) && user.wear_suit != src)
