@@ -6,7 +6,7 @@
 	lootcount = 2
 	var/loot1 = list(
 				/obj/item/clothing/suit/ms13/vest,
-				/obj/item/clothing/head/helmet/ms13/cowboy/stormchaser
+				/obj/item/clothing/head/helmet/ms13/cowboy
 				)
 	var/loot2 = list(
 				/obj/item/clothing/suit/ms13/vest/cowboy,
@@ -26,7 +26,7 @@
 				)
 	var/loot6 = list(
 				/obj/item/clothing/suit/ms13/ljacket,
-				/obj/item/clothing/head/helmet/ms13/cowboy/padded/black
+				/obj/item/clothing/head/helmet/ms13/cowboy/black
 				)
 	var/loot7 = list(
 				/obj/item/clothing/suit/ms13/ljacket/brown,
@@ -38,7 +38,7 @@
 				)
 	var/loot9 = list(
 				/obj/item/clothing/suit/ms13/ljacket/veteran,
-				/obj/item/clothing/head/helmet/ms13/cowboy/padded/police
+				/obj/item/clothing/head/helmet/ms13/police
 				)
 	var/loot10 = list(
 				/obj/item/clothing/suit/ms13/duster,
@@ -50,11 +50,11 @@
 				)
 	var/loot12 = list(
 				/obj/item/clothing/suit/ms13/trench/black,
-				/obj/item/clothing/head/helmet/ms13/cowboy/padded/black
+				/obj/item/clothing/head/helmet/ms13/cowboy/black
 				)
 	var/loot13 = list(
 				/obj/item/clothing/suit/ms13/trench/detective,
-				/obj/item/clothing/head/helmet/ms13/cowboy/padded/detective/grey
+				/obj/item/clothing/head/helmet/ms13/fedora/brown
 				)
 	var/loot14 = list(
 				/obj/item/clothing/suit/ms13/ljacket,
@@ -62,7 +62,7 @@
 				)
 	var/loot15 = list(
 				/obj/item/clothing/suit/ms13/ljacket/bomber,
-				/obj/item/clothing/head/helmet/ms13/cowboy/padded/ushanka
+				/obj/item/clothing/head/helmet/ms13/ushanka
 				)
 	var/loot16 = list(
 				/obj/item/clothing/suit/ms13/ljacket/military,
@@ -70,7 +70,7 @@
 				)
 	var/loot17 = list(
 				/obj/item/clothing/suit/ms13/ljacket/wanderer,
-				/obj/item/clothing/head/helmet/ms13/cowboy/stormchaser
+				/obj/item/clothing/head/helmet/ms13/fedora/treasure
 				)
 	var/loot18 = list(
 				/obj/item/clothing/suit/toggle/labcoat/ms13/wintercoat/grey,
@@ -86,19 +86,19 @@
 				)
 	var/loot21 = list(
 				/obj/item/clothing/suit/armor/ms13/leatherarmor,
-				/obj/item/clothing/head/helmet/ms13/cowboy/stormchaser
+				/obj/item/clothing/head/helmet/ms13/fedora/treasure
 				)
 	var/loot22 = list(
 				/obj/item/clothing/suit/armor/ms13/kit,
 				""
 				)
 	var/loot23 = list(
-				/obj/item/clothing/head/helmet/ms13/hockey,
+				/obj/item/clothing/mask/gas/ms13,
 				""
 				)
 	var/loot24 = list(
 				/obj/item/clothing/suit/ms13/duster/alt,
-				/obj/item/clothing/head/helmet/ms13/cowboy/padded/detective
+				/obj/item/clothing/head/helmet/ms13/newsboy
 				)
 	var/loot25 = list(
 				/obj/item/clothing/suit/ms13/ljacket/musty,
@@ -127,15 +127,15 @@
 				)
 	var/loot3 = list(
 				/obj/item/clothing/suit/ms13/ljacket/reinforced,
-				/obj/item/clothing/head/helmet/ms13/cowboy/reinf/motorcycle
+				/obj/item/clothing/head/helmet/ms13/flight
 				)
 	var/loot4 = list(
 				/obj/item/clothing/suit/ms13/duster/reinf,
-				/obj/item/clothing/head/helmet/ms13/cowboy/reinf
+				/obj/item/clothing/head/helmet/ms13/cowboy
 				)
 	var/loot5 = list(
 				/obj/item/clothing/suit/ms13/trench/battle/black,
-				/obj/item/clothing/head/helmet/ms13/cowboy/reinf
+				/obj/item/clothing/head/helmet/ms13/cowboy/black
 				)
 	var/loot6 = list(
 				/obj/item/clothing/suit/ms13/trench/battle,
@@ -151,7 +151,7 @@
 				)
 	var/loot9 = list(
 				/obj/item/clothing/suit/armor/ms13/leatherarmor,
-				/obj/item/clothing/head/helmet/ms13/cowboy/reinf/motorcycle
+				/obj/item/clothing/head/helmet/ms13/flight/brown
 				)
 	var/loot10 = list(
 				/obj/item/clothing/suit/ms13/vest/raider,
@@ -173,11 +173,11 @@
 				)
 	var/loot16 = list(
 				/obj/item/clothing/suit/armor/ms13/vest,
-				/obj/item/clothing/head/helmet/ms13/cowboy/padded/police
+				/obj/item/clothing/head/helmet/ms13/captain
 				)
 	var/loot17 = list(
 				/obj/item/clothing/suit/armor/ms13/vest,
-				/obj/item/clothing/head/helmet/ms13/cowboy/padded/detective
+				/obj/item/clothing/head/helmet/ms13/bowler
 				)
 	var/loot18 = list(
 				/obj/item/clothing/suit/armor/ms13/metal,
@@ -200,11 +200,11 @@
 				)
 	var/loot3 = list(
 				/obj/item/clothing/suit/ms13/trench/black/armored,
-				/obj/item/clothing/head/helmet/ms13/cowboy/reinf
+				/obj/item/clothing/head/helmet/ms13/cowboy/black
 				)
 	var/loot4 = list(
 				/obj/item/clothing/suit/armor/ms13/vaultvan,
-				/obj/item/clothing/head/helmet/ms13/reinfhard
+				/obj/item/clothing/head/helmet/ms13/bladed
 				)
 	var/loot5 = list(
 				/obj/item/clothing/suit/armor/ms13/metal/heavy,
@@ -220,7 +220,7 @@
 				)
 	var/loot8 = list(
 				/obj/item/clothing/suit/armor/ms13/leatherarmor/reinforced,
-				/obj/item/clothing/head/helmet/ms13/cowboy/reinf/motorcycle
+				/obj/item/clothing/head/helmet/ms13/flight/red
 				)
 	var/loot9 = list(
 				/obj/item/clothing/suit/armor/ms13/combat,
