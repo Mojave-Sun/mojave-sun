@@ -227,7 +227,7 @@
 
 /obj/item/clothing/head/hooded/ms13/plated
 	name = "plated cowl"
-	desc = "An armored cloth cowl, eyeholes poked poked through."
+	desc = "An armored cloth cowl, eyeholes poked through."
 	icon_state = "plated"
 	armor = list(melee = 15, bullet = 10, laser = 5, energy = 10, bomb = 10, bio = 5, rad = 5, fire = 10, acid = 5)
 	inhand_icon_state = "armorkit"
@@ -242,7 +242,7 @@
 
 /obj/item/clothing/head/hooded/ms13/inquisitor
 	name = "inquisitors helm"
-	desc = "A menacing piece of religious headwear, pipes and gold shining throughout, must belong to someone of the highest intunement with god."
+	desc = "A menacing piece of religious headwear, pipes and gold shining throughout, must belong to someone of the highest attunement with god."
 	icon_state = "inquisitor"
 	armor = list(melee = 50, bullet = 30, laser = 20, energy = 20, bomb = 35, bio = 10, rad = 10, fire = 30, acid = 10)
 	inhand_icon_state = "headdress_l"
@@ -281,7 +281,7 @@
 
 /obj/item/clothing/head/hooded/ms13/hood
 	name = "green hood"
-	desc = "A simple handmade cloth hood, rather primative in its construction."
+	desc = "A simple handmade cloth hood, rather primitive in its construction."
 	icon_state = "hood"
 	inhand_icon_state = "winterglovesblack"
 	flags_inv = HIDEEARS|HIDEHAIR
@@ -336,7 +336,7 @@
 
 /obj/item/clothing/head/helmet/ms13/bowler
 	name = "bowler hat"
-	desc = "A classy gentlemans bowler hat."
+	desc = "A classy gentlemen bowler hat."
 	icon_state = "bowler"
 	inhand_icon_state = "sheriffhat"
 
@@ -353,7 +353,7 @@
 
 /obj/item/clothing/head/helmet/ms13/prospector
 	name = "prospector's hat"
-	desc = "A whimsical hat commonly worn by post-war prospectors, pickin the remnants of scrap and waste from the society of old."
+	desc = "A whimsical hat commonly worn by post-war prospectors, picking the remnants of scrap and waste from the society of old."
 	icon_state = "prospector"
 	inhand_icon_state = "sheriffhat"
 	armor = list(melee = 15, bullet = 5, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 10)
@@ -364,7 +364,7 @@
 
 /obj/item/clothing/head/helmet/ms13/millitia
 	name = "millitia hat"
-	desc = "A sturdy leather wide-brimmed millitia hat, the common mans garb of freedom."
+	desc = "A sturdy leather wide-brimmed militia hat, the common garb of free men."
 	icon_state = "millitia"
 	inhand_icon_state = "fedora"
 	armor = list(melee = 20, bullet = 5, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 10)
@@ -385,7 +385,7 @@
 
 /obj/item/clothing/head/helmet/ms13/tall/regal
 	name = "fancy bicorn"
-	desc = "This fanciful hat belongs on a leader or in a museum, gold embroidered and navy silk emenate the barings of class and royalty far beyond those the modern common man perceives."
+	desc = "This fanciful hat belongs to a leader or in a museum. The gold and navy silk embroidery is classy and regal, conferring to those who wear it a bearing far beyond what is usually seen in the post-war wastelands."
 	icon_state = "regal"
 	inhand_icon_state = "fedora"
 	armor = list(melee = 20, bullet = 15, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 10)
@@ -419,7 +419,7 @@
 
 /obj/item/clothing/head/helmet/ms13/utilitycap/deputy
 	name = "deputy's cap"
-	desc = "A formal refurbished pre-war cap. It's got a faded logo in the inner rim."
+	desc = "A formal refurbished pre-war cap. It's got a faded logo on the inner rim."
 	icon_state = "deputycap"
 	inhand_icon_state = "deputycap"
 
@@ -462,13 +462,13 @@
 
 /obj/item/clothing/head/helmet/ms13/fisherman
 	name = "fishermans hat"
-	desc = "A waterproof fishermans hat, for keeping the line taught and fish ready. Technobugs and bait not included."
+	desc = "A waterproof fisherman hat, for keeping the line taught and fish ready. Technobugs and bait not included."
 	icon_state = ""
 	inhand_icon_state = "fedora"
 
 /obj/item/clothing/head/helmet/ms13/bandanacap
 	name = "bandana cap"
-	desc = "A green piece of cloth tied around a yellow cap, some form of gang sign or sytlistic intent, who knows."
+	desc = "A green piece of cloth tied around a yellow cap, some form of gang sign or stylistic intent, who knows."
 	icon_state = "bandanacap"
 	inhand_icon_state = "fedora"
 
