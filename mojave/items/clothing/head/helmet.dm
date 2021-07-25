@@ -45,7 +45,7 @@
 
 /obj/item/clothing/head/helmet/ms13/flight
 	name = "old flight helmet"
-	desc = "An old rusted flight helmet, hasnt seen use in a millenia."
+	desc = "An old rusted flight helmet, hasnt seen use in a long time."
 	icon_state = "flight"
 	inhand_icon_state = "combathelmet_mk2"
 	armor = list(melee = 30, bullet = 10, laser = 5, energy = 10, bomb = 10, bio = 5, rad = 5, fire = 10, acid = 5)
@@ -157,7 +157,7 @@
 
 /obj/item/clothing/head/hardhat/ms13/mining
 	name = "mining hardhat"
-	desc = "A sturdy helmet with a built-in nuclear powered light for exploring the parellels of the post-war."
+	desc = "A sturdy helmet with a built-in nuclear powered light for exploring in the darkness of the post-war."
 	icon_state = "hardhat0_mining" //holy fuck this code is garbage
 	hat_type = "mining"
 	icon = 'mojave/icons/objects/clothing/hats.dmi'
@@ -211,7 +211,7 @@
 
 /obj/item/clothing/head/hooded/ms13/assaultgas
 	name = "assault gas mask"
-	desc = "A US millitary assault mask, a relic of what man could have done."
+	desc = "A US military assault mask, a relic of what man could have done."
 	icon_state = "assault"
 	armor = list(melee = 30, bullet = 25, laser = 15, energy = 15, bomb = 5, bio = 5, rad = 5, fire = 15, acid = 15)
 	inhand_icon_state = "winterglovesblack"
@@ -425,19 +425,19 @@
 
 /obj/item/clothing/head/helmet/ms13/captain
 	name = "captain's hat"
-	desc = "A pre-war millitary Captains hat, most likely used for land ranks. A true display of fashion and power all in one."
+	desc = "A pre-war military Captains hat, most likely used for land ranks. A true display of fashion and power all in one."
 	icon_state = "captain"
 	inhand_icon_state = "fedora"
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 10)
 
 /obj/item/clothing/head/helmet/ms13/captain/white
-	desc = "A pre-war millitary Captains hat, most likely used for sea ranks. A true display of aptitudue and power all in one."
+	desc = "A pre-war military Captains hat, most likely used for sea ranks. A true display of aptitudue and power all in one."
 	icon_state = "captainwhite"
 	inhand_icon_state = "fedora"
 
 /obj/item/clothing/head/helmet/ms13/captain/commie
 	name = "kapitan's hat"
-	desc = "A pre-war strange millitary Captains hat, A strange font and almost moonrune-like lettering covers this one, clearly communism at its finest."
+	desc = "A pre-war strange military Captains hat, A strange font and almost moonrune-like lettering covers this one, clearly communism at its finest."
 	icon_state = "captaincommie"
 	inhand_icon_state = "fedora"
 
@@ -472,16 +472,16 @@
 	icon_state = "bandanacap"
 	inhand_icon_state = "fedora"
 
-/obj/item/clothing/head/helmet/ms13/millitary
-	name = "millitary hat"
-	desc = "A navy US pre-war millitary cap, in fairly good condition."
-	icon_state = "millitary"
+/obj/item/clothing/head/helmet/ms13/military
+	name = "military hat"
+	desc = "A navy US pre-war military cap, in fairly good condition."
+	icon_state = "military"
 	inhand_icon_state = "fedora"
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 10)
 
 /obj/item/clothing/head/helmet/ms13/beret
 	name = "gray beret"
-	desc = "A formal gray beret. Most likely used in off-service millitary duties."
+	desc = "A formal gray beret. Most likely used in off-service military duties."
 	icon_state = "beret"
 	inhand_icon_state = "fedora"
 	armor = list(melee = 10, bullet = 5, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 10, acid = 10)
@@ -507,14 +507,14 @@
 // Misc Hats //
 
 /obj/item/clothing/head/helmet/ms13/chef
-	name = "chefs hat"
-	desc = "A professional chefs hat, hopefully there are no rats inside."
+	name = "chef hat"
+	desc = "A professional chef hat, hopefully there is no rat inside."
 	icon_state = "chef"
 	inhand_icon_state = "chefhat"
 
 /obj/item/clothing/head/helmet/ms13/ushanka
 	name = "ushanka hat"
-	desc = "Typical winter apparel, the aptitude of slavic engineering."
+	desc = "Typical winter apparel, the epitome of slavic engineering."
 	icon_state = "ushankared"
 	inhand_icon_state = "tdhelm" //my will is broken, to-do make inhands
 	armor = list(melee = 5, bullet = 5, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0, fire = 20, acid = 10)

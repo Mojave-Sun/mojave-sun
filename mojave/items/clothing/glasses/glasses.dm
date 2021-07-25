@@ -17,7 +17,7 @@
 
 /obj/item/clothing/glasses/ms13/cap
 	name = "bottle-cap glasses"
-	desc = "Crude soda caps construed into spectacles, they provide some sort of uh ... Quirkiness."
+	desc = "Crude soda caps crafted into spectacles, they provide some sort of uh ... Quirkiness."
 	icon_state = "cap"
 	tint = 1
 	glass_colour_type = /datum/client_colour/glass_colour/brown
@@ -77,7 +77,7 @@
 
 /obj/item/clothing/glasses/ms13/welding
 	name = "welding goggles"
-	desc = "Arclight insured RobCo pre-war welding goggles, helps you keep your sight."
+	desc = "Arclight insured RobCo pre-war welding goggles, to help you keep your sight."
 	icon_state = ""
 	flash_protect = FLASH_PROTECTION_WELDER
 	tint = 2

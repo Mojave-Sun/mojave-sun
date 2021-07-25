@@ -10,7 +10,7 @@
 
 /obj/item/clothing/mask/ms13/bandana
 	name = "bandana"
-	desc = "A tactical and cool piece of face wrap, useful againt the dust, heat and those other summbitches that want your head."
+	desc = "A tactical and cool piece of face wrap, useful againt the dust, heat and those other sumbitches that want your head."
 	inhand_icon_state = "winterglovesbrown"
 	flags_inv = HIDEFACE
 
