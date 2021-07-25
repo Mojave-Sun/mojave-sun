@@ -10,6 +10,14 @@
 	smoothing_groups = list(SMOOTH_GROUP_MS13_LOW_WALL)
 	canSmoothWith= list(SMOOTH_GROUP_MS13_LOW_WALL)
 
+/obj/structure/table/low_wall/Initialize(mapload)
+	. = ..()
+	for(var/obj/structure/table/low_wall/LAT in loc)
+		if(LAT == src)
+			continue
+		stack_trace("multiple low_walls found in ([loc.x], [loc.y], [loc.z])")
+		return INITIALIZE_HINT_QDEL
+
 /obj/structure/table/low_wall/metal
 	name = "low metal wall"
 	desc = ""
@@ -24,6 +32,10 @@
 	name = "low wood wall"
 	desc = ""
 	icon = 'mojave/icons/turf/walls/wood.dmi'
+
+/obj/structure/table/low_wall/wood/log
+	name = "low log wall"
+	icon = 'mojave/icons/turf/walls/woodlog.dmi'
 
 /obj/structure/table/low_wall/scrap
 	name = "low scrap wall"
@@ -55,6 +67,9 @@
 /obj/structure/table/low_wall/brick/alt
 	icon = 'mojave/icons/turf/walls/brickalt.dmi'
 
+/obj/structure/table/low_wall/brick/gray
+	icon = 'mojave/icons/turf/walls/brickgray.dmi'
+
 /obj/structure/table/low_wall/reinforced
 	name = "base class low reinforced wall"
 	desc = ""
@@ -70,3 +85,8 @@
 	desc = ""
 	icon = 'mojave/icons/turf/walls/rrustmetal.dmi'
 	base_icon_state = "reinforced_rust_low"
+
+/obj/structure/table/low_wall/reinforced/bunker
+	name = "low bunker wall"
+	desc = ""
+	icon = 'mojave/icons/turf/walls/bunker.dmi'

@@ -120,3 +120,28 @@
 	name = "boss's collar"
 	desc = "A brave fashion statement. This is a seemingly non-functional bomb collar. The person wearing this must truly be an alpha."
 	icon_state = "boss"
+
+/obj/item/card/id/ms13/ranger_recruit
+	name = "recruit ranger badge"
+	desc = "A silver Ranger star. A pretty basic design with a strong meaning behind it, given to the average recruit in the Desert Rangers."
+	icon_state = "ranger_star_silver"
+
+/obj/item/card/id/ms13/ranger
+	name = "ranger badge"
+	desc = "A silver rimmed Ranger badge with a gold star. Worn by your average Desert Ranger."
+	icon_state = "ranger_star_rimmed"
+
+/obj/item/card/id/ms13/ranger_elite
+	name = "elite ranger badge"
+	desc = "A gold textured Ranger star, issued to Rangers with extensive expertise in the field, with multiple years behind them."
+	icon_state = "ranger_star"
+
+/obj/item/card/id/ms13/ranger_chief
+	name = "ranger deputy-chief badge"
+	desc = "A banded Ranger star, donned exclusively by the Deputy-Chief of the local Ranger outpost. "
+	icon_state = "ranger_star_chief"
+
+/obj/item/card/id/ms13/ranger_doctor
+	name = "ranger medic badge"
+	desc = "A silver circle encompassing a gold cross. Given to the empathetic healers of the Desert Rangers."
+	icon_state = "ranger_cross"

@@ -11,6 +11,7 @@
 	extra_damage = 40
 	extra_penetration = 15
 	fire_delay = 6
+
 /obj/item/gun/ballistic/rifle/ms13/hunting/scoped
 	name = "scoped hunting rifle"
 	desc = "A bolt action hunting rifle with a scope attached and a slightly improved barrel for better penetration."
@@ -20,6 +21,7 @@
 	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 13
+
 /obj/item/gun/ballistic/rifle/ms13/varmint
 	name = "varmint rifle"
 	desc = "A light hunting rifle chambered for 5.56 rounds."
@@ -32,6 +34,7 @@
 	extra_damage = 30
 	extra_penetration = 5
 	mag_type = /obj/item/ammo_box/magazine/ms13/r10
+
 /obj/item/gun/ballistic/rifle/ms13/varmint/update_icon_state()
 	worn_icon_state = "[initial(icon_state)]"
 	if(!chambered && magazine) //this makes all our rifles empty, the state with a magazine, rifle not necassarily empty just not chambered

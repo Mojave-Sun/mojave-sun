@@ -19,16 +19,17 @@
 	requires_power = FALSE
 
 /area/ms13/underground
+	requires_power = FALSE
+	outdoors = FALSE
 	roofType = /turf/open/floor/plating/ground/mountain
 
 /area/ms13/underground/bos
 	name = "BoS"
-	flags_1 = NONE
-	requires_power = TRUE
-	icon_state = "nuke_storage"
+	icon_state = "brotherhood"
 
 /area/ms13/underground/mountain
 	name = "mountain"
+	ambientsounds = list('mojave/sound/ms13ambience/cave/cave_idle.ogg', 'mojave/sound/ms13ambience/cave/cave_spooky.ogg')
 	icon_state = "cave"
 	requires_power = TRUE
 
@@ -36,16 +37,6 @@
 	name = "tcom"
 	icon_state = "tcomsatcham"
 	requires_power = FALSE
-
-/area/ms13/desert
-	name = "Desert"
-	icon_state = "desert"
-	requires_power = FALSE
-	poweralm = FALSE
-	power_environ = FALSE
-	power_equip = FALSE
-	outdoors = TRUE
-	flags_1 = NONE //>desert >>has destroyed robo dirt on it
 
 /area/ms13/sunny_dale
 	name = "Sunny Dale"
@@ -102,10 +93,6 @@
 	name = "FarmhouseS"
 	icon_state = "farmhouse"
 	requires_power = TRUE
-
-/area/ms13/legioncamp
-	name = "Legion Camp"
-	icon_state = "legioncamp"
 
 /area/ms13/powerplant
 	name = "Power Plant"
@@ -207,6 +194,36 @@
 /area/ms13/supermarket/basement
 	name = "Supermarket Basement"
 	icon_state = "supermarket_basement"
+//Drought Areas//
+
+/area/ms13/desert
+	name = "Desert"
+	icon_state = "desert"
+	requires_power = FALSE
+	poweralm = FALSE
+	power_environ = FALSE
+	power_equip = FALSE
+	outdoors = TRUE
+	flags_1 = NONE
+
+/area/ms13/legioncamp
+	name = "Legion Camp"
+	icon_state = "legioncamp"
+
+/area/ms13/legioncamp/building
+	name = "Legion Building"
+	icon_state = "legion_building"
+	outdoors = FALSE
+
+/area/ms13/rangeroutpost
+	name = "Desert Ranger Outpost"
+	icon_state = "ranger_outpost"
+	requires_power = FALSE
+	poweralm = TRUE
+	power_environ = FALSE
+	power_equip = FALSE
+	power_light = TRUE
+	outdoors = FALSE
 
 //Mall/Eagle Lakes Areas
 

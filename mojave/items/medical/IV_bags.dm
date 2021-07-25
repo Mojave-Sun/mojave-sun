@@ -1,7 +1,7 @@
 //Blood//
 
 /obj/item/reagent_containers/blood/ms13
-	icon = 'mojave/icons/objects/medical.dmi'
+	icon = 'mojave/icons/objects/medical/medical_world.dmi'
 	icon_state = "bag_r"
 
 /obj/item/reagent_containers/blood/ms13/a_plus

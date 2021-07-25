@@ -19,6 +19,8 @@
 	righthand_file = 'mojave/icons/mob/inhands/clothing_righthand.dmi'
 	hoodtype = null
 
+// Armor Kits //
+
 /obj/item/clothing/suit/armor/ms13/kit
 	name = "armor kit"
 	desc = "Various armor parts and pieces worn over clothing. Good at stopping knives and bullets, but not much else."
@@ -32,6 +34,8 @@
 	icon_state = "harmorkit"
 	inhand_icon_state = "harmorkit"
 	armor = list(melee = 25, bullet = 25, laser = 10, energy = 0, bomb = 20, bio = 5, rad = 5, fire = 5, acid = 5)
+
+// Light/Leather Armor //
 
 /obj/item/clothing/suit/armor/ms13/tire
 	name = "tire armor"
@@ -54,12 +58,7 @@
 	inhand_icon_state = "reinforcedleather"
 	armor = list(melee = 35, bullet = 25, laser = 10, energy = 25, bomb = 20, bio = 10, rad = 10, fire = 10, acid = 10)
 
-/obj/item/clothing/suit/armor/ms13/vaultvan
-	name = "\improper Vault-tec van armor"
-	desc = "Makeshift armor scrounged together from, as one may expect, the old remains of a Vault-tec van. Being made almost entirely of metal does make it susceptible to laser and energy weapons, however."
-	icon_state = "vaultvanarmor"
-	inhand_icon_state = "vaultvanarmor"
-	armor = list("melee" = 50, "bullet" = 35, "laser" = 5, "energy" = 5, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 10)
+// Metal Armor //
 
 /obj/item/clothing/suit/armor/ms13/metal
 	name = "metal armor"
@@ -82,6 +81,15 @@
 	inhand_icon_state = "heavymetal"
 	armor = list("melee" = 55, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 40, "bio" = 10, "rad" = 20, "fire" = 20, "acid" = 25)
 
+/obj/item/clothing/suit/armor/ms13/vaultvan
+	name = "\improper Vault-tec van armor"
+	desc = "Makeshift armor scrounged together from, as one may expect, the old remains of a Vault-tec van. Being made almost entirely of metal does make it susceptible to laser and energy weapons, however."
+	icon_state = "vaultvanarmor"
+	inhand_icon_state = "vaultvanarmor"
+	armor = list("melee" = 50, "bullet" = 35, "laser" = 5, "energy" = 5, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 50, "acid" = 10)
+
+// Armor Vests //
+
 /obj/item/clothing/suit/armor/ms13/vest
 	name = "police vest"
 	desc = "A bulletproof police vest meant primarily for stopping small caliber guns."
@@ -90,6 +98,11 @@
 	blood_overlay_type = "armor"
 	dog_fashion = /datum/dog_fashion/back
 	armor = list(melee = 20, bullet = 40, laser = 10, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 20, acid = 5)
+
+/obj/item/clothing/suit/armor/ms13/vest/civilian
+	name = "civilian vest"
+	desc = "A bulletproof civilian issue pre-war vest meant primarily for stopping small caliber guns."
+	icon_state = "armorvest"
 
 /obj/item/clothing/suit/armor/ms13/vest/military
 	name = "military vest"
@@ -103,6 +116,8 @@
 	desc = "A thick padded vest worn by vault security officers. Makes you want to yell, 'Hit me, I can hardly feel it!'"
 	icon_state = "vaultarmor"
 	armor = list(melee = 40, bullet = 10, laser = 15, energy = 10, bomb = 25, bio = 5, rad = 5, fire = 20, acid = 5)
+
+// Raider Armor //
 
 /obj/item/clothing/suit/ms13/trench/bossduster
 	name = "boss' duster"
@@ -143,13 +158,7 @@
 	desc = "A duster with a rather thick vest under it. This just SCREAMS authority. Could probably stop a few bullets."
 	icon_state = "veteranraider"
 
-/obj/item/clothing/suit/armor/ms13/tesla
-	name = "tesla armor"
-	desc = "Pre-war armor designed to expressly limit damage from laser and energy weapons. Due to materials used, it's rather brittle and can be penetrated by even small arms fire."
-	icon_state = "tesla_armor"
-	inhand_icon_state = "tesla_armor"
-	blood_overlay_type = "armor"
-	armor = list("melee" = 35, "bullet" = 15, "laser" = 45, "energy" = 45, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+// Combat Armor //
 
 /obj/item/clothing/suit/armor/ms13/combat
 	name = "combat armor"
@@ -172,13 +181,14 @@
 	inhand_icon_state = "combat_armor_mk2"
 	armor = list("melee" = 55, "bullet" = 45, "laser" = 30, "energy" = 10, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 80, "acid" = 25)
 
+// Special Armor //
+
 /obj/item/clothing/suit/armor/ms13/stealth
 	name = "stealth suit"
 	desc = "An advanced chinese stealth suit. You'll never see communism coming until it's far too late."
 	icon_state = "stealthsuit"
 	inhand_icon_state = "stealthsuit"
 	armor = list("melee" = 25, "bullet" = 15, "laser" = 15, "energy" = 10, "bomb" = 5, "bio" = 25, "rad" = 25, "fire" = 30, "acid" = 25)
-// Should probably get some sort of cloaking once the Stealthboys are in.
 
 /obj/item/clothing/suit/armor/ms13/stealth/assassin
 	name = "assassin armor"
@@ -186,7 +196,14 @@
 	icon_state = "assassin"
 	inhand_icon_state = "assassin"
 	armor = list("melee" = 30, "bullet" = 20, "laser" = 15, "energy" = 10, "bomb" = 10, "bio" = 25, "rad" = 25, "fire" = 20, "acid" = 25)
-// Should probably get some sort of cloaking once the Stealthboys are in.
+
+/obj/item/clothing/suit/armor/ms13/tesla
+	name = "tesla armor"
+	desc = "Pre-war armor designed to expressly limit damage from laser and energy weapons. Due to materials used, it's rather brittle and can be penetrated by even small arms fire."
+	icon_state = "tesla_armor"
+	inhand_icon_state = "tesla_armor"
+	blood_overlay_type = "armor"
+	armor = list("melee" = 35, "bullet" = 15, "laser" = 45, "energy" = 45, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
 
 /obj/item/clothing/suit/armor/ms13/eliteriot
 	name = "elite riot gear"
@@ -194,6 +211,15 @@
 	icon_state = "riotgear"
 	inhand_icon_state = "riotgear"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 20, "energy" = 20, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)
+
+/obj/item/clothing/suit/ms13/ljacket/bountyhunter
+	name = "bounty hunter's jacket"
+	desc = "A unique fur lined leather coat featuring thick ballistic weave fibers through it. Built to hold up to the worse while retaining protection against the elements."
+	icon_state = "bountyhunter"
+	inhand_icon_state = "armoredwinterblack"
+	armor = list(melee = 55, bullet = 45, laser = 35, energy = 25, bomb = 30, bio = 10, rad = 10, fire = 40, acid = 10)
+
+// Enviro Armor //
 
 /obj/item/clothing/suit/armor/ms13/firesuit
 	name = "fire suit"
@@ -229,6 +255,8 @@
 	inhand_icon_state = "spacesuit"
 	armor = list(melee = 25, bullet = 15, laser = 25, energy = 25, bomb = 5, bio = 50, rad = 40, fire = 60, acid = 50)
 
+// NCR Armor //
+
 /obj/item/clothing/suit/armor/ms13/ncr
 	name = "\improper NCR infantry vest"
 	desc = "A standard issue NCR infantry vest specialized for arctic environments."
@@ -256,6 +284,8 @@
 	icon_state = "ncr_reinforced_mantle"
 	inhand_icon_state = "ncr_reinforced_mantle"
 	armor = list("melee" = 50, "bullet" = 45, "laser" = 25, "energy" = 25, "bomb" = 30, "bio" = 25, "rad" = 25, "fire" = 30, "acid" = 25)
+
+// Legion Armor //
 
 /obj/item/clothing/suit/armor/ms13/legion
 	name = "standard Legion armor"
@@ -318,6 +348,8 @@
 	icon_state = "leg_cent"
 	armor = list("melee" = 60, "bullet" = 45, "laser" = 30, "energy" = 30, "bomb" = 45, "bio" = 30, "rad" = 30, "fire" = 50, "acid" = 30)
 
+// BOS Armor //
+
 /obj/item/clothing/suit/armor/ms13/scribe
 	name = "scribe's robe"
 	desc = "A finely made, comfortable cloth robe worn by Brotherhood scribes."
@@ -343,9 +375,19 @@
 	desc = "A custom built suit of combat armor, designed to hold up to the rigors of the wasteland by the Brotherhood."
 	icon_state = "bos_combat"
 
-//new shit
+// Desert Ranger Armor //
 
-/obj/item/clothing/suit/armor/ms13/vest
-	name = "civilian vest"
-	desc = "A bulletproof civilian issue pre-war vest meant primarily for stopping small caliber guns."
-	icon_state = "armorvest"
+/obj/item/clothing/suit/armor/ms13/combat/ranger
+	name = "\improper ranger armor"
+	desc = "A set of Desert Ranger armor. The thick materials hold up well against attacks, while keeping the wearer agile."
+	icon_state = "patrol_armor"
+	worn_icon_state = "patrol_armor"
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 25, "energy" = 15, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 40, "acid" = 20)
+
+/obj/item/clothing/suit/armor/ms13/eliteriot/ranger
+	name = "Elite Ranger armor"
+	desc = "A set of Elite Desert Ranger armor. Heavy kevlar padding in a duster, with a metal breastplate in the front. Built to last through the worst."
+	icon_state = "elite_ranger"
+	worn_icon_state = "elite_ranger"
+	inhand_icon_state = "riotgear"
+	armor = list("melee" = 60, "bullet" = 50, "laser" = 25, "energy" = 25, "bomb" = 60, "bio" = 25, "rad" = 25, "fire" = 60, "acid" = 25)

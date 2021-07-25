@@ -17,6 +17,10 @@
 	pixel_x = 4
 	pixel_y = 4 //To offset a pixel shift done on /turf/closed/mineral
 
+/turf/closed/mineral/random/ms13/drought
+	icon = 'mojave/icons/turf/walls/mineral_drought.dmi'
+	smooth_icon = 'mojave/icons/turf/walls/mineral_drought.dmi'
+
 /turf/closed/indestructible/rock/ms13
 	name = "dense rock"
 	desc = "An extremely densely-packed rock, most mining tools or explosives would never get through this."
@@ -27,3 +31,6 @@
 	smoothing_groups = list(SMOOTH_GROUP_MS13_MINERALS)
 	canSmoothWith= list(SMOOTH_GROUP_MS13_MINERALS)
 	layer = EDGED_TURF_LAYER //Remove this is tall walls or overlays end up not being used.
+
+/turf/closed/indestructible/rock/ms13/drought
+	icon = 'mojave/icons/turf/walls/indestructible_rock_drought.dmi'
