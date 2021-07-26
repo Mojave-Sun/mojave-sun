@@ -22,10 +22,10 @@
 		/obj/item/clothing/head/helmet/ms13/cowboy/black,\
 		/obj/item/clothing/head/helmet/ms13/utilitycap,\
 		/obj/item/clothing/head/soft/ms13/baseball,\
-		/obj/item/clothing/head/hooded/ms13/cowl,\
-		/obj/item/clothing/head/hooded/ms13/sack,\
-		/obj/item/clothing/head/hooded/ms13/hood,\
-		/obj/item/clothing/head/hooded/ms13/hunter,\
+		/obj/item/clothing/head/ms13/hood/cowl,\
+		/obj/item/clothing/head/ms13/hood/sack,\
+		/obj/item/clothing/head/ms13/hood/hood,\
+		/obj/item/clothing/head/ms13/hood/hunter,\
 		/obj/item/clothing/head/helmet/ms13/fedora,\
 		/obj/item/clothing/head/helmet/ms13/hardhat,\
 		/obj/item/clothing/head/helmet/ms13/skull/muffalo,\

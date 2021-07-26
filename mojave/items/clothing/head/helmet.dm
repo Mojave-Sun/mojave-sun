@@ -8,8 +8,19 @@
 	flags_inv = HIDEHAIR
 	armor = list(melee = 5, bullet = 0, laser = 0, energy = 0, bomb = 10, bio = 20, rad = 20, fire = 0, acid = 10)
 
-/obj/item/clothing/head/hooded/ms13
+/obj/item/clothing/head/ms13/hood
 	name = "generic ms13 hood"
+	desc = "We in this."
+	icon = 'mojave/icons/objects/clothing/hats.dmi'
+	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/clothing_lefthand.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/clothing_righthand.dmi'
+	flags_inv = HIDEHAIR
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/hooded/ms13
+	name = "generic ms13 suit hood"
 	desc = "Gamer phone home. Something is wrong."
 	icon = 'mojave/icons/objects/clothing/hats.dmi'
 	worn_icon = 'mojave/icons/mob/clothing/head.dmi'
@@ -209,7 +220,7 @@
 	inhand_icon_state = "hubologist"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 
-/obj/item/clothing/head/hooded/ms13/assaultgas
+/obj/item/clothing/head/ms13/hood/assaultgas
 	name = "assault gas mask"
 	desc = "A US military assault mask, a relic of what man could have done."
 	icon_state = "assault"
@@ -217,7 +228,7 @@
 	inhand_icon_state = "winterglovesblack"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/hooded/ms13/banded
+/obj/item/clothing/head/ms13/hood/banded
 	name = "banded helmet"
 	desc = "A dirty black hood encased in banded metal sheets, how you see out of this, you dont know."
 	icon_state = "banded"
@@ -225,7 +236,7 @@
 	inhand_icon_state = "harmorkit"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/hooded/ms13/plated
+/obj/item/clothing/head/ms13/hood/plated
 	name = "plated cowl"
 	desc = "An armored cloth cowl, eyeholes poked through."
 	icon_state = "plated"
@@ -233,14 +244,14 @@
 	inhand_icon_state = "armorkit"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/hooded/ms13/cowl
+/obj/item/clothing/head/ms13/hood/cowl
 	name = "cowl"
 	desc = "A tattered cloth cowl."
 	icon_state = "cowl"
 	inhand_icon_state = "winterglovesbrown"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/hooded/ms13/inquisitor
+/obj/item/clothing/head/ms13/hood/inquisitor
 	name = "inquisitors helm"
 	desc = "A menacing piece of religious headwear, pipes and gold shining throughout, must belong to someone of the highest attunement with god."
 	icon_state = "inquisitor"
@@ -248,14 +259,14 @@
 	inhand_icon_state = "headdress_l"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/hooded/ms13/sack
+/obj/item/clothing/head/ms13/hood/sack
 	name = "sack hood"
 	desc = "A simple sack with some holes poked in it, for concealing your identity as you pillage the wasteland."
 	icon_state = "sack"
 	inhand_icon_state = "tribalrag"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/hooded/ms13/sack/banded
+/obj/item/clothing/head/ms13/hood/sack/banded
 	name = "banded sack hood"
 	desc = "A sack encased in leather straps for protection and durability."
 	icon_state = "sackstrap"
@@ -263,7 +274,7 @@
 	inhand_icon_state = "tribalrag"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/hooded/ms13/sack/metal
+/obj/item/clothing/head/ms13/hood/sack/metal
 	name = "spiked sack hood"
 	desc = "A tattered sack encased in spikes and metal, very menacing."
 	icon_state = "sackmetal"
@@ -271,7 +282,7 @@
 	inhand_icon_state = "tribalrag"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/hooded/ms13/tactical
+/obj/item/clothing/head/ms13/hood/tactical
 	name = "tactical stealth hood"
 	desc = "A tactical pre-war black latex head and goggles, the read up display is long gone but this durable stealthwear is how you OPERATE."
 	icon_state = "tactical"
@@ -279,14 +290,14 @@
 	inhand_icon_state = "winterglovesblack"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/hooded/ms13/hood
+/obj/item/clothing/head/ms13/hood/hood
 	name = "green hood"
 	desc = "A simple handmade cloth hood, rather primitive in its construction."
 	icon_state = "hood"
 	inhand_icon_state = "winterglovesblack"
 	flags_inv = HIDEEARS|HIDEHAIR
 
-/obj/item/clothing/head/hooded/ms13/hunter
+/obj/item/clothing/head/ms13/hood/hunter
 	name = "hunters hood"
 	desc = "A tactical hunting hood with red face guard, commonly used by radstag-poachers."
 	icon_state = "hunter"
