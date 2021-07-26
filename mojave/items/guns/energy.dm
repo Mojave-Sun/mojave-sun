@@ -22,16 +22,9 @@
 	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 	base_icon_state = ""
 	var/tac_reloads = FALSE
 	automatic_charge_overlays = FALSE
-=======
-	base_icon_state = ""
-	var/tac_reloads = FALSE
->>>>>>> parent of c1e90763c4 (Revert "hitscan laser weapons + reload")
 /obj/item/gun/energy/ms13/update_icon()
 	if(!cell)
 		icon_state = "[base_icon_state]_empty"
@@ -85,22 +78,15 @@
 				to_chat(user, "<span class='notice'>There's already a [cell.name] in \the [src].</span>")
 		return
 
-<<<<<<< HEAD
 /obj/item/gun/energy/ms13/attack_self(mob/user)
 	eject_magazine(user)
 	return ..()
 
-=======
->>>>>>> parent of c1e90763c4 (Revert "hitscan laser weapons + reload")
 /obj/item/gun/energy/ms13/attack_hand(mob/user)
 	if(loc == user && user.is_holding(src) && cell)
 		eject_magazine(user)
 		return
 	return ..()
-<<<<<<< HEAD
->>>>>>> parent of 5444e25b96 (Revert "finalizations")
-=======
->>>>>>> parent of c1e90763c4 (Revert "hitscan laser weapons + reload")
 
 /obj/item/gun/energy/ms13/Initialize()
 	. = ..()
