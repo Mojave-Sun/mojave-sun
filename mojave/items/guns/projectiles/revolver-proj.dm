@@ -1,6 +1,5 @@
 //.44
 /obj/projectile/bullet/ms13/m44
-	icon_state = "medium_bullet"
 	damage = 0
 	armour_penetration = 0
 	wound_bonus = -2
@@ -21,7 +20,6 @@
 
 //45-70
 /obj/projectile/bullet/ms13/c4570
-	icon_state = "medium_bullet"
 	damage = 0
 	armour_penetration = 0
 	wound_bonus = -2
@@ -39,7 +37,6 @@
 
 //.357
 /obj/projectile/bullet/ms13/a357
-	icon_state = "medium_bullet"
 	damage = 0
 	armour_penetration = 0
 	wound_bonus = -2

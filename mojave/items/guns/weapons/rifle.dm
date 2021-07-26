@@ -126,44 +126,17 @@
 	icon_state = "arisaka"
 	inhand_icon_state = "arisaka"
 	internal_magazine = TRUE
-	can_bayonet = TRUE
-	knife_x_offset = 27
-	knife_y_offset = 12
 	mag_type = /obj/item/ammo_box/magazine/internal/ms13/arisaka
 	extra_damage = 45
 	fire_sound = 'mojave/sound/ms13weapons/hunting_rifle.ogg'
 	rack_sound = 'mojave/sound/ms13weapons/gunsounds/arisaka/ArisakaOpen.ogg' ///proof kenobi is a hecking weeb
 	bolt_drop_sound = 'mojave/sound/ms13weapons/gunsounds/arisaka/ArisakaClose.ogg'
 
-/obj/item/gun/ballistic/rifle/ms13/hunting/arisaka/update_overlays()
-	. = ..()
-	if(gun_light)
-		var/mutable_appearance/flashlight_overlay
-		var/state = "[gunlight_state][gun_light.on? "_on":""]"	//Generic state.
-		if(gun_light.icon_state in icon_states('icons/obj/guns/flashlights.dmi'))	//Snowflake state?
-			state = gun_light.icon_state
-		flashlight_overlay = mutable_appearance('icons/obj/guns/flashlights.dmi', state)
-		flashlight_overlay.pixel_x = flight_x_offset
-		flashlight_overlay.pixel_y = flight_y_offset
-		. += flashlight_overlay
-
-	if(bayonet)
-		var/mutable_appearance/knife_overlay
-		var/state = "type30"							//Generic state.
-		if(bayonet.icon_state in icon_states('mojave/icons/objects/guns/bayonets.dmi'))		//Snowflake state?
-			state = bayonet.icon_state
-		var/icon/bayonet_icons = 'mojave/icons/objects/guns/bayonets.dmi'
-		knife_overlay = mutable_appearance(bayonet_icons, state)
-		knife_overlay.pixel_x = knife_x_offset
-		knife_overlay.pixel_y = knife_y_offset
-		. += knife_overlay
-
 /obj/item/gun/ballistic/rifle/ms13/hunting/arisaka/scoped //not likely to ever be seen in game, more of an admin thing, dont map it in, it'd be slightly OP
 	name = "scoped arisaka type 99"
 	desc = "A really old pre-war rifle, chambered in .308 with an internal 5 round magazine. This one has a scoped mounted to it."
 	icon_state = "scoped_arisaka"
 	inhand_icon_state = "scoped_arisaka"
-	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 14
 
@@ -175,7 +148,6 @@
 	bolt_type = BOLT_TYPE_NO_BOLT
 	empty_alarm = TRUE
 	semi_auto = TRUE
-	can_bayonet = TRUE
 	internal_magazine = FALSE
 	mag_type = /obj/item/ammo_box/magazine/ms13/r308/battlerifle
 	fire_sound = 'mojave/sound/ms13weapons/battlerifle.ogg'
