@@ -1,11 +1,87 @@
 	//Mojave Sun
+	///effects
+/obj/effect/projectile/impact/ms13/laser
+	name = "laser impact"
+	icon_state = "laser_impact"
+	icon = 'mojave/icons/objects/projectiles/projectiles_impact.dmi'
 
+/obj/effect/projectile/muzzle/ms13/laser
+	name = "muzzle flash"
+	icon_state = "laser_muzzle"
+	icon = 'mojave/icons/objects/projectiles/projectiles_muzzle.dmi'
+
+/obj/effect/projectile/tracer/ms13/laser
+	name = "laser beam"
+	icon_state = "laser"
+	icon = 'mojave/icons/objects/projectiles/projectiles_tracer.dmi'
+
+////guns
 /obj/item/gun/energy/ms13
 	name = "generic ms13 gun"
 	desc = "complain when seeing this"
 	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
+	base_icon_state = ""
+	var/tac_reloads = FALSE
+/obj/item/gun/energy/ms13/update_icon()
+	if(!cell)
+		icon_state = "[base_icon_state]_empty"
+	else
+		icon_state = "[base_icon_state]"
+
+/obj/item/gun/energy/ms13/proc/insert_magazine(mob/user, var/obj/item/stock_parts/cell/ammo/AM, display_message = TRUE)
+	if(!istype(AM, cell_type))
+		to_chat(user, "<span class='warning'>\The [AM] doesn't seem to fit into \the [src]...</span>")
+		return FALSE
+	if(user.transferItemToLoc(AM, src))
+		cell = AM
+		if (display_message)
+			to_chat(user, "<span class='notice'>You load a new [AM] into \the [src].</span>")
+		update_icon()
+		return TRUE
+	else
+		to_chat(user, "<span class='warning'>You cannot seem to get \the [src] out of your hands!</span>")
+		return FALSE
+
+///Handles all the logic of magazine ejection, if tac_load is set that magazine will be tacloaded in the place of the old eject
+/obj/item/gun/energy/ms13/proc/eject_magazine(mob/user, display_message = TRUE, var/obj/item/stock_parts/cell/ammo/tac_load = null)
+	cell.forceMove(drop_location())
+	var/obj/item/stock_parts/cell/ammo/old_mag = cell
+	if (tac_load)
+		if (insert_magazine(user, tac_load, FALSE))
+			to_chat(user, "<span class='notice'>You perform a tactical reload on \the [src].</span>")
+		else
+			to_chat(user, "<span class='warning'>You dropped the old [old_mag.name], but the new one doesn't fit. How embarassing.</span>")
+			cell = null
+	else
+		cell = null
+	user.put_in_hands(old_mag)
+	old_mag.update_icon()
+	if (display_message)
+		to_chat(user, "<span class='notice'>You pull the [old_mag.name] out of \the [src].</span>")
+	update_icon()
+
+/obj/item/gun/energy/ms13/attackby(obj/item/A, mob/user, params)
+	. = ..()
+	if (.)
+		return
+	if (istype(A, /obj/item/stock_parts/cell/ammo))
+		var/obj/item/stock_parts/cell/ammo/AM = A
+		if (!cell)
+			insert_magazine(user, AM)
+		else
+			if (tac_reloads)
+				eject_magazine(user, FALSE, AM)
+			else
+				to_chat(user, "<span class='notice'>There's already a [cell.name] in \the [src].</span>")
+		return
+
+/obj/item/gun/energy/ms13/attack_hand(mob/user)
+	if(loc == user && user.is_holding(src) && cell)
+		eject_magazine(user)
+		return
+	return ..()
 
 /obj/item/gun/energy/ms13/Initialize()
 	. = ..()
@@ -14,6 +90,7 @@
 /obj/item/gun/energy/ms13/laser/aer9
 	name = "AER9 Laser Rifle"
 	desc = "A sturdy and advanced military grade pre-war service laser rifle"
+	base_icon_state = "stanlas_rifle"
 	icon_state = "stanlas_rifle"
 	inhand_icon_state = "stanlast_rifle"
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/laser/lasgun)
@@ -25,6 +102,7 @@
 	desc = "A basic energy-based laser gun that fires concentrated beams of light which pass through glass and thin metal."
 	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	icon_state = "stanlas_pistol"
+	base_icon_state = "stanlas_pistol"
 	inhand_icon_state = "stanlas_pistol"
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
@@ -38,6 +116,7 @@
 	desc = "A modified AER9 equipped with a refraction kit that spreads its bolts."
 	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	icon_state = "lasershotgun"
+	base_icon_state = "lasershotgun"
 	inhand_icon_state = "lasershotgun"
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
@@ -50,11 +129,12 @@
 	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	inhand_icon_state = "plasmacarabine"
 	icon_state = "plasmacarabine"
+	base_icon_state = "plasmacarabine"
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	desc = "A top of line miniaturized plasma caster built by REPCONN in the wake of the Z43-521P failure. It is supperior to all previous rifles to enter service in the USCC."
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/plasma)
-	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	cell_type = /obj/item/stock_parts/cell/ammo/pc
 	w_class = WEIGHT_CLASS_HUGE
 
 /obj/item/gun/energy/ms13/laser/plasma/scatter
@@ -62,33 +142,74 @@
 	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	inhand_icon_state = "multiplas"
 	icon_state = "multiplas"
+	base_icon_state = "multiplas"
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	desc = "A modified A3-20 plasma caster built by REPCONN equipped with a multicasting kit that creates multiple weaker clots."
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/plasma/scatter)
-	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	cell_type = /obj/item/stock_parts/cell/ammo/pc
 
 /obj/item/gun/energy/ms13/laser/plasma/pistol
 	name ="MPL-A Plasma Pistol"
 	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	inhand_icon_state = "plasmapistol"
 	icon_state = "plasmapistol"
+	base_icon_state = "plasmapistol"
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires heavy low penetration plasma clots."
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/plasma/pistol)
 	w_class = WEIGHT_CLASS_NORMAL
-	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	cell_type = /obj/item/stock_parts/cell/ammo/pc
 
 //projectiles
 
 /obj/projectile/beam/ms13
 	speed = 0.2 //Vanilla tg is 0.8
-
+	var/damage_constant = 0.8
+/obj/projectile/beam/ms13/Range()
+	if(hitscan != TRUE)
+		return ..()
+	var/turf/location = get_turf(src)
+	if(!location)
+		return ..()
+	var/datum/gas_mixture/environment = location.return_air()
+	var/environment_pressure = environment.return_pressure()
+	if(environment_pressure >= 50)
+		if((decayedRange - range) >= 4)
+			damage *= damage_constant
+	. = ..()
+/obj/projectile/beam/ms13/laser
+	name = "laser beam"
+	damage = 19
+	armour_penetration = 0
+	hitscan = TRUE
+	hitscan_light_color_override = COLOR_DARK_RED
+	muzzle_flash_color_override = COLOR_DARK_RED
+	impact_light_color_override = COLOR_DARK_RED
+	range = 21
+	tracer_type = /obj/effect/projectile/tracer/ms13/laser
+	muzzle_type = /obj/effect/projectile/muzzle/ms13/laser
+	impact_type = /obj/effect/projectile/impact/ms13/laser
+	hitscan_light_intensity = 2
+	hitscan_light_range = 0.50
+	hitscan_light_color_override = COLOR_SOFT_RED
+	muzzle_flash_intensity = 4
+	muzzle_flash_range = 1
+	muzzle_flash_color_override = COLOR_SOFT_RED
+	impact_light_intensity = 5
+	impact_light_range = 1.25
+	impact_light_color_override = COLOR_SOFT_RED
 /obj/projectile/beam/ms13/laser/lasgun
 	name = "laser beam"
 	damage = 34
 	armour_penetration = -9
+
+/obj/projectile/beam/ms13/laser/lassniper
+	name = "laser beam"
+	damage = 34
+	armour_penetration = -9
+	range = 28
 
 /obj/projectile/beam/ms13/laser/pistol
 	name = "laser beam"
@@ -100,6 +221,8 @@
 
 /obj/projectile/bullet/ms13/plasma
 	name = "plasma clot"
+	icon = 'mojave/icons/objects/projectiles/projectiles.dmi'
+	icon_state = "plasma"
 	damage = 60
 
 /obj/projectile/bullet/ms13/plasma/pistol
@@ -151,16 +274,29 @@
 // energy weapon ammotypes
 
 /obj/item/stock_parts/cell/ammo
+	icon = 'mojave/icons/objects/ammo/ammo_world.dmi'
 	name = "ammo cell"
 	desc = "You shouldn't be holding this."
 	w_class = WEIGHT_CLASS_TINY
+	var/base_icon = ""
+	var/multiple_states = FALSE
+
+/obj/item/stock_parts/cell/ammo/Initialize()
+	. = ..()
+	AddElement(/datum/element/inworld_sprite, 'mojave/icons/objects/ammo/ammo.dmi')
 
 /obj/item/stock_parts/cell/ammo/New()
 	..()
 	return
 
 /obj/item/stock_parts/cell/ammo/update_icon()
-	return
+	if (multiple_states == FALSE)
+		return
+	else
+		if (src.charge == 0)
+			icon_state = "[base_icon]_empty"
+		else
+			icon_state = "[base_icon]"
 
 /obj/item/stock_parts/cell/ammo/mfc
 	name = "microfusion cell"
@@ -168,17 +304,30 @@
 	icon_state = "mfc"
 	maxcharge = 1200
 	chargerate = 300
+	base_icon = "mfc"
 
 /obj/item/stock_parts/cell/ammo/ecp
 	name = "electron charge pack"
 	desc = "An electron charge pack, typically used as ammunition for rapidly-firing energy weapons."
-	icon_state = "icell"
+	icon_state = "2mmec"
 	maxcharge = 2400
 	chargerate = 400
+	base_icon = "2mmec"
+	multiple_states = TRUE
 
 /obj/item/stock_parts/cell/ammo/ec
 	name = "energy cell"
 	desc = "An energy cell, typically used as ammunition for small-arms energy weapons."
-	icon_state = "ec"
+	icon_state = "sec"
 	maxcharge = 300
 	chargerate = 300
+	base_icon = "sec"
+
+/obj/item/stock_parts/cell/ammo/pc
+	name = "plasma cell"
+	desc = "A plasma cell, typically used as ammunition for plasma based energy weapons."
+	icon_state = "plasma"
+	maxcharge = 1200
+	chargerate = 300
+	base_icon = "plasma"
+	multiple_states = TRUE
