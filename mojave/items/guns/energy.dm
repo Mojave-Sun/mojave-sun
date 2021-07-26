@@ -24,6 +24,7 @@
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	base_icon_state = ""
 	var/tac_reloads = FALSE
+	automatic_charge_overlays = FALSE
 /obj/item/gun/energy/ms13/update_icon()
 	if(!cell)
 		icon_state = "[base_icon_state]_empty"
@@ -76,6 +77,10 @@
 			else
 				to_chat(user, "<span class='notice'>There's already a [cell.name] in \the [src].</span>")
 		return
+
+/obj/item/gun/energy/ms13/attack_self(mob/user)
+	eject_magazine(user)
+	return ..()
 
 /obj/item/gun/energy/ms13/attack_hand(mob/user)
 	if(loc == user && user.is_holding(src) && cell)
@@ -236,6 +241,7 @@
 //plasma
 
 /obj/item/ammo_casing/energy/ms13
+	firing_effect_type = null
 	click_cooldown_override = 1 //0.1 second fire delay; better balance your fire rates now
 
 /obj/item/ammo_casing/energy/ms13/plasma
