@@ -126,37 +126,11 @@
 	icon_state = "arisaka"
 	inhand_icon_state = "arisaka"
 	internal_magazine = TRUE
-	can_bayonet = TRUE
-	knife_x_offset = 27
-	knife_y_offset = 12
 	mag_type = /obj/item/ammo_box/magazine/internal/ms13/arisaka
 	extra_damage = 45
 	fire_sound = 'mojave/sound/ms13weapons/hunting_rifle.ogg'
 	rack_sound = 'mojave/sound/ms13weapons/gunsounds/arisaka/ArisakaOpen.ogg' ///proof kenobi is a hecking weeb
 	bolt_drop_sound = 'mojave/sound/ms13weapons/gunsounds/arisaka/ArisakaClose.ogg'
-
-/obj/item/gun/ballistic/rifle/ms13/hunting/arisaka/update_overlays()
-	. = ..()
-	if(gun_light)
-		var/mutable_appearance/flashlight_overlay
-		var/state = "[gunlight_state][gun_light.on? "_on":""]"	//Generic state.
-		if(gun_light.icon_state in icon_states('icons/obj/guns/flashlights.dmi'))	//Snowflake state?
-			state = gun_light.icon_state
-		flashlight_overlay = mutable_appearance('icons/obj/guns/flashlights.dmi', state)
-		flashlight_overlay.pixel_x = flight_x_offset
-		flashlight_overlay.pixel_y = flight_y_offset
-		. += flashlight_overlay
-
-	if(bayonet)
-		var/mutable_appearance/knife_overlay
-		var/state = "type30"							//Generic state.
-		if(bayonet.icon_state in icon_states('mojave/icons/objects/guns/bayonets.dmi'))		//Snowflake state?
-			state = bayonet.icon_state
-		var/icon/bayonet_icons = 'mojave/icons/objects/guns/bayonets.dmi'
-		knife_overlay = mutable_appearance(bayonet_icons, state)
-		knife_overlay.pixel_x = knife_x_offset
-		knife_overlay.pixel_y = knife_y_offset
-		. += knife_overlay
 
 /obj/item/gun/ballistic/rifle/ms13/hunting/arisaka/scoped //not likely to ever be seen in game, more of an admin thing, dont map it in, it'd be slightly OP
 	name = "scoped arisaka type 99"
@@ -184,7 +158,7 @@
 //Magazines
 /obj/item/ammo_box/magazine/ms13/r10
 	name = "10 round magazine (5.56mm)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "556r10"
 	ammo_type = /obj/item/ammo_casing/ms13/a556
 	caliber = "a556"
@@ -193,7 +167,7 @@
 
 /obj/item/ammo_box/magazine/ms13/r308
 	name = "5 round magazine (.308)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "r308"
 	ammo_type = /obj/item/ammo_casing/ms13/a308
 	caliber = "a308"
@@ -202,7 +176,7 @@
 
 /obj/item/ammo_box/magazine/ms13/amr
 	name = "6 round magazine (.50)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "50cal"
 	ammo_type = /obj/item/ammo_casing/ms13/a50MG
 	caliber = "a50MG"
@@ -235,7 +209,7 @@
 
 /obj/item/ammo_box/ms13/chinese_rifle
 	name = "\improper Chinese hunting rifle stripper clip (7.62)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "cpistol"
 	ammo_type = /obj/item/ammo_casing/ms13/a762
 	caliber = "a762"
