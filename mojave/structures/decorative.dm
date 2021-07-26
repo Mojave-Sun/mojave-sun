@@ -2,20 +2,30 @@
 
 //street//
 
-/obj/structure/filingcabinet/ms13
-	name = "wasteland filing cabinet"
-	desc = "Perfect for filing your radioactive dust."
-	icon = 'mojave/icons/structure/miscellaneous.dmi'
-
 /obj/structure/filingcabinet/ms13/mail
 	name = "postbox"
 	desc = "Last pickup, October 22nd, 2077."
+	icon = 'mojave/icons/structure/miscellaneous.dmi'
 	icon_state = "mailbox"
-	pixel_y = 12
 	layer = EDGED_TURF_LAYER
+	pixel_y = 12
 
 /obj/structure/filingcabinet/ms13/mail/old
 	icon_state = "mailbox_old"
+
+/obj/structure/ms13/storage/trashcan
+	name = "trash can"
+	desc = "An old trash can, used for getting the filth anywhere other than the street. Not that people care about that much, these days."
+	icon = 'mojave/icons/structure/miscellaneous.dmi'
+	icon_state = "trashbin"
+	anchored = FALSE
+	pixel_y = 10
+
+/obj/structure/ms13/storage/trashcan/Initialize()
+	. = ..()
+	if(prob(25))
+		icon_state = "[initial(icon_state)]-[rand(1,3)]"
+		return
 
 //signs/flags//
 

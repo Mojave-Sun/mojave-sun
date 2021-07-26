@@ -3,6 +3,58 @@
 	desc = "this doesn't even exist"
 	icon = 'mojave/icons/objects/clothing/masks.dmi'
 	worn_icon = 'mojave/icons/mob/clothing/mask.dmi'
+	lefthand_file = 'mojave/icons/mob/inhands/clothing_lefthand.dmi'
+	righthand_file = 'mojave/icons/mob/inhands/clothing_righthand.dmi'
+
+// Bandanas //
+
+/obj/item/clothing/mask/ms13/bandana
+	name = "bandana"
+	desc = "A tactical and cool piece of face wrap, useful againt the dust, heat and those other sumbitches that want your head."
+	inhand_icon_state = "winterglovesbrown"
+	flags_inv = HIDEFACE
+
+/obj/item/clothing/mask/ms13/bandana/blue
+	name = "blue bandana"
+	icon_state = "bandanablue"
+
+/obj/item/clothing/mask/ms13/bandana/red
+	name = "red bandana"
+	icon_state = "bandanared"
+
+/obj/item/clothing/mask/ms13/bandana/white
+	name = "white bandana"
+	icon_state = "bandanawhite"
+
+/obj/item/clothing/mask/ms13/bandana/patriot
+	name = "USA bandana"
+	icon_state = "bandanaUSA"
+
+/obj/item/clothing/mask/ms13/bandana/leapord
+	name = "leapord-print bandana"
+	icon_state = "bandanaleapord"
+
+/obj/item/clothing/mask/ms13/bandana/camo
+	name = "camoflage bandana"
+	icon_state = "bandanacamo"
+
+/obj/item/clothing/mask/ms13/bandana/crips
+	name = "gangsters bandana"
+	icon_state = "bandanacrips"
+
+/obj/item/clothing/mask/ms13/bandana/bloods
+	name = "gangsters bandana"
+	icon_state = "bandanabloods"
+
+/obj/item/clothing/mask/ms13/bandana/grove
+	name = "gangsters bandana"
+	icon_state = "bandanagrove"
+
+/obj/item/clothing/mask/ms13/bandana/surgical
+	name = "surgical mask"
+	icon_state = "surgical"
+
+// Generic Wasteland Facemasks //
 
 /obj/item/clothing/mask/ms13/facewrap
 	name = "tan facewrap"
@@ -63,10 +115,13 @@
 	desc = "An old gas mask. Hypothetically speaking, breathing through it is safer than breathing out of it. The filters are questionable at best."
 	icon = 'mojave/icons/objects/clothing/masks.dmi'
 	worn_icon = 'mojave/icons/mob/clothing/mask.dmi'
-	icon_state = "gasmask"
+	icon_state = "gasmaskmodern"
 	inhand_icon_state = "gasmask"
 	var/adjusted = FALSE
 	var/adjustable = TRUE
+
+/obj/item/clothing/mask/gas/ms13/modern
+	icon_state = "gasmask"
 
 /obj/item/clothing/mask/gas/ms13/ranger
 	desc = "A heavy duty gas mask, perfect for filtering the air of a very tainted world."
