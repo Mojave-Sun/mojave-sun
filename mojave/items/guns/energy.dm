@@ -25,6 +25,8 @@
 	base_icon_state = ""
 	var/tac_reloads = FALSE
 	automatic_charge_overlays = FALSE
+	extra_damage = 10
+	fire_delay = 6
 /obj/item/gun/energy/ms13/update_icon()
 	if(!cell)
 		icon_state = "[base_icon_state]_empty"
@@ -98,9 +100,11 @@
 	base_icon_state = "stanlas_rifle"
 	icon_state = "stanlas_rifle"
 	inhand_icon_state = "stanlast_rifle"
+	fire_delay = 6
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/laser/lasgun)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	w_class = WEIGHT_CLASS_HUGE
+	extra_damage = 9
 
 /obj/item/gun/energy/ms13/laser/pistol
 	name = "AEP7 laser pistol"
@@ -112,9 +116,10 @@
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
-	fire_delay = 0
+	fire_delay = 5
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/laser/pistol)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	extra_damage = 5
 
 /obj/item/gun/energy/ms13/laser/scatter
 	name = "Tri-beam Laser Rifle"
@@ -128,6 +133,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/laser/scatter)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	w_class = WEIGHT_CLASS_HUGE
+	fire_delay = 6
 
 /obj/item/gun/energy/ms13/laser/plasma
 	name ="A3-20 Plasma Rifle"
@@ -141,6 +147,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/plasma)
 	cell_type = /obj/item/stock_parts/cell/ammo/pc
 	w_class = WEIGHT_CLASS_HUGE
+	fire_delay = 6
 
 /obj/item/gun/energy/ms13/laser/plasma/scatter
 	name = "A3e-20b Multiplas Rifle"
@@ -153,6 +160,7 @@
 	desc = "A modified A3-20 plasma caster built by REPCONN equipped with a multicasting kit that creates multiple weaker clots."
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/plasma/scatter)
 	cell_type = /obj/item/stock_parts/cell/ammo/pc
+	fire_delay = 7
 
 /obj/item/gun/energy/ms13/laser/plasma/pistol
 	name ="MPL-A Plasma Pistol"
@@ -166,6 +174,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/ms13/plasma/pistol)
 	w_class = WEIGHT_CLASS_NORMAL
 	cell_type = /obj/item/stock_parts/cell/ammo/pc
+	fire_delay = 6
 
 //projectiles
 
@@ -186,7 +195,7 @@
 	. = ..()
 /obj/projectile/beam/ms13/laser
 	name = "laser beam"
-	damage = 19
+	damage = 0
 	armour_penetration = 0
 	hitscan = TRUE
 	hitscan_light_color_override = COLOR_DARK_RED
@@ -207,35 +216,35 @@
 	impact_light_color_override = COLOR_SOFT_RED
 /obj/projectile/beam/ms13/laser/lasgun
 	name = "laser beam"
-	damage = 34
-	armour_penetration = -9
+	damage = 0
+	armour_penetration = 0
 
 /obj/projectile/beam/ms13/laser/lassniper
 	name = "laser beam"
-	damage = 34
-	armour_penetration = -9
+	damage = 0
+	armour_penetration = 0
 	range = 28
 
 /obj/projectile/beam/ms13/laser/pistol
 	name = "laser beam"
-	damage = 25
+	damage = 0
 
 /obj/projectile/beam/ms13/laser/tribeam
 	name = "tribeam laser"
-	damage = 15
+	damage = 0
 
 /obj/projectile/bullet/ms13/plasma
 	name = "plasma clot"
 	icon = 'mojave/icons/objects/projectiles/projectiles.dmi'
 	icon_state = "plasma"
-	damage = 60
+	damage = 0
 
 /obj/projectile/bullet/ms13/plasma/pistol
-	damage = 60
-	armour_penetration = -18
+	damage = 0
+	armour_penetration = 0
 
 /obj/projectile/bullet/ms13/plasma/scatter
-	damage = 22
+	damage = 0
 
 //Casings
 //plasma
