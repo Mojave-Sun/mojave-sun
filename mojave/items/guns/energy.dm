@@ -6,6 +6,74 @@
 	icon = 'mojave/icons/objects/guns/guns_world.dmi'
 	lefthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_left.dmi'
 	righthand_file = 'mojave/icons/mob/inhands/weapons/guns_inhand_right.dmi'
+<<<<<<< HEAD
+=======
+	base_icon_state = ""
+	var/tac_reloads = FALSE
+	automatic_charge_overlays = FALSE
+/obj/item/gun/energy/ms13/update_icon()
+	if(!cell)
+		icon_state = "[base_icon_state]_empty"
+	else
+		icon_state = "[base_icon_state]"
+
+/obj/item/gun/energy/ms13/proc/insert_magazine(mob/user, var/obj/item/stock_parts/cell/ammo/AM, display_message = TRUE)
+	if(!istype(AM, cell_type))
+		to_chat(user, "<span class='warning'>\The [AM] doesn't seem to fit into \the [src]...</span>")
+		return FALSE
+	if(user.transferItemToLoc(AM, src))
+		cell = AM
+		if (display_message)
+			to_chat(user, "<span class='notice'>You load a new [AM] into \the [src].</span>")
+		update_icon()
+		return TRUE
+	else
+		to_chat(user, "<span class='warning'>You cannot seem to get \the [src] out of your hands!</span>")
+		return FALSE
+
+///Handles all the logic of magazine ejection, if tac_load is set that magazine will be tacloaded in the place of the old eject
+/obj/item/gun/energy/ms13/proc/eject_magazine(mob/user, display_message = TRUE, var/obj/item/stock_parts/cell/ammo/tac_load = null)
+	cell.forceMove(drop_location())
+	var/obj/item/stock_parts/cell/ammo/old_mag = cell
+	if (tac_load)
+		if (insert_magazine(user, tac_load, FALSE))
+			to_chat(user, "<span class='notice'>You perform a tactical reload on \the [src].</span>")
+		else
+			to_chat(user, "<span class='warning'>You dropped the old [old_mag.name], but the new one doesn't fit. How embarassing.</span>")
+			cell = null
+	else
+		cell = null
+	user.put_in_hands(old_mag)
+	old_mag.update_icon()
+	if (display_message)
+		to_chat(user, "<span class='notice'>You pull the [old_mag.name] out of \the [src].</span>")
+	update_icon()
+
+/obj/item/gun/energy/ms13/attackby(obj/item/A, mob/user, params)
+	. = ..()
+	if (.)
+		return
+	if (istype(A, /obj/item/stock_parts/cell/ammo))
+		var/obj/item/stock_parts/cell/ammo/AM = A
+		if (!cell)
+			insert_magazine(user, AM)
+		else
+			if (tac_reloads)
+				eject_magazine(user, FALSE, AM)
+			else
+				to_chat(user, "<span class='notice'>There's already a [cell.name] in \the [src].</span>")
+		return
+
+/obj/item/gun/energy/ms13/attack_self(mob/user)
+	eject_magazine(user)
+	return ..()
+
+/obj/item/gun/energy/ms13/attack_hand(mob/user)
+	if(loc == user && user.is_holding(src) && cell)
+		eject_magazine(user)
+		return
+	return ..()
+>>>>>>> parent of 5444e25b96 (Revert "finalizations")
 
 /obj/item/gun/energy/ms13/Initialize()
 	. = ..()
@@ -113,6 +181,7 @@
 //plasma
 
 /obj/item/ammo_casing/energy/ms13
+	firing_effect_type = null
 	click_cooldown_override = 1 //0.1 second fire delay; better balance your fire rates now
 
 /obj/item/ammo_casing/energy/ms13/plasma
