@@ -198,7 +198,7 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/ms13/rev556
 	name = "5.56 revolver cylinder"
-	icon = 'mojave/icons/objects/ammo/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo.dmi'
 	ammo_type = /obj/item/ammo_casing/ms13/a556
 	caliber = "a556"
 	max_ammo = 5
