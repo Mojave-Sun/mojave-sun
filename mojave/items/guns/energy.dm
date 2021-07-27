@@ -181,13 +181,7 @@
 /obj/projectile/beam/ms13
 	speed = 0.2 //Vanilla tg is 0.8
 	var/damage_constant = 1
-/obj/projectile/beam/ms13/Range()
-	if(hitscan != TRUE)
-		return ..()
-	var/turf/location = get_turf(src)
-	if(!location)
-		return ..()
-	. = ..()
+
 /obj/projectile/beam/ms13/laser
 	name = "laser beam"
 	damage = 0
