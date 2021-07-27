@@ -42,7 +42,7 @@
 
 //5.56
 /obj/projectile/bullet/ms13/a556
-	icon_state = "bigroilfe_bullet"
+	icon_state = "medium_bullet"
 	damage = 0
 	armour_penetration = 0
 	wound_bonus = 5

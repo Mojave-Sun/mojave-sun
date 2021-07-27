@@ -84,7 +84,7 @@
 
 //12.7mm
 /obj/projectile/bullet/ms13/m12mm
-	icon_state = "merehandgun_bullet"
+	icon_state = "medium_bullet"
 	damage = 0
 	armour_penetration = 0
 	wound_bonus = -2
