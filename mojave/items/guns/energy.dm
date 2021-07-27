@@ -180,18 +180,13 @@
 
 /obj/projectile/beam/ms13
 	speed = 0.2 //Vanilla tg is 0.8
-	var/damage_constant = 0.8
+	var/damage_constant = 1
 /obj/projectile/beam/ms13/Range()
 	if(hitscan != TRUE)
 		return ..()
 	var/turf/location = get_turf(src)
 	if(!location)
 		return ..()
-	var/datum/gas_mixture/environment = location.return_air()
-	var/environment_pressure = environment.return_pressure()
-	if(environment_pressure >= 50)
-		if((decayedRange - range) >= 4)
-			damage *= damage_constant
 	. = ..()
 /obj/projectile/beam/ms13/laser
 	name = "laser beam"
