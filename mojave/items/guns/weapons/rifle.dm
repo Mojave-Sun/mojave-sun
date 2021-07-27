@@ -149,7 +149,6 @@
 	bolt_type = BOLT_TYPE_NO_BOLT
 	empty_alarm = TRUE
 	semi_auto = TRUE
-	can_bayonet = TRUE
 	internal_magazine = FALSE
 	mag_type = /obj/item/ammo_box/magazine/ms13/r308/battlerifle
 	fire_sound = 'mojave/sound/ms13weapons/battlerifle.ogg'
