@@ -1,5 +1,5 @@
 //Nitrating cellulose; harder than gunpowder but easier than nitroglycerin and can be used on it's own for bullet propellant
-/datum/reagent/nitrocellulose
+/datum/reagent/ms13/nitrocellulose
 	name = "Nitrocellulose"
 	description = "Cellulose that has been nitrated, it burns as a fireball quite nicely and can be used to make more potent gunpowder."
 	color = "#F4F4C8" //White tinted slightly yellow
