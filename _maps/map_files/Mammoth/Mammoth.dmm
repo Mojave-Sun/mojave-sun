@@ -15243,6 +15243,12 @@
 /obj/effect/mapping_helpers/sunlight/roofSetter/wood,
 /turf/open/floor/plasteel/ms13/concrete/industrial,
 /area/ms13/sunny_dale)
+"iAv" = (
+/obj/structure/ms13/foundation/variantsix{
+	dir = 5
+	},
+/turf/open/openspace/ms13_no_build,
+/area/ms13/sunny_dale)
 "iAy" = (
 /obj/item/crowbar{
 	pixel_y = 6
@@ -22795,9 +22801,6 @@
 /area/ms13/sunny_dale)
 "mHs" = (
 /obj/structure/ms13/foundation/variantfour{
-	dir = 5
-	},
-/obj/structure/ms13/foundation/variantfour{
 	dir = 1
 	},
 /turf/open/openspace/ms13_no_build,
@@ -26622,9 +26625,12 @@
 /turf/open/floor/plasteel/ms13/tile/brown,
 /area/ms13/sunny_dale)
 "oTQ" = (
-/obj/structure/table/ms13/metal,
-/obj/structure/closet/crate/ms13/cash_register{
+/obj/structure/table/ms13/no_smooth/counter/wood/straight{
 	dir = 1
+	},
+/obj/structure/closet/crate/ms13/cash_register{
+	dir = 1;
+	pixel_y = 9
 	},
 /turf/open/floor/plasteel/ms13/tile/brown,
 /area/ms13/sunny_dale)
@@ -151600,7 +151606,7 @@ jIO
 mQL
 uJR
 ads
-sHO
+oTQ
 wJy
 rty
 xmm
@@ -151902,7 +151908,7 @@ jIO
 pPd
 ads
 ads
-oTQ
+xcP
 rty
 rty
 xmm
@@ -152204,7 +152210,7 @@ jIO
 gSe
 ads
 ads
-sHO
+oTQ
 rty
 rty
 xmm
@@ -152506,7 +152512,7 @@ jIO
 wde
 ads
 ads
-sHO
+xcP
 rty
 rty
 xmm
@@ -163986,7 +163992,7 @@ pDV
 kwi
 tCo
 vCh
-vCh
+eAl
 pEo
 ocF
 pwP
@@ -164288,7 +164294,7 @@ pDV
 pDV
 kwi
 edF
-bDQ
+iAv
 mHs
 rty
 kUy
@@ -164590,7 +164596,7 @@ qYc
 oJe
 tft
 wiH
-bDQ
+iAv
 eaJ
 iMj
 kUy
