@@ -250,7 +250,7 @@
 //Magazines
 /obj/item/ammo_box/magazine/ms13/r20
 	name = "20 round magazine (5.56mm)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "556r20"
 	ammo_type = /obj/item/ammo_casing/ms13/a556
 	caliber = "a556"
@@ -259,7 +259,7 @@
 
 /obj/item/ammo_box/magazine/ms13/smgm10mm
 	name = "24 round magazine (10mm)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "smg10mm"
 	ammo_type = /obj/item/ammo_casing/ms13/c10mm
 	caliber = "10mm"
@@ -268,7 +268,7 @@
 
 /obj/item/ammo_box/magazine/ms13/smgm9mm
 	name = "30 round magazine (9mm)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "smg9mm"
 	ammo_type = /obj/item/ammo_casing/ms13/c9mm
 	caliber = "9mm"
@@ -285,7 +285,7 @@
 
 /obj/item/ammo_box/magazine/ms13/ar762
 	name = "24 round magazine (7.62mm)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "ar762"
 	ammo_type = /obj/item/ammo_casing/ms13/a762
 	caliber = "a762"

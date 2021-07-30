@@ -172,7 +172,7 @@
 /obj/item/ammo_box/magazine/internal/cylinder/ms13/rev44
 	name = ".44 magnum cylinder"
 	ammo_type = /obj/item/ammo_casing/ms13/m44
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	caliber = "44"
 	max_ammo = 6
 
@@ -185,20 +185,20 @@
 /obj/item/ammo_box/magazine/internal/cylinder/ms13/rev10mm
 	name = "10mm revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/ms13/c10mm
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	caliber = "10mm"
 	max_ammo = 5
 
 /obj/item/ammo_box/magazine/internal/cylinder/ms13/rev4570
 	name = ".45-70 cylinder"
 	ammo_type = /obj/item/ammo_casing/ms13/c4570
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	caliber = "4570"
 	max_ammo = 5
 
 /obj/item/ammo_box/magazine/internal/cylinder/ms13/rev556
 	name = "5.56 revolver cylinder"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	ammo_type = /obj/item/ammo_casing/ms13/a556
 	caliber = "a556"
 	max_ammo = 5
@@ -206,7 +206,7 @@
 //Loaders
 /obj/item/ammo_box/ms13/derringer22
 	name = ".22 Derringer speed loader"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "derringer"
 	ammo_type = /obj/item/ammo_casing/ms13/c22
 	caliber = ".22"
@@ -214,7 +214,7 @@
 
 /obj/item/ammo_box/ms13/rev4570
 	name = ".45-70 speed loader"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "rev4570"
 	ammo_type = /obj/item/ammo_casing/ms13/c4570
 	caliber = "4570"
@@ -222,7 +222,7 @@
 
 /obj/item/ammo_box/ms13/rev44
 	name = ".44 Magnum speed loader"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "rev44"
 	ammo_type = /obj/item/ammo_casing/ms13/m44
 	caliber = "44"
@@ -230,7 +230,7 @@
 
 /obj/item/ammo_box/ms13/rev357
 	name = ".357 Magnum speed loader"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "rev357"
 	ammo_type = /obj/item/ammo_casing/ms13/a357
 	caliber = "357"
@@ -238,7 +238,7 @@
 
 /obj/item/ammo_box/ms13/rev556
 	name = "5.56 speed loader"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "rev556"
 	ammo_type = /obj/item/ammo_casing/ms13/a556
 	caliber = "a556"
@@ -246,7 +246,7 @@
 
 /obj/item/ammo_box/ms13/rev10mm
 	name = "10mm speed loader"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "rev10mm"
 	ammo_type = /obj/item/ammo_casing/ms13/c10mm
 	caliber = "10mm"

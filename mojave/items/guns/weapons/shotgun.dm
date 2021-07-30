@@ -158,7 +158,7 @@
 //Loaders
 /obj/item/ammo_box/ms13/tube4570
 	name = ".45-70 speed loader tube"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "4570tube"
 	ammo_type = /obj/item/ammo_casing/ms13/c4570
 	caliber = "4570"
@@ -166,7 +166,7 @@
 
 /obj/item/ammo_box/ms13/tube44
 	name = ".44 speed loader tube"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "44tube"
 	ammo_type = /obj/item/ammo_casing/ms13/m44
 	caliber = "44"
@@ -174,7 +174,7 @@
 
 /obj/item/ammo_box/ms13/tube357
 	name = ".357 speed loader tube"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "357tube"
 	ammo_type = /obj/item/ammo_casing/ms13/a357
 	caliber = "357"
@@ -182,7 +182,7 @@
 
 /obj/item/ammo_box/ms13/sks
 	name = "SKS stripper clip (7.62)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "sksclip"
 	ammo_type = /obj/item/ammo_casing/ms13/a762
 	caliber = "a762"
