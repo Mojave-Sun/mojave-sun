@@ -437,7 +437,7 @@
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "nl" = (
-/obj/structure/table/ms13/round,
+/obj/structure/table/ms13/metal,
 /obj/machinery/microwave{
 	pixel_y = 9
 	},
@@ -489,8 +489,11 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "pV" = (
-/obj/structure/table/ms13/round,
-/turf/open/floor/plasteel/ms13/tile/brown,
+/obj/structure/table/ms13/no_smooth/counter/wood/straight{
+	dir = 8
+	},
+/obj/item/grenade/ms13/molotov,
+/turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "pY" = (
 /turf/open/floor/plating/ms13/ice/corner{
@@ -515,7 +518,7 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "qB" = (
-/obj/structure/table/ms13/round,
+/obj/structure/table/ms13/metal,
 /obj/effect/spawner/lootdrop/ms13/armor/tier4,
 /obj/machinery/light/ms13/bulb,
 /turf/open/floor/plasteel/ms13/metal,
@@ -535,15 +538,17 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "ra" = (
-/obj/structure/table/ms13/round,
-/turf/open/floor/wood/ms13/carpet,
+/obj/structure/table/ms13/no_smooth/counter/wood/bend{
+	dir = 4
+	},
+/turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "rC" = (
 /obj/structure/ladder/ms13/manhole,
 /turf/open/floor/plating/ground/sidewalk,
 /area/ms13)
 "rW" = (
-/obj/structure/table/ms13/no_smooth/desk,
+/obj/structure/table/ms13/no_smooth/large/wood/desk,
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "rZ" = (
@@ -572,33 +577,22 @@
 /turf/open/openspace/ms13_no_build,
 /area/ms13/sunny_dale)
 "tj" = (
-/obj/structure/table/ms13/no_smooth/cards/right,
-/turf/open/floor/wood/ms13/carpet,
+/obj/structure/table/ms13/no_smooth/counter/wood/straight{
+	dir = 1
+	},
+/turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "tI" = (
 /turf/closed/wall/r_wall/ms13/concrete,
 /area/ms13/sunny_dale)
 "tR" = (
 /obj/structure/closet/secure_closet/freezer/fridge/open,
-/obj/item/reagent_containers/food/drinks/bottle/orangejuice,
-/obj/item/reagent_containers/food/drinks/bottle/orangejuice,
-/obj/item/reagent_containers/food/drinks/bottle/orangejuice,
-/obj/item/reagent_containers/food/drinks/bottle/moonshine,
-/obj/item/reagent_containers/food/drinks/bottle/moonshine,
-/obj/item/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/reagent_containers/food/drinks/bottle/whiskey,
-/obj/item/reagent_containers/food/drinks/bottle/whiskey,
-/obj/item/reagent_containers/food/drinks/bottle/wine,
-/obj/item/reagent_containers/food/drinks/bottle/wine,
-/obj/item/reagent_containers/food/drinks/bottle/wine/unlabeled,
-/obj/item/reagent_containers/food/drinks/bottle/wine/unlabeled,
-/obj/item/reagent_containers/food/drinks/bottle/grappa,
-/obj/item/reagent_containers/food/drinks/bottle/grappa,
-/obj/item/reagent_containers/food/drinks/bottle/gin,
-/obj/item/reagent_containers/food/drinks/bottle/gin,
 /obj/machinery/light/ms13{
 	dir = 1
 	},
+/obj/item/grenade/ms13/molotov,
+/obj/item/grenade/ms13/molotov,
+/obj/item/grenade/ms13/molotov,
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "tT" = (
@@ -692,7 +686,7 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "xk" = (
-/obj/structure/table/ms13/no_smooth/cards,
+/obj/structure/table/ms13/no_smooth/large/cards,
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "xr" = (
@@ -858,8 +852,10 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "CC" = (
-/obj/structure/table/ms13/round,
-/turf/open/floor/wood/ms13/wide,
+/obj/structure/table/ms13/no_smooth/counter/wood/end{
+	dir = 8
+	},
+/turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "CE" = (
 /turf/open/floor/plasteel/ms13/tile,
@@ -943,8 +939,10 @@
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "FG" = (
-/obj/structure/table/ms13/metal,
 /obj/item/grenade/ms13/molotov,
+/obj/structure/table/ms13/no_smooth/counter/wood/straight{
+	dir = 8
+	},
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "FH" = (
@@ -993,10 +991,6 @@
 /obj/effect/spawner/lootdrop/ms13/armor/lowrandom,
 /turf/open/floor/wood/ms13/wide,
 /area/ms13/sunny_dale)
-"GY" = (
-/obj/structure/table/ms13/round,
-/turf/open/floor/wood/ms13/common,
-/area/ms13/sunny_dale)
 "Hi" = (
 /turf/open/floor/plating/ms13/ice,
 /area/ms13)
@@ -1007,7 +1001,7 @@
 /turf/closed/indestructible/rock/ms13,
 /area/ms13/underground/mountain)
 "HC" = (
-/obj/structure/table/ms13/round,
+/obj/structure/table/ms13/metal,
 /obj/effect/spawner/lootdrop/ms13/armor/tier4,
 /turf/open/floor/plasteel/ms13/metal,
 /area/ms13/sunny_dale)
@@ -1017,7 +1011,7 @@
 	},
 /area/ms13)
 "Ib" = (
-/obj/structure/table/ms13/no_smooth/pool,
+/obj/structure/table/ms13/no_smooth/large/pool,
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "Ih" = (
@@ -1041,10 +1035,6 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/ms13/metal,
-/area/ms13/sunny_dale)
-"IJ" = (
-/obj/structure/table/ms13/no_smooth/wood/bottom,
-/turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
 "IP" = (
 /obj/structure/industrial_lift,
@@ -1402,10 +1392,6 @@
 	},
 /turf/open/floor/wood/ms13/common,
 /area/ms13/sunny_dale)
-"Wa" = (
-/obj/structure/table/ms13/no_smooth/pool/right,
-/turf/open/floor/wood/ms13/carpet,
-/area/ms13/sunny_dale)
 "Wb" = (
 /obj/machinery/light/ms13/bulb{
 	dir = 4
@@ -1465,21 +1451,8 @@
 /area/ms13)
 "XG" = (
 /obj/structure/closet/secure_closet/freezer/fridge/open,
-/obj/item/reagent_containers/food/drinks/bottle/whiskey,
-/obj/item/reagent_containers/food/drinks/bottle/whiskey,
-/obj/item/reagent_containers/food/drinks/bottle/whiskey,
-/obj/item/reagent_containers/food/drinks/bottle/whiskey,
-/obj/item/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/reagent_containers/food/drinks/bottle/vermouth,
-/obj/item/reagent_containers/food/drinks/bottle/whiskey,
-/obj/item/reagent_containers/food/drinks/bottle/whiskey,
-/obj/item/reagent_containers/food/drinks/bottle/wine,
-/obj/item/reagent_containers/food/drinks/bottle/wine,
-/obj/item/reagent_containers/food/drinks/bottle/wine/unlabeled,
-/obj/item/reagent_containers/food/drinks/bottle/wine/unlabeled,
-/obj/item/reagent_containers/food/drinks/bottle/grappa,
-/obj/item/reagent_containers/food/drinks/bottle/gin,
+/obj/item/grenade/ms13/molotov,
+/obj/item/grenade/ms13/molotov,
 /turf/open/floor/wood/ms13/carpet,
 /area/ms13/sunny_dale)
 "XJ" = (
@@ -12351,7 +12324,7 @@ Vw
 Lz
 Lz
 Lz
-ra
+Qv
 Vw
 oN
 lP
@@ -12893,7 +12866,7 @@ zD
 zD
 zD
 lJ
-pV
+Rs
 iS
 du
 du
@@ -13044,7 +13017,7 @@ Hw
 Hw
 Vw
 jp
-tj
+Lz
 jp
 RN
 Vw
@@ -13351,7 +13324,7 @@ Hw
 Hw
 Hw
 Vw
-GY
+vp
 ZP
 ZP
 ZP
@@ -13776,9 +13749,9 @@ vA
 RQ
 Vw
 Gp
-Wa
 Lz
-Wa
+Lz
+Lz
 Xn
 Vw
 RQ
@@ -14286,8 +14259,8 @@ vA
 RQ
 Vw
 FG
-vp
-vp
+pV
+ra
 zh
 ZP
 Vw
@@ -14389,7 +14362,7 @@ RQ
 qq
 Qg
 ZP
-FG
+tj
 zh
 ZP
 Ff
@@ -14491,7 +14464,7 @@ RQ
 Vw
 tR
 Lz
-Qv
+CC
 BL
 Xn
 Vw
@@ -15626,7 +15599,7 @@ vA
 RQ
 RP
 TQ
-IJ
+ZP
 Ci
 lD
 Hw
@@ -18350,7 +18323,7 @@ Hw
 om
 nl
 Pz
-IJ
+ZP
 ZP
 tX
 KV
@@ -28873,7 +28846,7 @@ Iu
 Iu
 Iu
 qn
-CC
+hS
 FM
 qn
 FM
