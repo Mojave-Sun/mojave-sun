@@ -6,15 +6,6 @@
 	required_temp = 400
 	//reaction_tags = REACTION_TAG_EASY | REACTION_TAG_DAMAGING | REACTION_TAG_BURN | REACTION_TAG_TOXIN
 
-/datum/chemical_reaction/ms13/sulf_acid_to_sulf
-	results = list(/datum/reagent/sulfur = 1)
-	required_reagents = list(/datum/reagent/toxin/acid = 1)
-	mix_message = "The yellow liquid in the mixture begins to solidify."
-	required_temp = 200
-	is_cold_recipe = TRUE
-	//reaction_tags = REACTION_TAG_EASY | REACTION_TAG_DAMAGING | REACTION_TAG_BURN | REACTION_TAG_TOXIN
-
-
 //Another recipe for nitric acid; heat up the sulfur and saltpetre mixture to easily get this
 /datum/chemical_reaction/ms13/nitracid
 	results = list(/datum/reagent/toxin/acid/nitracid = 2)
