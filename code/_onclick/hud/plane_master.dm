@@ -87,7 +87,7 @@
 
 //Contains all sunlight objects
 /atom/movable/screen/plane_master/Sunlight
-	name = "lighting plane master"
+	name = "Sunlight plane master"
 	plane = SUNLIGHTING_PLANE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	render_target = SUNLIGHTING_RENDER_TARGET

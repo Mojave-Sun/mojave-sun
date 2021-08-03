@@ -183,7 +183,7 @@
 
 /* our sunny version - I will need to figure out a less shit way of copying this */
 /atom/movable/screen/fullscreen/lighting_backdrop/Sunlight
-	icon = 'icons/hud/screen_gen.dmi'
+	icon_state  = ""
 	invisibility = INVISIBILITY_LIGHTING
 	screen_loc = "CENTER"
 	transform = null
