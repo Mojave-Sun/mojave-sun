@@ -68,7 +68,10 @@ SUBSYSTEM_DEF(sunlight)
 	return ..()
 
 /datum/controller/subsystem/sunlight/proc/fullPlonk()
-	GLOB.SUNLIGHT_QUEUE_WORK = GLOB.outdoor_effects
+	for (var/z in SSmapping.levels_by_trait(ZTRAIT_STATION))
+		for (var/turf/T in block(locate(1,1,z), locate(world.maxx,world.maxy,z)))
+			if (T.dynamic_lighting && T.loc:dynamic_lighting)
+				GLOB.SUNLIGHT_QUEUE_WORK += T
 
 /datum/controller/subsystem/sunlight/Initialize(timeofday)
 	if(!initialized)

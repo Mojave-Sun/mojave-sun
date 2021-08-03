@@ -138,7 +138,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 
 	if(SSsunlight.initialized)
 		outdoor_effect = old_outdoor_effect
-		GLOB.SUNLIGHT_QUEUE_WORK += outdoor_effect
+		GLOB.SUNLIGHT_QUEUE_WORK += src
 
 
 	SEND_SIGNAL(src, COMSIG_TURF_MULTIZ_NEW, src, dir)
