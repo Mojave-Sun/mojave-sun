@@ -137,6 +137,7 @@
 	desc = "A really old pre-war rifle, chambered in .308 with an internal 5 round magazine. This one has a scoped mounted to it."
 	icon_state = "scoped_arisaka"
 	inhand_icon_state = "scoped_arisaka"
+	zoomable = TRUE
 	zoom_amt = 10
 	zoom_out_amt = 14
 
@@ -156,7 +157,7 @@
 //Magazines
 /obj/item/ammo_box/magazine/ms13/r10
 	name = "10 round magazine (5.56mm)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "556r10"
 	ammo_type = /obj/item/ammo_casing/ms13/a556
 	caliber = "a556"
@@ -165,7 +166,7 @@
 
 /obj/item/ammo_box/magazine/ms13/r308
 	name = "5 round magazine (.308)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "r308"
 	ammo_type = /obj/item/ammo_casing/ms13/a308
 	caliber = "a308"
@@ -174,7 +175,7 @@
 
 /obj/item/ammo_box/magazine/ms13/amr
 	name = "6 round magazine (.50)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "50cal"
 	ammo_type = /obj/item/ammo_casing/ms13/a50MG
 	caliber = "a50MG"
@@ -207,7 +208,7 @@
 
 /obj/item/ammo_box/ms13/chinese_rifle
 	name = "\improper Chinese hunting rifle stripper clip (7.62)"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	icon_state = "cpistol"
 	ammo_type = /obj/item/ammo_casing/ms13/a762
 	caliber = "a762"

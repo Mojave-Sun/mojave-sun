@@ -21,10 +21,43 @@
 		head = pick(
 		/obj/item/clothing/head/helmet/ms13/cowboy/black,\
 		/obj/item/clothing/head/helmet/ms13/utilitycap,\
-		/obj/item/clothing/head/helmet/ms13/baseball,\
-		/obj/item/clothing/head/helmet/ms13/cowboy/padded/ushanka)
+		/obj/item/clothing/head/soft/ms13/baseball,\
+		/obj/item/clothing/head/ms13/hood/cowl,\
+		/obj/item/clothing/head/ms13/hood/sack,\
+		/obj/item/clothing/head/ms13/hood/hood,\
+		/obj/item/clothing/head/ms13/hood/hunter,\
+		/obj/item/clothing/head/helmet/ms13/fedora,\
+		/obj/item/clothing/head/helmet/ms13/hardhat,\
+		/obj/item/clothing/head/helmet/ms13/skull/muffalo,\
+		/obj/item/clothing/head/helmet/ms13/skull/radstag,\
+		/obj/item/clothing/head/helmet/ms13/fedora,\
+		/obj/item/clothing/head/helmet/ms13/fedora/brown,\
+		/obj/item/clothing/head/helmet/ms13/fedora/treasure,\
+		/obj/item/clothing/head/helmet/ms13/bowler,\
+		/obj/item/clothing/head/helmet/ms13/cowboy,\
+		/obj/item/clothing/head/helmet/ms13/prospector,\
+		/obj/item/clothing/head/helmet/ms13/millitia,\
+		/obj/item/clothing/head/helmet/ms13/newsboy,\
+		/obj/item/clothing/head/helmet/ms13/beanie,\
+		/obj/item/clothing/head/helmet/ms13/trilby,\
+		/obj/item/clothing/head/helmet/ms13/chef,\
+		/obj/item/clothing/head/helmet/ms13/ushanka,\
+		/obj/item/clothing/head/helmet/ms13/ushanka/blue,\
+		/obj/item/clothing/head/helmet/ms13/ushanka/green)
 	else
 		head = null
+
+	if(prob(10))
+		glasses = pick(/obj/item/clothing/glasses/ms13/black,\
+		/obj/item/clothing/glasses/ms13/cap,\
+		/obj/item/clothing/glasses/ms13/old,\
+		/obj/item/clothing/glasses/ms13/leather,\
+		/obj/item/clothing/glasses/ms13/metal,\
+		/obj/item/clothing/glasses/ms13/cool,\
+		/obj/item/clothing/glasses/ms13/goggles,\
+		/obj/item/clothing/glasses/ms13/sunglasses)
+	else
+		glasses = null
 
 	if(prob(25))
 		mask = pick(
@@ -34,7 +67,15 @@
 		/obj/item/clothing/mask/ms13/facewrap/blue,\
         /obj/item/clothing/mask/gas,\
         /obj/item/clothing/mask/bandana/black,\
-        /obj/item/clothing/mask/balaclava)
+        /obj/item/clothing/mask/balaclava,\
+		/obj/item/clothing/mask/ms13/bandana,\
+		/obj/item/clothing/mask/ms13/bandana/blue,\
+		/obj/item/clothing/mask/ms13/bandana/red,\
+		/obj/item/clothing/mask/ms13/bandana/white,\
+		/obj/item/clothing/mask/ms13/bandana/patriot,\
+		/obj/item/clothing/mask/ms13/bandana/leapord,\
+		/obj/item/clothing/mask/ms13/bandana/camo,\
+		/obj/item/clothing/mask/gas/ms13)
 	else
 		mask = null
 

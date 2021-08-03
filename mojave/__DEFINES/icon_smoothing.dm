@@ -27,6 +27,9 @@
 #define SMOOTH_GROUP_MS13_ROOF_WOOD S_OBJ_FO(24)			////turf/open/floor/plating/roof/wood
 
 #define SMOOTH_GROUP_SOIL S_OBJ_FO(25)					///obj/machinery/hydroponics/ms13/soil
-#define SMOOTH_GROUP_MS13_TABLES S_OBJ_FO(26)			///obj/structure/table/ms13
+#define SMOOTH_GROUP_MS13_TABLE_METAL S_OBJ_FO(26)			///obj/structure/table/ms13
+#define SMOOTH_GROUP_MS13_TABLE_WOOD S_OBJ_FO(27)			///obj/structure/table/ms13/wood
+#define SMOOTH_GROUP_MS13_TABLE_SMALL S_OBJ_FO(28)			///obj/structure/table/ms13/metal/small
+#define SMOOTH_GROUP_MS13_TABLE_PLAYER S_OBJ_FO(29) 	 	///obj/structure/table/ms13/metal/cobbled
 
 #define MAX_S_TURF_FO SMOOTH_GROUP_MS13_TABLES //Always match this value with the one above it.

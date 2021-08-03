@@ -162,13 +162,13 @@
 //Loaders/Ammo boxes
 /obj/item/ammo_box/ms13
 	name = "generic ms13 ammo box"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	multiple_sprites = AMMO_BOX_PER_BULLET
 
 //Magazines
 /obj/item/ammo_box/magazine/ms13
 	name = "generic ms13 magazine"
-	icon = 'mojave/icons/objects/ammo.dmi'
+	icon = 'mojave/icons/objects/ammo/ammo.dmi'
 	multiple_sprites = AMMO_BOX_PER_BULLET
 
 /*

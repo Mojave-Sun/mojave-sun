@@ -21,8 +21,13 @@
 /datum/outfit/job/ms13/raiders/raider/pre_equip(mob/living/carbon/human/H)
 	..()
 
-	head = pick(/obj/item/clothing/head/helmet/ms13/military/raider/ushanka,\
-		/obj/item/clothing/head/helmet/ms13/military/raider)
+	head = pick(/obj/item/clothing/head/ms13/hood/sack,\
+		/obj/item/clothing/head/ms13/hood/sack/banded,\
+		/obj/item/clothing/head/ms13/hood/sack/metal,\
+		/obj/item/clothing/head/ms13/hood/sack/banded,\
+		/obj/item/clothing/head/helmet/ms13/junk,\
+		/obj/item/clothing/head/ms13/hood/hunter,\
+		/obj/item/clothing/head/helmet/ms13/ushanka/blue)
 
 	uniform = pick(
 		/obj/item/clothing/under/ms13/wasteland/mechanicprewar/mechanicgrey,\
