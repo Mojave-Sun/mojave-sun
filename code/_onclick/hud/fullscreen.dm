@@ -183,7 +183,6 @@
 
 /* our sunny version - I will need to figure out a less shit way of copying this */
 /atom/movable/screen/fullscreen/lighting_backdrop/Sunlight
-	icon = 'icons/hud/screen_gen.dmi'
 	icon_state  = ""
 	screen_loc = "CENTER"
 	transform = null
@@ -191,7 +190,6 @@
 	layer = LIGHTING_LAYER
 	blend_mode = BLEND_ADD
 	show_when_dead = TRUE
-
 
 /atom/movable/screen/fullscreen/lighting_backdrop/Sunlight/Initialize()
 	. = ..()

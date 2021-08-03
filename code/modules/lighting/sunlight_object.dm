@@ -31,30 +31,20 @@ Sunlight System
 
 */
 
-/atom/movable/sunlight_object
+/atom/movable/outdoor_effect
 	name = ""
 	mouse_opacity = 0
 	anchored = 1
-	blend_mode		    	= BLEND_OVERLAY
-	icon                	= LIGHTING_ICON
-	icon_state          	= null
-	plane 					= SUNLIGHTING_PLANE /* we put this on a lower level than lighting so we dont multiply anything */
-	layer 					= SUNLIGHTING_LAYER
-	invisibility 			= INVISIBILITY_LIGHTING
-	color 					= LIGHTING_BASE_MATRIX
-
-	var/hasCalcedSunlightSpread = TRUE
-
-	// render_target 			= SUNLIGHTING_RENDER_TARGET
 
 	/* misc vars */
-	var/list/turf/neighbourTurfs = list()
-	var/state 					 = SUNLIGHT_OUTDOOR
+	var/sunlightLuminosity       = 0				//
+	var/mutable_appearance/sunlight_overlay
+	var/state 					 = SUNLIGHT_OUTDOOR	// If we are roofed, unroofed, or an unroofed turf with a roofed neighbur
 	var/turf/roofTurf
 	var/turf/source_turf
 	var/list/datum/lighting_corner/affectingCorners
 
-/atom/movable/sunlight_object/Destroy(force)
+/atom/movable/outdoor_effect/Destroy(force)
 	if (force)
 		var/turf/badTurf = get_turf(source_turf)
 		stack_trace("A sunlighting object has been deleted [COORD(badTurf)]")
@@ -64,48 +54,15 @@ Sunlight System
 		return QDEL_HINT_LETMELIVE
 
 
-/atom/movable/sunlight_object/Initialize(mapload)
+/atom/movable/outdoor_effect/Initialize(mapload)
 	. = ..()
 	source_turf = loc
-	if (source_turf.sunlight_object)
-		qdel(source_turf.sunlight_object, force = TRUE)
-	source_turf.sunlight_object = src
-	GLOB.sunlight_objects += src
-	neighbourTurfs = GetNeighbours()
+	if (source_turf.outdoor_effect)
+		qdel(source_turf.outdoor_effect, force = TRUE)
+	source_turf.outdoor_effect = src
+	GLOB.outdoor_effects += src
 
-/atom/movable/sunlight_object/proc/GetState()
-	if(!(IS_OPAQUE_TURF(source_turf) || HasRoof() ))
-		state = SUNLIGHT_OUTDOOR
-		for(var/turf/CT in neighbourTurfs)
-			if(IS_OPAQUE_TURF(CT) || (CT.sunlight_object && CT.sunlight_object.HasRoof())) /* update our unroofed, unlighty friends */
-				state = SUNLIGHT_BORDER
-				break
-	else /* roofed, so turn off the lights*/
-		state = SUNLIGHT_INDOOR
-
-
-
-/atom/movable/sunlight_object/proc/GetNeighbours()
-	return RANGE_TURFS(1, source_turf)
-
-
-/atom/movable/sunlight_object/proc/HasRoof()
-	/* if we are a wall or have a ceiling, we are under a roof and considered indoors */
-	if(istype(source_turf, /turf/closed) ||  source_turf.GetCeilingTurf())
-		return TRUE
-	return FALSE
-
-/* run up the Z column until we hit a non openspace turf, or the top of the map */
-/turf/proc/GetCeilingTurf()
-	if (roofType)
-		roofType = roofType /* already calculated */
-	else
-		var/turf/ceiling = get_step_multiz(src, UP)
-		if(ceiling)
-			roofType = !istransparentturf(ceiling) ? ceiling : ceiling.GetCeilingTurf()
-	return roofType
-
-/atom/movable/sunlight_object/proc/DisableSunlight()
+/atom/movable/outdoor_effect/proc/DisableSunlight()
 	var/turf/T = list()
 	for(var/datum/lighting_corner/C in affectingCorners)
 		LAZYREMOVE(C.globAffect, src)
@@ -114,69 +71,19 @@ Sunlight System
 	T |= source_turf /* get our calculated indoor lighting */
 	GLOB.SUNLIGHT_QUEUE_CORNER += T
 
-/atom/movable/sunlight_object/proc/ProcessState()
+/atom/movable/outdoor_effect/proc/ProcessState()
 	switch(state)
 		if(SUNLIGHT_INDOOR)
-			luminosity = 0
 			DisableSunlight() /* Do our indoor processing */
-		if(SUNLIGHT_OUTDOOR)
-			color = SSsunlight.color //transparent
-			luminosity = 1
 		if(SUNLIGHT_BORDER)
 			CalcSunlightSpread()
-			color = SSsunlight.color //transparent
-			luminosity = GLOB.GLOBAL_LIGHT_RANGE
-
-/atom/movable/sunlight_object/proc/UpdateColour()
-
-	if (state != SUNLIGHT_INDOOR)
-		return /* full bright, not for me sorry */
-
-	/* check if we are globally affected or not */
-	var/static/datum/lighting_corner/dummy/dummy_lighting_corner = new
-
-
-	var/datum/lighting_corner/cr = dummy_lighting_corner
-	var/datum/lighting_corner/cg = dummy_lighting_corner
-	var/datum/lighting_corner/cb = dummy_lighting_corner
-	var/datum/lighting_corner/ca = dummy_lighting_corner
-
-	if(source_turf.corners)
-		cr = source_turf.corners[3] || dummy_lighting_corner
-		cg = source_turf.corners[2] || dummy_lighting_corner
-		cb = source_turf.corners[4] || dummy_lighting_corner
-		ca = source_turf.corners[1] || dummy_lighting_corner
-
-	var/fr = cr.sunFalloff
-	var/fg = cg.sunFalloff
-	var/fb = cb.sunFalloff
-	var/fa = ca.sunFalloff
-
-	#if LIGHTING_SOFT_THRESHOLD != 0
-	luminosity = max(fr, fg, fb, fa) > LIGHTING_SOFT_THRESHOLD
-	#else
-	luminosity = max(fr, fg, fb, fa) > 1e-6
-	#endif
-
-	//anything that passes the first case is very likely to pass the second, and addition is a little faster in this case
-	if((fr & fg & fb & fa) && (fr + fg + fb + fa == 4)) /* this will likely never happen */
-		color = SSsunlight.color
-	else if(!luminosity)
-		color = SUNLIGHT_DARK_MATRIX
-	else
-		color = list(
-					fr, fr, fr,  00 ,
-					fg, fg, fg,  00 ,
-					fb, fb, fb,  00 ,
-					fa, fa, fa,  00 ,
-					00, 00, 00,  01 )
 
 #define hardSun 0.5 /* our hyperboloidy modifyer funky times -  */
 /* calculate the indoor corners we are affecting */
 #define SUN_FALLOFF(C, T) (1 - CLAMP01(sqrt((C.x - T.x) ** 2 + (C.y - T.y) ** 2 - hardSun) / max(1, GLOB.GLOBAL_LIGHT_RANGE)))
 
 
-/atom/movable/sunlight_object/proc/CalcSunlightSpread(debug = FALSE)
+/atom/movable/outdoor_effect/proc/CalcSunlightSpread(debug = FALSE)
 
 	var/list/turf/turfs                    = list()
 	var/datum/lighting_corner/C
@@ -221,8 +128,44 @@ Sunlight System
 /area/var/turf/roofType
 
 /* turf fuckery */
-/turf/var/tmp/atom/movable/sunlight_object/sunlight_object /* a turf's sunlight overlay */
+/turf/var/tmp/atom/movable/outdoor_effect/outdoor_effect /* a turf's sunlight overlay */
 /turf/var/turf/roofType /* our roof turf - may be a path for top z level, or a ref to the turf above*/
+
+/* check ourselves and neighbours to see what sunlight overlay we need */
+/turf/proc/GetSunlightState()
+	var/TempState
+	if(!(IS_OPAQUE_TURF(src) || HasRoof() ))
+		TempState = SUNLIGHT_OUTDOOR
+		for(var/turf/CT in RANGE_TURFS(1, src))
+			if(IS_OPAQUE_TURF(CT)  || CT.HasRoof()) /* if we have a single roofed/indoor neighbour, we are a border */
+				TempState = SUNLIGHT_BORDER
+				break
+	else /* roofed, so turn off the lights */
+		TempState = SUNLIGHT_INDOOR
+
+	/* if border or indoor, initialize. Set sunlight state if valid */
+	if(!outdoor_effect && TempState <> SUNLIGHT_INDOOR)
+		outdoor_effect = new /atom/movable/outdoor_effect(src)
+	if(outdoor_effect)
+		outdoor_effect.state = TempState
+	return TempState
+
+/turf/proc/HasRoof()
+	/* if we are a wall or have a ceiling, we are under a roof and considered indoors */
+	if(istype(src, /turf/closed) ||  GetCeilingTurf())
+		return TRUE
+	return FALSE
+
+/* run up the Z column until we hit a non openspace turf, or the top of the map */
+/turf/proc/GetCeilingTurf()
+	if (roofType)
+		roofType = roofType /* already calculated */
+	else
+		var/turf/ceiling = get_step_multiz(src, UP)
+		if(ceiling)
+			roofType = !istransparentturf(ceiling) ? ceiling : ceiling.GetCeilingTurf()
+	return roofType
+
 
 /* moved this out of reconsider lights so we can call it in multiz refresh  */
 /turf/proc/reconsider_sunlight()
@@ -235,20 +178,13 @@ Sunlight System
 
 
 	var/datum/lighting_corner/C
-	var/atom/movable/sunlight_object/S
-	var/turf/T
+	var/atom/movable/outdoor_effect/S
 	var/list/SunlightUpdates = list()
 
-	/* update sunlight */
-	if(sunlight_object)
-		SunlightUpdates += sunlight_object
-
-
 	for(C in corners) /* This should be faster than processing duplicate turfs */
-		for(T in C.masters)
-			SunlightUpdates |= T.sunlight_object
+		SunlightUpdates |= C.masters
 		for(S in C.globAffect)
-			SunlightUpdates |= S
+			SunlightUpdates |= S.source_turf
 
 	GLOB.SUNLIGHT_QUEUE_WORK += SunlightUpdates
 
@@ -260,7 +196,7 @@ Sunlight System
 	sunFalloff = 0
 
 	for(var/turf/T in masters)
-		var/atom/movable/sunlight_object/S
+		var/atom/movable/outdoor_effect/S
 		for(S in globAffect)
 			sunFalloff = sunFalloff < globAffect[S] ? globAffect[S] : sunFalloff
 

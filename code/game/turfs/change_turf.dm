@@ -80,7 +80,7 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	var/old_dynamic_lighting = dynamic_lighting
 	var/old_affecting_lights = affecting_lights
 	var/old_lighting_object = lighting_object
-	var/old_sunlight_object = sunlight_object
+	var/old_outdoor_effect = outdoor_effect
 	var/old_corners = corners
 	var/old_directional_opacity = directional_opacity
 
@@ -137,7 +137,9 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	QUEUE_SMOOTH(src)
 
 	if(SSsunlight.initialized)
-		sunlight_object = old_sunlight_object
+		outdoor_effect = old_outdoor_effect
+		GLOB.SUNLIGHT_QUEUE_WORK += outdoor_effect
+
 
 	SEND_SIGNAL(src, COMSIG_TURF_MULTIZ_NEW, src, dir)
 

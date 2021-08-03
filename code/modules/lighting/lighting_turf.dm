@@ -47,7 +47,7 @@
 
 // Used to get a scaled lumcount.
 /turf/proc/get_lumcount(minlum = 0, maxlum = 1)
-	if (!lighting_object && !sunlight_object)
+	if (!lighting_object && !outdoor_effect)
 		return 1
 
 	var/totallums = 0
@@ -64,7 +64,7 @@
 	totallums /= 12 // 4 corners, each with 3 channels, get the average
 
 	/* if we are outside, full sunlight */
-	if(sunlight_object && sunlight_object.state) /* SUNLIGHT_INDOOR is 0 */
+	if(outdoor_effect && outdoor_effect.state) /* SUNLIGHT_INDOOR is 0 */
 		totalSunFalloff = 4
 	/* sunlight / 4 corners */
 	totallums += totalSunFalloff / 4
