@@ -55,10 +55,10 @@ SUBSYSTEM_DEF(sunlight)
 	var/current_color
 
 	var/list/mutable_appearance/sunlight_overlays
-
+	var/list/atom/movable/screen/fullscreen/weather/weather_planes_need_vis = list()
 	var/sunlight_color = LIGHTING_BASE_MATRIX
 	var/list/cornerColour = list()
-
+	var/weatherEffect
 	var/currentTime
 	var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/morning(), new /datum/time_of_day/day(), \
 														new /datum/time_of_day/evening(), new /datum/time_of_day/night())
@@ -109,13 +109,33 @@ SUBSYSTEM_DEF(sunlight)
 		next_step = 1
 	next_step_datum = time_cycle_steps[next_step]
 
-/* set sunlight colour */
+/datum/controller/subsystem/sunlight/proc/getweatherEffect()
+	if(!weatherEffect)
+		weatherEffect = new /obj()
+	return weatherEffect
 
+
+/* set sunlight colour + add weather effect to clients */
 /datum/controller/subsystem/sunlight/fire(resumed, init_tick_checks)
 	MC_SPLIT_TICK_INIT(3)
 	if(!init_tick_checks)
 		MC_SPLIT_TICK
 	var/i = 0
+
+	for (i in 1 to weather_planes_need_vis.len)
+		var/atom/movable/screen/fullscreen/weather/W = weather_planes_need_vis[i]
+		if(W)
+			if(!W.weatherEffect)
+				W.weatherEffect = getweatherEffect()
+				W.vis_contents = list(W.weatherEffect)
+		if(init_tick_checks)
+			CHECK_TICK
+		else if (MC_TICK_CHECK)
+			break
+	if (i)
+		weather_planes_need_vis.Cut(1, i+1)
+		i = 0
+
 	for (i in 1 to GLOB.SUNLIGHT_QUEUE_WORK.len)
 		var/turf/T = GLOB.SUNLIGHT_QUEUE_WORK[i]
 		if(T)
@@ -213,9 +233,6 @@ SUBSYSTEM_DEF(sunlight)
 //Sets (or removes) the sunlight overlay
 /datum/controller/subsystem/sunlight/proc/SetSunlightOverlay(atom/movable/outdoor_effect/SO)
 
-	SO.overlays -= SO.sunlight_overlay
-
-
 	var/mutable_appearance/MA
 	if (SO.state != SUNLIGHT_INDOOR)
 		MA = GetOverlay(1,1,1,1) /* fully lit */
@@ -242,7 +259,8 @@ SUBSYSTEM_DEF(sunlight)
 		MA = GetOverlay(fr, fg, fb, fa)
 
 	SO.sunlight_overlay = MA
-	SO.overlays += SO.sunlight_overlay
+	//get weather overlay if we aren't indoors
+	SO.overlays = SO.state = SUNLIGHT_INDOOR ? list(SO.sunlight_overlay) : list(SO.sunlight_overlay, getWeatherOverlay())
 	SO.luminosity = MA.luminosity
 
 //Retrieve an overlay from the list - create if necessary
@@ -253,6 +271,16 @@ SUBSYSTEM_DEF(sunlight)
 	if(!sunlight_overlays[index])
 		sunlight_overlays[index] = CreateOverlay(fr, fg, fb, fa)
 	return sunlight_overlays[index]
+
+//TODO Rather than having sunlight and weather - just have two planes, one for indoor and one for outdoor
+/datum/controller/subsystem/sunlight/proc/getWeatherOverlay()
+	var/mutable_appearance/MA = new /mutable_appearance()
+	MA.blend_mode   	  = BLEND_OVERLAY
+	MA.icon 			  = 'icons/hud/screen_gen.dmi'
+	MA.icon_state 		  = "flash"
+	MA.plane        	  = WEATHER_PLANE /* we put this on a lower level than lighting so we dont multiply anything */
+	MA.layer        	  = WEATHER_LAYER
+	MA.invisibility 	  = INVISIBILITY_LIGHTING
 
 //Create an overlay appearance from corner values
 /datum/controller/subsystem/sunlight/proc/CreateOverlay(fr, fg, fb, fa)

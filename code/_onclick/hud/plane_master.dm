@@ -85,13 +85,21 @@
 	filters += filter(type="alpha", render_source = O_LIGHTING_VISUAL_RENDER_TARGET, flags = MASK_INVERSE)
 	// filters += filter(type="alpha", render_source=SUNLIGHTING_RENDER_TARGET, flags=MASK_INVERSE)
 
-//Contains all sunlight objects
+//Contains all sunlight overlays
 /atom/movable/screen/plane_master/Sunlight
 	name = "sunlight plane master"
 	plane = SUNLIGHTING_PLANE
 	blend_mode = BLEND_MULTIPLY
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	render_target = SUNLIGHTING_RENDER_TARGET
+
+//Contains all weather overlays
+/atom/movable/screen/plane_master/Weather
+	name = "sunlight plane master"
+	plane = WEATHER_PLANE
+	blend_mode = BLEND_MULTIPLY
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	render_target = WEATHER_RENDER_TARGET
 
 
 /**
